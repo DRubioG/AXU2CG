@@ -1,0 +1,12 @@
+xst -intstyle ise -ifn "Y:/project/AN/AN9134/CD/02_demo/xilinx/an9134_ax309_J2_test/an9134_test/an9134_test.xst" -ofn "Y:/project/AN/AN9134/CD/02_demo/xilinx/an9134_ax309_J2_test/an9134_test/an9134_test.syr" 
+xst -intstyle ise -ifn "Y:/project/AN/AN9134/CD/02_demo/xilinx/an9134_ax309_J2_test/an9134_test/an9134_test.xst" -ofn "Y:/project/AN/AN9134/CD/02_demo/xilinx/an9134_ax309_J2_test/an9134_test/an9134_test.syr" 
+xst -intstyle ise -ifn "Y:/project/AN/AN9134/CD/02_demo/xilinx/an9134_ax309_J2_test/an9134_test/an9134_test.xst" -ofn "Y:/project/AN/AN9134/CD/02_demo/xilinx/an9134_ax309_J2_test/an9134_test/an9134_test.syr" 
+xst -intstyle ise -ifn "Y:/project/AN/AN9134/CD/02_demo/xilinx/an9134_ax309_J2_test/an9134_test/an9134_test.xst" -ofn "Y:/project/AN/AN9134/CD/02_demo/xilinx/an9134_ax309_J2_test/an9134_test/an9134_test.syr" 
+xst -intstyle ise -ifn "Y:/project/AN/AN9134/CD/02_demo/xilinx/an9134_ax309_J2_test/an9134_test/an9134_test.xst" -ofn "Y:/project/AN/AN9134/CD/02_demo/xilinx/an9134_ax309_J2_test/an9134_test/an9134_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc an9134_test.ucf -p xc6slx9-ftg256-2 an9134_test.ngc an9134_test.ngd  
+map -intstyle ise -p xc6slx9-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o an9134_test_map.ncd an9134_test.ngd an9134_test.pcf 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc an9134_test.ucf -p xc6slx9-ftg256-2 an9134_test.ngc an9134_test.ngd  
+map -intstyle ise -p xc6slx9-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o an9134_test_map.ncd an9134_test.ngd an9134_test.pcf 
+par -w -intstyle ise -ol high -mt off an9134_test_map.ncd an9134_test.ncd an9134_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml an9134_test.twx an9134_test.ncd -o an9134_test.twr an9134_test.pcf -ucf an9134_test.ucf 
+bitgen -intstyle ise -f an9134_test.ut an9134_test.ncd 

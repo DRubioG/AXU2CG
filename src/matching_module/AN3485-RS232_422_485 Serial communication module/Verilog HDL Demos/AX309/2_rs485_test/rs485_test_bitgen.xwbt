@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=Y:\project\AN\AN3485\CD\verilog\AX309\2_rs485_test\rs485_test.ncd
+OUTFILE=Y:\project\AN\AN3485\CD\verilog\AX309\2_rs485_test\rs485_test.bit
+FAMILY=Spartan6
+PART=xc6slx9-2ftg256
+WORKINGDIR=Y:\project\AN\AN3485\CD\verilog\AX309\2_rs485_test
+LICENSE=WebPack
+USER_INFO=__0_0_0

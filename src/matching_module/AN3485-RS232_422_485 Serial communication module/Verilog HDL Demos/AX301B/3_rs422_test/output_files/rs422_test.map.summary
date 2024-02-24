@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Mon Jul 10 14:38:48 2017
+Quartus II 64-Bit Version : 12.1 Build 177 11/07/2012 SJ Full Version
+Revision Name : rs422_test
+Top-level Entity Name : rs422_test
+Family : Cyclone IV E
+Total logic elements : 1,666
+    Total combinational functions : 996
+    Dedicated logic registers : 1,178
+Total registers : 1178
+Total pins : 8
+Total virtual pins : 0
+Total memory bits : 201,240
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

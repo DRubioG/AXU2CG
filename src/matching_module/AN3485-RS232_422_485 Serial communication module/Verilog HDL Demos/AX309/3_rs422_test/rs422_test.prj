@@ -1,0 +1,6 @@
+verilog work "source/uarttx.v"
+verilog work "source/uartrx.v"
+verilog work "source/rs422_ctrl.v"
+verilog work "source/clkdiv.v"
+verilog work "ipcore_dir/ram.v"
+verilog work "source/rs422_test.v"

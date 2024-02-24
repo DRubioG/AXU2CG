@@ -1,0 +1,518 @@
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/ov5640_led/ov5640_vga.xst" -ofn "E:/Project/ov5640_led/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/ov5640_led/ov5640_vga.xst" -ofn "E:/Project/ov5640_led/ov5640_vga.syr" 
+xst -intstyle ise -ifn "E:/Project/ov5640_led/ov5640_vga.xst" -ofn "E:/Project/ov5640_led/ov5640_vga.syr" 
+xst -intstyle ise -ifn "E:/Project/ov5640_led/ov5640_vga.xst" -ofn "E:/Project/ov5640_led/ov5640_vga.syr" 
+xst -intstyle ise -ifn "E:/Project/ov5640_led/ov5640_vga.xst" -ofn "E:/Project/ov5640_led/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/ov5640_led/ov5640_vga.xst" -ofn "E:/Project/ov5640_led/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/ov5640_led/ov5640_vga.xst" -ofn "E:/Project/ov5640_led/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+xst -intstyle ise -ifn "E:/Project/ov5640_led/ov5640_vga.xst" -ofn "E:/Project/ov5640_led/ov5640_vga.syr" 
+xst -intstyle ise -ifn "E:/Project/ov5640_led/ov5640_vga.xst" -ofn "E:/Project/ov5640_led/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/ov5640_led/ov5640_vga.xst" -ofn "E:/Project/ov5640_led/ov5640_vga.syr" 
+xst -intstyle ise -ifn "E:/Project/ov5640_led/ov5640_vga.xst" -ofn "E:/Project/ov5640_led/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/ov5640_led/ov5640_vga.xst" -ofn "E:/Project/ov5640_led/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/ov5640_led/ov5640_vga.xst" -ofn "E:/Project/ov5640_led/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/ov5640_led/ov5640_vga.xst" -ofn "E:/Project/ov5640_led/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+xst -intstyle ise -ifn "E:/Project/ov5640_led/ov5640_vga.xst" -ofn "E:/Project/ov5640_led/ov5640_vga.syr" 
+xst -intstyle ise -ifn "E:/Project/ov5640_led/ov5640_vga.xst" -ofn "E:/Project/ov5640_led/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/ov5640_led/ov5640_vga.xst" -ofn "E:/Project/ov5640_led/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/ov5640_led/ov5640_vga.xst" -ofn "E:/Project/ov5640_led/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/ov5640_led/ov5640_vga.xst" -ofn "E:/Project/ov5640_led/ov5640_vga.syr" 
+xst -intstyle ise -ifn "E:/Project/ov5640_led/ov5640_vga.xst" -ofn "E:/Project/ov5640_led/ov5640_vga.syr" 
+xst -intstyle ise -ifn "E:/Project/ov5640_led/ov5640_vga.xst" -ofn "E:/Project/ov5640_led/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/ov5640_led/ov5640_vga.xst" -ofn "E:/Project/ov5640_led/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/verilog/ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/CD/09_VERILOG/20_ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/CD/09_VERILOG/20_ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/CD/09_VERILOG/20_ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/CD/09_VERILOG/20_ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/CD/09_VERILOG/20_ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/CD/09_VERILOG/20_ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/CD/09_VERILOG/20_ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/CD/09_VERILOG/20_ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/CD/09_VERILOG/20_ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/CD/09_VERILOG/20_ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/CD/09_VERILOG/20_ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/CD/09_VERILOG/20_ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/CD/09_VERILOG/20_ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/CD/09_VERILOG/20_ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/CD/09_VERILOG/20_ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/CD/09_VERILOG/20_ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/CD/09_VERILOG/20_ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/CD/09_VERILOG/20_ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/CD/09_VERILOG/20_ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/CD/09_VERILOG/20_ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/CD/09_VERILOG/20_ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/CD/09_VERILOG/20_ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/CD/09_VERILOG/24_ov5640_vga/ov5640_vga.xst" -ofn "E:/Project/AX516/CD/09_VERILOG/24_ov5640_vga/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx16-csg324-2 ov5640_vga.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 

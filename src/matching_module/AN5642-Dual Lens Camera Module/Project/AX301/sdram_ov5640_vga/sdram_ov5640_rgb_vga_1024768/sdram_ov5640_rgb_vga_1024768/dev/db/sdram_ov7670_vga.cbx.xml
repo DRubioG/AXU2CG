@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="sdram_ov7670_vga">
+		<CBX_INST_ENTRY INSTANCE_NAME="|sdram_ov7670_vga|sdram_vga_top:u_sdram_vga_top|sdram_2fifo_top:u_sdram_2fifo_top|dcfifo_ctrl:u_dcfifo_ctrl|rdfifo:u_rdfifo|dcfifo:dcfifo_component" CBX_FILE_NAME="dcfifo_nen1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sdram_ov7670_vga|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram" CBX_FILE_NAME="altsyncram_c124.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sdram_ov7670_vga|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|LPM_COUNTER:status_advance_pointer_counter" CBX_FILE_NAME="cntr_ggi.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sdram_ov7670_vga|system_ctrl:u_system_ctrl|sdram_pll:u_sdram_pll|altpll:altpll_component" CBX_FILE_NAME="sdram_pll_altpll.v"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sdram_ov7670_vga|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_mux:mux" CBX_FILE_NAME="mux_tsc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sdram_ov7670_vga|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|LPM_COUNTER:\adv_point_3_and_more:advance_pointer_counter" CBX_FILE_NAME="cntr_jgi.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sdram_ov7670_vga|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|LPM_COUNTER:read_pointer_counter" CBX_FILE_NAME="cntr_m9j.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sdram_ov7670_vga|sdram_vga_top:u_sdram_vga_top|sdram_2fifo_top:u_sdram_2fifo_top|dcfifo_ctrl:u_dcfifo_ctrl|wrfifo:u_wrfifo|dcfifo:dcfifo_component" CBX_FILE_NAME="dcfifo_4en1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sdram_ov7670_vga|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_decode:wdecoder" CBX_FILE_NAME="decode_dvf.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sdram_ov7670_vga|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|LPM_COUNTER:status_read_pointer_counter" CBX_FILE_NAME="cntr_23j.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sdram_ov7670_vga|system_ctrl:u_system_ctrl|pll_64:u_pll_64|altpll:altpll_component" CBX_FILE_NAME="pll_64_altpll.v"/>
+	</PROJECT>
+</LOG_ROOT>

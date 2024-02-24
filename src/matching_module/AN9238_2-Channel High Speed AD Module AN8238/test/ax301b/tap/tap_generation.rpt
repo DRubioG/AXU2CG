@@ -1,0 +1,28 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate E:\Project\test\an9238\tap.qsys --block-symbol-file --output-directory=E:\Project\test\an9238\tap --family="Cyclone IV E" --part=EP4CE6F17C8
+Progress: Loading an9238/tap.qsys
+Progress: Reading input file
+Progress: Adding signaltap_ii_logic_analyzer_0 [altera_signaltap_ii_logic_analyzer 17.1]
+Progress: Parameterizing module signaltap_ii_logic_analyzer_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate E:\Project\test\an9238\tap.qsys --synthesis=VERILOG --output-directory=E:\Project\test\an9238\tap\synthesis --family="Cyclone IV E" --part=EP4CE6F17C8
+Progress: Loading an9238/tap.qsys
+Progress: Reading input file
+Progress: Adding signaltap_ii_logic_analyzer_0 [altera_signaltap_ii_logic_analyzer 17.1]
+Progress: Parameterizing module signaltap_ii_logic_analyzer_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: tap: Generating tap "tap" for QUARTUS_SYNTH
+Info: signaltap_ii_logic_analyzer_0: "tap" instantiated altera_signaltap_ii_logic_analyzer "signaltap_ii_logic_analyzer_0"
+Info: tap: Done "tap" with 2 modules, 1 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

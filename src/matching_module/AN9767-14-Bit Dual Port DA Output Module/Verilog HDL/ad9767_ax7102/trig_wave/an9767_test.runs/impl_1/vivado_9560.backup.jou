@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Thu May 04 10:59:49 2017
+# Process ID: 9560
+# Current directory: E:/Project/AN9767/CD/CD/verilog/ad9767_ax7102/trig_wave/an9767_test.runs/impl_1
+# Command line: vivado.exe -log ad9767_test.vdi -applog -messageDb vivado.pb -mode batch -source ad9767_test.tcl -notrace
+# Log file: E:/Project/AN9767/CD/CD/verilog/ad9767_ax7102/trig_wave/an9767_test.runs/impl_1/ad9767_test.vdi
+# Journal file: E:/Project/AN9767/CD/CD/verilog/ad9767_ax7102/trig_wave/an9767_test.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source ad9767_test.tcl -notrace

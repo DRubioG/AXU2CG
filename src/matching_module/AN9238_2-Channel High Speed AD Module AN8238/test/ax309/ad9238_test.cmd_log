@@ -1,0 +1,19 @@
+xst -intstyle ise -ifn "E:/Project/test/ax309/ad9238_test/ad9238_test.xst" -ofn "E:/Project/test/ax309/ad9238_test/ad9238_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc ad9238_test.ucf -p xc6slx9-ftg256-2 ad9238_test.ngc ad9238_test.ngd  
+map -intstyle ise -p xc6slx9-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ad9238_test_map.ncd ad9238_test.ngd ad9238_test.pcf 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc ad9238_test.ucf -p xc6slx9-ftg256-2 ad9238_test.ngc ad9238_test.ngd  
+map -intstyle ise -p xc6slx9-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ad9238_test_map.ncd ad9238_test.ngd ad9238_test.pcf 
+par -w -intstyle ise -ol high -mt off ad9238_test_map.ncd ad9238_test.ncd ad9238_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ad9238_test.twx ad9238_test.ncd -o ad9238_test.twr ad9238_test.pcf -ucf ad9238_test.ucf 
+bitgen -intstyle ise -f ad9238_test.ut ad9238_test.ncd 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc ad9238_test.ucf -p xc6slx9-ftg256-2 ad9238_test.ngc ad9238_test.ngd  
+map -intstyle ise -p xc6slx9-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ad9238_test_map.ncd ad9238_test.ngd ad9238_test.pcf 
+par -w -intstyle ise -ol high -mt off ad9238_test_map.ncd ad9238_test.ncd ad9238_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ad9238_test.twx ad9238_test.ncd -o ad9238_test.twr ad9238_test.pcf -ucf ad9238_test.ucf 
+bitgen -intstyle ise -f ad9238_test.ut ad9238_test.ncd 
+xst -intstyle ise -ifn "E:/Project/test/ax309/ad9238_test/ad9238_test.xst" -ofn "E:/Project/test/ax309/ad9238_test/ad9238_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc ad9238_test.ucf -p xc6slx9-ftg256-2 ad9238_test.ngc ad9238_test.ngd  
+map -intstyle ise -p xc6slx9-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ad9238_test_map.ncd ad9238_test.ngd ad9238_test.pcf 
+par -w -intstyle ise -ol high -mt off ad9238_test_map.ncd ad9238_test.ncd ad9238_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ad9238_test.twx ad9238_test.ncd -o ad9238_test.twr ad9238_test.pcf -ucf ad9238_test.ucf 
+bitgen -intstyle ise -f ad9238_test.ut ad9238_test.ncd 

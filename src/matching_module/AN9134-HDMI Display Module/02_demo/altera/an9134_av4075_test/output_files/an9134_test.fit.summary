@@ -1,0 +1,16 @@
+Fitter Status : Successful - Wed Aug 09 13:43:01 2017
+Quartus II 64-Bit Version : 12.1 Build 177 11/07/2012 SJ Full Version
+Revision Name : an9134_test
+Top-level Entity Name : an9134_test
+Family : Cyclone IV E
+Device : EP4CE75F23C8
+Timing Models : Final
+Total logic elements : 941 / 75,408 ( 1 % )
+    Total combinational functions : 917 / 75,408 ( 1 % )
+    Dedicated logic registers : 477 / 75,408 ( < 1 % )
+Total registers : 504
+Total pins : 36 / 293 ( 12 % )
+Total virtual pins : 0
+Total memory bits : 0 / 2,810,880 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 400 ( 0 % )
+Total PLLs : 1 / 4 ( 25 % )

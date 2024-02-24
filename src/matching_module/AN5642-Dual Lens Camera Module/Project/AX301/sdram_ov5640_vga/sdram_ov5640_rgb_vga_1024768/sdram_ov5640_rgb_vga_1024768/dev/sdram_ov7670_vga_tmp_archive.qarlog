@@ -1,0 +1,59 @@
+Quartus II Archive log --	E:/Project/AN5642/verilog/AX301/sdram_ov5640_rgb_vga_1024768/sdram_ov5640_rgb_vga_1024768/dev/sdram_ov7670_vga_tmp_archive.qarlog
+
+Archive:	E:/Project/AN5642/verilog/AX301/sdram_ov5640_rgb_vga_1024768/sdram_ov5640_rgb_vga_1024768/dev/sdram_ov7670_vga_tmp_archive.qar
+Date:		Mon Sep 12 09:04:04 2016
+Quartus II 64-Bit		12.1 Build 177 11/07/2012 SJ Full Version
+
+	=========== Files Selected: ===========
+E:/Project/AN5642/verilog/AX301/sdram_ov5640_rgb_vga_1024768/sdram_ov5640_rgb_vga_1024768/core/osd_rom.v
+E:/Project/AN5642/verilog/AX301/sdram_ov5640_rgb_vga_1024768/sdram_ov5640_rgb_vga_1024768/core/vip_rom.v
+E:/Project/AN5642/verilog/AX301/sdram_ov5640_rgb_vga_1024768/sdram_ov5640_rgb_vga_1024768/dev/AX301.tcl
+E:/Project/AN5642/verilog/AX301/sdram_ov5640_rgb_vga_1024768/sdram_ov5640_rgb_vga_1024768/dev/incremental_db/compiled_partitions/sdram_ov7670_vga.db_info
+E:/Project/AN5642/verilog/AX301/sdram_ov5640_rgb_vga_1024768/sdram_ov5640_rgb_vga_1024768/dev/pll_64.cmp
+E:/Project/AN5642/verilog/AX301/sdram_ov5640_rgb_vga_1024768/sdram_ov5640_rgb_vga_1024768/dev/pll_64.ppf
+E:/Project/AN5642/verilog/AX301/sdram_ov5640_rgb_vga_1024768/sdram_ov5640_rgb_vga_1024768/dev/pll_64.qip
+E:/Project/AN5642/verilog/AX301/sdram_ov5640_rgb_vga_1024768/sdram_ov5640_rgb_vga_1024768/dev/pll_64.vhd
+E:/Project/AN5642/verilog/AX301/sdram_ov5640_rgb_vga_1024768/sdram_ov5640_rgb_vga_1024768/dev/sdram_ov7670_vga.qpf
+E:/Project/AN5642/verilog/AX301/sdram_ov5640_rgb_vga_1024768/sdram_ov5640_rgb_vga_1024768/dev/sdram_ov7670_vga.qsf
+E:/Project/AN5642/verilog/AX301/sdram_ov5640_rgb_vga_1024768/sdram_ov5640_rgb_vga_1024768/dev/sdram_ov7670_vga.tcl
+E:/Project/AN5642/verilog/AX301/sdram_ov5640_rgb_vga_1024768/sdram_ov5640_rgb_vga_1024768/dev/sdram_ov7670_vga_assignment_defaults.qdf
+E:/Project/AN5642/verilog/AX301/sdram_ov5640_rgb_vga_1024768/sdram_ov5640_rgb_vga_1024768/dev/sdram_pll.v
+E:/Project/AN5642/verilog/AX301/sdram_ov5640_rgb_vga_1024768/sdram_ov5640_rgb_vga_1024768/dev/stp1.stp
+E:/Project/AN5642/verilog/AX301/sdram_ov5640_rgb_vga_1024768/sdram_ov5640_rgb_vga_1024768/src/SEG7_LUT.v
+E:/Project/AN5642/verilog/AX301/sdram_ov5640_rgb_vga_1024768/sdram_ov5640_rgb_vga_1024768/src/alpha_control.v
+E:/Project/AN5642/verilog/AX301/sdram_ov5640_rgb_vga_1024768/sdram_ov5640_rgb_vga_1024768/src/cmos_i2c_ov7670/CMOS_Capture.v
+E:/Project/AN5642/verilog/AX301/sdram_ov5640_rgb_vga_1024768/sdram_ov5640_rgb_vga_1024768/src/cmos_i2c_ov7670/i2c_com.v
+E:/Project/AN5642/verilog/AX301/sdram_ov5640_rgb_vga_1024768/sdram_ov5640_rgb_vga_1024768/src/cmos_i2c_ov7670/power_on_delay.v
+E:/Project/AN5642/verilog/AX301/sdram_ov5640_rgb_vga_1024768/sdram_ov5640_rgb_vga_1024768/src/cmos_i2c_ov7670/reg_config.v
+E:/Project/AN5642/verilog/AX301/sdram_ov5640_rgb_vga_1024768/sdram_ov5640_rgb_vga_1024768/src/data_generate.v
+E:/Project/AN5642/verilog/AX301/sdram_ov5640_rgb_vga_1024768/sdram_ov5640_rgb_vga_1024768/src/key_down_scan.v
+E:/Project/AN5642/verilog/AX301/sdram_ov5640_rgb_vga_1024768/sdram_ov5640_rgb_vga_1024768/src/sdram.sdc
+E:/Project/AN5642/verilog/AX301/sdram_ov5640_rgb_vga_1024768/sdram_ov5640_rgb_vga_1024768/src/sdram_ov7670_vga.v
+E:/Project/AN5642/verilog/AX301/sdram_ov5640_rgb_vga_1024768/sdram_ov5640_rgb_vga_1024768/src/sdram_vga_ip/lcd_ip/lcd_display.v
+E:/Project/AN5642/verilog/AX301/sdram_ov5640_rgb_vga_1024768/sdram_ov5640_rgb_vga_1024768/src/sdram_vga_ip/lcd_ip/lcd_driver.v
+E:/Project/AN5642/verilog/AX301/sdram_ov5640_rgb_vga_1024768/sdram_ov5640_rgb_vga_1024768/src/sdram_vga_ip/lcd_ip/lcd_para.v
+E:/Project/AN5642/verilog/AX301/sdram_ov5640_rgb_vga_1024768/sdram_ov5640_rgb_vga_1024768/src/sdram_vga_ip/lcd_ip/lcd_top.v
+E:/Project/AN5642/verilog/AX301/sdram_ov5640_rgb_vga_1024768/sdram_ov5640_rgb_vga_1024768/src/sdram_vga_ip/sdram_ip/dcfifo_ctrl.v
+E:/Project/AN5642/verilog/AX301/sdram_ov5640_rgb_vga_1024768/sdram_ov5640_rgb_vga_1024768/src/sdram_vga_ip/sdram_ip/rdfifo.v
+E:/Project/AN5642/verilog/AX301/sdram_ov5640_rgb_vga_1024768/sdram_ov5640_rgb_vga_1024768/src/sdram_vga_ip/sdram_ip/sdbank_switch.v
+E:/Project/AN5642/verilog/AX301/sdram_ov5640_rgb_vga_1024768/sdram_ov5640_rgb_vga_1024768/src/sdram_vga_ip/sdram_ip/sdram_2fifo_top.v
+E:/Project/AN5642/verilog/AX301/sdram_ov5640_rgb_vga_1024768/sdram_ov5640_rgb_vga_1024768/src/sdram_vga_ip/sdram_ip/sdram_cmd.v
+E:/Project/AN5642/verilog/AX301/sdram_ov5640_rgb_vga_1024768/sdram_ov5640_rgb_vga_1024768/src/sdram_vga_ip/sdram_ip/sdram_ctrl.v
+E:/Project/AN5642/verilog/AX301/sdram_ov5640_rgb_vga_1024768/sdram_ov5640_rgb_vga_1024768/src/sdram_vga_ip/sdram_ip/sdram_para.v
+E:/Project/AN5642/verilog/AX301/sdram_ov5640_rgb_vga_1024768/sdram_ov5640_rgb_vga_1024768/src/sdram_vga_ip/sdram_ip/sdram_top.v
+E:/Project/AN5642/verilog/AX301/sdram_ov5640_rgb_vga_1024768/sdram_ov5640_rgb_vga_1024768/src/sdram_vga_ip/sdram_ip/sdram_wr_data.v
+E:/Project/AN5642/verilog/AX301/sdram_ov5640_rgb_vga_1024768/sdram_ov5640_rgb_vga_1024768/src/sdram_vga_ip/sdram_ip/wrfifo.v
+E:/Project/AN5642/verilog/AX301/sdram_ov5640_rgb_vga_1024768/sdram_ov5640_rgb_vga_1024768/src/sdram_vga_ip/sdram_vga_top.v
+E:/Project/AN5642/verilog/AX301/sdram_ov5640_rgb_vga_1024768/sdram_ov5640_rgb_vga_1024768/src/seg7_lut.v
+E:/Project/AN5642/verilog/AX301/sdram_ov5640_rgb_vga_1024768/sdram_ov5640_rgb_vga_1024768/src/system_ctrl.v
+E:/Project/AN5642/verilog/AX301/sdram_ov5640_rgb_vga_1024768/stp1.stp
+	======= Total: 42 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Mon Sep 12 09:04:06 2016
+Source archive file:	E:/Project/AN5642/verilog/AX301/sdram_ov5640_rgb_vga_1024768/sdram_ov5640_rgb_vga_1024768/dev/sdram_ov7670_vga_tmp_archive.qar
+Archive was extracted into	E:/Project/AN5642/verilog/AX301/
+		 - successfully.

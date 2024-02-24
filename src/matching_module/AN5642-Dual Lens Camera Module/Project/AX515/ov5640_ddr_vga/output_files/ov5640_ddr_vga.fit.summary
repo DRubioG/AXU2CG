@@ -1,0 +1,16 @@
+Fitter Status : Successful - Mon Dec 12 21:41:22 2016
+Quartus II 64-Bit Version : 12.1 Build 177 11/07/2012 SJ Full Version
+Revision Name : ov5640_ddr_vga
+Top-level Entity Name : ov5640_ddr_vga
+Family : Cyclone IV E
+Device : EP4CE15F23C8
+Timing Models : Final
+Total logic elements : 11,650 / 15,408 ( 76 % )
+    Total combinational functions : 7,947 / 15,408 ( 52 % )
+    Dedicated logic registers : 7,474 / 15,408 ( 49 % )
+Total registers : 7582
+Total pins : 99 / 344 ( 29 % )
+Total virtual pins : 0
+Total memory bits : 355,168 / 516,096 ( 69 % )
+Embedded Multiplier 9-bit elements : 0 / 112 ( 0 % )
+Total PLLs : 2 / 4 ( 50 % )

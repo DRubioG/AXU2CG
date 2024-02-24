@@ -1,0 +1,22 @@
+16:53:28 **** Auto Build of configuration Debug for project mipi_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/platform/platform.c'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mipi_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform/platform.d" -MT"src/platform/platform.o" -o "src/platform/platform.o" "../src/platform/platform.c"
+'Finished building: ../src/platform/platform.c'
+' '
+'Building file: ../src/ov5640/OV5640.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ov5640/OV5640.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../mipi_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/ov5640/OV5640.d" -MT"src/ov5640/OV5640.o" -o "src/ov5640/OV5640.o" "../src/ov5640/OV5640.cpp"
+In file included from ../src/ov5640/OV5640.h:18:0,
+                 from ../src/ov5640/OV5640.cpp:8:
+../src/ov5640/../hdmi/VideoOutput.h:17:22: fatal error: xclk_wiz.h: No such file or directory
+ #include "xclk_wiz.h"
+                      ^
+compilation terminated.
+make: *** [src/ov5640/OV5640.o] ´íÎó 1
+
+16:53:29 Build Finished (took 1s.274ms)
+

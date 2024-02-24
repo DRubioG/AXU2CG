@@ -1,0 +1,23 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Wed Aug 16 13:11:13 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "rs232_rx1" LOCATE = SITE "B12" LEVEL 1;
+COMP "rs232_tx1" LOCATE = SITE "A13" LEVEL 1;
+COMP "rs485_de1" LOCATE = SITE "B6" LEVEL 1;
+COMP "rs485_de2" LOCATE = SITE "A9" LEVEL 1;
+COMP "rs485_rx1" LOCATE = SITE "A5" LEVEL 1;
+COMP "rs485_rx2" LOCATE = SITE "C8" LEVEL 1;
+COMP "rs485_tx1" LOCATE = SITE "A6" LEVEL 1;
+COMP "rs485_tx2" LOCATE = SITE "A10" LEVEL 1;
+COMP "clk50" LOCATE = SITE "T8" LEVEL 1;
+COMP "reset_n" LOCATE = SITE "L3" LEVEL 1;
+TIMEGRP sys_clk_pin = BEL "u0/cnt_0" BEL "u0/cnt_1" BEL "u0/cnt_2" BEL
+        "u0/cnt_3" BEL "u0/cnt_4" BEL "u0/cnt_5" BEL "u0/cnt_6" BEL "u0/cnt_7"
+        BEL "u0/cnt_8" BEL "u0/cnt_9" BEL "u0/cnt_10" BEL "u0/cnt_11" BEL
+        "u0/cnt_12" BEL "u0/cnt_13" BEL "u0/cnt_14" BEL "u0/cnt_15" BEL
+        "u0/clkout" BEL "clk50_BUFGP/BUFG";
+TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 50 MHz HIGH 50%;
+SCHEMATIC END;
+

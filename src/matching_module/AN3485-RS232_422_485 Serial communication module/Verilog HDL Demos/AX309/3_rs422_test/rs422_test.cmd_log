@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "Y:/project/AN/AN3485/CD/verilog/AX309/3_rs422_test/rs422_test.xst" -ofn "Y:/project/AN/AN3485/CD/verilog/AX309/3_rs422_test/rs422_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc rs422_test.ucf -p xc6slx9-ftg256-2 rs422_test.ngc rs422_test.ngd  
+map -intstyle ise -p xc6slx9-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o rs422_test_map.ncd rs422_test.ngd rs422_test.pcf 
+par -w -intstyle ise -ol high -mt off rs422_test_map.ncd rs422_test.ncd rs422_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml rs422_test.twx rs422_test.ncd -o rs422_test.twr rs422_test.pcf -ucf rs422_test.ucf 
+bitgen -intstyle ise -f rs422_test.ut rs422_test.ncd 

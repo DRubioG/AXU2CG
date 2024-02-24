@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at I2C_OV7670_RGB565_Config.v(29): always construct contains both blocking and non-blocking assignments

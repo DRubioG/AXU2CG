@@ -1,0 +1,706 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: rs485_test.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "rs485_test.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "rs485_test"
+Output Format                      : NGC
+Target Device                      : xc6slx9-2-ftg256
+
+---- Source Options
+Top Module Name                    : rs485_test
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "\\192.168.1.10\server\project\AN\AN3485\CD\verilog\AX309\2_rs485_test\source\uarttx.v" into library work
+Parsing module <uarttx>.
+Analyzing Verilog file "\\192.168.1.10\server\project\AN\AN3485\CD\verilog\AX309\2_rs485_test\source\uartrx.v" into library work
+Parsing module <uartrx>.
+Analyzing Verilog file "\\192.168.1.10\server\project\AN\AN3485\CD\verilog\AX309\2_rs485_test\source\rs485_tx.v" into library work
+Parsing module <rs485_tx>.
+Analyzing Verilog file "\\192.168.1.10\server\project\AN\AN3485\CD\verilog\AX309\2_rs485_test\source\rs485_rx.v" into library work
+Parsing module <rs485_rx>.
+Analyzing Verilog file "\\192.168.1.10\server\project\AN\AN3485\CD\verilog\AX309\2_rs485_test\source\rs485_ctrl.v" into library work
+Parsing module <rs485_ctrl>.
+Analyzing Verilog file "\\192.168.1.10\server\project\AN\AN3485\CD\verilog\AX309\2_rs485_test\source\clkdiv.v" into library work
+Parsing module <clkdiv>.
+Analyzing Verilog file "\\192.168.1.10\server\project\AN\AN3485\CD\verilog\AX309\2_rs485_test\ipcore_dir\ram.v" into library work
+Parsing module <ram>.
+Analyzing Verilog file "\\192.168.1.10\server\project\AN\AN3485\CD\verilog\AX309\2_rs485_test\source\rs485_test.v" into library work
+Parsing module <rs485_test>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <rs485_test>.
+
+Elaborating module <clkdiv>.
+
+Elaborating module <uartrx>.
+
+Elaborating module <uarttx>.
+
+Elaborating module <rs485_tx>.
+
+Elaborating module <rs485_rx>.
+
+Elaborating module <rs485_ctrl>.
+WARNING:HDLCompiler:1127 - "\\192.168.1.10\server\project\AN\AN3485\CD\verilog\AX309\2_rs485_test\source\rs485_test.v" Line 135: Assignment to rs485_data_length ignored, since the identifier is never used
+
+Elaborating module <ram>.
+WARNING:HDLCompiler:1499 - "\\192.168.1.10\server\project\AN\AN3485\CD\verilog\AX309\2_rs485_test\ipcore_dir\ram.v" Line 39: Empty module <ram> remains a black box.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <rs485_test>.
+    Related source file is "\\192.168.1.10\server\project\AN\AN3485\CD\verilog\AX309\2_rs485_test\source\rs485_test.v".
+INFO:Xst:3210 - "\\192.168.1.10\server\project\AN\AN3485\CD\verilog\AX309\2_rs485_test\source\rs485_test.v" line 56: Output port <dataerror> of the instance <u1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\192.168.1.10\server\project\AN\AN3485\CD\verilog\AX309\2_rs485_test\source\rs485_test.v" line 56: Output port <frameerror> of the instance <u1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\192.168.1.10\server\project\AN\AN3485\CD\verilog\AX309\2_rs485_test\source\rs485_test.v" line 66: Output port <idle> of the instance <u2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\192.168.1.10\server\project\AN\AN3485\CD\verilog\AX309\2_rs485_test\source\rs485_test.v" line 76: Output port <idle> of the instance <u3> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\192.168.1.10\server\project\AN\AN3485\CD\verilog\AX309\2_rs485_test\source\rs485_test.v" line 86: Output port <dataerror> of the instance <u4> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\192.168.1.10\server\project\AN\AN3485\CD\verilog\AX309\2_rs485_test\source\rs485_test.v" line 86: Output port <frameerror> of the instance <u4> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\192.168.1.10\server\project\AN\AN3485\CD\verilog\AX309\2_rs485_test\source\rs485_test.v" line 108: Output port <dataerror> of the instance <u6> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\192.168.1.10\server\project\AN\AN3485\CD\verilog\AX309\2_rs485_test\source\rs485_test.v" line 108: Output port <frameerror> of the instance <u6> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\192.168.1.10\server\project\AN\AN3485\CD\verilog\AX309\2_rs485_test\source\rs485_test.v" line 123: Output port <rs485_rxdata_length> of the instance <u7> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <rs485_test> synthesized.
+
+Synthesizing Unit <clkdiv>.
+    Related source file is "\\192.168.1.10\server\project\AN\AN3485\CD\verilog\AX309\2_rs485_test\source\clkdiv.v".
+    Found 16-bit register for signal <cnt>.
+    Found 1-bit register for signal <clkout>.
+    Found 16-bit adder for signal <cnt[15]_GND_2_o_add_4_OUT> created at line 28.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  17 D-type flip-flop(s).
+Unit <clkdiv> synthesized.
+
+Synthesizing Unit <uartrx>.
+    Related source file is "\\192.168.1.10\server\project\AN\AN3485\CD\verilog\AX309\2_rs485_test\source\uartrx.v".
+        paritymode = 1'b0
+    Found 1-bit register for signal <rxfall>.
+    Found 1-bit register for signal <receive>.
+    Found 1-bit register for signal <idle>.
+    Found 8-bit register for signal <cnt>.
+    Found 1-bit register for signal <rdsig>.
+    Found 8-bit register for signal <dataout>.
+    Found 1-bit register for signal <presult>.
+    Found 1-bit register for signal <dataerror>.
+    Found 1-bit register for signal <frameerror>.
+    Found 1-bit register for signal <rxbuf>.
+    Found 8-bit adder for signal <cnt[7]_GND_3_o_add_5_OUT> created at line 51.
+    Found 1-bit comparator not equal for signal <presult_rx_equal_15_o> created at line 121
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  24 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <uartrx> synthesized.
+
+Synthesizing Unit <uarttx>.
+    Related source file is "\\192.168.1.10\server\project\AN\AN3485\CD\verilog\AX309\2_rs485_test\source\uarttx.v".
+        paritymode = 1'b0
+    Found 1-bit register for signal <wrsigrise>.
+    Found 1-bit register for signal <send>.
+    Found 8-bit register for signal <data_reg>.
+    Found 1-bit register for signal <tx>.
+    Found 1-bit register for signal <idle>.
+    Found 8-bit register for signal <cnt>.
+    Found 1-bit register for signal <presult>.
+    Found 1-bit register for signal <wrsigbuf>.
+    Found 8-bit adder for signal <cnt[7]_GND_4_o_add_7_OUT> created at line 50.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  22 D-type flip-flop(s).
+Unit <uarttx> synthesized.
+
+Synthesizing Unit <rs485_tx>.
+    Related source file is "\\192.168.1.10\server\project\AN\AN3485\CD\verilog\AX309\2_rs485_test\source\rs485_tx.v".
+        paritymode = 1'b0
+    Found 1-bit register for signal <wrsigrise>.
+    Found 1-bit register for signal <send>.
+    Found 1-bit register for signal <de>.
+    Found 8-bit register for signal <datain_reg>.
+    Found 1-bit register for signal <tx>.
+    Found 1-bit register for signal <idle>.
+    Found 8-bit register for signal <cnt>.
+    Found 1-bit register for signal <presult>.
+    Found 1-bit register for signal <wrsigbuf>.
+    Found 8-bit adder for signal <cnt[7]_GND_5_o_add_7_OUT> created at line 55.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  23 D-type flip-flop(s).
+Unit <rs485_tx> synthesized.
+
+Synthesizing Unit <rs485_rx>.
+    Related source file is "\\192.168.1.10\server\project\AN\AN3485\CD\verilog\AX309\2_rs485_test\source\rs485_rx.v".
+        paritymode = 1'b0
+    Found 1-bit register for signal <rxfall>.
+    Found 1-bit register for signal <receive>.
+    Found 1-bit register for signal <idle>.
+    Found 8-bit register for signal <cnt>.
+    Found 1-bit register for signal <rdsig>.
+    Found 8-bit register for signal <dataout>.
+    Found 1-bit register for signal <presult>.
+    Found 1-bit register for signal <dataerror>.
+    Found 1-bit register for signal <frameerror>.
+    Found 1-bit register for signal <rxbuf>.
+    Found 8-bit adder for signal <cnt[7]_GND_6_o_add_5_OUT> created at line 51.
+    Found 1-bit comparator not equal for signal <presult_rx_equal_15_o> created at line 121
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  24 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <rs485_rx> synthesized.
+
+Synthesizing Unit <rs485_ctrl>.
+    Related source file is "\\192.168.1.10\server\project\AN\AN3485\CD\verilog\AX309\2_rs485_test\source\rs485_ctrl.v".
+    Found 3-bit register for signal <rs485_r_stat>.
+    Found 1-bit register for signal <rs485_command_enable>.
+    Found 6-bit register for signal <rs485_rxdata_length>.
+    Found 6-bit register for signal <command_length>.
+    Found 6-bit register for signal <ram_raddr_d>.
+    Found 3-bit register for signal <rs485_t_stat>.
+    Found 6-bit register for signal <rs485_txdata_count>.
+    Found 1-bit register for signal <rs485_tx_en>.
+    Found 3-bit register for signal <wait_cnt>.
+    Found 6-bit register for signal <ram_waddr_d1>.
+    Found 6-bit register for signal <ram_waddr_d2>.
+    Found 6-bit register for signal <ram_waddr_d3>.
+    Found 6-bit register for signal <ram_waddr>.
+    Found 6-bit register for signal <ram_raddr_d1>.
+    Found 6-bit register for signal <ram_raddr_d2>.
+    Found 6-bit register for signal <ram_raddr_d3>.
+    Found 6-bit register for signal <ram_raddr>.
+    Found 6-bit register for signal <ram_waddr_d>.
+    Found finite state machine <FSM_0> for signal <rs485_t_stat>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 11                                             |
+    | Inputs             | 4                                              |
+    | Outputs            | 3                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | reset_n_GND_7_o_equal_39_o (positive)          |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_1> for signal <rs485_r_stat>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 8                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 5                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | reset_n_GND_7_o_equal_39_o (positive)          |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 6-bit adder for signal <ram_waddr_d[5]_GND_7_o_add_4_OUT> created at line 47.
+    Found 6-bit adder for signal <rs485_rxdata_length[5]_GND_7_o_add_11_OUT> created at line 58.
+    Found 6-bit adder for signal <ram_raddr_d[5]_GND_7_o_add_41_OUT> created at line 106.
+    Found 3-bit adder for signal <wait_cnt[2]_GND_7_o_add_46_OUT> created at line 121.
+    Found 6-bit adder for signal <rs485_txdata_count[5]_GND_7_o_add_50_OUT> created at line 127.
+    Found 6-bit comparator greater for signal <rs485_txdata_count[5]_command_length[5]_LessThan_50_o> created at line 126
+    Summary:
+	inferred   5 Adder/Subtractor(s).
+	inferred  83 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   9 Multiplexer(s).
+	inferred   2 Finite State Machine(s).
+Unit <rs485_ctrl> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 12
+ 16-bit adder                                          : 1
+ 3-bit adder                                           : 1
+ 6-bit adder                                           : 4
+ 8-bit adder                                           : 6
+# Registers                                            : 74
+ 1-bit register                                        : 47
+ 16-bit register                                       : 1
+ 3-bit register                                        : 1
+ 6-bit register                                        : 13
+ 8-bit register                                        : 12
+# Comparators                                          : 4
+ 1-bit comparator not equal                            : 3
+ 6-bit comparator greater                              : 1
+# Multiplexers                                         : 9
+ 1-bit 2-to-1 multiplexer                              : 3
+ 6-bit 2-to-1 multiplexer                              : 6
+# FSMs                                                 : 2
+# Xors                                                 : 24
+ 1-bit xor2                                            : 24
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/ram.ngc>.
+Loading core <ram> for timing and area information for instance <ram_inst>.
+
+Synthesizing (advanced) Unit <clkdiv>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+Unit <clkdiv> synthesized (advanced).
+
+Synthesizing (advanced) Unit <rs485_ctrl>.
+The following registers are absorbed into counter <rs485_rxdata_length>: 1 register on signal <rs485_rxdata_length>.
+The following registers are absorbed into counter <rs485_txdata_count>: 1 register on signal <rs485_txdata_count>.
+The following registers are absorbed into counter <wait_cnt>: 1 register on signal <wait_cnt>.
+The following registers are absorbed into counter <ram_waddr_d>: 1 register on signal <ram_waddr_d>.
+Unit <rs485_ctrl> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 7
+ 6-bit adder                                           : 1
+ 8-bit adder                                           : 6
+# Counters                                             : 5
+ 16-bit up counter                                     : 1
+ 3-bit up counter                                      : 1
+ 6-bit up counter                                      : 3
+# Registers                                            : 203
+ Flip-Flops                                            : 203
+# Comparators                                          : 4
+ 1-bit comparator not equal                            : 3
+ 6-bit comparator greater                              : 1
+# Multiplexers                                         : 6
+ 1-bit 2-to-1 multiplexer                              : 3
+ 6-bit 2-to-1 multiplexer                              : 3
+# FSMs                                                 : 2
+# Xors                                                 : 24
+ 1-bit xor2                                            : 24
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <u7/FSM_1> on signal <rs485_r_stat[1:2]> with sequential encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 00
+ 001   | 01
+ 010   | 10
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <u7/FSM_0> on signal <rs485_t_stat[1:2]> with sequential encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 00
+ 001   | 01
+ 010   | 10
+ 011   | 11
+-------------------
+
+Optimizing unit <rs485_test> ...
+
+Optimizing unit <rs485_ctrl> ...
+
+Optimizing unit <uartrx> ...
+
+Optimizing unit <rs485_rx> ...
+
+Optimizing unit <uarttx> ...
+
+Optimizing unit <rs485_tx> ...
+WARNING:Xst:2677 - Node <u1/dataerror> of sequential type is unconnected in block <rs485_test>.
+WARNING:Xst:2677 - Node <u1/presult> of sequential type is unconnected in block <rs485_test>.
+WARNING:Xst:2677 - Node <u1/frameerror> of sequential type is unconnected in block <rs485_test>.
+WARNING:Xst:2677 - Node <u6/dataerror> of sequential type is unconnected in block <rs485_test>.
+WARNING:Xst:2677 - Node <u6/presult> of sequential type is unconnected in block <rs485_test>.
+WARNING:Xst:2677 - Node <u6/frameerror> of sequential type is unconnected in block <rs485_test>.
+WARNING:Xst:2677 - Node <u4/dataerror> of sequential type is unconnected in block <rs485_test>.
+WARNING:Xst:2677 - Node <u4/presult> of sequential type is unconnected in block <rs485_test>.
+WARNING:Xst:2677 - Node <u4/frameerror> of sequential type is unconnected in block <rs485_test>.
+WARNING:Xst:1710 - FF/Latch <u7/wait_cnt_2> (without init value) has a constant value of 0 in block <rs485_test>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <u3/de> in Unit <rs485_test> is equivalent to the following FF/Latch, which will be removed : <u3/send> 
+INFO:Xst:2261 - The FF/Latch <u5/de> in Unit <rs485_test> is equivalent to the following FF/Latch, which will be removed : <u5/send> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block rs485_test, actual ratio is 7.
+
+Final Macro Processing ...
+
+Processing Unit <rs485_test> :
+	Found 4-bit shift register for signal <u7/ram_raddr_5>.
+	Found 4-bit shift register for signal <u7/ram_raddr_4>.
+	Found 4-bit shift register for signal <u7/ram_raddr_3>.
+	Found 4-bit shift register for signal <u7/ram_raddr_2>.
+	Found 4-bit shift register for signal <u7/ram_raddr_1>.
+	Found 4-bit shift register for signal <u7/ram_raddr_0>.
+	Found 4-bit shift register for signal <u7/ram_waddr_5>.
+	Found 4-bit shift register for signal <u7/ram_waddr_4>.
+	Found 4-bit shift register for signal <u7/ram_waddr_3>.
+	Found 4-bit shift register for signal <u7/ram_waddr_2>.
+	Found 4-bit shift register for signal <u7/ram_waddr_1>.
+	Found 4-bit shift register for signal <u7/ram_waddr_0>.
+Unit <rs485_test> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 184
+ Flip-Flops                                            : 184
+# Shift Registers                                      : 12
+ 4-bit shift register                                  : 12
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : rs485_test.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 340
+#      GND                         : 2
+#      INV                         : 18
+#      LUT1                        : 15
+#      LUT2                        : 28
+#      LUT3                        : 43
+#      LUT4                        : 42
+#      LUT5                        : 34
+#      LUT6                        : 118
+#      MUXCY                       : 15
+#      MUXF7                       : 7
+#      VCC                         : 2
+#      XORCY                       : 16
+# FlipFlops/Latches                : 196
+#      FD                          : 22
+#      FDE                         : 60
+#      FDR                         : 79
+#      FDRE                        : 32
+#      FDS                         : 3
+# RAMS                             : 1
+#      RAMB8BWER                   : 1
+# Shift Registers                  : 12
+#      SRLC16E                     : 12
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 9
+#      IBUF                        : 4
+#      OBUF                        : 5
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9ftg256-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             196  out of  11440     1%  
+ Number of Slice LUTs:                  310  out of   5720     5%  
+    Number used as Logic:               298  out of   5720     5%  
+    Number used as Memory:               12  out of   1440     0%  
+       Number used as SRL:               12
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    341
+   Number with an unused Flip Flop:     145  out of    341    42%  
+   Number with an unused LUT:            31  out of    341     9%  
+   Number of fully used LUT-FF pairs:   165  out of    341    48%  
+   Number of unique control sets:        22
+
+IO Utilization: 
+ Number of IOs:                          10
+ Number of bonded IOBs:                  10  out of    186     5%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                1  out of     32     3%  
+    Number using Block RAM only:          1
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk50                              | BUFGP                  | 17    |
+u0/clkout                          | BUFG                   | 192   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 5.217ns (Maximum Frequency: 191.681MHz)
+   Minimum input arrival time before clock: 4.414ns
+   Maximum output required time after clock: 4.240ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk50'
+  Clock period: 4.707ns (frequency: 212.450MHz)
+  Total number of paths / destination ports: 425 / 34
+-------------------------------------------------------------------------
+Delay:               4.707ns (Levels of Logic = 2)
+  Source:            u0/cnt_12 (FF)
+  Destination:       u0/cnt_0 (FF)
+  Source Clock:      clk50 rising
+  Destination Clock: clk50 rising
+
+  Data Path: u0/cnt_12 to u0/cnt_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              3   0.525   1.221  u0/cnt_12 (u0/cnt_12)
+     LUT6:I0->O            1   0.254   0.790  u0/_n00162 (u0/_n00162)
+     LUT6:I4->O           17   0.250   1.208  u0/_n00163 (u0/_n0016)
+     FDR:R                     0.459          u0/cnt_0
+    ----------------------------------------
+    Total                      4.707ns (1.488ns logic, 3.219ns route)
+                                       (31.6% logic, 68.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'u0/clkout'
+  Clock period: 5.217ns (frequency: 191.681MHz)
+  Total number of paths / destination ports: 2011 / 354
+-------------------------------------------------------------------------
+Delay:               5.217ns (Levels of Logic = 4)
+  Source:            u7/command_length_0 (FF)
+  Destination:       u7/rs485_txdata_count_3 (FF)
+  Source Clock:      u0/clkout rising
+  Destination Clock: u0/clkout rising
+
+  Data Path: u7/command_length_0 to u7/rs485_txdata_count_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             1   0.525   1.137  u7/command_length_0 (u7/command_length_0)
+     LUT6:I0->O            2   0.254   0.725  u7/rs485_txdata_count[5]_command_length[5]_LessThan_50_o2 (u7/rs485_txdata_count[5]_command_length[5]_LessThan_50_o1)
+     MUXF7:S->O           14   0.185   1.127  u7/rs485_txdata_count[5]_command_length[5]_LessThan_50_o1 (u7/rs485_txdata_count[5]_command_length[5]_LessThan_50_o)
+     LUT3:I2->O            1   0.254   0.682  u7/_n0290_inv1_rstpot (u7/_n0290_inv1_rstpot)
+     LUT6:I5->O            1   0.254   0.000  u7/rs485_txdata_count_3_dpot (u7/rs485_txdata_count_3_dpot)
+     FDRE:D                    0.074          u7/rs485_txdata_count_3
+    ----------------------------------------
+    Total                      5.217ns (1.546ns logic, 3.671ns route)
+                                       (29.6% logic, 70.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'u0/clkout'
+  Total number of paths / destination ports: 70 / 70
+-------------------------------------------------------------------------
+Offset:              4.414ns (Levels of Logic = 2)
+  Source:            reset_n (PAD)
+  Destination:       u7/rs485_t_stat_FSM_FFd1 (FF)
+  Destination Clock: u0/clkout rising
+
+  Data Path: reset_n to u7/rs485_t_stat_FSM_FFd1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   1.328   0.803  reset_n_IBUF (reset_n_IBUF)
+     INV:I->O             35   0.255   1.569  u7/reset_n_inv1_INV_0 (u7/reset_n_inv)
+     FDRE:R                    0.459          u7/command_length_0
+    ----------------------------------------
+    Total                      4.414ns (2.042ns logic, 2.372ns route)
+                                       (46.3% logic, 53.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'u0/clkout'
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Offset:              4.240ns (Levels of Logic = 1)
+  Source:            u3/de (FF)
+  Destination:       rs485_de1 (PAD)
+  Source Clock:      u0/clkout rising
+
+  Data Path: u3/de to rs485_de1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               4   0.525   0.803  u3/de (u3/de)
+     OBUF:I->O                 2.912          rs485_de1_OBUF (rs485_de1)
+    ----------------------------------------
+    Total                      4.240ns (3.437ns logic, 0.803ns route)
+                                       (81.1% logic, 18.9% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk50
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk50          |    4.707|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock u0/clkout
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+u0/clkout      |    5.217|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 7.49 secs
+ 
+--> 
+
+Total memory usage is 262424 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   12 (   0 filtered)
+Number of infos    :   11 (   0 filtered)
+

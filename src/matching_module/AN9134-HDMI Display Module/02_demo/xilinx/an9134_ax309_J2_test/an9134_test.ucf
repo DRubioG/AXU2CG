@@ -1,0 +1,37 @@
+NET "clk" LOC = T8 | TNM_NET = sys_clk_pin;
+TIMESPEC TS_sys_clk_pin = PERIOD sys_clk_pin 50000 kHz;
+
+NET key                        LOC = C3 | IOSTANDARD = "LVCMOS33";       ## KEY1
+
+NET "hdmi_scl"   LOC = K16 |  IOSTANDARD = LVCMOS33;
+NET "hdmi_sda"   LOC = J16 |  IOSTANDARD = LVCMOS33;
+NET "hdmi_d[22]"   LOC = L16 |  IOSTANDARD = LVCMOS33;
+NET "hdmi_d[23]"   LOC = K15 |  IOSTANDARD = LVCMOS33;
+NET "hdmi_d[20]"   LOC = M15 |  IOSTANDARD = LVCMOS33;
+NET "hdmi_d[21]"   LOC = M16 |  IOSTANDARD = LVCMOS33;
+NET "hdmi_d[18]"   LOC = P16 |  IOSTANDARD = LVCMOS33;
+NET "hdmi_d[19]"   LOC = N16 |  IOSTANDARD = LVCMOS33;
+NET "hdmi_d[16]"   LOC = R16 |  IOSTANDARD = LVCMOS33;
+NET "hdmi_d[17]"   LOC = P15 |  IOSTANDARD = LVCMOS33;
+NET "hdmi_d[14]"   LOC = T15 |  IOSTANDARD = LVCMOS33;
+NET "hdmi_d[15]"   LOC = R15 |  IOSTANDARD = LVCMOS33;
+NET "hdmi_d[12]"   LOC = T14 |  IOSTANDARD = LVCMOS33;
+NET "hdmi_d[13]"   LOC = R14 |  IOSTANDARD = LVCMOS33;
+NET "hdmi_d[10]"   LOC = R12 |  IOSTANDARD = LVCMOS33;
+NET "hdmi_d[11]"   LOC = T13 |  IOSTANDARD = LVCMOS33;
+NET "hdmi_d[8]"   LOC = R9 |  IOSTANDARD = LVCMOS33;
+NET "hdmi_d[9]"   LOC = T12 |  IOSTANDARD = LVCMOS33;
+NET "hdmi_d[6]"   LOC = L8 |  IOSTANDARD = LVCMOS33;
+NET "hdmi_d[7]"   LOC = T9 |  IOSTANDARD = LVCMOS33;
+NET "hdmi_clk"   LOC = R7 |  IOSTANDARD = LVCMOS33;
+NET "hdmi_d[5]"   LOC = T7 |  IOSTANDARD = LVCMOS33;
+NET "hdmi_d[3]"   LOC = T5 |  IOSTANDARD = LVCMOS33;
+NET "hdmi_d[4]"   LOC = T6 |  IOSTANDARD = LVCMOS33;
+NET "hdmi_d[1]"   LOC = T4 |  IOSTANDARD = LVCMOS33;
+NET "hdmi_d[2]"   LOC = R5 |  IOSTANDARD = LVCMOS33;
+NET "hdmi_de"   LOC = R1 |  IOSTANDARD = LVCMOS33;
+NET "hdmi_d[0]"   LOC = R2 |  IOSTANDARD = LVCMOS33;
+NET "hdmi_vs"   LOC = P2 |  IOSTANDARD = LVCMOS33;
+NET "hdmi_hs"   LOC = M4 |  IOSTANDARD = LVCMOS33;
+NET "hdmi_nreset"   LOC = P6 |  IOSTANDARD = LVCMOS33;
+PIN "video_pll_m0/clkout1_buf.O" CLOCK_DEDICATED_ROUTE = FALSE;

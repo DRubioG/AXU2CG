@@ -1,0 +1,523 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Wed Nov 01 16:30:17 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "T8" LEVEL 1;
+COMP "key" LOCATE = SITE "C3" LEVEL 1;
+COMP "hdmi_nreset" LOCATE = SITE "P6" LEVEL 1;
+COMP "hdmi_d<0>" LOCATE = SITE "R2" LEVEL 1;
+COMP "hdmi_d<1>" LOCATE = SITE "T4" LEVEL 1;
+COMP "hdmi_d<2>" LOCATE = SITE "R5" LEVEL 1;
+COMP "hdmi_d<3>" LOCATE = SITE "T5" LEVEL 1;
+COMP "hdmi_d<4>" LOCATE = SITE "T6" LEVEL 1;
+COMP "hdmi_d<5>" LOCATE = SITE "T7" LEVEL 1;
+COMP "hdmi_d<6>" LOCATE = SITE "L8" LEVEL 1;
+COMP "hdmi_d<7>" LOCATE = SITE "T9" LEVEL 1;
+COMP "hdmi_d<8>" LOCATE = SITE "R9" LEVEL 1;
+COMP "hdmi_d<9>" LOCATE = SITE "T12" LEVEL 1;
+COMP "hdmi_de" LOCATE = SITE "R1" LEVEL 1;
+COMP "hdmi_hs" LOCATE = SITE "M4" LEVEL 1;
+COMP "hdmi_vs" LOCATE = SITE "P2" LEVEL 1;
+COMP "hdmi_d<10>" LOCATE = SITE "R12" LEVEL 1;
+COMP "hdmi_d<11>" LOCATE = SITE "T13" LEVEL 1;
+COMP "hdmi_d<12>" LOCATE = SITE "T14" LEVEL 1;
+COMP "hdmi_d<20>" LOCATE = SITE "M15" LEVEL 1;
+COMP "hdmi_d<13>" LOCATE = SITE "R14" LEVEL 1;
+COMP "hdmi_d<21>" LOCATE = SITE "M16" LEVEL 1;
+COMP "hdmi_d<14>" LOCATE = SITE "T15" LEVEL 1;
+COMP "hdmi_d<22>" LOCATE = SITE "L16" LEVEL 1;
+COMP "hdmi_d<15>" LOCATE = SITE "R15" LEVEL 1;
+COMP "hdmi_d<23>" LOCATE = SITE "K15" LEVEL 1;
+COMP "hdmi_d<16>" LOCATE = SITE "R16" LEVEL 1;
+COMP "hdmi_d<17>" LOCATE = SITE "P15" LEVEL 1;
+COMP "hdmi_d<18>" LOCATE = SITE "P16" LEVEL 1;
+COMP "hdmi_d<19>" LOCATE = SITE "N16" LEVEL 1;
+COMP "hdmi_clk" LOCATE = SITE "R7" LEVEL 1;
+COMP "hdmi_sda" LOCATE = SITE "J16" LEVEL 1;
+COMP "hdmi_scl" LOCATE = SITE "K16" LEVEL 1;
+PIN video_pll_m0/clkout1_buf_pin<1> = BEL "video_pll_m0/clkout1_buf" PINNAME
+        O;
+PIN "video_pll_m0/clkout1_buf_pin<1>" CLOCK_DEDICATED_ROUTE = FALSE;
+PIN video_pll_m0/pll_base_inst/PLL_ADV_pins<2> = BEL
+        "video_pll_m0/pll_base_inst/PLL_ADV" PINNAME CLKIN1;
+TIMEGRP sys_clk_pin = BEL "reset_power_on_m0/rst_reg" BEL
+        "reset_power_on_m0/cnt_0" BEL "reset_power_on_m0/cnt_1" BEL
+        "reset_power_on_m0/cnt_2" BEL "reset_power_on_m0/cnt_3" BEL
+        "reset_power_on_m0/cnt_4" BEL "reset_power_on_m0/cnt_5" BEL
+        "reset_power_on_m0/cnt_6" BEL "reset_power_on_m0/cnt_7" BEL
+        "reset_power_on_m0/cnt_8" BEL "reset_power_on_m0/cnt_9" BEL
+        "reset_power_on_m0/cnt_10" BEL "reset_power_on_m0/cnt_11" BEL
+        "reset_power_on_m0/cnt_12" BEL "reset_power_on_m0/cnt_13" BEL
+        "reset_power_on_m0/cnt_14" BEL "reset_power_on_m0/cnt_15" BEL
+        "reset_power_on_m0/cnt_16" BEL "reset_power_on_m0/cnt_17" BEL
+        "reset_power_on_m0/cnt_18" BEL "reset_power_on_m0/cnt_19" BEL
+        "reset_power_on_m0/cnt_20" BEL "reset_power_on_m0/cnt_21" BEL
+        "reset_power_on_m0/cnt_22" BEL "reset_power_on_m0/cnt_23" BEL
+        "reset_power_on_m0/cnt_24" BEL "mode_0" BEL "mode_1" BEL "mode_2" BEL
+        "i2c_config_m0/lut_index_9" BEL "i2c_config_m0/lut_index_8" BEL
+        "i2c_config_m0/lut_index_7" BEL "i2c_config_m0/lut_index_6" BEL
+        "i2c_config_m0/lut_index_5" BEL "i2c_config_m0/lut_index_4" BEL
+        "i2c_config_m0/lut_index_3" BEL "i2c_config_m0/lut_index_2" BEL
+        "i2c_config_m0/lut_index_1" BEL "i2c_config_m0/lut_index_0" BEL
+        "i2c_config_m0/state_FSM_FFd1" BEL "i2c_config_m0/state_FSM_FFd2" BEL
+        "ax_debounce_m0/button_out_d0" BEL "ax_debounce_m0/DFF1" BEL
+        "ax_debounce_m0/DFF2" BEL "ax_debounce_m0/q_reg_31" BEL
+        "ax_debounce_m0/q_reg_30" BEL "ax_debounce_m0/q_reg_29" BEL
+        "ax_debounce_m0/q_reg_28" BEL "ax_debounce_m0/q_reg_27" BEL
+        "ax_debounce_m0/q_reg_26" BEL "ax_debounce_m0/q_reg_25" BEL
+        "ax_debounce_m0/q_reg_24" BEL "ax_debounce_m0/q_reg_23" BEL
+        "ax_debounce_m0/q_reg_22" BEL "ax_debounce_m0/q_reg_21" BEL
+        "ax_debounce_m0/q_reg_20" BEL "ax_debounce_m0/q_reg_19" BEL
+        "ax_debounce_m0/q_reg_18" BEL "ax_debounce_m0/q_reg_17" BEL
+        "ax_debounce_m0/q_reg_16" BEL "ax_debounce_m0/q_reg_15" BEL
+        "ax_debounce_m0/q_reg_14" BEL "ax_debounce_m0/q_reg_13" BEL
+        "ax_debounce_m0/q_reg_12" BEL "ax_debounce_m0/q_reg_11" BEL
+        "ax_debounce_m0/q_reg_10" BEL "ax_debounce_m0/q_reg_9" BEL
+        "ax_debounce_m0/q_reg_8" BEL "ax_debounce_m0/q_reg_7" BEL
+        "ax_debounce_m0/q_reg_6" BEL "ax_debounce_m0/q_reg_5" BEL
+        "ax_debounce_m0/q_reg_4" BEL "ax_debounce_m0/q_reg_3" BEL
+        "ax_debounce_m0/q_reg_2" BEL "ax_debounce_m0/q_reg_1" BEL
+        "ax_debounce_m0/q_reg_0" BEL
+        "i2c_config_m0/i2c_master_top_m0/state_FSM_FFd2" BEL
+        "i2c_config_m0/i2c_master_top_m0/state_FSM_FFd1" BEL
+        "i2c_config_m0/i2c_master_top_m0/state_FSM_FFd3" BEL
+        "i2c_config_m0/i2c_master_top_m0/state_FSM_FFd4" BEL
+        "i2c_config_m0/i2c_master_top_m0/state_FSM_FFd5" BEL
+        "i2c_config_m0/i2c_master_top_m0/state_FSM_FFd6" BEL
+        "i2c_config_m0/i2c_master_top_m0/state_FSM_FFd8" BEL
+        "i2c_config_m0/i2c_master_top_m0/state_FSM_FFd7" BEL
+        "i2c_config_m0/i2c_master_top_m0/txr_7" BEL
+        "i2c_config_m0/i2c_master_top_m0/txr_6" BEL
+        "i2c_config_m0/i2c_master_top_m0/txr_5" BEL
+        "i2c_config_m0/i2c_master_top_m0/txr_4" BEL
+        "i2c_config_m0/i2c_master_top_m0/txr_3" BEL
+        "i2c_config_m0/i2c_master_top_m0/txr_2" BEL
+        "i2c_config_m0/i2c_master_top_m0/txr_1" BEL
+        "i2c_config_m0/i2c_master_top_m0/txr_0" BEL
+        "i2c_config_m0/i2c_master_top_m0/ack_in" BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/c_state_FSM_FFd2" BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/c_state_FSM_FFd3" BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/c_state_FSM_FFd1" BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/sr_7" BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/sr_6" BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/sr_5" BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/sr_4" BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/sr_3" BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/sr_2" BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/sr_1" BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/sr_0" BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/cmd_ack" BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/shift" BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/core_txd" BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/ld" BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/core_cmd_3" BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/core_cmd_2" BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/core_cmd_1" BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/core_cmd_0" BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/c_state_FSM_FFd2"
+        BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/c_state_FSM_FFd3"
+        BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/c_state_FSM_FFd1"
+        BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/c_state_FSM_FFd5"
+        BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/c_state_FSM_FFd6"
+        BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/c_state_FSM_FFd4"
+        BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/c_state_FSM_FFd7"
+        BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/c_state_FSM_FFd8"
+        BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/c_state_FSM_FFd9"
+        BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/c_state_FSM_FFd10"
+        BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/c_state_FSM_FFd12"
+        BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/c_state_FSM_FFd13"
+        BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/c_state_FSM_FFd11"
+        BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/c_state_FSM_FFd15"
+        BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/c_state_FSM_FFd16"
+        BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/c_state_FSM_FFd14"
+        BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/c_state_FSM_FFd18"
+        BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/c_state_FSM_FFd17"
+        BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/cnt_7"
+        BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/cnt_6"
+        BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/cnt_8"
+        BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/cnt_4"
+        BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/cnt_3"
+        BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/cnt_5"
+        BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/cnt_2"
+        BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/cnt_1"
+        BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/cnt_0"
+        BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/dscl_oen"
+        BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/scl_oen"
+        BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/fSDA_2"
+        BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/fSDA_1"
+        BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/fSDA_0"
+        BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/sda_oen"
+        BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/fSCL_2"
+        BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/fSCL_1"
+        BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/fSCL_0"
+        BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/dSDA"
+        BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/dSCL"
+        BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/sSDA"
+        BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/sSCL"
+        BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/sto_condition"
+        BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/al"
+        BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/cSDA_1"
+        BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/cSDA_0"
+        BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/cSCL_1"
+        BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/cSCL_0"
+        BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/slave_wait"
+        BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/clk_en"
+        BEL "i2c_config_m0/i2c_master_top_m0/byte_controller/dcnt_2" BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/dcnt_1" BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/dcnt_0" BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/filter_cnt_6"
+        BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/filter_cnt_5"
+        BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/filter_cnt_3"
+        BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/filter_cnt_2"
+        BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/filter_cnt_4"
+        BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/filter_cnt_0"
+        BEL "i2c_config_m0/i2c_master_top_m0/stop" BEL
+        "i2c_config_m0/i2c_master_top_m0/start" BEL
+        "i2c_config_m0/i2c_master_top_m0/write" BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/ack_out" BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/cmd_stop"
+        BEL "i2c_config_m0/i2c_write_req" BEL "ax_debounce_m0/button_negedge"
+        BEL "ax_debounce_m0/button_out" BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/filter_cnt_1"
+        BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/cmd_ack"
+        BEL
+        "i2c_config_m0/i2c_master_top_m0/byte_controller/bit_controller/dout"
+        BEL "clk_bufg_BUFG" PIN "video_pll_m0/pll_base_inst/PLL_ADV_pins<2>";
+TIMEGRP video_pll_m0_clkout0 = BEL "mv_pattern_m0/mv_pattern3_m0/timing_de_d0"
+        BEL "mv_pattern_m0/mv_pattern3_m0/rgb_r_out_0" BEL
+        "mv_pattern_m0/mv_pattern3_m0/timing_vs_d0" BEL
+        "mv_pattern_m0/mv_pattern3_m0/timing_hs_d0" BEL
+        "mv_pattern_m0/pattern_vs" BEL "mv_pattern_m0/pattern_hs" BEL
+        "mv_pattern_m0/pattern_de" BEL "mv_pattern_m0/pattern_rgb_b_7" BEL
+        "mv_pattern_m0/pattern_rgb_b_6" BEL "mv_pattern_m0/pattern_rgb_b_5"
+        BEL "mv_pattern_m0/pattern_rgb_b_4" BEL
+        "mv_pattern_m0/pattern_rgb_b_3" BEL "mv_pattern_m0/pattern_rgb_b_2"
+        BEL "mv_pattern_m0/pattern_rgb_b_1" BEL
+        "mv_pattern_m0/pattern_rgb_b_0" BEL "mv_pattern_m0/pattern_rgb_g_7"
+        BEL "mv_pattern_m0/pattern_rgb_g_6" BEL
+        "mv_pattern_m0/pattern_rgb_g_5" BEL "mv_pattern_m0/pattern_rgb_g_4"
+        BEL "mv_pattern_m0/pattern_rgb_g_3" BEL
+        "mv_pattern_m0/pattern_rgb_g_2" BEL "mv_pattern_m0/pattern_rgb_g_1"
+        BEL "mv_pattern_m0/pattern_rgb_g_0" BEL
+        "mv_pattern_m0/pattern_rgb_r_7" BEL "mv_pattern_m0/pattern_rgb_r_6"
+        BEL "mv_pattern_m0/pattern_rgb_r_5" BEL
+        "mv_pattern_m0/pattern_rgb_r_4" BEL "mv_pattern_m0/pattern_rgb_r_3"
+        BEL "mv_pattern_m0/pattern_rgb_r_2" BEL
+        "mv_pattern_m0/pattern_rgb_r_1" BEL "mv_pattern_m0/pattern_rgb_r_0"
+        BEL "mv_pattern_m0/hactive_7" BEL
+        "mv_pattern_m0/mv_video_timing_m0/vcnt_15" BEL
+        "mv_pattern_m0/mv_video_timing_m0/vcnt_14" BEL
+        "mv_pattern_m0/mv_video_timing_m0/vcnt_13" BEL
+        "mv_pattern_m0/mv_video_timing_m0/vcnt_12" BEL
+        "mv_pattern_m0/mv_video_timing_m0/vcnt_11" BEL
+        "mv_pattern_m0/mv_video_timing_m0/vcnt_10" BEL
+        "mv_pattern_m0/mv_video_timing_m0/vcnt_9" BEL
+        "mv_pattern_m0/mv_video_timing_m0/vcnt_8" BEL
+        "mv_pattern_m0/mv_video_timing_m0/vcnt_7" BEL
+        "mv_pattern_m0/mv_video_timing_m0/vcnt_6" BEL
+        "mv_pattern_m0/mv_video_timing_m0/vcnt_5" BEL
+        "mv_pattern_m0/mv_video_timing_m0/vcnt_4" BEL
+        "mv_pattern_m0/mv_video_timing_m0/vcnt_3" BEL
+        "mv_pattern_m0/mv_video_timing_m0/vcnt_2" BEL
+        "mv_pattern_m0/mv_video_timing_m0/vcnt_1" BEL
+        "mv_pattern_m0/mv_video_timing_m0/vcnt_0" BEL
+        "mv_pattern_m0/mv_video_timing_m0/hcnt_15" BEL
+        "mv_pattern_m0/mv_video_timing_m0/hcnt_14" BEL
+        "mv_pattern_m0/mv_video_timing_m0/hcnt_13" BEL
+        "mv_pattern_m0/mv_video_timing_m0/hcnt_12" BEL
+        "mv_pattern_m0/mv_video_timing_m0/hcnt_11" BEL
+        "mv_pattern_m0/mv_video_timing_m0/hcnt_10" BEL
+        "mv_pattern_m0/mv_video_timing_m0/hcnt_9" BEL
+        "mv_pattern_m0/mv_video_timing_m0/hcnt_8" BEL
+        "mv_pattern_m0/mv_video_timing_m0/hcnt_7" BEL
+        "mv_pattern_m0/mv_video_timing_m0/hcnt_6" BEL
+        "mv_pattern_m0/mv_video_timing_m0/hcnt_5" BEL
+        "mv_pattern_m0/mv_video_timing_m0/hcnt_4" BEL
+        "mv_pattern_m0/mv_video_timing_m0/hcnt_3" BEL
+        "mv_pattern_m0/mv_video_timing_m0/hcnt_2" BEL
+        "mv_pattern_m0/mv_video_timing_m0/hcnt_1" BEL
+        "mv_pattern_m0/mv_video_timing_m0/hcnt_0" BEL
+        "mv_pattern_m0/mv_video_timing_m0/hs_out" BEL
+        "mv_pattern_m0/mv_video_timing_m0/vs_out" BEL
+        "mv_pattern_m0/mv_video_timing_m0/de_out" BEL
+        "mv_pattern_m0/mv_timing_xy_m0/y_cnt_11" BEL
+        "mv_pattern_m0/mv_timing_xy_m0/y_cnt_10" BEL
+        "mv_pattern_m0/mv_timing_xy_m0/y_cnt_9" BEL
+        "mv_pattern_m0/mv_timing_xy_m0/y_cnt_8" BEL
+        "mv_pattern_m0/mv_timing_xy_m0/y_cnt_7" BEL
+        "mv_pattern_m0/mv_timing_xy_m0/y_cnt_6" BEL
+        "mv_pattern_m0/mv_timing_xy_m0/y_cnt_5" BEL
+        "mv_pattern_m0/mv_timing_xy_m0/y_cnt_4" BEL
+        "mv_pattern_m0/mv_timing_xy_m0/y_cnt_3" BEL
+        "mv_pattern_m0/mv_timing_xy_m0/y_cnt_2" BEL
+        "mv_pattern_m0/mv_timing_xy_m0/y_cnt_1" BEL
+        "mv_pattern_m0/mv_timing_xy_m0/y_cnt_0" BEL
+        "mv_pattern_m0/mv_timing_xy_m0/x_cnt_11" BEL
+        "mv_pattern_m0/mv_timing_xy_m0/x_cnt_10" BEL
+        "mv_pattern_m0/mv_timing_xy_m0/x_cnt_9" BEL
+        "mv_pattern_m0/mv_timing_xy_m0/x_cnt_8" BEL
+        "mv_pattern_m0/mv_timing_xy_m0/x_cnt_7" BEL
+        "mv_pattern_m0/mv_timing_xy_m0/x_cnt_6" BEL
+        "mv_pattern_m0/mv_timing_xy_m0/x_cnt_5" BEL
+        "mv_pattern_m0/mv_timing_xy_m0/x_cnt_4" BEL
+        "mv_pattern_m0/mv_timing_xy_m0/x_cnt_3" BEL
+        "mv_pattern_m0/mv_timing_xy_m0/x_cnt_2" BEL
+        "mv_pattern_m0/mv_timing_xy_m0/x_cnt_1" BEL
+        "mv_pattern_m0/mv_timing_xy_m0/x_cnt_0" BEL
+        "mv_pattern_m0/mv_timing_xy_m0/vs_d1" BEL
+        "mv_pattern_m0/mv_timing_xy_m0/de_d1" BEL
+        "mv_pattern_m0/mv_timing_xy_m0/de_d0" BEL
+        "mv_pattern_m0/mv_timing_xy_m0/vs_d0" BEL
+        "mv_pattern_m0/mv_pattern0_m0/rgb_b_out_7" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_8th_15" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_8th_14" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_8th_12" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_8th_11" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_8th_10" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_8th_9" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_8th_8" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_8th_7" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_8th_6" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_8th_5" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_8th_4" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_8th_0" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_7th_13" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_7th_12" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_7th_11" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_7th_10" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_7th_9" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_7th_8" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_7th_7" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_7th_6" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_7th_5" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_7th_4" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_7th_0" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_6th_11" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_6th_10" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_6th_9" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_6th_8" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_6th_7" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_6th_6" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_6th_5" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_6th_4" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_6th_0" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_5th_11" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_5th_10" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_5th_9" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_5th_8" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_5th_7" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_5th_6" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_5th_5" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_5th_4" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_5th_0" BEL
+        "mv_pattern_m0/mv_pattern0_m0/rgb_r_out_7" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_4th_15" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_4th_14" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_4th_13" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_4th_12" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_4th_10" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_4th_9" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_4th_8" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_4th_6" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_4th_5" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_4th_4" BEL
+        "mv_pattern_m0/mv_pattern0_m0/rgb_g_out_7" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_3rd_15" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_3rd_14" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_3rd_13" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_3rd_12" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_3rd_10" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_3rd_9" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_3rd_8" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_3rd_7" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_3rd_5" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_3rd_4" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_3rd_0" BEL
+        "mv_pattern_m0/mv_pattern0_m0/h_bound_2nd_4" BEL
+        "mv_pattern_m0/mv_pattern1_m0/rgb_b_out_0" BEL
+        "mv_pattern_m0/mv_pattern1_m0/rgb_g_out_0" BEL
+        "mv_pattern_m0/mv_pattern1_m0/rgb_r_out_0" BEL
+        "mv_pattern_m0/mv_pattern1_m0/v_bound_2" BEL
+        "mv_pattern_m0/mv_pattern1_m0/v_bound_1" BEL
+        "mv_pattern_m0/mv_pattern1_m0/v_bound_0" BEL
+        "mv_pattern_m0/mv_pattern1_m0/v_bound_8th_12" BEL
+        "mv_pattern_m0/mv_pattern1_m0/v_bound_8th_11" BEL
+        "mv_pattern_m0/mv_pattern1_m0/v_bound_8th_10" BEL
+        "mv_pattern_m0/mv_pattern1_m0/v_bound_8th_9" BEL
+        "mv_pattern_m0/mv_pattern1_m0/v_bound_8th_8" BEL
+        "mv_pattern_m0/mv_pattern1_m0/v_bound_8th_7" BEL
+        "mv_pattern_m0/mv_pattern1_m0/v_bound_8th_6" BEL
+        "mv_pattern_m0/mv_pattern1_m0/v_bound_8th_5" BEL
+        "mv_pattern_m0/mv_pattern1_m0/v_bound_8th_4" BEL
+        "mv_pattern_m0/mv_pattern1_m0/v_bound_8th_3" BEL
+        "mv_pattern_m0/mv_pattern1_m0/v_bound_8th_2" BEL
+        "mv_pattern_m0/mv_pattern1_m0/v_bound_8th_1" BEL
+        "mv_pattern_m0/mv_pattern1_m0/v_bound_8th_0" BEL
+        "mv_pattern_m0/mv_pattern1_m0/v_bound_7th_11" BEL
+        "mv_pattern_m0/mv_pattern1_m0/v_bound_7th_10" BEL
+        "mv_pattern_m0/mv_pattern1_m0/v_bound_7th_9" BEL
+        "mv_pattern_m0/mv_pattern1_m0/v_bound_7th_8" BEL
+        "mv_pattern_m0/mv_pattern1_m0/v_bound_7th_6" BEL
+        "mv_pattern_m0/mv_pattern1_m0/v_bound_7th_5" BEL
+        "mv_pattern_m0/mv_pattern1_m0/v_bound_7th_4" BEL
+        "mv_pattern_m0/mv_pattern1_m0/v_bound_7th_3" BEL
+        "mv_pattern_m0/mv_pattern1_m0/v_bound_7th_2" BEL
+        "mv_pattern_m0/mv_pattern1_m0/v_bound_7th_1" BEL
+        "mv_pattern_m0/mv_pattern1_m0/v_bound_7th_0" BEL
+        "mv_pattern_m0/mv_pattern1_m0/v_bound_6th_10" BEL
+        "mv_pattern_m0/mv_pattern1_m0/v_bound_6th_9" BEL
+        "mv_pattern_m0/mv_pattern1_m0/v_bound_6th_8" BEL
+        "mv_pattern_m0/mv_pattern1_m0/v_bound_6th_5" BEL
+        "mv_pattern_m0/mv_pattern1_m0/v_bound_6th_4" BEL
+        "mv_pattern_m0/mv_pattern1_m0/v_bound_6th_3" BEL
+        "mv_pattern_m0/mv_pattern1_m0/v_bound_6th_2" BEL
+        "mv_pattern_m0/mv_pattern1_m0/v_bound_6th_1" BEL
+        "mv_pattern_m0/mv_pattern1_m0/v_bound_6th_0" BEL
+        "mv_pattern_m0/mv_pattern1_m0/v_bound_5th_9" BEL
+        "mv_pattern_m0/mv_pattern1_m0/v_bound_5th_8" BEL
+        "mv_pattern_m0/mv_pattern1_m0/v_bound_5th_4" BEL
+        "mv_pattern_m0/mv_pattern1_m0/v_bound_5th_3" BEL
+        "mv_pattern_m0/mv_pattern1_m0/v_bound_5th_2" BEL
+        "mv_pattern_m0/mv_pattern1_m0/v_bound_5th_1" BEL
+        "mv_pattern_m0/mv_pattern1_m0/v_bound_5th_0" BEL
+        "mv_pattern_m0/mv_pattern1_m0/v_bound_4th_8" BEL
+        "mv_pattern_m0/mv_pattern1_m0/v_bound_4th_4" BEL
+        "mv_pattern_m0/mv_pattern1_m0/v_bound_4th_3" BEL
+        "mv_pattern_m0/mv_pattern1_m0/v_bound_4th_2" BEL
+        "mv_pattern_m0/mv_pattern1_m0/v_bound_4th_1" BEL
+        "mv_pattern_m0/mv_pattern1_m0/v_bound_4th_0" BEL
+        "mv_pattern_m0/mv_pattern1_m0/v_bound_3rd_1" BEL
+        "mv_pattern_m0/mv_pattern1_m0/v_bound_3rd_0" BEL
+        "mv_pattern_m0/mv_pattern2_m0/frame_cnt_7" BEL
+        "mv_pattern_m0/mv_pattern2_m0/frame_cnt_6" BEL
+        "mv_pattern_m0/mv_pattern2_m0/frame_cnt_5" BEL
+        "mv_pattern_m0/mv_pattern2_m0/frame_cnt_4" BEL
+        "mv_pattern_m0/mv_pattern2_m0/frame_cnt_3" BEL
+        "mv_pattern_m0/mv_pattern2_m0/frame_cnt_2" BEL
+        "mv_pattern_m0/mv_pattern2_m0/frame_cnt_1" BEL
+        "mv_pattern_m0/mv_pattern2_m0/frame_cnt_0" BEL
+        "mv_pattern_m0/mv_pattern2_m0/rgb_r_out_7" BEL
+        "mv_pattern_m0/mv_pattern2_m0/rgb_r_out_6" BEL
+        "mv_pattern_m0/mv_pattern2_m0/rgb_r_out_5" BEL
+        "mv_pattern_m0/mv_pattern2_m0/rgb_r_out_4" BEL
+        "mv_pattern_m0/mv_pattern2_m0/rgb_r_out_3" BEL
+        "mv_pattern_m0/mv_pattern2_m0/rgb_r_out_2" BEL
+        "mv_pattern_m0/mv_pattern2_m0/rgb_r_out_1" BEL
+        "mv_pattern_m0/mv_pattern2_m0/rgb_r_out_0" BEL
+        "mv_pattern_m0/mv_pattern2_m0/timing_y_offset_7" BEL
+        "mv_pattern_m0/mv_pattern2_m0/timing_y_offset_6" BEL
+        "mv_pattern_m0/mv_pattern2_m0/timing_y_offset_5" BEL
+        "mv_pattern_m0/mv_pattern2_m0/timing_y_offset_4" BEL
+        "mv_pattern_m0/mv_pattern2_m0/timing_y_offset_3" BEL
+        "mv_pattern_m0/mv_pattern2_m0/timing_y_offset_2" BEL
+        "mv_pattern_m0/mv_pattern2_m0/timing_y_offset_1" BEL
+        "mv_pattern_m0/mv_pattern2_m0/timing_y_offset_0" BEL
+        "mv_pattern_m0/mv_pattern2_m0/timing_vs_d1" BEL
+        "mv_pattern_m0/mv_pattern5_m0/rgb_b_out_7" BEL
+        "mv_pattern_m0/mv_pattern5_m0/rgb_b_out_6" BEL
+        "mv_pattern_m0/mv_pattern5_m0/rgb_b_out_5" BEL
+        "mv_pattern_m0/mv_pattern5_m0/rgb_b_out_4" BEL
+        "mv_pattern_m0/mv_pattern5_m0/rgb_b_out_3" BEL
+        "mv_pattern_m0/mv_pattern5_m0/rgb_b_out_2" BEL
+        "mv_pattern_m0/mv_pattern5_m0/rgb_b_out_1" BEL
+        "mv_pattern_m0/mv_pattern5_m0/rgb_b_out_0" BEL
+        "mv_pattern_m0/mv_pattern5_m0/rgb_g_out_7" BEL
+        "mv_pattern_m0/mv_pattern5_m0/rgb_g_out_6" BEL
+        "mv_pattern_m0/mv_pattern5_m0/rgb_g_out_5" BEL
+        "mv_pattern_m0/mv_pattern5_m0/rgb_g_out_4" BEL
+        "mv_pattern_m0/mv_pattern5_m0/rgb_g_out_3" BEL
+        "mv_pattern_m0/mv_pattern5_m0/rgb_g_out_2" BEL
+        "mv_pattern_m0/mv_pattern5_m0/rgb_g_out_1" BEL
+        "mv_pattern_m0/mv_pattern5_m0/rgb_g_out_0" BEL
+        "mv_pattern_m0/mv_pattern5_m0/rgb_r_out_7" BEL
+        "mv_pattern_m0/mv_pattern5_m0/rgb_r_out_6" BEL
+        "mv_pattern_m0/mv_pattern5_m0/rgb_r_out_5" BEL
+        "mv_pattern_m0/mv_pattern5_m0/rgb_r_out_4" BEL
+        "mv_pattern_m0/mv_pattern5_m0/rgb_r_out_3" BEL
+        "mv_pattern_m0/mv_pattern5_m0/rgb_r_out_2" BEL
+        "mv_pattern_m0/mv_pattern5_m0/rgb_r_out_1" BEL
+        "mv_pattern_m0/mv_pattern5_m0/rgb_r_out_0" BEL
+        "mv_pattern_m0/mv_pattern5_m0/v_bound_2" BEL
+        "mv_pattern_m0/mv_pattern5_m0/v_bound_1" BEL
+        "mv_pattern_m0/mv_pattern5_m0/v_bound_0" BEL
+        "mv_pattern_m0/mv_pattern5_m0/v_bound_8th_9" BEL
+        "mv_pattern_m0/mv_pattern5_m0/v_bound_8th_8" BEL
+        "mv_pattern_m0/mv_pattern5_m0/v_bound_7th_8" BEL
+        "mv_pattern_m0/mv_pattern5_m0/v_bound_6th_9" BEL
+        "mv_pattern_m0/mv_pattern5_m0/v_bound_6th_8" BEL
+        "mv_pattern_m0/mv_pattern5_m0/v_bound_5th_9" BEL
+        "mv_pattern_m0/mv_pattern5_m0/v_bound_5th_8" BEL
+        "mv_pattern_m0/mv_pattern6_m0/rgb_r_out_0" BEL
+        "mv_pattern_m0/mv_video_timing_m0/vactive" BEL
+        "mv_pattern_m0/mv_video_timing_m0/hactive" BEL
+        "mv_pattern_m0/mv_video_timing_m0/vsync_reg" BEL
+        "mv_pattern_m0/mv_video_timing_m0/hsync_reg" BEL
+        "mv_pattern_m0/hactive_7_1" BEL
+        "mv_pattern_m0/mv_timing_xy_m0/y_cnt_0_1" BEL
+        "mv_pattern_m0/mv_timing_xy_m0/y_cnt_2_1" BEL
+        "mv_pattern_m0/mv_timing_xy_m0/y_cnt_4_1" BEL
+        "mv_pattern_m0/mv_timing_xy_m0/y_cnt_7_1" BEL
+        "mv_pattern_m0/mv_timing_xy_m0/y_cnt_6_1" BEL
+        "mv_pattern_m0/mv_timing_xy_m0/y_cnt_3_1" BEL
+        "mv_pattern_m0/hactive_7_2" BEL
+        "mv_pattern_m0/mv_timing_xy_m0/y_cnt_1_1" BEL "hdmi_clk" BEL
+        "video_pll_m0/clkout1_buf";
+TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 50 MHz HIGH 50%;
+TS_video_pll_m0_clkout0 = PERIOD TIMEGRP "video_pll_m0_clkout0" TS_sys_clk_pin
+        * 3 HIGH 50%;
+SCHEMATIC END;
+

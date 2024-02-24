@@ -1,0 +1,9 @@
+{ "Info" "0" "" "qar.tcl version #1" {  } {  } 0 0 "qar.tcl version #1" 0 0 "" 0 0 1473642244033 ""}
+{ "Info" "0" "" "Including '-use_file_set basic' by default" {  } {  } 0 0 "Including '-use_file_set basic' by default" 0 0 "" 0 0 1473642244283 ""}
+{ "Info" "0" "" "Initializing files for 'sdram_ov7670_vga' revision" {  } {  } 0 0 "Initializing files for 'sdram_ov7670_vga' revision" 0 0 "" 0 0 1473642244361 ""}
+{ "Info" "0" "" "File Set 'Source control' contains:" { { "Info" "0" "" "Project source and settings files" {  } {  } 0 0 "Project source and settings files" 0 0 "" 0 0 1473642244376 ""} { "Info" "0" "" "Automatically detected source files" {  } {  } 0 0 "Automatically detected source files" 0 0 "" 0 0 1473642244376 ""}  } {  } 0 0 "File Set 'Source control' contains:" 0 0 "" 0 0 1473642244376 ""}
+{ "Info" "0" "" "----------------------------------------------------------" {  } {  } 0 0 "----------------------------------------------------------" 0 0 "" 0 0 1473642244782 ""}
+{ "Info" "0" "" "----------------------------------------------------------" {  } {  } 0 0 "----------------------------------------------------------" 0 0 "" 0 0 1473642244782 ""}
+{ "Info" "0" "" "Generated archive 'sdram_ov7670_vga_tmp_archive.qar'" {  } {  } 0 0 "Generated archive 'sdram_ov7670_vga_tmp_archive.qar'" 0 0 "" 0 0 1473642244782 ""}
+{ "Info" "0" "" "----------------------------------------------------------" {  } {  } 0 0 "----------------------------------------------------------" 0 0 "" 0 0 1473642244782 ""}
+{ "Info" "0" "" "----------------------------------------------------------" {  } {  } 0 0 "----------------------------------------------------------" 0 0 "" 0 0 1473642244782 ""}

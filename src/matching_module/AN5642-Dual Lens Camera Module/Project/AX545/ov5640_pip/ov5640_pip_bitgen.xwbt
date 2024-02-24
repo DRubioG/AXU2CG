@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=E:\Project\AN5642\ov5640_pip\ov5640_pip.ncd
+OUTFILE=E:\Project\AN5642\ov5640_pip\ov5640_pip.bit
+FAMILY=Spartan6
+PART=xc6slx45-2csg324
+WORKINGDIR=E:\Project\AN5642\ov5640_pip
+LICENSE=WebPack
+USER_INFO=__0_0_0

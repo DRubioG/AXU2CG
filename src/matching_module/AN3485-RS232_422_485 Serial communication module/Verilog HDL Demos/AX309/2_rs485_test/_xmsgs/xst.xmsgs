@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"\\192.168.1.10\server\project\AN\AN3485\CD\verilog\AX309\2_rs485_test\source\rs485_test.v" Line 135: Assignment to <arg fmt="%s" index="1">rs485_data_length</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1499" delta="old" >"\\192.168.1.10\server\project\AN\AN3485\CD\verilog\AX309\2_rs485_test\ipcore_dir\ram.v" Line 39: Empty module &lt;<arg fmt="%s" index="1">ram</arg>&gt; remains a black box.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">\\192.168.1.10\server\project\AN\AN3485\CD\verilog\AX309\2_rs485_test\source\rs485_test.v</arg>&quot; line <arg fmt="%s" index="2">56</arg>: Output port &lt;<arg fmt="%s" index="3">dataerror</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">u1</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">\\192.168.1.10\server\project\AN\AN3485\CD\verilog\AX309\2_rs485_test\source\rs485_test.v</arg>&quot; line <arg fmt="%s" index="2">56</arg>: Output port &lt;<arg fmt="%s" index="3">frameerror</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">u1</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">\\192.168.1.10\server\project\AN\AN3485\CD\verilog\AX309\2_rs485_test\source\rs485_test.v</arg>&quot; line <arg fmt="%s" index="2">66</arg>: Output port &lt;<arg fmt="%s" index="3">idle</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">u2</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">\\192.168.1.10\server\project\AN\AN3485\CD\verilog\AX309\2_rs485_test\source\rs485_test.v</arg>&quot; line <arg fmt="%s" index="2">76</arg>: Output port &lt;<arg fmt="%s" index="3">idle</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">u3</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">\\192.168.1.10\server\project\AN\AN3485\CD\verilog\AX309\2_rs485_test\source\rs485_test.v</arg>&quot; line <arg fmt="%s" index="2">86</arg>: Output port &lt;<arg fmt="%s" index="3">dataerror</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">u4</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">\\192.168.1.10\server\project\AN\AN3485\CD\verilog\AX309\2_rs485_test\source\rs485_test.v</arg>&quot; line <arg fmt="%s" index="2">86</arg>: Output port &lt;<arg fmt="%s" index="3">frameerror</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">u4</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">\\192.168.1.10\server\project\AN\AN3485\CD\verilog\AX309\2_rs485_test\source\rs485_test.v</arg>&quot; line <arg fmt="%s" index="2">108</arg>: Output port &lt;<arg fmt="%s" index="3">dataerror</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">u6</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">\\192.168.1.10\server\project\AN\AN3485\CD\verilog\AX309\2_rs485_test\source\rs485_test.v</arg>&quot; line <arg fmt="%s" index="2">108</arg>: Output port &lt;<arg fmt="%s" index="3">frameerror</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">u6</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">\\192.168.1.10\server\project\AN\AN3485\CD\verilog\AX309\2_rs485_test\source\rs485_test.v</arg>&quot; line <arg fmt="%s" index="2">123</arg>: Output port &lt;<arg fmt="%s" index="3">rs485_rxdata_length</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">u7</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">u1/dataerror</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">rs485_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">u1/presult</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">rs485_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">u1/frameerror</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">rs485_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">u6/dataerror</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">rs485_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">u6/presult</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">rs485_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">u6/frameerror</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">rs485_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">u4/dataerror</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">rs485_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">u4/presult</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">rs485_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">u4/frameerror</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">rs485_test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">u7/wait_cnt_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">rs485_test</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">u3/de</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">rs485_test</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;u3/send&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">u5/de</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">rs485_test</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;u5/send&gt; </arg>
+</msg>
+
+</messages>
+

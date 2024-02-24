@@ -1,0 +1,16 @@
+Fitter Status : Successful - Tue Dec 13 13:12:58 2016
+Quartus II 64-Bit Version : 12.1 Build 177 11/07/2012 SJ Full Version
+Revision Name : ov5640_pip
+Top-level Entity Name : ov5640_pip
+Family : Cyclone IV E
+Device : EP4CE15F23C8
+Timing Models : Final
+Total logic elements : 10,669 / 15,408 ( 69 % )
+    Total combinational functions : 7,861 / 15,408 ( 51 % )
+    Dedicated logic registers : 6,546 / 15,408 ( 42 % )
+Total registers : 6654
+Total pins : 99 / 344 ( 29 % )
+Total virtual pins : 0
+Total memory bits : 270,176 / 516,096 ( 52 % )
+Embedded Multiplier 9-bit elements : 0 / 112 ( 0 % )
+Total PLLs : 2 / 4 ( 50 % )

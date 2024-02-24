@@ -1,0 +1,1124 @@
+Analysis & Synthesis report for rs485_test
+Mon Jul 10 14:41:29 2017
+Quartus II 64-Bit Version 12.1 Build 177 11/07/2012 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis IP Cores Summary
+ 10. State Machine - |rs485_test|rs485_ctrl:u7|rs485_t_stat
+ 11. State Machine - |rs485_test|rs485_ctrl:u7|rs485_r_stat
+ 12. Registers Removed During Synthesis
+ 13. General Register Statistics
+ 14. Inverted Register Statistics
+ 15. Registers Packed Into Inferred Megafunctions
+ 16. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 17. Source assignments for ram:ram_inst|altsyncram:altsyncram_component|altsyncram_kcn1:auto_generated
+ 18. Source assignments for rs485_ctrl:u7|altshift_taps:ram_raddr_d1_rtl_0|shift_taps_96m:auto_generated|altsyncram_md81:altsyncram2
+ 19. Parameter Settings for User Entity Instance: uartrx:u1
+ 20. Parameter Settings for User Entity Instance: uarttx:u2
+ 21. Parameter Settings for User Entity Instance: rs485_tx:u3
+ 22. Parameter Settings for User Entity Instance: rs485_rx:u4
+ 23. Parameter Settings for User Entity Instance: rs485_tx:u5
+ 24. Parameter Settings for User Entity Instance: rs485_rx:u6
+ 25. Parameter Settings for User Entity Instance: ram:ram_inst|altsyncram:altsyncram_component
+ 26. Parameter Settings for Inferred Entity Instance: sld_signaltap:auto_signaltap_0
+ 27. Parameter Settings for Inferred Entity Instance: rs485_ctrl:u7|altshift_taps:ram_raddr_d1_rtl_0
+ 28. altsyncram Parameter Settings by Entity Instance
+ 29. altshift_taps Parameter Settings by Entity Instance
+ 30. Port Connectivity Checks: "rs485_ctrl:u7"
+ 31. Port Connectivity Checks: "rs485_rx:u6"
+ 32. Port Connectivity Checks: "rs485_rx:u4"
+ 33. Port Connectivity Checks: "rs485_tx:u3"
+ 34. Port Connectivity Checks: "uarttx:u2"
+ 35. Port Connectivity Checks: "uartrx:u1"
+ 36. SignalTap II Logic Analyzer Settings
+ 37. Elapsed Time Per Partition
+ 38. Connections to In-System Debugging Instance "auto_signaltap_0"
+ 39. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2012 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                   ;
++------------------------------------+-------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon Jul 10 14:41:29 2017     ;
+; Quartus II 64-Bit Version          ; 12.1 Build 177 11/07/2012 SJ Full Version ;
+; Revision Name                      ; rs485_test                                ;
+; Top-level Entity Name              ; rs485_test                                ;
+; Family                             ; Cyclone IV E                              ;
+; Total logic elements               ; 1,736                                     ;
+;     Total combinational functions  ; 1,016                                     ;
+;     Dedicated logic registers      ; 1,238                                     ;
+; Total registers                    ; 1238                                      ;
+; Total pins                         ; 10                                        ;
+; Total virtual pins                 ; 0                                         ;
+; Total memory bits                  ; 221,720                                   ;
+; Embedded Multiplier 9-bit elements ; 0                                         ;
+; Total PLLs                         ; 0                                         ;
++------------------------------------+-------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE6F17C8        ;                    ;
+; Top-level entity name                                                      ; rs485_test         ; rs485_test         ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2-4 processors         ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                    ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                ; Library ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------+---------+
+; source/uarttx.v                  ; yes             ; User Verilog HDL File        ; E:/Project/AN1050/verilog/rs485_test/source/uarttx.v                        ;         ;
+; source/uartrx.v                  ; yes             ; User Verilog HDL File        ; E:/Project/AN1050/verilog/rs485_test/source/uartrx.v                        ;         ;
+; source/rs485_test.v              ; yes             ; User Verilog HDL File        ; E:/Project/AN1050/verilog/rs485_test/source/rs485_test.v                    ;         ;
+; source/clkdiv.v                  ; yes             ; User Verilog HDL File        ; E:/Project/AN1050/verilog/rs485_test/source/clkdiv.v                        ;         ;
+; source/rs485_tx.v                ; yes             ; User Verilog HDL File        ; E:/Project/AN1050/verilog/rs485_test/source/rs485_tx.v                      ;         ;
+; source/rs485_rx.v                ; yes             ; User Verilog HDL File        ; E:/Project/AN1050/verilog/rs485_test/source/rs485_rx.v                      ;         ;
+; ram.v                            ; yes             ; User Wizard-Generated File   ; E:/Project/AN1050/verilog/rs485_test/ram.v                                  ;         ;
+; source/rs485_ctrl.v              ; yes             ; User Verilog HDL File        ; E:/Project/AN1050/verilog/rs485_test/source/rs485_ctrl.v                    ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/altsyncram.tdf               ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/stratix_ram_block.inc        ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/lpm_mux.inc                  ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/lpm_decode.inc               ;         ;
+; aglobal121.inc                   ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/aglobal121.inc               ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/a_rdenreg.inc                ;         ;
+; altrom.inc                       ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/altrom.inc                   ;         ;
+; altram.inc                       ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/altram.inc                   ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/altdpram.inc                 ;         ;
+; db/altsyncram_kcn1.tdf           ; yes             ; Auto-Generated Megafunction  ; E:/Project/AN1050/verilog/rs485_test/db/altsyncram_kcn1.tdf                 ;         ;
+; sld_signaltap.vhd                ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/sld_signaltap.vhd            ;         ;
+; sld_signaltap_impl.vhd           ; yes             ; Encrypted Megafunction       ; c:/altera/12.1/quartus/libraries/megafunctions/sld_signaltap_impl.vhd       ;         ;
+; sld_ela_control.vhd              ; yes             ; Encrypted Megafunction       ; c:/altera/12.1/quartus/libraries/megafunctions/sld_ela_control.vhd          ;         ;
+; lpm_shiftreg.tdf                 ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/lpm_shiftreg.tdf             ;         ;
+; lpm_constant.inc                 ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/lpm_constant.inc             ;         ;
+; dffeea.inc                       ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/dffeea.inc                   ;         ;
+; sld_mbpmg.vhd                    ; yes             ; Encrypted Megafunction       ; c:/altera/12.1/quartus/libraries/megafunctions/sld_mbpmg.vhd                ;         ;
+; sld_ela_trigger_flow_mgr.vhd     ; yes             ; Encrypted Megafunction       ; c:/altera/12.1/quartus/libraries/megafunctions/sld_ela_trigger_flow_mgr.vhd ;         ;
+; sld_buffer_manager.vhd           ; yes             ; Encrypted Megafunction       ; c:/altera/12.1/quartus/libraries/megafunctions/sld_buffer_manager.vhd       ;         ;
+; db/altsyncram_g124.tdf           ; yes             ; Auto-Generated Megafunction  ; E:/Project/AN1050/verilog/rs485_test/db/altsyncram_g124.tdf                 ;         ;
+; altdpram.tdf                     ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/altdpram.tdf                 ;         ;
+; memmodes.inc                     ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/others/maxplus2/memmodes.inc               ;         ;
+; a_hdffe.inc                      ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/a_hdffe.inc                  ;         ;
+; alt_le_rden_reg.inc              ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/alt_le_rden_reg.inc          ;         ;
+; altsyncram.inc                   ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/altsyncram.inc               ;         ;
+; lpm_mux.tdf                      ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/lpm_mux.tdf                  ;         ;
+; muxlut.inc                       ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/muxlut.inc                   ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/bypassff.inc                 ;         ;
+; altshift.inc                     ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/altshift.inc                 ;         ;
+; db/mux_tsc.tdf                   ; yes             ; Auto-Generated Megafunction  ; E:/Project/AN1050/verilog/rs485_test/db/mux_tsc.tdf                         ;         ;
+; lpm_decode.tdf                   ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/lpm_decode.tdf               ;         ;
+; declut.inc                       ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/declut.inc                   ;         ;
+; lpm_compare.inc                  ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/lpm_compare.inc              ;         ;
+; db/decode_dvf.tdf                ; yes             ; Auto-Generated Megafunction  ; E:/Project/AN1050/verilog/rs485_test/db/decode_dvf.tdf                      ;         ;
+; lpm_counter.tdf                  ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/lpm_counter.tdf              ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/lpm_add_sub.inc              ;         ;
+; cmpconst.inc                     ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/cmpconst.inc                 ;         ;
+; lpm_counter.inc                  ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/lpm_counter.inc              ;         ;
+; alt_counter_stratix.inc          ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/alt_counter_stratix.inc      ;         ;
+; db/cntr_ogi.tdf                  ; yes             ; Auto-Generated Megafunction  ; E:/Project/AN1050/verilog/rs485_test/db/cntr_ogi.tdf                        ;         ;
+; db/cmpr_sgc.tdf                  ; yes             ; Auto-Generated Megafunction  ; E:/Project/AN1050/verilog/rs485_test/db/cmpr_sgc.tdf                        ;         ;
+; db/cntr_m9j.tdf                  ; yes             ; Auto-Generated Megafunction  ; E:/Project/AN1050/verilog/rs485_test/db/cntr_m9j.tdf                        ;         ;
+; db/cntr_ggi.tdf                  ; yes             ; Auto-Generated Megafunction  ; E:/Project/AN1050/verilog/rs485_test/db/cntr_ggi.tdf                        ;         ;
+; db/cmpr_rgc.tdf                  ; yes             ; Auto-Generated Megafunction  ; E:/Project/AN1050/verilog/rs485_test/db/cmpr_rgc.tdf                        ;         ;
+; db/cntr_23j.tdf                  ; yes             ; Auto-Generated Megafunction  ; E:/Project/AN1050/verilog/rs485_test/db/cntr_23j.tdf                        ;         ;
+; db/cmpr_ngc.tdf                  ; yes             ; Auto-Generated Megafunction  ; E:/Project/AN1050/verilog/rs485_test/db/cmpr_ngc.tdf                        ;         ;
+; sld_rom_sr.vhd                   ; yes             ; Encrypted Megafunction       ; c:/altera/12.1/quartus/libraries/megafunctions/sld_rom_sr.vhd               ;         ;
+; sld_hub.vhd                      ; yes             ; Encrypted Megafunction       ; c:/altera/12.1/quartus/libraries/megafunctions/sld_hub.vhd                  ;         ;
+; sld_jtag_hub.vhd                 ; yes             ; Encrypted Megafunction       ; c:/altera/12.1/quartus/libraries/megafunctions/sld_jtag_hub.vhd             ;         ;
+; altshift_taps.tdf                ; yes             ; Megafunction                 ; c:/altera/12.1/quartus/libraries/megafunctions/altshift_taps.tdf            ;         ;
+; db/shift_taps_96m.tdf            ; yes             ; Auto-Generated Megafunction  ; E:/Project/AN1050/verilog/rs485_test/db/shift_taps_96m.tdf                  ;         ;
+; db/altsyncram_md81.tdf           ; yes             ; Auto-Generated Megafunction  ; E:/Project/AN1050/verilog/rs485_test/db/altsyncram_md81.tdf                 ;         ;
+; db/cntr_4pf.tdf                  ; yes             ; Auto-Generated Megafunction  ; E:/Project/AN1050/verilog/rs485_test/db/cntr_4pf.tdf                        ;         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------+---------+
+
+
++------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary          ;
++---------------------------------------------+--------+
+; Resource                                    ; Usage  ;
++---------------------------------------------+--------+
+; Estimated Total logic elements              ; 1,736  ;
+;                                             ;        ;
+; Total combinational functions               ; 1016   ;
+; Logic element usage by number of LUT inputs ;        ;
+;     -- 4 input functions                    ; 490    ;
+;     -- 3 input functions                    ; 247    ;
+;     -- <=2 input functions                  ; 279    ;
+;                                             ;        ;
+; Logic elements by mode                      ;        ;
+;     -- normal mode                          ; 874    ;
+;     -- arithmetic mode                      ; 142    ;
+;                                             ;        ;
+; Total registers                             ; 1238   ;
+;     -- Dedicated logic registers            ; 1238   ;
+;     -- I/O registers                        ; 0      ;
+;                                             ;        ;
+; I/O pins                                    ; 10     ;
+; Total memory bits                           ; 221720 ;
+; Embedded Multiplier 9-bit elements          ; 0      ;
+; Maximum fan-out                             ; 833    ;
+; Total fan-out                               ; 8457   ;
+; Average fan-out                             ; 3.59   ;
++---------------------------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ;
++---------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                                                                              ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                              ; Library Name ;
++---------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |rs485_test                                                                                             ; 1016 (1)          ; 1238 (0)     ; 221720      ; 0            ; 0       ; 0         ; 10   ; 0            ; |rs485_test                                                                                                                                                                                                                                                                                                                                      ;              ;
+;    |clkdiv:u0|                                                                                          ; 29 (29)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|clkdiv:u0                                                                                                                                                                                                                                                                                                                            ;              ;
+;    |ram:ram_inst|                                                                                       ; 0 (0)             ; 0 (0)        ; 512         ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|ram:ram_inst                                                                                                                                                                                                                                                                                                                         ;              ;
+;       |altsyncram:altsyncram_component|                                                                 ; 0 (0)             ; 0 (0)        ; 512         ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|ram:ram_inst|altsyncram:altsyncram_component                                                                                                                                                                                                                                                                                         ;              ;
+;          |altsyncram_kcn1:auto_generated|                                                               ; 0 (0)             ; 0 (0)        ; 512         ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|ram:ram_inst|altsyncram:altsyncram_component|altsyncram_kcn1:auto_generated                                                                                                                                                                                                                                                          ;              ;
+;    |rs485_ctrl:u7|                                                                                      ; 91 (90)           ; 42 (41)      ; 24          ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|rs485_ctrl:u7                                                                                                                                                                                                                                                                                                                        ;              ;
+;       |altshift_taps:ram_raddr_d1_rtl_0|                                                                ; 1 (0)             ; 1 (0)        ; 24          ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|rs485_ctrl:u7|altshift_taps:ram_raddr_d1_rtl_0                                                                                                                                                                                                                                                                                       ;              ;
+;          |shift_taps_96m:auto_generated|                                                                ; 1 (0)             ; 1 (0)        ; 24          ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|rs485_ctrl:u7|altshift_taps:ram_raddr_d1_rtl_0|shift_taps_96m:auto_generated                                                                                                                                                                                                                                                         ;              ;
+;             |altsyncram_md81:altsyncram2|                                                               ; 0 (0)             ; 0 (0)        ; 24          ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|rs485_ctrl:u7|altshift_taps:ram_raddr_d1_rtl_0|shift_taps_96m:auto_generated|altsyncram_md81:altsyncram2                                                                                                                                                                                                                             ;              ;
+;             |cntr_4pf:cntr1|                                                                            ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|rs485_ctrl:u7|altshift_taps:ram_raddr_d1_rtl_0|shift_taps_96m:auto_generated|cntr_4pf:cntr1                                                                                                                                                                                                                                          ;              ;
+;    |rs485_rx:u4|                                                                                        ; 49 (49)           ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|rs485_rx:u4                                                                                                                                                                                                                                                                                                                          ;              ;
+;    |rs485_rx:u6|                                                                                        ; 47 (47)           ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|rs485_rx:u6                                                                                                                                                                                                                                                                                                                          ;              ;
+;    |rs485_tx:u3|                                                                                        ; 55 (55)           ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|rs485_tx:u3                                                                                                                                                                                                                                                                                                                          ;              ;
+;    |rs485_tx:u5|                                                                                        ; 56 (56)           ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|rs485_tx:u5                                                                                                                                                                                                                                                                                                                          ;              ;
+;    |sld_hub:auto_hub|                                                                                   ; 139 (1)           ; 94 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                     ;              ;
+;       |sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|                                                    ; 138 (100)         ; 94 (66)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst                                                                                                                                                                                                                                                                        ;              ;
+;          |sld_rom_sr:hub_info_reg|                                                                      ; 21 (21)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg                                                                                                                                                                                                                                                ;              ;
+;          |sld_shadow_jsm:shadow_jsm|                                                                    ; 17 (17)           ; 19 (19)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm                                                                                                                                                                                                                                              ;              ;
+;    |sld_signaltap:auto_signaltap_0|                                                                     ; 446 (1)           ; 956 (108)    ; 221184      ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0                                                                                                                                                                                                                                                                                                       ;              ;
+;       |sld_signaltap_impl:sld_signaltap_body|                                                           ; 445 (0)           ; 848 (0)      ; 221184      ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body                                                                                                                                                                                                                                                                 ;              ;
+;          |sld_signaltap_implb:sld_signaltap_body|                                                       ; 445 (18)          ; 848 (252)    ; 221184      ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body                                                                                                                                                                                                                          ;              ;
+;             |altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|                            ; 27 (0)            ; 76 (76)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem                                                                                                                                                           ;              ;
+;                |lpm_decode:wdecoder|                                                                    ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_decode:wdecoder                                                                                                                                       ;              ;
+;                   |decode_dvf:auto_generated|                                                           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_decode:wdecoder|decode_dvf:auto_generated                                                                                                             ;              ;
+;                |lpm_mux:mux|                                                                            ; 25 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_mux:mux                                                                                                                                               ;              ;
+;                   |mux_tsc:auto_generated|                                                              ; 25 (25)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_mux:mux|mux_tsc:auto_generated                                                                                                                        ;              ;
+;             |altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|                                           ; 0 (0)             ; 0 (0)        ; 221184      ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram                                                                                                                                                                          ;              ;
+;                |altsyncram_g124:auto_generated|                                                         ; 0 (0)             ; 0 (0)        ; 221184      ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_g124:auto_generated                                                                                                                                           ;              ;
+;             |lpm_shiftreg:segment_offset_config_deserialize|                                            ; 0 (0)             ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|lpm_shiftreg:segment_offset_config_deserialize                                                                                                                                                                           ;              ;
+;             |lpm_shiftreg:status_register|                                                              ; 17 (17)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|lpm_shiftreg:status_register                                                                                                                                                                                             ;              ;
+;             |sld_buffer_manager:sld_buffer_manager_inst|                                                ; 93 (93)           ; 69 (69)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst                                                                                                                                                                               ;              ;
+;             |sld_ela_control:ela_control|                                                               ; 128 (1)           ; 286 (1)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control                                                                                                                                                                                              ;              ;
+;                |lpm_shiftreg:trigger_config_deserialize|                                                ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|lpm_shiftreg:trigger_config_deserialize                                                                                                                                                      ;              ;
+;                |sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm| ; 108 (0)           ; 270 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm                                                                                                       ;              ;
+;                   |lpm_shiftreg:trigger_condition_deserialize|                                          ; 0 (0)             ; 162 (162)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|lpm_shiftreg:trigger_condition_deserialize                                                            ;              ;
+;                   |sld_mbpmg:\trigger_modules_gen:0:trigger_match|                                      ; 108 (0)           ; 108 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match                                                        ;              ;
+;                      |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:0:sm1|                            ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:0:sm1  ;              ;
+;                      |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:10:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:10:sm1 ;              ;
+;                      |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:11:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:11:sm1 ;              ;
+;                      |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:12:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:12:sm1 ;              ;
+;                      |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:13:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:13:sm1 ;              ;
+;                      |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:14:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:14:sm1 ;              ;
+;                      |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:15:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:15:sm1 ;              ;
+;                      |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:16:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:16:sm1 ;              ;
+;                      |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:17:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:17:sm1 ;              ;
+;                      |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:18:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:18:sm1 ;              ;
+;                      |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:19:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:19:sm1 ;              ;
+;                      |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:1:sm1|                            ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:1:sm1  ;              ;
+;                      |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:20:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:20:sm1 ;              ;
+;                      |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:21:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:21:sm1 ;              ;
+;                      |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:22:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:22:sm1 ;              ;
+;                      |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:23:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:23:sm1 ;              ;
+;                      |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:24:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:24:sm1 ;              ;
+;                      |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:25:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:25:sm1 ;              ;
+;                      |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:26:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:26:sm1 ;              ;
+;                      |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:27:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:27:sm1 ;              ;
+;                      |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:28:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:28:sm1 ;              ;
+;                      |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:29:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:29:sm1 ;              ;
+;                      |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:2:sm1|                            ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:2:sm1  ;              ;
+;                      |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:30:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:30:sm1 ;              ;
+;                      |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:31:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:31:sm1 ;              ;
+;                      |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:32:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:32:sm1 ;              ;
+;                      |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:33:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:33:sm1 ;              ;
+;                      |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:34:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:34:sm1 ;              ;
+;                      |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:35:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:35:sm1 ;              ;
+;                      |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:36:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:36:sm1 ;              ;
+;                      |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:37:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:37:sm1 ;              ;
+;                      |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:38:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:38:sm1 ;              ;
+;                      |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:39:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:39:sm1 ;              ;
+;                      |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:3:sm1|                            ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:3:sm1  ;              ;
+;                      |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:40:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:40:sm1 ;              ;
+;                      |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:41:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:41:sm1 ;              ;
+;                      |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:42:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:42:sm1 ;              ;
+;                      |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:43:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:43:sm1 ;              ;
+;                      |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:44:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:44:sm1 ;              ;
+;                      |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:45:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:45:sm1 ;              ;
+;                      |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:46:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:46:sm1 ;              ;
+;                      |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:47:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:47:sm1 ;              ;
+;                      |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:48:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:48:sm1 ;              ;
+;                      |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:49:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:49:sm1 ;              ;
+;                      |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:4:sm1|                            ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:4:sm1  ;              ;
+;                      |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:50:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:50:sm1 ;              ;
+;                      |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:51:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:51:sm1 ;              ;
+;                      |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:52:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:52:sm1 ;              ;
+;                      |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:53:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:53:sm1 ;              ;
+;                      |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:5:sm1|                            ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:5:sm1  ;              ;
+;                      |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:6:sm1|                            ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:6:sm1  ;              ;
+;                      |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:7:sm1|                            ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:7:sm1  ;              ;
+;                      |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:8:sm1|                            ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:8:sm1  ;              ;
+;                      |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:9:sm1|                            ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:9:sm1  ;              ;
+;                |sld_ela_trigger_flow_mgr:\builtin:ela_trigger_flow_mgr_entity|                          ; 19 (19)           ; 11 (1)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_trigger_flow_mgr:\builtin:ela_trigger_flow_mgr_entity                                                                                                                                ;              ;
+;                   |lpm_shiftreg:trigger_config_deserialize|                                             ; 0 (0)             ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_trigger_flow_mgr:\builtin:ela_trigger_flow_mgr_entity|lpm_shiftreg:trigger_config_deserialize                                                                                        ;              ;
+;             |sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|          ; 144 (10)          ; 128 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst                                                                                                                                         ;              ;
+;                |lpm_counter:\adv_point_3_and_more:advance_pointer_counter|                              ; 8 (0)             ; 6 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:\adv_point_3_and_more:advance_pointer_counter                                                                               ;              ;
+;                   |cntr_ogi:auto_generated|                                                             ; 8 (8)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:\adv_point_3_and_more:advance_pointer_counter|cntr_ogi:auto_generated                                                       ;              ;
+;                |lpm_counter:read_pointer_counter|                                                       ; 12 (0)            ; 12 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:read_pointer_counter                                                                                                        ;              ;
+;                   |cntr_m9j:auto_generated|                                                             ; 12 (12)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:read_pointer_counter|cntr_m9j:auto_generated                                                                                ;              ;
+;                |lpm_counter:status_advance_pointer_counter|                                             ; 7 (0)             ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:status_advance_pointer_counter                                                                                              ;              ;
+;                   |cntr_ggi:auto_generated|                                                             ; 7 (7)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:status_advance_pointer_counter|cntr_ggi:auto_generated                                                                      ;              ;
+;                |lpm_counter:status_read_pointer_counter|                                                ; 3 (0)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:status_read_pointer_counter                                                                                                 ;              ;
+;                   |cntr_23j:auto_generated|                                                             ; 3 (3)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:status_read_pointer_counter|cntr_23j:auto_generated                                                                         ;              ;
+;                |lpm_shiftreg:info_data_shift_out|                                                       ; 25 (25)           ; 25 (25)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:info_data_shift_out                                                                                                        ;              ;
+;                |lpm_shiftreg:ram_data_shift_out|                                                        ; 54 (54)           ; 54 (54)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:ram_data_shift_out                                                                                                         ;              ;
+;                |lpm_shiftreg:status_data_shift_out|                                                     ; 25 (25)           ; 25 (25)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:status_data_shift_out                                                                                                      ;              ;
+;             |sld_rom_sr:crc_rom_sr|                                                                     ; 18 (18)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_rom_sr:crc_rom_sr                                                                                                                                                                                                    ;              ;
+;    |uartrx:u1|                                                                                          ; 47 (47)           ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|uartrx:u1                                                                                                                                                                                                                                                                                                                            ;              ;
+;    |uarttx:u2|                                                                                          ; 56 (56)           ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rs485_test|uarttx:u2                                                                                                                                                                                                                                                                                                                            ;              ;
++---------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                                                                                            ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+------+
+; Name                                                                                                                                                                                                  ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size   ; MIF  ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+------+
+; ram:ram_inst|altsyncram:altsyncram_component|altsyncram_kcn1:auto_generated|ALTSYNCRAM                                                                                                                ; AUTO ; Simple Dual Port ; 64           ; 8            ; 64           ; 8            ; 512    ; None ;
+; rs485_ctrl:u7|altshift_taps:ram_raddr_d1_rtl_0|shift_taps_96m:auto_generated|altsyncram_md81:altsyncram2|ALTSYNCRAM                                                                                   ; AUTO ; Simple Dual Port ; 2            ; 12           ; 2            ; 12           ; 24     ; None ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_g124:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 4096         ; 54           ; 4096         ; 54           ; 221184 ; None ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                 ;
++--------+--------------+---------+--------------+--------------+--------------------------+--------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance          ; IP Include File                            ;
++--------+--------------+---------+--------------+--------------+--------------------------+--------------------------------------------+
+; Altera ; RAM: 2-PORT  ; 12.1    ; N/A          ; N/A          ; |rs485_test|ram:ram_inst ; E:/Project/AN1050/verilog/rs485_test/ram.v ;
++--------+--------------+---------+--------------+--------------+--------------------------+--------------------------------------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------+
+; State Machine - |rs485_test|rs485_ctrl:u7|rs485_t_stat                                       ;
++------------------+------------------+------------------+------------------+------------------+
+; Name             ; rs485_t_stat.011 ; rs485_t_stat.010 ; rs485_t_stat.001 ; rs485_t_stat.000 ;
++------------------+------------------+------------------+------------------+------------------+
+; rs485_t_stat.000 ; 0                ; 0                ; 0                ; 0                ;
+; rs485_t_stat.001 ; 0                ; 0                ; 1                ; 1                ;
+; rs485_t_stat.010 ; 0                ; 1                ; 0                ; 1                ;
+; rs485_t_stat.011 ; 1                ; 0                ; 0                ; 1                ;
++------------------+------------------+------------------+------------------+------------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------+
+; State Machine - |rs485_test|rs485_ctrl:u7|rs485_r_stat                    ;
++------------------+------------------+------------------+------------------+
+; Name             ; rs485_r_stat.000 ; rs485_r_stat.010 ; rs485_r_stat.001 ;
++------------------+------------------+------------------+------------------+
+; rs485_r_stat.000 ; 0                ; 0                ; 0                ;
+; rs485_r_stat.001 ; 1                ; 0                ; 1                ;
+; rs485_r_stat.010 ; 1                ; 1                ; 0                ;
++------------------+------------------+------------------+------------------+
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; rs485_tx:u5|send                      ; Merged with rs485_tx:u5|de             ;
+; rs485_tx:u3|send                      ; Merged with rs485_tx:u3|de             ;
+; rs485_ctrl:u7|wait_cnt[2]             ; Stuck at GND due to stuck port data_in ;
+; rs485_ctrl:u7|rs485_t_stat~6          ; Lost fanout                            ;
+; rs485_ctrl:u7|rs485_t_stat~7          ; Lost fanout                            ;
+; rs485_ctrl:u7|rs485_t_stat~8          ; Lost fanout                            ;
+; rs485_ctrl:u7|rs485_r_stat~7          ; Lost fanout                            ;
+; Total Number of Removed Registers = 7 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 1238  ;
+; Number of registers using Synchronous Clear  ; 43    ;
+; Number of registers using Synchronous Load   ; 42    ;
+; Number of registers using Asynchronous Clear ; 406   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 498   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Inverted Register Statistics                                                                                                                                                             ;
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; Inverted Register                                                                                                                                                              ; Fan out ;
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|tdo                                                                                                              ; 1       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[2]                                                                                                   ; 2       ;
+; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[1]                                                                                                   ; 3       ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[1]  ; 1       ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[2]  ; 1       ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[3]  ; 1       ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[4]  ; 1       ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[5]  ; 1       ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[6]  ; 1       ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[7]  ; 1       ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[8]  ; 1       ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[9]  ; 1       ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[10] ; 1       ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[11] ; 1       ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[12] ; 1       ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[0]  ; 1       ;
+; Total number of inverted registers = 16                                                                                                                                        ;         ;
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions                                     ;
++----------------------------------+----------------------------------+------------+
+; Register Name                    ; Megafunction                     ; Type       ;
++----------------------------------+----------------------------------+------------+
+; rs485_ctrl:u7|ram_raddr[0..5]    ; rs485_ctrl:u7|ram_raddr_d1_rtl_0 ; SHIFT_TAPS ;
+; rs485_ctrl:u7|ram_raddr_d3[0..5] ; rs485_ctrl:u7|ram_raddr_d1_rtl_0 ; SHIFT_TAPS ;
+; rs485_ctrl:u7|ram_raddr_d2[0..5] ; rs485_ctrl:u7|ram_raddr_d1_rtl_0 ; SHIFT_TAPS ;
+; rs485_ctrl:u7|ram_raddr_d1[0..5] ; rs485_ctrl:u7|ram_raddr_d1_rtl_0 ; SHIFT_TAPS ;
+; rs485_ctrl:u7|ram_waddr[0..5]    ; rs485_ctrl:u7|ram_raddr_d1_rtl_0 ; SHIFT_TAPS ;
+; rs485_ctrl:u7|ram_waddr_d3[0..5] ; rs485_ctrl:u7|ram_raddr_d1_rtl_0 ; SHIFT_TAPS ;
+; rs485_ctrl:u7|ram_waddr_d2[0..5] ; rs485_ctrl:u7|ram_raddr_d1_rtl_0 ; SHIFT_TAPS ;
+; rs485_ctrl:u7|ram_waddr_d1[0..5] ; rs485_ctrl:u7|ram_raddr_d1_rtl_0 ; SHIFT_TAPS ;
++----------------------------------+----------------------------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------+
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |rs485_test|rs485_ctrl:u7|ram_waddr_d[0]                                                                          ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |rs485_test|clkdiv:u0|cnt[6]                                                                                      ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |rs485_test|rs485_rx:u6|cnt[0]                                                                                    ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |rs485_test|uarttx:u2|cnt[1]                                                                                      ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |rs485_test|rs485_tx:u3|cnt[0]                                                                                    ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |rs485_test|rs485_tx:u5|cnt[2]                                                                                    ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |rs485_test|rs485_rx:u4|cnt[1]                                                                                    ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |rs485_test|uartrx:u1|cnt[2]                                                                                      ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |rs485_test|rs485_ctrl:u7|rs485_txdata_count[1]                                                                   ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |rs485_test|rs485_ctrl:u7|command_length[5]                                                                       ;
+; 6:1                ; 6 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |rs485_test|rs485_ctrl:u7|rs485_rxdata_length[5]                                                                  ;
+; 8:1                ; 6 bits    ; 30 LEs        ; 6 LEs                ; 24 LEs                 ; Yes        ; |rs485_test|rs485_ctrl:u7|ram_raddr_d[1]                                                                          ;
+; 257:1              ; 5 bits    ; 855 LEs       ; 45 LEs               ; 810 LEs                ; Yes        ; |rs485_test|uarttx:u2|cnt[7]                                                                                      ;
+; 257:1              ; 5 bits    ; 855 LEs       ; 45 LEs               ; 810 LEs                ; Yes        ; |rs485_test|rs485_tx:u3|cnt[7]                                                                                    ;
+; 257:1              ; 5 bits    ; 855 LEs       ; 45 LEs               ; 810 LEs                ; Yes        ; |rs485_test|rs485_tx:u5|cnt[7]                                                                                    ;
+; 257:1              ; 5 bits    ; 855 LEs       ; 40 LEs               ; 815 LEs                ; Yes        ; |rs485_test|rs485_rx:u6|cnt[4]                                                                                    ;
+; 257:1              ; 5 bits    ; 855 LEs       ; 40 LEs               ; 815 LEs                ; Yes        ; |rs485_test|rs485_rx:u4|cnt[7]                                                                                    ;
+; 257:1              ; 5 bits    ; 855 LEs       ; 40 LEs               ; 815 LEs                ; Yes        ; |rs485_test|uartrx:u1|cnt[5]                                                                                      ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |rs485_test|rs485_ctrl:u7|rs485_r_stat                                                                            ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; No         ; |rs485_test|rs485_ctrl:u7|rs485_t_stat                                                                            ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |rs485_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_minor_ver_reg[1]                    ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |rs485_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][5]                           ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |rs485_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[0]                       ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |rs485_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[0] ;
+; 6:1                ; 7 bits    ; 28 LEs        ; 7 LEs                ; 21 LEs                 ; Yes        ; |rs485_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[7]                             ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; Yes        ; |rs485_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|shadow_irf_reg[1][3]                    ;
+; 34:1               ; 4 bits    ; 88 LEs        ; 60 LEs               ; 28 LEs                 ; Yes        ; |rs485_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[0]                      ;
+; 20:1               ; 4 bits    ; 52 LEs        ; 36 LEs               ; 16 LEs                 ; Yes        ; |rs485_test|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[0]      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Source assignments for ram:ram_inst|altsyncram:altsyncram_component|altsyncram_kcn1:auto_generated ;
++---------------------------------+--------------------+------+--------------------------------------+
+; Assignment                      ; Value              ; From ; To                                   ;
++---------------------------------+--------------------+------+--------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                    ;
++---------------------------------+--------------------+------+--------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for rs485_ctrl:u7|altshift_taps:ram_raddr_d1_rtl_0|shift_taps_96m:auto_generated|altsyncram_md81:altsyncram2 ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                 ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------+
+
+
++--------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uartrx:u1 ;
++----------------+-------+-------------------------------+
+; Parameter Name ; Value ; Type                          ;
++----------------+-------+-------------------------------+
+; paritymode     ; 0     ; Unsigned Binary               ;
++----------------+-------+-------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uarttx:u2 ;
++----------------+-------+-------------------------------+
+; Parameter Name ; Value ; Type                          ;
++----------------+-------+-------------------------------+
+; paritymode     ; 0     ; Unsigned Binary               ;
++----------------+-------+-------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rs485_tx:u3 ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; paritymode     ; 0     ; Unsigned Binary                 ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rs485_rx:u4 ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; paritymode     ; 0     ; Unsigned Binary                 ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rs485_tx:u5 ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; paritymode     ; 0     ; Unsigned Binary                 ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rs485_rx:u6 ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; paritymode     ; 0     ; Unsigned Binary                 ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ram:ram_inst|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+-------------------------------+
+; Parameter Name                     ; Value                ; Type                          ;
++------------------------------------+----------------------+-------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                       ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                    ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                  ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                  ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                       ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                       ;
+; WIDTH_A                            ; 8                    ; Signed Integer                ;
+; WIDTHAD_A                          ; 6                    ; Signed Integer                ;
+; NUMWORDS_A                         ; 64                   ; Signed Integer                ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                       ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                       ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                       ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                       ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                       ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                       ;
+; WIDTH_B                            ; 8                    ; Signed Integer                ;
+; WIDTHAD_B                          ; 6                    ; Signed Integer                ;
+; NUMWORDS_B                         ; 64                   ; Signed Integer                ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                       ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                       ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                       ;
+; ADDRESS_REG_B                      ; CLOCK0               ; Untyped                       ;
+; OUTDATA_REG_B                      ; CLOCK0               ; Untyped                       ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                       ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                       ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                       ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                       ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                       ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                       ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                       ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                       ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                       ;
+; BYTE_SIZE                          ; 8                    ; Untyped                       ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                       ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                       ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                       ;
+; INIT_FILE                          ; UNUSED               ; Untyped                       ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                       ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                       ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                       ;
+; CLOCK_ENABLE_INPUT_B               ; BYPASS               ; Untyped                       ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                       ;
+; CLOCK_ENABLE_OUTPUT_B              ; BYPASS               ; Untyped                       ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                       ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                       ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                       ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                       ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                       ;
+; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                       ;
+; CBXI_PARAMETER                     ; altsyncram_kcn1      ; Untyped                       ;
++------------------------------------+----------------------+-------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: sld_signaltap:auto_signaltap_0                                                                                                                                                                                 ;
++-------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------+
+; Parameter Name                                  ; Value                                                                                                                                                                                        ; Type           ;
++-------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------+
+; lpm_type                                        ; sld_signaltap                                                                                                                                                                                ; String         ;
+; sld_node_info                                   ; 805334528                                                                                                                                                                                    ; Untyped        ;
+; SLD_IP_VERSION                                  ; 6                                                                                                                                                                                            ; Signed Integer ;
+; SLD_IP_MINOR_VERSION                            ; 0                                                                                                                                                                                            ; Signed Integer ;
+; SLD_COMMON_IP_VERSION                           ; 0                                                                                                                                                                                            ; Signed Integer ;
+; sld_data_bits                                   ; 54                                                                                                                                                                                           ; Untyped        ;
+; sld_trigger_bits                                ; 54                                                                                                                                                                                           ; Untyped        ;
+; SLD_NODE_CRC_BITS                               ; 32                                                                                                                                                                                           ; Signed Integer ;
+; sld_node_crc_hiword                             ; 25163                                                                                                                                                                                        ; Untyped        ;
+; sld_node_crc_loword                             ; 24704                                                                                                                                                                                        ; Untyped        ;
+; SLD_INCREMENTAL_ROUTING                         ; 0                                                                                                                                                                                            ; Signed Integer ;
+; sld_sample_depth                                ; 4096                                                                                                                                                                                         ; Untyped        ;
+; sld_segment_size                                ; 4096                                                                                                                                                                                         ; Untyped        ;
+; SLD_RAM_BLOCK_TYPE                              ; AUTO                                                                                                                                                                                         ; String         ;
+; sld_state_bits                                  ; 11                                                                                                                                                                                           ; Untyped        ;
+; sld_buffer_full_stop                            ; 1                                                                                                                                                                                            ; Untyped        ;
+; SLD_MEM_ADDRESS_BITS                            ; 7                                                                                                                                                                                            ; Signed Integer ;
+; SLD_DATA_BIT_CNTR_BITS                          ; 4                                                                                                                                                                                            ; Signed Integer ;
+; sld_trigger_level                               ; 1                                                                                                                                                                                            ; Untyped        ;
+; sld_trigger_in_enabled                          ; 0                                                                                                                                                                                            ; Untyped        ;
+; sld_advanced_trigger_entity                     ; basic,1,                                                                                                                                                                                     ; Untyped        ;
+; sld_trigger_level_pipeline                      ; 1                                                                                                                                                                                            ; Untyped        ;
+; sld_enable_advanced_trigger                     ; 0                                                                                                                                                                                            ; Untyped        ;
+; SLD_ADVANCED_TRIGGER_1                          ; NONE                                                                                                                                                                                         ; String         ;
+; SLD_ADVANCED_TRIGGER_2                          ; NONE                                                                                                                                                                                         ; String         ;
+; SLD_ADVANCED_TRIGGER_3                          ; NONE                                                                                                                                                                                         ; String         ;
+; SLD_ADVANCED_TRIGGER_4                          ; NONE                                                                                                                                                                                         ; String         ;
+; SLD_ADVANCED_TRIGGER_5                          ; NONE                                                                                                                                                                                         ; String         ;
+; SLD_ADVANCED_TRIGGER_6                          ; NONE                                                                                                                                                                                         ; String         ;
+; SLD_ADVANCED_TRIGGER_7                          ; NONE                                                                                                                                                                                         ; String         ;
+; SLD_ADVANCED_TRIGGER_8                          ; NONE                                                                                                                                                                                         ; String         ;
+; SLD_ADVANCED_TRIGGER_9                          ; NONE                                                                                                                                                                                         ; String         ;
+; SLD_ADVANCED_TRIGGER_10                         ; NONE                                                                                                                                                                                         ; String         ;
+; sld_inversion_mask_length                       ; 188                                                                                                                                                                                          ; Untyped        ;
+; sld_inversion_mask                              ; 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 ; Untyped        ;
+; sld_power_up_trigger                            ; 0                                                                                                                                                                                            ; Untyped        ;
+; SLD_STATE_FLOW_MGR_ENTITY                       ; state_flow_mgr_entity.vhd                                                                                                                                                                    ; String         ;
+; sld_state_flow_use_generated                    ; 0                                                                                                                                                                                            ; Untyped        ;
+; sld_current_resource_width                      ; 1                                                                                                                                                                                            ; Untyped        ;
+; sld_attribute_mem_mode                          ; OFF                                                                                                                                                                                          ; Untyped        ;
+; SLD_STORAGE_QUALIFIER_BITS                      ; 1                                                                                                                                                                                            ; Signed Integer ;
+; SLD_STORAGE_QUALIFIER_GAP_RECORD                ; 0                                                                                                                                                                                            ; Signed Integer ;
+; SLD_STORAGE_QUALIFIER_MODE                      ; OFF                                                                                                                                                                                          ; String         ;
+; SLD_STORAGE_QUALIFIER_ENABLE_ADVANCED_CONDITION ; 0                                                                                                                                                                                            ; Signed Integer ;
+; sld_storage_qualifier_inversion_mask_length     ; 0                                                                                                                                                                                            ; Untyped        ;
+; SLD_STORAGE_QUALIFIER_ADVANCED_CONDITION_ENTITY ; basic                                                                                                                                                                                        ; String         ;
+; SLD_STORAGE_QUALIFIER_PIPELINE                  ; 0                                                                                                                                                                                            ; Signed Integer ;
++-------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: rs485_ctrl:u7|altshift_taps:ram_raddr_d1_rtl_0 ;
++----------------+----------------+---------------------------------------------------------------+
+; Parameter Name ; Value          ; Type                                                          ;
++----------------+----------------+---------------------------------------------------------------+
+; WIDTH_BYTEENA  ; 1              ; Untyped                                                       ;
+; NUMBER_OF_TAPS ; 1              ; Untyped                                                       ;
+; TAP_DISTANCE   ; 4              ; Untyped                                                       ;
+; WIDTH          ; 12             ; Untyped                                                       ;
+; POWER_UP_STATE ; CLEARED        ; Untyped                                                       ;
+; CBXI_PARAMETER ; shift_taps_96m ; Untyped                                                       ;
++----------------+----------------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                         ;
++-------------------------------------------+----------------------------------------------+
+; Name                                      ; Value                                        ;
++-------------------------------------------+----------------------------------------------+
+; Number of entity instances                ; 1                                            ;
+; Entity Instance                           ; ram:ram_inst|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                                    ;
+;     -- WIDTH_A                            ; 8                                            ;
+;     -- NUMWORDS_A                         ; 64                                           ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                 ;
+;     -- WIDTH_B                            ; 8                                            ;
+;     -- NUMWORDS_B                         ; 64                                           ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                       ;
+;     -- OUTDATA_REG_B                      ; CLOCK0                                       ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                         ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                    ;
++-------------------------------------------+----------------------------------------------+
+
+
++-----------------------------------------------------------------------------+
+; altshift_taps Parameter Settings by Entity Instance                         ;
++----------------------------+------------------------------------------------+
+; Name                       ; Value                                          ;
++----------------------------+------------------------------------------------+
+; Number of entity instances ; 1                                              ;
+; Entity Instance            ; rs485_ctrl:u7|altshift_taps:ram_raddr_d1_rtl_0 ;
+;     -- NUMBER_OF_TAPS      ; 1                                              ;
+;     -- TAP_DISTANCE        ; 4                                              ;
+;     -- WIDTH               ; 12                                             ;
++----------------------------+------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "rs485_ctrl:u7"                                                                                     ;
++---------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                ; Type   ; Severity ; Details                                                                             ;
++---------------------+--------+----------+-------------------------------------------------------------------------------------+
+; rs485_rxdata_length ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------+
+; Port Connectivity Checks: "rs485_rx:u6"                 ;
++------------+--------+----------+------------------------+
+; Port       ; Type   ; Severity ; Details                ;
++------------+--------+----------+------------------------+
+; dataerror  ; Output ; Info     ; Explicitly unconnected ;
+; frameerror ; Output ; Info     ; Explicitly unconnected ;
++------------+--------+----------+------------------------+
+
+
++---------------------------------------------------------+
+; Port Connectivity Checks: "rs485_rx:u4"                 ;
++------------+--------+----------+------------------------+
+; Port       ; Type   ; Severity ; Details                ;
++------------+--------+----------+------------------------+
+; dataerror  ; Output ; Info     ; Explicitly unconnected ;
+; frameerror ; Output ; Info     ; Explicitly unconnected ;
++------------+--------+----------+------------------------+
+
+
++---------------------------------------------------+
+; Port Connectivity Checks: "rs485_tx:u3"           ;
++------+--------+----------+------------------------+
+; Port ; Type   ; Severity ; Details                ;
++------+--------+----------+------------------------+
+; idle ; Output ; Info     ; Explicitly unconnected ;
++------+--------+----------+------------------------+
+
+
++---------------------------------------------------+
+; Port Connectivity Checks: "uarttx:u2"             ;
++------+--------+----------+------------------------+
+; Port ; Type   ; Severity ; Details                ;
++------+--------+----------+------------------------+
+; idle ; Output ; Info     ; Explicitly unconnected ;
++------+--------+----------+------------------------+
+
+
++---------------------------------------------------------+
+; Port Connectivity Checks: "uartrx:u1"                   ;
++------------+--------+----------+------------------------+
+; Port       ; Type   ; Severity ; Details                ;
++------------+--------+----------+------------------------+
+; dataerror  ; Output ; Info     ; Explicitly unconnected ;
+; frameerror ; Output ; Info     ; Explicitly unconnected ;
++------------+--------+----------+------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; SignalTap II Logic Analyzer Settings                                                                                                                                                                                                                                    ;
++----------------+------------------+---------------------+------------------+--------------+----------+------------------------+----------------------+--------------------+-----------------------------+-----------------+------------------+--------------------------+
+; Instance Index ; Instance Name    ; Trigger Input Width ; Data Input Width ; Sample Depth ; Segments ; Storage Qualifier Type ; Trigger Flow Control ; Trigger Conditions ; Advanced Trigger Conditions ; Trigger In Used ; Trigger Out Used ; Power-Up Trigger Enabled ;
++----------------+------------------+---------------------+------------------+--------------+----------+------------------------+----------------------+--------------------+-----------------------------+-----------------+------------------+--------------------------+
+; 0              ; auto_signaltap_0 ; 54                  ; 54               ; 4096         ; 1        ; continuous             ; sequential           ; 1                  ; 0                           ; no              ; no               ; no                       ;
++----------------+------------------+---------------------+------------------+--------------+----------+------------------------+----------------------+--------------------+-----------------------------+-----------------+------------------+--------------------------+
+
+
++---------------------------------+
+; Elapsed Time Per Partition      ;
++------------------+--------------+
+; Partition Name   ; Elapsed Time ;
++------------------+--------------+
+; Top              ; 00:00:02     ;
+; sld_hub:auto_hub ; 00:00:00     ;
++------------------+--------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Connections to In-System Debugging Instance "auto_signaltap_0"                                                                                                                                                                         ;
++------------------------------------+---------------+-----------+----------------+-------------------+------------------------------------------------------------------------------------------------------------------------+---------+
+; Name                               ; Type          ; Status    ; Partition Name ; Netlist Type Used ; Actual Connection                                                                                                      ; Details ;
++------------------------------------+---------------+-----------+----------------+-------------------+------------------------------------------------------------------------------------------------------------------------+---------+
+; ram:ram_inst|data[0]               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_rx:u6|dataout[0]                                                                                                 ; N/A     ;
+; ram:ram_inst|data[0]               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_rx:u6|dataout[0]                                                                                                 ; N/A     ;
+; ram:ram_inst|data[1]               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_rx:u6|dataout[1]                                                                                                 ; N/A     ;
+; ram:ram_inst|data[1]               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_rx:u6|dataout[1]                                                                                                 ; N/A     ;
+; ram:ram_inst|data[2]               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_rx:u6|dataout[2]                                                                                                 ; N/A     ;
+; ram:ram_inst|data[2]               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_rx:u6|dataout[2]                                                                                                 ; N/A     ;
+; ram:ram_inst|data[3]               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_rx:u6|dataout[3]                                                                                                 ; N/A     ;
+; ram:ram_inst|data[3]               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_rx:u6|dataout[3]                                                                                                 ; N/A     ;
+; ram:ram_inst|data[4]               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_rx:u6|dataout[4]                                                                                                 ; N/A     ;
+; ram:ram_inst|data[4]               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_rx:u6|dataout[4]                                                                                                 ; N/A     ;
+; ram:ram_inst|data[5]               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_rx:u6|dataout[5]                                                                                                 ; N/A     ;
+; ram:ram_inst|data[5]               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_rx:u6|dataout[5]                                                                                                 ; N/A     ;
+; ram:ram_inst|data[6]               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_rx:u6|dataout[6]                                                                                                 ; N/A     ;
+; ram:ram_inst|data[6]               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_rx:u6|dataout[6]                                                                                                 ; N/A     ;
+; ram:ram_inst|data[7]               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_rx:u6|dataout[7]                                                                                                 ; N/A     ;
+; ram:ram_inst|data[7]               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_rx:u6|dataout[7]                                                                                                 ; N/A     ;
+; ram:ram_inst|rdaddress[0]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_ctrl:u7|altshift_taps:ram_raddr_d1_rtl_0|shift_taps_96m:auto_generated|altsyncram_md81:altsyncram2|ram_block3a0  ; N/A     ;
+; ram:ram_inst|rdaddress[0]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_ctrl:u7|altshift_taps:ram_raddr_d1_rtl_0|shift_taps_96m:auto_generated|altsyncram_md81:altsyncram2|ram_block3a0  ; N/A     ;
+; ram:ram_inst|rdaddress[1]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_ctrl:u7|altshift_taps:ram_raddr_d1_rtl_0|shift_taps_96m:auto_generated|altsyncram_md81:altsyncram2|ram_block3a1  ; N/A     ;
+; ram:ram_inst|rdaddress[1]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_ctrl:u7|altshift_taps:ram_raddr_d1_rtl_0|shift_taps_96m:auto_generated|altsyncram_md81:altsyncram2|ram_block3a1  ; N/A     ;
+; ram:ram_inst|rdaddress[2]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_ctrl:u7|altshift_taps:ram_raddr_d1_rtl_0|shift_taps_96m:auto_generated|altsyncram_md81:altsyncram2|ram_block3a2  ; N/A     ;
+; ram:ram_inst|rdaddress[2]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_ctrl:u7|altshift_taps:ram_raddr_d1_rtl_0|shift_taps_96m:auto_generated|altsyncram_md81:altsyncram2|ram_block3a2  ; N/A     ;
+; ram:ram_inst|rdaddress[3]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_ctrl:u7|altshift_taps:ram_raddr_d1_rtl_0|shift_taps_96m:auto_generated|altsyncram_md81:altsyncram2|ram_block3a3  ; N/A     ;
+; ram:ram_inst|rdaddress[3]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_ctrl:u7|altshift_taps:ram_raddr_d1_rtl_0|shift_taps_96m:auto_generated|altsyncram_md81:altsyncram2|ram_block3a3  ; N/A     ;
+; ram:ram_inst|rdaddress[4]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_ctrl:u7|altshift_taps:ram_raddr_d1_rtl_0|shift_taps_96m:auto_generated|altsyncram_md81:altsyncram2|ram_block3a4  ; N/A     ;
+; ram:ram_inst|rdaddress[4]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_ctrl:u7|altshift_taps:ram_raddr_d1_rtl_0|shift_taps_96m:auto_generated|altsyncram_md81:altsyncram2|ram_block3a4  ; N/A     ;
+; ram:ram_inst|rdaddress[5]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_ctrl:u7|altshift_taps:ram_raddr_d1_rtl_0|shift_taps_96m:auto_generated|altsyncram_md81:altsyncram2|ram_block3a5  ; N/A     ;
+; ram:ram_inst|rdaddress[5]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_ctrl:u7|altshift_taps:ram_raddr_d1_rtl_0|shift_taps_96m:auto_generated|altsyncram_md81:altsyncram2|ram_block3a5  ; N/A     ;
+; ram:ram_inst|wraddress[0]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_ctrl:u7|altshift_taps:ram_raddr_d1_rtl_0|shift_taps_96m:auto_generated|altsyncram_md81:altsyncram2|ram_block3a6  ; N/A     ;
+; ram:ram_inst|wraddress[0]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_ctrl:u7|altshift_taps:ram_raddr_d1_rtl_0|shift_taps_96m:auto_generated|altsyncram_md81:altsyncram2|ram_block3a6  ; N/A     ;
+; ram:ram_inst|wraddress[1]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_ctrl:u7|altshift_taps:ram_raddr_d1_rtl_0|shift_taps_96m:auto_generated|altsyncram_md81:altsyncram2|ram_block3a7  ; N/A     ;
+; ram:ram_inst|wraddress[1]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_ctrl:u7|altshift_taps:ram_raddr_d1_rtl_0|shift_taps_96m:auto_generated|altsyncram_md81:altsyncram2|ram_block3a7  ; N/A     ;
+; ram:ram_inst|wraddress[2]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_ctrl:u7|altshift_taps:ram_raddr_d1_rtl_0|shift_taps_96m:auto_generated|altsyncram_md81:altsyncram2|ram_block3a8  ; N/A     ;
+; ram:ram_inst|wraddress[2]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_ctrl:u7|altshift_taps:ram_raddr_d1_rtl_0|shift_taps_96m:auto_generated|altsyncram_md81:altsyncram2|ram_block3a8  ; N/A     ;
+; ram:ram_inst|wraddress[3]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_ctrl:u7|altshift_taps:ram_raddr_d1_rtl_0|shift_taps_96m:auto_generated|altsyncram_md81:altsyncram2|ram_block3a9  ; N/A     ;
+; ram:ram_inst|wraddress[3]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_ctrl:u7|altshift_taps:ram_raddr_d1_rtl_0|shift_taps_96m:auto_generated|altsyncram_md81:altsyncram2|ram_block3a9  ; N/A     ;
+; ram:ram_inst|wraddress[4]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_ctrl:u7|altshift_taps:ram_raddr_d1_rtl_0|shift_taps_96m:auto_generated|altsyncram_md81:altsyncram2|ram_block3a10 ; N/A     ;
+; ram:ram_inst|wraddress[4]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_ctrl:u7|altshift_taps:ram_raddr_d1_rtl_0|shift_taps_96m:auto_generated|altsyncram_md81:altsyncram2|ram_block3a10 ; N/A     ;
+; ram:ram_inst|wraddress[5]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_ctrl:u7|altshift_taps:ram_raddr_d1_rtl_0|shift_taps_96m:auto_generated|altsyncram_md81:altsyncram2|ram_block3a11 ; N/A     ;
+; ram:ram_inst|wraddress[5]          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_ctrl:u7|altshift_taps:ram_raddr_d1_rtl_0|shift_taps_96m:auto_generated|altsyncram_md81:altsyncram2|ram_block3a11 ; N/A     ;
+; ram:ram_inst|wren                  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_rx:u6|rdsig                                                                                                      ; N/A     ;
+; ram:ram_inst|wren                  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_rx:u6|rdsig                                                                                                      ; N/A     ;
+; rs232_rx1                          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs232_rx1                                                                                                              ; N/A     ;
+; rs232_rx1                          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs232_rx1                                                                                                              ; N/A     ;
+; rs232_tx1                          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; uarttx:u2|tx                                                                                                           ; N/A     ;
+; rs232_tx1                          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; uarttx:u2|tx                                                                                                           ; N/A     ;
+; rs485_ctrl:u7|ram_raddr[0]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_ctrl:u7|altshift_taps:ram_raddr_d1_rtl_0|shift_taps_96m:auto_generated|altsyncram_md81:altsyncram2|ram_block3a0  ; N/A     ;
+; rs485_ctrl:u7|ram_raddr[0]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_ctrl:u7|altshift_taps:ram_raddr_d1_rtl_0|shift_taps_96m:auto_generated|altsyncram_md81:altsyncram2|ram_block3a0  ; N/A     ;
+; rs485_ctrl:u7|ram_raddr[1]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_ctrl:u7|altshift_taps:ram_raddr_d1_rtl_0|shift_taps_96m:auto_generated|altsyncram_md81:altsyncram2|ram_block3a1  ; N/A     ;
+; rs485_ctrl:u7|ram_raddr[1]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_ctrl:u7|altshift_taps:ram_raddr_d1_rtl_0|shift_taps_96m:auto_generated|altsyncram_md81:altsyncram2|ram_block3a1  ; N/A     ;
+; rs485_ctrl:u7|ram_raddr[2]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_ctrl:u7|altshift_taps:ram_raddr_d1_rtl_0|shift_taps_96m:auto_generated|altsyncram_md81:altsyncram2|ram_block3a2  ; N/A     ;
+; rs485_ctrl:u7|ram_raddr[2]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_ctrl:u7|altshift_taps:ram_raddr_d1_rtl_0|shift_taps_96m:auto_generated|altsyncram_md81:altsyncram2|ram_block3a2  ; N/A     ;
+; rs485_ctrl:u7|ram_raddr[3]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_ctrl:u7|altshift_taps:ram_raddr_d1_rtl_0|shift_taps_96m:auto_generated|altsyncram_md81:altsyncram2|ram_block3a3  ; N/A     ;
+; rs485_ctrl:u7|ram_raddr[3]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_ctrl:u7|altshift_taps:ram_raddr_d1_rtl_0|shift_taps_96m:auto_generated|altsyncram_md81:altsyncram2|ram_block3a3  ; N/A     ;
+; rs485_ctrl:u7|ram_raddr[4]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_ctrl:u7|altshift_taps:ram_raddr_d1_rtl_0|shift_taps_96m:auto_generated|altsyncram_md81:altsyncram2|ram_block3a4  ; N/A     ;
+; rs485_ctrl:u7|ram_raddr[4]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_ctrl:u7|altshift_taps:ram_raddr_d1_rtl_0|shift_taps_96m:auto_generated|altsyncram_md81:altsyncram2|ram_block3a4  ; N/A     ;
+; rs485_ctrl:u7|ram_raddr[5]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_ctrl:u7|altshift_taps:ram_raddr_d1_rtl_0|shift_taps_96m:auto_generated|altsyncram_md81:altsyncram2|ram_block3a5  ; N/A     ;
+; rs485_ctrl:u7|ram_raddr[5]         ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_ctrl:u7|altshift_taps:ram_raddr_d1_rtl_0|shift_taps_96m:auto_generated|altsyncram_md81:altsyncram2|ram_block3a5  ; N/A     ;
+; rs485_ctrl:u7|rs485_command_enable ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_ctrl:u7|rs485_command_enable                                                                                     ; N/A     ;
+; rs485_ctrl:u7|rs485_command_enable ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_ctrl:u7|rs485_command_enable                                                                                     ; N/A     ;
+; rs485_ctrl:u7|rs485_rx_data[0]     ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_rx:u6|dataout[0]                                                                                                 ; N/A     ;
+; rs485_ctrl:u7|rs485_rx_data[0]     ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_rx:u6|dataout[0]                                                                                                 ; N/A     ;
+; rs485_ctrl:u7|rs485_rx_data[1]     ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_rx:u6|dataout[1]                                                                                                 ; N/A     ;
+; rs485_ctrl:u7|rs485_rx_data[1]     ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_rx:u6|dataout[1]                                                                                                 ; N/A     ;
+; rs485_ctrl:u7|rs485_rx_data[2]     ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_rx:u6|dataout[2]                                                                                                 ; N/A     ;
+; rs485_ctrl:u7|rs485_rx_data[2]     ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_rx:u6|dataout[2]                                                                                                 ; N/A     ;
+; rs485_ctrl:u7|rs485_rx_data[3]     ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_rx:u6|dataout[3]                                                                                                 ; N/A     ;
+; rs485_ctrl:u7|rs485_rx_data[3]     ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_rx:u6|dataout[3]                                                                                                 ; N/A     ;
+; rs485_ctrl:u7|rs485_rx_data[4]     ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_rx:u6|dataout[4]                                                                                                 ; N/A     ;
+; rs485_ctrl:u7|rs485_rx_data[4]     ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_rx:u6|dataout[4]                                                                                                 ; N/A     ;
+; rs485_ctrl:u7|rs485_rx_data[5]     ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_rx:u6|dataout[5]                                                                                                 ; N/A     ;
+; rs485_ctrl:u7|rs485_rx_data[5]     ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_rx:u6|dataout[5]                                                                                                 ; N/A     ;
+; rs485_ctrl:u7|rs485_rx_data[6]     ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_rx:u6|dataout[6]                                                                                                 ; N/A     ;
+; rs485_ctrl:u7|rs485_rx_data[6]     ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_rx:u6|dataout[6]                                                                                                 ; N/A     ;
+; rs485_ctrl:u7|rs485_rx_data[7]     ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_rx:u6|dataout[7]                                                                                                 ; N/A     ;
+; rs485_ctrl:u7|rs485_rx_data[7]     ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_rx:u6|dataout[7]                                                                                                 ; N/A     ;
+; rs485_ctrl:u7|rs485_rx_valid       ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_rx:u6|rdsig                                                                                                      ; N/A     ;
+; rs485_ctrl:u7|rs485_rx_valid       ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_rx:u6|rdsig                                                                                                      ; N/A     ;
+; rs485_de1                          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_tx:u3|de                                                                                                         ; N/A     ;
+; rs485_de1                          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_tx:u3|de                                                                                                         ; N/A     ;
+; rs485_de2                          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_tx:u5|de                                                                                                         ; N/A     ;
+; rs485_de2                          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_tx:u5|de                                                                                                         ; N/A     ;
+; rs485_rx1                          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_rx1                                                                                                              ; N/A     ;
+; rs485_rx1                          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_rx1                                                                                                              ; N/A     ;
+; rs485_rx2                          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_rx2                                                                                                              ; N/A     ;
+; rs485_rx2                          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_rx2                                                                                                              ; N/A     ;
+; rs485_tx1                          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_tx:u3|tx                                                                                                         ; N/A     ;
+; rs485_tx1                          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_tx:u3|tx                                                                                                         ; N/A     ;
+; rs485_tx2                          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_tx:u5|tx                                                                                                         ; N/A     ;
+; rs485_tx2                          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_tx:u5|tx                                                                                                         ; N/A     ;
+; rs485_tx:u5|datain[0]              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ram:ram_inst|altsyncram:altsyncram_component|altsyncram_kcn1:auto_generated|q_b[0]                                     ; N/A     ;
+; rs485_tx:u5|datain[0]              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ram:ram_inst|altsyncram:altsyncram_component|altsyncram_kcn1:auto_generated|q_b[0]                                     ; N/A     ;
+; rs485_tx:u5|datain[1]              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ram:ram_inst|altsyncram:altsyncram_component|altsyncram_kcn1:auto_generated|q_b[1]                                     ; N/A     ;
+; rs485_tx:u5|datain[1]              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ram:ram_inst|altsyncram:altsyncram_component|altsyncram_kcn1:auto_generated|q_b[1]                                     ; N/A     ;
+; rs485_tx:u5|datain[2]              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ram:ram_inst|altsyncram:altsyncram_component|altsyncram_kcn1:auto_generated|q_b[2]                                     ; N/A     ;
+; rs485_tx:u5|datain[2]              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ram:ram_inst|altsyncram:altsyncram_component|altsyncram_kcn1:auto_generated|q_b[2]                                     ; N/A     ;
+; rs485_tx:u5|datain[3]              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ram:ram_inst|altsyncram:altsyncram_component|altsyncram_kcn1:auto_generated|q_b[3]                                     ; N/A     ;
+; rs485_tx:u5|datain[3]              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ram:ram_inst|altsyncram:altsyncram_component|altsyncram_kcn1:auto_generated|q_b[3]                                     ; N/A     ;
+; rs485_tx:u5|datain[4]              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ram:ram_inst|altsyncram:altsyncram_component|altsyncram_kcn1:auto_generated|q_b[4]                                     ; N/A     ;
+; rs485_tx:u5|datain[4]              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ram:ram_inst|altsyncram:altsyncram_component|altsyncram_kcn1:auto_generated|q_b[4]                                     ; N/A     ;
+; rs485_tx:u5|datain[5]              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ram:ram_inst|altsyncram:altsyncram_component|altsyncram_kcn1:auto_generated|q_b[5]                                     ; N/A     ;
+; rs485_tx:u5|datain[5]              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ram:ram_inst|altsyncram:altsyncram_component|altsyncram_kcn1:auto_generated|q_b[5]                                     ; N/A     ;
+; rs485_tx:u5|datain[6]              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ram:ram_inst|altsyncram:altsyncram_component|altsyncram_kcn1:auto_generated|q_b[6]                                     ; N/A     ;
+; rs485_tx:u5|datain[6]              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ram:ram_inst|altsyncram:altsyncram_component|altsyncram_kcn1:auto_generated|q_b[6]                                     ; N/A     ;
+; rs485_tx:u5|datain[7]              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ram:ram_inst|altsyncram:altsyncram_component|altsyncram_kcn1:auto_generated|q_b[7]                                     ; N/A     ;
+; rs485_tx:u5|datain[7]              ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ram:ram_inst|altsyncram:altsyncram_component|altsyncram_kcn1:auto_generated|q_b[7]                                     ; N/A     ;
+; rs485_tx:u5|wrsig                  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_ctrl:u7|rs485_tx_en                                                                                              ; N/A     ;
+; rs485_tx:u5|wrsig                  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; rs485_ctrl:u7|rs485_tx_en                                                                                              ; N/A     ;
+; uartrx:u1|clk                      ; pre-synthesis ; connected ; Top            ; post-synthesis    ; clkdiv:u0|clkout                                                                                                       ; N/A     ;
++------------------------------------+---------------+-----------+----------------+-------------------+------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 12.1 Build 177 11/07/2012 SJ Full Version
+    Info: Processing started: Mon Jul 10 14:41:21 2017
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off rs485_test -c rs485_test
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file source/uarttx.v
+    Info (12023): Found entity 1: uarttx
+Info (12021): Found 1 design units, including 1 entities, in source file source/uartrx.v
+    Info (12023): Found entity 1: uartrx
+Info (12021): Found 1 design units, including 1 entities, in source file source/uartctrl.v
+    Info (12023): Found entity 1: uartctrl
+Info (12021): Found 1 design units, including 1 entities, in source file source/uart_test.v
+    Info (12023): Found entity 1: uart_test
+Info (12021): Found 1 design units, including 1 entities, in source file source/rs485_test.v
+    Info (12023): Found entity 1: rs485_test
+Info (12021): Found 1 design units, including 1 entities, in source file source/clkdiv.v
+    Info (12023): Found entity 1: clkdiv
+Info (12021): Found 1 design units, including 1 entities, in source file source/rs485_tx.v
+    Info (12023): Found entity 1: rs485_tx
+Info (12021): Found 1 design units, including 1 entities, in source file source/rs485_rx.v
+    Info (12023): Found entity 1: rs485_rx
+Info (12021): Found 1 design units, including 1 entities, in source file ram.v
+    Info (12023): Found entity 1: ram
+Info (12021): Found 1 design units, including 1 entities, in source file source/rs485_ctrl.v
+    Info (12023): Found entity 1: rs485_ctrl
+Warning (10236): Verilog HDL Implicit Net warning at uart_test.v(27): created implicit net for "rdsig"
+Warning (10236): Verilog HDL Implicit Net warning at uart_test.v(37): created implicit net for "wrsig"
+Warning (10227): Verilog HDL Port Declaration warning at uartrx.v(14): data type declaration for "dataout" declares packed dimensions but the port declaration declaration does not
+Info (10499): HDL info at uartrx.v(9): see declaration for object "dataout"
+Warning (10227): Verilog HDL Port Declaration warning at rs485_rx.v(14): data type declaration for "dataout" declares packed dimensions but the port declaration declaration does not
+Info (10499): HDL info at rs485_rx.v(9): see declaration for object "dataout"
+Info (12127): Elaborating entity "rs485_test" for the top level hierarchy
+Info (12128): Elaborating entity "clkdiv" for hierarchy "clkdiv:u0"
+Info (12128): Elaborating entity "uartrx" for hierarchy "uartrx:u1"
+Info (12128): Elaborating entity "uarttx" for hierarchy "uarttx:u2"
+Info (12128): Elaborating entity "rs485_tx" for hierarchy "rs485_tx:u3"
+Info (12128): Elaborating entity "rs485_rx" for hierarchy "rs485_rx:u4"
+Info (12128): Elaborating entity "rs485_ctrl" for hierarchy "rs485_ctrl:u7"
+Info (12128): Elaborating entity "ram" for hierarchy "ram:ram_inst"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "ram:ram_inst|altsyncram:altsyncram_component"
+Info (12130): Elaborated megafunction instantiation "ram:ram_inst|altsyncram:altsyncram_component"
+Info (12133): Instantiated megafunction "ram:ram_inst|altsyncram:altsyncram_component" with the following parameter:
+    Info (12134): Parameter "address_aclr_b" = "NONE"
+    Info (12134): Parameter "address_reg_b" = "CLOCK0"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_input_b" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_b" = "BYPASS"
+    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "64"
+    Info (12134): Parameter "numwords_b" = "64"
+    Info (12134): Parameter "operation_mode" = "DUAL_PORT"
+    Info (12134): Parameter "outdata_aclr_b" = "NONE"
+    Info (12134): Parameter "outdata_reg_b" = "CLOCK0"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "DONT_CARE"
+    Info (12134): Parameter "widthad_a" = "6"
+    Info (12134): Parameter "widthad_b" = "6"
+    Info (12134): Parameter "width_a" = "8"
+    Info (12134): Parameter "width_b" = "8"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_kcn1.tdf
+    Info (12023): Found entity 1: altsyncram_kcn1
+Info (12128): Elaborating entity "altsyncram_kcn1" for hierarchy "ram:ram_inst|altsyncram:altsyncram_component|altsyncram_kcn1:auto_generated"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_g124.tdf
+    Info (12023): Found entity 1: altsyncram_g124
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_tsc.tdf
+    Info (12023): Found entity 1: mux_tsc
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_dvf.tdf
+    Info (12023): Found entity 1: decode_dvf
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_ogi.tdf
+    Info (12023): Found entity 1: cntr_ogi
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_sgc.tdf
+    Info (12023): Found entity 1: cmpr_sgc
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_m9j.tdf
+    Info (12023): Found entity 1: cntr_m9j
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_ggi.tdf
+    Info (12023): Found entity 1: cntr_ggi
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_rgc.tdf
+    Info (12023): Found entity 1: cmpr_rgc
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_23j.tdf
+    Info (12023): Found entity 1: cntr_23j
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_ngc.tdf
+    Info (12023): Found entity 1: cmpr_ngc
+Info (12033): Analysis and Synthesis generated SignalTap II or debug node instance "auto_signaltap_0"
+Info (19000): Inferred 1 megafunctions from design logic
+    Info (276034): Inferred altshift_taps megafunction from the following design logic: "rs485_ctrl:u7|ram_raddr_d1_rtl_0"
+        Info (286033): Parameter NUMBER_OF_TAPS set to 1
+        Info (286033): Parameter TAP_DISTANCE set to 4
+        Info (286033): Parameter WIDTH set to 12
+Info (12130): Elaborated megafunction instantiation "rs485_ctrl:u7|altshift_taps:ram_raddr_d1_rtl_0"
+Info (12133): Instantiated megafunction "rs485_ctrl:u7|altshift_taps:ram_raddr_d1_rtl_0" with the following parameter:
+    Info (12134): Parameter "NUMBER_OF_TAPS" = "1"
+    Info (12134): Parameter "TAP_DISTANCE" = "4"
+    Info (12134): Parameter "WIDTH" = "12"
+Info (12021): Found 1 design units, including 1 entities, in source file db/shift_taps_96m.tdf
+    Info (12023): Found entity 1: shift_taps_96m
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_md81.tdf
+    Info (12023): Found entity 1: altsyncram_md81
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_4pf.tdf
+    Info (12023): Found entity 1: cntr_4pf
+Info (286031): Timing-Driven Synthesis is running on partition "Top"
+Info (17049): 4 registers lost all their fanouts during netlist optimizations.
+Info (13000): Registers with preset signals will power-up high
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "sld_hub:auto_hub|receive[0][0]" is stuck at GND
+Info (286031): Timing-Driven Synthesis is running on partition "sld_hub:auto_hub"
+Info (35024): Succesfully connected in-system debug instance "auto_signaltap_0" to all 109 required data inputs, trigger inputs, acquisition clocks, and dynamic pins
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 1847 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 8 input pins
+    Info (21059): Implemented 6 output pins
+    Info (21061): Implemented 1758 logic cells
+    Info (21064): Implemented 74 RAM segments
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 534 megabytes
+    Info: Processing ended: Mon Jul 10 14:41:29 2017
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:07
+
+

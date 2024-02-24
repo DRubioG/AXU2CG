@@ -1,0 +1,25 @@
+
+
+##
+NET "clk50" LOC = T8 | TNM_NET = sys_clk_pin | IOSTANDARD = "LVCMOS33";
+TIMESPEC TS_sys_clk_pin = PERIOD sys_clk_pin 50000 kHz;
+##
+
+##
+NET reset_n                     LOC = L3 | IOSTANDARD = "LVCMOS33"; ## Reset Button
+##
+
+
+########RS232 SerialPin define#####################
+NET rs232_rx1                   LOC = B12 | IOSTANDARD = "LVCMOS33";		
+NET rs232_tx1                   LOC = A13 | IOSTANDARD = "LVCMOS33"; 		  
+
+########RS485 SerialPin define#####################
+NET rs485_rx1                    LOC = A5 | IOSTANDARD = "LVCMOS33";		
+NET rs485_tx1                    LOC = A6 | IOSTANDARD = "LVCMOS33"; 
+NET rs485_de1                    LOC = B6 | IOSTANDARD = "LVCMOS33"; 		
+
+NET rs485_rx2                    LOC = C8 | IOSTANDARD = "LVCMOS33";		
+NET rs485_tx2                    LOC = A10 | IOSTANDARD = "LVCMOS33"; 	
+NET rs485_de2                    LOC = A9 | IOSTANDARD = "LVCMOS33"; 	
+	

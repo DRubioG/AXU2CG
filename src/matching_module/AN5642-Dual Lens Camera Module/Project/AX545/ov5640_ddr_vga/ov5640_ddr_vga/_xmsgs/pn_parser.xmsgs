@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated   -->
+<!--     by the Xilinx ISE software.  Any direct editing or        -->
+<!--     changes made to this file may result in unpredictable     -->
+<!--     behavior or data corruption.  It is strongly advised that -->
+<!--     users do not edit the contents of this file.              -->
+<!--                                                               -->
+<!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
+
+<messages>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/Project/AN5642/verilog/AX545/ov5640_ddr_vga/ov5640_ddr_vga/remote_sources/_/rtl/ddr3_top.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/Project/AN5642/verilog/AX545/ov5640_ddr_vga/ov5640_ddr_vga/remote_sources/_/rtl/infrastructure.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/Project/AN5642/verilog/AX545/ov5640_ddr_vga/ov5640_ddr_vga/remote_sources/_/rtl/mcb_controller/iodrp_controller.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/Project/AN5642/verilog/AX545/ov5640_ddr_vga/ov5640_ddr_vga/remote_sources/_/rtl/mcb_controller/iodrp_mcb_controller.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/Project/AN5642/verilog/AX545/ov5640_ddr_vga/ov5640_ddr_vga/remote_sources/_/rtl/mcb_controller/mcb_raw_wrapper.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/Project/AN5642/verilog/AX545/ov5640_ddr_vga/ov5640_ddr_vga/remote_sources/_/rtl/mcb_controller/mcb_soft_calibration.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/Project/AN5642/verilog/AX545/ov5640_ddr_vga/ov5640_ddr_vga/remote_sources/_/rtl/mcb_controller/mcb_soft_calibration_top.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/Project/AN5642/verilog/AX545/ov5640_ddr_vga/ov5640_ddr_vga/remote_sources/_/rtl/mcb_controller/mcb_ui_top.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/Project/AN5642/verilog/AX545/ov5640_ddr_vga/ov5640_ddr_vga/remote_sources/_/rtl/memc_wrapper.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/Project/AN5642/verilog/AX545/ov5640_ddr_vga/ov5640_ddr_vga/rtl/bank_switch.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/Project/AN5642/verilog/AX545/ov5640_ddr_vga/ov5640_ddr_vga/rtl/cmos_select.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/Project/AN5642/verilog/AX545/ov5640_ddr_vga/ov5640_ddr_vga/rtl/ddr/dcfifo_ctrl.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/Project/AN5642/verilog/AX545/ov5640_ddr_vga/ov5640_ddr_vga/rtl/ddr/ddr_2fifo_top.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/Project/AN5642/verilog/AX545/ov5640_ddr_vga/ov5640_ddr_vga/rtl/ddr/mem_burst_v2.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/Project/AN5642/verilog/AX545/ov5640_ddr_vga/ov5640_ddr_vga/rtl/ddr/mem_ctrl.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/Project/AN5642/verilog/AX545/ov5640_ddr_vga/ov5640_ddr_vga/rtl/ov5640/camera_capture.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/Project/AN5642/verilog/AX545/ov5640_ddr_vga/ov5640_ddr_vga/rtl/ov5640/i2c_com.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/Project/AN5642/verilog/AX545/ov5640_ddr_vga/ov5640_ddr_vga/rtl/ov5640/power_on_delay.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/Project/AN5642/verilog/AX545/ov5640_ddr_vga/ov5640_ddr_vga/rtl/ov5640/reg_config.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/Project/AN5642/verilog/AX545/ov5640_ddr_vga/ov5640_ddr_vga/rtl/ov5640_ddr_vga.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/Project/AN5642/verilog/AX545/ov5640_ddr_vga/ov5640_ddr_vga/rtl/system_ctrl.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/Project/AN5642/verilog/AX545/ov5640_ddr_vga/ov5640_ddr_vga/rtl/vga/vga_disp.v&quot; into library work</arg>
+</msg>
+
+</messages>
+

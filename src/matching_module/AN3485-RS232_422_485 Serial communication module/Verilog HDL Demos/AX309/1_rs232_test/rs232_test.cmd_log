@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "Y:/project/AN/AN3485/CD/verilog/AX309/1_rs232_test/rs232_test.xst" -ofn "Y:/project/AN/AN3485/CD/verilog/AX309/1_rs232_test/rs232_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc rs232_test.ucf -p xc6slx9-ftg256-2 rs232_test.ngc rs232_test.ngd  
+map -intstyle ise -p xc6slx9-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o rs232_test_map.ncd rs232_test.ngd rs232_test.pcf 
+par -w -intstyle ise -ol high -mt off rs232_test_map.ncd rs232_test.ncd rs232_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml rs232_test.twx rs232_test.ncd -o rs232_test.twr rs232_test.pcf -ucf rs232_test.ucf 
+bitgen -intstyle ise -f rs232_test.ut rs232_test.ncd 

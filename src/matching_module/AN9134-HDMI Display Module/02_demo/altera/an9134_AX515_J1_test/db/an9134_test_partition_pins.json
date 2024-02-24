@@ -1,0 +1,137 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "hdmi_nreset",
+					"strict" : false
+				},
+				{
+					"name" : "hdmi_hs",
+					"strict" : false
+				},
+				{
+					"name" : "hdmi_vs",
+					"strict" : false
+				},
+				{
+					"name" : "hdmi_de",
+					"strict" : false
+				},
+				{
+					"name" : "hdmi_d[0]",
+					"strict" : false
+				},
+				{
+					"name" : "hdmi_d[1]",
+					"strict" : false
+				},
+				{
+					"name" : "hdmi_d[2]",
+					"strict" : false
+				},
+				{
+					"name" : "hdmi_d[3]",
+					"strict" : false
+				},
+				{
+					"name" : "hdmi_d[4]",
+					"strict" : false
+				},
+				{
+					"name" : "hdmi_d[5]",
+					"strict" : false
+				},
+				{
+					"name" : "hdmi_d[6]",
+					"strict" : false
+				},
+				{
+					"name" : "hdmi_d[7]",
+					"strict" : false
+				},
+				{
+					"name" : "hdmi_d[8]",
+					"strict" : false
+				},
+				{
+					"name" : "hdmi_d[9]",
+					"strict" : false
+				},
+				{
+					"name" : "hdmi_d[10]",
+					"strict" : false
+				},
+				{
+					"name" : "hdmi_d[11]",
+					"strict" : false
+				},
+				{
+					"name" : "hdmi_d[12]",
+					"strict" : false
+				},
+				{
+					"name" : "hdmi_d[13]",
+					"strict" : false
+				},
+				{
+					"name" : "hdmi_d[14]",
+					"strict" : false
+				},
+				{
+					"name" : "hdmi_d[15]",
+					"strict" : false
+				},
+				{
+					"name" : "hdmi_d[16]",
+					"strict" : false
+				},
+				{
+					"name" : "hdmi_d[17]",
+					"strict" : false
+				},
+				{
+					"name" : "hdmi_d[18]",
+					"strict" : false
+				},
+				{
+					"name" : "hdmi_d[19]",
+					"strict" : false
+				},
+				{
+					"name" : "hdmi_d[20]",
+					"strict" : false
+				},
+				{
+					"name" : "hdmi_d[21]",
+					"strict" : false
+				},
+				{
+					"name" : "hdmi_d[22]",
+					"strict" : false
+				},
+				{
+					"name" : "hdmi_d[23]",
+					"strict" : false
+				},
+				{
+					"name" : "hdmi_scl",
+					"strict" : false
+				},
+				{
+					"name" : "hdmi_sda",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "key[0]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

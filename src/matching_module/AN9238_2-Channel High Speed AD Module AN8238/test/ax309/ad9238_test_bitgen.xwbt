@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=E:\Project\test\ax309\ad9238_test\ad9238_test.ncd
+OUTFILE=E:\Project\test\ax309\ad9238_test\ad9238_test.bit
+FAMILY=Spartan6
+PART=xc6slx9-2ftg256
+WORKINGDIR=E:\Project\test\ax309\ad9238_test
+LICENSE=WebPack
+USER_INFO=__0_0_0

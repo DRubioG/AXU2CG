@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Mon Jul 10 14:41:29 2017
+Quartus II 64-Bit Version : 12.1 Build 177 11/07/2012 SJ Full Version
+Revision Name : rs485_test
+Top-level Entity Name : rs485_test
+Family : Cyclone IV E
+Total logic elements : 1,736
+    Total combinational functions : 1,016
+    Dedicated logic registers : 1,238
+Total registers : 1238
+Total pins : 10
+Total virtual pins : 0
+Total memory bits : 221,720
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

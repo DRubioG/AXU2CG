@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<pin_planner>
+	<pin_info>
+		<pin name="RESET" source="Pin Planner" >
+		</pin>
+		<pin name="DATA0" source="Pin Planner" >
+		</pin>
+		<pin name="DCLK" source="Pin Planner" >
+		</pin>
+		<pin name="SCE" source="Pin Planner" >
+		</pin>
+		<pin name="SDO" source="Pin Planner" >
+		</pin>
+		<pin name="KEY2" source="Pin Planner" >
+		</pin>
+		<pin name="KEY3" source="Pin Planner" >
+		</pin>
+		<pin name="KEY4" source="Pin Planner" >
+		</pin>
+		<pin name="RXD" source="Pin Planner" >
+		</pin>
+		<pin name="TXD" source="Pin Planner" >
+		</pin>
+		<pin name="SDA" source="Pin Planner" >
+		</pin>
+		<pin name="SCL" source="Pin Planner" >
+		</pin>
+		<pin name="PS2_DAT" source="Pin Planner" >
+		</pin>
+		<pin name="PS2_CLK" source="Pin Planner" >
+		</pin>
+		<pin name="RTC_SCLK" source="Pin Planner" >
+		</pin>
+		<pin name="RTC_NRST" source="Pin Planner" >
+		</pin>
+		<pin name="RTC_DATA" source="Pin Planner" >
+		</pin>
+		<pin name="BUZZER" source="Pin Planner" >
+		</pin>
+		<pin name="DIG[0]" source="Pin Planner" >
+		</pin>
+		<pin name="DIG[1]" source="Pin Planner" >
+		</pin>
+		<pin name="DIG[2]" source="Pin Planner" >
+		</pin>
+		<pin name="DIG[3]" source="Pin Planner" >
+		</pin>
+		<pin name="DIG[4]" source="Pin Planner" >
+		</pin>
+		<pin name="DIG[5]" source="Pin Planner" >
+		</pin>
+		<pin name="DIG[6]" source="Pin Planner" >
+		</pin>
+		<pin name="DIG[7]" source="Pin Planner" >
+		</pin>
+		<pin name="SEL[5]" source="Pin Planner" >
+		</pin>
+		<pin name="SEL[4]" source="Pin Planner" >
+		</pin>
+		<pin name="SEL[3]" source="Pin Planner" >
+		</pin>
+		<pin name="SEL[2]" source="Pin Planner" >
+		</pin>
+		<pin name="SEL[1]" source="Pin Planner" >
+		</pin>
+		<pin name="SEL[0]" source="Pin Planner" >
+		</pin>
+		<pin name="SD_DOUT" source="Pin Planner" >
+		</pin>
+		<pin name="SD_CLK" source="Pin Planner" >
+		</pin>
+		<pin name="SD_DI" source="Pin Planner" >
+		</pin>
+		<pin name="SD_NCS" source="Pin Planner" >
+		</pin>
+		<pin name="CMOS_DB[0]" source="Pin Planner" >
+		</pin>
+		<pin name="CMOS_DB[1]" source="Pin Planner" >
+		</pin>
+		<pin name="CMOS_DB[2]" source="Pin Planner" >
+		</pin>
+		<pin name="CMOS_DB[3]" source="Pin Planner" >
+		</pin>
+		<pin name="CMOS_DB[4]" source="Pin Planner" >
+		</pin>
+		<pin name="CMOS_DB[5]" source="Pin Planner" >
+		</pin>
+		<pin name="CMOS_DB[6]" source="Pin Planner" >
+		</pin>
+		<pin name="CMOS_DB[7]" source="Pin Planner" >
+		</pin>
+		<pin name="CMOS_XCLK" source="Pin Planner" >
+		</pin>
+		<pin name="CMOS_PCLK" source="Pin Planner" >
+		</pin>
+		<pin name="CMOS_VSYNC" source="Pin Planner" >
+		</pin>
+		<pin name="CMOS_SCLK" source="Pin Planner" >
+		</pin>
+		<pin name="CMOS_SDAT" source="Pin Planner" >
+		</pin>
+		<pin name="CMOS_HREF" source="Pin Planner" >
+		</pin>
+		<pin name="lcd_ud" source="Pin Planner" >
+		</pin>
+		<pin name="lcd_pwm" source="Pin Planner" >
+		</pin>
+		<pin name="lcd_out_vs" source="Pin Planner" >
+		</pin>
+		<pin name="lcd_out_rgb_r[5]" source="Pin Planner" >
+		</pin>
+		<pin name="lcd_out_rgb_r[4]" source="Pin Planner" >
+		</pin>
+		<pin name="lcd_out_rgb_r[3]" source="Pin Planner" >
+		</pin>
+		<pin name="lcd_out_rgb_r[2]" source="Pin Planner" >
+		</pin>
+		<pin name="lcd_out_rgb_r[1]" source="Pin Planner" >
+		</pin>
+		<pin name="lcd_out_rgb_r[0]" source="Pin Planner" >
+		</pin>
+		<pin name="lcd_out_rgb_g[5]" source="Pin Planner" >
+		</pin>
+		<pin name="lcd_out_rgb_g[4]" source="Pin Planner" >
+		</pin>
+		<pin name="lcd_out_rgb_g[3]" source="Pin Planner" >
+		</pin>
+		<pin name="lcd_out_rgb_g[2]" source="Pin Planner" >
+		</pin>
+		<pin name="lcd_out_rgb_g[1]" source="Pin Planner" >
+		</pin>
+		<pin name="lcd_out_rgb_g[0]" source="Pin Planner" >
+		</pin>
+		<pin name="lcd_out_rgb_b[5]" source="Pin Planner" >
+		</pin>
+		<pin name="lcd_out_rgb_b[4]" source="Pin Planner" >
+		</pin>
+		<pin name="lcd_out_rgb_b[3]" source="Pin Planner" >
+		</pin>
+		<pin name="lcd_out_rgb_b[2]" source="Pin Planner" >
+		</pin>
+		<pin name="lcd_out_rgb_b[1]" source="Pin Planner" >
+		</pin>
+		<pin name="lcd_out_rgb_b[0]" source="Pin Planner" >
+		</pin>
+		<pin name="lcd_out_hs" source="Pin Planner" >
+		</pin>
+		<pin name="lcd_out_de" source="Pin Planner" >
+		</pin>
+		<pin name="lcd_out_clk" source="Pin Planner" >
+		</pin>
+		<pin name="lcd_mode" source="Pin Planner" >
+		</pin>
+		<pin name="lcd_lr" source="Pin Planner" >
+		</pin>
+		<pin name="IO3" source="Pin Planner" >
+		</pin>
+		<pin name="IO4" source="Pin Planner" >
+		</pin>
+		<pin name="IO5" source="Pin Planner" >
+		</pin>
+		<pin name="IO6" source="Pin Planner" >
+		</pin>
+		<pin name="IO7" source="Pin Planner" >
+		</pin>
+		<pin name="IO8" source="Pin Planner" >
+		</pin>
+		<pin name="IO9" source="Pin Planner" >
+		</pin>
+		<pin name="IO10" source="Pin Planner" >
+		</pin>
+		<pin name="IO11" source="Pin Planner" >
+		</pin>
+		<pin name="IO12" source="Pin Planner" >
+		</pin>
+		<pin name="IO13" source="Pin Planner" >
+		</pin>
+		<pin name="IO14" source="Pin Planner" >
+		</pin>
+		<pin name="IO15" source="Pin Planner" >
+		</pin>
+		<pin name="IO16" source="Pin Planner" >
+		</pin>
+		<pin name="IO17" source="Pin Planner" >
+		</pin>
+		<pin name="IO18" source="Pin Planner" >
+		</pin>
+		<pin name="IO19" source="Pin Planner" >
+		</pin>
+		<pin name="IO20" source="Pin Planner" >
+		</pin>
+		<pin name="IO21" source="Pin Planner" >
+		</pin>
+		<pin name="IO22" source="Pin Planner" >
+		</pin>
+		<pin name="IO23" source="Pin Planner" >
+		</pin>
+		<pin name="IO24" source="Pin Planner" >
+		</pin>
+		<pin name="IO25" source="Pin Planner" >
+		</pin>
+		<pin name="IO26" source="Pin Planner" >
+		</pin>
+		<pin name="IO27" source="Pin Planner" >
+		</pin>
+		<pin name="IO28" source="Pin Planner" >
+		</pin>
+		<pin name="IO29" source="Pin Planner" >
+		</pin>
+		<pin name="IO30" source="Pin Planner" >
+		</pin>
+		<pin name="IO31" source="Pin Planner" >
+		</pin>
+		<pin name="IO32" source="Pin Planner" >
+		</pin>
+		<pin name="IO33" source="Pin Planner" >
+		</pin>
+		<pin name="IO34" source="Pin Planner" >
+		</pin>
+		<pin name="IO35" source="Pin Planner" >
+		</pin>
+		<pin name="IO36" source="Pin Planner" >
+		</pin>
+	</pin_info>
+	<buses>
+	</buses>
+	<group_file_association>
+	</group_file_association>
+	<pin_planner_file_specifies>
+	</pin_planner_file_specifies>
+</pin_planner>

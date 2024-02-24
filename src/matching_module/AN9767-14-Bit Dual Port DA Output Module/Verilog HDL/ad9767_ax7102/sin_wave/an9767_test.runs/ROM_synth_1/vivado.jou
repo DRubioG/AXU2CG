@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Thu May 04 10:52:50 2017
+# Process ID: 8724
+# Current directory: E:/Project/AN9767/CD/CD/verilog/ad9767_ax7102/sin_wave/an9767_test.runs/ROM_synth_1
+# Command line: vivado.exe -log ROM.vds -mode batch -messageDb vivado.pb -notrace -source ROM.tcl
+# Log file: E:/Project/AN9767/CD/CD/verilog/ad9767_ax7102/sin_wave/an9767_test.runs/ROM_synth_1/ROM.vds
+# Journal file: E:/Project/AN9767/CD/CD/verilog/ad9767_ax7102/sin_wave/an9767_test.runs/ROM_synth_1\vivado.jou
+#-----------------------------------------------------------
+source ROM.tcl -notrace

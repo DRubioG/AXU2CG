@@ -1,0 +1,17 @@
+xst -intstyle ise -ifn "E:/Project/AN5642/ov5640_pip/ov5640_pip.xst" -ofn "E:/Project/AN5642/ov5640_pip/ov5640_pip.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc ov5640_ddr_vga.ucf -p xc6slx16-csg324-2 ov5640_pip.ngc ov5640_pip.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_pip_map.ncd ov5640_pip.ngd ov5640_pip.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_pip_map.ncd ov5640_pip.ncd ov5640_pip.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_pip.twx ov5640_pip.ncd -o ov5640_pip.twr ov5640_pip.pcf -ucf ov5640_ddr_vga.ucf 
+bitgen -intstyle ise -f ov5640_pip.ut ov5640_pip.ncd 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc ov5640_ddr_vga.ucf -p xc6slx16-csg324-2 ov5640_pip.ngc ov5640_pip.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_pip_map.ncd ov5640_pip.ngd ov5640_pip.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_pip_map.ncd ov5640_pip.ncd ov5640_pip.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_pip.twx ov5640_pip.ncd -o ov5640_pip.twr ov5640_pip.pcf -ucf ov5640_ddr_vga.ucf 
+bitgen -intstyle ise -f ov5640_pip.ut ov5640_pip.ncd 
+xst -intstyle ise -ifn "E:/Project/AN5642/CD/Project/AX516/ov5640_pip/ov5640_pip.xst" -ofn "E:/Project/AN5642/CD/Project/AX516/ov5640_pip/ov5640_pip.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc ov5640_ddr_vga.ucf -p xc6slx16-csg324-2 ov5640_pip.ngc ov5640_pip.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ov5640_pip_map.ncd ov5640_pip.ngd ov5640_pip.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_pip_map.ncd ov5640_pip.ncd ov5640_pip.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_pip.twx ov5640_pip.ncd -o ov5640_pip.twr ov5640_pip.pcf -ucf ov5640_ddr_vga.ucf 
+bitgen -intstyle ise -f ov5640_pip.ut ov5640_pip.ncd 

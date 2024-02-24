@@ -1,0 +1,13 @@
+
+State Machine - |rs422_test|rs422_ctrl:u7|rs422_t_stat
+Name rs422_t_stat.011 rs422_t_stat.010 rs422_t_stat.001 rs422_t_stat.000 
+rs422_t_stat.000 0 0 0 0 
+rs422_t_stat.001 0 0 1 1 
+rs422_t_stat.010 0 1 0 1 
+rs422_t_stat.011 1 0 0 1 
+
+State Machine - |rs422_test|rs422_ctrl:u7|rs422_r_stat
+Name rs422_r_stat.000 rs422_r_stat.010 rs422_r_stat.001 
+rs422_r_stat.000 0 0 0 
+rs422_r_stat.001 1 0 1 
+rs422_r_stat.010 1 1 0 

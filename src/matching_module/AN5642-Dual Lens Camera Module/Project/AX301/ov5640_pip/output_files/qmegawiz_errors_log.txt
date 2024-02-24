@@ -1,0 +1,21 @@
+
+
+E:/Project/AN5642/verilog/AX301/ov5640_pip/rtl/Sdram_Control_4Port/Sdram_PLL.v
+
+Sep 14 02PM:55:04>: Megafunction ALTCLKLOCK is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+E:/Project/AN5642/verilog/AX301/ov5640_pip/rtl/Sdram_Control_4Port/Sdram_PLL.v
+
+Sep 14 02PM:55:12>: Megafunction ALTCLKLOCK is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+E:/Project/AN5642/verilog/AX301/ov5640_pip/rtl/Sdram_Control_4Port/Sdram_PLL.v
+
+Sep 14 02PM:55:26>: Megafunction ALTCLKLOCK is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+E:/Project/AN5642/verilog/AX301/ov5640_pip/rtl/Sdram_Control_4Port/Sdram_PLL.v
+
+Sep 14 02PM:55:33>: Megafunction ALTCLKLOCK is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted

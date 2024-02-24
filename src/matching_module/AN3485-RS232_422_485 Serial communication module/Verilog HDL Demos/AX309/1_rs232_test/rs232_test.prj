@@ -1,0 +1,5 @@
+verilog work "source/uarttx.v"
+verilog work "source/uartrx.v"
+verilog work "source/uartctrl.v"
+verilog work "source/clkdiv.v"
+verilog work "source/rs232_test.v"
