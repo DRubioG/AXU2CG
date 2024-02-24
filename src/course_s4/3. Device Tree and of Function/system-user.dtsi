@@ -1,0 +1,22 @@
+/** ===================================================== **
+ *Author : ALINX Electronic Technology (Shanghai) Co., Ltd.
+ *Website: http://www.alinx.com
+ *Address: Room 202, building 18, 
+           No.518 xinbrick Road, 
+           Songjiang District, Shanghai
+ *Created: 2020-3-2 
+ *Version: 1.0
+ ** ===================================================== **/
+
+
+/include/ "system-conf.dtsi"
+/ {
+	alinxled {
+		compatible = "alinxled";
+		reg = <
+			   0xFF0A0244 0x04    /* gpio方向寄存器 */
+			   0xFF0A0248 0x04    /* gpio使能寄存器 */
+			   0xFF0A0044 0x04    /* gpio控制寄存器 */
+		>;
+	};
+};

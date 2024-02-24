@@ -1,0 +1,91 @@
+/include/ "system-conf.dtsi"
+/ {
+};
+
+/* SD */
+&sdhci1 {
+	disable-wp;
+	no-1-8-v;
+};
+
+/* USB  */
+&dwc3_0 {
+    status = "okay";
+    dr_mode = "host";
+};
+
+&i2c0 {
+    clock-frequency = <100000>;
+    alinx_an071@5D {  				
+        compatible = "goodix,gt9xx"; 
+        reg = <0x5D>;  
+        interrupt-parent = <&gic>;
+        interrupts = <0 91 4>;
+    }; 	
+};
+
+&v_tc_0 {
+	compatible = "xlnx,bridge-v-tc-6.1";
+	xlnx,pixels-per-clock = <1>;
+};
+
+&axi_dynclk_0 {
+	compatible = "digilent,axi-dynclk";
+	#clock-cells = <0x0>;			
+	linux,phandle = <0xc>;
+	phandle = <0xc>;
+};
+
+&amba {
+	v_drm_dmaengine_drv: drm-dmaengine-drv {
+		compatible = "xlnx,pl-disp";
+		dmas = <&axi_vdma_0 0>;
+		dma-names = "dma0";
+		xlnx,vformat = "RG24";
+		xlnx,bridge = <&v_tc_0>;
+		#address-cells = <1>;
+		#size-cells = <0>;
+
+		dmaengine_port: port@0 {
+			reg = <0>;
+			dmaengine_crtc: endpoint {
+				remote-endpoint = <&lcd_encoder>;
+			};
+		};
+	};
+	ax_lcd_encoder: ax_lcd_encoder  {
+		compatible = "ax-drm-encoder";
+		ports {
+			#address-cells = <1>;
+			#size-cells = <0>;
+			encoder_lcd_port: port@0 {
+				reg = <0>;
+				lcd_encoder: endpoint {
+					remote-endpoint = <&dmaengine_crtc>;
+				};
+			};
+		};
+	};
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

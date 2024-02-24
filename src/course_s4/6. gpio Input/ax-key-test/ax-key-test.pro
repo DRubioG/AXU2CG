@@ -1,0 +1,4 @@
+QT=
+
+SOURCES += \
+    main.c

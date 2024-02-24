@@ -1,0 +1,45 @@
+/** ===================================================== **
+ *Author : ALINX Electronic Technology (Shanghai) Co., Ltd.
+ *Website: http://www.alinx.com
+ *Address: Room 202, building 18, 
+           No.518 xinbrick Road, 
+           Songjiang District, Shanghai
+ *Created: 2020-3-2 
+ *Version: 1.0
+ ** ===================================================== **/
+
+#include <dt-bindings/pinctrl/pinctrl-zynqmp.h>
+
+/include/ "system-conf.dtsi"
+
+&gpio {
+    status = "okay";
+};
+
+&pinctrl0 { 
+    status = "okay";
+        
+    pinctrl_led_default: led-default { 
+        mux { 
+            groups = "gpio0_40_grp";
+            function = "gpio0"; 
+        };
+            
+        conf { 
+            pins = "MIO40";
+            io-standard = <IO_STANDARD_LVCMOS33>; 
+            bias-disable;
+            slew-rate = <SLEW_RATE_SLOW>;
+        };
+    }; 
+};
+
+/ {
+    alinxled {
+        compatible = "alinx-led";
+        pinctrl-names = "default";
+        pinctrl-0 = <&pinctrl_led_default>;
+        alinxled-gpios = <&gpio 40 0>;
+    };
+};
+
