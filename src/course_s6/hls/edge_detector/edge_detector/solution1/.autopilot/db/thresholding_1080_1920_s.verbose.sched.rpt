@@ -1,0 +1,202 @@
+
+
+================================================================
+== Vitis HLS Report for 'thresholding_1080_1920_s'
+================================================================
+* Date:           Mon Nov  2 14:21:22 2020
+
+* Version:        2020.1 (Build 2902540 on Wed May 27 20:16:15 MDT 2020)
+* Project:        edge_detector
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu3eg-sfvc784-1-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 5.079 ns |   2.70 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+---------+---------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |      Interval     | Pipeline|
+    |   min   |   max   |    min    |    max    |   min   |   max   |   Type  |
+    +---------+---------+-----------+-----------+---------+---------+---------+
+    |  2073602|  2073602| 20.736 ms | 20.736 ms |  2073602|  2073602|   none  |
+    +---------+---------+-----------+-----------+---------+---------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------------------------+---------+---------+----------+-----------+-----------+---------+----------+
+        |                                   |  Latency (cycles) | Iteration|  Initiation Interval  |   Trip  |          |
+        |             Loop Name             |   min   |   max   |  Latency |  achieved |   target  |  Count  | Pipelined|
+        +-----------------------------------+---------+---------+----------+-----------+-----------+---------+----------+
+        |- VITIS_LOOP_23_1_VITIS_LOOP_25_2  |  2073600|  2073600|         2|          1|          1|  2073600|    yes   |
+        |- VITIS_LOOP_35_3_VITIS_LOOP_37_4  |  2073600|  2073600|         2|          1|          1|  2073600|    yes   |
+        +-----------------------------------+---------+---------+----------+-----------+-----------+---------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+  * Pipeline-1: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 6
+* Pipeline : 2
+  Pipeline-0 : II = 1, D = 2, States = { 2 3 }
+  Pipeline-1 : II = 1, D = 2, States = { 5 6 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 5 
+2 --> 4 3 
+3 --> 2 
+4 --> 
+5 --> 4 6 
+6 --> 5 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.34>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %sobelImg_4233, void @empty_9, i32, i32, void @empty_7, i32, i32, void @empty_7, void @empty_7, void @empty_7, i32, i32, i32, i32, void @empty_7, void @empty_7"   --->   Operation 7 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %thresholdImg_4234, void @empty_9, i32, i32, void @empty_7, i32, i32, void @empty_7, void @empty_7, void @empty_7, i32, i32, i32, i32, void @empty_7, void @empty_7"   --->   Operation 8 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %threshold, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @ScalarProp_str"   --->   Operation 9 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %thresholdImg_4234, void @empty_9, i32, i32, void @empty_7, i32, i32, void @empty_7, void @empty_7, void @empty_7, i32, i32, i32, i32, void @empty_7, void @empty_7"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %sobelImg_4233, void @empty_9, i32, i32, void @empty_7, i32, i32, void @empty_7, void @empty_7, void @empty_7, i32, i32, i32, i32, void @empty_7, void @empty_7"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (2.15ns)   --->   "%threshold_read = read i8 @_ssdm_op_Read.ap_fifo.i8P, i8 %threshold"   --->   Operation 12 'read' 'threshold_read' <Predicate = true> <Delay = 2.15> <CoreInst = "FIFO_SRL">   --->   Core 21 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 5> <FIFO>
+ST_1 : Operation 13 [1/1] (0.85ns)   --->   "%icmp_ln874 = icmp_eq  i8 %threshold_read, i8"   --->   Operation 13 'icmp' 'icmp_ln874' <Predicate = true> <Delay = 0.85> <CoreInst = "Cmp">   --->   Core 10 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%br_ln21 = br i1 %icmp_ln874, void %.preheader.i.preheader.preheader, void %.preheader1.i.preheader.preheader" [source/edge_detector.cpp:21]   --->   Operation 14 'br' 'br_ln21' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.75ns)   --->   "%br_ln35 = br void %.preheader.i.preheader" [source/edge_detector.cpp:35]   --->   Operation 15 'br' 'br_ln35' <Predicate = (!icmp_ln874)> <Delay = 0.75>
+ST_1 : Operation 16 [1/1] (0.75ns)   --->   "%br_ln23 = br void %.preheader1.i.preheader" [source/edge_detector.cpp:23]   --->   Operation 16 'br' 'br_ln23' <Predicate = (icmp_ln874)> <Delay = 0.75>
+
+State 2 <SV = 1> <Delay = 1.07>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%indvar_flatten7 = phi i21 %add_ln35, void %.preheader.i, i21, void %.preheader.i.preheader.preheader" [source/edge_detector.cpp:35]   --->   Operation 17 'phi' 'indvar_flatten7' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (0.94ns)   --->   "%icmp_ln35 = icmp_eq  i21 %indvar_flatten7, i21" [source/edge_detector.cpp:35]   --->   Operation 18 'icmp' 'icmp_ln35' <Predicate = true> <Delay = 0.94> <CoreInst = "Cmp">   --->   Core 10 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 19 [1/1] (1.07ns)   --->   "%add_ln35 = add i21 %indvar_flatten7, i21" [source/edge_detector.cpp:35]   --->   Operation 19 'add' 'add_ln35' <Predicate = true> <Delay = 1.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%br_ln35 = br i1 %icmp_ln35, void %.preheader.i, void %.exit.loopexit" [source/edge_detector.cpp:35]   --->   Operation 20 'br' 'br_ln35' <Predicate = true> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 5.07>
+ST_3 : Operation 21 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @VITIS_LOOP_35_3_VITIS_LOOP_37_4_str"   --->   Operation 21 'specloopname' 'specloopname_ln0' <Predicate = (!icmp_ln35)> <Delay = 0.00>
+ST_3 : Operation 22 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64, i64, i64"   --->   Operation 22 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = (!icmp_ln35)> <Delay = 0.00>
+ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%specpipeline_ln19 = specpipeline void @_ssdm_op_SpecPipeline, i32, i32, i32, i32, void @empty_7" [source/edge_detector.cpp:19]   --->   Operation 23 'specpipeline' 'specpipeline_ln19' <Predicate = (!icmp_ln35)> <Delay = 0.00>
+ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%specloopname_ln19 = specloopname void @_ssdm_op_SpecLoopName, void @empty_2" [source/edge_detector.cpp:19]   --->   Operation 24 'specloopname' 'specloopname_ln19' <Predicate = (!icmp_ln35)> <Delay = 0.00>
+ST_3 : Operation 25 [1/1] (1.94ns)   --->   "%tmp_V = read i8 @_ssdm_op_Read.ap_fifo.volatile.i8P, i8 %sobelImg_4233" [F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 25 'read' 'tmp_V' <Predicate = (!icmp_ln35)> <Delay = 1.94> <CoreInst = "FIFO">   --->   Core 18 'FIFO' <Latency = 0> <II = 1> <Delay = 1.94> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1920> <FIFO>
+ST_3 : Operation 26 [1/1] (0.85ns)   --->   "%icmp_ln44 = icmp_ult  i8 %threshold_read, i8 %tmp_V" [source/edge_detector.cpp:44]   --->   Operation 26 'icmp' 'icmp_ln44' <Predicate = (!icmp_ln35)> <Delay = 0.85> <CoreInst = "Cmp">   --->   Core 10 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 27 [1/1] (0.00ns) (grouped into LUT with out node select_ln167)   --->   "%xor_ln44 = xor i1 %icmp_ln44, i1" [source/edge_detector.cpp:44]   --->   Operation 27 'xor' 'xor_ln44' <Predicate = (!icmp_ln35)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 12 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 28 [1/1] (0.33ns) (out node of the LUT)   --->   "%select_ln167 = select i1 %xor_ln44, i8, i8" [F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:167]   --->   Operation 28 'select' 'select_ln167' <Predicate = (!icmp_ln35)> <Delay = 0.33> <CoreInst = "Sel">   --->   Core 11 'Sel' <Latency = 0> <II = 1> <Delay = 0.26> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 29 [1/1] (1.94ns)   --->   "%write_ln167 = write void @_ssdm_op_Write.ap_fifo.volatile.i8P, i8 %thresholdImg_4234, i8 %select_ln167" [F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:167]   --->   Operation 29 'write' 'write_ln167' <Predicate = (!icmp_ln35)> <Delay = 1.94> <CoreInst = "FIFO">   --->   Core 18 'FIFO' <Latency = 0> <II = 1> <Delay = 1.94> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1920> <FIFO>
+ST_3 : Operation 30 [1/1] (0.00ns)   --->   "%br_ln0 = br void %.preheader.i.preheader"   --->   Operation 30 'br' 'br_ln0' <Predicate = (!icmp_ln35)> <Delay = 0.00>
+
+State 4 <SV = 2> <Delay = 0.00>
+ST_4 : Operation 31 [1/1] (0.00ns)   --->   "%br_ln0 = br void %.exit"   --->   Operation 31 'br' 'br_ln0' <Predicate = (!icmp_ln874)> <Delay = 0.00>
+ST_4 : Operation 32 [1/1] (0.00ns)   --->   "%br_ln0 = br void %.exit"   --->   Operation 32 'br' 'br_ln0' <Predicate = (icmp_ln874)> <Delay = 0.00>
+ST_4 : Operation 33 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 33 'ret' 'ret_ln0' <Predicate = true> <Delay = 0.00>
+
+State 5 <SV = 1> <Delay = 1.07>
+ST_5 : Operation 34 [1/1] (0.00ns)   --->   "%indvar_flatten = phi i21 %add_ln23, void %.preheader1.i, i21, void %.preheader1.i.preheader.preheader" [source/edge_detector.cpp:23]   --->   Operation 34 'phi' 'indvar_flatten' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 35 [1/1] (0.94ns)   --->   "%icmp_ln23 = icmp_eq  i21 %indvar_flatten, i21" [source/edge_detector.cpp:23]   --->   Operation 35 'icmp' 'icmp_ln23' <Predicate = true> <Delay = 0.94> <CoreInst = "Cmp">   --->   Core 10 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 36 [1/1] (1.07ns)   --->   "%add_ln23 = add i21 %indvar_flatten, i21" [source/edge_detector.cpp:23]   --->   Operation 36 'add' 'add_ln23' <Predicate = true> <Delay = 1.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 37 [1/1] (0.00ns)   --->   "%br_ln23 = br i1 %icmp_ln23, void %.preheader1.i, void %.exit.loopexit15" [source/edge_detector.cpp:23]   --->   Operation 37 'br' 'br_ln23' <Predicate = true> <Delay = 0.00>
+
+State 6 <SV = 2> <Delay = 3.89>
+ST_6 : Operation 38 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @VITIS_LOOP_23_1_VITIS_LOOP_25_2_str"   --->   Operation 38 'specloopname' 'specloopname_ln0' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_6 : Operation 39 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64, i64, i64"   --->   Operation 39 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_6 : Operation 40 [1/1] (0.00ns)   --->   "%specpipeline_ln19 = specpipeline void @_ssdm_op_SpecPipeline, i32, i32, i32, i32, void @empty_7" [source/edge_detector.cpp:19]   --->   Operation 40 'specpipeline' 'specpipeline_ln19' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_6 : Operation 41 [1/1] (0.00ns)   --->   "%specloopname_ln19 = specloopname void @_ssdm_op_SpecLoopName, void @empty_3" [source/edge_detector.cpp:19]   --->   Operation 41 'specloopname' 'specloopname_ln19' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_6 : Operation 42 [1/1] (1.94ns)   --->   "%sobelImg_4233_read = read i8 @_ssdm_op_Read.ap_fifo.volatile.i8P, i8 %sobelImg_4233" [F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 42 'read' 'sobelImg_4233_read' <Predicate = (!icmp_ln23)> <Delay = 1.94> <CoreInst = "FIFO">   --->   Core 18 'FIFO' <Latency = 0> <II = 1> <Delay = 1.94> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1920> <FIFO>
+ST_6 : Operation 43 [1/1] (1.94ns)   --->   "%write_ln167 = write void @_ssdm_op_Write.ap_fifo.volatile.i8P, i8 %thresholdImg_4234, i8 %sobelImg_4233_read" [F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:167]   --->   Operation 43 'write' 'write_ln167' <Predicate = (!icmp_ln23)> <Delay = 1.94> <CoreInst = "FIFO">   --->   Core 18 'FIFO' <Latency = 0> <II = 1> <Delay = 1.94> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1920> <FIFO>
+ST_6 : Operation 44 [1/1] (0.00ns)   --->   "%br_ln0 = br void %.preheader1.i.preheader"   --->   Operation 44 'br' 'br_ln0' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 3.35ns
+The critical path consists of the following:
+	fifo read on port 'threshold' [9]  (2.16 ns)
+	'icmp' operation ('icmp_ln874') [10]  (0.856 ns)
+	blocking operation 0.331 ns on control path)
+
+ <State 2>: 1.07ns
+The critical path consists of the following:
+	'phi' operation ('indvar_flatten7', source/edge_detector.cpp:35) with incoming values : ('add_ln35', source/edge_detector.cpp:35) [15]  (0 ns)
+	'add' operation ('add_ln35', source/edge_detector.cpp:35) [17]  (1.07 ns)
+
+ <State 3>: 5.08ns
+The critical path consists of the following:
+	fifo read on port 'sobelImg_4233' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:145) [24]  (1.95 ns)
+	'icmp' operation ('icmp_ln44', source/edge_detector.cpp:44) [25]  (0.856 ns)
+	'xor' operation ('xor_ln44', source/edge_detector.cpp:44) [26]  (0 ns)
+	'select' operation ('select_ln167', F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:167) [27]  (0.331 ns)
+	fifo write on port 'thresholdImg_4234' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:167) [28]  (1.95 ns)
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+ <State 5>: 1.07ns
+The critical path consists of the following:
+	'phi' operation ('indvar_flatten', source/edge_detector.cpp:23) with incoming values : ('add_ln23', source/edge_detector.cpp:23) [35]  (0 ns)
+	'add' operation ('add_ln23', source/edge_detector.cpp:23) [37]  (1.07 ns)
+
+ <State 6>: 3.89ns
+The critical path consists of the following:
+	fifo read on port 'sobelImg_4233' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:145) [44]  (1.95 ns)
+	fifo write on port 'thresholdImg_4234' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:167) [45]  (1.95 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

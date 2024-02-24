@@ -1,0 +1,99 @@
+<stg><name>xfUDivResize</name>
+
+
+<trans_list>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="2" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="2" bw="43" op_0_bw="43" op_1_bw="43">
+<![CDATA[
+:0 %in_n_read = read i43 @_ssdm_op_Read.ap_auto.i43, i43 %in_n
+
+]]></Node>
+<StgValue><ssdm name="in_n_read"/></StgValue>
+</operation>
+
+<operation id="3" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="3" bw="87" op_0_bw="43">
+<![CDATA[
+:1 %zext_ln160 = zext i43 %in_n_read
+
+]]></Node>
+<StgValue><ssdm name="zext_ln160"/></StgValue>
+</operation>
+
+<operation id="4" st_id="1" stage="1" lat="1">
+<core>Multiplier</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="4" bw="87" op_0_bw="87" op_1_bw="87">
+<![CDATA[
+:2 %mul_ln160 = mul i87 %zext_ln160, i87
+
+]]></Node>
+<StgValue><ssdm name="mul_ln160"/></StgValue>
+</operation>
+
+<operation id="5" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="5" bw="34" op_0_bw="34" op_1_bw="87" op_2_bw="32" op_3_bw="32">
+<![CDATA[
+:3 %trunc_ln = partselect i34 @_ssdm_op_PartSelect.i34.i87.i32.i32, i87 %mul_ln160, i32, i32
+
+]]></Node>
+<StgValue><ssdm name="trunc_ln"/></StgValue>
+</operation>
+
+<operation id="6" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="6" bw="0" op_0_bw="34">
+<![CDATA[
+:4 %ret_ln161 = ret i34 %trunc_ln
+
+]]></Node>
+<StgValue><ssdm name="ret_ln161"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+</ports>
+
+
+<dataflows>
+</dataflows>
+
+
+</stg>

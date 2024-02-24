@@ -1,0 +1,131 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'rgb2gray'" level="0">
+<item name = "Date">Mon Nov  2 17:01:14 2020
+</item>
+<item name = "Version">2020.1 (Build 2902540 on Wed May 27 20:16:15 MDT 2020)</item>
+<item name = "Project">rgb2gray</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu3eg-sfvc784-1-i</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 3.892 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="Loop_loop_height_proc4_U0">Loop_loop_height_proc4, ?, ?, ?, ?, ?, ?, none</column>
+<column name="xfrgb2gray_1080_1920_U0">xfrgb2gray_1080_1920_s, 2073607, 2073607, 20.736 ms, 20.736 ms, 2073607, 2073607, none</column>
+<column name="Loop_loop_height_proc35_U0">Loop_loop_height_proc35, 2077921, 2077921, 20.779 ms, 20.779 ms, 2077921, 2077921, none</column>
+<column name="xfgray2rgb_1080_1920_U0">xfgray2rgb_1080_1920_s, 2073602, 2073602, 20.736 ms, 20.736 ms, 2073602, 2073602, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, -, -, -</column>
+<column name="FIFO">7, -, 489, 189, -</column>
+<column name="Instance">-, 3, 323, 868, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, -, -</column>
+<column name="Register">-, -, -, -, -</column>
+<specialColumn name="Available">432, 360, 141120, 70560, 0</specialColumn>
+<specialColumn name="Utilization (%)">1, ~0, ~0, 1, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="Loop_loop_height_proc35_U0">Loop_loop_height_proc35, 0, 0, 46, 203, 0</column>
+<column name="Loop_loop_height_proc4_U0">Loop_loop_height_proc4, 0, 0, 126, 350, 0</column>
+<column name="xfgray2rgb_1080_1920_U0">xfgray2rgb_1080_1920_s, 0, 0, 29, 139, 0</column>
+<column name="xfrgb2gray_1080_1920_U0">xfrgb2gray_1080_1920_s, 0, 3, 122, 176, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+<column name="img_gray_dst_data_U">3, 163, 0, -, 1920, 24, 46080</column>
+<column name="img_gray_src_data_U">1, 163, 0, -, 1920, 8, 15360</column>
+<column name="img_rgb_src_data_U">3, 163, 0, -, 1920, 24, 46080</column>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="video_in_TDATA">in, 24, axis, video_in_V_data_V, pointer</column>
+<column name="video_in_TKEEP">in, 3, axis, video_in_V_keep_V, pointer</column>
+<column name="video_in_TSTRB">in, 3, axis, video_in_V_strb_V, pointer</column>
+<column name="video_in_TUSER">in, 1, axis, video_in_V_user_V, pointer</column>
+<column name="video_in_TLAST">in, 1, axis, video_in_V_last_V, pointer</column>
+<column name="video_in_TID">in, 1, axis, video_in_V_id_V, pointer</column>
+<column name="video_in_TDEST">in, 1, axis, video_in_V_dest_V, pointer</column>
+<column name="video_in_TVALID">in, 1, axis, video_in_V_dest_V, pointer</column>
+<column name="video_in_TREADY">out, 1, axis, video_in_V_dest_V, pointer</column>
+<column name="video_out_TDATA">out, 24, axis, video_out_V_data_V, pointer</column>
+<column name="video_out_TKEEP">out, 3, axis, video_out_V_keep_V, pointer</column>
+<column name="video_out_TSTRB">out, 3, axis, video_out_V_strb_V, pointer</column>
+<column name="video_out_TUSER">out, 1, axis, video_out_V_user_V, pointer</column>
+<column name="video_out_TLAST">out, 1, axis, video_out_V_last_V, pointer</column>
+<column name="video_out_TID">out, 1, axis, video_out_V_id_V, pointer</column>
+<column name="video_out_TDEST">out, 1, axis, video_out_V_dest_V, pointer</column>
+<column name="video_out_TVALID">out, 1, axis, video_out_V_dest_V, pointer</column>
+<column name="video_out_TREADY">in, 1, axis, video_out_V_dest_V, pointer</column>
+<column name="ap_clk">in, 1, ap_ctrl_none, rgb2gray, return value</column>
+<column name="ap_rst_n">in, 1, ap_ctrl_none, rgb2gray, return value</column>
+</table>
+</item>
+</section>
+</profile>

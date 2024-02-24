@@ -1,0 +1,4 @@
+timestamp=[2020-11-06 17:08:00], mode=WORKBENCH_START, duration=0:00:06.077, duration_ms=6077, data={}
+timestamp=[2020-11-06 17:08:00], mode=WORKBENCH_UI_INIT, duration=0:00:00.271, duration_ms=271, data={editors_count=0, platform_editors_count=0, projects_count=0, platform_projects_count=0, active_platform_editor=false, projects=}
+timestamp=[2020-11-06 17:08:05], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:04.341, duration_ms=4341, data={}
+timestamp=[2020-11-06 17:09:27], mode=APP_CREATION, duration=0:00:51.572, duration_ms=51572, data={name=app, project_type=sdk, os=standalone, processor=psu_cortexa53, runtime=cpp, platform=design_1_wrapper, application_type=application}

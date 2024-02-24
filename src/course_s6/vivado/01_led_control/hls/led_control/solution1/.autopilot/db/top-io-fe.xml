@@ -1,0 +1,8 @@
+<root versionMajor = "1" versionMinor = "5">
+  <kernel src_name="led_control" language="c" hwCtrl="ap_ctrl_none" mem_layout="fpga64-xilinx-none">
+    <args>
+      <arg id="0" access_type="rw" src_name="led" src_type="ap_uint&lt;1&gt;&amp;" src_isptr="1" src_bitwidth="8" src_size_or_depth="1" hw_interface="Register" hw_name="led" hw_bitwidth="1" hw_size_or_depth="1"/>
+    </args>
+    <return src_type="void" src_bitwidth="0" hw_interface="" hw_name="" hw_bitwidth="0" offset="0x0"/>
+  </kernel>
+</root>

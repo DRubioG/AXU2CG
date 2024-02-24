@@ -1,0 +1,353 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu3eg-sfvc784-1-i'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Analyzing design file 'source/led_control.cpp' ... 
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' target.
+INFO: [HLS 214-131] Inlining function 'ap_uint<1>::ap_uint(int)' into 'led_control(ap_uint<1>&)' (source/led_control.cpp:8:9)
+INFO: [HLS 214-131] Inlining function 'ap_uint<1>::operator=(ap_uint<1> const&)' into 'led_control(ap_uint<1>&)' (source/led_control.cpp:8:7)
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 997.598 ; gain = 899.938
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 997.598 ; gain = 899.938
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 997.598 ; gain = 899.938
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 997.598 ; gain = 899.938
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 997.598 ; gain = 899.938
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 997.598 ; gain = 899.938
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'led_control' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'led_control' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 10.549 seconds; current allocated memory: 154.438 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.087 seconds; current allocated memory: 154.547 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'led_control' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'led_control/led' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'led_control' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'led_control'.
+INFO: [HLS 200-111]  Elapsed time: 0.091 seconds; current allocated memory: 154.636 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:03 ; elapsed = 00:00:11 . Memory (MB): peak = 997.598 ; gain = 899.938
+INFO: [VHDL 208-304] Generating VHDL RTL for led_control.
+INFO: [VLOG 209-307] Generating Verilog RTL for led_control.
+INFO: [HLS 200-789] **** Estimated Fmax: 0.00 MHz
+INFO: [HLS 200-112] Total elapsed time: 11.547 seconds; peak allocated memory: 154.636 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu3eg-sfvc784-1-i'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-10] Analyzing design file 'source/led_control.cpp' ... 
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' target.
+INFO: [HLS 214-131] Inlining function 'ap_uint<1>::ap_uint(int)' into 'led_control(ap_uint<1>&)' (source/led_control.cpp:8:9)
+INFO: [HLS 214-131] Inlining function 'ap_uint<1>::operator=(ap_uint<1> const&)' into 'led_control(ap_uint<1>&)' (source/led_control.cpp:8:7)
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 998.406 ; gain = 879.848
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 998.406 ; gain = 879.848
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 998.406 ; gain = 879.848
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 998.406 ; gain = 879.848
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 998.406 ; gain = 879.848
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 998.406 ; gain = 879.848
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'led_control' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'led_control' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 10.127 seconds; current allocated memory: 154.438 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.088 seconds; current allocated memory: 154.547 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'led_control' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'led_control/led' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'led_control' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'led_control'.
+INFO: [HLS 200-111]  Elapsed time: 0.095 seconds; current allocated memory: 154.636 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:03 ; elapsed = 00:00:11 . Memory (MB): peak = 998.406 ; gain = 879.848
+INFO: [VHDL 208-304] Generating VHDL RTL for led_control.
+INFO: [VLOG 209-307] Generating Verilog RTL for led_control.
+INFO: [HLS 200-789] **** Estimated Fmax: 0.00 MHz
+INFO: [HLS 200-112] Total elapsed time: 11.134 seconds; peak allocated memory: 154.636 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu3eg-sfvc784-1-i'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-10] Analyzing design file 'source/led_control.cpp' ... 
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' target.
+INFO: [HLS 214-131] Inlining function 'ap_uint<1>::ap_uint(int)' into 'led_control(ap_uint<1>&)' (source/led_control.cpp:7:6)
+INFO: [HLS 214-131] Inlining function 'ap_uint<1>::operator=(ap_uint<1> const&)' into 'led_control(ap_uint<1>&)' (source/led_control.cpp:11:6)
+INFO: [HLS 214-131] Inlining function 'ap_uint<1>::ap_uint(int)' into 'led_control(ap_uint<1>&)' (source/led_control.cpp:11:8)
+INFO: [HLS 214-131] Inlining function 'ap_uint<1>::operator=(ap_uint<1> const&)' into 'led_control(ap_uint<1>&)' (source/led_control.cpp:7:5)
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 997.176 ; gain = 878.797
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 997.176 ; gain = 878.797
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 997.176 ; gain = 878.797
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 997.176 ; gain = 878.797
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 997.176 ; gain = 878.797
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 997.176 ; gain = 878.797
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'led_control' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'led_control' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 10.208 seconds; current allocated memory: 154.442 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 154.551 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'led_control' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'led_control/led' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'led' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on function 'led_control' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'led_control'.
+INFO: [HLS 200-111]  Elapsed time: 0.103 seconds; current allocated memory: 154.637 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:03 ; elapsed = 00:00:11 . Memory (MB): peak = 997.176 ; gain = 878.797
+INFO: [VHDL 208-304] Generating VHDL RTL for led_control.
+INFO: [VLOG 209-307] Generating Verilog RTL for led_control.
+INFO: [HLS 200-789] **** Estimated Fmax: 0.00 MHz
+INFO: [HLS 200-112] Total elapsed time: 11.227 seconds; peak allocated memory: 154.637 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu3eg-sfvc784-1-i'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-10] Analyzing design file 'source/led_control.cpp' ... 
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' target.
+INFO: [HLS 214-131] Inlining function 'ap_uint<1>::ap_uint<1, false>(ap_int_base<1, false> const&)' into 'ap_int_base<1, false>::operator~() const' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:765:12)
+INFO: [HLS 214-131] Inlining function 'ap_uint<1>::ap_uint(int)' into 'led_control(ap_uint<1>&)' (source/led_control.cpp:7:6)
+INFO: [HLS 214-131] Inlining function 'ap_uint<1>::operator=(ap_uint<1> const&)' into 'led_control(ap_uint<1>&)' (source/led_control.cpp:11:6)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<1, false>::operator~() const' into 'led_control(ap_uint<1>&)' (source/led_control.cpp:11:24)
+INFO: [HLS 214-131] Inlining function 'ap_uint<1>::operator=(ap_uint<1> const&)' into 'led_control(ap_uint<1>&)' (source/led_control.cpp:7:5)
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 997.594 ; gain = 879.395
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 997.594 ; gain = 879.395
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 997.594 ; gain = 879.395
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 997.594 ; gain = 879.395
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 997.594 ; gain = 879.395
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 997.594 ; gain = 879.395
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'led_control' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'led_control' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_8_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 10.271 seconds; current allocated memory: 155.396 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.101 seconds; current allocated memory: 155.547 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'led_control' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'led_control/led' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'led' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on function 'led_control' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'led_control'.
+INFO: [HLS 200-111]  Elapsed time: 0.121 seconds; current allocated memory: 155.710 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:03 ; elapsed = 00:00:11 . Memory (MB): peak = 997.594 ; gain = 879.395
+INFO: [VHDL 208-304] Generating VHDL RTL for led_control.
+INFO: [VLOG 209-307] Generating Verilog RTL for led_control.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 740.67 MHz
+INFO: [HLS 200-112] Total elapsed time: 11.439 seconds; peak allocated memory: 155.710 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu3eg-sfvc784-1-i'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-10] Analyzing design file 'source/led_control.cpp' ... 
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' target.
+INFO: [HLS 214-131] Inlining function 'ap_uint<1>::ap_uint(int)' into 'led_control(ap_uint<1>&)' (source/led_control.cpp:7:6)
+INFO: [HLS 214-131] Inlining function 'ap_uint<1>::operator=(ap_uint<1> const&)' into 'led_control(ap_uint<1>&)' (source/led_control.cpp:11:6)
+INFO: [HLS 214-131] Inlining function 'ap_uint<1>::ap_uint(int)' into 'led_control(ap_uint<1>&)' (source/led_control.cpp:11:8)
+INFO: [HLS 214-131] Inlining function 'ap_uint<1>::operator=(ap_uint<1> const&)' into 'led_control(ap_uint<1>&)' (source/led_control.cpp:7:5)
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 997.461 ; gain = 879.156
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 997.461 ; gain = 879.156
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 997.461 ; gain = 879.156
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 997.461 ; gain = 879.156
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 997.461 ; gain = 879.156
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 997.461 ; gain = 879.156
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'led_control' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'led_control' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 10.044 seconds; current allocated memory: 154.442 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.085 seconds; current allocated memory: 154.551 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'led_control' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'led_control/led' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'led' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on function 'led_control' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'led_control'.
+INFO: [HLS 200-111]  Elapsed time: 0.097 seconds; current allocated memory: 154.637 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:03 ; elapsed = 00:00:11 . Memory (MB): peak = 997.461 ; gain = 879.156
+INFO: [VHDL 208-304] Generating VHDL RTL for led_control.
+INFO: [VLOG 209-307] Generating Verilog RTL for led_control.
+INFO: [HLS 200-789] **** Estimated Fmax: 0.00 MHz
+INFO: [HLS 200-112] Total elapsed time: 11.04 seconds; peak allocated memory: 154.637 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu3eg-sfvc784-1-i'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-10] Analyzing design file 'source/led_control.cpp' ... 
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' target.
+INFO: [HLS 214-131] Inlining function 'ap_uint<1>::ap_uint<1, false>(ap_int_base<1, false> const&)' into 'ap_int_base<1, false>::operator~() const' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:765:12)
+INFO: [HLS 214-131] Inlining function 'ap_uint<1>::ap_uint(int)' into 'led_control(ap_uint<1>&)' (source/led_control.cpp:7:6)
+INFO: [HLS 214-131] Inlining function 'ap_uint<1>::operator=(ap_uint<1> const&)' into 'led_control(ap_uint<1>&)' (source/led_control.cpp:11:6)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<1, false>::operator~() const' into 'led_control(ap_uint<1>&)' (source/led_control.cpp:11:24)
+INFO: [HLS 214-131] Inlining function 'ap_uint<1>::operator=(ap_uint<1> const&)' into 'led_control(ap_uint<1>&)' (source/led_control.cpp:7:5)
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 998.645 ; gain = 880.262
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 998.645 ; gain = 880.262
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 998.645 ; gain = 880.262
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 998.645 ; gain = 880.262
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 998.645 ; gain = 880.262
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 998.645 ; gain = 880.262
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'led_control' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'led_control' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_8_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 10.163 seconds; current allocated memory: 155.396 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.097 seconds; current allocated memory: 155.547 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'led_control' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'led_control/led' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'led' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on function 'led_control' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'led_control'.
+INFO: [HLS 200-111]  Elapsed time: 0.116 seconds; current allocated memory: 155.710 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 998.645 ; gain = 880.262
+INFO: [VHDL 208-304] Generating VHDL RTL for led_control.
+INFO: [VLOG 209-307] Generating Verilog RTL for led_control.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 740.67 MHz
+INFO: [HLS 200-112] Total elapsed time: 11.291 seconds; peak allocated memory: 155.710 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu3eg-sfvc784-1-i'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-10] Analyzing design file 'source/led_control.cpp' ... 
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' target.
+INFO: [HLS 214-131] Inlining function 'ap_uint<1>::ap_uint<1, false>(ap_int_base<1, false> const&)' into 'ap_int_base<1, false>::operator~() const' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:765:12)
+INFO: [HLS 214-131] Inlining function 'ap_uint<1>::ap_uint(int)' into 'led_control(ap_uint<1>&)' (source/led_control.cpp:8:6)
+INFO: [HLS 214-131] Inlining function 'ap_uint<1>::operator=(ap_uint<1> const&)' into 'led_control(ap_uint<1>&)' (source/led_control.cpp:12:6)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<1, false>::operator~() const' into 'led_control(ap_uint<1>&)' (source/led_control.cpp:12:24)
+INFO: [HLS 214-131] Inlining function 'ap_uint<1>::operator=(ap_uint<1> const&)' into 'led_control(ap_uint<1>&)' (source/led_control.cpp:8:5)
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 997.445 ; gain = 878.469
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 997.445 ; gain = 878.469
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 997.445 ; gain = 878.469
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 997.445 ; gain = 878.469
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 997.445 ; gain = 878.469
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 997.445 ; gain = 878.469
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'led_control' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'led_control' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_9_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 10.158 seconds; current allocated memory: 155.411 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.101 seconds; current allocated memory: 155.568 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'led_control' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'led_control/led' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'led' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on function 'led_control' to 'ap_ctrl_none'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'led_control'.
+INFO: [HLS 200-111]  Elapsed time: 0.114 seconds; current allocated memory: 155.721 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:03 ; elapsed = 00:00:11 . Memory (MB): peak = 997.445 ; gain = 878.469
+INFO: [VHDL 208-304] Generating VHDL RTL for led_control.
+INFO: [VLOG 209-307] Generating Verilog RTL for led_control.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 740.67 MHz
+INFO: [HLS 200-112] Total elapsed time: 11.271 seconds; peak allocated memory: 155.721 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu3eg-sfvc784-1-i'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file led_control/solution1/impl/export.zip

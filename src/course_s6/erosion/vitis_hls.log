@@ -1,0 +1,13 @@
+INFO: [HLS 200-10] Running 'F:/xilinx_2020.1/Vitis/2020.1/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user 'Administrator' on host 'desktop-aovmd3l' (Windows NT_amd64 version 6.2) on Mon Jan 25 09:17:12 +0800 2021
+INFO: [HLS 200-10] In directory 'F:/erosion'
+Sourcing Tcl script 'F:/erosion/erosion/solution1/csim.tcl'
+INFO: [HLS 200-10] Opening project 'F:/erosion/erosion'.
+INFO: [HLS 200-10] Adding design file 'source/xf_erosion_accel.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'source/xf_erosion_tb.cpp' to the project
+INFO: [HLS 200-10] Opening solution 'F:/erosion/erosion/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+WARNING: [HLS 200-40] Cannot find library 'F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/Virtex-7/Virtex-7.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/Virtex-7/Virtex-7'.
+WARNING: [HLS 200-40] Cannot find library 'F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/Virtex-7/Virtex-7_fpv7.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/Virtex-7/Virtex-7_fpv7'.

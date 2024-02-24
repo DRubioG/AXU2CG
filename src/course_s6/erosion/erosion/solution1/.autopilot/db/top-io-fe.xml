@@ -1,0 +1,12 @@
+<root versionMajor = "1" versionMinor = "5">
+  <kernel src_name="erosion_accel" language="c" hwCtrl="ap_ctrl_hs" mem_layout="fpga64-xilinx-none">
+    <args>
+      <arg id="0" access_type="r" src_name="img_in" src_type="ap_uint&lt;8&gt;*" src_isptr="1" src_bitwidth="8" src_size_or_depth="16384" hw_interface="MAXI" hw_name="gmem0" hw_bitwidth="8" hw_size_or_depth="0" offset_bundle_interface="S_AXILite" offset_bundle_interface_name="control_r" offset="0x10"/>
+      <arg id="1" access_type="r" src_name="process_shape" src_type="unsigned char*" src_isptr="1" src_bitwidth="8" src_size_or_depth="9" hw_interface="MAXI" hw_name="gmem1" hw_bitwidth="8" hw_size_or_depth="0" offset_bundle_interface="S_AXILite" offset_bundle_interface_name="control_r" offset="0x1C"/>
+      <arg id="2" access_type="w" src_name="img_out" src_type="ap_uint&lt;8&gt;*" src_isptr="1" src_bitwidth="8" src_size_or_depth="16384" hw_interface="MAXI" hw_name="gmem2" hw_bitwidth="8" hw_size_or_depth="0" offset_bundle_interface="S_AXILite" offset_bundle_interface_name="control_r" offset="0x28"/>
+      <arg id="3" access_type="r" src_name="height" src_type="int" src_isptr="0" src_bitwidth="32" src_size_or_depth="1" hw_interface="Register" hw_name="height" hw_bitwidth="32" hw_size_or_depth="1"/>
+      <arg id="4" access_type="r" src_name="width" src_type="int" src_isptr="0" src_bitwidth="32" src_size_or_depth="1" hw_interface="Register" hw_name="width" hw_bitwidth="32" hw_size_or_depth="1"/>
+    </args>
+    <return src_type="void" src_bitwidth="0" hw_interface="" hw_name="" hw_bitwidth="0" offset="0x0"/>
+  </kernel>
+</root>

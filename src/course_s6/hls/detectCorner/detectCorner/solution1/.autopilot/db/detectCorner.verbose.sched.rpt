@@ -1,0 +1,238 @@
+
+
+================================================================
+== Vitis HLS Report for 'detectCorner'
+================================================================
+* Date:           Tue Nov  3 14:37:11 2020
+
+* Version:        2020.1 (Build 2902540 on Wed May 27 20:16:15 MDT 2020)
+* Project:        detectCorner
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu3eg-sfvc784-1-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 7.281 ns |   2.70 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |        ?|        ?|         ?|         ?|    ?|    ?| dataflow |
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 12
+* Pipeline : 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 12, States = { 1 2 3 4 5 6 7 8 9 10 11 12 }
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 13 [2/2] (0.00ns)   --->   "%threshold_read = read i32 @_ssdm_op_Read.ap_vld.i32, i32 %threshold" [source/detectCorner.cpp:80]   --->   Operation 13 'read' 'threshold_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%threshold_c = alloca i64" [source/detectCorner.cpp:80]   --->   Operation 14 'alloca' 'threshold_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 21 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%img_in_data = alloca i64" [source/detectCorner.cpp:89]   --->   Operation 15 'alloca' 'img_in_data' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 18 'FIFO' <Latency = 0> <II = 1> <Delay = 1.94> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 24> <Depth = 1920> <FIFO>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%img_out_data = alloca i64" [source/detectCorner.cpp:91]   --->   Operation 16 'alloca' 'img_out_data' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 18 'FIFO' <Latency = 0> <II = 1> <Delay = 1.94> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 24> <Depth = 1920> <FIFO>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%img_rgb_src_data = alloca i64" [source/detectCorner.cpp:93]   --->   Operation 17 'alloca' 'img_rgb_src_data' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 18 'FIFO' <Latency = 0> <II = 1> <Delay = 1.94> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 24> <Depth = 1920> <FIFO>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%img_rgb_dst_data = alloca i64" [source/detectCorner.cpp:95]   --->   Operation 18 'alloca' 'img_rgb_dst_data' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 18 'FIFO' <Latency = 0> <II = 1> <Delay = 1.94> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 24> <Depth = 1920> <FIFO>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%img_gray_src_data = alloca i64" [source/detectCorner.cpp:97]   --->   Operation 19 'alloca' 'img_gray_src_data' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 18 'FIFO' <Latency = 0> <II = 1> <Delay = 1.94> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1920> <FIFO>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%img_gray_dst_data = alloca i64" [source/detectCorner.cpp:99]   --->   Operation 20 'alloca' 'img_gray_dst_data' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 18 'FIFO' <Latency = 0> <II = 1> <Delay = 1.94> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1920> <FIFO>
+
+State 2 <SV = 1> <Delay = 2.16>
+ST_2 : Operation 21 [1/2] (0.00ns)   --->   "%threshold_read = read i32 @_ssdm_op_Read.ap_vld.i32, i32 %threshold" [source/detectCorner.cpp:80]   --->   Operation 21 'read' 'threshold_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [2/2] (2.16ns)   --->   "%call_ln80 = call void @Loop_loop_height_proc1013, i24 %video_in_V_data_V, i3 %video_in_V_keep_V, i3 %video_in_V_strb_V, i1 %video_in_V_user_V, i1 %video_in_V_last_V, i1 %video_in_V_id_V, i1 %video_in_V_dest_V, i24 %img_in_data, i32 %threshold_read, i32 %threshold_c" [source/detectCorner.cpp:80]   --->   Operation 22 'call' 'call_ln80' <Predicate = true> <Delay = 2.16> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 23 [1/2] (0.00ns)   --->   "%call_ln80 = call void @Loop_loop_height_proc1013, i24 %video_in_V_data_V, i3 %video_in_V_keep_V, i3 %video_in_V_strb_V, i1 %video_in_V_user_V, i1 %video_in_V_last_V, i1 %video_in_V_id_V, i1 %video_in_V_dest_V, i24 %img_in_data, i32 %threshold_read, i32 %threshold_c" [source/detectCorner.cpp:80]   --->   Operation 23 'call' 'call_ln80' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 24 [2/2] (0.00ns)   --->   "%call_ln113 = call void @xfrgb2gray<1080, 1920>, i24 %img_in_data, i8 %img_gray_src_data, i24 %img_rgb_src_data, void %call_ln80, void %call_ln80" [source/detectCorner.cpp:113]   --->   Operation 24 'call' 'call_ln113' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 25 [1/2] (0.00ns)   --->   "%call_ln113 = call void @xfrgb2gray<1080, 1920>, i24 %img_in_data, i8 %img_gray_src_data, i24 %img_rgb_src_data, void %call_ln80, void %call_ln80" [source/detectCorner.cpp:113]   --->   Operation 25 'call' 'call_ln113' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 26 [2/2] (0.00ns)   --->   "%call_ln114 = call void @fast<0, 0, 1080, 1920, 1>, i8 %img_gray_src_data, i24 %img_rgb_src_data, i8 %img_gray_dst_data, i24 %img_rgb_dst_data, i32 %threshold_c, void %call_ln113, void %call_ln113" [source/detectCorner.cpp:114]   --->   Operation 26 'call' 'call_ln114' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 0.00>
+ST_7 : Operation 27 [1/2] (0.00ns)   --->   "%call_ln114 = call void @fast<0, 0, 1080, 1920, 1>, i8 %img_gray_src_data, i24 %img_rgb_src_data, i8 %img_gray_dst_data, i24 %img_rgb_dst_data, i32 %threshold_c, void %call_ln113, void %call_ln113" [source/detectCorner.cpp:114]   --->   Operation 27 'call' 'call_ln114' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 7> <Delay = 0.00>
+ST_8 : Operation 28 [2/2] (0.00ns)   --->   "%call_ln118 = call void @xfgray2rgb<1080, 1920>, i8 %img_gray_dst_data, i24 %img_rgb_dst_data, i24 %img_out_data, void %call_ln114, void %call_ln114" [source/detectCorner.cpp:118]   --->   Operation 28 'call' 'call_ln118' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 8> <Delay = 0.00>
+ST_9 : Operation 29 [1/2] (0.00ns)   --->   "%call_ln118 = call void @xfgray2rgb<1080, 1920>, i8 %img_gray_dst_data, i24 %img_rgb_dst_data, i24 %img_out_data, void %call_ln114, void %call_ln114" [source/detectCorner.cpp:118]   --->   Operation 29 'call' 'call_ln118' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 10 <SV = 9> <Delay = 0.00>
+ST_10 : Operation 30 [2/2] (0.00ns)   --->   "%call_ln0 = call void @Loop_loop_height_proc911, i24 %img_out_data, i24 %video_out_V_data_V, i3 %video_out_V_keep_V, i3 %video_out_V_strb_V, i1 %video_out_V_user_V, i1 %video_out_V_last_V, i1 %video_out_V_id_V, i1 %video_out_V_dest_V, void %call_ln118, void %call_ln118"   --->   Operation 30 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 11 <SV = 10> <Delay = 0.00>
+ST_11 : Operation 31 [1/2] (0.00ns)   --->   "%call_ln0 = call void @Loop_loop_height_proc911, i24 %img_out_data, i24 %video_out_V_data_V, i3 %video_out_V_keep_V, i3 %video_out_V_strb_V, i1 %video_out_V_user_V, i1 %video_out_V_last_V, i1 %video_out_V_id_V, i1 %video_out_V_dest_V, void %call_ln118, void %call_ln118"   --->   Operation 31 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 12 <SV = 11> <Delay = 0.00>
+ST_12 : Operation 32 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln0 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32, i32, void @empty_3"   --->   Operation 32 'specdataflowpipeline' 'specdataflowpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 33 [1/1] (0.00ns)   --->   "%spectopmodule_ln0 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_6"   --->   Operation 33 'spectopmodule' 'spectopmodule_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 34 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32, void @empty_7, i32, i32, void @empty_3, i32, i32, void @empty_3, void @empty_3, void @empty_3, i32, i32, i32, i32, void @empty_3, void @empty_3"   --->   Operation 34 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 35 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %video_in_V_data_V, i3 %video_in_V_keep_V, i3 %video_in_V_strb_V, i1 %video_in_V_user_V, i1 %video_in_V_last_V, i1 %video_in_V_id_V, i1 %video_in_V_dest_V, void @empty_1, i32, i32, void @empty_2, i32, i32, void @empty_3, void @empty_3, void @empty_3, i32, i32, i32, i32, void @empty_3, void @empty_3"   --->   Operation 35 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 36 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i24 %video_in_V_data_V"   --->   Operation 36 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 37 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i3 %video_in_V_keep_V"   --->   Operation 37 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 38 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i3 %video_in_V_strb_V"   --->   Operation 38 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 39 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %video_in_V_user_V"   --->   Operation 39 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 40 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %video_in_V_last_V"   --->   Operation 40 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 41 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %video_in_V_id_V"   --->   Operation 41 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 42 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %video_in_V_dest_V"   --->   Operation 42 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 43 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %video_out_V_data_V, i3 %video_out_V_keep_V, i3 %video_out_V_strb_V, i1 %video_out_V_user_V, i1 %video_out_V_last_V, i1 %video_out_V_id_V, i1 %video_out_V_dest_V, void @empty_1, i32, i32, void @empty_2, i32, i32, void @empty_3, void @empty_3, void @empty_3, i32, i32, i32, i32, void @empty_3, void @empty_3"   --->   Operation 43 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 44 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i24 %video_out_V_data_V"   --->   Operation 44 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 45 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i3 %video_out_V_keep_V"   --->   Operation 45 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 46 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i3 %video_out_V_strb_V"   --->   Operation 46 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 47 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %video_out_V_user_V"   --->   Operation 47 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 48 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %video_out_V_last_V"   --->   Operation 48 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 49 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %video_out_V_id_V"   --->   Operation 49 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 50 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %video_out_V_dest_V"   --->   Operation 50 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 51 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %threshold"   --->   Operation 51 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 52 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %threshold, void @empty_4, i32, i32, void @empty_2, i32, i32, void @empty_3, void @empty_3, void @empty_3, i32, i32, i32, i32, void @empty_3, void @empty_3"   --->   Operation 52 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 53 [1/1] (0.00ns)   --->   "%empty = specchannel i32 @_ssdm_op_SpecChannel, void @img_in_OC_data_str, i32, void @p_str, void @p_str, i32, i32, i24 %img_in_data, i24 %img_in_data"   --->   Operation 53 'specchannel' 'empty' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 54 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %img_in_data, void @empty_5, i32, i32, void @empty_3, i32, i32, void @empty_3, void @empty_3, void @empty_3, i32, i32, i32, i32, void @empty_3, void @empty_3"   --->   Operation 54 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 55 [1/1] (0.00ns)   --->   "%empty_34 = specchannel i32 @_ssdm_op_SpecChannel, void @img_out_OC_data_str, i32, void @p_str, void @p_str, i32, i32, i24 %img_out_data, i24 %img_out_data"   --->   Operation 55 'specchannel' 'empty_34' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 56 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %img_out_data, void @empty_5, i32, i32, void @empty_3, i32, i32, void @empty_3, void @empty_3, void @empty_3, i32, i32, i32, i32, void @empty_3, void @empty_3"   --->   Operation 56 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 57 [1/1] (0.00ns)   --->   "%empty_35 = specchannel i32 @_ssdm_op_SpecChannel, void @img_rgb_src_OC_data_str, i32, void @p_str, void @p_str, i32, i32, i24 %img_rgb_src_data, i24 %img_rgb_src_data"   --->   Operation 57 'specchannel' 'empty_35' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 58 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %img_rgb_src_data, void @empty_5, i32, i32, void @empty_3, i32, i32, void @empty_3, void @empty_3, void @empty_3, i32, i32, i32, i32, void @empty_3, void @empty_3"   --->   Operation 58 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 59 [1/1] (0.00ns)   --->   "%empty_36 = specchannel i32 @_ssdm_op_SpecChannel, void @img_rgb_dst_OC_data_str, i32, void @p_str, void @p_str, i32, i32, i24 %img_rgb_dst_data, i24 %img_rgb_dst_data"   --->   Operation 59 'specchannel' 'empty_36' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 60 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %img_rgb_dst_data, void @empty_5, i32, i32, void @empty_3, i32, i32, void @empty_3, void @empty_3, void @empty_3, i32, i32, i32, i32, void @empty_3, void @empty_3"   --->   Operation 60 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 61 [1/1] (0.00ns)   --->   "%empty_37 = specchannel i32 @_ssdm_op_SpecChannel, void @img_gray_src_OC_data_str, i32, void @p_str, void @p_str, i32, i32, i8 %img_gray_src_data, i8 %img_gray_src_data"   --->   Operation 61 'specchannel' 'empty_37' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 62 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %img_gray_src_data, void @empty_5, i32, i32, void @empty_3, i32, i32, void @empty_3, void @empty_3, void @empty_3, i32, i32, i32, i32, void @empty_3, void @empty_3"   --->   Operation 62 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 63 [1/1] (0.00ns)   --->   "%empty_38 = specchannel i32 @_ssdm_op_SpecChannel, void @img_gray_dst_OC_data_str, i32, void @p_str, void @p_str, i32, i32, i8 %img_gray_dst_data, i8 %img_gray_dst_data"   --->   Operation 63 'specchannel' 'empty_38' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 64 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %img_gray_dst_data, void @empty_5, i32, i32, void @empty_3, i32, i32, void @empty_3, void @empty_3, void @empty_3, i32, i32, i32, i32, void @empty_3, void @empty_3"   --->   Operation 64 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 65 [1/1] (0.00ns)   --->   "%empty_39 = specchannel i32 @_ssdm_op_SpecChannel, void @threshold_c_str, i32, void @p_str, void @p_str, i32, i32, i32 %threshold_c, i32 %threshold_c" [source/detectCorner.cpp:80]   --->   Operation 65 'specchannel' 'empty_39' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 66 [1/1] (0.00ns)   --->   "%specinterface_ln80 = specinterface void @_ssdm_op_SpecInterface, i32 %threshold_c, void @ap_fifo_str, i32, i32, void @p_str, i32, i32, void @p_str, void @p_str, void @p_str, i32, i32, i32, i32, void @p_str, void @p_str" [source/detectCorner.cpp:80]   --->   Operation 66 'specinterface' 'specinterface_ln80' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 67 [1/1] (0.00ns)   --->   "%ret_ln120 = ret" [source/detectCorner.cpp:120]   --->   Operation 67 'ret' 'ret_ln120' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 2.17ns
+The critical path consists of the following:
+	register read on port 'threshold' (source/detectCorner.cpp:80) [16]  (0 ns)
+	'call' operation ('call_ln80', source/detectCorner.cpp:80) to 'Loop_loop_height_proc1013' [59]  (2.17 ns)
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+ <State 7>: 0ns
+The critical path consists of the following:
+
+ <State 8>: 0ns
+The critical path consists of the following:
+
+ <State 9>: 0ns
+The critical path consists of the following:
+
+ <State 10>: 0ns
+The critical path consists of the following:
+
+ <State 11>: 0ns
+The critical path consists of the following:
+
+ <State 12>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

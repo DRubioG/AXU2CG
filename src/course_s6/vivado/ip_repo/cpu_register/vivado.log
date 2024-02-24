@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Mon Oct 26 14:34:40 2020
+# Process ID: 5632
+# Current directory: F:/course_s3_hls/vivado/ip_repo/ip_repo
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15180 F:\course_s3_hls\vivado\ip_repo\ip_repo\edit_cpu_reg_v1_0.xpr
+# Log file: F:/course_s3_hls/vivado/ip_repo/ip_repo/vivado.log
+# Journal file: F:/course_s3_hls/vivado/ip_repo/ip_repo\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/course_s3_hls/vivado/ip_repo/ip_repo/edit_cpu_reg_v1_0.xpr
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [F:/course_s3_hls/vivado/ip_repo/ip_repo/cpu_reg_1.0/hdl/cpu_reg_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [F:/course_s3_hls/vivado/ip_repo/ip_repo/cpu_reg_1.0/hdl/cpu_reg_v1_0.v:]
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'F:/course_s3_hls/vivado/ip_repo/ip_repo/edit_cpu_reg_v1_0.srcs/sources_1'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/course_s3_hls/vivado/ip_repo/ip_repo/cpu_reg_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/xilinx_2020.1/Vivado/2020.1/data/ip'.
+open_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 1073.059 ; gain = 0.000
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 26 14:35:26 2020...

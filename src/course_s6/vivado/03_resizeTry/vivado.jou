@@ -1,0 +1,152 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Mon Nov 30 17:15:16 2020
+# Process ID: 2908
+# Current directory: F:/course_s3_hls_2cg_b/vivado/03_resizeTry
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9920 F:\course_s3_hls_2cg_b\vivado\03_resizeTry\resizeTry.xpr
+# Log file: F:/course_s3_hls_2cg_b/vivado/03_resizeTry/vivado.log
+# Journal file: F:/course_s3_hls_2cg_b/vivado/03_resizeTry\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/course_s3_hls_2cg_b/vivado/03_resizeTry/resizeTry.xpr
+update_compile_order -fileset sources_1
+open_bd_design {F:/course_s3_hls_2cg_b/vivado/03_resizeTry/resizeTry.srcs/sources_1/bd/design_1/design_1.bd}
+startgroup
+set_property -dict [list CONFIG.PSU__DDRC__BUS_WIDTH {64 Bit}] [get_bd_cells zynq_ultra_ps_e_0]
+endgroup
+save_bd_design
+startgroup
+set_property -dict [list CONFIG.PSU__SD1__SLOT_TYPE {eMMC}] [get_bd_cells zynq_ultra_ps_e_0]
+endgroup
+save_bd_design
+reset_run synth_1
+reset_run design_1_zynq_ultra_ps_e_0_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+wait_on_run impl_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ila_0
+endgroup
+set_property -dict [list CONFIG.C_NUM_OF_PROBES {1} CONFIG.C_ENABLE_ILA_AXI_MON {false} CONFIG.C_MONITOR_TYPE {Native}] [get_bd_cells ila_0]
+delete_bd_objs [get_bd_cells ila_0]
+close_project
+open_project F:/course_s3_hls_2cg_b/vivado/04_rgb2gray/rgb2gray.xpr
+update_compile_order -fileset sources_1
+open_bd_design {F:/course_s3_hls_2cg_b/vivado/04_rgb2gray/rgb2gray.srcs/sources_1/bd/design_1/design_1.bd}
+startgroup
+set_property -dict [list CONFIG.PSU__SD1__SLOT_TYPE {eMMC} CONFIG.PSU__DDRC__BUS_WIDTH {64 Bit}] [get_bd_cells zynq_ultra_ps_e_0]
+endgroup
+startgroup
+endgroup
+save_bd_design
+reset_run synth_1
+reset_run design_1_zynq_ultra_ps_e_0_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+wait_on_run impl_1
+close_project
+open_project F:/course_s3_hls_2cg_b/vivado/05_rgb2ycrcb/rgb2ycrcb.xpr
+update_compile_order -fileset sources_1
+open_bd_design {F:/course_s3_hls_2cg_b/vivado/05_rgb2ycrcb/rgb2ycrcb.srcs/sources_1/bd/design_1/design_1.bd}
+startgroup
+set_property -dict [list CONFIG.PSU__SD1__SLOT_TYPE {eMMC} CONFIG.PSU__DDRC__BUS_WIDTH {64 Bit}] [get_bd_cells zynq_ultra_ps_e_0]
+endgroup
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+wait_on_run impl_1
+close_project
+open_project F:/course_s3_hls_2cg_b/vivado/06_dilation/dilation.xpr
+update_compile_order -fileset sources_1
+open_bd_design {F:/course_s3_hls_2cg_b/vivado/06_dilation/dilation.srcs/sources_1/bd/design_1/design_1.bd}
+startgroup
+set_property -dict [list CONFIG.PSU__SD1__SLOT_TYPE {eMMC} CONFIG.PSU__DDRC__BUS_WIDTH {64 Bit}] [get_bd_cells zynq_ultra_ps_e_0]
+endgroup
+save_bd_design
+reset_run synth_1
+reset_run design_1_zynq_ultra_ps_e_0_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+wait_on_run impl_1
+close_project
+open_project F:/course_s3_hls_2cg_b/vivado/07_erosion/erosion.xpr
+update_compile_order -fileset sources_1
+open_bd_design {F:/course_s3_hls_2cg_b/vivado/07_erosion/erosion.srcs/sources_1/bd/design_1/design_1.bd}
+close_project
+open_project F:/course_s3_hls_2cg_b/vivado/08_video_on_video/video_on_video.xpr
+update_compile_order -fileset sources_1
+open_bd_design {F:/27_an5641_mipi_dp/vivado/mipi_dp.srcs/sources_1/bd/design_1/design_1.bd}
+startgroup
+set_property -dict [list CONFIG.PSU__SD1__SLOT_TYPE {eMMC} CONFIG.PSU__DDRC__BUS_WIDTH {64 Bit}] [get_bd_cells zynq_ultra_ps_e_0]
+endgroup
+save_bd_design
+reset_run synth_1
+reset_run design_1_zynq_ultra_ps_e_0_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+wait_on_run impl_1
+startgroup
+endgroup
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+wait_on_run impl_1
+update_ip_catalog -rebuild
+delete_bd_objs [get_bd_intf_nets edge_canny_detector_0_dst] [get_bd_nets edge_canny_detector_0_src_TREADY] [get_bd_nets axis_subset_converter_0_m_axis_tdata] [get_bd_nets axis_subset_converter_0_m_axis_tkeep] [get_bd_nets axis_subset_converter_0_m_axis_tid] [get_bd_nets axis_subset_converter_0_m_axis_tdest] [get_bd_nets cpu_reg_v1_0_0_reg_out6] [get_bd_nets axis_subset_converter_0_m_axis_tuser] [get_bd_nets axis_subset_converter_0_m_axis_tvalid] [get_bd_nets axis_subset_converter_0_m_axis_tstrb] [get_bd_nets axis_subset_converter_0_m_axis_tlast] [get_bd_nets cpu_reg_v1_0_0_reg_out5] [get_bd_cells edge_canny_detector_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:hls:overlaystream:1.0 overlaystream_0
+endgroup
+set_property location {5.5 1934 933} [get_bd_cells overlaystream_0]
+connect_bd_net [get_bd_pins axis_subset_converter_0/m_axis_tdata] [get_bd_pins overlaystream_0/video_in_TDATA]
+startgroup
+connect_bd_net [get_bd_pins axis_subset_converter_0/m_axis_tdest] [get_bd_pins overlaystream_0/video_in_TDEST]
+endgroup
+connect_bd_net [get_bd_pins axis_subset_converter_0/m_axis_tid] [get_bd_pins overlaystream_0/video_in_TID]
+connect_bd_net [get_bd_pins axis_subset_converter_0/m_axis_tkeep] [get_bd_pins overlaystream_0/video_in_TKEEP]
+connect_bd_net [get_bd_pins axis_subset_converter_0/m_axis_tlast] [get_bd_pins overlaystream_0/video_in_TLAST]
+connect_bd_net [get_bd_pins axis_subset_converter_0/m_axis_tready] [get_bd_pins overlaystream_0/video_in_TREADY]
+connect_bd_net [get_bd_pins axis_subset_converter_0/m_axis_tstrb] [get_bd_pins overlaystream_0/video_in_TSTRB]
+connect_bd_net [get_bd_pins axis_subset_converter_0/m_axis_tuser] [get_bd_pins overlaystream_0/video_in_TUSER]
+connect_bd_net [get_bd_pins axis_subset_converter_0/m_axis_tvalid] [get_bd_pins overlaystream_0/video_in_TVALID]
+connect_bd_net [get_bd_pins overlaystream_0/overly_alpha_ap_vld] [get_bd_pins axis_subset_converter_0/m_axis_tvalid]
+connect_bd_net [get_bd_pins overlaystream_0/overly_x_ap_vld] [get_bd_pins axis_subset_converter_0/m_axis_tvalid]
+connect_bd_net [get_bd_pins overlaystream_0/overly_y_ap_vld] [get_bd_pins axis_subset_converter_0/m_axis_tvalid]
+connect_bd_net [get_bd_pins overlaystream_0/overly_h_ap_vld] [get_bd_pins axis_subset_converter_0/m_axis_tvalid]
+connect_bd_net [get_bd_pins overlaystream_0/overly_w_ap_vld] [get_bd_pins axis_subset_converter_0/m_axis_tvalid]
+connect_bd_net [get_bd_pins overlaystream_0/overly_alpha] [get_bd_pins cpu_reg_v1_0_0/reg_out5]
+connect_bd_net [get_bd_pins overlaystream_0/overly_x] [get_bd_pins cpu_reg_v1_0_0/reg_out5]
+delete_bd_objs [get_bd_nets cpu_reg_v1_0_0_reg_out5]
+connect_bd_net [get_bd_pins overlaystream_0/overly_alpha] [get_bd_pins cpu_reg_v1_0_0/reg_out4]
+connect_bd_net [get_bd_pins overlaystream_0/overly_x] [get_bd_pins cpu_reg_v1_0_0/reg_out5]
+connect_bd_net [get_bd_pins overlaystream_0/overly_y] [get_bd_pins cpu_reg_v1_0_0/reg_out6]
+connect_bd_net [get_bd_pins overlaystream_0/overly_h] [get_bd_pins cpu_reg_v1_0_0/reg_out7]
+connect_bd_net [get_bd_pins overlaystream_0/overly_w] [get_bd_pins cpu_reg_v1_0_0/reg_out8]
+connect_bd_net [get_bd_pins overlaystream_0/ap_clk] [get_bd_pins zynq_ultra_ps_e_0/pl_clk0]
+connect_bd_net [get_bd_pins overlaystream_0/ap_rst_n] [get_bd_pins proc_sys_reset_150M/peripheral_aresetn]
+validate_bd_design
+save_bd_design
+reset_run synth_1
+reset_run design_1_zynq_ultra_ps_e_0_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+wait_on_run impl_1
+close_project
+open_project F:/course_s3_hls_2cg_b/vivado/09_contrast_adj/contrast_adj.xpr
+update_compile_order -fileset sources_1
+open_bd_design {F:/course_s3_hls_2cg_b/vivado/09_contrast_adj/contrast_adj.srcs/sources_1/bd/design_1/design_1.bd}
+startgroup
+set_property -dict [list CONFIG.PSU__SD1__SLOT_TYPE {eMMC} CONFIG.PSU__DDRC__BUS_WIDTH {64 Bit}] [get_bd_cells zynq_ultra_ps_e_0]
+endgroup
+save_bd_design
+reset_run synth_1
+reset_run design_1_zynq_ultra_ps_e_0_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+wait_on_run impl_1
+close_project
+open_project F:/course_s3_hls_2cg_b/vivado/10_detectCorner/detectCorner.xpr
+update_compile_order -fileset sources_1
+open_bd_design {F:/course_s3_hls_2cg_b/vivado/10_detectCorner/detectCorner.srcs/sources_1/bd/design_1/design_1.bd}
+startgroup
+set_property -dict [list CONFIG.PSU__SD1__SLOT_TYPE {eMMC} CONFIG.PSU__DDRC__BUS_WIDTH {64 Bit}] [get_bd_cells zynq_ultra_ps_e_0]
+endgroup
+save_bd_design
+reset_run synth_1
+reset_run design_1_zynq_ultra_ps_e_0_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+wait_on_run impl_1

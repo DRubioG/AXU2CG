@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="led_control" xd:componentRef="led_control" xd:initiationInterval="50000003" xd:clockPeriod="10.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:arg xd:name="*(led)" xd:originalName="led" xd:direction="out" xd:interfaceRef="led" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="1" xd:firstOut="1"/>
+  <xd:latencyEstimates xd:best-case="50000002" xd:worst-case="50000002" xd:average-case="50000002"/>
+  <xd:resourceEstimates xd:LUT="116" xd:FF="30" xd:BRAM="0" xd:DSP="0"/>
+</xd:acceleratorMap>

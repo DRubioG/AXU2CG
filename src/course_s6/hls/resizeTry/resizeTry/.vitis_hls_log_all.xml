@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [HLS 200-656] Deadlocks can occur since process Loop_loop_height_proc12 is instantiated in a dataflow region with ap_ctrl_none or without start propagation and contains a non-flushable pipeline." projectName="resizeTry" solutionName="solution1" date="2020-11-16T16:18:50.743+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="resizeTry" solutionName="solution1" date="2020-11-16T16:18:50.444+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-1016] The critical path in module 'resizeNNBilinear_9_1080_1920_1_640_640_2_2_s' consists of the following:&#x9;'phi' operation ('output_rows_count') with incoming values : ('output_rows_count', source/xf_resize_nn_bilinear.hpp:508) [58]  (0 ns)&#xD;&#xA;&#x9;'call' operation ('indexy_pre_comp.V', source/xf_resize_nn_bilinear.hpp:386) to 'scaleCompute&lt;17, 42, 20, 48, 16, 2>' [67]  (6.53 ns)&#xD;&#xA;&#x9;'icmp' operation ('icmp_ln1494') [81]  (1.29 ns)&#xD;&#xA;&#xA;&#xD;&#xA;Resolution: For help on HLS 200-1016 see www.xilinx.com/html_docs/xilinx2020_1/hls-guidance/200-1016.html" projectName="resizeTry" solutionName="solution1" date="2020-11-16T16:18:46.111+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-871] Estimated clock period (7.8174ns) exceeds the target (target clock period: 10ns, clock uncertainty: 2.7ns, effective delay budget: 7.3ns).&#xD;&#xA;Resolution: For help on HLS 200-871 see www.xilinx.com/html_docs/xilinx2020_1/hls-guidance/200-871.html" projectName="resizeTry" solutionName="solution1" date="2020-11-16T16:18:46.094+0800" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'resizeNNBilinear&lt;9, 1080, 1920, 1, 640, 640, 2, 2>' to 'resizeNNBilinear_9_1080_1920_1_640_640_2_2_s'." projectName="resizeTry" solutionName="solution1" date="2020-11-16T16:18:44.164+0800" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'scaleCompute&lt;17, 42, 20, 48, 16, 2>' to 'scaleCompute_17_42_20_48_16_2_s'." projectName="resizeTry" solutionName="solution1" date="2020-11-16T16:18:44.137+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_381_4' (source/xf_resize_nn_bilinear.hpp:497:61) in function 'resizeNNBilinear&lt;9, 1080, 1920, 1, 640, 640, 2, 2>' the outer loop is not a perfect loop.&#xD;&#xA;Resolution: For help on HLS 200-960 see www.xilinx.com/html_docs/xilinx2020_1/hls-guidance/200-960.html" projectName="resizeTry" solutionName="solution1" date="2020-11-16T16:18:43.649+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 1080 for loop 'VITIS_LOOP_381_4' (source/xf_resize_nn_bilinear.hpp:497:61) in function 'resizeNNBilinear&lt;9, 1080, 1920, 1, 640, 640, 2, 2>'." projectName="resizeTry" solutionName="solution1" date="2020-11-16T16:18:41.821+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 1920 for loop 'VITIS_LOOP_388_5' (source/xf_resize_nn_bilinear.hpp:497:61) in function 'resizeNNBilinear&lt;9, 1080, 1920, 1, 640, 640, 2, 2>'." projectName="resizeTry" solutionName="solution1" date="2020-11-16T16:18:41.796+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 2 for loop 'VITIS_LOOP_331_1' (source/xf_resize_nn_bilinear.hpp:329:9) in function 'resizeNNBilinear&lt;9, 1080, 1920, 1, 640, 640, 2, 2>'." projectName="resizeTry" solutionName="solution1" date="2020-11-16T16:18:41.773+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 1920 for loop 'VITIS_LOOP_336_2' (source/xf_resize_nn_bilinear.hpp:336:29) in function 'resizeNNBilinear&lt;9, 1080, 1920, 1, 640, 640, 2, 2>'." projectName="resizeTry" solutionName="solution1" date="2020-11-16T16:18:41.756+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-3891] the 'dim' option to 'Stream' pragma is not supported and will be ignored: source/resizeTry.cpp:13:58" projectName="resizeTry" solutionName="solution1" date="2020-11-16T16:18:13.378+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-3891] the 'dim' option to 'Stream' pragma is not supported and will be ignored: source/resizeTry.cpp:11:58" projectName="resizeTry" solutionName="solution1" date="2020-11-16T16:18:08.136+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5324] unused parameter 'scalex': source/xf_resize_nn_bilinear.hpp:211:65" projectName="resizeTry" solutionName="solution1" date="2020-11-16T16:18:08.126+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5324] unused parameter 'output_rows_count': source/xf_resize_nn_bilinear.hpp:210:31" projectName="resizeTry" solutionName="solution1" date="2020-11-16T16:18:08.116+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5324] unused parameter 'j': source/xf_resize_nn_bilinear.hpp:209:31" projectName="resizeTry" solutionName="solution1" date="2020-11-16T16:18:08.107+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-1593] Ignore interface attribute or pragma which is not used in top function: F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot/39\utils/x_hls_utils.h:247:9" projectName="resizeTry" solutionName="solution1" date="2020-11-16T16:18:08.099+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5324] unused parameter 'index': F:/Vitis_Libraries/vision/L1/include\common/xf_structs.hpp:1386:34" projectName="resizeTry" solutionName="solution1" date="2020-11-16T16:18:08.091+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5324] unused parameter 'index': F:/Vitis_Libraries/vision/L1/include\common/xf_structs.hpp:1183:102" projectName="resizeTry" solutionName="solution1" date="2020-11-16T16:18:08.082+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5324] unused parameter 'index': F:/Vitis_Libraries/vision/L1/include\common/xf_structs.hpp:675:60" projectName="resizeTry" solutionName="solution1" date="2020-11-16T16:18:08.074+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5324] unused parameter 'index': F:/Vitis_Libraries/vision/L1/include\common/xf_structs.hpp:655:87" projectName="resizeTry" solutionName="solution1" date="2020-11-16T16:18:08.062+0800" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

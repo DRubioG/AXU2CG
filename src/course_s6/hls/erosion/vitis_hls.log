@@ -1,0 +1,8 @@
+INFO: [HLS 200-10] Running 'F:/xilinx_2020.1/Vitis/2020.1/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user 'Administrator' on host 'desktop-aovmd3l' (Windows NT_amd64 version 6.2) on Fri Nov 13 10:58:50 +0800 2020
+INFO: [HLS 200-10] In directory 'F:/course_s3_hls_2cg/hls/erosion'
+Sourcing Tcl script 'F:/course_s3_hls_2cg/hls/erosion/erosion/solution1/csynth.tcl'
+INFO: [HLS 200-10] Opening project 'F:/course_s3_hls_2cg/hls/erosion/erosion'.
+INFO: [HLS 200-10] Adding design file 'source/erosion.cpp' to the project
+INFO: [HLS 200-10] Opening solution 'F:/course_s3_hls_2cg/hls/erosion/erosion/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.

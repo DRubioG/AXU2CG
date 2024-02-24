@@ -1,0 +1,165 @@
+
+
+================================================================
+== Vitis HLS Report for 'overlaystream'
+================================================================
+* Date:           Fri Oct 30 16:39:13 2020
+
+* Version:        2020.1 (Build 2902540 on Wed May 27 20:16:15 MDT 2020)
+* Project:        overlaystream
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu3eg-sfvc784-1-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 4.674 ns |   2.70 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |        ?|        ?|         ?|         ?|    ?|    ?| dataflow |
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        +------------------------------+---------------------------+---------+---------+-----------+-----------+---------+---------+---------+
+        |                              |                           |  Latency (cycles) |   Latency (absolute)  |      Interval     | Pipeline|
+        |           Instance           |           Module          |   min   |   max   |    min    |    max    |   min   |   max   |   Type  |
+        +------------------------------+---------------------------+---------+---------+-----------+-----------+---------+---------+---------+
+        |overlyOnMat_1080_1920_U0      |overlyOnMat_1080_1920_s    |  2073608|  2073608| 20.736 ms | 20.736 ms |  2073608|  2073608|   none  |
+        |Loop_loop_height_proc1719_U0  |Loop_loop_height_proc1719  |        ?|        ?|          ?|          ?|        ?|        ?|   none  |
+        |xfrgb2gray_1080_1920_U0       |xfrgb2gray_1080_1920_s     |  2073607|  2073607| 20.736 ms | 20.736 ms |  2073607|  2073607|   none  |
+        |Loop_loop_height_proc1618_U0  |Loop_loop_height_proc1618  |  2077921|  2077921| 20.779 ms | 20.779 ms |  2077921|  2077921|   none  |
+        +------------------------------+---------------------------+---------+---------+-----------+-----------+---------+---------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|      2|    -|
+|FIFO             |       10|    -|    1147|    587|    -|
+|Instance         |        -|    9|     670|   1362|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|      -|    -|
+|Register         |        -|    -|       -|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |       10|    9|    1817|   1951|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      432|  360|  141120|  70560|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        2|    2|       1|      2|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +------------------------------+---------------------------+---------+----+-----+-----+-----+
+    |           Instance           |           Module          | BRAM_18K| DSP|  FF | LUT | URAM|
+    +------------------------------+---------------------------+---------+----+-----+-----+-----+
+    |Loop_loop_height_proc1618_U0  |Loop_loop_height_proc1618  |        0|   0|   46|  203|    0|
+    |Loop_loop_height_proc1719_U0  |Loop_loop_height_proc1719  |        0|   0|  126|  440|    0|
+    |overlyOnMat_1080_1920_U0      |overlyOnMat_1080_1920_s    |        0|   6|  289|  511|    0|
+    |xfrgb2gray_1080_1920_U0       |xfrgb2gray_1080_1920_s     |        0|   3|  209|  208|    0|
+    +------------------------------+---------------------------+---------+----+-----+-----+-----+
+    |Total                         |                           |        0|   9|  670| 1362|    0|
+    +------------------------------+---------------------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    +------------------+---------+-----+----+-----+------+-----+---------+
+    |       Name       | BRAM_18K|  FF | LUT| URAM| Depth| Bits| Size:D*B|
+    +------------------+---------+-----+----+-----+------+-----+---------+
+    |img_in_data_U     |        3|  163|   0|    -|  1920|   24|    46080|
+    |img_out_data_U    |        3|  163|   0|    -|  1920|   24|    46080|
+    |img_src1_data_U   |        1|  163|   0|    -|  1920|    8|    15360|
+    |img_src2_data_U   |        3|  163|   0|    -|  1920|   24|    46080|
+    |overly_alpha_c_U  |        0|   99|   0|    -|     3|    8|       24|
+    |overly_h_c_U      |        0|   99|   0|    -|     3|   32|       96|
+    |overly_w_c_U      |        0|   99|   0|    -|     3|   32|       96|
+    |overly_x_c_U      |        0|   99|   0|    -|     3|   32|       96|
+    |overly_y_c_U      |        0|   99|   0|    -|     3|   32|       96|
+    +------------------+---------+-----+----+-----+------+-----+---------+
+    |Total             |       10| 1147|   0|    0|  7695|  216|   154008|
+    +------------------+---------+-----+----+-----+------+-----+---------+
+
+    * Expression: 
+    +-------------------------------------------+----------+----+---+----+------------+------------+
+    |               Variable Name               | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------------------------+----------+----+---+----+------------+------------+
+    |Loop_loop_height_proc1719_U0_start_full_n  |    and   |   0|  0|   2|           1|           1|
+    +-------------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                      |          |   0|  0|   2|           1|           1|
+    +-------------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------+-----+-----+--------------+--------------------+--------------+
+|      RTL Ports      | Dir | Bits|   Protocol   |    Source Object   |    C Type    |
++---------------------+-----+-----+--------------+--------------------+--------------+
+|video_in_TDATA       |  in |   24|     axis     |  video_in_V_data_V |    pointer   |
+|video_in_TKEEP       |  in |    3|     axis     |  video_in_V_keep_V |    pointer   |
+|video_in_TSTRB       |  in |    3|     axis     |  video_in_V_strb_V |    pointer   |
+|video_in_TUSER       |  in |    1|     axis     |  video_in_V_user_V |    pointer   |
+|video_in_TLAST       |  in |    1|     axis     |  video_in_V_last_V |    pointer   |
+|video_in_TID         |  in |    1|     axis     |   video_in_V_id_V  |    pointer   |
+|video_in_TDEST       |  in |    1|     axis     |  video_in_V_dest_V |    pointer   |
+|video_in_TVALID      |  in |    1|     axis     |  video_in_V_dest_V |    pointer   |
+|video_in_TREADY      | out |    1|     axis     |  video_in_V_dest_V |    pointer   |
+|video_out_TDATA      | out |   24|     axis     | video_out_V_data_V |    pointer   |
+|video_out_TKEEP      | out |    3|     axis     | video_out_V_keep_V |    pointer   |
+|video_out_TSTRB      | out |    3|     axis     | video_out_V_strb_V |    pointer   |
+|video_out_TUSER      | out |    1|     axis     | video_out_V_user_V |    pointer   |
+|video_out_TLAST      | out |    1|     axis     | video_out_V_last_V |    pointer   |
+|video_out_TID        | out |    1|     axis     |  video_out_V_id_V  |    pointer   |
+|video_out_TDEST      | out |    1|     axis     | video_out_V_dest_V |    pointer   |
+|video_out_TVALID     | out |    1|     axis     | video_out_V_dest_V |    pointer   |
+|video_out_TREADY     |  in |    1|     axis     | video_out_V_dest_V |    pointer   |
+|overly_alpha         |  in |    8|    ap_vld    |    overly_alpha    |    scalar    |
+|overly_alpha_ap_vld  |  in |    1|    ap_vld    |    overly_alpha    |    scalar    |
+|overly_x             |  in |   32|    ap_vld    |      overly_x      |    scalar    |
+|overly_x_ap_vld      |  in |    1|    ap_vld    |      overly_x      |    scalar    |
+|overly_y             |  in |   32|    ap_vld    |      overly_y      |    scalar    |
+|overly_y_ap_vld      |  in |    1|    ap_vld    |      overly_y      |    scalar    |
+|overly_h             |  in |   32|    ap_vld    |      overly_h      |    scalar    |
+|overly_h_ap_vld      |  in |    1|    ap_vld    |      overly_h      |    scalar    |
+|overly_w             |  in |   32|    ap_vld    |      overly_w      |    scalar    |
+|overly_w_ap_vld      |  in |    1|    ap_vld    |      overly_w      |    scalar    |
+|ap_clk               |  in |    1| ap_ctrl_none |    overlaystream   | return value |
+|ap_rst_n             |  in |    1| ap_ctrl_none |    overlaystream   | return value |
++---------------------+-----+-----+--------------+--------------------+--------------+
+

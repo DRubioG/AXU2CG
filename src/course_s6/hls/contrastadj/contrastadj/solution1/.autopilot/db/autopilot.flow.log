@@ -1,0 +1,1780 @@
+INFO-FLOW: Workspace F:/course_s3_hls/hls/contrastadj/contrastadj/solution1 opened at Mon Nov 02 15:21:39 +0800 2020
+Execute     ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/zynquplus 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx.lib 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/dsp48.lib 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/dsp48e2.hlp 
+Execute     source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/util.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.115 sec.
+Command     ap_source done; 0.116 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/zynquplus_fpv7 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute             source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute     source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     set_part xczu3eg-sfvc784-1-i 
+INFO-FLOW: DBG:set_part: XILINX_VIVADO=F:/xilinx_2020.1/Vivado/2020.1
+INFO-FLOW: DBG:set_part: RDI_DATADIR=F:/xilinx_2020.1/Vivado/2020.1/data;F:/xilinx_2020.1/Vitis/2020.1/data
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data single -quiet 
+DBG:HLSDevice: Trying to load device library: F:/xilinx_2020.1/Vitis/2020.1\lib\win64.o\librdi_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: F:/xilinx_2020.1/Vivado/2020.1/data/parts/arch.xml
+Command       ap_part_info done; 0.857 sec.
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info 
+Execute       ap_family_info -name zynquplus -data info 
+Execute       add_library xilinx/zynquplus/zynquplus:xczu3eg:-sfvc784:-1-i 
+Execute         get_default_platform 
+Execute         ap_part_info -data single -name xczu3eg-sfvc784-1-i 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data resources 
+Execute         config_chip_info -resource {SLICE 8820} {LUT 70560} {FF 141120} {DSP 360} {BRAM 432} {URAM 0} 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info 
+Execute         config_chip_info -speed slow 
+Execute       add_library xilinx/zynquplus/zynquplus_fpv7 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xczu3eg-sfvc784-1-i'
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info 
+Execute       get_default_platform 
+Command     set_part done; 0.95 sec.
+Execute     ap_part_info -data single -name xczu3eg-sfvc784-1-i 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data resources 
+Execute     config_chip_info -resource {SLICE 8820} {LUT 70560} {FF 141120} {DSP 360} {BRAM 432} {URAM 0} 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info 
+Execute     config_chip_info -speed slow 
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     get_config_interface -m_axi_latency 
+Execute     get_config_interface -m_axi_alignment_byte_size 
+Execute     get_config_interface -m_axi_max_widen_bitwidth 
+Execute     get_config_interface -default_interface 
+Execute     get_config_interface -default_slave_interface 
+Execute     get_config_rtl -register_reset_num 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -vivado_optimization_level=0 
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_optimization_level=0
+Execute     config_export -vivado_optimization_level=0 
+Execute       get_config_export -vivado_impl_strategy 
+Execute       get_config_export -vivado_phys_opt 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -format=ip_catalog 
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+Execute     config_export -format=ip_catalog 
+Execute       get_config_export -vivado_impl_strategy 
+Execute       get_config_export -vivado_phys_opt 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -output=F:/zynqUltraScale_vitis/course_s3_hls/hls/contrastadj/contrastadj.zip 
+INFO: [HLS 200-1464] Running solution command: config_export -output=F:/zynqUltraScale_vitis/course_s3_hls/hls/contrastadj/contrastadj.zip
+Execute     config_export -output=F:/zynqUltraScale_vitis/course_s3_hls/hls/contrastadj/contrastadj.zip 
+Execute       get_config_export -vivado_impl_strategy 
+Execute       get_config_export -vivado_phys_opt 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -rtl=verilog 
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+Execute     config_export -rtl=verilog 
+Execute       get_config_export -vivado_impl_strategy 
+Execute       get_config_export -vivado_phys_opt 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -vivado_phys_opt=none 
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_phys_opt=none
+Execute     config_export -vivado_phys_opt=none 
+Execute       get_config_export -vivado_impl_strategy 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -vivado_report_level=0 
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_report_level=0
+Execute     config_export -vivado_report_level=0 
+Execute       get_config_export -vivado_impl_strategy 
+Command   open_solution done; 1.139 sec.
+Execute   set_part xczu3eg-sfvc784-1-i 
+INFO-FLOW: DBG:set_part: XILINX_VIVADO=F:/xilinx_2020.1/Vivado/2020.1
+INFO-FLOW: DBG:set_part: RDI_DATADIR=F:/xilinx_2020.1/Vivado/2020.1/data;F:/xilinx_2020.1/Vitis/2020.1/data
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data single -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info 
+Execute     ap_family_info -name zynquplus -data info 
+Execute     add_library xilinx/zynquplus/zynquplus:xczu3eg:-sfvc784:-1-i 
+Execute       get_default_platform 
+Execute       ap_part_info -data single -name xczu3eg-sfvc784-1-i 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data resources 
+Execute       config_chip_info -resource {SLICE 8820} {LUT 70560} {FF 141120} {DSP 360} {BRAM 432} {URAM 0} 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info 
+Execute       config_chip_info -speed slow 
+Execute     add_library xilinx/zynquplus/zynquplus_fpv7 
+Execute       get_default_platform 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info 
+Execute     get_default_platform 
+Execute   create_clock -period 10 -name default 
+Execute   config_export -format ip_catalog -output F:/zynqUltraScale_vitis/course_s3_hls/hls/contrastadj/contrastadj.zip -rtl verilog -vivado_optimization_level 0 -vivado_phys_opt none -vivado_report_level 0 
+Execute     get_config_export -vivado_impl_strategy 
+Execute   source ./contrastadj/solution1/directives.tcl 
+Execute     set_directive_top -name contrastadj contrastadj 
+INFO-FLOW: Setting directive 'TOP' name=contrastadj 
+Execute     set_directive_interface -mode ap_none contrastadj dst_axi_user 
+INFO-FLOW: Setting directive 'TOP' name=contrastadj 
+INFO-FLOW: Setting directive 'INTERFACE' ap_none=positionBoolean0mode port=positionBooleanTextRequireddst_axi_user 
+Execute     set_directive_interface -mode ap_none contrastadj dst_axi_last 
+INFO-FLOW: Setting directive 'TOP' name=contrastadj 
+INFO-FLOW: Setting directive 'INTERFACE' ap_none=positionBoolean0mode port=positionBooleanTextRequireddst_axi_user 
+INFO-FLOW: Setting directive 'INTERFACE' ap_none=positionBoolean0mode port=positionBooleanTextRequireddst_axi_last 
+Execute     set_directive_interface -mode ap_none contrastadj dst_axi_keep 
+INFO-FLOW: Setting directive 'TOP' name=contrastadj 
+INFO-FLOW: Setting directive 'INTERFACE' ap_none=positionBoolean0mode port=positionBooleanTextRequireddst_axi_user 
+INFO-FLOW: Setting directive 'INTERFACE' ap_none=positionBoolean0mode port=positionBooleanTextRequireddst_axi_last 
+INFO-FLOW: Setting directive 'INTERFACE' ap_none=positionBoolean0mode port=positionBooleanTextRequireddst_axi_keep 
+Execute   csynth_design 
+Execute     get_config_compile -dump_cfg 
+Execute     get_config_compile -effort 
+Execute     get_config_compile -enable_clang39 
+Execute     get_config_compile -g 
+Execute     get_config_compile -ng 
+Execute     get_config_compile -opt_fp 
+Execute     get_config_compile -skip_cdt 
+Execute     get_config_compile -skip_syncheck 
+Execute     get_config_compile -skip_transform 
+Execute     get_config_compile -keep_printf 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+INFO: [HLS 200-10] Analyzing design file 'source/contrastadj.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       get_config_compile -pragma_strict_mode 
+INFO-FLOW: Handling source/contrastadj.cpp as C++
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info 
+INFO-FLOW: Running: GCC PP 39
+INFO-FLOW: Source preprocessing
+Execute       ap_eval exec -ignorestderr F:/xilinx_2020.1/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang -fsave-optimization-record -foptimization-record-file=F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/clang.contrastadj.cpp.diag.yml -fno-limit-debug-info --sysroot F:/xilinx_2020.1/Vitis/2020.1/tps/mingw/6.2.0/win64.o/nt -fhls -fno-exceptions -E source/contrastadj.cpp -IF:/Vitis_Libraries/vision/L1/include -std=c++0x -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -fno-threadsafe-statics -fno-use-cxa-atexit -target fpga64-xilinx-mingw32 -fno-threadsafe-statics -fno-use-cxa-atexit -I F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot/39 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot -I F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.pp.0.cpp > F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/clang.contrastadj.cpp.out.log 2> F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/clang.contrastadj.cpp.err.log 
+Command       ap_eval done; 0.122 sec.
+WARNING: [HLS 207-989] '_XF_rgb_HPP_' is used as a header guard here, followed by #define of a different macro: F:/Vitis_Libraries/vision/L1/include\imgproc/xf_cvt_color.hpp:17:9
+INFO: [HLS 207-923] '_XF_CVT_COLOR_HPP_' is defined here; did you mean '_XF_rgb_HPP_'?: F:/Vitis_Libraries/vision/L1/include\imgproc/xf_cvt_color.hpp:18:9
+INFO-FLOW: Done: GCC PP 39 time: 0.1 seconds per iteration
+Execute       set_directive_top contrastadj -name=contrastadj 
+INFO-FLOW: Setting directive 'TOP' name=contrastadj 
+INFO-FLOW: Setting directive 'INTERFACE' ap_none=positionBoolean0mode port=positionBooleanTextRequireddst_axi_user 
+INFO-FLOW: Setting directive 'INTERFACE' ap_none=positionBoolean0mode port=positionBooleanTextRequireddst_axi_last 
+INFO-FLOW: Setting directive 'INTERFACE' ap_none=positionBoolean0mode port=positionBooleanTextRequireddst_axi_keep 
+INFO-FLOW: Setting directive 'TOP' name=contrastadj 
+INFO-FLOW: Setting directive 'TOP' name=contrastadj 
+INFO-FLOW: Setting directive 'INTERFACE' ap_none=positionBoolean0mode port=positionBooleanTextRequireddst_axi_user 
+INFO-FLOW: Setting directive 'INTERFACE' ap_none=positionBoolean0mode port=positionBooleanTextRequireddst_axi_last 
+INFO-FLOW: Setting directive 'INTERFACE' ap_none=positionBoolean0mode port=positionBooleanTextRequireddst_axi_keep 
+INFO-FLOW: Setting directive 'TOP' name=contrastadj 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/tps/tcl/tcllib1.11.1/try/try.tcl 
+INFO-FLOW: Setting directive 'TOP' name=contrastadj 
+INFO-FLOW: Setting directive 'INTERFACE' ap_none=positionBoolean0mode port=positionBooleanTextRequireddst_axi_user 
+INFO-FLOW: Setting directive 'INTERFACE' ap_none=positionBoolean0mode port=positionBooleanTextRequireddst_axi_last 
+INFO-FLOW: Setting directive 'INTERFACE' ap_none=positionBoolean0mode port=positionBooleanTextRequireddst_axi_keep 
+INFO-FLOW: Setting directive 'TOP' name=contrastadj 
+Execute       list_core -type functional_unit 
+Execute       clang_tidy xilinx-systemc-detector F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.pp.0.cpp std=c++0x -target fpga  -directive=F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec F:/xilinx_2020.1/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/.systemc_flag -fix-errors F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.pp.0.cpp -- -std=c++0x -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 1.578 sec.
+INFO-FLOW: Running: clang-tidy CDT preprocess 39
+Execute       clang_tidy xilinx-directive2pragma F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.pp.0.cpp std=c++0x -target fpga  -directive=F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec F:/xilinx_2020.1/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/all.directive.json -fix-errors F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.pp.0.cpp -- -std=c++0x -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 1.422 sec.
+Execute       clang_tidy xilinx-constantarray-param,xilinx-remove-assert F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.pp.0.cpp std=c++0x -target fpga  
+INFO-FLOW: exec F:/xilinx_2020.1/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-remove-assert -fix-errors F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.pp.0.cpp -- -std=c++0x -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 1.159 sec.
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 2.6 seconds per iteration
+INFO-FLOW: Calling xilinx-label-all-loops ... 
+Execute       clang_tidy -errorcheck xilinx-label-all-loops F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.pp.0.cpp std=c++0x -target fpga  
+Execute         ap_eval exec -ignorestderr F:/xilinx_2020.1/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/clang-tidy.contrastadj.pp.0.cpp.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops -fix-errors F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.pp.0.cpp -- -std=c++0x -target fpga -fhls -ferror-limit=0 > F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/clang-tidy.contrastadj.pp.0.cpp.out.log 2> F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/clang-tidy.contrastadj.pp.0.cpp.err.log 
+Command         ap_eval done; 2.621 sec.
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl 
+Command       clang_tidy done; 2.98 sec.
+Execute       clang_tidy -errorcheck xilinx-top-parameters F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.pp.0.cpp std=c++0x -target fpga  
+Execute         ap_eval exec -ignorestderr F:/xilinx_2020.1/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/clang-tidy.contrastadj.pp.0.cpp.diag.yml -header-filter=.* --checks=-*,xilinx-top-parameters -fix-errors F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.pp.0.cpp -- -std=c++0x -target fpga -fhls -ferror-limit=0 > F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/clang-tidy.contrastadj.pp.0.cpp.out.log 2> F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/clang-tidy.contrastadj.pp.0.cpp.err.log 
+Command         ap_eval done; 1.036 sec.
+Command       clang_tidy done; 1.041 sec.
+Execute       clang_tidy -errorcheck xilinx-array-stream-check F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.pp.0.cpp std=c++0x -target fpga  
+Execute         ap_eval exec -ignorestderr F:/xilinx_2020.1/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/clang-tidy.contrastadj.pp.0.cpp.diag.yml -header-filter=.* --checks=-*,xilinx-array-stream-check -fix-errors F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.pp.0.cpp -- -std=c++0x -target fpga -fhls -ferror-limit=0 > F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/clang-tidy.contrastadj.pp.0.cpp.out.log 2> F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/clang-tidy.contrastadj.pp.0.cpp.err.log 
+Command         ap_eval done; 1.056 sec.
+Command       clang_tidy done; 1.059 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr F:/xilinx_2020.1/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/xilinx-dataflow-lawyer.contrastadj.pp.0.cpp.diag.yml F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.pp.0.cpp -- -std=c++0x -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/xilinx-dataflow-lawyer.contrastadj.pp.0.cpp.out.log 2> F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/xilinx-dataflow-lawyer.contrastadj.pp.0.cpp.err.log 
+Command       ap_eval done; 1.014 sec.
+Execute       clang_tidy -errorcheck xilinx-warn-mayneed-no-ctor-attribute F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.pp.0.cpp std=c++0x -target fpga  
+Execute         ap_eval exec -ignorestderr F:/xilinx_2020.1/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/clang-tidy.contrastadj.pp.0.cpp.diag.yml -header-filter=.* --checks=-*,xilinx-warn-mayneed-no-ctor-attribute -fix-errors F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.pp.0.cpp -- -std=c++0x -target fpga -fhls -ferror-limit=0 > F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/clang-tidy.contrastadj.pp.0.cpp.out.log 2> F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/clang-tidy.contrastadj.pp.0.cpp.err.log 
+Command         ap_eval done; 1.196 sec.
+Command       clang_tidy done; 1.199 sec.
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info 
+INFO-FLOW: compiling source code to llvm bc
+Execute       ap_eval exec -ignorestderr F:/xilinx_2020.1/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang -fsave-optimization-record -foptimization-record-file=F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/clang.contrastadj.pragma.2.cpp.diag.yml -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.pragma.2.cpp -IF:/Vitis_Libraries/vision/L1/include -std=c++0x -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -fno-threadsafe-statics -fno-use-cxa-atexit -target fpga64-xilinx-linux-gnu -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot -I F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.bc > F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/clang.contrastadj.pragma.2.cpp.out.log 2> F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/clang.contrastadj.pragma.2.cpp.err.log 
+Command       ap_eval done; 1.079 sec.
+WARNING: [HLS 207-5324] unused parameter 'index': F:/Vitis_Libraries/vision/L1/include\common/xf_structs.hpp:655:87
+WARNING: [HLS 207-5324] unused parameter 'index': F:/Vitis_Libraries/vision/L1/include\common/xf_structs.hpp:675:60
+WARNING: [HLS 207-5324] unused parameter 'index': F:/Vitis_Libraries/vision/L1/include\common/xf_structs.hpp:1183:102
+WARNING: [HLS 207-5324] unused parameter 'index': F:/Vitis_Libraries/vision/L1/include\common/xf_structs.hpp:1386:34
+WARNING: [HLS 207-1593] Ignore interface attribute or pragma which is not used in top function: F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot/39\utils/x_hls_utils.h:247:9
+WARNING: [HLS 207-1593] Ignore interface attribute or pragma which is not used in top function: F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot/39\utils/x_hls_utils.h:247:9
+WARNING: [HLS 207-1536] 'false' in '#pragma HLS dependence' is deprecated, and it will be removed in future release: source/contrastadj.cpp:55:44
+WARNING: [HLS 207-1536] 'false' in '#pragma HLS dependence' is deprecated, and it will be removed in future release: source/contrastadj.cpp:56:44
+WARNING: [HLS 207-3891] the 'dim' option to 'Stream' pragma is not supported and will be ignored: source/contrastadj.cpp:150:52
+WARNING: [HLS 207-3891] the 'dim' option to 'Stream' pragma is not supported and will be ignored: source/contrastadj.cpp:152:52
+WARNING: [HLS 207-3891] the 'dim' option to 'Stream' pragma is not supported and will be ignored: source/contrastadj.cpp:154:52
+WARNING: [HLS 207-3891] the 'dim' option to 'Stream' pragma is not supported and will be ignored: source/contrastadj.cpp:156:52
+INFO-FLOW: Linking Debug ...
+INFO-FLOW: Linking dut bc code.
+Execute       run_link_or_opt -out F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/a.g.ld.0.bc -args  "F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.g.bc"  
+Execute         ap_eval exec -ignorestderr F:/xilinx_2020.1/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/llvm-link F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.g.bc -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/a.g.ld.0.bc > F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/llvm-link.a.g.ld.0.bc.out.log 2> F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/llvm-link.a.g.ld.0.bc.err.log 
+INFO-FLOW: 
+Execute       run_link_or_opt -opt -out F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/a.g.ld.1.lower.bc -args F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics 
+Execute         ap_eval exec -ignorestderr F:/xilinx_2020.1/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=.* -pass-remarks-output=F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/opt.a.g.ld.1.lower.bc.diag.yml F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/a.g.ld.1.lower.bc > F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/opt.a.g.ld.1.lower.bc.out.log 2> F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/opt.a.g.ld.1.lower.bc.err.log 
+INFO-FLOW: 
+INFO-FLOW: Linking math bc lib
+Execute       run_link_or_opt -out F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/a.g.ld.2.m1.bc -args F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed F:/xilinx_2020.1/Vitis/2020.1/win64/lib/libhlsm_39.bc F:/xilinx_2020.1/Vitis/2020.1/win64/lib/libhlsmc++_39.bc 
+Execute         ap_eval exec -ignorestderr F:/xilinx_2020.1/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/llvm-link F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed F:/xilinx_2020.1/Vitis/2020.1/win64/lib/libhlsm_39.bc F:/xilinx_2020.1/Vitis/2020.1/win64/lib/libhlsmc++_39.bc -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/a.g.ld.2.m1.bc > F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/llvm-link.a.g.ld.2.m1.bc.out.log 2> F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/llvm-link.a.g.ld.2.m1.bc.err.log 
+Command         ap_eval done; 2.307 sec.
+INFO-FLOW: 
+Command       run_link_or_opt done; 2.309 sec.
+Execute       run_link_or_opt -opt -out F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/a.g.ld.3.fpc.bc -args F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=contrastadj -reflow-float-conversion 
+Execute         ap_eval exec -ignorestderr F:/xilinx_2020.1/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=.* -pass-remarks-output=F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/opt.a.g.ld.3.fpc.bc.diag.yml F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=contrastadj -reflow-float-conversion -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/a.g.ld.3.fpc.bc > F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/opt.a.g.ld.3.fpc.bc.out.log 2> F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/opt.a.g.ld.3.fpc.bc.err.log 
+Command         ap_eval done; 0.873 sec.
+INFO-FLOW: 
+Command       run_link_or_opt done; 0.876 sec.
+Execute       run_link_or_opt -out F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/a.g.ld.4.m2.bc -args F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed F:/xilinx_2020.1/Vitis/2020.1/win64/lib/libfloatconversion_39.bc 
+Execute         ap_eval exec -ignorestderr F:/xilinx_2020.1/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/llvm-link F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed F:/xilinx_2020.1/Vitis/2020.1/win64/lib/libfloatconversion_39.bc -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/a.g.ld.4.m2.bc > F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/llvm-link.a.g.ld.4.m2.bc.out.log 2> F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/llvm-link.a.g.ld.4.m2.bc.err.log 
+INFO-FLOW: 
+Execute       run_link_or_opt -opt -out F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/a.g.ld.5.gdce.bc -args F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=contrastadj 
+Execute         ap_eval exec -ignorestderr F:/xilinx_2020.1/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=.* -pass-remarks-output=F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/opt.a.g.ld.5.gdce.bc.diag.yml F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=contrastadj -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/a.g.ld.5.gdce.bc > F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/opt.a.g.ld.5.gdce.bc.out.log 2> F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/opt.a.g.ld.5.gdce.bc.err.log 
+INFO-FLOW: 
+Execute       get_solution -flow_target 
+Execute       get_config_export -xo 
+Execute       get_config_export -format 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_interface -default_interface 
+Execute       send_msg_by_id INFO @200-777@%s Vivado 
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' target.
+Execute       get_config_interface -default_slave_interface 
+Execute       get_solution -flow_target 
+Execute       get_config_export -xo 
+Execute       get_config_export -format 
+Execute       get_config_interface -m_axi_offset 
+Execute       get_config_interface -m_axi_latency 
+Execute       get_config_interface -m_axi_alignment_byte_size 
+Execute       get_config_interface -m_axi_min_bitwidth 
+Execute       get_config_interface -m_axi_max_bitwidth 
+Execute       get_config_interface -m_axi_max_widen_bitwidth 
+Execute       get_config_interface -m_axi_num_read_outstanding 
+Execute       get_config_interface -m_axi_num_write_outstanding 
+Execute       get_config_interface -m_axi_max_read_burst_length 
+Execute       get_config_interface -m_axi_max_write_burst_length 
+Execute       get_config_interface -m_axi_min_bitwidth 
+Execute       get_config_interface -m_axi_max_bitwidth 
+Execute       get_config_interface -m_axi_latency 
+Execute       get_config_interface -m_axi_min_bitwidth 
+Execute       get_config_interface -m_axi_max_bitwidth 
+Execute       get_config_interface -m_axi_max_widen_bitwidth 
+Execute       get_config_interface -m_axi_auto_max_ports 
+Execute       get_config_interface -m_axi_num_read_outstanding 
+Execute       get_config_interface -m_axi_num_write_outstanding 
+Execute       get_config_interface -m_axi_max_read_burst_length 
+Execute       get_config_interface -m_axi_max_write_burst_length 
+Execute       get_config_interface -s_axilite_data64 
+Execute       get_config_interface -m_axi_alignment_byte_size 
+Execute       get_config_compile -pragma_strict_mode 
+INFO-FLOW: Doing LTO.
+Execute       ap_eval exec -ignorestderr F:/xilinx_2020.1/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang -fsave-optimization-record -foptimization-record-file=F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/clang.a.g.ld.0.bc.diag.yml -fhls -mllvm -hls-top-function-name=contrastadj -mllvm -hls-db-dir -mllvm F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db -emit-llvm -c -mllvm -hls-bitcode-version=3.1 -target fpga64-xilinx-none -mllvm -xcl-xmlinfo=F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/kernel.internal.xml -mllvm -top-io-mapping-info=F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/top-io-fe.xml -mllvm -pass-remarks=supported-subset -mllvm -reflow-enable-interface-default-setting=false -mllvm -reflow-enable-slave-interface-default-setting=false -mllvm -gen-kernel-xml=false -mllvm -maxi-latency=0 -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -hls-maxi-max-data-size-in-bits=1024 -mllvm -hls-max-widen-size-in-bits=0 -mllvm -xcl-kernel-max-mem-ports=0 -mllvm -maxi-read-trans=16 -mllvm -maxi-write-trans=16 -mllvm -maxi-read-burst-len=16 -mllvm -maxi-write-burst-len=16 -mllvm -reflow-enable-saxi-64bits=0 -mllvm -assume-maxi-align=0 -mllvm -no-unaligned-maxi-accesses -x ir F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/a.g.ld.5.gdce.bc -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/a.g.lto.bc > F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/clang.a.g.ld.0.bc.out.log 2> F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/clang.a.g.ld.0.bc.err.log 
+Command       ap_eval done; 0.537 sec.
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<24>, 0>::stream()' into 'hls::stream<ap_uint<24>, 2>::stream()' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:188:43)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<24>, 2>::stream()' into 'xf::cv::Mat<9, 1080, 1920, 1, 2>::Mat()' (F:/Vitis_Libraries/vision/L1/include\common/xf_structs.hpp:441:5)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Mat<9, 1080, 1920, 1, 2>::init(int, int, bool)' into 'xf::cv::Mat<9, 1080, 1920, 1, 2>::Mat()' (F:/Vitis_Libraries/vision/L1/include\common/xf_structs.hpp:618:2)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_axiu<24, 1, 1, 1>, 0>::read(ap_axiu<24, 1, 1, 1>&)' into 'hls::stream<ap_axiu<24, 1, 1, 1>, 0>::operator>>(ap_axiu<24, 1, 1, 1>&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_axi_sdata.h:385:5)
+INFO: [HLS 214-131] Inlining function 'ap_range_ref<24, false>::ap_range_ref(ap_int_base<24, false>*, int, int)' into 'ap_int_base<24, false>::range(int, int)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:903:12)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<24, false>::range(int, int)' into 'ap_int_base<24, false>::operator()(int, int)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:940:18)
+INFO: [HLS 214-131] Inlining function 'ap_range_ref<24, false>::get() const' into 'ap_int_base<24, false>::ap_int_base<24, false>(ap_range_ref<24, false> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:358:20)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<24, false>::ap_int_base<24, false>(ap_range_ref<24, false> const&)' into 'ap_uint<24>::ap_uint<24, false>(ap_range_ref<24, false> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int.h:240:92)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<24, false>::operator()(int, int)' into 'void xf::cv::AXIGetBitFields<24, ap_uint<24> >(ap_uint<24>, int, int, ap_uint<24>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_axi_io.hpp:31:14)
+INFO: [HLS 214-131] Inlining function 'ap_uint<24>::operator=(ap_uint<24> const&)' into 'void xf::cv::AXIGetBitFields<24, ap_uint<24> >(ap_uint<24>, int, int, ap_uint<24>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_axi_io.hpp:31:9)
+INFO: [HLS 214-131] Inlining function 'ap_uint<24>::ap_uint<24, false>(ap_range_ref<24, false> const&)' into 'void xf::cv::AXIGetBitFields<24, ap_uint<24> >(ap_uint<24>, int, int, ap_uint<24>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_axi_io.hpp:31:11)
+INFO: [HLS 214-131] Inlining function 'void xf::cv::AXIGetBitFields<24, ap_uint<24> >(ap_uint<24>, int, int, ap_uint<24>&)' into 'void xf::cv::AXIGetBitFields<24, ap_uint<24> >(ap_axiu<24, 1, 1, 1>, int, int, ap_uint<24>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_axi_io.hpp:59:2)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<24>, 0>::write(ap_uint<24> const&)' into 'xf::cv::Mat<9, 1080, 1920, 1, 2>::write(int, ap_uint<24>)' (F:/Vitis_Libraries/vision/L1/include\common/xf_structs.hpp:677:10)
+INFO: [HLS 214-131] Inlining function 'void xf::cv::write<9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Scalar<DataType<9, 1>::channel, DataType<9, 1>::name>, int)' into 'void xf::cv::fetchingmatdata<9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Scalar<DataType<9, 1>::channel, DataType<9, 1>::name>, int)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:53:2)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Scalar<3, ap_uint<24> >::Scalar()' into 'int xf::cv::AXIvideo2xfMat<24, 9, 1080, 1920, 1>(hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:108:80)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<1, false>::to_int() const' into 'int xf::cv::AXIvideo2xfMat<24, 9, 1080, 1920, 1>(hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:155:28)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_axiu<24, 1, 1, 1>, 0>::operator>>(ap_axiu<24, 1, 1, 1>&)' into 'int xf::cv::AXIvideo2xfMat<24, 9, 1080, 1920, 1>(hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:154:17)
+INFO: [HLS 214-131] Inlining function 'void xf::cv::fetchingmatdata<9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Scalar<DataType<9, 1>::channel, DataType<9, 1>::name>, int)' into 'int xf::cv::AXIvideo2xfMat<24, 9, 1080, 1920, 1>(hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:144:13)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_axiu<24, 1, 1, 1>, 0>::operator>>(ap_axiu<24, 1, 1, 1>&)' into 'int xf::cv::AXIvideo2xfMat<24, 9, 1080, 1920, 1>(hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:127:17)
+INFO: [HLS 214-131] Inlining function 'void xf::cv::AXIGetBitFields<24, ap_uint<24> >(ap_axiu<24, 1, 1, 1>, int, int, ap_uint<24>&)' into 'int xf::cv::AXIvideo2xfMat<24, 9, 1080, 1920, 1>(hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:143:13)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<1, false>::to_int() const' into 'int xf::cv::AXIvideo2xfMat<24, 9, 1080, 1920, 1>(hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:130:32)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<1, false>::to_int() const' into 'int xf::cv::AXIvideo2xfMat<24, 9, 1080, 1920, 1>(hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:129:32)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<24>, 0>::read(ap_uint<24>&)' into 'hls::stream<ap_uint<24>, 0>::read()' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:156:9)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<24>, 0>::read()' into 'xf::cv::Mat<9, 1080, 1920, 1, 2>::read(int)' (F:/Vitis_Libraries/vision/L1/include\common/xf_structs.hpp:657:17)
+INFO: [HLS 214-131] Inlining function 'ap_range_ref<24, false>::get() const' into 'ap_int_base<8, false>::ap_int_base<24, false>(ap_range_ref<24, false> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:358:20)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, false>::ap_int_base<24, false>(ap_range_ref<24, false> const&)' into 'ap_uint<8>::ap_uint<24, false>(ap_range_ref<24, false> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int.h:240:92)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<24, false>::range(int, int)' into 'ExtractPixel(ap_uint<24>&, ap_uint<8>*)' (source/contrastadj.cpp:9:17)
+INFO: [HLS 214-131] Inlining function 'ap_uint<8>::operator=(ap_uint<8> const&)' into 'ExtractPixel(ap_uint<24>&, ap_uint<8>*)' (source/contrastadj.cpp:9:8)
+INFO: [HLS 214-131] Inlining function 'ap_uint<8>::ap_uint<24, false>(ap_range_ref<24, false> const&)' into 'ExtractPixel(ap_uint<24>&, ap_uint<8>*)' (source/contrastadj.cpp:9:9)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<24, false>::ap_int_base<8, false>(ap_int_base<8, false> const&)' into 'ap_range_ref<24, false>& ap_range_ref<24, false>::operator=<8, false>(ap_int_base<8, false> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_ref.h:413:31)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<24, false>::range(int, int)' into 'PackPixel(ap_uint<24>&, ap_uint<8>*)' (source/contrastadj.cpp:20:10)
+INFO: [HLS 214-131] Inlining function 'ap_range_ref<24, false>& ap_range_ref<24, false>::operator=<8, false>(ap_int_base<8, false> const&)' into 'PackPixel(ap_uint<24>&, ap_uint<8>*)' (source/contrastadj.cpp:20:22)
+INFO: [HLS 214-131] Inlining function 'ap_uint<24>::operator=(ap_uint<24> const&)' into 'void xfrgb2ycrcb<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/contrastadj.cpp:104:12)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, false>::operator unsigned long long() const' into 'void xfrgb2ycrcb<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/contrastadj.cpp:106:27)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, false>::operator unsigned long long() const' into 'void xfrgb2ycrcb<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/contrastadj.cpp:106:34)
+INFO: [HLS 214-131] Inlining function 'ap_uint<8>::operator=(ap_uint<8> const&)' into 'void xfrgb2ycrcb<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/contrastadj.cpp:108:12)
+INFO: [HLS 214-131] Inlining function 'ap_uint<8>::ap_uint(unsigned char)' into 'void xfrgb2ycrcb<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/contrastadj.cpp:108:13)
+INFO: [HLS 214-131] Inlining function 'Calculate_CB(unsigned char, unsigned char)' into 'void xfrgb2ycrcb<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/contrastadj.cpp:108:13)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, false>::operator unsigned long long() const' into 'void xfrgb2ycrcb<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/contrastadj.cpp:106:41)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, false>::operator unsigned long long() const' into 'void xfrgb2ycrcb<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/contrastadj.cpp:108:33)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, false>::operator unsigned long long() const' into 'void xfrgb2ycrcb<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/contrastadj.cpp:108:26)
+INFO: [HLS 214-131] Inlining function 'ap_uint<8>::operator=(ap_uint<8> const&)' into 'void xfrgb2ycrcb<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/contrastadj.cpp:107:12)
+INFO: [HLS 214-131] Inlining function 'ap_uint<8>::ap_uint(unsigned char)' into 'void xfrgb2ycrcb<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/contrastadj.cpp:107:13)
+INFO: [HLS 214-131] Inlining function 'Calculate_CR(unsigned char, unsigned char)' into 'void xfrgb2ycrcb<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/contrastadj.cpp:107:13)
+INFO: [HLS 214-131] Inlining function 'CalculateGRAY(unsigned char, unsigned char, unsigned char)' into 'void xfrgb2ycrcb<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/contrastadj.cpp:106:13)
+INFO: [HLS 214-131] Inlining function 'ap_uint<8>::ap_uint(unsigned char)' into 'void xfrgb2ycrcb<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/contrastadj.cpp:106:13)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, false>::operator unsigned long long() const' into 'void xfrgb2ycrcb<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/contrastadj.cpp:107:33)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, false>::operator unsigned long long() const' into 'void xfrgb2ycrcb<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/contrastadj.cpp:107:26)
+INFO: [HLS 214-131] Inlining function 'ap_uint<8>::operator=(ap_uint<8> const&)' into 'void xfrgb2ycrcb<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/contrastadj.cpp:106:12)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base(int)' into 'ap_int_base<32, false>& operator+=<32, false>(ap_int_base<32, false>&, int)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1559:167)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, false>& ap_int_base<32, false>::operator+=<32, true>(ap_int_base<32, true> const&)' into 'ap_int_base<32, false>& operator+=<32, false>(ap_int_base<32, false>&, int)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1559:164)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<33, false>::ap_int_base<32, false>(ap_int_base<32, false> const&)' into 'ap_int_base<32, false>::RType<32, false>::plus operator+<32, false, 32, false>(ap_int_base<32, false> const&, ap_int_base<32, false> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1350:339)
+INFO: [HLS 214-131] Inlining function 'ap_uint<33>::ap_uint<33, false>(ap_int_base<33, false> const&)' into 'ap_int_base<32, false>::RType<32, false>::plus operator+<32, false, 32, false>(ap_int_base<32, false> const&, ap_int_base<32, false> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1350:551)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<33, false>::ap_int_base<32, false>(ap_int_base<32, false> const&)' into 'ap_int_base<32, false>::RType<32, false>::plus operator+<32, false, 32, false>(ap_int_base<32, false> const&, ap_int_base<32, false> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1350:427)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<65, true>::ap_int_base<9, true>(ap_int_base<9, true> const&)' into 'ap_int_base<9, true>::RType<64, true>::minus operator-<9, true, 64, true>(ap_int_base<9, true> const&, ap_int_base<64, true> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1351:341)
+INFO: [HLS 214-131] Inlining function 'ap_int<65>::ap_int<65, true>(ap_int_base<65, true> const&)' into 'ap_int_base<9, true>::RType<64, true>::minus operator-<9, true, 64, true>(ap_int_base<9, true> const&, ap_int_base<64, true> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1351:555)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<65, true>::ap_int_base<64, true>(ap_int_base<64, true> const&)' into 'ap_int_base<9, true>::RType<64, true>::minus operator-<9, true, 64, true>(ap_int_base<9, true> const&, ap_int_base<64, true> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1351:430)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, true>::ap_int_base(long)' into 'ap_int_base<9, true>::RType<($_0)64, true>::minus operator-<9, true>(ap_int_base<9, true> const&, long)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1467:1548)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<9, true>::RType<64, true>::minus operator-<9, true, 64, true>(ap_int_base<9, true> const&, ap_int_base<64, true> const&)' into 'ap_int_base<9, true>::RType<($_0)64, true>::minus operator-<9, true>(ap_int_base<9, true> const&, long)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1467:1546)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<9, true>::ap_int_base<1, false>(ap_int_base<1, false> const&)' into 'ap_int_base<1, false>::RType<8, false>::minus operator-<1, false, 8, false>(ap_int_base<1, false> const&, ap_int_base<8, false> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1351:341)
+INFO: [HLS 214-131] Inlining function 'ap_int<9>::ap_int<9, true>(ap_int_base<9, true> const&)' into 'ap_int_base<1, false>::RType<8, false>::minus operator-<1, false, 8, false>(ap_int_base<1, false> const&, ap_int_base<8, false> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1351:555)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<9, true>::ap_int_base<8, false>(ap_int_base<8, false> const&)' into 'ap_int_base<1, false>::RType<8, false>::minus operator-<1, false, 8, false>(ap_int_base<1, false> const&, ap_int_base<8, false> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1351:430)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<1, false>::ap_int_base(int)' into 'ap_int_base<8, false>::operator-() const' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:750:12)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<1, false>::RType<8, false>::minus operator-<1, false, 8, false>(ap_int_base<1, false> const&, ap_int_base<8, false> const&)' into 'ap_int_base<8, false>::operator-() const' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:750:37)
+INFO: [HLS 214-131] Inlining function 'floatToRawBits(float)' into 'ap_int_base<8, false>::ap_int_base(float)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:262:13)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, false>& ap_int_base<8, false>::operator=<9, true>(ap_int_base<9, true> const&)' into 'ap_int_base<8, false>::ap_int_base(float)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:300:23)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, false>::operator-() const' into 'ap_int_base<8, false>::ap_int_base(float)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:300:25)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<9, true>& ap_int_base<9, true>::operator=<65, true>(ap_int_base<65, true> const&)' into 'ap_int_base<8, false>::ap_int_base(float)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:267:9)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<9, true>::RType<($_0)64, true>::minus operator-<9, true>(ap_int_base<9, true> const&, long)' into 'ap_int_base<8, false>::ap_int_base(float)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:267:15)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<9, true>::ap_int_base(int)' into 'ap_int_base<8, false>::ap_int_base(float)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:265:36)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, false>::ap_int_base(float)' into 'ap_uint<8>::ap_uint(float)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int.h:312:24)
+INFO: [HLS 214-131] Inlining function 'ap_uint<32>::ap_uint(int)' into 'void dualAryEqualize<1080, 1920, 256>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, int)' (source/contrastadj.cpp:46:16)
+INFO: [HLS 214-131] Inlining function 'ap_uint<8>::operator=(ap_uint<8> const&)' into 'void dualAryEqualize<1080, 1920, 256>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, int)' (source/contrastadj.cpp:86:10)
+INFO: [HLS 214-131] Inlining function 'ap_uint<32>::operator=(ap_uint<32> const&)' into 'void dualAryEqualize<1080, 1920, 256>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, int)' (source/contrastadj.cpp:46:15)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<33, false>::operator unsigned long long() const' into 'void dualAryEqualize<1080, 1920, 256>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, int)' (source/contrastadj.cpp:80:11)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, false>::RType<32, false>::plus operator+<32, false, 32, false>(ap_int_base<32, false> const&, ap_int_base<32, false> const&)' into 'void dualAryEqualize<1080, 1920, 256>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, int)' (source/contrastadj.cpp:80:23)
+INFO: [HLS 214-131] Inlining function 'ap_uint<32>::ap_uint(int)' into 'void dualAryEqualize<1080, 1920, 256>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, int)' (source/contrastadj.cpp:47:16)
+INFO: [HLS 214-131] Inlining function 'ap_uint<32>::operator=(ap_uint<32> const&)' into 'void dualAryEqualize<1080, 1920, 256>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, int)' (source/contrastadj.cpp:47:15)
+INFO: [HLS 214-131] Inlining function 'ap_uint<24>::operator=(ap_uint<24> const&)' into 'void dualAryEqualize<1080, 1920, 256>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, int)' (source/contrastadj.cpp:59:6)
+INFO: [HLS 214-131] Inlining function 'ap_uint<24>::operator=(ap_uint<24> const&)' into 'void dualAryEqualize<1080, 1920, 256>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, int)' (source/contrastadj.cpp:60:8)
+INFO: [HLS 214-131] Inlining function 'ap_uint<8>::operator=(ap_uint<8> const&)' into 'void dualAryEqualize<1080, 1920, 256>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, int)' (source/contrastadj.cpp:68:13)
+INFO: [HLS 214-131] Inlining function 'ap_uint<8>::operator=(ap_uint<8> const&)' into 'void dualAryEqualize<1080, 1920, 256>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, int)' (source/contrastadj.cpp:67:13)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, false>& operator+=<32, false>(ap_int_base<32, false>&, int)' into 'void dualAryEqualize<1080, 1920, 256>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, int)' (source/contrastadj.cpp:66:19)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, false>& operator+=<32, false>(ap_int_base<32, false>&, int)' into 'void dualAryEqualize<1080, 1920, 256>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, int)' (source/contrastadj.cpp:65:19)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, false>::operator unsigned long long() const' into 'void dualAryEqualize<1080, 1920, 256>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, int)' (source/contrastadj.cpp:64:14)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, false>::operator unsigned long long() const' into 'void dualAryEqualize<1080, 1920, 256>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, int)' (source/contrastadj.cpp:63:14)
+INFO: [HLS 214-131] Inlining function 'ap_uint<24>::operator=(ap_uint<24> const&)' into 'void xfycrcb2rgb<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/contrastadj.cpp:129:14)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, false>::operator unsigned long long() const' into 'void xfycrcb2rgb<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/contrastadj.cpp:131:29)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, false>::operator unsigned long long() const' into 'void xfycrcb2rgb<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/contrastadj.cpp:131:38)
+INFO: [HLS 214-131] Inlining function 'ap_uint<8>::operator=(ap_uint<8> const&)' into 'void xfycrcb2rgb<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/contrastadj.cpp:133:10)
+INFO: [HLS 214-131] Inlining function 'ap_uint<8>::ap_uint(unsigned char)' into 'void xfycrcb2rgb<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/contrastadj.cpp:133:11)
+INFO: [HLS 214-131] Inlining function 'Calculate_Ycrcb2B(unsigned char, unsigned char)' into 'void xfycrcb2rgb<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/contrastadj.cpp:133:11)
+INFO: [HLS 214-131] Inlining function 'Calculate_Ycrcb2R(unsigned char, unsigned char)' into 'void xfycrcb2rgb<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/contrastadj.cpp:131:11)
+INFO: [HLS 214-131] Inlining function 'ap_uint<8>::ap_uint(unsigned char)' into 'void xfycrcb2rgb<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/contrastadj.cpp:131:11)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, false>::operator unsigned long long() const' into 'void xfycrcb2rgb<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/contrastadj.cpp:133:38)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, false>::operator unsigned long long() const' into 'void xfycrcb2rgb<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/contrastadj.cpp:133:29)
+INFO: [HLS 214-131] Inlining function 'ap_uint<8>::operator=(ap_uint<8> const&)' into 'void xfycrcb2rgb<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/contrastadj.cpp:132:10)
+INFO: [HLS 214-131] Inlining function 'ap_uint<8>::ap_uint(unsigned char)' into 'void xfycrcb2rgb<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/contrastadj.cpp:132:11)
+INFO: [HLS 214-131] Inlining function 'Calculate_Ycrcb2G(unsigned char, unsigned char, unsigned char)' into 'void xfycrcb2rgb<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/contrastadj.cpp:132:11)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, false>::operator unsigned long long() const' into 'void xfycrcb2rgb<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/contrastadj.cpp:132:47)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, false>::operator unsigned long long() const' into 'void xfycrcb2rgb<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/contrastadj.cpp:132:38)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, false>::operator unsigned long long() const' into 'void xfycrcb2rgb<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/contrastadj.cpp:132:29)
+INFO: [HLS 214-131] Inlining function 'ap_uint<8>::operator=(ap_uint<8> const&)' into 'void xfycrcb2rgb<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/contrastadj.cpp:131:10)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Scalar<3, ap_uint<24> >::Scalar()' into 'xf::cv::Scalar<DataType<9, 1>::channel, DataType<9, 1>::name> xf::cv::read<9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, int)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:63:85)
+INFO: [HLS 214-131] Inlining function 'ap_uint<24>::operator=(ap_uint<24> const&)' into 'xf::cv::Scalar<DataType<9, 1>::channel, DataType<9, 1>::name> xf::cv::read<9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, int)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:64:16)
+INFO: [HLS 214-131] Inlining function 'ap_uint<24>::operator=(ap_uint<24> const&)' into 'xf::cv::Scalar<3, ap_uint<24> >::operator=(xf::cv::Scalar<3, ap_uint<24> >&&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_structs.hpp:228:7)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Scalar<DataType<9, 1>::channel, DataType<9, 1>::name> xf::cv::read<9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, int)' into 'void xf::cv::fillingdata<9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Scalar<DataType<9, 1>::channel, DataType<9, 1>::name>&, int)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:77:6)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<24, false>::operator()(int, int)' into 'void xf::cv::AXISetBitFields<24, ap_uint<24> >(ap_uint<24>&, int, int, ap_uint<24>)' (F:/Vitis_Libraries/vision/L1/include\common/xf_axi_io.hpp:68:5)
+INFO: [HLS 214-131] Inlining function 'ap_range_ref<24, false>& ap_range_ref<24, false>::operator=<24, false>(ap_int_base<24, false> const&)' into 'void xf::cv::AXISetBitFields<24, ap_uint<24> >(ap_uint<24>&, int, int, ap_uint<24>)' (F:/Vitis_Libraries/vision/L1/include\common/xf_axi_io.hpp:68:31)
+INFO: [HLS 214-131] Inlining function 'void xf::cv::AXISetBitFields<24, ap_uint<24> >(ap_uint<24>&, int, int, ap_uint<24>)' into 'void xf::cv::AXISetBitFields<24, ap_uint<24> >(ap_axiu<24, 1, 1, 1>&, int, int, ap_uint<24>)' (F:/Vitis_Libraries/vision/L1/include\common/xf_axi_io.hpp:96:2)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_axiu<24, 1, 1, 1>, 0>::write(ap_axiu<24, 1, 1, 1> const&)' into 'hls::stream<ap_axiu<24, 1, 1, 1>, 0>::operator<<(ap_axiu<24, 1, 1, 1> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_axi_sdata.h:389:5)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Scalar<3, ap_uint<24> >::Scalar()' into 'int xf::cv::xfMat2AXIvideo<24, 9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:173:80)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_axiu<24, 1, 1, 1>, 0>::operator<<(ap_axiu<24, 1, 1, 1> const&)' into 'int xf::cv::xfMat2AXIvideo<24, 9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:213:28)
+INFO: [HLS 214-131] Inlining function 'ap_uint<3>::operator=(ap_uint<3> const&)' into 'int xf::cv::xfMat2AXIvideo<24, 9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:212:22)
+INFO: [HLS 214-131] Inlining function 'ap_uint<3>::ap_uint(int)' into 'int xf::cv::xfMat2AXIvideo<24, 9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:212:24)
+INFO: [HLS 214-131] Inlining function 'void xf::cv::AXISetBitFields<24, ap_uint<24> >(ap_axiu<24, 1, 1, 1>&, int, int, ap_uint<24>)' into 'int xf::cv::xfMat2AXIvideo<24, 9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:211:13)
+INFO: [HLS 214-131] Inlining function 'ap_uint<24>::operator=(ap_uint<24> const&)' into 'int xf::cv::xfMat2AXIvideo<24, 9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:209:22)
+INFO: [HLS 214-131] Inlining function 'ap_uint<24>::ap_uint(int)' into 'int xf::cv::xfMat2AXIvideo<24, 9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:209:24)
+INFO: [HLS 214-131] Inlining function 'void xf::cv::fillingdata<9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Scalar<DataType<9, 1>::channel, DataType<9, 1>::name>&, int)' into 'int xf::cv::xfMat2AXIvideo<24, 9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:207:13)
+INFO: [HLS 214-131] Inlining function 'ap_uint<1>::ap_uint(int)' into 'int xf::cv::xfMat2AXIvideo<24, 9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:196:28)
+INFO: [HLS 214-131] Inlining function 'ap_uint<1>::operator=(ap_uint<1> const&)' into 'int xf::cv::xfMat2AXIvideo<24, 9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:196:26)
+INFO: [HLS 214-131] Inlining function 'ap_uint<1>::operator=(ap_uint<1> const&)' into 'int xf::cv::xfMat2AXIvideo<24, 9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:205:26)
+INFO: [HLS 214-131] Inlining function 'ap_uint<1>::ap_uint(int)' into 'int xf::cv::xfMat2AXIvideo<24, 9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:205:28)
+INFO: [HLS 214-131] Inlining function 'ap_uint<1>::operator=(ap_uint<1> const&)' into 'int xf::cv::xfMat2AXIvideo<24, 9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:203:26)
+INFO: [HLS 214-131] Inlining function 'ap_uint<1>::ap_uint(int)' into 'int xf::cv::xfMat2AXIvideo<24, 9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:203:28)
+INFO: [HLS 214-131] Inlining function 'ap_uint<1>::operator=(ap_uint<1> const&)' into 'int xf::cv::xfMat2AXIvideo<24, 9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:200:26)
+INFO: [HLS 214-131] Inlining function 'ap_uint<1>::ap_uint(int)' into 'int xf::cv::xfMat2AXIvideo<24, 9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:200:28)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Mat<9, 1080, 1920, 1, 2>::Mat()' into 'contrastadj(hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, int)' (source/contrastadj.cpp:149:44)
+INFO: [HLS 214-131] Inlining function 'int xf::cv::xfMat2AXIvideo<24, 9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' into 'contrastadj(hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, int)' (source/contrastadj.cpp:165:2)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Mat<9, 1080, 1920, 1, 2>::Mat()' into 'contrastadj(hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, int)' (source/contrastadj.cpp:151:44)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Mat<9, 1080, 1920, 1, 2>::Mat()' into 'contrastadj(hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, int)' (source/contrastadj.cpp:153:44)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Mat<9, 1080, 1920, 1, 2>::Mat()' into 'contrastadj(hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, int)' (source/contrastadj.cpp:155:44)
+INFO: [HLS 214-131] Inlining function 'int xf::cv::AXIvideo2xfMat<24, 9, 1080, 1920, 1>(hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' into 'contrastadj(hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, int)' (source/contrastadj.cpp:161:2)
+WARNING: [HLS 214-199] Ignoring dependence pragma on local scalar variable 'src2'. (source/contrastadj.cpp:55:9)
+WARNING: [HLS 214-199] Ignoring dependence pragma on local scalar variable 'src1'. (source/contrastadj.cpp:54:3)
+INFO: [HLS 214-178] Inlining function 'xf::cv::Mat<9, 1080, 1920, 1, 2>::read(int)' into 'void xfrgb2ycrcb<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/contrastadj.cpp:93:0)
+INFO: [HLS 214-178] Inlining function 'ExtractPixel(ap_uint<24>&, ap_uint<8>*)' into 'void xfrgb2ycrcb<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/contrastadj.cpp:93:0)
+INFO: [HLS 214-178] Inlining function 'saturate_cast(int, int)' into 'void xfrgb2ycrcb<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/contrastadj.cpp:93:0)
+INFO: [HLS 214-178] Inlining function 'saturate_cast(int, int)' into 'void xfrgb2ycrcb<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/contrastadj.cpp:93:0)
+INFO: [HLS 214-178] Inlining function 'saturate_cast(int, int)' into 'void xfrgb2ycrcb<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/contrastadj.cpp:93:0)
+INFO: [HLS 214-178] Inlining function 'PackPixel(ap_uint<24>&, ap_uint<8>*)' into 'void xfrgb2ycrcb<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/contrastadj.cpp:93:0)
+INFO: [HLS 214-178] Inlining function 'xf::cv::Mat<9, 1080, 1920, 1, 2>::write(int, ap_uint<24>)' into 'void xfrgb2ycrcb<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/contrastadj.cpp:93:0)
+INFO: [HLS 214-178] Inlining function 'xf::cv::Mat<9, 1080, 1920, 1, 2>::read(int)' into 'void dualAryEqualize<1080, 1920, 256>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, int)' (source/contrastadj.cpp:30:0)
+INFO: [HLS 214-178] Inlining function 'xf::cv::Mat<9, 1080, 1920, 1, 2>::read(int)' into 'void dualAryEqualize<1080, 1920, 256>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, int)' (source/contrastadj.cpp:30:0)
+INFO: [HLS 214-178] Inlining function 'ExtractPixel(ap_uint<24>&, ap_uint<8>*)' into 'void dualAryEqualize<1080, 1920, 256>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, int)' (source/contrastadj.cpp:30:0)
+INFO: [HLS 214-178] Inlining function 'ExtractPixel(ap_uint<24>&, ap_uint<8>*)' into 'void dualAryEqualize<1080, 1920, 256>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, int)' (source/contrastadj.cpp:30:0)
+INFO: [HLS 214-178] Inlining function 'PackPixel(ap_uint<24>&, ap_uint<8>*)' into 'void dualAryEqualize<1080, 1920, 256>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, int)' (source/contrastadj.cpp:30:0)
+INFO: [HLS 214-178] Inlining function 'PackPixel(ap_uint<24>&, ap_uint<8>*)' into 'void dualAryEqualize<1080, 1920, 256>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, int)' (source/contrastadj.cpp:30:0)
+INFO: [HLS 214-178] Inlining function 'xf::cv::Mat<9, 1080, 1920, 1, 2>::write(int, ap_uint<24>)' into 'void dualAryEqualize<1080, 1920, 256>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, int)' (source/contrastadj.cpp:30:0)
+INFO: [HLS 214-178] Inlining function 'xf::cv::Mat<9, 1080, 1920, 1, 2>::write(int, ap_uint<24>)' into 'void dualAryEqualize<1080, 1920, 256>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, int)' (source/contrastadj.cpp:30:0)
+INFO: [HLS 214-178] Inlining function 'xf::cv::Mat<9, 1080, 1920, 1, 2>::read(int)' into 'void xfycrcb2rgb<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/contrastadj.cpp:118:0)
+INFO: [HLS 214-178] Inlining function 'ExtractPixel(ap_uint<24>&, ap_uint<8>*)' into 'void xfycrcb2rgb<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/contrastadj.cpp:118:0)
+INFO: [HLS 214-178] Inlining function 'saturate_cast(int, int)' into 'void xfycrcb2rgb<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/contrastadj.cpp:118:0)
+INFO: [HLS 214-178] Inlining function 'saturate_cast(int, int)' into 'void xfycrcb2rgb<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/contrastadj.cpp:118:0)
+INFO: [HLS 214-178] Inlining function 'PackPixel(ap_uint<24>&, ap_uint<8>*)' into 'void xfycrcb2rgb<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/contrastadj.cpp:118:0)
+INFO: [HLS 214-178] Inlining function 'xf::cv::Mat<9, 1080, 1920, 1, 2>::write(int, ap_uint<24>)' into 'void xfycrcb2rgb<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/contrastadj.cpp:118:0)
+INFO: [HLS 214-178] Inlining function 'xf::cv::Mat<9, 1080, 1920, 1, 2>::write(int, ap_uint<24>)' into 'contrastadj(hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, int)' (source/contrastadj.cpp:141:0)
+INFO: [HLS 214-178] Inlining function 'xf::cv::Mat<9, 1080, 1920, 1, 2>::read(int)' into 'contrastadj(hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, int)' (source/contrastadj.cpp:141:0)
+INFO: [HLS 214-178] Inlining function 'xf::cv::Scalar<3, ap_uint<24> >::operator=(xf::cv::Scalar<3, ap_uint<24> >&&)' into 'contrastadj(hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, int)' (source/contrastadj.cpp:141:0)
+INFO-FLOW: DBG:CMD: copy_raw_kernel_xml ap_link_39: kernel.xml not generated: F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/kernel.internal.xml
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:09 ; elapsed = 00:00:26 . Memory (MB): peak = 998.449 ; gain = 880.051
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:09 ; elapsed = 00:00:26 . Memory (MB): peak = 998.449 ; gain = 880.051
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top contrastadj -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/a.g.0.bc -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+Command         transform done; 0.174 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:09 ; elapsed = 00:00:26 . Memory (MB): peak = 998.449 ; gain = 880.051
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -data-pack -instcombine -dce -inst-simplify -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/a.g.1.bc -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+Command         transform done; 0.215 sec.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/a.g.2.prechk.bc -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+WARNING: [SYNCHK 200-23] F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_ref.h:674: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:09 ; elapsed = 00:00:26 . Memory (MB): peak = 998.449 ; gain = 880.051
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/a.g.1.bc to F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db -interface-port-rename -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -function-uniquify -directive-preproc -mem2reg -dse -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -function-inline -complex-op-raise -inst-simplify -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin2 -bitwidthmin2 -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -directive-preproc -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/a.o.1.bc -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_44_1' (source/contrastadj.cpp:36) in function 'dualAryEqualize<1080, 1920, 256>' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_126_2' (source/contrastadj.cpp:123) in function 'xfycrcb2rgb<1080, 1920>' for pipelining.
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'VITIS_LOOP_6_1' (source/contrastadj.cpp:5) because its parent loop or function is pipelined.
+WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'VITIS_LOOP_6_1' (source/contrastadj.cpp:5) because its parent loop or function is pipelined.
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'VITIS_LOOP_17_1' (source/contrastadj.cpp:16) because its parent loop or function is pipelined.
+WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'VITIS_LOOP_17_1' (source/contrastadj.cpp:16) because its parent loop or function is pipelined.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_101_2' (source/contrastadj.cpp:98) in function 'xfrgb2ycrcb<1080, 1920>' for pipelining.
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'VITIS_LOOP_6_1' (source/contrastadj.cpp:5) because its parent loop or function is pipelined.
+WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'VITIS_LOOP_6_1' (source/contrastadj.cpp:5) because its parent loop or function is pipelined.
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'VITIS_LOOP_17_1' (source/contrastadj.cpp:16) because its parent loop or function is pipelined.
+WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'VITIS_LOOP_17_1' (source/contrastadj.cpp:16) because its parent loop or function is pipelined.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_53_3' (source/contrastadj.cpp:36) in function 'dualAryEqualize<1080, 1920, 256>' for pipelining.
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'VITIS_LOOP_6_1' (source/contrastadj.cpp:5) because its parent loop or function is pipelined.
+WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'VITIS_LOOP_6_1' (source/contrastadj.cpp:5) because its parent loop or function is pipelined.
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'VITIS_LOOP_6_1' (source/contrastadj.cpp:5) because its parent loop or function is pipelined.
+WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'VITIS_LOOP_6_1' (source/contrastadj.cpp:5) because its parent loop or function is pipelined.
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'VITIS_LOOP_17_1' (source/contrastadj.cpp:16) because its parent loop or function is pipelined.
+WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'VITIS_LOOP_17_1' (source/contrastadj.cpp:16) because its parent loop or function is pipelined.
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'VITIS_LOOP_17_1' (source/contrastadj.cpp:16) because its parent loop or function is pipelined.
+WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'VITIS_LOOP_17_1' (source/contrastadj.cpp:16) because its parent loop or function is pipelined.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loop_width' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:186) in function 'contrastadj' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_6_1' (source/contrastadj.cpp:5) in function 'xfycrcb2rgb<1080, 1920>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_17_1' (source/contrastadj.cpp:16) in function 'xfycrcb2rgb<1080, 1920>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_6_1' (source/contrastadj.cpp:5) in function 'xfrgb2ycrcb<1080, 1920>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_17_1' (source/contrastadj.cpp:16) in function 'xfrgb2ycrcb<1080, 1920>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_6_1' (source/contrastadj.cpp:5) in function 'dualAryEqualize<1080, 1920, 256>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_17_1' (source/contrastadj.cpp:16) in function 'dualAryEqualize<1080, 1920, 256>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.1' (F:/Vitis_Libraries/vision/L1/include\common/xf_structs.hpp:228) in function 'contrastadj' completely with a factor of 3.
+INFO: [XFORM 203-102] Partitioning array 'rgb.V' (source/contrastadj.cpp:96) automatically.
+INFO: [XFORM 203-102] Partitioning array 'ycrcb.V' (source/contrastadj.cpp:97) automatically.
+INFO: [XFORM 203-102] Partitioning array 'value1.V' (source/contrastadj.cpp:41) automatically.
+INFO: [XFORM 203-102] Partitioning array 'value2.V' (source/contrastadj.cpp:42) automatically.
+INFO: [XFORM 203-102] Partitioning array 'rgb.V' (source/contrastadj.cpp:121) automatically.
+INFO: [XFORM 203-102] Partitioning array 'ycrcb.V' (source/contrastadj.cpp:122) automatically.
+WARNING: [HLS 200-914] Completely partitioning array 'hist_out1.V' (source/contrastadj.cpp:32) accessed through non-constant indices on dimension 1 (source/contrastadj.cpp:80:11), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead.
+INFO: [XFORM 203-101] Partitioning array 'hist_out1.V' (source/contrastadj.cpp:32) in dimension 1 completely.
+WARNING: [HLS 200-914] Completely partitioning array 'hist_out2.V' (source/contrastadj.cpp:34) accessed through non-constant indices on dimension 1 (source/contrastadj.cpp:80:24), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead.
+INFO: [XFORM 203-101] Partitioning array 'hist_out2.V' (source/contrastadj.cpp:34) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'pix.val.V' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:173) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ref.tmp.i.i'  in dimension 1 completely.
+INFO: [XFORM 203-721] Changing loop 'Loop_loop_height_proc' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:120) to a process function for dataflow in function 'contrastadj'.
+INFO: [XFORM 203-721] Changing loop 'Loop_loop_height_proc' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:190) to a process function for dataflow in function 'contrastadj'.
+INFO: [XFORM 203-712] Applying dataflow to function 'contrastadj', detected/extracted 5 process function(s): 
+	 'Loop_loop_height_proc79'
+	 'xfrgb2ycrcb<1080, 1920>'
+	 'dualAryEqualize<1080, 1920, 256>'
+	 'xfycrcb2rgb<1080, 1920>'
+	 'Loop_loop_height_proc68'.
+Command         transform done; 2.166 sec.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin2 -bitwidthmin2 -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -barrier -norm-name F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/a.o.1.tmp.bc -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (source/contrastadj.cpp:75:6) in function 'dualAryEqualize<1080, 1920, 256>'... converting 8 basic blocks.
+Command         transform done; 4.044 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:15 ; elapsed = 00:00:32 . Memory (MB): peak = 998.449 ; gain = 880.051
+Execute         get_config_compile -enable_loop_extract 
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -aggr-aa -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin2 -bitwidthmin2 -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/a.o.2.bc -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_124_1' (source/contrastadj.cpp:123:15) in function 'xfycrcb2rgb<1080, 1920>'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_99_1' (source/contrastadj.cpp:98:15) in function 'xfrgb2ycrcb<1080, 1920>'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_51_2' (source/contrastadj.cpp:36:15) in function 'dualAryEqualize<1080, 1920, 256>'.
+INFO: [HLS 200-472] Inferring partial write operation for 'map.V' 
+WARNING: [HLS 200-631] Ignoring ap_ctrl_none interface for contrastadj due to Loop_loop_height_proc79 with non-FIFO I/O
+Command         transform done; 14.056 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:29 ; elapsed = 00:00:46 . Memory (MB): peak = 998.449 ; gain = 880.051
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 20.838 sec.
+Command     elaborate done; 44.837 sec.
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'contrastadj' ...
+Execute       ap_set_top_model contrastadj 
+WARNING: [SYN 201-103] Legalizing function name 'xfrgb2ycrcb<1080, 1920>' to 'xfrgb2ycrcb_1080_1920_s'.
+WARNING: [SYN 201-103] Legalizing function name 'dualAryEqualize<1080, 1920, 256>' to 'dualAryEqualize_1080_1920_256_s'.
+WARNING: [SYN 201-103] Legalizing function name 'xfycrcb2rgb<1080, 1920>' to 'xfycrcb2rgb_1080_1920_s'.
+Execute       get_model_list contrastadj -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model contrastadj 
+Execute       preproc_iomode -model Loop_loop_height_proc68 
+Execute       preproc_iomode -model xfycrcb2rgb<1080, 1920> 
+Execute       preproc_iomode -model dualAryEqualize<1080, 1920, 256> 
+Execute       preproc_iomode -model xfrgb2ycrcb<1080, 1920> 
+Execute       preproc_iomode -model Loop_loop_height_proc79 
+Execute       get_model_list contrastadj -filter all-wo-channel 
+INFO-FLOW: Model list for configure: Loop_loop_height_proc79 {xfrgb2ycrcb<1080, 1920>} {dualAryEqualize<1080, 1920, 256>} {xfycrcb2rgb<1080, 1920>} Loop_loop_height_proc68 contrastadj
+INFO-FLOW: Configuring Module : Loop_loop_height_proc79 ...
+Execute       set_default_model Loop_loop_height_proc79 
+Execute       apply_spec_resource_limit Loop_loop_height_proc79 
+INFO-FLOW: Configuring Module : xfrgb2ycrcb<1080, 1920> ...
+Execute       set_default_model xfrgb2ycrcb<1080, 1920> 
+Execute       apply_spec_resource_limit xfrgb2ycrcb<1080, 1920> 
+INFO-FLOW: Configuring Module : dualAryEqualize<1080, 1920, 256> ...
+Execute       set_default_model dualAryEqualize<1080, 1920, 256> 
+Execute       apply_spec_resource_limit dualAryEqualize<1080, 1920, 256> 
+INFO-FLOW: Configuring Module : xfycrcb2rgb<1080, 1920> ...
+Execute       set_default_model xfycrcb2rgb<1080, 1920> 
+Execute       apply_spec_resource_limit xfycrcb2rgb<1080, 1920> 
+INFO-FLOW: Configuring Module : Loop_loop_height_proc68 ...
+Execute       set_default_model Loop_loop_height_proc68 
+Execute       apply_spec_resource_limit Loop_loop_height_proc68 
+INFO-FLOW: Configuring Module : contrastadj ...
+Execute       set_default_model contrastadj 
+Execute       apply_spec_resource_limit contrastadj 
+INFO-FLOW: Model list for preprocess: Loop_loop_height_proc79 {xfrgb2ycrcb<1080, 1920>} {dualAryEqualize<1080, 1920, 256>} {xfycrcb2rgb<1080, 1920>} Loop_loop_height_proc68 contrastadj
+INFO-FLOW: Preprocessing Module: Loop_loop_height_proc79 ...
+Execute       set_default_model Loop_loop_height_proc79 
+Execute       cdfg_preprocess -model Loop_loop_height_proc79 
+Execute       rtl_gen_preprocess Loop_loop_height_proc79 
+INFO-FLOW: Preprocessing Module: xfrgb2ycrcb<1080, 1920> ...
+Execute       set_default_model xfrgb2ycrcb<1080, 1920> 
+Execute       cdfg_preprocess -model xfrgb2ycrcb<1080, 1920> 
+Execute       rtl_gen_preprocess xfrgb2ycrcb<1080, 1920> 
+INFO-FLOW: Preprocessing Module: dualAryEqualize<1080, 1920, 256> ...
+Execute       set_default_model dualAryEqualize<1080, 1920, 256> 
+Execute       cdfg_preprocess -model dualAryEqualize<1080, 1920, 256> 
+Command       cdfg_preprocess done; 2.515 sec.
+Execute       rtl_gen_preprocess dualAryEqualize<1080, 1920, 256> 
+INFO-FLOW: Preprocessing Module: xfycrcb2rgb<1080, 1920> ...
+Execute       set_default_model xfycrcb2rgb<1080, 1920> 
+Execute       cdfg_preprocess -model xfycrcb2rgb<1080, 1920> 
+Execute       rtl_gen_preprocess xfycrcb2rgb<1080, 1920> 
+INFO-FLOW: Preprocessing Module: Loop_loop_height_proc68 ...
+Execute       set_default_model Loop_loop_height_proc68 
+Execute       cdfg_preprocess -model Loop_loop_height_proc68 
+Execute       rtl_gen_preprocess Loop_loop_height_proc68 
+INFO-FLOW: Preprocessing Module: contrastadj ...
+Execute       set_default_model contrastadj 
+Execute       cdfg_preprocess -model contrastadj 
+Execute       rtl_gen_preprocess contrastadj 
+INFO-FLOW: Model list for synthesis: Loop_loop_height_proc79 {xfrgb2ycrcb<1080, 1920>} {dualAryEqualize<1080, 1920, 256>} {xfycrcb2rgb<1080, 1920>} Loop_loop_height_proc68 contrastadj
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Loop_loop_height_proc79' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model Loop_loop_height_proc79 
+Execute       schedule -model Loop_loop_height_proc79 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_width'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'loop_wait_for_eol'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 49.178 seconds; current allocated memory: 320.350 MB.
+Execute       syn_report -verbosereport -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/Loop_loop_height_proc79.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/Loop_loop_height_proc79.sched.adb -f 
+INFO-FLOW: Finish scheduling Loop_loop_height_proc79.
+Execute       set_default_model Loop_loop_height_proc79 
+Execute       bind -model Loop_loop_height_proc79 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.178 seconds; current allocated memory: 321.069 MB.
+Execute       syn_report -verbosereport -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/Loop_loop_height_proc79.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/Loop_loop_height_proc79.bind.adb -f 
+INFO-FLOW: Finish binding Loop_loop_height_proc79.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'xfrgb2ycrcb_1080_1920_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model xfrgb2ycrcb<1080, 1920> 
+Execute       schedule -model xfrgb2ycrcb<1080, 1920> 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP48 latency (root=CB) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=CR) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln852_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln852_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln852) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_99_1_VITIS_LOOP_101_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 10.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.117 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.271 seconds; current allocated memory: 321.276 MB.
+Execute       syn_report -verbosereport -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/xfrgb2ycrcb_1080_1920_s.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/xfrgb2ycrcb_1080_1920_s.sched.adb -f 
+INFO-FLOW: Finish scheduling xfrgb2ycrcb<1080, 1920>.
+Execute       set_default_model xfrgb2ycrcb<1080, 1920> 
+Execute       bind -model xfrgb2ycrcb<1080, 1920> 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.189 seconds; current allocated memory: 321.582 MB.
+Execute       syn_report -verbosereport -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/xfrgb2ycrcb_1080_1920_s.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/xfrgb2ycrcb_1080_1920_s.bind.adb -f 
+INFO-FLOW: Finish binding xfrgb2ycrcb<1080, 1920>.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dualAryEqualize_1080_1920_256_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model dualAryEqualize<1080, 1920, 256> 
+Execute       schedule -model dualAryEqualize<1080, 1920, 256> 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_44_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_51_2_VITIS_LOOP_53_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 4.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_77_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 35.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 4.987 sec.
+INFO: [HLS 200-111]  Elapsed time: 5.164 seconds; current allocated memory: 332.632 MB.
+Execute       syn_report -verbosereport -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/dualAryEqualize_1080_1920_256_s.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Command       syn_report done; 1.581 sec.
+Execute       db_write -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/dualAryEqualize_1080_1920_256_s.sched.adb -f 
+Command       db_write done; 2.142 sec.
+INFO-FLOW: Finish scheduling dualAryEqualize<1080, 1920, 256>.
+Execute       set_default_model dualAryEqualize<1080, 1920, 256> 
+Execute       bind -model dualAryEqualize<1080, 1920, 256> 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 2.565 sec.
+INFO: [HLS 200-111]  Elapsed time: 6.387 seconds; current allocated memory: 360.796 MB.
+Execute       syn_report -verbosereport -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/dualAryEqualize_1080_1920_256_s.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Command       syn_report done; 1.63 sec.
+Execute       db_write -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/dualAryEqualize_1080_1920_256_s.bind.adb -f 
+Command       db_write done; 2.322 sec.
+INFO-FLOW: Finish binding dualAryEqualize<1080, 1920, 256>.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'xfycrcb2rgb_1080_1920_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model xfycrcb2rgb<1080, 1920> 
+Execute       schedule -model xfycrcb2rgb<1080, 1920> 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP48 latency (root=B) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=H_G2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=H_G1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=R) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_124_1_VITIS_LOOP_126_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.11 sec.
+INFO: [HLS 200-111]  Elapsed time: 4.192 seconds; current allocated memory: 368.233 MB.
+Execute       syn_report -verbosereport -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/xfycrcb2rgb_1080_1920_s.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/xfycrcb2rgb_1080_1920_s.sched.adb -f 
+INFO-FLOW: Finish scheduling xfycrcb2rgb<1080, 1920>.
+Execute       set_default_model xfycrcb2rgb<1080, 1920> 
+Execute       bind -model xfycrcb2rgb<1080, 1920> 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.223 seconds; current allocated memory: 368.497 MB.
+Execute       syn_report -verbosereport -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/xfycrcb2rgb_1080_1920_s.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/xfycrcb2rgb_1080_1920_s.bind.adb -f 
+INFO-FLOW: Finish binding xfycrcb2rgb<1080, 1920>.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Loop_loop_height_proc68' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model Loop_loop_height_proc68 
+Execute       schedule -model Loop_loop_height_proc68 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_width'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.243 seconds; current allocated memory: 368.582 MB.
+Execute       syn_report -verbosereport -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/Loop_loop_height_proc68.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/Loop_loop_height_proc68.sched.adb -f 
+INFO-FLOW: Finish scheduling Loop_loop_height_proc68.
+Execute       set_default_model Loop_loop_height_proc68 
+Execute       bind -model Loop_loop_height_proc68 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.248 seconds; current allocated memory: 368.723 MB.
+Execute       syn_report -verbosereport -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/Loop_loop_height_proc68.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/Loop_loop_height_proc68.bind.adb -f 
+INFO-FLOW: Finish binding Loop_loop_height_proc68.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'contrastadj' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model contrastadj 
+Execute       schedule -model contrastadj 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 368.852 MB.
+Execute       syn_report -verbosereport -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.sched.adb -f 
+INFO-FLOW: Finish scheduling contrastadj.
+Execute       set_default_model contrastadj 
+Execute       bind -model contrastadj 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.3 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.437 seconds; current allocated memory: 369.094 MB.
+Execute       syn_report -verbosereport -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Command       syn_report done; 0.198 sec.
+Execute       db_write -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.bind.adb -f 
+INFO-FLOW: Finish binding contrastadj.
+Execute       get_model_list contrastadj -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess Loop_loop_height_proc79 
+Execute       rtl_gen_preprocess xfrgb2ycrcb<1080, 1920> 
+Execute       rtl_gen_preprocess dualAryEqualize<1080, 1920, 256> 
+Execute       rtl_gen_preprocess xfycrcb2rgb<1080, 1920> 
+Execute       rtl_gen_preprocess Loop_loop_height_proc68 
+Execute       rtl_gen_preprocess contrastadj 
+INFO-FLOW: Model list for RTL generation: Loop_loop_height_proc79 {xfrgb2ycrcb<1080, 1920>} {dualAryEqualize<1080, 1920, 256>} {xfycrcb2rgb<1080, 1920>} Loop_loop_height_proc68 contrastadj
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Loop_loop_height_proc79' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model Loop_loop_height_proc79 -top_prefix contrastadj_ -sub_prefix contrastadj_ -mg_file F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/Loop_loop_height_proc79.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_loop_height_proc79'.
+INFO: [HLS 200-111]  Elapsed time: 0.409 seconds; current allocated memory: 369.627 MB.
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.rtl_wrap.cfg.tcl 
+Execute       gen_rtl Loop_loop_height_proc79 -style xilinx -f -lang vhdl -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/syn/vhdl/contrastadj_Loop_loop_height_proc79 
+Execute       gen_rtl Loop_loop_height_proc79 -style xilinx -f -lang vlog -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/syn/verilog/contrastadj_Loop_loop_height_proc79 
+Execute       syn_report -csynth -model Loop_loop_height_proc79 -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/syn/report/Loop_loop_height_proc79_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       syn_report -rtlxml -model Loop_loop_height_proc79 -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/syn/report/Loop_loop_height_proc79_csynth.xml 
+Execute         get_solution -flow_target
+Execute           get_solution -flow_target 
+Execute       syn_report -verbosereport -model Loop_loop_height_proc79 -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/Loop_loop_height_proc79.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -model Loop_loop_height_proc79 -f -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/Loop_loop_height_proc79.adb 
+Execute       gen_tb_info Loop_loop_height_proc79 -p F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/Loop_loop_height_proc79 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'xfrgb2ycrcb_1080_1920_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model xfrgb2ycrcb<1080, 1920> -top_prefix contrastadj_ -sub_prefix contrastadj_ -mg_file F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/xfrgb2ycrcb_1080_1920_s.compgen.tcl 
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_13ns_8ns_22ns_22_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16ns_8ns_22ns_23_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_15ns_8ns_22_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_16ns_9s_25_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'xfrgb2ycrcb_1080_1920_s'.
+INFO: [HLS 200-111]  Elapsed time: 0.351 seconds; current allocated memory: 371.126 MB.
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.rtl_wrap.cfg.tcl 
+Execute       gen_rtl xfrgb2ycrcb<1080, 1920> -style xilinx -f -lang vhdl -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/syn/vhdl/contrastadj_xfrgb2ycrcb_1080_1920_s 
+Execute       gen_rtl xfrgb2ycrcb<1080, 1920> -style xilinx -f -lang vlog -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/syn/verilog/contrastadj_xfrgb2ycrcb_1080_1920_s 
+Execute       syn_report -csynth -model xfrgb2ycrcb<1080, 1920> -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/syn/report/xfrgb2ycrcb_1080_1920_s_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       syn_report -rtlxml -model xfrgb2ycrcb<1080, 1920> -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/syn/report/xfrgb2ycrcb_1080_1920_s_csynth.xml 
+Execute         get_solution -flow_target
+Execute           get_solution -flow_target 
+Execute       syn_report -verbosereport -model xfrgb2ycrcb<1080, 1920> -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/xfrgb2ycrcb_1080_1920_s.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -model xfrgb2ycrcb<1080, 1920> -f -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/xfrgb2ycrcb_1080_1920_s.adb 
+Execute       gen_tb_info xfrgb2ycrcb<1080, 1920> -p F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/xfrgb2ycrcb_1080_1920_s 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dualAryEqualize_1080_1920_256_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model dualAryEqualize<1080, 1920, 256> -top_prefix contrastadj_ -sub_prefix contrastadj_ -mg_file F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/dualAryEqualize_1080_1920_256_s.compgen.tcl 
+INFO: [RTGEN 206-104] Estimated max fanout for 'dualAryEqualize_1080_1920_256_s' is 16406 from HDL expression: (1'b1 == ap_CS_fsm_state3)
+INFO: [RTGEN 206-100] Generating core module 'dadd_64ns_64ns_64_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_6_max_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fpext_32ns_64_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fptrunc_64ns_32_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fsub_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_34ns_32s_65_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_2568_32_1_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sitodp_32ns_64_4_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sitofp_32ns_32_4_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dualAryEqualize_1080_1920_256_s'.
+Command       create_rtl_model done; 2.08 sec.
+INFO: [HLS 200-111]  Elapsed time: 2.407 seconds; current allocated memory: 388.427 MB.
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.rtl_wrap.cfg.tcl 
+Execute       gen_rtl dualAryEqualize<1080, 1920, 256> -style xilinx -f -lang vhdl -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/syn/vhdl/contrastadj_dualAryEqualize_1080_1920_256_s 
+Execute       gen_rtl dualAryEqualize<1080, 1920, 256> -style xilinx -f -lang vlog -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/syn/verilog/contrastadj_dualAryEqualize_1080_1920_256_s 
+Execute       syn_report -csynth -model dualAryEqualize<1080, 1920, 256> -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/syn/report/dualAryEqualize_1080_1920_256_s_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Command       syn_report done; 0.167 sec.
+Execute       syn_report -rtlxml -model dualAryEqualize<1080, 1920, 256> -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/syn/report/dualAryEqualize_1080_1920_256_s_csynth.xml 
+Execute         get_solution -flow_target
+Execute           get_solution -flow_target 
+Execute       syn_report -verbosereport -model dualAryEqualize<1080, 1920, 256> -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/dualAryEqualize_1080_1920_256_s.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Command       syn_report done; 1.723 sec.
+Execute       db_write -model dualAryEqualize<1080, 1920, 256> -f -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/dualAryEqualize_1080_1920_256_s.adb 
+Command       db_write done; 2.495 sec.
+Execute       gen_tb_info dualAryEqualize<1080, 1920, 256> -p F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/dualAryEqualize_1080_1920_256_s 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'xfycrcb2rgb_1080_1920_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model xfycrcb2rgb<1080, 1920> -top_prefix contrastadj_ -sub_prefix contrastadj_ -mg_file F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/xfycrcb2rgb_1080_1920_s.compgen.tcl 
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_15ns_8s_23_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_16ns_8s_24_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_17ns_8s_25_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'xfycrcb2rgb_1080_1920_s'.
+INFO: [HLS 200-111]  Elapsed time: 6.234 seconds; current allocated memory: 438.730 MB.
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.rtl_wrap.cfg.tcl 
+Execute       gen_rtl xfycrcb2rgb<1080, 1920> -style xilinx -f -lang vhdl -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/syn/vhdl/contrastadj_xfycrcb2rgb_1080_1920_s 
+Execute       gen_rtl xfycrcb2rgb<1080, 1920> -style xilinx -f -lang vlog -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/syn/verilog/contrastadj_xfycrcb2rgb_1080_1920_s 
+Execute       syn_report -csynth -model xfycrcb2rgb<1080, 1920> -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/syn/report/xfycrcb2rgb_1080_1920_s_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       syn_report -rtlxml -model xfycrcb2rgb<1080, 1920> -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/syn/report/xfycrcb2rgb_1080_1920_s_csynth.xml 
+Execute         get_solution -flow_target
+Execute           get_solution -flow_target 
+Execute       syn_report -verbosereport -model xfycrcb2rgb<1080, 1920> -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/xfycrcb2rgb_1080_1920_s.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -model xfycrcb2rgb<1080, 1920> -f -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/xfycrcb2rgb_1080_1920_s.adb 
+Execute       gen_tb_info xfycrcb2rgb<1080, 1920> -p F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/xfycrcb2rgb_1080_1920_s 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Loop_loop_height_proc68' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model Loop_loop_height_proc68 -top_prefix contrastadj_ -sub_prefix contrastadj_ -mg_file F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/Loop_loop_height_proc68.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_loop_height_proc68'.
+INFO: [HLS 200-111]  Elapsed time: 0.397 seconds; current allocated memory: 439.896 MB.
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.rtl_wrap.cfg.tcl 
+Execute       gen_rtl Loop_loop_height_proc68 -style xilinx -f -lang vhdl -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/syn/vhdl/contrastadj_Loop_loop_height_proc68 
+Execute       gen_rtl Loop_loop_height_proc68 -style xilinx -f -lang vlog -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/syn/verilog/contrastadj_Loop_loop_height_proc68 
+Execute       syn_report -csynth -model Loop_loop_height_proc68 -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/syn/report/Loop_loop_height_proc68_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       syn_report -rtlxml -model Loop_loop_height_proc68 -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/syn/report/Loop_loop_height_proc68_csynth.xml 
+Execute         get_solution -flow_target
+Execute           get_solution -flow_target 
+Execute       syn_report -verbosereport -model Loop_loop_height_proc68 -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/Loop_loop_height_proc68.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -model Loop_loop_height_proc68 -f -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/Loop_loop_height_proc68.adb 
+Execute       gen_tb_info Loop_loop_height_proc68 -p F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/Loop_loop_height_proc68 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'contrastadj' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model contrastadj -top_prefix  -sub_prefix contrastadj_ -mg_file F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.compgen.tcl 
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'contrastadj/src_axi_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'contrastadj/src_axi_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'contrastadj/src_axi_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'contrastadj/src_axi_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'contrastadj/src_axi_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'contrastadj/src_axi_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'contrastadj/src_axi_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'contrastadj/dst_axi_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'contrastadj/dst_axi_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'contrastadj/dst_axi_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'contrastadj/dst_axi_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'contrastadj/dst_axi_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'contrastadj/dst_axi_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'contrastadj/dst_axi_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'contrastadj/adj' to 'ap_vld' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'contrastadj' to 'ap_ctrl_none'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'contrastadj'.
+Command       create_rtl_model done; 0.224 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.529 seconds; current allocated memory: 440.897 MB.
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.rtl_wrap.cfg.tcl 
+Execute       gen_rtl contrastadj -istop -style xilinx -f -lang vhdl -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/syn/vhdl/contrastadj 
+Execute       gen_rtl contrastadj -istop -style xilinx -f -lang vlog -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/syn/verilog/contrastadj 
+Execute       syn_report -csynth -model contrastadj -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/syn/report/contrastadj_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       syn_report -rtlxml -model contrastadj -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/syn/report/contrastadj_csynth.xml 
+Execute         get_solution -flow_target
+Execute           get_solution -flow_target 
+Execute       syn_report -verbosereport -model contrastadj -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Command       syn_report done; 0.201 sec.
+Execute       db_write -model contrastadj -f -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.adb 
+Execute       gen_tb_info contrastadj -p F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj 
+Execute       export_constraint_db -f -tool general -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.constraint.tcl 
+Execute       syn_report -designview -model contrastadj -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.design.xml 
+Command       syn_report done; 0.206 sec.
+Execute       get_config_rtl -disable_wave_debug 
+Execute       syn_report -wcfg -model contrastadj -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj_dataflow_ana.wcfg 
+Execute       syn_report -protoinst -model contrastadj -o F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.protoinst 
+Execute       get_config_debug -directory 
+Execute       sc_get_clocks contrastadj 
+Execute       get_config_export -vivado_clock 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       sc_get_portdomain contrastadj 
+INFO-FLOW: Model list for RTL component generation: Loop_loop_height_proc79 {xfrgb2ycrcb<1080, 1920>} {dualAryEqualize<1080, 1920, 256>} {xfycrcb2rgb<1080, 1920>} Loop_loop_height_proc68 contrastadj
+INFO-FLOW: Handling components in module [Loop_loop_height_proc79] ... 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/Loop_loop_height_proc79.compgen.tcl 
+INFO-FLOW: Found component regslice_core.
+INFO-FLOW: Append model regslice_core
+INFO-FLOW: Handling components in module [xfrgb2ycrcb_1080_1920_s] ... 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/xfrgb2ycrcb_1080_1920_s.compgen.tcl 
+INFO-FLOW: Found component contrastadj_mul_mul_15ns_8ns_22_4_1.
+INFO-FLOW: Append model contrastadj_mul_mul_15ns_8ns_22_4_1
+INFO-FLOW: Found component contrastadj_mac_muladd_13ns_8ns_22ns_22_4_1.
+INFO-FLOW: Append model contrastadj_mac_muladd_13ns_8ns_22ns_22_4_1
+INFO-FLOW: Found component contrastadj_mac_muladd_16ns_8ns_22ns_23_4_1.
+INFO-FLOW: Append model contrastadj_mac_muladd_16ns_8ns_22ns_23_4_1
+INFO-FLOW: Found component contrastadj_mul_mul_16ns_9s_25_4_1.
+INFO-FLOW: Append model contrastadj_mul_mul_16ns_9s_25_4_1
+INFO-FLOW: Handling components in module [dualAryEqualize_1080_1920_256_s] ... 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/dualAryEqualize_1080_1920_256_s.compgen.tcl 
+INFO-FLOW: Found component contrastadj_fsub_32ns_32ns_32_5_full_dsp_1.
+INFO-FLOW: Append model contrastadj_fsub_32ns_32ns_32_5_full_dsp_1
+INFO-FLOW: Found component contrastadj_sitofp_32ns_32_4_no_dsp_1.
+INFO-FLOW: Append model contrastadj_sitofp_32ns_32_4_no_dsp_1
+INFO-FLOW: Found component contrastadj_fptrunc_64ns_32_2_no_dsp_1.
+INFO-FLOW: Append model contrastadj_fptrunc_64ns_32_2_no_dsp_1
+INFO-FLOW: Found component contrastadj_fpext_32ns_64_2_no_dsp_1.
+INFO-FLOW: Append model contrastadj_fpext_32ns_64_2_no_dsp_1
+INFO-FLOW: Found component contrastadj_fcmp_32ns_32ns_1_2_no_dsp_1.
+INFO-FLOW: Append model contrastadj_fcmp_32ns_32ns_1_2_no_dsp_1
+INFO-FLOW: Found component contrastadj_dadd_64ns_64ns_64_5_full_dsp_1.
+INFO-FLOW: Append model contrastadj_dadd_64ns_64ns_64_5_full_dsp_1
+INFO-FLOW: Found component contrastadj_dmul_64ns_64ns_64_6_max_dsp_1.
+INFO-FLOW: Append model contrastadj_dmul_64ns_64ns_64_6_max_dsp_1
+INFO-FLOW: Found component contrastadj_sitodp_32ns_64_4_no_dsp_1.
+INFO-FLOW: Append model contrastadj_sitodp_32ns_64_4_no_dsp_1
+INFO-FLOW: Found component contrastadj_mux_2568_32_1_1.
+INFO-FLOW: Append model contrastadj_mux_2568_32_1_1
+INFO-FLOW: Found component contrastadj_mul_34ns_32s_65_1_1.
+INFO-FLOW: Append model contrastadj_mul_34ns_32s_65_1_1
+INFO-FLOW: Found component contrastadj_dualAryEqualize_1080_1920_256_s_map_V.
+INFO-FLOW: Append model contrastadj_dualAryEqualize_1080_1920_256_s_map_V
+INFO-FLOW: Handling components in module [xfycrcb2rgb_1080_1920_s] ... 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/xfycrcb2rgb_1080_1920_s.compgen.tcl 
+INFO-FLOW: Found component contrastadj_mul_mul_17ns_8s_25_4_1.
+INFO-FLOW: Append model contrastadj_mul_mul_17ns_8s_25_4_1
+INFO-FLOW: Found component contrastadj_mul_mul_16ns_8s_24_4_1.
+INFO-FLOW: Append model contrastadj_mul_mul_16ns_8s_24_4_1
+INFO-FLOW: Found component contrastadj_mul_mul_15ns_8s_23_4_1.
+INFO-FLOW: Append model contrastadj_mul_mul_15ns_8s_23_4_1
+INFO-FLOW: Handling components in module [Loop_loop_height_proc68] ... 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/Loop_loop_height_proc68.compgen.tcl 
+INFO-FLOW: Found component regslice_core.
+INFO-FLOW: Append model regslice_core
+INFO-FLOW: Handling components in module [contrastadj] ... 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.compgen.tcl 
+INFO-FLOW: Found component contrastadj_fifo_w24_d2_S.
+INFO-FLOW: Append model contrastadj_fifo_w24_d2_S
+INFO-FLOW: Found component contrastadj_fifo_w32_d3_S.
+INFO-FLOW: Append model contrastadj_fifo_w32_d3_S
+INFO-FLOW: Found component contrastadj_fifo_w24_d2_S.
+INFO-FLOW: Append model contrastadj_fifo_w24_d2_S
+INFO-FLOW: Found component contrastadj_fifo_w24_d2_S.
+INFO-FLOW: Append model contrastadj_fifo_w24_d2_S
+INFO-FLOW: Found component contrastadj_fifo_w24_d2_S.
+INFO-FLOW: Append model contrastadj_fifo_w24_d2_S
+INFO-FLOW: Found component contrastadj_start_for_xfrgb2ycrcb_1080_1920_U0.
+INFO-FLOW: Append model contrastadj_start_for_xfrgb2ycrcb_1080_1920_U0
+INFO-FLOW: Found component contrastadj_start_for_dualAryEqualize_1080_1920_256_U0.
+INFO-FLOW: Append model contrastadj_start_for_dualAryEqualize_1080_1920_256_U0
+INFO-FLOW: Found component contrastadj_start_for_xfycrcb2rgb_1080_1920_U0.
+INFO-FLOW: Append model contrastadj_start_for_xfycrcb2rgb_1080_1920_U0
+INFO-FLOW: Found component contrastadj_start_for_Loop_loop_height_proc68_U0.
+INFO-FLOW: Append model contrastadj_start_for_Loop_loop_height_proc68_U0
+INFO-FLOW: Found component regslice_core.
+INFO-FLOW: Append model regslice_core
+INFO-FLOW: Append model Loop_loop_height_proc79
+INFO-FLOW: Append model xfrgb2ycrcb_1080_1920_s
+INFO-FLOW: Append model dualAryEqualize_1080_1920_256_s
+INFO-FLOW: Append model xfycrcb2rgb_1080_1920_s
+INFO-FLOW: Append model Loop_loop_height_proc68
+INFO-FLOW: Append model contrastadj
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: regslice_core contrastadj_mul_mul_15ns_8ns_22_4_1 contrastadj_mac_muladd_13ns_8ns_22ns_22_4_1 contrastadj_mac_muladd_16ns_8ns_22ns_23_4_1 contrastadj_mul_mul_16ns_9s_25_4_1 contrastadj_fsub_32ns_32ns_32_5_full_dsp_1 contrastadj_sitofp_32ns_32_4_no_dsp_1 contrastadj_fptrunc_64ns_32_2_no_dsp_1 contrastadj_fpext_32ns_64_2_no_dsp_1 contrastadj_fcmp_32ns_32ns_1_2_no_dsp_1 contrastadj_dadd_64ns_64ns_64_5_full_dsp_1 contrastadj_dmul_64ns_64ns_64_6_max_dsp_1 contrastadj_sitodp_32ns_64_4_no_dsp_1 contrastadj_mux_2568_32_1_1 contrastadj_mul_34ns_32s_65_1_1 contrastadj_dualAryEqualize_1080_1920_256_s_map_V contrastadj_mul_mul_17ns_8s_25_4_1 contrastadj_mul_mul_16ns_8s_24_4_1 contrastadj_mul_mul_15ns_8s_23_4_1 regslice_core contrastadj_fifo_w24_d2_S contrastadj_fifo_w32_d3_S contrastadj_fifo_w24_d2_S contrastadj_fifo_w24_d2_S contrastadj_fifo_w24_d2_S contrastadj_start_for_xfrgb2ycrcb_1080_1920_U0 contrastadj_start_for_dualAryEqualize_1080_1920_256_U0 contrastadj_start_for_xfycrcb2rgb_1080_1920_U0 contrastadj_start_for_Loop_loop_height_proc68_U0 regslice_core Loop_loop_height_proc79 xfrgb2ycrcb_1080_1920_s dualAryEqualize_1080_1920_256_s xfycrcb2rgb_1080_1920_s Loop_loop_height_proc68 contrastadj
+INFO-FLOW: To file: write model regslice_core
+INFO-FLOW: To file: write model contrastadj_mul_mul_15ns_8ns_22_4_1
+INFO-FLOW: To file: write model contrastadj_mac_muladd_13ns_8ns_22ns_22_4_1
+INFO-FLOW: To file: write model contrastadj_mac_muladd_16ns_8ns_22ns_23_4_1
+INFO-FLOW: To file: write model contrastadj_mul_mul_16ns_9s_25_4_1
+INFO-FLOW: To file: write model contrastadj_fsub_32ns_32ns_32_5_full_dsp_1
+INFO-FLOW: To file: write model contrastadj_sitofp_32ns_32_4_no_dsp_1
+INFO-FLOW: To file: write model contrastadj_fptrunc_64ns_32_2_no_dsp_1
+INFO-FLOW: To file: write model contrastadj_fpext_32ns_64_2_no_dsp_1
+INFO-FLOW: To file: write model contrastadj_fcmp_32ns_32ns_1_2_no_dsp_1
+INFO-FLOW: To file: write model contrastadj_dadd_64ns_64ns_64_5_full_dsp_1
+INFO-FLOW: To file: write model contrastadj_dmul_64ns_64ns_64_6_max_dsp_1
+INFO-FLOW: To file: write model contrastadj_sitodp_32ns_64_4_no_dsp_1
+INFO-FLOW: To file: write model contrastadj_mux_2568_32_1_1
+INFO-FLOW: To file: write model contrastadj_mul_34ns_32s_65_1_1
+INFO-FLOW: To file: write model contrastadj_dualAryEqualize_1080_1920_256_s_map_V
+INFO-FLOW: To file: write model contrastadj_mul_mul_17ns_8s_25_4_1
+INFO-FLOW: To file: write model contrastadj_mul_mul_16ns_8s_24_4_1
+INFO-FLOW: To file: write model contrastadj_mul_mul_15ns_8s_23_4_1
+INFO-FLOW: To file: write model regslice_core
+INFO-FLOW: To file: write model contrastadj_fifo_w24_d2_S
+INFO-FLOW: To file: write model contrastadj_fifo_w32_d3_S
+INFO-FLOW: To file: write model contrastadj_fifo_w24_d2_S
+INFO-FLOW: To file: write model contrastadj_fifo_w24_d2_S
+INFO-FLOW: To file: write model contrastadj_fifo_w24_d2_S
+INFO-FLOW: To file: write model contrastadj_start_for_xfrgb2ycrcb_1080_1920_U0
+INFO-FLOW: To file: write model contrastadj_start_for_dualAryEqualize_1080_1920_256_U0
+INFO-FLOW: To file: write model contrastadj_start_for_xfycrcb2rgb_1080_1920_U0
+INFO-FLOW: To file: write model contrastadj_start_for_Loop_loop_height_proc68_U0
+INFO-FLOW: To file: write model regslice_core
+INFO-FLOW: To file: write model Loop_loop_height_proc79
+INFO-FLOW: To file: write model xfrgb2ycrcb_1080_1920_s
+INFO-FLOW: To file: write model dualAryEqualize_1080_1920_256_s
+INFO-FLOW: To file: write model xfycrcb2rgb_1080_1920_s
+INFO-FLOW: To file: write model Loop_loop_height_proc68
+INFO-FLOW: To file: write model contrastadj
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+Execute       get_top 
+Execute       get_config_export -ipname 
+Execute       get_config_export -xo 
+Execute       get_config_export -format 
+Execute       get_config_rtl -module_auto_prefix 
+INFO-FLOW: DBG:CMD:   auto_impl: set ipname to top (module_auto_prefix): contrastadj
+INFO-FLOW: DBG:CMD: auto_generate_csynth_design
+INFO-FLOW: DBG:CMD:     auto_generate --sim-model -phase csynth_design -d F:/course_s3_hls/hls/contrastadj/contrastadj/solution1
+Execute       get_solution -flow_target 
+Execute       get_config_export -xo 
+Execute       get_config_export -format 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/global.setting.tcl
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/common.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/op.gen 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/interface.gen 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute             source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/util.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.112 sec.
+Command       ap_source done; 0.112 sec.
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=1 export=0 expOnly=0 dstVlogDir=syn/verilog
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/Loop_loop_height_proc79.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/xfrgb2ycrcb_1080_1920_s.compgen.tcl 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Command       ap_source done; 0.281 sec.
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/dualAryEqualize_1080_1920_256_s.compgen.tcl 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+INFO: [RTMG 210-282] Generating pipelined core: 'contrastadj_mul_34ns_32s_65_1_1_Multiplier_0'
+INFO: [RTMG 210-278] Implementing memory 'contrastadj_dualAryEqualize_1080_1920_256_s_map_V_ram (RAM)' using block RAMs with power-on initialization.
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Command       ap_source done; 0.768 sec.
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/xfycrcb2rgb_1080_1920_s.compgen.tcl 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Command       ap_source done; 0.253 sec.
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/Loop_loop_height_proc68.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.compgen.tcl 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'img1_data_U(contrastadj_fifo_w24_d2_S)' using Shift Registers.
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'adj_c_U(contrastadj_fifo_w32_d3_S)' using Shift Registers.
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'img2_data_U(contrastadj_fifo_w24_d2_S)' using Shift Registers.
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'img3_data_U(contrastadj_fifo_w24_d2_S)' using Shift Registers.
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'img4_data_U(contrastadj_fifo_w24_d2_S)' using Shift Registers.
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_xfrgb2ycrcb_1080_1920_U0_U(contrastadj_start_for_xfrgb2ycrcb_1080_1920_U0)' using Shift Registers.
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_dualAryEqualize_1080_1920_256_U0_U(contrastadj_start_for_dualAryEqualize_1080_1920_256_U0)' using Shift Registers.
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_xfycrcb2rgb_1080_1920_U0_U(contrastadj_start_for_xfycrcb2rgb_1080_1920_U0)' using Shift Registers.
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_Loop_loop_height_proc68_U0_U(contrastadj_start_for_Loop_loop_height_proc68_U0)' using Shift Registers.
+Command       ap_source done; 0.424 sec.
+INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d F:/course_s3_hls/hls/contrastadj/contrastadj/solution1
+Execute       get_solution -flow_target 
+Execute       get_config_export -xo 
+Execute       get_config_export -format 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/global.setting.tcl
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/common.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/op.gen 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/interface.gen 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute             source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/util.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.11 sec.
+Command       ap_source done; 0.11 sec.
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=contrastadj xml_exists=0
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.rtl_wrap.cfg.tcl 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.rtl_wrap.cfg.tcl 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.rtl_wrap.cfg.tcl 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.tbgen.tcl 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/Loop_loop_height_proc79.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/xfrgb2ycrcb_1080_1920_s.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/dualAryEqualize_1080_1920_256_s.compgen.tcl 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Command       ap_source done; 0.292 sec.
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/xfycrcb2rgb_1080_1920_s.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/Loop_loop_height_proc68.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/Loop_loop_height_proc79.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/xfrgb2ycrcb_1080_1920_s.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/dualAryEqualize_1080_1920_256_s.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/xfycrcb2rgb_1080_1920_s.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/Loop_loop_height_proc68.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.compgen.tcl 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Command       ap_source done; 0.147 sec.
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/Loop_loop_height_proc79.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/xfrgb2ycrcb_1080_1920_s.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/dualAryEqualize_1080_1920_256_s.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/xfycrcb2rgb_1080_1920_s.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/Loop_loop_height_proc68.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.compgen.tcl 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.constraint.tcl 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=30
+INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=15
+INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=1 #modelList=36 #gSsdmPorts=30
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/tps/tcl/tcllib1.11.1/fileutil/fileutil.tcl 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/top-io-be.tcl 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.tbgen.tcl 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.rtl_wrap.cfg.tcl 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.compgen.dataonly.tcl 
+Execute       get_config_export -format 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/Loop_loop_height_proc79.tbgen.tcl 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/xfrgb2ycrcb_1080_1920_s.tbgen.tcl 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/dualAryEqualize_1080_1920_256_s.tbgen.tcl 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/xfycrcb2rgb_1080_1920_s.tbgen.tcl 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/Loop_loop_height_proc68.tbgen.tcl 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.tbgen.tcl 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute       get_solution -flow_target 
+Execute       get_config_rtl -kernel_profile 
+Execute       get_config_rtl -kernel_profile 
+Execute       get_config_rtl -stall_sig_gen 
+Execute       get_config_rtl -profile 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.constraint.tcl 
+Execute       sc_get_clocks contrastadj 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_debug -directory 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/impl/misc/contrastadj_ap_dadd_3_full_dsp_64_ip.tcl 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/impl/misc/contrastadj_ap_dmul_4_max_dsp_64_ip.tcl 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/impl/misc/contrastadj_ap_fcmp_0_no_dsp_32_ip.tcl 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/impl/misc/contrastadj_ap_fpext_0_no_dsp_32_ip.tcl 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/impl/misc/contrastadj_ap_fptrunc_0_no_dsp_64_ip.tcl 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/impl/misc/contrastadj_ap_fsub_3_full_dsp_32_ip.tcl 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/impl/misc/contrastadj_ap_sitodp_2_no_dsp_32_ip.tcl 
+Execute       source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/impl/misc/contrastadj_ap_sitofp_2_no_dsp_32_ip.tcl 
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:59 ; elapsed = 00:01:22 . Memory (MB): peak = 998.449 ; gain = 880.051
+INFO: [VHDL 208-304] Generating VHDL RTL for contrastadj.
+INFO: [VLOG 209-307] Generating Verilog RTL for contrastadj.
+Execute       syn_report -model contrastadj -printsummary 
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 138.48 MHz
+Command     autosyn done; 35.81 sec.
+Command   csynth_design done; 80.653 sec.
+Command ap_source done; 81.935 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace F:/course_s3_hls/hls/contrastadj/contrastadj/solution1 opened at Mon Nov 02 15:23:11 +0800 2020
+Execute     ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/zynquplus 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx.lib 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/dsp48.lib 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/dsp48e2.hlp 
+Execute     source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/util.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.116 sec.
+Command     ap_source done; 0.116 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/zynquplus_fpv7 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute             source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute     source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     set_part xczu3eg-sfvc784-1-i 
+INFO-FLOW: DBG:set_part: XILINX_VIVADO=F:/xilinx_2020.1/Vivado/2020.1
+INFO-FLOW: DBG:set_part: RDI_DATADIR=F:/xilinx_2020.1/Vivado/2020.1/data;F:/xilinx_2020.1/Vitis/2020.1/data
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data single -quiet 
+DBG:HLSDevice: Trying to load device library: F:/xilinx_2020.1/Vitis/2020.1\lib\win64.o\librdi_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: F:/xilinx_2020.1/Vivado/2020.1/data/parts/arch.xml
+Command       ap_part_info done; 0.839 sec.
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info 
+Execute       ap_family_info -name zynquplus -data info 
+Execute       add_library xilinx/zynquplus/zynquplus:xczu3eg:-sfvc784:-1-i 
+Execute         get_default_platform 
+Execute         ap_part_info -data single -name xczu3eg-sfvc784-1-i 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data resources 
+Execute         config_chip_info -resource {SLICE 8820} {LUT 70560} {FF 141120} {DSP 360} {BRAM 432} {URAM 0} 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info 
+Execute         config_chip_info -speed slow 
+Execute       add_library xilinx/zynquplus/zynquplus_fpv7 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xczu3eg-sfvc784-1-i'
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info 
+Execute       get_default_platform 
+Command     set_part done; 0.94 sec.
+Execute     ap_part_info -data single -name xczu3eg-sfvc784-1-i 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data resources 
+Execute     config_chip_info -resource {SLICE 8820} {LUT 70560} {FF 141120} {DSP 360} {BRAM 432} {URAM 0} 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info 
+Execute     config_chip_info -speed slow 
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     get_config_interface -m_axi_latency 
+Execute     get_config_interface -m_axi_alignment_byte_size 
+Execute     get_config_interface -m_axi_max_widen_bitwidth 
+Execute     get_config_interface -default_interface 
+Execute     get_config_interface -default_slave_interface 
+Execute     get_config_rtl -register_reset_num 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -vivado_optimization_level=0 
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_optimization_level=0
+Execute     config_export -vivado_optimization_level=0 
+Execute       get_config_export -vivado_impl_strategy 
+Execute       get_config_export -vivado_phys_opt 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -format=ip_catalog 
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+Execute     config_export -format=ip_catalog 
+Execute       get_config_export -vivado_impl_strategy 
+Execute       get_config_export -vivado_phys_opt 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -output=F:/zynqUltraScale_vitis/course_s3_hls/hls/contrastadj/contrastadj.zip 
+INFO: [HLS 200-1464] Running solution command: config_export -output=F:/zynqUltraScale_vitis/course_s3_hls/hls/contrastadj/contrastadj.zip
+Execute     config_export -output=F:/zynqUltraScale_vitis/course_s3_hls/hls/contrastadj/contrastadj.zip 
+Execute       get_config_export -vivado_impl_strategy 
+Execute       get_config_export -vivado_phys_opt 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -rtl=verilog 
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+Execute     config_export -rtl=verilog 
+Execute       get_config_export -vivado_impl_strategy 
+Execute       get_config_export -vivado_phys_opt 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -vivado_phys_opt=none 
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_phys_opt=none
+Execute     config_export -vivado_phys_opt=none 
+Execute       get_config_export -vivado_impl_strategy 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -vivado_report_level=0 
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_report_level=0
+Execute     config_export -vivado_report_level=0 
+Execute       get_config_export -vivado_impl_strategy 
+Command   open_solution done; 1.127 sec.
+Execute   set_part xczu3eg-sfvc784-1-i 
+INFO-FLOW: DBG:set_part: XILINX_VIVADO=F:/xilinx_2020.1/Vivado/2020.1
+INFO-FLOW: DBG:set_part: RDI_DATADIR=F:/xilinx_2020.1/Vivado/2020.1/data;F:/xilinx_2020.1/Vitis/2020.1/data
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data single -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info 
+Execute     ap_family_info -name zynquplus -data info 
+Execute     add_library xilinx/zynquplus/zynquplus:xczu3eg:-sfvc784:-1-i 
+Execute       get_default_platform 
+Execute       ap_part_info -data single -name xczu3eg-sfvc784-1-i 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data resources 
+Execute       config_chip_info -resource {SLICE 8820} {LUT 70560} {FF 141120} {DSP 360} {BRAM 432} {URAM 0} 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info 
+Execute       config_chip_info -speed slow 
+Execute     add_library xilinx/zynquplus/zynquplus_fpv7 
+Execute       get_default_platform 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info 
+Execute     get_default_platform 
+Command   set_part done; 0.102 sec.
+Execute   create_clock -period 10 -name default 
+Execute   config_export -format ip_catalog -output F:/zynqUltraScale_vitis/course_s3_hls/hls/contrastadj/contrastadj.zip -rtl verilog -vivado_optimization_level 0 -vivado_phys_opt none -vivado_report_level 0 
+Execute     get_config_export -vivado_impl_strategy 
+Execute   source ./contrastadj/solution1/directives.tcl 
+Execute     set_directive_top -name contrastadj contrastadj 
+INFO-FLOW: Setting directive 'TOP' name=contrastadj 
+Execute     set_directive_interface -mode ap_none contrastadj dst_axi_user 
+INFO-FLOW: Setting directive 'TOP' name=contrastadj 
+INFO-FLOW: Setting directive 'INTERFACE' ap_none=positionBoolean0mode port=positionBooleanTextRequireddst_axi_user 
+Execute     set_directive_interface -mode ap_none contrastadj dst_axi_last 
+INFO-FLOW: Setting directive 'TOP' name=contrastadj 
+INFO-FLOW: Setting directive 'INTERFACE' ap_none=positionBoolean0mode port=positionBooleanTextRequireddst_axi_user 
+INFO-FLOW: Setting directive 'INTERFACE' ap_none=positionBoolean0mode port=positionBooleanTextRequireddst_axi_last 
+Execute     set_directive_interface -mode ap_none contrastadj dst_axi_keep 
+INFO-FLOW: Setting directive 'TOP' name=contrastadj 
+INFO-FLOW: Setting directive 'INTERFACE' ap_none=positionBoolean0mode port=positionBooleanTextRequireddst_axi_user 
+INFO-FLOW: Setting directive 'INTERFACE' ap_none=positionBoolean0mode port=positionBooleanTextRequireddst_axi_last 
+INFO-FLOW: Setting directive 'INTERFACE' ap_none=positionBoolean0mode port=positionBooleanTextRequireddst_axi_keep 
+Execute   export_design -rtl verilog -format ip_catalog -output F:/zynqUltraScale_vitis/course_s3_hls/hls/contrastadj/contrastadj.zip 
+Execute     get_config_export -clock_margin 
+Execute     get_config_export -custom_script 
+Execute     get_config_export -description 
+Execute     get_config_export -display_name 
+Execute     get_config_export -driver_input_dir 
+Execute     get_config_export -ipname 
+Execute     get_config_export -library 
+Execute     get_config_export -qor_test 
+Execute     get_config_export -sim 
+Execute     get_config_export -taxonomy 
+Execute     get_config_export -use_ip 
+Execute     get_config_export -use_netlist 
+Execute     get_config_export -vendor 
+Execute     get_config_export -version 
+Execute     get_config_export -xo 
+Execute     config_export -format=ip_catalog -output=F:/zynqUltraScale_vitis/course_s3_hls/hls/contrastadj/contrastadj.zip -rtl=verilog 
+Execute       get_config_export -vivado_impl_strategy 
+INFO-FLOW: DBG:CMD: export_design_wrap: -format ip_catalog -rtl verilog
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/global.setting.tcl 
+Execute     get_config_export -vivado_clock 
+Execute     get_top 
+Execute     get_config_export -ipname 
+Execute     get_config_export -xo 
+Execute     get_config_export -format 
+Execute     get_config_rtl -module_auto_prefix 
+INFO-FLOW: DBG:CMD:   auto_impl: set ipname to top (module_auto_prefix): contrastadj
+Execute     get_solution -flow_target 
+Execute     get_config_export -xo 
+Execute     get_config_export -format 
+INFO-FLOW: DBG:CMD:   auto_impl: pack: -export -rtl verilog
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: automg_wrap -export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag
+INFO-FLOW: DBG:CMD:     auto_generate -export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag
+Execute     get_solution -flow_target 
+Execute     get_config_export -xo 
+Execute     get_config_export -format 
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/global.setting.tcl
+Execute     source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/common.gen 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/op.gen 
+Execute     source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/interface.gen 
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/global.setting.tcl 
+Execute     source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/util.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.111 sec.
+Command     ap_source done; 0.111 sec.
+Execute     source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=contrastadj xml_exists=1
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.rtl_wrap.cfg.tcl 
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.rtl_wrap.cfg.tcl 
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.rtl_wrap.cfg.tcl 
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.tbgen.tcl 
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/global.setting.tcl 
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/Loop_loop_height_proc79.compgen.tcl 
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/xfrgb2ycrcb_1080_1920_s.compgen.tcl 
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/dualAryEqualize_1080_1920_256_s.compgen.tcl 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Command     ap_source done; 0.386 sec.
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/xfycrcb2rgb_1080_1920_s.compgen.tcl 
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/Loop_loop_height_proc68.compgen.tcl 
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/global.setting.tcl 
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/Loop_loop_height_proc79.compgen.tcl 
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/xfrgb2ycrcb_1080_1920_s.compgen.tcl 
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/dualAryEqualize_1080_1920_256_s.compgen.tcl 
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/xfycrcb2rgb_1080_1920_s.compgen.tcl 
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/Loop_loop_height_proc68.compgen.tcl 
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.compgen.tcl 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Command     ap_source done; 0.133 sec.
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/global.setting.tcl 
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/Loop_loop_height_proc79.compgen.tcl 
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/xfrgb2ycrcb_1080_1920_s.compgen.tcl 
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/dualAryEqualize_1080_1920_256_s.compgen.tcl 
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/xfycrcb2rgb_1080_1920_s.compgen.tcl 
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/Loop_loop_height_proc68.compgen.tcl 
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.compgen.tcl 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/global.setting.tcl 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.constraint.tcl 
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=30
+INFO-FLOW: DBG:CMD:       copying IP vlog from F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/impl/verilog
+INFO-FLOW: DBG:CMD:       copying IP vhdl from F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/impl/vhdl
+Execute     get_config_export -format 
+INFO-FLOW: DBG:CMD:       generate_ip_script #gSsdmPorts=30 g_lang=vlog is_sdaccel=false is_sdsoc=true xo_file=
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.tbgen.tcl 
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.tbgen.tcl 
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.tbgen.tcl 
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.tbgen.tcl 
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.tbgen.tcl 
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.tbgen.tcl 
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.tbgen.tcl 
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/global.setting.tcl 
+Execute     get_config_debug -directory 
+INFO-FLOW: DBG:CMD:       generate_ip_auxiliary
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD:       prepArgInfo -> loadAnalyze_DB top_module=contrastadj
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.rtl_wrap.cfg.tcl 
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.rtl_wrap.cfg.tcl 
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.rtl_wrap.cfg.tcl 
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.tbgen.tcl 
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.tbgen.tcl 
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_top_info
+INFO-FLOW: DBG:CMD:       prepArgInfo -> loadAnalyze_DB top_module=contrastadj
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.rtl_wrap.cfg.tcl 
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.rtl_wrap.cfg.tcl 
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.rtl_wrap.cfg.tcl 
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.tbgen.tcl 
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.tbgen.tcl 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_ip_bd_script
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.tbgen.tcl 
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/global.setting.tcl 
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.constraint.tcl 
+INFO-FLOW: DBG:CMD:       generate_ipi_example_script
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_syn_sh
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD:       generate_imp_constraints
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.constraint.tcl 
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/contrastadj.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+INFO-FLOW: DBG:CMD: read_platform_lib F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/global.setting.tcl
+Execute     source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/common.gen 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/op.gen 
+Execute     source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/interface.gen 
+Execute     source F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/.autopilot/db/global.setting.tcl 
+Execute     source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/util.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.111 sec.
+Command     ap_source done; 0.111 sec.
+Execute     source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+INFO-FLOW: DBG:CMD:     exec F:/course_s3_hls/hls/contrastadj/contrastadj/solution1/impl/ip/pack.bat
+Execute     get_config_export -output 
+Execute     send_msg_by_id INFO @200-802@%s F:/zynqUltraScale_vitis/course_s3_hls/hls/contrastadj/contrastadj.zip 
+INFO: [HLS 200-802] Generated output file F:/zynqUltraScale_vitis/course_s3_hls/hls/contrastadj/contrastadj.zip
+Command   export_design done; 16.949 sec.
+Command ap_source done; 18.212 sec.
+Execute cleanup_all 

@@ -1,0 +1,1720 @@
+INFO-FLOW: Workspace F:/course_s3_hls/hls/overlaystream/overlaystream/solution1 opened at Fri Oct 30 16:38:35 +0800 2020
+Execute     ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/zynquplus 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx.lib 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/dsp48.lib 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/dsp48e2.hlp 
+Execute     source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/util.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.116 sec.
+Command     ap_source done; 0.116 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/zynquplus_fpv7 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute             source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute     source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     set_part xczu3eg-sfvc784-1-i 
+INFO-FLOW: DBG:set_part: XILINX_VIVADO=F:/xilinx_2020.1/Vivado/2020.1
+INFO-FLOW: DBG:set_part: RDI_DATADIR=F:/xilinx_2020.1/Vivado/2020.1/data;F:/xilinx_2020.1/Vitis/2020.1/data
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data single -quiet 
+DBG:HLSDevice: Trying to load device library: F:/xilinx_2020.1/Vitis/2020.1\lib\win64.o\librdi_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: F:/xilinx_2020.1/Vivado/2020.1/data/parts/arch.xml
+Command       ap_part_info done; 0.861 sec.
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info 
+Execute       ap_family_info -name zynquplus -data info 
+Execute       add_library xilinx/zynquplus/zynquplus:xczu3eg:-sfvc784:-1-i 
+Execute         get_default_platform 
+Execute         ap_part_info -data single -name xczu3eg-sfvc784-1-i 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data resources 
+Execute         config_chip_info -resource {SLICE 8820} {LUT 70560} {FF 141120} {DSP 360} {BRAM 432} {URAM 0} 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info 
+Execute         config_chip_info -speed slow 
+Execute       add_library xilinx/zynquplus/zynquplus_fpv7 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xczu3eg-sfvc784-1-i'
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info 
+Execute       get_default_platform 
+Command     set_part done; 0.955 sec.
+Execute     ap_part_info -data single -name xczu3eg-sfvc784-1-i 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data resources 
+Execute     config_chip_info -resource {SLICE 8820} {LUT 70560} {FF 141120} {DSP 360} {BRAM 432} {URAM 0} 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info 
+Execute     config_chip_info -speed slow 
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     get_config_interface -m_axi_latency 
+Execute     get_config_interface -m_axi_alignment_byte_size 
+Execute     get_config_interface -m_axi_max_widen_bitwidth 
+Execute     get_config_interface -default_interface 
+Execute     get_config_interface -default_slave_interface 
+Execute     get_config_rtl -register_reset_num 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -format=ip_catalog 
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+Execute     config_export -format=ip_catalog 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -rtl=verilog 
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+Execute     config_export -rtl=verilog 
+Command   open_solution done; 1.135 sec.
+Execute   set_part xczu3eg-sfvc784-1-i 
+INFO-FLOW: DBG:set_part: XILINX_VIVADO=F:/xilinx_2020.1/Vivado/2020.1
+INFO-FLOW: DBG:set_part: RDI_DATADIR=F:/xilinx_2020.1/Vivado/2020.1/data;F:/xilinx_2020.1/Vitis/2020.1/data
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data single -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info 
+Execute     ap_family_info -name zynquplus -data info 
+Execute     add_library xilinx/zynquplus/zynquplus:xczu3eg:-sfvc784:-1-i 
+Execute       get_default_platform 
+Execute       ap_part_info -data single -name xczu3eg-sfvc784-1-i 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data resources 
+Execute       config_chip_info -resource {SLICE 8820} {LUT 70560} {FF 141120} {DSP 360} {BRAM 432} {URAM 0} 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info 
+Execute       config_chip_info -speed slow 
+Execute     add_library xilinx/zynquplus/zynquplus_fpv7 
+Execute       get_default_platform 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info 
+Execute     get_default_platform 
+Execute   create_clock -period 10 -name default 
+Execute   config_export -format ip_catalog -rtl verilog 
+Execute   source ./overlaystream/solution1/directives.tcl 
+Execute     set_directive_top -name overlaystream overlaystream 
+INFO-FLOW: Setting directive 'TOP' name=overlaystream 
+Execute   csynth_design 
+Execute     get_config_compile -dump_cfg 
+Execute     get_config_compile -effort 
+Execute     get_config_compile -enable_clang39 
+Execute     get_config_compile -g 
+Execute     get_config_compile -ng 
+Execute     get_config_compile -opt_fp 
+Execute     get_config_compile -skip_cdt 
+Execute     get_config_compile -skip_syncheck 
+Execute     get_config_compile -skip_transform 
+Execute     get_config_compile -keep_printf 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+INFO: [HLS 200-10] Analyzing design file 'source/overlaystream.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       get_config_compile -pragma_strict_mode 
+INFO-FLOW: Handling source/overlaystream.cpp as C++
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info 
+INFO-FLOW: Running: GCC PP 39
+INFO-FLOW: Source preprocessing
+Execute       ap_eval exec -ignorestderr F:/xilinx_2020.1/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang -fsave-optimization-record -foptimization-record-file=F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/clang.overlaystream.cpp.diag.yml -fno-limit-debug-info --sysroot F:/xilinx_2020.1/Vitis/2020.1/tps/mingw/6.2.0/win64.o/nt -fhls -fno-exceptions -E source/overlaystream.cpp -IF:/Vitis_Libraries/vision/L1/include -std=c++0x -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -fno-threadsafe-statics -fno-use-cxa-atexit -target fpga64-xilinx-mingw32 -fno-threadsafe-statics -fno-use-cxa-atexit -I F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot/39 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot -I F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.pp.0.cpp > F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/clang.overlaystream.cpp.out.log 2> F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/clang.overlaystream.cpp.err.log 
+Command       ap_eval done; 0.127 sec.
+INFO-FLOW: Done: GCC PP 39 time: 0.1 seconds per iteration
+Execute       set_directive_top overlaystream -name=overlaystream 
+INFO-FLOW: Setting directive 'TOP' name=overlaystream 
+INFO-FLOW: Setting directive 'TOP' name=overlaystream 
+INFO-FLOW: Setting directive 'TOP' name=overlaystream 
+INFO-FLOW: Setting directive 'TOP' name=overlaystream 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/tps/tcl/tcllib1.11.1/try/try.tcl 
+INFO-FLOW: Setting directive 'TOP' name=overlaystream 
+INFO-FLOW: Setting directive 'TOP' name=overlaystream 
+Execute       list_core -type functional_unit 
+Execute       clang_tidy xilinx-systemc-detector F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.pp.0.cpp std=c++0x -target fpga  -directive=F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec F:/xilinx_2020.1/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/.systemc_flag -fix-errors F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.pp.0.cpp -- -std=c++0x -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 1.904 sec.
+INFO-FLOW: Running: clang-tidy CDT preprocess 39
+Execute       clang_tidy xilinx-directive2pragma F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.pp.0.cpp std=c++0x -target fpga  -directive=F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec F:/xilinx_2020.1/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/all.directive.json -fix-errors F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.pp.0.cpp -- -std=c++0x -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 1.736 sec.
+Execute       clang_tidy xilinx-constantarray-param,xilinx-remove-assert F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.pp.0.cpp std=c++0x -target fpga  
+INFO-FLOW: exec F:/xilinx_2020.1/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-remove-assert -fix-errors F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.pp.0.cpp -- -std=c++0x -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 1.458 sec.
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 3.2 seconds per iteration
+INFO-FLOW: Calling xilinx-label-all-loops ... 
+Execute       clang_tidy -errorcheck xilinx-label-all-loops F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.pp.0.cpp std=c++0x -target fpga  
+Execute         ap_eval exec -ignorestderr F:/xilinx_2020.1/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/clang-tidy.overlaystream.pp.0.cpp.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops -fix-errors F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.pp.0.cpp -- -std=c++0x -target fpga -fhls -ferror-limit=0 > F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/clang-tidy.overlaystream.pp.0.cpp.out.log 2> F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/clang-tidy.overlaystream.pp.0.cpp.err.log 
+Command         ap_eval done; 4.056 sec.
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl 
+Command       clang_tidy done; 4.632 sec.
+Execute       clang_tidy -errorcheck xilinx-top-parameters F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.pp.0.cpp std=c++0x -target fpga  
+Execute         ap_eval exec -ignorestderr F:/xilinx_2020.1/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/clang-tidy.overlaystream.pp.0.cpp.diag.yml -header-filter=.* --checks=-*,xilinx-top-parameters -fix-errors F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.pp.0.cpp -- -std=c++0x -target fpga -fhls -ferror-limit=0 > F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/clang-tidy.overlaystream.pp.0.cpp.out.log 2> F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/clang-tidy.overlaystream.pp.0.cpp.err.log 
+Command         ap_eval done; 1.317 sec.
+Command       clang_tidy done; 1.322 sec.
+Execute       clang_tidy -errorcheck xilinx-array-stream-check F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.pp.0.cpp std=c++0x -target fpga  
+Execute         ap_eval exec -ignorestderr F:/xilinx_2020.1/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/clang-tidy.overlaystream.pp.0.cpp.diag.yml -header-filter=.* --checks=-*,xilinx-array-stream-check -fix-errors F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.pp.0.cpp -- -std=c++0x -target fpga -fhls -ferror-limit=0 > F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/clang-tidy.overlaystream.pp.0.cpp.out.log 2> F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/clang-tidy.overlaystream.pp.0.cpp.err.log 
+Command         ap_eval done; 1.337 sec.
+Command       clang_tidy done; 1.339 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr F:/xilinx_2020.1/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/xilinx-dataflow-lawyer.overlaystream.pp.0.cpp.diag.yml F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.pp.0.cpp -- -std=c++0x -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/xilinx-dataflow-lawyer.overlaystream.pp.0.cpp.out.log 2> F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/xilinx-dataflow-lawyer.overlaystream.pp.0.cpp.err.log 
+Command       ap_eval done; 1.247 sec.
+Execute       clang_tidy -errorcheck xilinx-warn-mayneed-no-ctor-attribute F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.pp.0.cpp std=c++0x -target fpga  
+Execute         ap_eval exec -ignorestderr F:/xilinx_2020.1/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/clang-tidy.overlaystream.pp.0.cpp.diag.yml -header-filter=.* --checks=-*,xilinx-warn-mayneed-no-ctor-attribute -fix-errors F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.pp.0.cpp -- -std=c++0x -target fpga -fhls -ferror-limit=0 > F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/clang-tidy.overlaystream.pp.0.cpp.out.log 2> F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/clang-tidy.overlaystream.pp.0.cpp.err.log 
+Command         ap_eval done; 1.501 sec.
+Command       clang_tidy done; 1.503 sec.
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info 
+INFO-FLOW: compiling source code to llvm bc
+Execute       ap_eval exec -ignorestderr F:/xilinx_2020.1/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang -fsave-optimization-record -foptimization-record-file=F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/clang.overlaystream.pragma.2.cpp.diag.yml -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.pragma.2.cpp -IF:/Vitis_Libraries/vision/L1/include -std=c++0x -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -fno-threadsafe-statics -fno-use-cxa-atexit -target fpga64-xilinx-linux-gnu -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot -I F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.bc > F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/clang.overlaystream.pragma.2.cpp.out.log 2> F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/clang.overlaystream.pragma.2.cpp.err.log 
+Command       ap_eval done; 1.343 sec.
+WARNING: [HLS 207-5324] unused parameter 'index': F:/Vitis_Libraries/vision/L1/include\common/xf_structs.hpp:655:87
+WARNING: [HLS 207-5324] unused parameter 'index': F:/Vitis_Libraries/vision/L1/include\common/xf_structs.hpp:675:60
+WARNING: [HLS 207-5324] unused parameter 'index': F:/Vitis_Libraries/vision/L1/include\common/xf_structs.hpp:1183:102
+WARNING: [HLS 207-5324] unused parameter 'index': F:/Vitis_Libraries/vision/L1/include\common/xf_structs.hpp:1386:34
+WARNING: [HLS 207-1593] Ignore interface attribute or pragma which is not used in top function: F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot/39\utils/x_hls_utils.h:247:9
+WARNING: [HLS 207-1593] Ignore interface attribute or pragma which is not used in top function: F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot/39\utils/x_hls_utils.h:247:9
+WARNING: [HLS 207-5324] unused parameter 'j': F:/Vitis_Libraries/vision/L1/include\imgproc/xf_resize_nn_bilinear.hpp:209:31
+WARNING: [HLS 207-5324] unused parameter 'output_rows_count': F:/Vitis_Libraries/vision/L1/include\imgproc/xf_resize_nn_bilinear.hpp:210:31
+WARNING: [HLS 207-5324] unused parameter 'scalex': F:/Vitis_Libraries/vision/L1/include\imgproc/xf_resize_nn_bilinear.hpp:211:65
+WARNING: [HLS 207-5324] unused parameter 'skip_count': F:/Vitis_Libraries/vision/L1/include\imgproc/xf_resize_down_area.hpp:43:47
+WARNING: [HLS 207-5324] unused parameter 'in_width': F:/Vitis_Libraries/vision/L1/include\imgproc/xf_resize_down_area.hpp:54:49
+WARNING: [HLS 207-5324] unused parameter 'write_index': F:/Vitis_Libraries/vision/L1/include\imgproc/xf_resize_down_area.hpp:417:46
+WARNING: [HLS 207-5324] unused parameter 'out_width': F:/Vitis_Libraries/vision/L1/include\imgproc/xf_resize_down_area.hpp:419:49
+WARNING: [HLS 207-1536] 'false' in '#pragma HLS dependence' is deprecated, and it will be removed in future release: F:/Vitis_Libraries/vision/L1/include\imgproc/xf_resize_down_area.hpp:696:52
+WARNING: [HLS 207-3891] the 'dim' option to 'Stream' pragma is not supported and will be ignored: source/overlaystream.cpp:124:57
+WARNING: [HLS 207-3891] the 'dim' option to 'Stream' pragma is not supported and will be ignored: source/overlaystream.cpp:126:58
+WARNING: [HLS 207-3891] the 'dim' option to 'Stream' pragma is not supported and will be ignored: source/overlaystream.cpp:128:59
+WARNING: [HLS 207-3891] the 'dim' option to 'Stream' pragma is not supported and will be ignored: source/overlaystream.cpp:130:59
+WARNING: [HLS 207-3891] the 'dim' option to 'Stream' pragma is not supported and will be ignored: source/overlaystream.cpp:132:59
+INFO-FLOW: Linking Debug ...
+INFO-FLOW: Linking dut bc code.
+Execute       run_link_or_opt -out F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/a.g.ld.0.bc -args  "F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.g.bc"  
+Execute         ap_eval exec -ignorestderr F:/xilinx_2020.1/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/llvm-link F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.g.bc -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/a.g.ld.0.bc > F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/llvm-link.a.g.ld.0.bc.out.log 2> F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/llvm-link.a.g.ld.0.bc.err.log 
+INFO-FLOW: 
+Execute       run_link_or_opt -opt -out F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/a.g.ld.1.lower.bc -args F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics 
+Execute         ap_eval exec -ignorestderr F:/xilinx_2020.1/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=.* -pass-remarks-output=F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/opt.a.g.ld.1.lower.bc.diag.yml F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/a.g.ld.1.lower.bc > F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/opt.a.g.ld.1.lower.bc.out.log 2> F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/opt.a.g.ld.1.lower.bc.err.log 
+INFO-FLOW: 
+INFO-FLOW: Linking math bc lib
+Execute       run_link_or_opt -out F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/a.g.ld.2.m1.bc -args F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed F:/xilinx_2020.1/Vitis/2020.1/win64/lib/libhlsm_39.bc F:/xilinx_2020.1/Vitis/2020.1/win64/lib/libhlsmc++_39.bc 
+Execute         ap_eval exec -ignorestderr F:/xilinx_2020.1/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/llvm-link F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed F:/xilinx_2020.1/Vitis/2020.1/win64/lib/libhlsm_39.bc F:/xilinx_2020.1/Vitis/2020.1/win64/lib/libhlsmc++_39.bc -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/a.g.ld.2.m1.bc > F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/llvm-link.a.g.ld.2.m1.bc.out.log 2> F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/llvm-link.a.g.ld.2.m1.bc.err.log 
+Command         ap_eval done; 2.318 sec.
+INFO-FLOW: 
+Command       run_link_or_opt done; 2.32 sec.
+Execute       run_link_or_opt -opt -out F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/a.g.ld.3.fpc.bc -args F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=overlaystream -reflow-float-conversion 
+Execute         ap_eval exec -ignorestderr F:/xilinx_2020.1/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=.* -pass-remarks-output=F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/opt.a.g.ld.3.fpc.bc.diag.yml F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=overlaystream -reflow-float-conversion -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/a.g.ld.3.fpc.bc > F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/opt.a.g.ld.3.fpc.bc.out.log 2> F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/opt.a.g.ld.3.fpc.bc.err.log 
+Command         ap_eval done; 0.882 sec.
+INFO-FLOW: 
+Command       run_link_or_opt done; 0.885 sec.
+Execute       run_link_or_opt -out F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/a.g.ld.4.m2.bc -args F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed F:/xilinx_2020.1/Vitis/2020.1/win64/lib/libfloatconversion_39.bc 
+Execute         ap_eval exec -ignorestderr F:/xilinx_2020.1/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/llvm-link F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed F:/xilinx_2020.1/Vitis/2020.1/win64/lib/libfloatconversion_39.bc -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/a.g.ld.4.m2.bc > F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/llvm-link.a.g.ld.4.m2.bc.out.log 2> F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/llvm-link.a.g.ld.4.m2.bc.err.log 
+INFO-FLOW: 
+Execute       run_link_or_opt -opt -out F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/a.g.ld.5.gdce.bc -args F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=overlaystream 
+Execute         ap_eval exec -ignorestderr F:/xilinx_2020.1/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=.* -pass-remarks-output=F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/opt.a.g.ld.5.gdce.bc.diag.yml F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=overlaystream -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/a.g.ld.5.gdce.bc > F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/opt.a.g.ld.5.gdce.bc.out.log 2> F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/opt.a.g.ld.5.gdce.bc.err.log 
+INFO-FLOW: 
+Execute       get_solution -flow_target 
+Execute       get_config_export -xo 
+Execute       get_config_export -format 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_interface -default_interface 
+Execute       send_msg_by_id INFO @200-777@%s Vivado 
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' target.
+Execute       get_config_interface -default_slave_interface 
+Execute       get_solution -flow_target 
+Execute       get_config_export -xo 
+Execute       get_config_export -format 
+Execute       get_config_interface -m_axi_offset 
+Execute       get_config_interface -m_axi_latency 
+Execute       get_config_interface -m_axi_alignment_byte_size 
+Execute       get_config_interface -m_axi_min_bitwidth 
+Execute       get_config_interface -m_axi_max_bitwidth 
+Execute       get_config_interface -m_axi_max_widen_bitwidth 
+Execute       get_config_interface -m_axi_num_read_outstanding 
+Execute       get_config_interface -m_axi_num_write_outstanding 
+Execute       get_config_interface -m_axi_max_read_burst_length 
+Execute       get_config_interface -m_axi_max_write_burst_length 
+Execute       get_config_interface -m_axi_min_bitwidth 
+Execute       get_config_interface -m_axi_max_bitwidth 
+Execute       get_config_interface -m_axi_latency 
+Execute       get_config_interface -m_axi_min_bitwidth 
+Execute       get_config_interface -m_axi_max_bitwidth 
+Execute       get_config_interface -m_axi_max_widen_bitwidth 
+Execute       get_config_interface -m_axi_auto_max_ports 
+Execute       get_config_interface -m_axi_num_read_outstanding 
+Execute       get_config_interface -m_axi_num_write_outstanding 
+Execute       get_config_interface -m_axi_max_read_burst_length 
+Execute       get_config_interface -m_axi_max_write_burst_length 
+Execute       get_config_interface -s_axilite_data64 
+Execute       get_config_interface -m_axi_alignment_byte_size 
+Execute       get_config_compile -pragma_strict_mode 
+INFO-FLOW: Doing LTO.
+Execute       ap_eval exec -ignorestderr F:/xilinx_2020.1/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang -fsave-optimization-record -foptimization-record-file=F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/clang.a.g.ld.0.bc.diag.yml -fhls -mllvm -hls-top-function-name=overlaystream -mllvm -hls-db-dir -mllvm F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db -emit-llvm -c -mllvm -hls-bitcode-version=3.1 -target fpga64-xilinx-none -mllvm -xcl-xmlinfo=F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/kernel.internal.xml -mllvm -top-io-mapping-info=F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/top-io-fe.xml -mllvm -pass-remarks=supported-subset -mllvm -reflow-enable-interface-default-setting=false -mllvm -reflow-enable-slave-interface-default-setting=false -mllvm -gen-kernel-xml=false -mllvm -maxi-latency=0 -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -hls-maxi-max-data-size-in-bits=1024 -mllvm -hls-max-widen-size-in-bits=0 -mllvm -xcl-kernel-max-mem-ports=0 -mllvm -maxi-read-trans=16 -mllvm -maxi-write-trans=16 -mllvm -maxi-read-burst-len=16 -mllvm -maxi-write-burst-len=16 -mllvm -reflow-enable-saxi-64bits=0 -mllvm -assume-maxi-align=0 -mllvm -no-unaligned-maxi-accesses -x ir F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/a.g.ld.5.gdce.bc -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/a.g.lto.bc > F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/clang.a.g.ld.0.bc.out.log 2> F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/clang.a.g.ld.0.bc.err.log 
+Command       ap_eval done; 0.548 sec.
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<24>, 0>::stream()' into 'hls::stream<ap_uint<24>, 2>::stream()' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:188:43)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<24>, 2>::stream()' into 'xf::cv::Mat<9, 1080, 1920, 1, 2>::Mat()' (F:/Vitis_Libraries/vision/L1/include\common/xf_structs.hpp:441:5)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Mat<9, 1080, 1920, 1, 2>::init(int, int, bool)' into 'xf::cv::Mat<9, 1080, 1920, 1, 2>::Mat()' (F:/Vitis_Libraries/vision/L1/include\common/xf_structs.hpp:618:2)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<8>, 0>::stream()' into 'hls::stream<ap_uint<8>, 2>::stream()' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:188:43)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<8>, 2>::stream()' into 'xf::cv::Mat<0, 1080, 1920, 1, 2>::Mat()' (F:/Vitis_Libraries/vision/L1/include\common/xf_structs.hpp:441:5)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Mat<0, 1080, 1920, 1, 2>::init(int, int, bool)' into 'xf::cv::Mat<0, 1080, 1920, 1, 2>::Mat()' (F:/Vitis_Libraries/vision/L1/include\common/xf_structs.hpp:618:2)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_axiu<24, 1, 1, 1>, 0>::read(ap_axiu<24, 1, 1, 1>&)' into 'hls::stream<ap_axiu<24, 1, 1, 1>, 0>::operator>>(ap_axiu<24, 1, 1, 1>&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_axi_sdata.h:385:5)
+INFO: [HLS 214-131] Inlining function 'ap_range_ref<24, false>::ap_range_ref(ap_int_base<24, false>*, int, int)' into 'ap_int_base<24, false>::range(int, int)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:903:12)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<24, false>::range(int, int)' into 'ap_int_base<24, false>::operator()(int, int)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:940:18)
+INFO: [HLS 214-131] Inlining function 'ap_range_ref<24, false>::get() const' into 'ap_int_base<24, false>::ap_int_base<24, false>(ap_range_ref<24, false> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:358:20)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<24, false>::ap_int_base<24, false>(ap_range_ref<24, false> const&)' into 'ap_uint<24>::ap_uint<24, false>(ap_range_ref<24, false> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int.h:240:92)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<24, false>::operator()(int, int)' into 'void xf::cv::AXIGetBitFields<24, ap_uint<24> >(ap_uint<24>, int, int, ap_uint<24>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_axi_io.hpp:31:14)
+INFO: [HLS 214-131] Inlining function 'ap_uint<24>::operator=(ap_uint<24> const&)' into 'void xf::cv::AXIGetBitFields<24, ap_uint<24> >(ap_uint<24>, int, int, ap_uint<24>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_axi_io.hpp:31:9)
+INFO: [HLS 214-131] Inlining function 'ap_uint<24>::ap_uint<24, false>(ap_range_ref<24, false> const&)' into 'void xf::cv::AXIGetBitFields<24, ap_uint<24> >(ap_uint<24>, int, int, ap_uint<24>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_axi_io.hpp:31:11)
+INFO: [HLS 214-131] Inlining function 'void xf::cv::AXIGetBitFields<24, ap_uint<24> >(ap_uint<24>, int, int, ap_uint<24>&)' into 'void xf::cv::AXIGetBitFields<24, ap_uint<24> >(ap_axiu<24, 1, 1, 1>, int, int, ap_uint<24>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_axi_io.hpp:59:2)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<24>, 0>::write(ap_uint<24> const&)' into 'xf::cv::Mat<9, 1080, 1920, 1, 2>::write(int, ap_uint<24>)' (F:/Vitis_Libraries/vision/L1/include\common/xf_structs.hpp:677:10)
+INFO: [HLS 214-131] Inlining function 'void xf::cv::write<9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Scalar<DataType<9, 1>::channel, DataType<9, 1>::name>, int)' into 'void xf::cv::fetchingmatdata<9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Scalar<DataType<9, 1>::channel, DataType<9, 1>::name>, int)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:53:2)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Scalar<3, ap_uint<24> >::Scalar()' into 'int xf::cv::AXIvideo2xfMat<24, 9, 1080, 1920, 1>(hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:108:80)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<1, false>::to_int() const' into 'int xf::cv::AXIvideo2xfMat<24, 9, 1080, 1920, 1>(hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:155:28)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_axiu<24, 1, 1, 1>, 0>::operator>>(ap_axiu<24, 1, 1, 1>&)' into 'int xf::cv::AXIvideo2xfMat<24, 9, 1080, 1920, 1>(hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:154:17)
+INFO: [HLS 214-131] Inlining function 'void xf::cv::fetchingmatdata<9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Scalar<DataType<9, 1>::channel, DataType<9, 1>::name>, int)' into 'int xf::cv::AXIvideo2xfMat<24, 9, 1080, 1920, 1>(hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:144:13)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_axiu<24, 1, 1, 1>, 0>::operator>>(ap_axiu<24, 1, 1, 1>&)' into 'int xf::cv::AXIvideo2xfMat<24, 9, 1080, 1920, 1>(hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:127:17)
+INFO: [HLS 214-131] Inlining function 'void xf::cv::AXIGetBitFields<24, ap_uint<24> >(ap_axiu<24, 1, 1, 1>, int, int, ap_uint<24>&)' into 'int xf::cv::AXIvideo2xfMat<24, 9, 1080, 1920, 1>(hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:143:13)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<1, false>::to_int() const' into 'int xf::cv::AXIvideo2xfMat<24, 9, 1080, 1920, 1>(hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:130:32)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<1, false>::to_int() const' into 'int xf::cv::AXIvideo2xfMat<24, 9, 1080, 1920, 1>(hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:129:32)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<24>, 0>::read(ap_uint<24>&)' into 'hls::stream<ap_uint<24>, 0>::read()' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:156:9)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<24>, 0>::read()' into 'xf::cv::Mat<9, 1080, 1920, 1, 2>::read(int)' (F:/Vitis_Libraries/vision/L1/include\common/xf_structs.hpp:657:17)
+INFO: [HLS 214-131] Inlining function 'ap_range_ref<24, false>::get() const' into 'ap_int_base<8, false>::ap_int_base<24, false>(ap_range_ref<24, false> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:358:20)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, false>::ap_int_base<24, false>(ap_range_ref<24, false> const&)' into 'ap_uint<8>::ap_uint<24, false>(ap_range_ref<24, false> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int.h:240:92)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<24, false>::range(int, int)' into 'ExtractPixel(ap_uint<24>&, ap_uint<8>*)' (source/overlaystream.cpp:10:13)
+INFO: [HLS 214-131] Inlining function 'ap_uint<8>::operator=(ap_uint<8> const&)' into 'ExtractPixel(ap_uint<24>&, ap_uint<8>*)' (source/overlaystream.cpp:10:8)
+INFO: [HLS 214-131] Inlining function 'ap_uint<8>::ap_uint<24, false>(ap_range_ref<24, false> const&)' into 'ExtractPixel(ap_uint<24>&, ap_uint<8>*)' (source/overlaystream.cpp:10:9)
+INFO: [HLS 214-131] Inlining function 'ap_range_ref<8, false>::ap_range_ref(ap_int_base<8, false>*, int, int)' into 'ap_int_base<8, false>::range(int, int)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:903:12)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<8>, 0>::write(ap_uint<8> const&)' into 'xf::cv::Mat<0, 1080, 1920, 1, 2>::write(int, ap_uint<8>)' (F:/Vitis_Libraries/vision/L1/include\common/xf_structs.hpp:677:10)
+INFO: [HLS 214-131] Inlining function 'ap_uint<24>::operator=(ap_uint<24> const&)' into 'void xfrgb2gray<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/overlaystream.cpp:100:13)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, false>::operator unsigned long long() const' into 'void xfrgb2gray<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/overlaystream.cpp:102:23)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, false>::operator unsigned long long() const' into 'void xfrgb2gray<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/overlaystream.cpp:102:30)
+INFO: [HLS 214-131] Inlining function 'ap_uint<24>::operator=(ap_uint<24> const&)' into 'void xfrgb2gray<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/overlaystream.cpp:104:14)
+INFO: [HLS 214-131] Inlining function 'ap_range_ref<8, false>& ap_range_ref<8, false>::operator=<8, false>(ap_int_base<8, false> const&)' into 'void xfrgb2gray<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/overlaystream.cpp:103:25)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, false>::range(int, int)' into 'void xfrgb2gray<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/overlaystream.cpp:103:15)
+INFO: [HLS 214-131] Inlining function 'ap_uint<8>::operator=(ap_uint<8> const&)' into 'void xfrgb2gray<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/overlaystream.cpp:102:8)
+INFO: [HLS 214-131] Inlining function 'ap_uint<8>::ap_uint(unsigned char)' into 'void xfrgb2gray<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/overlaystream.cpp:102:9)
+INFO: [HLS 214-131] Inlining function 'CalculateGRAY(unsigned char, unsigned char, unsigned char)' into 'void xfrgb2gray<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/overlaystream.cpp:102:9)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, false>::operator unsigned long long() const' into 'void xfrgb2gray<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/overlaystream.cpp:102:37)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<8>, 0>::read(ap_uint<8>&)' into 'hls::stream<ap_uint<8>, 0>::read()' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:156:9)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<8>, 0>::read()' into 'xf::cv::Mat<0, 1080, 1920, 1, 2>::read(int)' (F:/Vitis_Libraries/vision/L1/include\common/xf_structs.hpp:657:17)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base(int)' into 'bool operator>=<32, false>(int, ap_int_base<32, false> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1620:897)
+INFO: [HLS 214-131] Inlining function 'bool ap_int_base<32, true>::operator>=<32, false>(ap_int_base<32, false> const&) const' into 'bool operator>=<32, false>(int, ap_int_base<32, false> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1620:935)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base(int)' into 'bool operator<<32, false>(int, ap_int_base<32, false> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1620:520)
+INFO: [HLS 214-131] Inlining function 'bool ap_int_base<32, true>::operator<<32, false>(ap_int_base<32, false> const&) const' into 'bool operator<<32, false>(int, ap_int_base<32, false> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1620:558)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base(int)' into 'bool operator<=<32, false>(int, ap_int_base<32, false> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1620:1277)
+INFO: [HLS 214-131] Inlining function 'bool ap_int_base<32, true>::operator<=<32, false>(ap_int_base<32, false> const&) const' into 'bool operator<=<32, false>(int, ap_int_base<32, false> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1620:1315)
+INFO: [HLS 214-131] Inlining function 'ap_range_ref<8, false>::get() const' into 'ap_int_base<8, false>::ap_int_base<8, false>(ap_range_ref<8, false> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:358:20)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, false>::ap_int_base<8, false>(ap_range_ref<8, false> const&)' into 'ap_uint<8>::ap_uint<8, false>(ap_range_ref<8, false> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int.h:240:92)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<33, true>::ap_int_base<32, true>(ap_int_base<32, true> const&)' into 'ap_int_base<32, true>::RType<8, false>::minus operator-<32, true, 8, false>(ap_int_base<32, true> const&, ap_int_base<8, false> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1351:341)
+INFO: [HLS 214-131] Inlining function 'ap_int<33>::ap_int<33, true>(ap_int_base<33, true> const&)' into 'ap_int_base<32, true>::RType<8, false>::minus operator-<32, true, 8, false>(ap_int_base<32, true> const&, ap_int_base<8, false> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1351:555)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<33, true>::ap_int_base<8, false>(ap_int_base<8, false> const&)' into 'ap_int_base<32, true>::RType<8, false>::minus operator-<32, true, 8, false>(ap_int_base<32, true> const&, ap_int_base<8, false> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1351:430)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base(int)' into 'ap_int_base<8, false>::RType<($_0)32, true>::minus operator-<8, false>(int, ap_int_base<8, false> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1465:1263)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::RType<8, false>::minus operator-<32, true, 8, false>(ap_int_base<32, true> const&, ap_int_base<8, false> const&)' into 'ap_int_base<8, false>::RType<($_0)32, true>::minus operator-<8, false>(int, ap_int_base<8, false> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1465:1301)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<41, true>::ap_int_base<33, true>(ap_int_base<33, true> const&)' into 'ap_int_base<33, true>::RType<8, false>::mult operator*<33, true, 8, false>(ap_int_base<33, true> const&, ap_int_base<8, false> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1349:339)
+INFO: [HLS 214-131] Inlining function 'ap_int<41>::ap_int<41, true>(ap_int_base<41, true> const&)' into 'ap_int_base<33, true>::RType<8, false>::mult operator*<33, true, 8, false>(ap_int_base<33, true> const&, ap_int_base<8, false> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1349:551)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<41, true>::ap_int_base<8, false>(ap_int_base<8, false> const&)' into 'ap_int_base<33, true>::RType<8, false>::mult operator*<33, true, 8, false>(ap_int_base<33, true> const&, ap_int_base<8, false> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1349:427)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<16, false>::ap_int_base<8, false>(ap_int_base<8, false> const&)' into 'ap_int_base<8, false>::RType<8, false>::mult operator*<8, false, 8, false>(ap_int_base<8, false> const&, ap_int_base<8, false> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1349:339)
+INFO: [HLS 214-131] Inlining function 'ap_uint<16>::ap_uint<16, false>(ap_int_base<16, false> const&)' into 'ap_int_base<8, false>::RType<8, false>::mult operator*<8, false, 8, false>(ap_int_base<8, false> const&, ap_int_base<8, false> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1349:551)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<16, false>::ap_int_base<8, false>(ap_int_base<8, false> const&)' into 'ap_int_base<8, false>::RType<8, false>::mult operator*<8, false, 8, false>(ap_int_base<8, false> const&, ap_int_base<8, false> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1349:427)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<42, true>::ap_int_base<41, true>(ap_int_base<41, true> const&)' into 'ap_int_base<41, true>::RType<16, false>::plus operator+<41, true, 16, false>(ap_int_base<41, true> const&, ap_int_base<16, false> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1350:339)
+INFO: [HLS 214-131] Inlining function 'ap_int<42>::ap_int<42, true>(ap_int_base<42, true> const&)' into 'ap_int_base<41, true>::RType<16, false>::plus operator+<41, true, 16, false>(ap_int_base<41, true> const&, ap_int_base<16, false> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1350:551)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<42, true>::ap_int_base<16, false>(ap_int_base<16, false> const&)' into 'ap_int_base<41, true>::RType<16, false>::plus operator+<41, true, 16, false>(ap_int_base<41, true> const&, ap_int_base<16, false> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1350:427)
+INFO: [HLS 214-131] Inlining function 'ap_int<43>::ap_int<43, true>(ap_int_base<43, true> const&)' into 'ap_int_base<42, true>::RType<32, true>::div operator/<42, true, 32, true>(ap_int_base<42, true> const&, ap_int_base<32, true> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1368:371)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base(int)' into 'ap_int_base<42, true>::RType<($_0)32, true>::div operator/<42, true>(ap_int_base<42, true> const&, int)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1465:2052)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<42, true>::RType<32, true>::div operator/<42, true, 32, true>(ap_int_base<42, true> const&, ap_int_base<32, true> const&)' into 'ap_int_base<42, true>::RType<($_0)32, true>::div operator/<42, true>(ap_int_base<42, true> const&, int)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1465:2050)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<24, false>::ap_int_base<8, false>(ap_int_base<8, false> const&)' into 'ap_range_ref<24, false>& ap_range_ref<24, false>::operator=<8, false>(ap_int_base<8, false> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_ref.h:413:31)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<24, false>::range(int, int)' into 'PackPixel(ap_uint<24>&, ap_uint<8>*)' (source/overlaystream.cpp:22:6)
+INFO: [HLS 214-131] Inlining function 'ap_range_ref<24, false>& ap_range_ref<24, false>::operator=<8, false>(ap_int_base<8, false> const&)' into 'PackPixel(ap_uint<24>&, ap_uint<8>*)' (source/overlaystream.cpp:22:18)
+INFO: [HLS 214-131] Inlining function 'ap_uint<8>::ap_uint(int)' into 'void overlyOnMat<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, ap_uint<8>, ap_uint<32>, ap_uint<32>, ap_uint<32>, ap_uint<32>)' (source/overlaystream.cpp:58:29)
+INFO: [HLS 214-131] Inlining function 'ap_uint<24>::operator=(ap_uint<24> const&)' into 'void overlyOnMat<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, ap_uint<8>, ap_uint<32>, ap_uint<32>, ap_uint<32>, ap_uint<32>)' (source/overlaystream.cpp:66:13)
+INFO: [HLS 214-131] Inlining function 'ap_uint<8>::operator=(ap_uint<8> const&)' into 'void overlyOnMat<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, ap_uint<8>, ap_uint<32>, ap_uint<32>, ap_uint<32>, ap_uint<32>)' (source/overlaystream.cpp:67:13)
+INFO: [HLS 214-131] Inlining function 'ap_uint<8>::operator=(ap_uint<8> const&)' into 'void overlyOnMat<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, ap_uint<8>, ap_uint<32>, ap_uint<32>, ap_uint<32>, ap_uint<32>)' (source/overlaystream.cpp:80:22)
+INFO: [HLS 214-131] Inlining function 'ap_uint<8>::ap_uint<43>(ap_int<43> const&)' into 'void overlyOnMat<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, ap_uint<8>, ap_uint<32>, ap_uint<32>, ap_uint<32>, ap_uint<32>)' (source/overlaystream.cpp:80:23)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<42, true>::RType<($_0)32, true>::div operator/<42, true>(ap_int_base<42, true> const&, int)' into 'void overlyOnMat<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, ap_uint<8>, ap_uint<32>, ap_uint<32>, ap_uint<32>, ap_uint<32>)' (source/overlaystream.cpp:80:100)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<41, true>::RType<16, false>::plus operator+<41, true, 16, false>(ap_int_base<41, true> const&, ap_int_base<16, false> const&)' into 'void overlyOnMat<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, ap_uint<8>, ap_uint<32>, ap_uint<32>, ap_uint<32>, ap_uint<32>)' (source/overlaystream.cpp:80:67)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, false>::RType<8, false>::mult operator*<8, false, 8, false>(ap_int_base<8, false> const&, ap_int_base<8, false> const&)' into 'void overlyOnMat<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, ap_uint<8>, ap_uint<32>, ap_uint<32>, ap_uint<32>, ap_uint<32>)' (source/overlaystream.cpp:80:84)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<33, true>::RType<8, false>::mult operator*<33, true, 8, false>(ap_int_base<33, true> const&, ap_int_base<8, false> const&)' into 'void overlyOnMat<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, ap_uint<8>, ap_uint<32>, ap_uint<32>, ap_uint<32>, ap_uint<32>)' (source/overlaystream.cpp:80:46)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, false>::RType<($_0)32, true>::minus operator-<8, false>(int, ap_int_base<8, false> const&)' into 'void overlyOnMat<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, ap_uint<8>, ap_uint<32>, ap_uint<32>, ap_uint<32>, ap_uint<32>)' (source/overlaystream.cpp:80:28)
+INFO: [HLS 214-131] Inlining function 'ap_uint<8>::operator=(ap_uint<8> const&)' into 'void overlyOnMat<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, ap_uint<8>, ap_uint<32>, ap_uint<32>, ap_uint<32>, ap_uint<32>)' (source/overlaystream.cpp:79:22)
+INFO: [HLS 214-131] Inlining function 'ap_uint<8>::ap_uint<43>(ap_int<43> const&)' into 'void overlyOnMat<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, ap_uint<8>, ap_uint<32>, ap_uint<32>, ap_uint<32>, ap_uint<32>)' (source/overlaystream.cpp:79:23)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<42, true>::RType<($_0)32, true>::div operator/<42, true>(ap_int_base<42, true> const&, int)' into 'void overlyOnMat<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, ap_uint<8>, ap_uint<32>, ap_uint<32>, ap_uint<32>, ap_uint<32>)' (source/overlaystream.cpp:79:100)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<41, true>::RType<16, false>::plus operator+<41, true, 16, false>(ap_int_base<41, true> const&, ap_int_base<16, false> const&)' into 'void overlyOnMat<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, ap_uint<8>, ap_uint<32>, ap_uint<32>, ap_uint<32>, ap_uint<32>)' (source/overlaystream.cpp:79:67)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, false>::RType<8, false>::mult operator*<8, false, 8, false>(ap_int_base<8, false> const&, ap_int_base<8, false> const&)' into 'void overlyOnMat<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, ap_uint<8>, ap_uint<32>, ap_uint<32>, ap_uint<32>, ap_uint<32>)' (source/overlaystream.cpp:79:84)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<33, true>::RType<8, false>::mult operator*<33, true, 8, false>(ap_int_base<33, true> const&, ap_int_base<8, false> const&)' into 'void overlyOnMat<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, ap_uint<8>, ap_uint<32>, ap_uint<32>, ap_uint<32>, ap_uint<32>)' (source/overlaystream.cpp:79:46)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, false>::RType<($_0)32, true>::minus operator-<8, false>(int, ap_int_base<8, false> const&)' into 'void overlyOnMat<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, ap_uint<8>, ap_uint<32>, ap_uint<32>, ap_uint<32>, ap_uint<32>)' (source/overlaystream.cpp:79:28)
+INFO: [HLS 214-131] Inlining function 'ap_uint<8>::operator=(ap_uint<8> const&)' into 'void overlyOnMat<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, ap_uint<8>, ap_uint<32>, ap_uint<32>, ap_uint<32>, ap_uint<32>)' (source/overlaystream.cpp:78:22)
+INFO: [HLS 214-131] Inlining function 'ap_uint<8>::ap_uint<43>(ap_int<43> const&)' into 'void overlyOnMat<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, ap_uint<8>, ap_uint<32>, ap_uint<32>, ap_uint<32>, ap_uint<32>)' (source/overlaystream.cpp:78:23)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<42, true>::RType<($_0)32, true>::div operator/<42, true>(ap_int_base<42, true> const&, int)' into 'void overlyOnMat<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, ap_uint<8>, ap_uint<32>, ap_uint<32>, ap_uint<32>, ap_uint<32>)' (source/overlaystream.cpp:78:100)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<41, true>::RType<16, false>::plus operator+<41, true, 16, false>(ap_int_base<41, true> const&, ap_int_base<16, false> const&)' into 'void overlyOnMat<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, ap_uint<8>, ap_uint<32>, ap_uint<32>, ap_uint<32>, ap_uint<32>)' (source/overlaystream.cpp:78:67)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, false>::RType<8, false>::mult operator*<8, false, 8, false>(ap_int_base<8, false> const&, ap_int_base<8, false> const&)' into 'void overlyOnMat<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, ap_uint<8>, ap_uint<32>, ap_uint<32>, ap_uint<32>, ap_uint<32>)' (source/overlaystream.cpp:78:84)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<33, true>::RType<8, false>::mult operator*<33, true, 8, false>(ap_int_base<33, true> const&, ap_int_base<8, false> const&)' into 'void overlyOnMat<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, ap_uint<8>, ap_uint<32>, ap_uint<32>, ap_uint<32>, ap_uint<32>)' (source/overlaystream.cpp:78:46)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, false>::RType<($_0)32, true>::minus operator-<8, false>(int, ap_int_base<8, false> const&)' into 'void overlyOnMat<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, ap_uint<8>, ap_uint<32>, ap_uint<32>, ap_uint<32>, ap_uint<32>)' (source/overlaystream.cpp:78:28)
+INFO: [HLS 214-131] Inlining function 'ap_uint<8>::operator=(ap_uint<8> const&)' into 'void overlyOnMat<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, ap_uint<8>, ap_uint<32>, ap_uint<32>, ap_uint<32>, ap_uint<32>)' (source/overlaystream.cpp:77:19)
+INFO: [HLS 214-131] Inlining function 'ap_uint<8>::ap_uint<8, false>(ap_range_ref<8, false> const&)' into 'void overlyOnMat<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, ap_uint<8>, ap_uint<32>, ap_uint<32>, ap_uint<32>, ap_uint<32>)' (source/overlaystream.cpp:77:20)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, false>::range(int, int)' into 'void overlyOnMat<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, ap_uint<8>, ap_uint<32>, ap_uint<32>, ap_uint<32>, ap_uint<32>)' (source/overlaystream.cpp:77:29)
+INFO: [HLS 214-131] Inlining function 'bool operator>=<32, false>(int, ap_int_base<32, false> const&)' into 'void overlyOnMat<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, ap_uint<8>, ap_uint<32>, ap_uint<32>, ap_uint<32>, ap_uint<32>)' (source/overlaystream.cpp:68:12)
+INFO: [HLS 214-131] Inlining function 'ap_uint<8>::operator=(ap_uint<8> const&)' into 'void overlyOnMat<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, ap_uint<8>, ap_uint<32>, ap_uint<32>, ap_uint<32>, ap_uint<32>)' (source/overlaystream.cpp:74:22)
+INFO: [HLS 214-131] Inlining function 'ap_uint<8>::ap_uint(int)' into 'void overlyOnMat<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, ap_uint<8>, ap_uint<32>, ap_uint<32>, ap_uint<32>, ap_uint<32>)' (source/overlaystream.cpp:74:23)
+INFO: [HLS 214-131] Inlining function 'ap_uint<8>::operator=(ap_uint<8> const&)' into 'void overlyOnMat<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, ap_uint<8>, ap_uint<32>, ap_uint<32>, ap_uint<32>, ap_uint<32>)' (source/overlaystream.cpp:70:22)
+INFO: [HLS 214-131] Inlining function 'bool operator<=<32, false>(int, ap_int_base<32, false> const&)' into 'void overlyOnMat<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, ap_uint<8>, ap_uint<32>, ap_uint<32>, ap_uint<32>, ap_uint<32>)' (source/overlaystream.cpp:68:62)
+INFO: [HLS 214-131] Inlining function 'bool operator>=<32, false>(int, ap_int_base<32, false> const&)' into 'void overlyOnMat<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, ap_uint<8>, ap_uint<32>, ap_uint<32>, ap_uint<32>, ap_uint<32>)' (source/overlaystream.cpp:68:45)
+INFO: [HLS 214-131] Inlining function 'bool operator<<32, false>(int, ap_int_base<32, false> const&)' into 'void overlyOnMat<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, ap_uint<8>, ap_uint<32>, ap_uint<32>, ap_uint<32>, ap_uint<32>)' (source/overlaystream.cpp:68:29)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Scalar<3, ap_uint<24> >::Scalar()' into 'xf::cv::Scalar<DataType<9, 1>::channel, DataType<9, 1>::name> xf::cv::read<9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, int)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:63:85)
+INFO: [HLS 214-131] Inlining function 'ap_uint<24>::operator=(ap_uint<24> const&)' into 'xf::cv::Scalar<DataType<9, 1>::channel, DataType<9, 1>::name> xf::cv::read<9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, int)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:64:16)
+INFO: [HLS 214-131] Inlining function 'ap_uint<24>::operator=(ap_uint<24> const&)' into 'xf::cv::Scalar<3, ap_uint<24> >::operator=(xf::cv::Scalar<3, ap_uint<24> >&&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_structs.hpp:228:7)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Scalar<DataType<9, 1>::channel, DataType<9, 1>::name> xf::cv::read<9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, int)' into 'void xf::cv::fillingdata<9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Scalar<DataType<9, 1>::channel, DataType<9, 1>::name>&, int)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:77:6)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<24, false>::operator()(int, int)' into 'void xf::cv::AXISetBitFields<24, ap_uint<24> >(ap_uint<24>&, int, int, ap_uint<24>)' (F:/Vitis_Libraries/vision/L1/include\common/xf_axi_io.hpp:68:5)
+INFO: [HLS 214-131] Inlining function 'ap_range_ref<24, false>& ap_range_ref<24, false>::operator=<24, false>(ap_int_base<24, false> const&)' into 'void xf::cv::AXISetBitFields<24, ap_uint<24> >(ap_uint<24>&, int, int, ap_uint<24>)' (F:/Vitis_Libraries/vision/L1/include\common/xf_axi_io.hpp:68:31)
+INFO: [HLS 214-131] Inlining function 'void xf::cv::AXISetBitFields<24, ap_uint<24> >(ap_uint<24>&, int, int, ap_uint<24>)' into 'void xf::cv::AXISetBitFields<24, ap_uint<24> >(ap_axiu<24, 1, 1, 1>&, int, int, ap_uint<24>)' (F:/Vitis_Libraries/vision/L1/include\common/xf_axi_io.hpp:96:2)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_axiu<24, 1, 1, 1>, 0>::write(ap_axiu<24, 1, 1, 1> const&)' into 'hls::stream<ap_axiu<24, 1, 1, 1>, 0>::operator<<(ap_axiu<24, 1, 1, 1> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_axi_sdata.h:389:5)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Scalar<3, ap_uint<24> >::Scalar()' into 'int xf::cv::xfMat2AXIvideo<24, 9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:173:80)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_axiu<24, 1, 1, 1>, 0>::operator<<(ap_axiu<24, 1, 1, 1> const&)' into 'int xf::cv::xfMat2AXIvideo<24, 9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:213:28)
+INFO: [HLS 214-131] Inlining function 'ap_uint<3>::operator=(ap_uint<3> const&)' into 'int xf::cv::xfMat2AXIvideo<24, 9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:212:22)
+INFO: [HLS 214-131] Inlining function 'ap_uint<3>::ap_uint(int)' into 'int xf::cv::xfMat2AXIvideo<24, 9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:212:24)
+INFO: [HLS 214-131] Inlining function 'void xf::cv::AXISetBitFields<24, ap_uint<24> >(ap_axiu<24, 1, 1, 1>&, int, int, ap_uint<24>)' into 'int xf::cv::xfMat2AXIvideo<24, 9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:211:13)
+INFO: [HLS 214-131] Inlining function 'ap_uint<24>::operator=(ap_uint<24> const&)' into 'int xf::cv::xfMat2AXIvideo<24, 9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:209:22)
+INFO: [HLS 214-131] Inlining function 'ap_uint<24>::ap_uint(int)' into 'int xf::cv::xfMat2AXIvideo<24, 9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:209:24)
+INFO: [HLS 214-131] Inlining function 'void xf::cv::fillingdata<9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Scalar<DataType<9, 1>::channel, DataType<9, 1>::name>&, int)' into 'int xf::cv::xfMat2AXIvideo<24, 9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:207:13)
+INFO: [HLS 214-131] Inlining function 'ap_uint<1>::ap_uint(int)' into 'int xf::cv::xfMat2AXIvideo<24, 9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:196:28)
+INFO: [HLS 214-131] Inlining function 'ap_uint<1>::operator=(ap_uint<1> const&)' into 'int xf::cv::xfMat2AXIvideo<24, 9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:196:26)
+INFO: [HLS 214-131] Inlining function 'ap_uint<1>::operator=(ap_uint<1> const&)' into 'int xf::cv::xfMat2AXIvideo<24, 9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:205:26)
+INFO: [HLS 214-131] Inlining function 'ap_uint<1>::ap_uint(int)' into 'int xf::cv::xfMat2AXIvideo<24, 9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:205:28)
+INFO: [HLS 214-131] Inlining function 'ap_uint<1>::operator=(ap_uint<1> const&)' into 'int xf::cv::xfMat2AXIvideo<24, 9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:203:26)
+INFO: [HLS 214-131] Inlining function 'ap_uint<1>::ap_uint(int)' into 'int xf::cv::xfMat2AXIvideo<24, 9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:203:28)
+INFO: [HLS 214-131] Inlining function 'ap_uint<1>::operator=(ap_uint<1> const&)' into 'int xf::cv::xfMat2AXIvideo<24, 9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:200:26)
+INFO: [HLS 214-131] Inlining function 'ap_uint<1>::ap_uint(int)' into 'int xf::cv::xfMat2AXIvideo<24, 9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:200:28)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Mat<9, 1080, 1920, 1, 2>::Mat()' into 'overlaystream(hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, ap_uint<8>, ap_uint<32>, ap_uint<32>, ap_uint<32>, ap_uint<32>)' (source/overlaystream.cpp:123:44)
+INFO: [HLS 214-131] Inlining function 'int xf::cv::xfMat2AXIvideo<24, 9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' into 'overlaystream(hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, ap_uint<8>, ap_uint<32>, ap_uint<32>, ap_uint<32>, ap_uint<32>)' (source/overlaystream.cpp:139:2)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Mat<9, 1080, 1920, 1, 2>::Mat()' into 'overlaystream(hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, ap_uint<8>, ap_uint<32>, ap_uint<32>, ap_uint<32>, ap_uint<32>)' (source/overlaystream.cpp:125:44)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Mat<0, 1080, 1920, 1, 2>::Mat()' into 'overlaystream(hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, ap_uint<8>, ap_uint<32>, ap_uint<32>, ap_uint<32>, ap_uint<32>)' (source/overlaystream.cpp:127:44)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Mat<9, 1080, 1920, 1, 2>::Mat()' into 'overlaystream(hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, ap_uint<8>, ap_uint<32>, ap_uint<32>, ap_uint<32>, ap_uint<32>)' (source/overlaystream.cpp:129:42)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Mat<9, 1080, 1920, 1, 2>::Mat()' into 'overlaystream(hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, ap_uint<8>, ap_uint<32>, ap_uint<32>, ap_uint<32>, ap_uint<32>)' (source/overlaystream.cpp:131:43)
+INFO: [HLS 214-131] Inlining function 'int xf::cv::AXIvideo2xfMat<24, 9, 1080, 1920, 1>(hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' into 'overlaystream(hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, ap_uint<8>, ap_uint<32>, ap_uint<32>, ap_uint<32>, ap_uint<32>)' (source/overlaystream.cpp:136:2)
+INFO: [HLS 214-178] Inlining function 'xf::cv::Mat<9, 1080, 1920, 1, 2>::read(int)' into 'void xfrgb2gray<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/overlaystream.cpp:89:0)
+INFO: [HLS 214-178] Inlining function 'saturate_cast(int, int)' into 'void xfrgb2gray<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/overlaystream.cpp:89:0)
+INFO: [HLS 214-178] Inlining function 'xf::cv::Mat<0, 1080, 1920, 1, 2>::write(int, ap_uint<8>)' into 'void xfrgb2gray<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/overlaystream.cpp:89:0)
+INFO: [HLS 214-178] Inlining function 'xf::cv::Mat<9, 1080, 1920, 1, 2>::write(int, ap_uint<24>)' into 'void xfrgb2gray<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (source/overlaystream.cpp:89:0)
+INFO: [HLS 214-178] Inlining function 'xf::cv::Mat<9, 1080, 1920, 1, 2>::read(int)' into 'void overlyOnMat<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, ap_uint<8>, ap_uint<32>, ap_uint<32>, ap_uint<32>, ap_uint<32>)' (source/overlaystream.cpp:47:0)
+INFO: [HLS 214-178] Inlining function 'xf::cv::Mat<0, 1080, 1920, 1, 2>::read(int)' into 'void overlyOnMat<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, ap_uint<8>, ap_uint<32>, ap_uint<32>, ap_uint<32>, ap_uint<32>)' (source/overlaystream.cpp:47:0)
+INFO: [HLS 214-178] Inlining function 'xf::cv::Mat<9, 1080, 1920, 1, 2>::write(int, ap_uint<24>)' into 'void overlyOnMat<1080, 1920>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<0, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, ap_uint<8>, ap_uint<32>, ap_uint<32>, ap_uint<32>, ap_uint<32>)' (source/overlaystream.cpp:47:0)
+INFO: [HLS 214-178] Inlining function 'xf::cv::Mat<9, 1080, 1920, 1, 2>::write(int, ap_uint<24>)' into 'overlaystream(hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, ap_uint<8>, ap_uint<32>, ap_uint<32>, ap_uint<32>, ap_uint<32>)' (source/overlaystream.cpp:112:0)
+INFO: [HLS 214-178] Inlining function 'xf::cv::Mat<9, 1080, 1920, 1, 2>::read(int)' into 'overlaystream(hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, ap_uint<8>, ap_uint<32>, ap_uint<32>, ap_uint<32>, ap_uint<32>)' (source/overlaystream.cpp:112:0)
+INFO: [HLS 214-178] Inlining function 'xf::cv::Scalar<3, ap_uint<24> >::operator=(xf::cv::Scalar<3, ap_uint<24> >&&)' into 'overlaystream(hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, ap_uint<8>, ap_uint<32>, ap_uint<32>, ap_uint<32>, ap_uint<32>)' (source/overlaystream.cpp:112:0)
+INFO-FLOW: DBG:CMD: copy_raw_kernel_xml ap_link_39: kernel.xml not generated: F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/kernel.internal.xml
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:09 ; elapsed = 00:00:29 . Memory (MB): peak = 998.473 ; gain = 879.977
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:09 ; elapsed = 00:00:29 . Memory (MB): peak = 998.473 ; gain = 879.977
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top overlaystream -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/a.g.0.bc -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+Command         transform done; 0.156 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:09 ; elapsed = 00:00:30 . Memory (MB): peak = 998.473 ; gain = 879.977
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -data-pack -instcombine -dce -inst-simplify -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/a.g.1.bc -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+Command         transform done; 0.22 sec.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/a.g.2.prechk.bc -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+WARNING: [SYNCHK 200-23] F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_ref.h:414: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:10 ; elapsed = 00:00:30 . Memory (MB): peak = 998.473 ; gain = 879.977
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/a.g.1.bc to F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db -interface-port-rename -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -function-uniquify -directive-preproc -mem2reg -dse -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -function-inline -complex-op-raise -inst-simplify -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin2 -bitwidthmin2 -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -directive-preproc -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/a.o.1.bc -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_98_2' (source/overlaystream.cpp:95) in function 'xfrgb2gray<1080, 1920>' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loop_width' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:186) in function 'overlaystream' for pipelining.
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'PackPixel' (source/overlaystream.cpp:15).
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'VITIS_LOOP_19_1' (source/overlaystream.cpp:18) because its parent loop or function is pipelined.
+WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'VITIS_LOOP_19_1' (source/overlaystream.cpp:18) because its parent loop or function is pipelined.
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'ExtractPixel' (source/overlaystream.cpp:3).
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'VITIS_LOOP_7_1' (source/overlaystream.cpp:6) because its parent loop or function is pipelined.
+WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'VITIS_LOOP_7_1' (source/overlaystream.cpp:6) because its parent loop or function is pipelined.
+WARNING: [XFORM 203-561] Updating loop lower bound from 3 to 1920 for loop 'VITIS_LOOP_62_2' (source/overlaystream.cpp:62:27) in function 'overlyOnMat<1080, 1920>'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 12 to 1080 for loop 'VITIS_LOOP_59_1' (source/overlaystream.cpp:59:27) in function 'overlyOnMat<1080, 1920>'.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.1' (F:/Vitis_Libraries/vision/L1/include\common/xf_structs.hpp:228) in function 'overlaystream' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_19_1' (source/overlaystream.cpp:18) in function 'PackPixel' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_7_1' (source/overlaystream.cpp:6) in function 'ExtractPixel' completely with a factor of 3.
+INFO: [XFORM 203-101] Partitioning array 'pixelBottom_value.V' (source/overlaystream.cpp:53) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'pixelMix_value.V' (source/overlaystream.cpp:55) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'pix.val.V' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:173) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ref.tmp.i.i'  in dimension 1 completely.
+INFO: [XFORM 203-102] Partitioning array 'rgb.V' (source/overlaystream.cpp:93) automatically.
+INFO: [XFORM 203-721] Changing loop 'Loop_loop_height_proc' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:120) to a process function for dataflow in function 'overlaystream'.
+INFO: [XFORM 203-721] Changing loop 'Loop_loop_height_proc' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:190) to a process function for dataflow in function 'overlaystream'.
+INFO: [XFORM 203-712] Applying dataflow to function 'overlaystream', detected/extracted 4 process function(s): 
+	 'Loop_loop_height_proc1719'
+	 'xfrgb2gray<1080, 1920>'
+	 'overlyOnMat<1080, 1920>'
+	 'Loop_loop_height_proc1618'.
+Command         transform done; 1.288 sec.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin2 -bitwidthmin2 -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -barrier -norm-name F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/a.o.1.tmp.bc -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [XFORM 203-11] Balancing expressions in function 'overlyOnMat<1080, 1920>' (source/overlaystream.cpp:59:47)...3 expression(s) balanced.
+Command         transform done; 0.811 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:12 ; elapsed = 00:00:32 . Memory (MB): peak = 998.473 ; gain = 879.977
+Execute         get_config_compile -enable_loop_extract 
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -aggr-aa -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin2 -bitwidthmin2 -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/a.o.2.bc -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_96_1' (source/overlaystream.cpp:95:15) in function 'xfrgb2gray<1080, 1920>'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_59_1' (source/overlaystream.cpp:59:27) in function 'overlyOnMat<1080, 1920>'.
+WARNING: [HLS 200-463] Ignoring allocation pragma because function 'resize' is missing or was optimized away 
+WARNING: [HLS 200-631] Ignoring ap_ctrl_none interface for overlaystream due to Loop_loop_height_proc1719 with non-FIFO I/O
+Command         transform done; 1.386 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:13 ; elapsed = 00:00:33 . Memory (MB): peak = 998.473 ; gain = 879.977
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 4.028 sec.
+Command     elaborate done; 31.923 sec.
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'overlaystream' ...
+Execute       ap_set_top_model overlaystream 
+WARNING: [SYN 201-103] Legalizing function name 'xfrgb2gray<1080, 1920>' to 'xfrgb2gray_1080_1920_s'.
+WARNING: [SYN 201-103] Legalizing function name 'ExtractPixel.1' to 'ExtractPixel_1'.
+WARNING: [SYN 201-103] Legalizing function name 'overlyOnMat<1080, 1920>' to 'overlyOnMat_1080_1920_s'.
+Execute       get_model_list overlaystream -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model overlaystream 
+Execute       preproc_iomode -model Loop_loop_height_proc1618 
+Execute       preproc_iomode -model overlyOnMat<1080, 1920> 
+Execute       preproc_iomode -model PackPixel 
+Execute       preproc_iomode -model ExtractPixel.1 
+Execute       preproc_iomode -model xfrgb2gray<1080, 1920> 
+Execute       preproc_iomode -model ExtractPixel 
+Execute       preproc_iomode -model Loop_loop_height_proc1719 
+Execute       get_model_list overlaystream -filter all-wo-channel 
+INFO-FLOW: Model list for configure: Loop_loop_height_proc1719 ExtractPixel {xfrgb2gray<1080, 1920>} ExtractPixel.1 PackPixel {overlyOnMat<1080, 1920>} Loop_loop_height_proc1618 overlaystream
+INFO-FLOW: Configuring Module : Loop_loop_height_proc1719 ...
+Execute       set_default_model Loop_loop_height_proc1719 
+Execute       apply_spec_resource_limit Loop_loop_height_proc1719 
+INFO-FLOW: Configuring Module : ExtractPixel ...
+Execute       set_default_model ExtractPixel 
+Execute       apply_spec_resource_limit ExtractPixel 
+INFO-FLOW: Configuring Module : xfrgb2gray<1080, 1920> ...
+Execute       set_default_model xfrgb2gray<1080, 1920> 
+Execute       apply_spec_resource_limit xfrgb2gray<1080, 1920> 
+INFO-FLOW: Configuring Module : ExtractPixel.1 ...
+Execute       set_default_model ExtractPixel.1 
+Execute       apply_spec_resource_limit ExtractPixel.1 
+INFO-FLOW: Configuring Module : PackPixel ...
+Execute       set_default_model PackPixel 
+Execute       apply_spec_resource_limit PackPixel 
+INFO-FLOW: Configuring Module : overlyOnMat<1080, 1920> ...
+Execute       set_default_model overlyOnMat<1080, 1920> 
+Execute       apply_spec_resource_limit overlyOnMat<1080, 1920> 
+INFO-FLOW: Configuring Module : Loop_loop_height_proc1618 ...
+Execute       set_default_model Loop_loop_height_proc1618 
+Execute       apply_spec_resource_limit Loop_loop_height_proc1618 
+INFO-FLOW: Configuring Module : overlaystream ...
+Execute       set_default_model overlaystream 
+Execute       apply_spec_resource_limit overlaystream 
+INFO-FLOW: Model list for preprocess: Loop_loop_height_proc1719 ExtractPixel {xfrgb2gray<1080, 1920>} ExtractPixel.1 PackPixel {overlyOnMat<1080, 1920>} Loop_loop_height_proc1618 overlaystream
+INFO-FLOW: Preprocessing Module: Loop_loop_height_proc1719 ...
+Execute       set_default_model Loop_loop_height_proc1719 
+Execute       cdfg_preprocess -model Loop_loop_height_proc1719 
+Execute       rtl_gen_preprocess Loop_loop_height_proc1719 
+INFO-FLOW: Preprocessing Module: ExtractPixel ...
+Execute       set_default_model ExtractPixel 
+Execute       cdfg_preprocess -model ExtractPixel 
+Execute       rtl_gen_preprocess ExtractPixel 
+INFO-FLOW: Preprocessing Module: xfrgb2gray<1080, 1920> ...
+Execute       set_default_model xfrgb2gray<1080, 1920> 
+Execute       cdfg_preprocess -model xfrgb2gray<1080, 1920> 
+Execute       rtl_gen_preprocess xfrgb2gray<1080, 1920> 
+INFO-FLOW: Preprocessing Module: ExtractPixel.1 ...
+Execute       set_default_model ExtractPixel.1 
+Execute       cdfg_preprocess -model ExtractPixel.1 
+Execute       rtl_gen_preprocess ExtractPixel.1 
+INFO-FLOW: Preprocessing Module: PackPixel ...
+Execute       set_default_model PackPixel 
+Execute       cdfg_preprocess -model PackPixel 
+Execute       rtl_gen_preprocess PackPixel 
+INFO-FLOW: Preprocessing Module: overlyOnMat<1080, 1920> ...
+Execute       set_default_model overlyOnMat<1080, 1920> 
+Execute       cdfg_preprocess -model overlyOnMat<1080, 1920> 
+Execute       rtl_gen_preprocess overlyOnMat<1080, 1920> 
+INFO-FLOW: Preprocessing Module: Loop_loop_height_proc1618 ...
+Execute       set_default_model Loop_loop_height_proc1618 
+Execute       cdfg_preprocess -model Loop_loop_height_proc1618 
+Execute       rtl_gen_preprocess Loop_loop_height_proc1618 
+INFO-FLOW: Preprocessing Module: overlaystream ...
+Execute       set_default_model overlaystream 
+Execute       cdfg_preprocess -model overlaystream 
+Execute       rtl_gen_preprocess overlaystream 
+INFO-FLOW: Model list for synthesis: Loop_loop_height_proc1719 ExtractPixel {xfrgb2gray<1080, 1920>} ExtractPixel.1 PackPixel {overlyOnMat<1080, 1920>} Loop_loop_height_proc1618 overlaystream
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Loop_loop_height_proc1719' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model Loop_loop_height_proc1719 
+Execute       schedule -model Loop_loop_height_proc1719 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_width'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'loop_wait_for_eol'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 33.695 seconds; current allocated memory: 271.002 MB.
+Execute       syn_report -verbosereport -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/Loop_loop_height_proc1719.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/Loop_loop_height_proc1719.sched.adb -f 
+INFO-FLOW: Finish scheduling Loop_loop_height_proc1719.
+Execute       set_default_model Loop_loop_height_proc1719 
+Execute       bind -model Loop_loop_height_proc1719 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 271.742 MB.
+Execute       syn_report -verbosereport -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/Loop_loop_height_proc1719.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/Loop_loop_height_proc1719.bind.adb -f 
+INFO-FLOW: Finish binding Loop_loop_height_proc1719.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ExtractPixel' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model ExtractPixel 
+Execute       schedule -model ExtractPixel 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'ExtractPixel'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.167 seconds; current allocated memory: 271.824 MB.
+Execute       syn_report -verbosereport -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/ExtractPixel.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/ExtractPixel.sched.adb -f 
+INFO-FLOW: Finish scheduling ExtractPixel.
+Execute       set_default_model ExtractPixel 
+Execute       bind -model ExtractPixel 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.116 seconds; current allocated memory: 271.902 MB.
+Execute       syn_report -verbosereport -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/ExtractPixel.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/ExtractPixel.bind.adb -f 
+INFO-FLOW: Finish binding ExtractPixel.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'xfrgb2gray_1080_1920_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model xfrgb2gray<1080, 1920> 
+Execute       schedule -model xfrgb2gray<1080, 1920> 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln852_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln852_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln852) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_96_1_VITIS_LOOP_98_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 7.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.198 seconds; current allocated memory: 272.009 MB.
+Execute       syn_report -verbosereport -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/xfrgb2gray_1080_1920_s.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/xfrgb2gray_1080_1920_s.sched.adb -f 
+INFO-FLOW: Finish scheduling xfrgb2gray<1080, 1920>.
+Execute       set_default_model xfrgb2gray<1080, 1920> 
+Execute       bind -model xfrgb2gray<1080, 1920> 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.161 seconds; current allocated memory: 272.179 MB.
+Execute       syn_report -verbosereport -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/xfrgb2gray_1080_1920_s.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/xfrgb2gray_1080_1920_s.bind.adb -f 
+INFO-FLOW: Finish binding xfrgb2gray<1080, 1920>.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ExtractPixel_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model ExtractPixel.1 
+Execute       schedule -model ExtractPixel.1 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'ExtractPixel.1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.161 seconds; current allocated memory: 272.216 MB.
+Execute       syn_report -verbosereport -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/ExtractPixel_1.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/ExtractPixel_1.sched.adb -f 
+INFO-FLOW: Finish scheduling ExtractPixel.1.
+Execute       set_default_model ExtractPixel.1 
+Execute       bind -model ExtractPixel.1 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.122 seconds; current allocated memory: 272.295 MB.
+Execute       syn_report -verbosereport -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/ExtractPixel_1.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/ExtractPixel_1.bind.adb -f 
+INFO-FLOW: Finish binding ExtractPixel.1.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PackPixel' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model PackPixel 
+Execute       schedule -model PackPixel 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'PackPixel'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.142 seconds; current allocated memory: 272.326 MB.
+Execute       syn_report -verbosereport -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/PackPixel.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/PackPixel.sched.adb -f 
+INFO-FLOW: Finish scheduling PackPixel.
+Execute       set_default_model PackPixel 
+Execute       bind -model PackPixel 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.118 seconds; current allocated memory: 272.367 MB.
+Execute       syn_report -verbosereport -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/PackPixel.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/PackPixel.bind.adb -f 
+INFO-FLOW: Finish binding PackPixel.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'overlyOnMat_1080_1920_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model overlyOnMat<1080, 1920> 
+Execute       schedule -model overlyOnMat<1080, 1920> 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln1368_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln1349_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln1368_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln1349_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln1368) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln1349) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_59_1_VITIS_LOOP_62_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 8.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.139 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.244 seconds; current allocated memory: 272.637 MB.
+Execute       syn_report -verbosereport -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlyOnMat_1080_1920_s.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlyOnMat_1080_1920_s.sched.adb -f 
+INFO-FLOW: Finish scheduling overlyOnMat<1080, 1920>.
+Execute       set_default_model overlyOnMat<1080, 1920> 
+Execute       bind -model overlyOnMat<1080, 1920> 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.171 seconds; current allocated memory: 272.990 MB.
+Execute       syn_report -verbosereport -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlyOnMat_1080_1920_s.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlyOnMat_1080_1920_s.bind.adb -f 
+INFO-FLOW: Finish binding overlyOnMat<1080, 1920>.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Loop_loop_height_proc1618' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model Loop_loop_height_proc1618 
+Execute       schedule -model Loop_loop_height_proc1618 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_width'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.21 seconds; current allocated memory: 273.121 MB.
+Execute       syn_report -verbosereport -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/Loop_loop_height_proc1618.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/Loop_loop_height_proc1618.sched.adb -f 
+INFO-FLOW: Finish scheduling Loop_loop_height_proc1618.
+Execute       set_default_model Loop_loop_height_proc1618 
+Execute       bind -model Loop_loop_height_proc1618 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 273.261 MB.
+Execute       syn_report -verbosereport -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/Loop_loop_height_proc1618.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/Loop_loop_height_proc1618.bind.adb -f 
+INFO-FLOW: Finish binding Loop_loop_height_proc1618.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'overlaystream' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model overlaystream 
+Execute       schedule -model overlaystream 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.155 seconds; current allocated memory: 273.391 MB.
+Execute       syn_report -verbosereport -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.sched.adb -f 
+INFO-FLOW: Finish scheduling overlaystream.
+Execute       set_default_model overlaystream 
+Execute       bind -model overlaystream 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.187 seconds; current allocated memory: 273.711 MB.
+Execute       syn_report -verbosereport -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.bind.adb -f 
+INFO-FLOW: Finish binding overlaystream.
+Execute       get_model_list overlaystream -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess Loop_loop_height_proc1719 
+Execute       rtl_gen_preprocess ExtractPixel 
+Execute       rtl_gen_preprocess xfrgb2gray<1080, 1920> 
+Execute       rtl_gen_preprocess ExtractPixel.1 
+Execute       rtl_gen_preprocess PackPixel 
+Execute       rtl_gen_preprocess overlyOnMat<1080, 1920> 
+Execute       rtl_gen_preprocess Loop_loop_height_proc1618 
+Execute       rtl_gen_preprocess overlaystream 
+INFO-FLOW: Model list for RTL generation: Loop_loop_height_proc1719 ExtractPixel {xfrgb2gray<1080, 1920>} ExtractPixel.1 PackPixel {overlyOnMat<1080, 1920>} Loop_loop_height_proc1618 overlaystream
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Loop_loop_height_proc1719' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model Loop_loop_height_proc1719 -top_prefix overlaystream_ -sub_prefix overlaystream_ -mg_file F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/Loop_loop_height_proc1719.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_loop_height_proc1719'.
+INFO: [HLS 200-111]  Elapsed time: 0.219 seconds; current allocated memory: 274.349 MB.
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.rtl_wrap.cfg.tcl 
+Execute       gen_rtl Loop_loop_height_proc1719 -style xilinx -f -lang vhdl -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/syn/vhdl/overlaystream_Loop_loop_height_proc1719 
+Execute       gen_rtl Loop_loop_height_proc1719 -style xilinx -f -lang vlog -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/syn/verilog/overlaystream_Loop_loop_height_proc1719 
+Execute       syn_report -csynth -model Loop_loop_height_proc1719 -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/syn/report/Loop_loop_height_proc1719_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       syn_report -rtlxml -model Loop_loop_height_proc1719 -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/syn/report/Loop_loop_height_proc1719_csynth.xml 
+Execute         get_solution -flow_target
+Execute           get_solution -flow_target 
+Execute       syn_report -verbosereport -model Loop_loop_height_proc1719 -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/Loop_loop_height_proc1719.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -model Loop_loop_height_proc1719 -f -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/Loop_loop_height_proc1719.adb 
+Execute       gen_tb_info Loop_loop_height_proc1719 -p F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/Loop_loop_height_proc1719 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ExtractPixel' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model ExtractPixel -top_prefix overlaystream_ -sub_prefix overlaystream_ -mg_file F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/ExtractPixel.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ExtractPixel'.
+INFO: [HLS 200-111]  Elapsed time: 0.248 seconds; current allocated memory: 275.388 MB.
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.rtl_wrap.cfg.tcl 
+Execute       gen_rtl ExtractPixel -style xilinx -f -lang vhdl -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/syn/vhdl/overlaystream_ExtractPixel 
+Execute       gen_rtl ExtractPixel -style xilinx -f -lang vlog -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/syn/verilog/overlaystream_ExtractPixel 
+Execute       syn_report -csynth -model ExtractPixel -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/syn/report/ExtractPixel_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       syn_report -rtlxml -model ExtractPixel -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/syn/report/ExtractPixel_csynth.xml 
+Execute         get_solution -flow_target
+Execute           get_solution -flow_target 
+Execute       syn_report -verbosereport -model ExtractPixel -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/ExtractPixel.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -model ExtractPixel -f -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/ExtractPixel.adb 
+Execute       gen_tb_info ExtractPixel -p F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/ExtractPixel 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'xfrgb2gray_1080_1920_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model xfrgb2gray<1080, 1920> -top_prefix overlaystream_ -sub_prefix overlaystream_ -mg_file F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/xfrgb2gray_1080_1920_s.compgen.tcl 
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_8ns_13ns_22ns_22_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_8ns_16ns_22ns_23_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_8ns_15ns_22_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'xfrgb2gray_1080_1920_s'.
+INFO: [HLS 200-111]  Elapsed time: 0.195 seconds; current allocated memory: 275.998 MB.
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.rtl_wrap.cfg.tcl 
+Execute       gen_rtl xfrgb2gray<1080, 1920> -style xilinx -f -lang vhdl -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/syn/vhdl/overlaystream_xfrgb2gray_1080_1920_s 
+Execute       gen_rtl xfrgb2gray<1080, 1920> -style xilinx -f -lang vlog -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/syn/verilog/overlaystream_xfrgb2gray_1080_1920_s 
+Execute       syn_report -csynth -model xfrgb2gray<1080, 1920> -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/syn/report/xfrgb2gray_1080_1920_s_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       syn_report -rtlxml -model xfrgb2gray<1080, 1920> -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/syn/report/xfrgb2gray_1080_1920_s_csynth.xml 
+Execute         get_solution -flow_target
+Execute           get_solution -flow_target 
+Execute       syn_report -verbosereport -model xfrgb2gray<1080, 1920> -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/xfrgb2gray_1080_1920_s.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -model xfrgb2gray<1080, 1920> -f -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/xfrgb2gray_1080_1920_s.adb 
+Execute       gen_tb_info xfrgb2gray<1080, 1920> -p F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/xfrgb2gray_1080_1920_s 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ExtractPixel_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model ExtractPixel.1 -top_prefix overlaystream_ -sub_prefix overlaystream_ -mg_file F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/ExtractPixel_1.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ExtractPixel_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.214 seconds; current allocated memory: 276.526 MB.
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.rtl_wrap.cfg.tcl 
+Execute       gen_rtl ExtractPixel.1 -style xilinx -f -lang vhdl -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/syn/vhdl/overlaystream_ExtractPixel_1 
+Execute       gen_rtl ExtractPixel.1 -style xilinx -f -lang vlog -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/syn/verilog/overlaystream_ExtractPixel_1 
+Execute       syn_report -csynth -model ExtractPixel.1 -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/syn/report/ExtractPixel_1_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       syn_report -rtlxml -model ExtractPixel.1 -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/syn/report/ExtractPixel_1_csynth.xml 
+Execute         get_solution -flow_target
+Execute           get_solution -flow_target 
+Execute       syn_report -verbosereport -model ExtractPixel.1 -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/ExtractPixel_1.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -model ExtractPixel.1 -f -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/ExtractPixel_1.adb 
+Execute       gen_tb_info ExtractPixel.1 -p F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/ExtractPixel_1 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PackPixel' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model PackPixel -top_prefix overlaystream_ -sub_prefix overlaystream_ -mg_file F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/PackPixel.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PackPixel'.
+INFO: [HLS 200-111]  Elapsed time: 0.167 seconds; current allocated memory: 276.793 MB.
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.rtl_wrap.cfg.tcl 
+Execute       gen_rtl PackPixel -style xilinx -f -lang vhdl -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/syn/vhdl/overlaystream_PackPixel 
+Execute       gen_rtl PackPixel -style xilinx -f -lang vlog -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/syn/verilog/overlaystream_PackPixel 
+Execute       syn_report -csynth -model PackPixel -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/syn/report/PackPixel_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       syn_report -rtlxml -model PackPixel -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/syn/report/PackPixel_csynth.xml 
+Execute         get_solution -flow_target
+Execute           get_solution -flow_target 
+Execute       syn_report -verbosereport -model PackPixel -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/PackPixel.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -model PackPixel -f -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/PackPixel.adb 
+Execute       gen_tb_info PackPixel -p F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/PackPixel 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'overlyOnMat_1080_1920_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model overlyOnMat<1080, 1920> -top_prefix overlaystream_ -sub_prefix overlaystream_ -mg_file F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlyOnMat_1080_1920_s.compgen.tcl 
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_8ns_8ns_16ns_17_4_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_8ns_8ns_16_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_17ns_19ns_35_4_1': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'overlyOnMat_1080_1920_s'.
+INFO: [HLS 200-111]  Elapsed time: 0.207 seconds; current allocated memory: 277.715 MB.
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.rtl_wrap.cfg.tcl 
+Execute       gen_rtl overlyOnMat<1080, 1920> -style xilinx -f -lang vhdl -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/syn/vhdl/overlaystream_overlyOnMat_1080_1920_s 
+Execute       gen_rtl overlyOnMat<1080, 1920> -style xilinx -f -lang vlog -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/syn/verilog/overlaystream_overlyOnMat_1080_1920_s 
+Execute       syn_report -csynth -model overlyOnMat<1080, 1920> -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/syn/report/overlyOnMat_1080_1920_s_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       syn_report -rtlxml -model overlyOnMat<1080, 1920> -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/syn/report/overlyOnMat_1080_1920_s_csynth.xml 
+Execute         get_solution -flow_target
+Execute           get_solution -flow_target 
+Execute       syn_report -verbosereport -model overlyOnMat<1080, 1920> -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlyOnMat_1080_1920_s.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -model overlyOnMat<1080, 1920> -f -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlyOnMat_1080_1920_s.adb 
+Execute       gen_tb_info overlyOnMat<1080, 1920> -p F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlyOnMat_1080_1920_s 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Loop_loop_height_proc1618' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model Loop_loop_height_proc1618 -top_prefix overlaystream_ -sub_prefix overlaystream_ -mg_file F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/Loop_loop_height_proc1618.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_loop_height_proc1618'.
+INFO: [HLS 200-111]  Elapsed time: 0.329 seconds; current allocated memory: 279.150 MB.
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.rtl_wrap.cfg.tcl 
+Execute       gen_rtl Loop_loop_height_proc1618 -style xilinx -f -lang vhdl -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/syn/vhdl/overlaystream_Loop_loop_height_proc1618 
+Execute       gen_rtl Loop_loop_height_proc1618 -style xilinx -f -lang vlog -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/syn/verilog/overlaystream_Loop_loop_height_proc1618 
+Execute       syn_report -csynth -model Loop_loop_height_proc1618 -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/syn/report/Loop_loop_height_proc1618_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       syn_report -rtlxml -model Loop_loop_height_proc1618 -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/syn/report/Loop_loop_height_proc1618_csynth.xml 
+Execute         get_solution -flow_target
+Execute           get_solution -flow_target 
+Execute       syn_report -verbosereport -model Loop_loop_height_proc1618 -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/Loop_loop_height_proc1618.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -model Loop_loop_height_proc1618 -f -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/Loop_loop_height_proc1618.adb 
+Execute       gen_tb_info Loop_loop_height_proc1618 -p F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/Loop_loop_height_proc1618 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'overlaystream' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model overlaystream -top_prefix  -sub_prefix overlaystream_ -mg_file F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.compgen.tcl 
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'overlaystream/video_in_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'overlaystream/video_in_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'overlaystream/video_in_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'overlaystream/video_in_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'overlaystream/video_in_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'overlaystream/video_in_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'overlaystream/video_in_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'overlaystream/video_out_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'overlaystream/video_out_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'overlaystream/video_out_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'overlaystream/video_out_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'overlaystream/video_out_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'overlaystream/video_out_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'overlaystream/video_out_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'overlaystream/overly_alpha' to 'ap_vld' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'overlaystream/overly_x' to 'ap_vld' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'overlaystream/overly_y' to 'ap_vld' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'overlaystream/overly_h' to 'ap_vld' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'overlaystream/overly_w' to 'ap_vld' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'overlaystream' to 'ap_ctrl_none'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'overlaystream'.
+Command       create_rtl_model done; 0.254 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.465 seconds; current allocated memory: 280.280 MB.
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.rtl_wrap.cfg.tcl 
+Execute       gen_rtl overlaystream -istop -style xilinx -f -lang vhdl -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/syn/vhdl/overlaystream 
+Execute       gen_rtl overlaystream -istop -style xilinx -f -lang vlog -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/syn/verilog/overlaystream 
+Execute       syn_report -csynth -model overlaystream -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/syn/report/overlaystream_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       syn_report -rtlxml -model overlaystream -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/syn/report/overlaystream_csynth.xml 
+Execute         get_solution -flow_target
+Execute           get_solution -flow_target 
+Execute       syn_report -verbosereport -model overlaystream -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -model overlaystream -f -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.adb 
+Execute       gen_tb_info overlaystream -p F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream 
+Execute       export_constraint_db -f -tool general -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.constraint.tcl 
+Execute       syn_report -designview -model overlaystream -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.design.xml 
+Execute       get_config_rtl -disable_wave_debug 
+Execute       syn_report -wcfg -model overlaystream -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream_dataflow_ana.wcfg 
+Execute       syn_report -protoinst -model overlaystream -o F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.protoinst 
+Execute       get_config_debug -directory 
+Execute       sc_get_clocks overlaystream 
+Execute       get_config_export -vivado_clock 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       sc_get_portdomain overlaystream 
+INFO-FLOW: Model list for RTL component generation: Loop_loop_height_proc1719 ExtractPixel {xfrgb2gray<1080, 1920>} ExtractPixel.1 PackPixel {overlyOnMat<1080, 1920>} Loop_loop_height_proc1618 overlaystream
+INFO-FLOW: Handling components in module [Loop_loop_height_proc1719] ... 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/Loop_loop_height_proc1719.compgen.tcl 
+INFO-FLOW: Found component regslice_core.
+INFO-FLOW: Append model regslice_core
+INFO-FLOW: Handling components in module [ExtractPixel] ... 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/ExtractPixel.compgen.tcl 
+INFO-FLOW: Handling components in module [xfrgb2gray_1080_1920_s] ... 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/xfrgb2gray_1080_1920_s.compgen.tcl 
+INFO-FLOW: Found component overlaystream_mul_mul_8ns_15ns_22_4_1.
+INFO-FLOW: Append model overlaystream_mul_mul_8ns_15ns_22_4_1
+INFO-FLOW: Found component overlaystream_mac_muladd_8ns_13ns_22ns_22_4_1.
+INFO-FLOW: Append model overlaystream_mac_muladd_8ns_13ns_22ns_22_4_1
+INFO-FLOW: Found component overlaystream_mac_muladd_8ns_16ns_22ns_23_4_1.
+INFO-FLOW: Append model overlaystream_mac_muladd_8ns_16ns_22ns_23_4_1
+INFO-FLOW: Handling components in module [ExtractPixel_1] ... 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/ExtractPixel_1.compgen.tcl 
+INFO-FLOW: Handling components in module [PackPixel] ... 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/PackPixel.compgen.tcl 
+INFO-FLOW: Handling components in module [overlyOnMat_1080_1920_s] ... 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlyOnMat_1080_1920_s.compgen.tcl 
+INFO-FLOW: Found component overlaystream_mul_8ns_8ns_16_1_1.
+INFO-FLOW: Append model overlaystream_mul_8ns_8ns_16_1_1
+INFO-FLOW: Found component overlaystream_mac_muladd_8ns_8ns_16ns_17_4_1.
+INFO-FLOW: Append model overlaystream_mac_muladd_8ns_8ns_16ns_17_4_1
+INFO-FLOW: Found component overlaystream_mul_mul_17ns_19ns_35_4_1.
+INFO-FLOW: Append model overlaystream_mul_mul_17ns_19ns_35_4_1
+INFO-FLOW: Handling components in module [Loop_loop_height_proc1618] ... 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/Loop_loop_height_proc1618.compgen.tcl 
+INFO-FLOW: Found component regslice_core.
+INFO-FLOW: Append model regslice_core
+INFO-FLOW: Handling components in module [overlaystream] ... 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.compgen.tcl 
+INFO-FLOW: Found component overlaystream_fifo_w24_d1920_A.
+INFO-FLOW: Append model overlaystream_fifo_w24_d1920_A
+INFO-FLOW: Found component overlaystream_fifo_w8_d3_S.
+INFO-FLOW: Append model overlaystream_fifo_w8_d3_S
+INFO-FLOW: Found component overlaystream_fifo_w32_d3_S.
+INFO-FLOW: Append model overlaystream_fifo_w32_d3_S
+INFO-FLOW: Found component overlaystream_fifo_w32_d3_S.
+INFO-FLOW: Append model overlaystream_fifo_w32_d3_S
+INFO-FLOW: Found component overlaystream_fifo_w32_d3_S.
+INFO-FLOW: Append model overlaystream_fifo_w32_d3_S
+INFO-FLOW: Found component overlaystream_fifo_w32_d3_S.
+INFO-FLOW: Append model overlaystream_fifo_w32_d3_S
+INFO-FLOW: Found component overlaystream_fifo_w8_d1920_A.
+INFO-FLOW: Append model overlaystream_fifo_w8_d1920_A
+INFO-FLOW: Found component overlaystream_fifo_w24_d1920_A.
+INFO-FLOW: Append model overlaystream_fifo_w24_d1920_A
+INFO-FLOW: Found component overlaystream_fifo_w24_d1920_A.
+INFO-FLOW: Append model overlaystream_fifo_w24_d1920_A
+INFO-FLOW: Found component overlaystream_start_for_xfrgb2gray_1080_1920_U0.
+INFO-FLOW: Append model overlaystream_start_for_xfrgb2gray_1080_1920_U0
+INFO-FLOW: Found component overlaystream_start_for_overlyOnMat_1080_1920_U0.
+INFO-FLOW: Append model overlaystream_start_for_overlyOnMat_1080_1920_U0
+INFO-FLOW: Found component overlaystream_start_for_Loop_loop_height_proc1618_U0.
+INFO-FLOW: Append model overlaystream_start_for_Loop_loop_height_proc1618_U0
+INFO-FLOW: Found component regslice_core.
+INFO-FLOW: Append model regslice_core
+INFO-FLOW: Append model Loop_loop_height_proc1719
+INFO-FLOW: Append model ExtractPixel
+INFO-FLOW: Append model xfrgb2gray_1080_1920_s
+INFO-FLOW: Append model ExtractPixel_1
+INFO-FLOW: Append model PackPixel
+INFO-FLOW: Append model overlyOnMat_1080_1920_s
+INFO-FLOW: Append model Loop_loop_height_proc1618
+INFO-FLOW: Append model overlaystream
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: regslice_core overlaystream_mul_mul_8ns_15ns_22_4_1 overlaystream_mac_muladd_8ns_13ns_22ns_22_4_1 overlaystream_mac_muladd_8ns_16ns_22ns_23_4_1 overlaystream_mul_8ns_8ns_16_1_1 overlaystream_mac_muladd_8ns_8ns_16ns_17_4_1 overlaystream_mul_mul_17ns_19ns_35_4_1 regslice_core overlaystream_fifo_w24_d1920_A overlaystream_fifo_w8_d3_S overlaystream_fifo_w32_d3_S overlaystream_fifo_w32_d3_S overlaystream_fifo_w32_d3_S overlaystream_fifo_w32_d3_S overlaystream_fifo_w8_d1920_A overlaystream_fifo_w24_d1920_A overlaystream_fifo_w24_d1920_A overlaystream_start_for_xfrgb2gray_1080_1920_U0 overlaystream_start_for_overlyOnMat_1080_1920_U0 overlaystream_start_for_Loop_loop_height_proc1618_U0 regslice_core Loop_loop_height_proc1719 ExtractPixel xfrgb2gray_1080_1920_s ExtractPixel_1 PackPixel overlyOnMat_1080_1920_s Loop_loop_height_proc1618 overlaystream
+INFO-FLOW: To file: write model regslice_core
+INFO-FLOW: To file: write model overlaystream_mul_mul_8ns_15ns_22_4_1
+INFO-FLOW: To file: write model overlaystream_mac_muladd_8ns_13ns_22ns_22_4_1
+INFO-FLOW: To file: write model overlaystream_mac_muladd_8ns_16ns_22ns_23_4_1
+INFO-FLOW: To file: write model overlaystream_mul_8ns_8ns_16_1_1
+INFO-FLOW: To file: write model overlaystream_mac_muladd_8ns_8ns_16ns_17_4_1
+INFO-FLOW: To file: write model overlaystream_mul_mul_17ns_19ns_35_4_1
+INFO-FLOW: To file: write model regslice_core
+INFO-FLOW: To file: write model overlaystream_fifo_w24_d1920_A
+INFO-FLOW: To file: write model overlaystream_fifo_w8_d3_S
+INFO-FLOW: To file: write model overlaystream_fifo_w32_d3_S
+INFO-FLOW: To file: write model overlaystream_fifo_w32_d3_S
+INFO-FLOW: To file: write model overlaystream_fifo_w32_d3_S
+INFO-FLOW: To file: write model overlaystream_fifo_w32_d3_S
+INFO-FLOW: To file: write model overlaystream_fifo_w8_d1920_A
+INFO-FLOW: To file: write model overlaystream_fifo_w24_d1920_A
+INFO-FLOW: To file: write model overlaystream_fifo_w24_d1920_A
+INFO-FLOW: To file: write model overlaystream_start_for_xfrgb2gray_1080_1920_U0
+INFO-FLOW: To file: write model overlaystream_start_for_overlyOnMat_1080_1920_U0
+INFO-FLOW: To file: write model overlaystream_start_for_Loop_loop_height_proc1618_U0
+INFO-FLOW: To file: write model regslice_core
+INFO-FLOW: To file: write model Loop_loop_height_proc1719
+INFO-FLOW: To file: write model ExtractPixel
+INFO-FLOW: To file: write model xfrgb2gray_1080_1920_s
+INFO-FLOW: To file: write model ExtractPixel_1
+INFO-FLOW: To file: write model PackPixel
+INFO-FLOW: To file: write model overlyOnMat_1080_1920_s
+INFO-FLOW: To file: write model Loop_loop_height_proc1618
+INFO-FLOW: To file: write model overlaystream
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+Execute       get_top 
+Execute       get_config_export -ipname 
+Execute       get_config_export -xo 
+Execute       get_config_export -format 
+Execute       get_config_rtl -module_auto_prefix 
+INFO-FLOW: DBG:CMD:   auto_impl: set ipname to top (module_auto_prefix): overlaystream
+INFO-FLOW: DBG:CMD: auto_generate_csynth_design
+INFO-FLOW: DBG:CMD:     auto_generate --sim-model -phase csynth_design -d F:/course_s3_hls/hls/overlaystream/overlaystream/solution1
+Execute       get_solution -flow_target 
+Execute       get_config_export -xo 
+Execute       get_config_export -format 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/global.setting.tcl
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/common.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/op.gen 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/interface.gen 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute             source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/util.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.109 sec.
+Command       ap_source done; 0.11 sec.
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=1 export=0 expOnly=0 dstVlogDir=syn/verilog
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/Loop_loop_height_proc1719.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/ExtractPixel.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/xfrgb2gray_1080_1920_s.compgen.tcl 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info 
+Command       ap_source done; 0.193 sec.
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/ExtractPixel_1.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/PackPixel.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlyOnMat_1080_1920_s.compgen.tcl 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+INFO: [RTMG 210-282] Generating pipelined core: 'overlaystream_mul_8ns_8ns_16_1_1_Multiplier_0'
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Command       ap_source done; 0.211 sec.
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/Loop_loop_height_proc1618.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.compgen.tcl 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'img_in_data_U(overlaystream_fifo_w24_d1920_A)' using Vivado Default RAMs.
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'overly_alpha_c_U(overlaystream_fifo_w8_d3_S)' using Shift Registers.
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'overly_x_c_U(overlaystream_fifo_w32_d3_S)' using Shift Registers.
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'overly_y_c_U(overlaystream_fifo_w32_d3_S)' using Shift Registers.
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'overly_h_c_U(overlaystream_fifo_w32_d3_S)' using Shift Registers.
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'overly_w_c_U(overlaystream_fifo_w32_d3_S)' using Shift Registers.
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'img_src1_data_U(overlaystream_fifo_w8_d1920_A)' using Vivado Default RAMs.
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'img_src2_data_U(overlaystream_fifo_w24_d1920_A)' using Vivado Default RAMs.
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'img_out_data_U(overlaystream_fifo_w24_d1920_A)' using Vivado Default RAMs.
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_xfrgb2gray_1080_1920_U0_U(overlaystream_start_for_xfrgb2gray_1080_1920_U0)' using Shift Registers.
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_overlyOnMat_1080_1920_U0_U(overlaystream_start_for_overlyOnMat_1080_1920_U0)' using Shift Registers.
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_Loop_loop_height_proc1618_U0_U(overlaystream_start_for_Loop_loop_height_proc1618_U0)' using Shift Registers.
+Command       ap_source done; 0.497 sec.
+INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d F:/course_s3_hls/hls/overlaystream/overlaystream/solution1
+Execute       get_solution -flow_target 
+Execute       get_config_export -xo 
+Execute       get_config_export -format 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/global.setting.tcl
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/common.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/op.gen 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/interface.gen 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute             source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/util.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.11 sec.
+Command       ap_source done; 0.11 sec.
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=overlaystream xml_exists=0
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.rtl_wrap.cfg.tcl 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.rtl_wrap.cfg.tcl 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.rtl_wrap.cfg.tcl 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.tbgen.tcl 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/Loop_loop_height_proc1719.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/ExtractPixel.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/xfrgb2gray_1080_1920_s.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/ExtractPixel_1.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/PackPixel.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlyOnMat_1080_1920_s.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/Loop_loop_height_proc1618.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/Loop_loop_height_proc1719.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/ExtractPixel.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/xfrgb2gray_1080_1920_s.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/ExtractPixel_1.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/PackPixel.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlyOnMat_1080_1920_s.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/Loop_loop_height_proc1618.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.compgen.tcl 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Command       ap_source done; 0.193 sec.
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/Loop_loop_height_proc1719.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/ExtractPixel.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/xfrgb2gray_1080_1920_s.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/ExtractPixel_1.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/PackPixel.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlyOnMat_1080_1920_s.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/Loop_loop_height_proc1618.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.compgen.tcl 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.constraint.tcl 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=38
+INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=19
+INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=1 #modelList=29 #gSsdmPorts=38
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/tps/tcl/tcllib1.11.1/fileutil/fileutil.tcl 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/top-io-be.tcl 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.tbgen.tcl 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.rtl_wrap.cfg.tcl 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.compgen.dataonly.tcl 
+Execute       get_config_export -format 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/Loop_loop_height_proc1719.tbgen.tcl 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/ExtractPixel.tbgen.tcl 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/xfrgb2gray_1080_1920_s.tbgen.tcl 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/ExtractPixel_1.tbgen.tcl 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/PackPixel.tbgen.tcl 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlyOnMat_1080_1920_s.tbgen.tcl 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/Loop_loop_height_proc1618.tbgen.tcl 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.tbgen.tcl 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute       get_solution -flow_target 
+Execute       get_config_rtl -kernel_profile 
+Execute       get_config_rtl -kernel_profile 
+Execute       get_config_rtl -stall_sig_gen 
+Execute       get_config_rtl -profile 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.constraint.tcl 
+Execute       sc_get_clocks overlaystream 
+Execute       source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_debug -directory 
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:17 ; elapsed = 00:00:41 . Memory (MB): peak = 998.473 ; gain = 879.977
+INFO: [VHDL 208-304] Generating VHDL RTL for overlaystream.
+INFO: [VLOG 209-307] Generating Verilog RTL for overlaystream.
+Execute       syn_report -model overlaystream -printsummary 
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 213.94 MHz
+Command     autosyn done; 7.711 sec.
+Command   csynth_design done; 39.639 sec.
+Command ap_source done; 40.896 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace F:/course_s3_hls/hls/overlaystream/overlaystream/solution1 opened at Fri Oct 30 16:39:24 +0800 2020
+Execute     ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/zynquplus 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx.lib 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/dsp48.lib 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/dsp48e2.hlp 
+Execute     source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/util.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.116 sec.
+Command     ap_source done; 0.116 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/zynquplus_fpv7 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute             source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute     source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     set_part xczu3eg-sfvc784-1-i 
+INFO-FLOW: DBG:set_part: XILINX_VIVADO=F:/xilinx_2020.1/Vivado/2020.1
+INFO-FLOW: DBG:set_part: RDI_DATADIR=F:/xilinx_2020.1/Vivado/2020.1/data;F:/xilinx_2020.1/Vitis/2020.1/data
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data single -quiet 
+DBG:HLSDevice: Trying to load device library: F:/xilinx_2020.1/Vitis/2020.1\lib\win64.o\librdi_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: F:/xilinx_2020.1/Vivado/2020.1/data/parts/arch.xml
+Command       ap_part_info done; 0.89 sec.
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info 
+Execute       ap_family_info -name zynquplus -data info 
+Execute       add_library xilinx/zynquplus/zynquplus:xczu3eg:-sfvc784:-1-i 
+Execute         get_default_platform 
+Execute         ap_part_info -data single -name xczu3eg-sfvc784-1-i 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data resources 
+Execute         config_chip_info -resource {SLICE 8820} {LUT 70560} {FF 141120} {DSP 360} {BRAM 432} {URAM 0} 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info 
+Execute         config_chip_info -speed slow 
+Execute       add_library xilinx/zynquplus/zynquplus_fpv7 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xczu3eg-sfvc784-1-i'
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info 
+Execute       get_default_platform 
+Command     set_part done; 0.989 sec.
+Execute     ap_part_info -data single -name xczu3eg-sfvc784-1-i 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data resources 
+Execute     config_chip_info -resource {SLICE 8820} {LUT 70560} {FF 141120} {DSP 360} {BRAM 432} {URAM 0} 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info 
+Execute     config_chip_info -speed slow 
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     get_config_interface -m_axi_latency 
+Execute     get_config_interface -m_axi_alignment_byte_size 
+Execute     get_config_interface -m_axi_max_widen_bitwidth 
+Execute     get_config_interface -default_interface 
+Execute     get_config_interface -default_slave_interface 
+Execute     get_config_rtl -register_reset_num 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -format=ip_catalog 
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+Execute     config_export -format=ip_catalog 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -rtl=verilog 
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+Execute     config_export -rtl=verilog 
+Command   open_solution done; 1.162 sec.
+Execute   set_part xczu3eg-sfvc784-1-i 
+INFO-FLOW: DBG:set_part: XILINX_VIVADO=F:/xilinx_2020.1/Vivado/2020.1
+INFO-FLOW: DBG:set_part: RDI_DATADIR=F:/xilinx_2020.1/Vivado/2020.1/data;F:/xilinx_2020.1/Vitis/2020.1/data
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data single -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info 
+Execute     ap_family_info -name zynquplus -data info 
+Execute     add_library xilinx/zynquplus/zynquplus:xczu3eg:-sfvc784:-1-i 
+Execute       get_default_platform 
+Execute       ap_part_info -data single -name xczu3eg-sfvc784-1-i 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data resources 
+Execute       config_chip_info -resource {SLICE 8820} {LUT 70560} {FF 141120} {DSP 360} {BRAM 432} {URAM 0} 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info 
+Execute       config_chip_info -speed slow 
+Execute     add_library xilinx/zynquplus/zynquplus_fpv7 
+Execute       get_default_platform 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info 
+Execute     get_default_platform 
+Execute   create_clock -period 10 -name default 
+Execute   config_export -format ip_catalog -rtl verilog 
+Execute   source ./overlaystream/solution1/directives.tcl 
+Execute     set_directive_top -name overlaystream overlaystream 
+INFO-FLOW: Setting directive 'TOP' name=overlaystream 
+Execute   export_design -rtl verilog -format ip_catalog 
+Execute     get_config_export -clock_margin 
+Execute     get_config_export -custom_script 
+Execute     get_config_export -description 
+Execute     get_config_export -display_name 
+Execute     get_config_export -driver_input_dir 
+Execute     get_config_export -ipname 
+Execute     get_config_export -library 
+Execute     get_config_export -output 
+Execute     get_config_export -qor_test 
+Execute     get_config_export -sim 
+Execute     get_config_export -taxonomy 
+Execute     get_config_export -use_ip 
+Execute     get_config_export -use_netlist 
+Execute     get_config_export -vendor 
+Execute     get_config_export -version 
+Execute     get_config_export -xo 
+Execute     config_export -format=ip_catalog -rtl=verilog 
+INFO-FLOW: DBG:CMD: export_design_wrap: -format ip_catalog -rtl verilog
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/global.setting.tcl 
+Execute     get_config_export -vivado_clock 
+Execute     get_top 
+Execute     get_config_export -ipname 
+Execute     get_config_export -xo 
+Execute     get_config_export -format 
+Execute     get_config_rtl -module_auto_prefix 
+INFO-FLOW: DBG:CMD:   auto_impl: set ipname to top (module_auto_prefix): overlaystream
+Execute     get_solution -flow_target 
+Execute     get_config_export -xo 
+Execute     get_config_export -format 
+INFO-FLOW: DBG:CMD:   auto_impl: pack: -export -rtl verilog
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/global.setting.tcl 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: automg_wrap -export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag
+INFO-FLOW: DBG:CMD:     auto_generate -export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag
+Execute     get_solution -flow_target 
+Execute     get_config_export -xo 
+Execute     get_config_export -format 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/global.setting.tcl
+Execute     source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/common.gen 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/op.gen 
+Execute     source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/interface.gen 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/global.setting.tcl 
+Execute     source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/util.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.112 sec.
+Command     ap_source done; 0.112 sec.
+Execute     source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=overlaystream xml_exists=1
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.rtl_wrap.cfg.tcl 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.rtl_wrap.cfg.tcl 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.rtl_wrap.cfg.tcl 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.tbgen.tcl 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/global.setting.tcl 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/Loop_loop_height_proc1719.compgen.tcl 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/ExtractPixel.compgen.tcl 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/xfrgb2gray_1080_1920_s.compgen.tcl 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/ExtractPixel_1.compgen.tcl 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/PackPixel.compgen.tcl 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlyOnMat_1080_1920_s.compgen.tcl 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/Loop_loop_height_proc1618.compgen.tcl 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/global.setting.tcl 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/Loop_loop_height_proc1719.compgen.tcl 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/ExtractPixel.compgen.tcl 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/xfrgb2gray_1080_1920_s.compgen.tcl 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/ExtractPixel_1.compgen.tcl 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/PackPixel.compgen.tcl 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlyOnMat_1080_1920_s.compgen.tcl 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/Loop_loop_height_proc1618.compgen.tcl 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.compgen.tcl 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Command     ap_source done; 0.233 sec.
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/global.setting.tcl 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/Loop_loop_height_proc1719.compgen.tcl 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/ExtractPixel.compgen.tcl 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/xfrgb2gray_1080_1920_s.compgen.tcl 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/ExtractPixel_1.compgen.tcl 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/PackPixel.compgen.tcl 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlyOnMat_1080_1920_s.compgen.tcl 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/Loop_loop_height_proc1618.compgen.tcl 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.compgen.tcl 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/global.setting.tcl 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.constraint.tcl 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=38
+INFO-FLOW: DBG:CMD:       copying IP vlog from F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/impl/verilog
+INFO-FLOW: DBG:CMD:       copying IP vhdl from F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/impl/vhdl
+Execute     get_config_export -format 
+INFO-FLOW: DBG:CMD:       generate_ip_script #gSsdmPorts=38 g_lang=vlog is_sdaccel=false is_sdsoc=true xo_file=
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.tbgen.tcl 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.tbgen.tcl 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.tbgen.tcl 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.tbgen.tcl 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.tbgen.tcl 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.tbgen.tcl 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.tbgen.tcl 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/global.setting.tcl 
+Execute     get_config_debug -directory 
+INFO-FLOW: DBG:CMD:       generate_ip_auxiliary
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD:       prepArgInfo -> loadAnalyze_DB top_module=overlaystream
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.rtl_wrap.cfg.tcl 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.rtl_wrap.cfg.tcl 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.rtl_wrap.cfg.tcl 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.tbgen.tcl 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.tbgen.tcl 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_top_info
+INFO-FLOW: DBG:CMD:       prepArgInfo -> loadAnalyze_DB top_module=overlaystream
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.rtl_wrap.cfg.tcl 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.rtl_wrap.cfg.tcl 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.rtl_wrap.cfg.tcl 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.tbgen.tcl 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.tbgen.tcl 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_ip_bd_script
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.tbgen.tcl 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/global.setting.tcl 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.constraint.tcl 
+INFO-FLOW: DBG:CMD:       generate_ipi_example_script
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_syn_sh
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD:       generate_imp_constraints
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.constraint.tcl 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/overlaystream.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+INFO-FLOW: DBG:CMD: read_platform_lib F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/global.setting.tcl
+Execute     source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/common.gen 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/op.gen 
+Execute     source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/interface.gen 
+Execute     source F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/.autopilot/db/global.setting.tcl 
+Execute     source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/util.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.11 sec.
+Command     ap_source done; 0.11 sec.
+Execute     source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+INFO-FLOW: DBG:CMD:     exec F:/course_s3_hls/hls/overlaystream/overlaystream/solution1/impl/ip/pack.bat
+Execute     get_config_export -output 
+Execute     send_msg_by_id INFO @200-802@%s overlaystream/solution1/impl/export.zip 
+INFO: [HLS 200-802] Generated output file overlaystream/solution1/impl/export.zip
+Command   export_design done; 7.768 sec.
+Command ap_source done; 9.046 sec.
+Execute cleanup_all 

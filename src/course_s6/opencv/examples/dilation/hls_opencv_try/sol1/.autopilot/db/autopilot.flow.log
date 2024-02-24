@@ -1,0 +1,82 @@
+INFO-FLOW: Workspace D:/Vitis_Libraries/vision/L1/examples/dilation/hls_opencv_try/sol1 opened at Wed Sep 30 11:29:49 +0800 2020
+Execute       send_msg_by_id INFO @200-1505@%s%s default  vivado 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Execute       get_config_interface -m_axi_latency 
+Execute       get_config_interface -m_axi_alignment_byte_size 
+Execute       get_config_interface -m_axi_max_widen_bitwidth 
+Execute       get_config_interface -default_interface 
+Execute       get_config_interface -default_slave_interface 
+Execute       get_config_rtl -register_reset_num 
+Execute     set_part xcvu11p-flga2577-1-e 
+INFO-FLOW: DBG:set_part: XILINX_VIVADO=E:/xilinx_2020.1/Vivado/2020.1
+INFO-FLOW: DBG:set_part: RDI_DATADIR=E:/xilinx_2020.1/Vivado/2020.1/data;E:/xilinx_2020.1/Vitis/2020.1/data
+Execute       ap_part_info -name xcvu11p-flga2577-1-e -data single -quiet 
+DBG:HLSDevice: Trying to load device library: E:/xilinx_2020.1/Vitis/2020.1\lib\win64.o\librdi_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: E:/xilinx_2020.1/Vivado/2020.1/data/parts/arch.xml
+Command       ap_part_info done; 0.847 sec.
+Execute       ap_part_info -name xcvu11p-flga2577-1-e -data info 
+Execute       ap_family_info -name virtexuplus -data info 
+Execute       add_library xilinx/virtexuplus/virtexuplus:xcvu11p:-flga2577:-1-e 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib E:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/virtexuplus/virtexuplus 
+Execute           source E:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx.lib 
+Execute             source E:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/dsp48.lib 
+Execute           source E:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source E:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source E:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source E:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source E:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute           source E:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/virtexuplus/dsp48e2.hlp 
+Execute         source E:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/virtexuplus/virtexuplus.gen 
+Execute           source E:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute             source E:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute             source E:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute             source E:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source E:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute               source E:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute             source E:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source E:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source E:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source E:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/util.gen 
+Execute             source E:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute             source E:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute             source E:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source done; 0.115 sec.
+Command         ap_source done; 0.117 sec.
+Execute         ap_part_info -data single -name xcvu11p-flga2577-1-e 
+Execute         ap_part_info -name xcvu11p-flga2577-1-e -data resources 
+Execute         config_chip_info -resource {SLICE 162000} {LUT 1296000} {FF 2592000} {DSP 9216} {BRAM 4032} {URAM 960} {SLR 3} 
+Execute         ap_part_info -name xcvu11p-flga2577-1-e -data info 
+Execute         config_chip_info -speed slow 
+Command       add_library done; 0.153 sec.
+Execute       add_library xilinx/virtexuplus/virtexuplus_fpv7 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib E:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/virtexuplus/virtexuplus_fpv7 
+Execute           source E:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute           source E:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute             source E:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute               source E:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source E:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source E:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source E:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute         source E:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/virtexuplus/virtexuplus_fpv7.gen 
+Execute           source E:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO: [HLS 200-10] Setting target device to 'xcvu11p-flga2577-1-e'
+Execute       ap_part_info -name xcvu11p-flga2577-1-e -data info 
+Execute       get_default_platform 
+Command     set_part done; 1.069 sec.
+Execute     csim_design -ldflags -L D:Vitis_LibrariesisionL1include -lopencv2_imgcodecs -lopencv2_imgproc -lopencv_core -lopencv2_highgui -lopencv_flann -lopencv2_features2d -argv  D:/Vitis_Libraries/vision/data/128x128.png  
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute       is_encrypted D:/Vitis_Libraries/vision/L1/examples/dilation/xf_dilation_tb.cpp 
+Execute       is_xip D:/Vitis_Libraries/vision/L1/examples/dilation/xf_dilation_tb.cpp 
+Execute       is_encrypted D:/Vitis_Libraries/vision/L1/examples/dilation/xf_dilation_accel.cpp 
+Execute       is_xip D:/Vitis_Libraries/vision/L1/examples/dilation/xf_dilation_accel.cpp 
+Execute       ap_part_info -name xcvu11p-flga2577-1-e -data info 
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command     csim_design done; error code: 2; 5.489 sec.
+Command   ap_source done; error code: 1; 6.649 sec.
+Execute   cleanup_all 

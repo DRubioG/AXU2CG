@@ -1,0 +1,92 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source E:/xilinx_2020.1/Vitis/2020.1/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running 'E:/xilinx_2020.1/Vitis/2020.1/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user 'Administrator' on host 'desktop-948akus' (Windows NT_amd64 version 6.2) on Wed Sep 30 11:29:49 +0800 2020
+INFO: [HLS 200-10] In directory 'D:/Vitis_Libraries/vision/L1/examples/dilation'
+Sourcing Tcl script 'run_hls.tcl'
+INFO: [HLS 200-10] Creating and opening project 'D:/Vitis_Libraries/vision/L1/examples/dilation/hls_opencv_try'.
+INFO: [HLS 200-10] Adding design file 'D:/Vitis_Libraries/vision/L1/examples/dilation/xf_dilation_accel.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'D:/Vitis_Libraries/vision/L1/examples/dilation/xf_dilation_tb.cpp' to the project
+INFO: [HLS 200-10] Creating and opening solution 'D:/Vitis_Libraries/vision/L1/examples/dilation/hls_opencv_try/sol1'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+WARNING: [HLS 200-40] No D:/Vitis_Libraries/vision/L1/examples/dilation/hls_opencv_try/sol1/sol1.aps file found.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/html_docs/xilinx2020_1/hls-guidance/200-1505.html
+INFO: [HLS 200-10] Setting target device to 'xcvu11p-flga2577-1-e'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../xf_dilation_tb.cpp in debug mode
+   Compiling ../../../../xf_dilation_accel.cpp in debug mode
+   Generating csim.exe
+Makefile.rules:379: recipe for target 'csim.exe' failed
+In file included from E:/xilinx_2020.1/Vitis/2020.1/include/floating_point_v7_0_bitacc_cmodel.h:144:0,
+                 from E:/xilinx_2020.1/Vitis/2020.1/include/hls_fpo.h:189,
+                 from E:/xilinx_2020.1/Vitis/2020.1/include/hls_half_fpo.h:64,
+                 from E:/xilinx_2020.1/Vitis/2020.1/include/hls_half.h:71,
+                 from E:/xilinx_2020.1/Vitis/2020.1/include/etc/ap_private.h:91,
+                 from E:/xilinx_2020.1/Vitis/2020.1/include/ap_common.h:646,
+                 from E:/xilinx_2020.1/Vitis/2020.1/include/ap_int.h:55,
+                 from D:/Vitis_Libraries/vision/L1/include/common/xf_types.hpp:24,
+                 from D:/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:30,
+                 from D:/Vitis_Libraries/vision/L1/include/common/xf_common.hpp:20,
+                 from D:/Vitis_Libraries/vision/L1/include/common/xf_sw_utils.hpp:20,
+                 from D:/Vitis_Libraries/vision/L1/include/common/xf_headers.hpp:28,
+                 from ../../../../xf_dilation_tb.cpp:17:
+E:/xilinx_2020.1/Vitis/2020.1/include/gmp.h:63:0: warning: "__GMP_LIBGMP_DLL" redefined
+ #define __GMP_LIBGMP_DLL  0
+ 
+In file included from E:/xilinx_2020.1/Vitis/2020.1/include/hls_fpo.h:189:0,
+                 from E:/xilinx_2020.1/Vitis/2020.1/include/hls_half_fpo.h:64,
+                 from E:/xilinx_2020.1/Vitis/2020.1/include/hls_half.h:71,
+                 from E:/xilinx_2020.1/Vitis/2020.1/include/etc/ap_private.h:91,
+                 from E:/xilinx_2020.1/Vitis/2020.1/include/ap_common.h:646,
+                 from E:/xilinx_2020.1/Vitis/2020.1/include/ap_int.h:55,
+                 from D:/Vitis_Libraries/vision/L1/include/common/xf_types.hpp:24,
+                 from D:/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:30,
+                 from D:/Vitis_Libraries/vision/L1/include/common/xf_common.hpp:20,
+                 from D:/Vitis_Libraries/vision/L1/include/common/xf_sw_utils.hpp:20,
+                 from D:/Vitis_Libraries/vision/L1/include/common/xf_headers.hpp:28,
+                 from ../../../../xf_dilation_tb.cpp:17:
+E:/xilinx_2020.1/Vitis/2020.1/include/floating_point_v7_0_bitacc_cmodel.h:136:0: note: this is the location of the previous definition
+ #define __GMP_LIBGMP_DLL 1
+ 
+In file included from E:/xilinx_2020.1/Vitis/2020.1/include/floating_point_v7_0_bitacc_cmodel.h:144:0,
+                 from E:/xilinx_2020.1/Vitis/2020.1/include/hls_fpo.h:189,
+                 from E:/xilinx_2020.1/Vitis/2020.1/include/hls_half_fpo.h:64,
+                 from E:/xilinx_2020.1/Vitis/2020.1/include/hls_half.h:71,
+                 from E:/xilinx_2020.1/Vitis/2020.1/include/etc/ap_private.h:91,
+                 from E:/xilinx_2020.1/Vitis/2020.1/include/ap_common.h:646,
+                 from E:/xilinx_2020.1/Vitis/2020.1/include/ap_int.h:55,
+                 from ../../../../xf_dilation_config.h:21,
+                 from ../../../../xf_dilation_accel.cpp:17:
+E:/xilinx_2020.1/Vitis/2020.1/include/gmp.h:63:0: warning: "__GMP_LIBGMP_DLL" redefined
+ #define __GMP_LIBGMP_DLL  0
+ 
+In file included from E:/xilinx_2020.1/Vitis/2020.1/include/hls_fpo.h:189:0,
+                 from E:/xilinx_2020.1/Vitis/2020.1/include/hls_half_fpo.h:64,
+                 from E:/xilinx_2020.1/Vitis/2020.1/include/hls_half.h:71,
+                 from E:/xilinx_2020.1/Vitis/2020.1/include/etc/ap_private.h:91,
+                 from E:/xilinx_2020.1/Vitis/2020.1/include/ap_common.h:646,
+                 from E:/xilinx_2020.1/Vitis/2020.1/include/ap_int.h:55,
+                 from ../../../../xf_dilation_config.h:21,
+                 from ../../../../xf_dilation_accel.cpp:17:
+E:/xilinx_2020.1/Vitis/2020.1/include/floating_point_v7_0_bitacc_cmodel.h:136:0: note: this is the location of the previous definition
+ #define __GMP_LIBGMP_DLL 1
+ 
+g++.exe: error: isionL1include: No such file or directory
+make: *** [csim.exe] Error 1
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+4
+    while executing
+"source run_hls.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel \#0 [list source $arg] "
+
+INFO: [Common 17-206] Exiting vitis_hls at Wed Sep 30 11:29:56 2020...

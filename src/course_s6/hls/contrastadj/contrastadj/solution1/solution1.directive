@@ -1,0 +1,28 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="contrastadj" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="contrastadj"/>
+            </pragma>
+        </directive>
+        <directive functionName="contrastadj" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="ap_none" value="" positionalBoolean="mode"/>
+                <option name="port" value="dst_axi_user" positionalBoolean="4"/>
+            </pragma>
+        </directive>
+        <directive functionName="contrastadj" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="ap_none" value="" positionalBoolean="mode"/>
+                <option name="port" value="dst_axi_last" positionalBoolean="4"/>
+            </pragma>
+        </directive>
+        <directive functionName="contrastadj" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="ap_none" value="" positionalBoolean="mode"/>
+                <option name="port" value="dst_axi_keep" positionalBoolean="4"/>
+            </pragma>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+

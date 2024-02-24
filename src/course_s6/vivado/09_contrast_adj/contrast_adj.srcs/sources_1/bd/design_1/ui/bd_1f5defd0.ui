@@ -1,0 +1,64 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.156255",
+   "Default View_TopLeft":"-461,-730",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port cam_gpio -pg 1 -lvl 12 -x 4420 -y 390 -defaultsOSRD
+preplace port cam_i2c -pg 1 -lvl 12 -x 4420 -y 410 -defaultsOSRD
+preplace port mipi_phy_if -pg 1 -lvl 0 -x -170 -y 370 -defaultsOSRD
+preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 11 -x 4070 -y 420 -defaultsOSRD
+preplace inst axi_interconnect_0 -pg 1 -lvl 10 -x 3610 -y 190 -defaultsOSRD
+preplace inst axi_vdma_0 -pg 1 -lvl 8 -x 2930 -y 150 -defaultsOSRD
+preplace inst axis_subset_converter_0 -pg 1 -lvl 6 -x 2010 -y 490 -defaultsOSRD
+preplace inst mipi_csi2_rx_subsyst_0 -pg 1 -lvl 3 -x 740 -y 220 -defaultsOSRD
+preplace inst proc_sys_reset_150M -pg 1 -lvl 1 -x 30 -y 480 -defaultsOSRD
+preplace inst ps8_0_axi_periph -pg 1 -lvl 2 -x 380 -y 190 -defaultsOSRD
+preplace inst v_demosaic_0 -pg 1 -lvl 4 -x 1080 -y 410 -defaultsOSRD
+preplace inst v_gamma_lut_0 -pg 1 -lvl 5 -x 1460 -y 480 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 10 -x 3610 -y 630 -defaultsOSRD
+preplace inst contrastadj_0 -pg 1 -lvl 6 -x 2010 -y 1090 -defaultsOSRD
+preplace inst axis_subset_converter_1 -pg 1 -lvl 7 -x 2490 -y 850 -defaultsOSRD -resize 340 256
+preplace inst cpu_reg_v1_0_0 -pg 1 -lvl 9 -x 3260 -y 1050 -defaultsOSRD
+preplace netloc axi_vdma_0_s2mm_introut 1 8 2 N 170 3410
+preplace netloc mipi_csi2_rx_subsyst_0_csirxss_csi_irq 1 3 7 870J 240 NJ 240 NJ 240 NJ 240 2690 260 N 260 3400
+preplace netloc proc_sys_reset_150M_interconnect_aresetn 1 1 9 200 -20 NJ -20 NJ -20 NJ -20 NJ -20 NJ -20 N -20 N -20 3440
+preplace netloc proc_sys_reset_150M_peripheral_aresetn 1 1 9 230 410 600 410 880 510 1260 570 1650 250 2290 250 2710 270 3120 250 3440
+preplace netloc v_demosaic_0_interrupt 1 4 6 1260 30 NJ 30 NJ 30 N 30 NJ 30 3420
+preplace netloc v_gamma_lut_0_interrupt 1 5 5 1640 10 NJ 10 N 10 NJ 10 3430
+preplace netloc xlconcat_0_dout 1 10 1 3760 450n
+preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 12 -140 380 220 400 590 340 900 320 1280 320 1660 280 2280 280 2700 280 3110 280 3450 310 3770 310 4370
+preplace netloc zynq_ultra_ps_e_0_pl_clk2 1 2 10 610 40 NJ 40 NJ 40 NJ 40 NJ 40 N 40 NJ 40 N 40 NJ 40 4400
+preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 0 12 -150 -10 NJ -10 610J 10 NJ 10 NJ 10 1630J 20 NJ 20 N 20 NJ 20 N 20 NJ 20 4380
+preplace netloc axis_subset_converter_0_m_axis_tdata 1 5 2 1750 320 2200
+preplace netloc axis_subset_converter_0_m_axis_tkeep 1 5 2 1730 310 2230
+preplace netloc axis_subset_converter_0_m_axis_tstrb 1 5 2 1760 340 2220
+preplace netloc axis_subset_converter_0_m_axis_tuser 1 5 2 1710 640 2200
+preplace netloc axis_subset_converter_0_m_axis_tlast 1 5 2 1740 330 2210
+preplace netloc axis_subset_converter_0_m_axis_tid 1 5 2 1680 300 2240
+preplace netloc axis_subset_converter_0_m_axis_tdest 1 5 2 1670 290 2250
+preplace netloc axis_subset_converter_0_m_axis_tvalid 1 5 2 1690 260 2270
+preplace netloc contrastadj_0_src_axi_TREADY 1 5 2 1700 270 2260
+preplace netloc cpu_reg_v1_0_0_reg_out5 1 5 5 1720 700 NJ 700 NJ 700 NJ 700 3420
+preplace netloc v_gamma_lut_0_m_axis_video 1 5 1 N 470
+preplace netloc ps8_0_axi_periph_M02_AXI 1 2 2 560 100 890J
+preplace netloc mipi_phy_if_0_1 1 0 3 NJ 370 210J 390 580J
+preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_FPD 1 1 11 230 -30 NJ -30 NJ -30 NJ -30 NJ -30 NJ -30 N -30 NJ -30 N -30 NJ -30 4390
+preplace netloc ps8_0_axi_periph_M00_AXI 1 2 6 530 90 NJ 90 NJ 90 NJ 90 NJ 90 2680
+preplace netloc mipi_csi2_rx_subsyst_0_video_out 1 3 1 880 170n
+preplace netloc v_demosaic_0_m_axis_video 1 4 1 1250 400n
+preplace netloc ps8_0_axi_periph_M01_AXI 1 2 1 570 170n
+preplace netloc S00_AXI_1 1 8 2 N 130 N
+preplace netloc zynq_ultra_ps_e_0_IIC_0 1 11 1 NJ 410
+preplace netloc axi_interconnect_0_M00_AXI 1 10 1 3760 190n
+preplace netloc ps8_0_axi_periph_M03_AXI 1 2 3 550 80 NJ 80 1270J
+preplace netloc zynq_ultra_ps_e_0_GPIO_0 1 11 1 NJ 390
+preplace netloc contrastadj_0_dst_axi 1 6 1 2300 760n
+preplace netloc axis_subset_converter_1_M_AXIS 1 7 1 2680 120n
+preplace netloc ps8_0_axi_periph_M04_AXI 1 2 7 540J 0 NJ 0 NJ 0 NJ 0 NJ 0 NJ 0 3100
+levelinfo -pg 1 -170 30 380 740 1080 1460 2010 2490 2930 3260 3610 4070 4420
+pagesize -pg 1 -db -bbox -sgen -300 -60 4540 1280
+"
+}
+0

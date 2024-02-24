@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Wed Nov  4 16:32:20 2020
+# Process ID: 6404
+# Current directory: E:/XilinxPrj/AXU2CG/course_32b/26_an5641_mipi_dp/vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9392 E:\XilinxPrj\AXU2CG\course_32b\26_an5641_mipi_dp\vivado\mipi_dp.xpr
+# Log file: E:/XilinxPrj/AXU2CG/course_32b/26_an5641_mipi_dp/vivado/vivado.log
+# Journal file: E:/XilinxPrj/AXU2CG/course_32b/26_an5641_mipi_dp/vivado\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/XilinxPrj/AXU2CG/course_32b/26_an5641_mipi_dp/vivado/mipi_dp.xpr
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 5
+wait_on_run impl_1
+set_property pfm_name {} [get_files -all {E:/XilinxPrj/AXU2CG/course_32b/26_an5641_mipi_dp/vivado/mipi_dp.srcs/sources_1/bd/design_1/design_1.bd}]
+write_hw_platform -fixed -include_bit -force -file E:/XilinxPrj/AXU2CG/course_32b/26_an5641_mipi_dp/vivado/design_1_wrapper.xsa

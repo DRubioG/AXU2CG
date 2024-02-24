@@ -1,0 +1,254 @@
+<profile>
+
+<ReportVersion>
+<Version>2020.1</Version>
+</ReportVersion>
+
+<UserAssignments>
+<unit>ns</unit>
+<ProductFamily>zynquplus</ProductFamily>
+<Part>xczu3eg-sfvc784-1-i</Part>
+<TopModelName>xFAverageGaussianMask3x3_0_0_1080_1920_0_1_1_1920_s</TopModelName>
+<TargetClockPeriod>10.00</TargetClockPeriod>
+<ClockUncertainty>2.70</ClockUncertainty>
+<FlowTarget>vivado</FlowTarget>
+</UserAssignments>
+
+<PerformanceEstimates>
+<PipelineType>none</PipelineType>
+<SummaryOfTimingAnalysis>
+<unit>ns</unit>
+<EstimatedClockPeriod>5.634</EstimatedClockPeriod>
+</SummaryOfTimingAnalysis>
+<SummaryOfOverallLatency>
+<unit>clock cycles</unit>
+<Best-caseLatency>2082003</Best-caseLatency>
+<Average-caseLatency>2082003</Average-caseLatency>
+<Worst-caseLatency>2082003</Worst-caseLatency>
+<Best-caseRealTimeLatency>20.820 ms</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>20.820 ms</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>20.820 ms</Worst-caseRealTimeLatency>
+<Interval-min>2082003</Interval-min>
+<Interval-max>2082003</Interval-max>
+</SummaryOfOverallLatency>
+<SummaryOfLoopLatency>
+<Clear_Row_Loop>
+<TripCount>1920</TripCount>
+<Latency>1920</Latency>
+<AbsoluteTimeLatency>19200</AbsoluteTimeLatency>
+<PipelineII>1</PipelineII>
+<PipelineDepth>2</PipelineDepth>
+</Clear_Row_Loop>
+<Row_Loop>
+<TripCount>1080</TripCount>
+<Latency>2080080</Latency>
+<AbsoluteTimeLatency>20800800</AbsoluteTimeLatency>
+<IterationLatency>1926</IterationLatency>
+<Col_Loop>
+<TripCount>1920</TripCount>
+<Latency>1923</Latency>
+<AbsoluteTimeLatency>19230</AbsoluteTimeLatency>
+<PipelineII>1</PipelineII>
+<PipelineDepth>5</PipelineDepth>
+</Col_Loop>
+</Row_Loop>
+</SummaryOfLoopLatency>
+</PerformanceEstimates>
+
+<AreaEstimates>
+<Resources>
+<BRAM_18K>3</BRAM_18K>
+<FF>291</FF>
+<LUT>949</LUT>
+<DSP>0</DSP>
+<URAM>0</URAM>
+</Resources>
+<AvailableResources>
+<BRAM_18K>432</BRAM_18K>
+<DSP>360</DSP>
+<FF>141120</FF>
+<LUT>70560</LUT>
+<URAM>0</URAM>
+</AvailableResources>
+</AreaEstimates>
+
+<InterfaceSummary>
+<RtlPorts>
+<name>ap_clk</name>
+<Object>xFAverageGaussianMask3x3&lt;0, 0, 1080, 1920, 0, 1, 1, 1920&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_rst</name>
+<Object>xFAverageGaussianMask3x3&lt;0, 0, 1080, 1920, 0, 1, 1, 1920&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_start</name>
+<Object>xFAverageGaussianMask3x3&lt;0, 0, 1080, 1920, 0, 1, 1, 1920&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>start_full_n</name>
+<Object>xFAverageGaussianMask3x3&lt;0, 0, 1080, 1920, 0, 1, 1, 1920&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_done</name>
+<Object>xFAverageGaussianMask3x3&lt;0, 0, 1080, 1920, 0, 1, 1, 1920&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_continue</name>
+<Object>xFAverageGaussianMask3x3&lt;0, 0, 1080, 1920, 0, 1, 1, 1920&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_idle</name>
+<Object>xFAverageGaussianMask3x3&lt;0, 0, 1080, 1920, 0, 1, 1, 1920&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_ready</name>
+<Object>xFAverageGaussianMask3x3&lt;0, 0, 1080, 1920, 0, 1, 1, 1920&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>start_out</name>
+<Object>xFAverageGaussianMask3x3&lt;0, 0, 1080, 1920, 0, 1, 1, 1920&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>start_write</name>
+<Object>xFAverageGaussianMask3x3&lt;0, 0, 1080, 1920, 0, 1, 1, 1920&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>gray_img_src_4362_dout</name>
+<Object>gray_img_src_4362</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>ap_fifo</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>8</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>gray_img_src_4362_empty_n</name>
+<Object>gray_img_src_4362</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>ap_fifo</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>gray_img_src_4362_read</name>
+<Object>gray_img_src_4362</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>ap_fifo</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>gaussian_mat_4364_din</name>
+<Object>gaussian_mat_4364</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>ap_fifo</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>gaussian_mat_4364_full_n</name>
+<Object>gaussian_mat_4364</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>ap_fifo</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>gaussian_mat_4364_write</name>
+<Object>gaussian_mat_4364</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>ap_fifo</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+</InterfaceSummary>
+
+</profile>

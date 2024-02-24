@@ -1,0 +1,12 @@
+/* C:/Users/Administrator/AppData/Local/Temp/bootgen_app_system9234349768690163486/sd_card_temp/boot.bif */
+/* Command to create bitstream .bin file:       */
+/*   bootgen -image <bif_file> -split bin -w    */
+/* Command to create BOOT.BIN file:             */
+/*   bootgen -arch zynqmp -image <bif_file> -w -o i BOOT.BIN */
+/*design_1_wrapper*/
+the_ROM_image:
+{
+ [bootloader, destination_cpu=a53-0] C:/AXU2CG-B/course_s6/vivado/03_resizeTry/resizeTry.vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf
+ [destination_device=pl] C:/AXU2CG-B/course_s6/vivado/03_resizeTry/resizeTry.vitis/app/_ide/bitstream/design_1_wrapper.bit
+ [destination_cpu=a53-0, exception_level=el-3] C:/AXU2CG-B/course_s6/vivado/03_resizeTry/resizeTry.vitis/app/Debug/app.elf
+}

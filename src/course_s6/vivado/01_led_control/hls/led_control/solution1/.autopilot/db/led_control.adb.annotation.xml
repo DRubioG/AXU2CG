@@ -1,0 +1,9 @@
+<annotationInfo>
+<annotationInfo>
+<item  id="11" filename="source/led_control.cpp" linenumber="9" name="icmp_ln9" contextFuncName="led_control" contextNormFuncName="led_control" moduleName="led_control" rtlName="icmp_ln9_fu_76_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="20" fileDirectory="F:\zynqUltraScale_vitis\course_s3_hls\hls\led_control"><\/item>
+<item  id="13" filename="source/led_control.cpp" linenumber="9" name="i_1" contextFuncName="led_control" contextNormFuncName="led_control" moduleName="led_control" rtlName="i_1_fu_82_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="33" fileDirectory="F:\zynqUltraScale_vitis\course_s3_hls\hls\led_control"><\/item>
+<item  id="18" filename="source/led_control.cpp" linenumber="12" name="icmp_ln12" contextFuncName="led_control" contextNormFuncName="led_control" moduleName="led_control" rtlName="icmp_ln12_fu_88_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="20" fileDirectory="F:\zynqUltraScale_vitis\course_s3_hls\hls\led_control"><\/item>
+<item  id="19" filename="F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h" linenumber="764" name="xor_ln764" contextFuncName="operator~" contextNormFuncName="operator_bnot" moduleName="led_control" rtlName="xor_ln764_fu_94_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="2" fileDirectory="F:\zynqUltraScale_vitis\course_s3_hls\hls\led_control"><\/item>
+<item  id="20" filename="source/led_control.cpp" linenumber="12" name="select_ln12" contextFuncName="led_control" contextNormFuncName="led_control" moduleName="led_control" rtlName="select_ln12_fu_100_p3" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="2" fileDirectory="F:\zynqUltraScale_vitis\course_s3_hls\hls\led_control"><\/item>
+<\/annotationInfo>
+</annotationInfo>

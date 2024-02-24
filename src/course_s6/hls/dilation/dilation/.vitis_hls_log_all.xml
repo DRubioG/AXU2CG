@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [HLS 200-656] Deadlocks can occur since process Loop_VITIS_LOOP_267_1_proc is instantiated in a dataflow region with ap_ctrl_none or without start propagation and contains a non-flushable pipeline." projectName="dilation" solutionName="solution1" date="2020-10-28T15:36:45.110+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="dilation" solutionName="solution1" date="2020-10-28T15:36:44.898+0800" type="Warning"/>
+        <logs message="WARNING: [BIND 205-102] The specified resource core for memory 'buf_2_V' will be ignored if a simpler one can be used." projectName="dilation" solutionName="solution1" date="2020-10-28T15:36:19.249+0800" type="Warning"/>
+        <logs message="WARNING: [BIND 205-102] The specified resource core for memory 'buf_0_V' will be ignored if a simpler one can be used." projectName="dilation" solutionName="solution1" date="2020-10-28T15:36:19.030+0800" type="Warning"/>
+        <logs message="WARNING: [BIND 205-102] The specified resource core for memory 'buf_1_V' will be ignored if a simpler one can be used." projectName="dilation" solutionName="solution1" date="2020-10-28T15:36:18.774+0800" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'xfdilate&lt;1080, 1920, 3, 9, 1, 0, 1921, 3, 3>' to 'xfdilate_1080_1920_3_9_1_0_1921_3_3_s'." projectName="dilation" solutionName="solution1" date="2020-10-28T15:36:01.824+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-915] Ignore complete array partition directive on 'buf.V.2' (source/dilation.cpp:179) in dimension 1: conflict with resource constraint assignment." projectName="dilation" solutionName="solution1" date="2020-10-28T15:35:20.047+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-915] Ignore complete array partition directive on 'buf.V.1' (source/dilation.cpp:179) in dimension 1: conflict with resource constraint assignment." projectName="dilation" solutionName="solution1" date="2020-10-28T15:35:19.663+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-915] Ignore complete array partition directive on 'buf.V.0' (source/dilation.cpp:179) in dimension 1: conflict with resource constraint assignment." projectName="dilation" solutionName="solution1" date="2020-10-28T15:35:19.652+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-939] Pipeline directive for loop 'VITIS_LOOP_219_3' in function 'xfdilate&lt;1080, 1920, 3, 9, 1, 0, 1921, 3, 3>' has been removed because the loop is unrolled completely.&#xD;&#xA;Resolution: For help on HLS 200-939 see www.xilinx.com/html_docs/xilinx2020_1/hls-guidance/200-939.html" projectName="dilation" solutionName="solution1" date="2020-10-28T15:35:19.205+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 1080 for loop 'Row_Loop' (source/dilation.cpp:52:62) in function 'xfdilate&lt;1080, 1920, 3, 9, 1, 0, 1921, 3, 3>'." projectName="dilation" solutionName="solution1" date="2020-10-28T15:35:19.048+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 1921 for loop 'Col_Loop' in function 'xfdilate&lt;1080, 1920, 3, 9, 1, 0, 1921, 3, 3>'." projectName="dilation" solutionName="solution1" date="2020-10-28T15:35:19.024+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 3 to 1 for loop 'init_boarder' in function 'xfdilate&lt;1080, 1920, 3, 9, 1, 0, 1921, 3, 3>'." projectName="dilation" solutionName="solution1" date="2020-10-28T15:35:19.013+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 1920 for loop 'VITIS_LOOP_219_3' in function 'xfdilate&lt;1080, 1920, 3, 9, 1, 0, 1921, 3, 3>'." projectName="dilation" solutionName="solution1" date="2020-10-28T15:35:18.999+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 1921 to 1920 for loop 'VITIS_LOOP_219_3' in function 'xfdilate&lt;1080, 1920, 3, 9, 1, 0, 1921, 3, 3>'." projectName="dilation" solutionName="solution1" date="2020-10-28T15:35:18.988+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 1920 for loop 'VITIS_LOOP_202_2' (F:/Vitis_Libraries/vision/L1/include\common/xf_structs.hpp:453:46) in function 'xfdilate&lt;1080, 1920, 3, 9, 1, 0, 1921, 3, 3>'." projectName="dilation" solutionName="solution1" date="2020-10-28T15:35:18.975+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 1921 to 1920 for loop 'VITIS_LOOP_202_2' (F:/Vitis_Libraries/vision/L1/include\common/xf_structs.hpp:453:46) in function 'xfdilate&lt;1080, 1920, 3, 9, 1, 0, 1921, 3, 3>'." projectName="dilation" solutionName="solution1" date="2020-10-28T15:35:18.963+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 3 for loop 'VITIS_LOOP_187_1' in function 'xfdilate&lt;1080, 1920, 3, 9, 1, 0, 1921, 3, 3>'." projectName="dilation" solutionName="solution1" date="2020-10-28T15:35:18.951+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 214-167] The program may have out of bound array access (source/dilation.cpp:271:16)" projectName="dilation" solutionName="solution1" date="2020-10-28T15:35:17.735+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: source/dilation.cpp:181:9" projectName="dilation" solutionName="solution1" date="2020-10-28T15:35:00.915+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5324] unused parameter 'shift_x': source/dilation.cpp:55:35" projectName="dilation" solutionName="solution1" date="2020-10-28T15:34:56.683+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5324] unused parameter 'P0': source/dilation.cpp:52:62" projectName="dilation" solutionName="solution1" date="2020-10-28T15:34:56.674+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-1593] Ignore interface attribute or pragma which is not used in top function: F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot/39\utils/x_hls_utils.h:247:9" projectName="dilation" solutionName="solution1" date="2020-10-28T15:34:56.649+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5324] unused parameter 'index': F:/Vitis_Libraries/vision/L1/include\common/xf_structs.hpp:1386:34" projectName="dilation" solutionName="solution1" date="2020-10-28T15:34:56.627+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5324] unused parameter 'index': F:/Vitis_Libraries/vision/L1/include\common/xf_structs.hpp:1183:102" projectName="dilation" solutionName="solution1" date="2020-10-28T15:34:56.615+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5324] unused parameter 'index': F:/Vitis_Libraries/vision/L1/include\common/xf_structs.hpp:675:60" projectName="dilation" solutionName="solution1" date="2020-10-28T15:34:56.570+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5324] unused parameter 'index': F:/Vitis_Libraries/vision/L1/include\common/xf_structs.hpp:655:87" projectName="dilation" solutionName="solution1" date="2020-10-28T15:34:56.547+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-471] Dataflow form checks found 2 issue(s) in file source/dilation.cpp&#xD;&#xA;Resolution: For help on HLS 200-471 see www.xilinx.com/html_docs/xilinx2020_1/hls-guidance/200-471.html" projectName="dilation" solutionName="solution1" date="2020-10-28T15:34:56.466+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: source/dilation.cpp:267:2&#xD;&#xA;Resolution: For help on HLS 214-114 see www.xilinx.com/html_docs/xilinx2020_1/hls-guidance/214-114.html" projectName="dilation" solutionName="solution1" date="2020-10-28T15:34:54.504+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: source/dilation.cpp:277:54&#xD;&#xA;Resolution: For help on HLS 214-113 see www.xilinx.com/html_docs/xilinx2020_1/hls-guidance/214-113.html" projectName="dilation" solutionName="solution1" date="2020-10-28T15:34:54.495+0800" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

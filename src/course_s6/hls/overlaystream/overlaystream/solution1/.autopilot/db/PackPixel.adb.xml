@@ -1,0 +1,130 @@
+<stg><name>PackPixel</name>
+
+
+<trans_list>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="2" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="4" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+bb7:0 %p_read_1 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_read2
+
+]]></Node>
+<StgValue><ssdm name="p_read_1"/></StgValue>
+</operation>
+
+<operation id="3" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="5" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+bb7:1 %p_read_2 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_read1
+
+]]></Node>
+<StgValue><ssdm name="p_read_2"/></StgValue>
+</operation>
+
+<operation id="4" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="6" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+bb7:2 %p_read_3 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_read
+
+]]></Node>
+<StgValue><ssdm name="p_read_3"/></StgValue>
+</operation>
+
+<operation id="5" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="7" bw="24" op_0_bw="24" op_1_bw="8" op_2_bw="8" op_3_bw="8">
+<![CDATA[
+bb7:3 %p_Result_2 = bitconcatenate i24 @_ssdm_op_BitConcatenate.i24.i8.i8.i8, i8 %p_read_1, i8 %p_read_2, i8 %p_read_3
+
+]]></Node>
+<StgValue><ssdm name="p_Result_2"/></StgValue>
+</operation>
+
+<operation id="6" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="0" op_0_bw="24">
+<![CDATA[
+bb7:4 %ret_ln25 = ret i24 %p_Result_2
+
+]]></Node>
+<StgValue><ssdm name="ret_ln25"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+<port id="8" name="p_read" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="p_read"/></StgValue>
+</port>
+<port id="9" name="p_read1" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="p_read1"/></StgValue>
+</port>
+<port id="10" name="p_read2" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="p_read2"/></StgValue>
+</port>
+</ports>
+
+
+<dataflows>
+<dataflow id="12" from="_ssdm_op_Read.ap_auto.i8" to="p_read_1" fromId="11" toId="2">
+</dataflow>
+<dataflow id="13" from="p_read2" to="p_read_1" fromId="10" toId="2">
+</dataflow>
+<dataflow id="14" from="_ssdm_op_Read.ap_auto.i8" to="p_read_2" fromId="11" toId="3">
+</dataflow>
+<dataflow id="15" from="p_read1" to="p_read_2" fromId="9" toId="3">
+</dataflow>
+<dataflow id="16" from="_ssdm_op_Read.ap_auto.i8" to="p_read_3" fromId="11" toId="4">
+</dataflow>
+<dataflow id="17" from="p_read" to="p_read_3" fromId="8" toId="4">
+</dataflow>
+<dataflow id="19" from="_ssdm_op_BitConcatenate.i24.i8.i8.i8" to="p_Result_2" fromId="18" toId="5">
+</dataflow>
+<dataflow id="20" from="p_read_1" to="p_Result_2" fromId="2" toId="5">
+</dataflow>
+<dataflow id="21" from="p_read_2" to="p_Result_2" fromId="3" toId="5">
+</dataflow>
+<dataflow id="22" from="p_read_3" to="p_Result_2" fromId="4" toId="5">
+</dataflow>
+<dataflow id="23" from="p_Result_2" to="ret_ln25" fromId="5" toId="6">
+</dataflow>
+</dataflows>
+
+
+</stg>

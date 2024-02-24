@@ -1,0 +1,152 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'edge_detector'" level="0">
+<item name = "Date">Mon Nov  2 14:21:28 2020
+</item>
+<item name = "Version">2020.1 (Build 2902540 on Wed May 27 20:16:15 MDT 2020)</item>
+<item name = "Project">edge_detector</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu3eg-sfvc784-1-i</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.009 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="xFSobelFilter3x3_0_0_1080_1920_1_0_0_1_1_1_1920_false_U0">xFSobelFilter3x3_0_0_1080_1920_1_0_0_1_1_1_1920_false_s, 2082003, 2082003, 20.820 ms, 20.820 ms, 2082003, 2082003, none</column>
+<column name="Loop_loop_height_proc14_U0">Loop_loop_height_proc14, ?, ?, ?, ?, ?, ?, none</column>
+<column name="xfrgb2gray_1080_1920_U0">xfrgb2gray_1080_1920_s, 2073607, 2073607, 20.736 ms, 20.736 ms, 2073607, 2073607, none</column>
+<column name="thresholding_1080_1920_U0">thresholding_1080_1920_s, 2073602, 2073602, 20.736 ms, 20.736 ms, 2073602, 2073602, none</column>
+<column name="Loop_loop_height_proc1315_U0">Loop_loop_height_proc1315, 2077921, 2077921, 20.779 ms, 20.779 ms, 2077921, 2077921, none</column>
+<column name="AddWeightedKernel_1080_1920_U0">AddWeightedKernel_1080_1920_s, 2073602, 2073602, 20.736 ms, 20.736 ms, 2073602, 2073602, none</column>
+<column name="xfgray2rgb_1080_1920_U0">xfgray2rgb_1080_1920_s, 2073602, 2073602, 20.736 ms, 20.736 ms, 2073602, 2073602, none</column>
+<column name="edge_detector_entry3_U0">edge_detector_entry3, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+<column name="edge_detector_entry16_U0">edge_detector_entry16, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+<column name="Block_ZN2xf2cv6ScalarILi3E7ap_uintILi24EEEC2Ev_exit_i5067_proc_U0">Block_ZN2xf2cv6ScalarILi3E7ap_uintILi24EEEC2Ev_exit_i5067_proc, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, -, -, -</column>
+<column name="FIFO">11, -, 1438, 644, -</column>
+<column name="Instance">3, 3, 664, 2515, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, -, -</column>
+<column name="Register">-, -, -, -, -</column>
+<specialColumn name="Available">432, 360, 141120, 70560, 0</specialColumn>
+<specialColumn name="Utilization (%)">3, ~0, 1, 4, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="AddWeightedKernel_1080_1920_U0">AddWeightedKernel_1080_1920_s, 0, 0, 28, 154, 0</column>
+<column name="Block_ZN2xf2cv6ScalarILi3E7ap_uintILi24EEEC2Ev_exit_i5067_proc_U0">Block_ZN2xf2cv6ScalarILi3E7ap_uintILi24EEEC2Ev_exit_i5067_proc, 0, 0, 3, 38, 0</column>
+<column name="Loop_loop_height_proc1315_U0">Loop_loop_height_proc1315, 0, 0, 46, 203, 0</column>
+<column name="Loop_loop_height_proc14_U0">Loop_loop_height_proc14, 0, 0, 126, 350, 0</column>
+<column name="edge_detector_entry16_U0">edge_detector_entry16, 0, 0, 3, 38, 0</column>
+<column name="edge_detector_entry3_U0">edge_detector_entry3, 0, 0, 3, 38, 0</column>
+<column name="thresholding_1080_1920_U0">thresholding_1080_1920_s, 0, 0, 62, 275, 0</column>
+<column name="xFSobelFilter3x3_0_0_1080_1920_1_0_0_1_1_1_1920_false_U0">xFSobelFilter3x3_0_0_1080_1920_1_0_0_1_1_1_1920_false_s, 3, 0, 242, 1104, 0</column>
+<column name="xfgray2rgb_1080_1920_U0">xfgray2rgb_1080_1920_s, 0, 0, 29, 139, 0</column>
+<column name="xfrgb2gray_1080_1920_U0">xfrgb2gray_1080_1920_s, 0, 3, 122, 176, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+<column name="grayImg_data_U">1, 163, 0, -, 1920, 8, 15360</column>
+<column name="rgbSobel_data_U">3, 163, 0, -, 1920, 24, 46080</column>
+<column name="sobelImg_data_U">1, 163, 0, -, 1920, 8, 15360</column>
+<column name="sobelImg_x_data_U">1, 163, 0, -, 1920, 8, 15360</column>
+<column name="sobelImg_y_data_U">1, 163, 0, -, 1920, 8, 15360</column>
+<column name="srcImg_data_U">3, 163, 0, -, 1920, 24, 46080</column>
+<column name="thresholdImg_data_U">1, 163, 0, -, 1920, 8, 15360</column>
+<column name="threshold_V_c_U">0, 99, 0, -, 5, 8, 40</column>
+<column name="threshold_c1_U">0, 99, 0, -, 2, 8, 16</column>
+<column name="threshold_c_U">0, 99, 0, -, 2, 8, 16</column>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="src_TDATA">in, 24, axis, src_V_data_V, pointer</column>
+<column name="src_TKEEP">in, 3, axis, src_V_keep_V, pointer</column>
+<column name="src_TSTRB">in, 3, axis, src_V_strb_V, pointer</column>
+<column name="src_TUSER">in, 1, axis, src_V_user_V, pointer</column>
+<column name="src_TLAST">in, 1, axis, src_V_last_V, pointer</column>
+<column name="src_TID">in, 1, axis, src_V_id_V, pointer</column>
+<column name="src_TDEST">in, 1, axis, src_V_dest_V, pointer</column>
+<column name="src_TVALID">in, 1, axis, src_V_dest_V, pointer</column>
+<column name="src_TREADY">out, 1, axis, src_V_dest_V, pointer</column>
+<column name="dst_TDATA">out, 24, axis, dst_V_data_V, pointer</column>
+<column name="dst_TKEEP">out, 3, axis, dst_V_keep_V, pointer</column>
+<column name="dst_TSTRB">out, 3, axis, dst_V_strb_V, pointer</column>
+<column name="dst_TUSER">out, 1, axis, dst_V_user_V, pointer</column>
+<column name="dst_TLAST">out, 1, axis, dst_V_last_V, pointer</column>
+<column name="dst_TID">out, 1, axis, dst_V_id_V, pointer</column>
+<column name="dst_TDEST">out, 1, axis, dst_V_dest_V, pointer</column>
+<column name="dst_TVALID">out, 1, axis, dst_V_dest_V, pointer</column>
+<column name="dst_TREADY">in, 1, axis, dst_V_dest_V, pointer</column>
+<column name="threshold">in, 8, ap_vld, threshold, scalar</column>
+<column name="threshold_ap_vld">in, 1, ap_vld, threshold, scalar</column>
+<column name="ap_clk">in, 1, ap_ctrl_none, edge_detector, return value</column>
+<column name="ap_rst_n">in, 1, ap_ctrl_none, edge_detector, return value</column>
+</table>
+</item>
+</section>
+</profile>

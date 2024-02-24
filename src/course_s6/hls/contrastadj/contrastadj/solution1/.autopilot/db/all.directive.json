@@ -1,0 +1,83 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "contrastadj",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "contrastadj"
+              }]
+          }
+        },
+        {
+          "functionName": "contrastadj",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "ap_none",
+                "value": ""
+              },
+              {
+                "name": "port",
+                "value": "dst_axi_user"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "contrastadj",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "ap_none",
+                "value": ""
+              },
+              {
+                "name": "port",
+                "value": "dst_axi_last"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "contrastadj",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "ap_none",
+                "value": ""
+              },
+              {
+                "name": "port",
+                "value": "dst_axi_keep"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "contrastadj",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "contrastadj"
+              }]
+          }
+        }
+      ]
+    }]}

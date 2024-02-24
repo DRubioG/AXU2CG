@@ -1,0 +1,56 @@
+INFO-FLOW: Workspace F:/course_s3_hls_2cg/hls/erosion/erosion/solution1 opened at Fri Nov 13 10:58:50 +0800 2020
+Execute     ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/zynquplus 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx.lib 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/dsp48.lib 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/dsp48e2.hlp 
+Execute     source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/util.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.116 sec.
+Command     ap_source done; 0.116 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/zynquplus_fpv7 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute             source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute     source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     set_part xczu3eg-sfvc784-1-i 
+INFO-FLOW: DBG:set_part: XILINX_VIVADO=F:/xilinx_2020.1/Vivado/2020.1
+INFO-FLOW: DBG:set_part: RDI_DATADIR=F:/xilinx_2020.1/Vivado/2020.1/data;F:/xilinx_2020.1/Vitis/2020.1/data
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data single -quiet 
+DBG:HLSDevice: Trying to load device library: F:/xilinx_2020.1/Vitis/2020.1\lib\win64.o\librdi_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: F:/xilinx_2020.1/Vivado/2020.1/data/parts/arch.xml
+Command       ap_part_info done; 0.841 sec.
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info 
+Execute       ap_family_info -name zynquplus -data info 
+Execute       add_library xilinx/zynquplus/zynquplus:xczu3eg:-sfvc784:-1-i 
+Execute         get_default_platform 
+Execute         ap_part_info -data single -name xczu3eg-sfvc784-1-i 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data resources 
+Execute         config_chip_info -resource {SLICE 8820} {LUT 70560} {FF 141120} {DSP 360} {BRAM 432} {URAM 0} 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info 
+Execute         config_chip_info -speed slow 

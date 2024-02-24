@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Mon Oct 26 14:34:40 2020
+# Process ID: 5632
+# Current directory: F:/course_s3_hls/vivado/ip_repo/ip_repo
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15180 F:\course_s3_hls\vivado\ip_repo\ip_repo\edit_cpu_reg_v1_0.xpr
+# Log file: F:/course_s3_hls/vivado/ip_repo/ip_repo/vivado.log
+# Journal file: F:/course_s3_hls/vivado/ip_repo/ip_repo\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/course_s3_hls/vivado/ip_repo/ip_repo/edit_cpu_reg_v1_0.xpr
+update_compile_order -fileset sources_1

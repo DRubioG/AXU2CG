@@ -1,0 +1,79 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Thu Nov  5 13:49:32 2020
+| Host         : DESKTOP-AOVMD3L running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu2cg-sfvc784-1-i
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_xlconstant_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of design_1_xlconstant_0_1 (xilinx.com:ip:xlconstant:1.1 (Rev. 7)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Thu Nov  5 13:49:32 2020
+| Host         : DESKTOP-AOVMD3L running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu2cg-sfvc784-1-i
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_led_control_0_3'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of design_1_led_control_0_3 (xilinx.com:hls:led_control:1.0 (Rev. 2010191837)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Thu Nov  5 13:49:32 2020
+| Host         : DESKTOP-AOVMD3L running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu2cg-sfvc784-1-i
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_clk_wiz_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of design_1_clk_wiz_0_0 (xilinx.com:ip:clk_wiz:6.0 (Rev. 5)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Thu Nov  5 13:49:29 2020
+| Host         : DESKTOP-AOVMD3L running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu2cg-sfvc784-1-i
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'clk_wiz_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of clk_wiz_0 (xilinx.com:ip:clk_wiz:6.0 (Rev. 5)) to Vivado generation flows.
+

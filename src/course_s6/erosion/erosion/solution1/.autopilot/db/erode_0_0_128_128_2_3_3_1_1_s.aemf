@@ -1,0 +1,1172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1611296224039">
+  <ports id="1" name="imgInput_417" type="PortType" coreName="FIFO_SRL" bitwidth="8" iftype="IfTypeRom">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="2" name="imgOutput_418" type="PortType" coreName="FIFO_SRL" bitwidth="8" direction="DirOut" iftype="IfTypeRom">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="3" name="p_src_1" type="PortType" coreName="FIFO_SRL" bitwidth="32" iftype="IfTypeRom">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="4" name="p_src_2" type="PortType" coreName="FIFO_SRL" bitwidth="32" iftype="IfTypeRom">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="5" name="p_kernel" type="PortType" coreName="RAM" bitwidth="8" iftype="IfTypeRegister" arraysize="9">
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <edges id="117" source_obj="//@ports.2" sink_obj="//@blocks.0/@node_objs.9"/>
+  <edges id="119" source_obj="//@ports.3" sink_obj="//@blocks.0/@node_objs.10"/>
+  <edges id="120" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="123" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="124" source_obj="//@regions.0/@basic_blocks.0/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="125" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.14" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="128" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="129" source_obj="//@regions.0/@basic_blocks.1/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1" is_back_edge="1"/>
+  <edges id="130" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.14" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1" is_back_edge="1"/>
+  <edges id="132" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="133" source_obj="//@regions.0/@basic_blocks.14/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2" is_back_edge="1"/>
+  <edges id="134" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.14" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2" is_back_edge="1"/>
+  <edges id="135" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="138" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
+  <edges id="140" source_obj="//@regions.0/@basic_blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.5"/>
+  <edges id="141" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.5"/>
+  <edges id="142" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.6"/>
+  <edges id="145" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.7"/>
+  <edges id="148" source_obj="//@regions.0/@basic_blocks.0/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8"/>
+  <edges id="149" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8"/>
+  <edges id="150" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8"/>
+  <edges id="151" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.14/@node_objs.0"/>
+  <edges id="154" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.14/@node_objs.1"/>
+  <edges id="155" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="158" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="160" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="161" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="163" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="165" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="167" source_obj="//@regions.0/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="168" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="169" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="170" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="171" source_obj="//@regions.0/@basic_blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="172" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.7"/>
+  <edges id="173" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.7"/>
+  <edges id="174" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.7"/>
+  <edges id="175" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
+  <edges id="176" source_obj="//@regions.0/@basic_blocks.1/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.9"/>
+  <edges id="177" source_obj="//@regions.0/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.9"/>
+  <edges id="178" source_obj="//@regions.0/@basic_blocks.1/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <edges id="179" source_obj="//@ports.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="182" source_obj="//@regions.0/@basic_blocks.1/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="183" source_obj="//@regions.0/@basic_blocks.1/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.12"/>
+  <edges id="184" source_obj="//@regions.0/@basic_blocks.1/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.13"/>
+  <edges id="185" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.10" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.13"/>
+  <edges id="187" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.13"/>
+  <edges id="189" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.13"/>
+  <edges id="190" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.6/@node_objs.0"/>
+  <edges id="191" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.9" sink_obj="//@regions.0/@basic_blocks.6/@node_objs.0"/>
+  <edges id="193" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.8" sink_obj="//@regions.0/@basic_blocks.6/@node_objs.0"/>
+  <edges id="195" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.7" sink_obj="//@regions.0/@basic_blocks.6/@node_objs.0"/>
+  <edges id="196" source_obj="//@regions.0/@basic_blocks.1/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.8/@node_objs.0"/>
+  <edges id="197" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.8/@node_objs.0"/>
+  <edges id="198" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.14" sink_obj="//@regions.0/@basic_blocks.8/@node_objs.1"/>
+  <edges id="199" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.0"/>
+  <edges id="200" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.5" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.0"/>
+  <edges id="202" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.4" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.0"/>
+  <edges id="204" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.3" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.0"/>
+  <edges id="205" source_obj="//@regions.0/@basic_blocks.1/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.0"/>
+  <edges id="206" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.0"/>
+  <edges id="207" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.14" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.1"/>
+  <edges id="208" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.10/@node_objs.0"/>
+  <edges id="209" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.13" sink_obj="//@regions.0/@basic_blocks.10/@node_objs.0"/>
+  <edges id="211" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.12" sink_obj="//@regions.0/@basic_blocks.10/@node_objs.0"/>
+  <edges id="213" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.11" sink_obj="//@regions.0/@basic_blocks.10/@node_objs.0"/>
+  <edges id="214" source_obj="//@regions.0/@basic_blocks.1/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.12/@node_objs.0"/>
+  <edges id="215" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.12/@node_objs.0"/>
+  <edges id="216" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.14" sink_obj="//@regions.0/@basic_blocks.12/@node_objs.1"/>
+  <edges id="217" source_obj="//@regions.0/@basic_blocks.1/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.7/@node_objs.0"/>
+  <edges id="218" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.7/@node_objs.0"/>
+  <edges id="219" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.14" sink_obj="//@regions.0/@basic_blocks.7/@node_objs.1"/>
+  <edges id="220" source_obj="//@regions.0/@basic_blocks.1/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.9/@node_objs.0"/>
+  <edges id="221" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.9/@node_objs.0"/>
+  <edges id="222" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.14" sink_obj="//@regions.0/@basic_blocks.9/@node_objs.1"/>
+  <edges id="223" source_obj="//@regions.0/@basic_blocks.1/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.0"/>
+  <edges id="224" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.0"/>
+  <edges id="225" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.14" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.1"/>
+  <edges id="226" source_obj="//@regions.0/@basic_blocks.1/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.0"/>
+  <edges id="227" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.0"/>
+  <edges id="228" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.14" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.1"/>
+  <edges id="229" source_obj="//@regions.0/@basic_blocks.1/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.11/@node_objs.0"/>
+  <edges id="230" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.11/@node_objs.0"/>
+  <edges id="231" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.14" sink_obj="//@regions.0/@basic_blocks.11/@node_objs.1"/>
+  <edges id="232" source_obj="//@regions.0/@basic_blocks.1/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.13/@node_objs.0"/>
+  <edges id="233" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.13/@node_objs.0"/>
+  <edges id="234" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.14" sink_obj="//@regions.0/@basic_blocks.13/@node_objs.1"/>
+  <edges id="235" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="236" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="237" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="238" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="239" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.1/@node_objs.4"/>
+  <edges id="240" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.1/@node_objs.5"/>
+  <edges id="241" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.1/@node_objs.6"/>
+  <edges id="242" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.1/@node_objs.7"/>
+  <edges id="243" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@blocks.1/@node_objs.8"/>
+  <edges id="244" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@blocks.1/@node_objs.9"/>
+  <edges id="245" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.1/@node_objs.10"/>
+  <edges id="248" source_obj="//@ports.0" sink_obj="//@blocks.1/@node_objs.11"/>
+  <edges id="249" source_obj="//@blocks.1/@node_objs.11" sink_obj="//@ports.1"/>
+  <edges id="250" source_obj="//@blocks.1/@node_objs.9" sink_obj="//@blocks.1/@node_objs.11"/>
+  <edges id="251" source_obj="//@blocks.1/@node_objs.10" sink_obj="//@blocks.1/@node_objs.11"/>
+  <edges id="252" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.11"/>
+  <edges id="253" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.1/@node_objs.11"/>
+  <edges id="254" source_obj="//@blocks.1/@node_objs.2" sink_obj="//@blocks.1/@node_objs.11"/>
+  <edges id="255" source_obj="//@blocks.1/@node_objs.3" sink_obj="//@blocks.1/@node_objs.11"/>
+  <edges id="256" source_obj="//@blocks.1/@node_objs.4" sink_obj="//@blocks.1/@node_objs.11"/>
+  <edges id="257" source_obj="//@blocks.1/@node_objs.5" sink_obj="//@blocks.1/@node_objs.11"/>
+  <edges id="258" source_obj="//@blocks.1/@node_objs.6" sink_obj="//@blocks.1/@node_objs.11"/>
+  <edges id="259" source_obj="//@blocks.1/@node_objs.7" sink_obj="//@blocks.1/@node_objs.11"/>
+  <edges id="260" source_obj="//@blocks.1/@node_objs.8" sink_obj="//@blocks.1/@node_objs.11"/>
+  <edges id="405" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0"/>
+  <edges id="406" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="407" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
+  <edges id="408" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.10"/>
+  <edges id="409" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.6"/>
+  <edges id="410" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.2"/>
+  <edges id="411" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.5"/>
+  <edges id="412" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.4"/>
+  <edges id="413" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.3"/>
+  <edges id="414" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.3" sink_obj="//@regions.0/@basic_blocks.14"/>
+  <edges id="415" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.4" sink_obj="//@regions.0/@basic_blocks.14"/>
+  <edges id="416" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.5" sink_obj="//@regions.0/@basic_blocks.14"/>
+  <edges id="417" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.6" sink_obj="//@regions.0/@basic_blocks.9"/>
+  <edges id="418" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.6" sink_obj="//@regions.0/@basic_blocks.8"/>
+  <edges id="419" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.6" sink_obj="//@regions.0/@basic_blocks.7"/>
+  <edges id="420" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.7" sink_obj="//@regions.0/@basic_blocks.14"/>
+  <edges id="421" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.8" sink_obj="//@regions.0/@basic_blocks.14"/>
+  <edges id="422" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.9" sink_obj="//@regions.0/@basic_blocks.14"/>
+  <edges id="423" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.10" sink_obj="//@regions.0/@basic_blocks.13"/>
+  <edges id="424" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.10" sink_obj="//@regions.0/@basic_blocks.12"/>
+  <edges id="425" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.10" sink_obj="//@regions.0/@basic_blocks.11"/>
+  <edges id="426" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.11" sink_obj="//@regions.0/@basic_blocks.14"/>
+  <edges id="427" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.12" sink_obj="//@regions.0/@basic_blocks.14"/>
+  <edges id="428" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.13" sink_obj="//@regions.0/@basic_blocks.14"/>
+  <edges id="429" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.14" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
+  <blocks id="24" name="entry" type="BlockType">
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>bb.i</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="kernel_2_2" originalName="kernel[2][2]" bitwidth="8" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="kernel_2_2_1" originalName="kernel[2][2]" bitwidth="8" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="kernel_2_2_2" originalName="kernel[2][2]" bitwidth="8" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="kernel_2_2_3" originalName="kernel[2][2]" bitwidth="8" opcode="alloca" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="kernel_2_2_4" originalName="kernel[2][2]" bitwidth="8" opcode="alloca" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="kernel_2_2_5" originalName="kernel[2][2]" bitwidth="8" opcode="alloca" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="kernel_2_2_6" originalName="kernel[2][2]" bitwidth="8" opcode="alloca" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="kernel_2_2_7" originalName="kernel[2][2]" bitwidth="8" opcode="alloca" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="kernel_2_2_8" originalName="kernel[2][2]" bitwidth="8" opcode="alloca" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="p_src_1_read" lineNumber="344" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" bitwidth="32" opcode="read" m_display="0" m_delay="2.1" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="344" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+      <dataInputObjs>p_src_1</dataInputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="p_src_2_read" lineNumber="345" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" bitwidth="32" opcode="read" m_display="0" m_delay="2.1" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="345" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+      <dataInputObjs>p_src_2</dataInputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="br_ln372" lineNumber="372" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" opcode="br" m_display="0" m_delay="0.73" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="372" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+      <controlInputObjs>bb.i</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp">
+      <validLinenumbers>344</validLinenumbers>
+      <validLinenumbers>345</validLinenumbers>
+      <validLinenumbers>372</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="104" name=".exit" type="BlockType">
+    <controlInputObjs>bb.i</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="91" name="kernel_2_2_load" lineNumber="377" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" bitwidth="8" opcode="load" nodeLabel="3.0" m_display="0" m_topoIndex="59" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="377" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="92" name="kernel_2_2_1_load" lineNumber="377" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" bitwidth="8" opcode="load" nodeLabel="3.0" m_display="0" m_topoIndex="60" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="377" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="93" name="kernel_2_2_2_load" lineNumber="377" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" bitwidth="8" opcode="load" nodeLabel="3.0" m_display="0" m_topoIndex="61" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="377" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="94" name="kernel_2_2_3_load" lineNumber="377" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" bitwidth="8" opcode="load" nodeLabel="3.0" m_display="0" m_topoIndex="62" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="377" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="95" name="kernel_2_2_4_load" lineNumber="377" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" bitwidth="8" opcode="load" nodeLabel="3.0" m_display="0" m_topoIndex="63" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="377" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="96" name="kernel_2_2_5_load" lineNumber="377" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" bitwidth="8" opcode="load" nodeLabel="3.0" m_display="0" m_topoIndex="64" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="377" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="97" name="kernel_2_2_6_load" lineNumber="377" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" bitwidth="8" opcode="load" nodeLabel="3.0" m_display="0" m_topoIndex="65" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="377" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="98" name="kernel_2_2_7_load" lineNumber="377" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" bitwidth="8" opcode="load" nodeLabel="3.0" m_display="0" m_topoIndex="66" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="377" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="99" name="kernel_2_2_8_load" lineNumber="377" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" bitwidth="8" opcode="load" nodeLabel="3.0" m_display="0" m_topoIndex="67" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="377" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="100" name="trunc_ln344" lineNumber="344" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." rtlName="trunc_ln344_fu_365_p1" contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" bitwidth="16" opcode="trunc" nodeLabel="3.0" m_display="0" m_topoIndex="68" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="344" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="101" name="trunc_ln345" lineNumber="345" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." rtlName="trunc_ln345_fu_369_p1" contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" bitwidth="16" opcode="trunc" nodeLabel="3.0" m_display="0" m_topoIndex="69" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="345" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="102" name="_ln377" lineNumber="377" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." rtlName="grp_xferode_128_128_1_0_1_0_129_3_3_s_fu_160" contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" opcode="call" nodeLabel="3.0" nodeLatency="1" m_display="0" m_topoIndex="70" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="377" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+      <dataInputObjs>imgInput_417</dataInputObjs>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>imgOutput_418</dataOutputObjs>
+      <constName>xferode_128_128_1_0_1_0_129_3_3_s</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="103" name="_ln0" opcode="ret" nodeLabel="4.0" m_display="0" m_topoIndex="71" m_clusterGroupNumber="-1"/>
+    <fileValidLineNumbers fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp">
+      <validLinenumbers>377</validLinenumbers>
+      <validLinenumbers>344</validLinenumbers>
+      <validLinenumbers>345</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" id="369" pipe_depth="2" RegionName="VITIS_LOOP_372_3_VITIS_LOOP_373_4">
+    <basic_blocks id="35" name="bb.i" type="BlockType">
+      <controlInputObjs>entry</controlInputObjs>
+      <controlInputObjs>bb.split4.i</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>.exit</controlOutputObjs>
+      <controlOutputObjs>.split.i</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="25" name="indvar_flatten" lineNumber="372" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" bitwidth="4" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="372" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <controlInputObjs>entry</controlInputObjs>
+        <controlInputObjs>bb.split4.i</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="26" name="i" lineNumber="374" originalName="i" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" bitwidth="2" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="374" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <controlInputObjs>entry</controlInputObjs>
+        <controlInputObjs>bb.split4.i</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="27" name="j" lineNumber="374" originalName="j" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" bitwidth="2" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="374" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <controlInputObjs>entry</controlInputObjs>
+        <controlInputObjs>bb.split4.i</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="i_cast_i" lineNumber="374" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." rtlName="i_cast_i_fu_179_p1" contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" bitwidth="4" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="374" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>sub</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="29" name="p_shl_i" lineNumber="374" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." rtlName="p_shl_i_fu_183_p3" contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" bitwidth="4" opcode="bitconcatenate" nodeLabel="1.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="374" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>sub</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="30" name="mul_i" lineNumber="374" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." rtlName="mul_i_fu_191_p2" contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" bitwidth="4" opcode="sub" nodeLabel="1.0" m_display="0" m_delay="0.8" m_topoIndex="18" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="374" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="32" name="icmp_ln372" lineNumber="372" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." rtlName="icmp_ln372_fu_197_p2" contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="0.72" m_topoIndex="19" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="372" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="33" name="add_ln372" lineNumber="372" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." rtlName="add_ln372_fu_203_p2" contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" bitwidth="4" opcode="add" nodeLabel="1.0" m_display="0" m_delay="0.8" m_topoIndex="20" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="372" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="34" name="br_ln372" lineNumber="372" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="372" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>.split.i</controlInputObjs>
+        <controlInputObjs>.exit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp">
+        <validLinenumbers>372</validLinenumbers>
+        <validLinenumbers>374</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="54" name=".split.i" type="BlockType">
+      <controlInputObjs>bb.i</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>branch2.i</controlOutputObjs>
+      <controlOutputObjs>branch0.i</controlOutputObjs>
+      <controlOutputObjs>branch1.i</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="38" name="icmp_ln373" lineNumber="373" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." rtlName="icmp_ln373_fu_209_p2" contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="0.39" m_topoIndex="22" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="373" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="39" name="select_ln372" lineNumber="372" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." rtlName="select_ln372_fu_215_p3" contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" bitwidth="2" opcode="select" nodeLabel="1.0" m_display="0" m_delay="0.34" m_topoIndex="23" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="372" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <dataOutputObjs>switch</dataOutputObjs>
+        <dataOutputObjs>switch</dataOutputObjs>
+        <dataOutputObjs>switch</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="40" name="add_ln372_1" lineNumber="372" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." rtlName="add_ln372_1_fu_223_p2" contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" bitwidth="2" opcode="add" nodeLabel="1.0" m_display="0" m_delay="0.62" m_topoIndex="24" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="372" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="41" name="i_cast_i_mid1" lineNumber="372" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." rtlName="i_cast_i_mid1_fu_229_p1" contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" bitwidth="4" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="372" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>sub</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="42" name="p_shl_i_mid1" lineNumber="372" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." rtlName="p_shl_i_mid1_fu_233_p3" contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" bitwidth="4" opcode="bitconcatenate" nodeLabel="1.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="372" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>sub</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="43" name="mul_i_mid1" lineNumber="372" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." rtlName="mul_i_mid1_fu_241_p2" contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" bitwidth="4" opcode="sub" nodeLabel="1.0" m_display="0" m_delay="0.8" m_topoIndex="27" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="372" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="44" name="select_ln372_1" lineNumber="372" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." rtlName="select_ln372_1_fu_247_p3" contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" bitwidth="4" opcode="select" nodeLabel="1.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="1">
+        <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="372" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataInputObjs>sub</dataInputObjs>
+        <dataInputObjs>sub</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="46" name="select_ln372_2" lineNumber="372" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." rtlName="select_ln372_2_fu_255_p3" contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" bitwidth="2" opcode="select" nodeLabel="1.0" m_display="0" m_delay="0.34" m_topoIndex="29" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="372" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <dataOutputObjs>switch</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="48" name="zext_ln374" lineNumber="374" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." rtlName="zext_ln374_fu_263_p1" contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" bitwidth="4" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="30" m_clusterGroupNumber="1">
+        <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="374" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="49" name="add_ln374" lineNumber="374" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." rtlName="add_ln374_fu_267_p2" contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" bitwidth="4" opcode="add" nodeLabel="1.0" m_display="0" m_delay="0.8" m_topoIndex="31" m_clusterGroupNumber="1">
+        <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="374" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="50" name="zext_ln374_1" lineNumber="374" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." rtlName="zext_ln374_1_fu_273_p1" contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" bitwidth="64" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="32" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="374" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="51" name="p_kernel_addr" lineNumber="374" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" bitwidth="4" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="33" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="374" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+        <dataInputObjs>p_kernel</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="52" name="kernel_2_0" lineNumber="374" originalName="kernel[2][0]" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" bitwidth="8" opcode="load" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="0.73" m_topoIndex="34" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="374" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="53" name="_ln374" lineNumber="374" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" opcode="switch" nodeLabel="1.0" m_display="0" m_delay="0.56" m_topoIndex="35" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="374" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+        <dataInputObjs>select</dataInputObjs>
+        <controlInputObjs>branch2.i</controlInputObjs>
+        <controlInputObjs>branch0.i</controlInputObjs>
+        <controlInputObjs>branch1.i</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <fileValidLineNumbers fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp">
+        <validLinenumbers>373</validLinenumbers>
+        <validLinenumbers>372</validLinenumbers>
+        <validLinenumbers>374</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="56" name="branch1.i" type="BlockType">
+      <controlInputObjs>.split.i</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>branch8.i</controlOutputObjs>
+      <controlOutputObjs>branch1.i.bb.split4.i_crit_edge</controlOutputObjs>
+      <controlOutputObjs>branch7.i</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="55" name="_ln374" lineNumber="374" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" opcode="switch" nodeLabel="1.0" m_display="0" m_delay="0.56" m_topoIndex="36" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="374" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+        <dataInputObjs>select</dataInputObjs>
+        <controlInputObjs>branch8.i</controlInputObjs>
+        <controlInputObjs>branch1.i.bb.split4.i_crit_edge</controlInputObjs>
+        <controlInputObjs>branch7.i</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <fileValidLineNumbers fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp">
+        <validLinenumbers>374</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="59" name="branch7.i" type="BlockType">
+      <controlInputObjs>branch1.i</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>bb.split4.i</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="57" name="kernel_2_2_4_write_ln374" lineNumber="374" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" opcode="store" nodeLabel="2.0" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="374" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="58" name="br_ln374" lineNumber="374" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="374" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+        <controlInputObjs>bb.split4.i</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp">
+        <validLinenumbers>374</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="62" name="branch1.i.bb.split4.i_crit_edge" type="BlockType">
+      <controlInputObjs>branch1.i</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>bb.split4.i</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="60" name="kernel_2_2_3_write_ln374" lineNumber="374" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" opcode="store" nodeLabel="2.0" m_display="0" m_topoIndex="43" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="374" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="61" name="br_ln374" lineNumber="374" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="44" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="374" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+        <controlInputObjs>bb.split4.i</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp">
+        <validLinenumbers>374</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="65" name="branch8.i" type="BlockType">
+      <controlInputObjs>branch1.i</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>bb.split4.i</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="63" name="kernel_2_2_5_write_ln374" lineNumber="374" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" opcode="store" nodeLabel="2.0" m_display="0" m_topoIndex="45" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="374" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="64" name="br_ln374" lineNumber="374" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="46" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="374" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+        <controlInputObjs>bb.split4.i</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp">
+        <validLinenumbers>374</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="67" name="branch0.i" type="BlockType">
+      <controlInputObjs>.split.i</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>branch5.i</controlOutputObjs>
+      <controlOutputObjs>branch0.i.bb.split4.i_crit_edge</controlOutputObjs>
+      <controlOutputObjs>branch4.i</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="66" name="_ln374" lineNumber="374" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" opcode="switch" nodeLabel="1.0" m_display="0" m_delay="0.56" m_topoIndex="37" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="374" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+        <dataInputObjs>select</dataInputObjs>
+        <controlInputObjs>branch5.i</controlInputObjs>
+        <controlInputObjs>branch0.i.bb.split4.i_crit_edge</controlInputObjs>
+        <controlInputObjs>branch4.i</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <fileValidLineNumbers fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp">
+        <validLinenumbers>374</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="70" name="branch4.i" type="BlockType">
+      <controlInputObjs>branch0.i</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>bb.split4.i</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="68" name="kernel_2_2_1_write_ln374" lineNumber="374" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" opcode="store" nodeLabel="2.0" m_display="0" m_topoIndex="47" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="374" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="69" name="br_ln374" lineNumber="374" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="48" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="374" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+        <controlInputObjs>bb.split4.i</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp">
+        <validLinenumbers>374</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="73" name="branch0.i.bb.split4.i_crit_edge" type="BlockType">
+      <controlInputObjs>branch0.i</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>bb.split4.i</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="71" name="kernel_2_2_write_ln374" lineNumber="374" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" opcode="store" nodeLabel="2.0" m_display="0" m_topoIndex="49" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="374" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="72" name="br_ln374" lineNumber="374" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="50" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="374" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+        <controlInputObjs>bb.split4.i</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp">
+        <validLinenumbers>374</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="76" name="branch5.i" type="BlockType">
+      <controlInputObjs>branch0.i</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>bb.split4.i</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="74" name="kernel_2_2_2_write_ln374" lineNumber="374" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" opcode="store" nodeLabel="2.0" m_display="0" m_topoIndex="51" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="374" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="75" name="br_ln374" lineNumber="374" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="52" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="374" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+        <controlInputObjs>bb.split4.i</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp">
+        <validLinenumbers>374</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="78" name="branch2.i" type="BlockType">
+      <controlInputObjs>.split.i</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>branch11.i</controlOutputObjs>
+      <controlOutputObjs>branch2.i.bb.split4.i_crit_edge</controlOutputObjs>
+      <controlOutputObjs>branch10.i</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="77" name="_ln374" lineNumber="374" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" opcode="switch" nodeLabel="1.0" m_display="0" m_delay="0.56" m_topoIndex="38" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="374" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+        <dataInputObjs>select</dataInputObjs>
+        <controlInputObjs>branch11.i</controlInputObjs>
+        <controlInputObjs>branch2.i.bb.split4.i_crit_edge</controlInputObjs>
+        <controlInputObjs>branch10.i</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <fileValidLineNumbers fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp">
+        <validLinenumbers>374</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="81" name="branch10.i" type="BlockType">
+      <controlInputObjs>branch2.i</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>bb.split4.i</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="79" name="kernel_2_2_7_write_ln374" lineNumber="374" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" opcode="store" nodeLabel="2.0" m_display="0" m_topoIndex="53" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="374" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="80" name="br_ln374" lineNumber="374" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="54" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="374" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+        <controlInputObjs>bb.split4.i</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp">
+        <validLinenumbers>374</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="84" name="branch2.i.bb.split4.i_crit_edge" type="BlockType">
+      <controlInputObjs>branch2.i</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>bb.split4.i</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="82" name="kernel_2_2_6_write_ln374" lineNumber="374" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" opcode="store" nodeLabel="2.0" m_display="0" m_topoIndex="55" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="374" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="83" name="br_ln374" lineNumber="374" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="56" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="374" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+        <controlInputObjs>bb.split4.i</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp">
+        <validLinenumbers>374</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="87" name="branch11.i" type="BlockType">
+      <controlInputObjs>branch2.i</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>bb.split4.i</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="85" name="kernel_2_2_8_write_ln374" lineNumber="374" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" opcode="store" nodeLabel="2.0" m_display="0" m_topoIndex="57" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="374" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="86" name="br_ln374" lineNumber="374" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="58" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="374" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+        <controlInputObjs>bb.split4.i</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp">
+        <validLinenumbers>374</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="90" name="bb.split4.i" type="BlockType">
+      <controlInputObjs>branch7.i</controlInputObjs>
+      <controlInputObjs>branch1.i.bb.split4.i_crit_edge</controlInputObjs>
+      <controlInputObjs>branch8.i</controlInputObjs>
+      <controlInputObjs>branch4.i</controlInputObjs>
+      <controlInputObjs>branch0.i.bb.split4.i_crit_edge</controlInputObjs>
+      <controlInputObjs>branch5.i</controlInputObjs>
+      <controlInputObjs>branch10.i</controlInputObjs>
+      <controlInputObjs>branch2.i.bb.split4.i_crit_edge</controlInputObjs>
+      <controlInputObjs>branch11.i</controlInputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>bb.i</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="88" name="add_ln373" lineNumber="373" fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" fileDirectory=".." rtlName="add_ln373_fu_278_p2" contextFuncName="erode_0_0_128_128_2_3_3_1_1_s" bitwidth="2" opcode="add" nodeLabel="1.0" m_display="0" m_delay="0.62" m_topoIndex="39" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp" linenumber="373" fileDirectory="F:\erosion" functionName="erode&amp;lt;0, 0, 128, 128, 2, 3, 3, 1, 1&amp;gt;"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="89" name="br_ln0" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="40" m_clusterGroupNumber="-1">
+        <controlInputObjs>bb.i</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="F:/Vitis_Libraries/vision/L1/include\imgproc/xf_erosion.hpp">
+        <validLinenumbers>373</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <regnodes realName="kernel_2_2_8_load_reg_505">
+    <nodeIds>99</nodeIds>
+  </regnodes>
+  <regnodes realName="select_ln372_2_reg_450">
+    <nodeIds>46</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln373_reg_460">
+    <nodeIds>88</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln372_reg_441">
+    <nodeIds>33</nodeIds>
+  </regnodes>
+  <regnodes realName="kernel_2_2_7_load_reg_500">
+    <nodeIds>98</nodeIds>
+  </regnodes>
+  <regnodes realName="kernel_2_2_1_reg_379">
+    <nodeIds>7</nodeIds>
+  </regnodes>
+  <regnodes realName="kernel_2_2_2_reg_385">
+    <nodeIds>8</nodeIds>
+  </regnodes>
+  <regnodes realName="i_reg_138">
+    <nodeIds>26</nodeIds>
+  </regnodes>
+  <regnodes realName="kernel_2_2_5_load_reg_490">
+    <nodeIds>96</nodeIds>
+  </regnodes>
+  <regnodes realName="kernel_2_2_8_reg_421">
+    <nodeIds>14</nodeIds>
+  </regnodes>
+  <regnodes realName="kernel_2_2_6_reg_409">
+    <nodeIds>12</nodeIds>
+  </regnodes>
+  <regnodes realName="kernel_2_2_2_load_reg_475">
+    <nodeIds>93</nodeIds>
+  </regnodes>
+  <regnodes realName="p_src_1_read_reg_427">
+    <nodeIds>21</nodeIds>
+  </regnodes>
+  <regnodes realName="kernel_2_2_1_load_reg_470">
+    <nodeIds>92</nodeIds>
+  </regnodes>
+  <regnodes realName="select_ln372_reg_446">
+    <nodeIds>39</nodeIds>
+  </regnodes>
+  <regnodes realName="trunc_ln345_reg_515">
+    <nodeIds>101</nodeIds>
+  </regnodes>
+  <regnodes realName="kernel_2_2_4_reg_397">
+    <nodeIds>10</nodeIds>
+  </regnodes>
+  <regnodes realName="p_kernel_addr_reg_455">
+    <nodeIds>51</nodeIds>
+  </regnodes>
+  <regnodes realName="j_reg_149">
+    <nodeIds>27</nodeIds>
+  </regnodes>
+  <regnodes realName="kernel_2_2_3_reg_391">
+    <nodeIds>9</nodeIds>
+  </regnodes>
+  <regnodes realName="trunc_ln344_reg_510">
+    <nodeIds>100</nodeIds>
+  </regnodes>
+  <regnodes realName="kernel_2_2_6_load_reg_495">
+    <nodeIds>97</nodeIds>
+  </regnodes>
+  <regnodes realName="kernel_2_2_7_reg_415">
+    <nodeIds>13</nodeIds>
+  </regnodes>
+  <regnodes realName="p_src_2_read_reg_432">
+    <nodeIds>22</nodeIds>
+  </regnodes>
+  <regnodes realName="indvar_flatten_reg_127">
+    <nodeIds>25</nodeIds>
+  </regnodes>
+  <regnodes realName="kernel_2_2_3_load_reg_480">
+    <nodeIds>94</nodeIds>
+  </regnodes>
+  <regnodes realName="kernel_2_2_load_reg_465">
+    <nodeIds>91</nodeIds>
+  </regnodes>
+  <regnodes realName="kernel_2_2_4_load_reg_485">
+    <nodeIds>95</nodeIds>
+  </regnodes>
+  <regnodes realName="kernel_2_2_reg_373">
+    <nodeIds>6</nodeIds>
+  </regnodes>
+  <regnodes realName="kernel_2_2_5_reg_403">
+    <nodeIds>11</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln372_reg_437">
+    <nodeIds>32</nodeIds>
+  </regnodes>
+  <expressionNodes realName="select_ln372_1_fu_247">
+    <nodeIds>44</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_phi_fu_142">
+    <nodeIds>26</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_cast_i_fu_179">
+    <nodeIds>28</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="kernel_2_2_7_fu_94">
+    <nodeIds>13</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mul_i_fu_191">
+    <nodeIds>30</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="kernel_2_2_2_fu_74">
+    <nodeIds>8</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln373_fu_278">
+    <nodeIds>88</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln374_fu_267">
+    <nodeIds>49</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln373_fu_209">
+    <nodeIds>38</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="kernel_2_2_fu_66">
+    <nodeIds>6</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="kernel_2_2_1_fu_70">
+    <nodeIds>7</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln374_1_fu_273">
+    <nodeIds>50</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln372_1_fu_223">
+    <nodeIds>40</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_kernel_addr_gep_fu_114">
+    <nodeIds>51</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_cast_i_mid1_fu_229">
+    <nodeIds>41</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln372_fu_203">
+    <nodeIds>33</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln372_2_fu_255">
+    <nodeIds>46</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="kernel_2_2_5_fu_86">
+    <nodeIds>11</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="kernel_2_2_6_fu_90">
+    <nodeIds>12</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln345_fu_369">
+    <nodeIds>101</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln344_fu_365">
+    <nodeIds>100</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mul_i_mid1_fu_241">
+    <nodeIds>43</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="j_phi_fu_153">
+    <nodeIds>27</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln372_fu_215">
+    <nodeIds>39</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln374_fu_263">
+    <nodeIds>48</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="kernel_2_2_4_fu_82">
+    <nodeIds>10</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="kernel_2_2_8_fu_98">
+    <nodeIds>14</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="indvar_flatten_phi_fu_131">
+    <nodeIds>25</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="kernel_2_2_3_fu_78">
+    <nodeIds>9</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_shl_i_fu_183">
+    <nodeIds>29</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_shl_i_mid1_fu_233">
+    <nodeIds>42</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln372_fu_197">
+    <nodeIds>32</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_xferode_128_128_1_0_1_0_129_3_3_s_fu_160">
+    <nodeIds>102</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="kernel_2_2_5_load_load_fu_349">
+    <nodeIds>96</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln374_store_fu_314">
+    <nodeIds>79</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln374_store_fu_324">
+    <nodeIds>85</nodeIds>
+  </ioNodes>
+  <ioNodes realName="kernel_2_2_3_load_load_fu_341">
+    <nodeIds>94</nodeIds>
+  </ioNodes>
+  <ioNodes realName="kernel_2_2_8_load_load_fu_361">
+    <nodeIds>99</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln374_store_fu_289">
+    <nodeIds>60</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln374_store_fu_304">
+    <nodeIds>71</nodeIds>
+  </ioNodes>
+  <ioNodes realName="kernel_2_2_2_load_load_fu_337">
+    <nodeIds>93</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln374_store_fu_309">
+    <nodeIds>74</nodeIds>
+  </ioNodes>
+  <ioNodes realName="kernel_2_2_1_load_load_fu_333">
+    <nodeIds>92</nodeIds>
+  </ioNodes>
+  <ioNodes realName="kernel_2_2_load_load_fu_329">
+    <nodeIds>91</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln374_store_fu_319">
+    <nodeIds>82</nodeIds>
+  </ioNodes>
+  <ioNodes realName="kernel_2_2_4_load_load_fu_345">
+    <nodeIds>95</nodeIds>
+  </ioNodes>
+  <ioNodes realName="kernel_2_2_7_load_load_fu_357">
+    <nodeIds>98</nodeIds>
+  </ioNodes>
+  <ioNodes realName="p_src_2_read_read_fu_108">
+    <nodeIds>22</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln374_store_fu_284">
+    <nodeIds>57</nodeIds>
+  </ioNodes>
+  <ioNodes realName="kernel_2_2_6_load_load_fu_353">
+    <nodeIds>97</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln374_store_fu_294">
+    <nodeIds>63</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln374_store_fu_299">
+    <nodeIds>68</nodeIds>
+  </ioNodes>
+  <ioNodes realName="p_src_1_read_read_fu_102">
+    <nodeIds>21</nodeIds>
+  </ioNodes>
+  <memoryPorts dataString="p_kernel">
+    <nodeIds>52</nodeIds>
+  </memoryPorts>
+  <ioPorts name="imgInput_417">
+    <contents name="call">
+      <nodeIds>102</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="imgOutput_418">
+    <contents name="call">
+      <nodeIds>102</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="p_kernel(p0)">
+    <contents name="load">
+      <nodeIds>52</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="p_src_1">
+    <contents name="read">
+      <nodeIds>21</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="p_src_2">
+    <contents name="read">
+      <nodeIds>22</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="49" stage="1" latency="1"/>
+      <operations id="50" stage="1" latency="1"/>
+      <operations id="51" stage="1" latency="1"/>
+      <operations id="52" stage="2" latency="2"/>
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="55" stage="1" latency="1"/>
+      <operations id="66" stage="1" latency="1"/>
+      <operations id="77" stage="1" latency="1"/>
+      <operations id="88" stage="1" latency="1"/>
+      <operations id="89" stage="1" latency="1"/>
+    </states>
+    <states id="3">
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="47" stage="1" latency="1"/>
+      <operations id="52" stage="1" latency="2"/>
+      <operations id="57" stage="1" latency="1"/>
+      <operations id="58" stage="1" latency="1"/>
+      <operations id="60" stage="1" latency="1"/>
+      <operations id="61" stage="1" latency="1"/>
+      <operations id="63" stage="1" latency="1"/>
+      <operations id="64" stage="1" latency="1"/>
+      <operations id="68" stage="1" latency="1"/>
+      <operations id="69" stage="1" latency="1"/>
+      <operations id="71" stage="1" latency="1"/>
+      <operations id="72" stage="1" latency="1"/>
+      <operations id="74" stage="1" latency="1"/>
+      <operations id="75" stage="1" latency="1"/>
+      <operations id="79" stage="1" latency="1"/>
+      <operations id="80" stage="1" latency="1"/>
+      <operations id="82" stage="1" latency="1"/>
+      <operations id="83" stage="1" latency="1"/>
+      <operations id="85" stage="1" latency="1"/>
+      <operations id="86" stage="1" latency="1"/>
+    </states>
+    <states id="4">
+      <operations id="91" stage="1" latency="1"/>
+      <operations id="92" stage="1" latency="1"/>
+      <operations id="93" stage="1" latency="1"/>
+      <operations id="94" stage="1" latency="1"/>
+      <operations id="95" stage="1" latency="1"/>
+      <operations id="96" stage="1" latency="1"/>
+      <operations id="97" stage="1" latency="1"/>
+      <operations id="98" stage="1" latency="1"/>
+      <operations id="99" stage="1" latency="1"/>
+      <operations id="100" stage="1" latency="1"/>
+      <operations id="101" stage="1" latency="1"/>
+      <operations id="102" stage="2" latency="2"/>
+    </states>
+    <states id="5">
+      <operations id="102" stage="1" latency="2"/>
+      <operations id="103" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="erode_0_0_128_128_2_3_3_1_1_s" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="24" mMaxLatency="17560">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>24</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="VITIS_LOOP_372_3_VITIS_LOOP_373_4" mII="1" mDepth="2" mMinTripCount="9" mMaxTripCount="9" mMinLatency="9" mMaxLatency="9" mType="1">
+      <basicBlocks>35</basicBlocks>
+      <basicBlocks>54</basicBlocks>
+      <basicBlocks>56</basicBlocks>
+      <basicBlocks>59</basicBlocks>
+      <basicBlocks>62</basicBlocks>
+      <basicBlocks>65</basicBlocks>
+      <basicBlocks>67</basicBlocks>
+      <basicBlocks>70</basicBlocks>
+      <basicBlocks>73</basicBlocks>
+      <basicBlocks>76</basicBlocks>
+      <basicBlocks>78</basicBlocks>
+      <basicBlocks>81</basicBlocks>
+      <basicBlocks>84</basicBlocks>
+      <basicBlocks>87</basicBlocks>
+      <basicBlocks>90</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="13" mMaxLatency="17549">
+      <basicBlocks>104</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

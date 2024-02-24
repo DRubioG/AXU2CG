@@ -1,0 +1,1509 @@
+INFO-FLOW: Workspace F:/course_s3_hls/hls/dilation/dilation/solution1 opened at Wed Oct 28 15:34:46 +0800 2020
+Execute     ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/zynquplus 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx.lib 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/dsp48.lib 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/dsp48e2.hlp 
+Execute     source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/util.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.118 sec.
+Command     ap_source done; 0.118 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/zynquplus_fpv7 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute             source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute     source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     set_part xczu3eg-sfvc784-1-i 
+INFO-FLOW: DBG:set_part: XILINX_VIVADO=F:/xilinx_2020.1/Vivado/2020.1
+INFO-FLOW: DBG:set_part: RDI_DATADIR=F:/xilinx_2020.1/Vivado/2020.1/data;F:/xilinx_2020.1/Vitis/2020.1/data
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data single -quiet 
+DBG:HLSDevice: Trying to load device library: F:/xilinx_2020.1/Vitis/2020.1\lib\win64.o\librdi_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: F:/xilinx_2020.1/Vivado/2020.1/data/parts/arch.xml
+Command       ap_part_info done; 0.915 sec.
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info 
+Execute       ap_family_info -name zynquplus -data info 
+Execute       add_library xilinx/zynquplus/zynquplus:xczu3eg:-sfvc784:-1-i 
+Execute         get_default_platform 
+Execute         ap_part_info -data single -name xczu3eg-sfvc784-1-i 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data resources 
+Execute         config_chip_info -resource {SLICE 8820} {LUT 70560} {FF 141120} {DSP 360} {BRAM 432} {URAM 0} 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info 
+Execute         config_chip_info -speed slow 
+Execute       add_library xilinx/zynquplus/zynquplus_fpv7 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xczu3eg-sfvc784-1-i'
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info 
+Execute       get_default_platform 
+Command     set_part done; 1.024 sec.
+Execute     ap_part_info -data single -name xczu3eg-sfvc784-1-i 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data resources 
+Execute     config_chip_info -resource {SLICE 8820} {LUT 70560} {FF 141120} {DSP 360} {BRAM 432} {URAM 0} 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info 
+Execute     config_chip_info -speed slow 
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     get_config_interface -m_axi_latency 
+Execute     get_config_interface -m_axi_alignment_byte_size 
+Execute     get_config_interface -m_axi_max_widen_bitwidth 
+Execute     get_config_interface -default_interface 
+Execute     get_config_interface -default_slave_interface 
+Execute     get_config_rtl -register_reset_num 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -format=ip_catalog 
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+Execute     config_export -format=ip_catalog 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -rtl=verilog 
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+Execute     config_export -rtl=verilog 
+Command   open_solution done; 1.319 sec.
+Execute   set_part xczu3eg-sfvc784-1-i 
+INFO-FLOW: DBG:set_part: XILINX_VIVADO=F:/xilinx_2020.1/Vivado/2020.1
+INFO-FLOW: DBG:set_part: RDI_DATADIR=F:/xilinx_2020.1/Vivado/2020.1/data;F:/xilinx_2020.1/Vitis/2020.1/data
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data single -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info 
+Execute     ap_family_info -name zynquplus -data info 
+Execute     add_library xilinx/zynquplus/zynquplus:xczu3eg:-sfvc784:-1-i 
+Execute       get_default_platform 
+Execute       ap_part_info -data single -name xczu3eg-sfvc784-1-i 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data resources 
+Execute       config_chip_info -resource {SLICE 8820} {LUT 70560} {FF 141120} {DSP 360} {BRAM 432} {URAM 0} 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info 
+Execute       config_chip_info -speed slow 
+Execute     add_library xilinx/zynquplus/zynquplus_fpv7 
+Execute       get_default_platform 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info 
+Execute     get_default_platform 
+Command   set_part done; 0.102 sec.
+Execute   create_clock -period 10 -name default 
+Execute   config_export -format ip_catalog -rtl verilog 
+Execute   source ./dilation/solution1/directives.tcl 
+Execute     set_directive_top -name dilation dilation 
+INFO-FLOW: Setting directive 'TOP' name=dilation 
+Execute   csynth_design 
+Execute     get_config_compile -dump_cfg 
+Execute     get_config_compile -effort 
+Execute     get_config_compile -enable_clang39 
+Execute     get_config_compile -g 
+Execute     get_config_compile -ng 
+Execute     get_config_compile -opt_fp 
+Execute     get_config_compile -skip_cdt 
+Execute     get_config_compile -skip_syncheck 
+Execute     get_config_compile -skip_transform 
+Execute     get_config_compile -keep_printf 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+INFO: [HLS 200-10] Analyzing design file 'source/dilation.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       get_config_compile -pragma_strict_mode 
+INFO-FLOW: Handling source/dilation.cpp as C++
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info 
+INFO-FLOW: Running: GCC PP 39
+INFO-FLOW: Source preprocessing
+Execute       ap_eval exec -ignorestderr F:/xilinx_2020.1/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang -fsave-optimization-record -foptimization-record-file=F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/clang.dilation.cpp.diag.yml -fno-limit-debug-info --sysroot F:/xilinx_2020.1/Vitis/2020.1/tps/mingw/6.2.0/win64.o/nt -fhls -fno-exceptions -E source/dilation.cpp -IF:/Vitis_Libraries/vision/L1/include -std=c++0x -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -fno-threadsafe-statics -fno-use-cxa-atexit -target fpga64-xilinx-mingw32 -fno-threadsafe-statics -fno-use-cxa-atexit -I F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot/39 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot -I F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -o F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.pp.0.cpp > F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/clang.dilation.cpp.out.log 2> F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/clang.dilation.cpp.err.log 
+Command       ap_eval done; 0.175 sec.
+INFO-FLOW: Done: GCC PP 39 time: 0.2 seconds per iteration
+Execute       set_directive_top dilation -name=dilation 
+INFO-FLOW: Setting directive 'TOP' name=dilation 
+INFO-FLOW: Setting directive 'TOP' name=dilation 
+INFO-FLOW: Setting directive 'TOP' name=dilation 
+INFO-FLOW: Setting directive 'TOP' name=dilation 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/tps/tcl/tcllib1.11.1/try/try.tcl 
+INFO-FLOW: Setting directive 'TOP' name=dilation 
+INFO-FLOW: Setting directive 'TOP' name=dilation 
+Execute       list_core -type functional_unit 
+Execute       clang_tidy xilinx-systemc-detector F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.pp.0.cpp std=c++0x -target fpga  -directive=F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec F:/xilinx_2020.1/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/.systemc_flag -fix-errors F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.pp.0.cpp -- -std=c++0x -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 0.825 sec.
+INFO-FLOW: Running: clang-tidy CDT preprocess 39
+Execute       clang_tidy xilinx-directive2pragma F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.pp.0.cpp std=c++0x -target fpga  -directive=F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec F:/xilinx_2020.1/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/all.directive.json -fix-errors F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.pp.0.cpp -- -std=c++0x -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 0.994 sec.
+Execute       clang_tidy xilinx-constantarray-param,xilinx-remove-assert F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.pp.0.cpp std=c++0x -target fpga  
+INFO-FLOW: exec F:/xilinx_2020.1/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-remove-assert -fix-errors F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.pp.0.cpp -- -std=c++0x -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 0.815 sec.
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 1.8 seconds per iteration
+INFO-FLOW: Calling xilinx-label-all-loops ... 
+Execute       clang_tidy -errorcheck xilinx-label-all-loops F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.pp.0.cpp std=c++0x -target fpga  
+Execute         ap_eval exec -ignorestderr F:/xilinx_2020.1/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/clang-tidy.dilation.pp.0.cpp.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops -fix-errors F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.pp.0.cpp -- -std=c++0x -target fpga -fhls -ferror-limit=0 > F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/clang-tidy.dilation.pp.0.cpp.out.log 2> F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/clang-tidy.dilation.pp.0.cpp.err.log 
+Command         ap_eval done; 1.504 sec.
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl 
+Command       clang_tidy done; 1.645 sec.
+Execute       clang_tidy -errorcheck xilinx-top-parameters F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.pp.0.cpp std=c++0x -target fpga  
+Execute         ap_eval exec -ignorestderr F:/xilinx_2020.1/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/clang-tidy.dilation.pp.0.cpp.diag.yml -header-filter=.* --checks=-*,xilinx-top-parameters -fix-errors F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.pp.0.cpp -- -std=c++0x -target fpga -fhls -ferror-limit=0 > F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/clang-tidy.dilation.pp.0.cpp.out.log 2> F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/clang-tidy.dilation.pp.0.cpp.err.log 
+Command         ap_eval done; 0.693 sec.
+Command       clang_tidy done; 0.763 sec.
+Execute       clang_tidy -errorcheck xilinx-array-stream-check F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.pp.0.cpp std=c++0x -target fpga  
+Execute         ap_eval exec -ignorestderr F:/xilinx_2020.1/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/clang-tidy.dilation.pp.0.cpp.diag.yml -header-filter=.* --checks=-*,xilinx-array-stream-check -fix-errors F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.pp.0.cpp -- -std=c++0x -target fpga -fhls -ferror-limit=0 > F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/clang-tidy.dilation.pp.0.cpp.out.log 2> F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/clang-tidy.dilation.pp.0.cpp.err.log 
+Command         ap_eval done; 0.767 sec.
+Command       clang_tidy done; 0.769 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr F:/xilinx_2020.1/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/xilinx-dataflow-lawyer.dilation.pp.0.cpp.diag.yml F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.pp.0.cpp -- -std=c++0x -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/xilinx-dataflow-lawyer.dilation.pp.0.cpp.out.log 2> F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/xilinx-dataflow-lawyer.dilation.pp.0.cpp.err.log 
+Command       ap_eval done; 0.796 sec.
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: source/dilation.cpp:277:54
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: source/dilation.cpp:267:2
+Execute       send_msg_by_id WARNING @200-471@%s%s 2 source/dilation.cpp 
+WARNING: [HLS 200-471] Dataflow form checks found 2 issue(s) in file source/dilation.cpp
+Execute       clang_tidy -errorcheck xilinx-warn-mayneed-no-ctor-attribute F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.pp.0.cpp std=c++0x -target fpga  
+Execute         ap_eval exec -ignorestderr F:/xilinx_2020.1/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/clang-tidy.dilation.pp.0.cpp.diag.yml -header-filter=.* --checks=-*,xilinx-warn-mayneed-no-ctor-attribute -fix-errors F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.pp.0.cpp -- -std=c++0x -target fpga -fhls -ferror-limit=0 > F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/clang-tidy.dilation.pp.0.cpp.out.log 2> F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/clang-tidy.dilation.pp.0.cpp.err.log 
+Command         ap_eval done; 0.915 sec.
+Command       clang_tidy done; 0.918 sec.
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info 
+INFO-FLOW: compiling source code to llvm bc
+Execute       ap_eval exec -ignorestderr F:/xilinx_2020.1/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang -fsave-optimization-record -foptimization-record-file=F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/clang.dilation.pragma.2.cpp.diag.yml -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.pragma.2.cpp -IF:/Vitis_Libraries/vision/L1/include -std=c++0x -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -fno-threadsafe-statics -fno-use-cxa-atexit -target fpga64-xilinx-linux-gnu -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot -I F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.bc > F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/clang.dilation.pragma.2.cpp.out.log 2> F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/clang.dilation.pragma.2.cpp.err.log 
+Command       ap_eval done; 1.05 sec.
+WARNING: [HLS 207-5324] unused parameter 'index': F:/Vitis_Libraries/vision/L1/include\common/xf_structs.hpp:655:87
+WARNING: [HLS 207-5324] unused parameter 'index': F:/Vitis_Libraries/vision/L1/include\common/xf_structs.hpp:675:60
+WARNING: [HLS 207-5324] unused parameter 'index': F:/Vitis_Libraries/vision/L1/include\common/xf_structs.hpp:1183:102
+WARNING: [HLS 207-5324] unused parameter 'index': F:/Vitis_Libraries/vision/L1/include\common/xf_structs.hpp:1386:34
+WARNING: [HLS 207-1593] Ignore interface attribute or pragma which is not used in top function: F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot/39\utils/x_hls_utils.h:247:9
+WARNING: [HLS 207-1593] Ignore interface attribute or pragma which is not used in top function: F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot/39\utils/x_hls_utils.h:247:9
+WARNING: [HLS 207-5324] unused parameter 'P0': source/dilation.cpp:52:62
+WARNING: [HLS 207-5324] unused parameter 'shift_x': source/dilation.cpp:55:35
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: source/dilation.cpp:181:9
+INFO-FLOW: Linking Debug ...
+INFO-FLOW: Linking dut bc code.
+Execute       run_link_or_opt -out F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/a.g.ld.0.bc -args  "F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.g.bc"  
+Execute         ap_eval exec -ignorestderr F:/xilinx_2020.1/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/llvm-link F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.g.bc -o F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/a.g.ld.0.bc > F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/llvm-link.a.g.ld.0.bc.out.log 2> F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/llvm-link.a.g.ld.0.bc.err.log 
+Command         ap_eval done; 0.164 sec.
+INFO-FLOW: 
+Command       run_link_or_opt done; 0.166 sec.
+Execute       run_link_or_opt -opt -out F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/a.g.ld.1.lower.bc -args F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics 
+Execute         ap_eval exec -ignorestderr F:/xilinx_2020.1/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=.* -pass-remarks-output=F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/opt.a.g.ld.1.lower.bc.diag.yml F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics -o F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/a.g.ld.1.lower.bc > F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/opt.a.g.ld.1.lower.bc.out.log 2> F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/opt.a.g.ld.1.lower.bc.err.log 
+Command         ap_eval done; 0.123 sec.
+INFO-FLOW: 
+Command       run_link_or_opt done; 0.125 sec.
+INFO-FLOW: Linking math bc lib
+Execute       run_link_or_opt -out F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/a.g.ld.2.m1.bc -args F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed F:/xilinx_2020.1/Vitis/2020.1/win64/lib/libhlsm_39.bc F:/xilinx_2020.1/Vitis/2020.1/win64/lib/libhlsmc++_39.bc 
+Execute         ap_eval exec -ignorestderr F:/xilinx_2020.1/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/llvm-link F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed F:/xilinx_2020.1/Vitis/2020.1/win64/lib/libhlsm_39.bc F:/xilinx_2020.1/Vitis/2020.1/win64/lib/libhlsmc++_39.bc -o F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/a.g.ld.2.m1.bc > F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/llvm-link.a.g.ld.2.m1.bc.out.log 2> F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/llvm-link.a.g.ld.2.m1.bc.err.log 
+Command         ap_eval done; 2.429 sec.
+INFO-FLOW: 
+Command       run_link_or_opt done; 2.431 sec.
+Execute       run_link_or_opt -opt -out F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/a.g.ld.3.fpc.bc -args F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=dilation -reflow-float-conversion 
+Execute         ap_eval exec -ignorestderr F:/xilinx_2020.1/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=.* -pass-remarks-output=F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/opt.a.g.ld.3.fpc.bc.diag.yml F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=dilation -reflow-float-conversion -o F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/a.g.ld.3.fpc.bc > F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/opt.a.g.ld.3.fpc.bc.out.log 2> F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/opt.a.g.ld.3.fpc.bc.err.log 
+Command         ap_eval done; 1.03 sec.
+INFO-FLOW: 
+Command       run_link_or_opt done; 1.031 sec.
+Execute       run_link_or_opt -out F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/a.g.ld.4.m2.bc -args F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed F:/xilinx_2020.1/Vitis/2020.1/win64/lib/libfloatconversion_39.bc 
+Execute         ap_eval exec -ignorestderr F:/xilinx_2020.1/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/llvm-link F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed F:/xilinx_2020.1/Vitis/2020.1/win64/lib/libfloatconversion_39.bc -o F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/a.g.ld.4.m2.bc > F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/llvm-link.a.g.ld.4.m2.bc.out.log 2> F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/llvm-link.a.g.ld.4.m2.bc.err.log 
+Command         ap_eval done; 0.205 sec.
+INFO-FLOW: 
+Command       run_link_or_opt done; 0.207 sec.
+Execute       run_link_or_opt -opt -out F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/a.g.ld.5.gdce.bc -args F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=dilation 
+Execute         ap_eval exec -ignorestderr F:/xilinx_2020.1/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=.* -pass-remarks-output=F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/opt.a.g.ld.5.gdce.bc.diag.yml F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=dilation -o F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/a.g.ld.5.gdce.bc > F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/opt.a.g.ld.5.gdce.bc.out.log 2> F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/opt.a.g.ld.5.gdce.bc.err.log 
+Command         ap_eval done; 0.219 sec.
+INFO-FLOW: 
+Command       run_link_or_opt done; 0.221 sec.
+Execute       get_solution -flow_target 
+Execute       get_config_export -xo 
+Execute       get_config_export -format 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_interface -default_interface 
+Execute       send_msg_by_id INFO @200-777@%s Vivado 
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' target.
+Execute       get_config_interface -default_slave_interface 
+Execute       get_solution -flow_target 
+Execute       get_config_export -xo 
+Execute       get_config_export -format 
+Execute       get_config_interface -m_axi_offset 
+Execute       get_config_interface -m_axi_latency 
+Execute       get_config_interface -m_axi_alignment_byte_size 
+Execute       get_config_interface -m_axi_min_bitwidth 
+Execute       get_config_interface -m_axi_max_bitwidth 
+Execute       get_config_interface -m_axi_max_widen_bitwidth 
+Execute       get_config_interface -m_axi_num_read_outstanding 
+Execute       get_config_interface -m_axi_num_write_outstanding 
+Execute       get_config_interface -m_axi_max_read_burst_length 
+Execute       get_config_interface -m_axi_max_write_burst_length 
+Execute       get_config_interface -m_axi_min_bitwidth 
+Execute       get_config_interface -m_axi_max_bitwidth 
+Execute       get_config_interface -m_axi_latency 
+Execute       get_config_interface -m_axi_min_bitwidth 
+Execute       get_config_interface -m_axi_max_bitwidth 
+Execute       get_config_interface -m_axi_max_widen_bitwidth 
+Execute       get_config_interface -m_axi_auto_max_ports 
+Execute       get_config_interface -m_axi_num_read_outstanding 
+Execute       get_config_interface -m_axi_num_write_outstanding 
+Execute       get_config_interface -m_axi_max_read_burst_length 
+Execute       get_config_interface -m_axi_max_write_burst_length 
+Execute       get_config_interface -s_axilite_data64 
+Execute       get_config_interface -m_axi_alignment_byte_size 
+Execute       get_config_compile -pragma_strict_mode 
+INFO-FLOW: Doing LTO.
+Execute       ap_eval exec -ignorestderr F:/xilinx_2020.1/Vitis/2020.1/win64/tools/clang-3.9-csynth/bin/clang -fsave-optimization-record -foptimization-record-file=F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/clang.a.g.ld.0.bc.diag.yml -fhls -mllvm -hls-top-function-name=dilation -mllvm -hls-db-dir -mllvm F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db -emit-llvm -c -mllvm -hls-bitcode-version=3.1 -target fpga64-xilinx-none -mllvm -xcl-xmlinfo=F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/kernel.internal.xml -mllvm -top-io-mapping-info=F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/top-io-fe.xml -mllvm -pass-remarks=supported-subset -mllvm -reflow-enable-interface-default-setting=false -mllvm -reflow-enable-slave-interface-default-setting=false -mllvm -gen-kernel-xml=false -mllvm -maxi-latency=0 -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -hls-maxi-max-data-size-in-bits=1024 -mllvm -hls-max-widen-size-in-bits=0 -mllvm -xcl-kernel-max-mem-ports=0 -mllvm -maxi-read-trans=16 -mllvm -maxi-write-trans=16 -mllvm -maxi-read-burst-len=16 -mllvm -maxi-write-burst-len=16 -mllvm -reflow-enable-saxi-64bits=0 -mllvm -assume-maxi-align=0 -mllvm -no-unaligned-maxi-accesses -x ir F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/a.g.ld.5.gdce.bc -o F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/a.g.lto.bc > F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/clang.a.g.ld.0.bc.out.log 2> F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/clang.a.g.ld.0.bc.err.log 
+Command       ap_eval done; 1.379 sec.
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<24>, 0>::stream()' into 'hls::stream<ap_uint<24>, 2>::stream()' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:188:43)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<24>, 2>::stream()' into 'xf::cv::Mat<9, 1080, 1920, 1, 2>::Mat()' (F:/Vitis_Libraries/vision/L1/include\common/xf_structs.hpp:441:5)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Mat<9, 1080, 1920, 1, 2>::init(int, int, bool)' into 'xf::cv::Mat<9, 1080, 1920, 1, 2>::Mat()' (F:/Vitis_Libraries/vision/L1/include\common/xf_structs.hpp:618:2)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_axiu<24, 1, 1, 1>, 0>::read(ap_axiu<24, 1, 1, 1>&)' into 'hls::stream<ap_axiu<24, 1, 1, 1>, 0>::operator>>(ap_axiu<24, 1, 1, 1>&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_axi_sdata.h:385:5)
+INFO: [HLS 214-131] Inlining function 'ap_range_ref<24, false>::ap_range_ref(ap_int_base<24, false>*, int, int)' into 'ap_int_base<24, false>::range(int, int)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:903:12)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<24, false>::range(int, int)' into 'ap_int_base<24, false>::operator()(int, int)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:940:18)
+INFO: [HLS 214-131] Inlining function 'ap_range_ref<24, false>::get() const' into 'ap_int_base<24, false>::ap_int_base<24, false>(ap_range_ref<24, false> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:358:20)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<24, false>::ap_int_base<24, false>(ap_range_ref<24, false> const&)' into 'ap_uint<24>::ap_uint<24, false>(ap_range_ref<24, false> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int.h:240:92)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<24, false>::operator()(int, int)' into 'void xf::cv::AXIGetBitFields<24, ap_uint<24> >(ap_uint<24>, int, int, ap_uint<24>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_axi_io.hpp:31:14)
+INFO: [HLS 214-131] Inlining function 'ap_uint<24>::operator=(ap_uint<24> const&)' into 'void xf::cv::AXIGetBitFields<24, ap_uint<24> >(ap_uint<24>, int, int, ap_uint<24>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_axi_io.hpp:31:9)
+INFO: [HLS 214-131] Inlining function 'ap_uint<24>::ap_uint<24, false>(ap_range_ref<24, false> const&)' into 'void xf::cv::AXIGetBitFields<24, ap_uint<24> >(ap_uint<24>, int, int, ap_uint<24>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_axi_io.hpp:31:11)
+INFO: [HLS 214-131] Inlining function 'void xf::cv::AXIGetBitFields<24, ap_uint<24> >(ap_uint<24>, int, int, ap_uint<24>&)' into 'void xf::cv::AXIGetBitFields<24, ap_uint<24> >(ap_axiu<24, 1, 1, 1>, int, int, ap_uint<24>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_axi_io.hpp:59:2)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<24>, 0>::write(ap_uint<24> const&)' into 'xf::cv::Mat<9, 1080, 1920, 1, 2>::write(int, ap_uint<24>)' (F:/Vitis_Libraries/vision/L1/include\common/xf_structs.hpp:677:10)
+INFO: [HLS 214-131] Inlining function 'void xf::cv::write<9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Scalar<DataType<9, 1>::channel, DataType<9, 1>::name>, int)' into 'void xf::cv::fetchingmatdata<9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Scalar<DataType<9, 1>::channel, DataType<9, 1>::name>, int)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:53:2)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Scalar<3, ap_uint<24> >::Scalar()' into 'int xf::cv::AXIvideo2xfMat<24, 9, 1080, 1920, 1>(hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:108:80)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<1, false>::to_int() const' into 'int xf::cv::AXIvideo2xfMat<24, 9, 1080, 1920, 1>(hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:155:28)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_axiu<24, 1, 1, 1>, 0>::operator>>(ap_axiu<24, 1, 1, 1>&)' into 'int xf::cv::AXIvideo2xfMat<24, 9, 1080, 1920, 1>(hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:154:17)
+INFO: [HLS 214-131] Inlining function 'void xf::cv::fetchingmatdata<9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Scalar<DataType<9, 1>::channel, DataType<9, 1>::name>, int)' into 'int xf::cv::AXIvideo2xfMat<24, 9, 1080, 1920, 1>(hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:144:13)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_axiu<24, 1, 1, 1>, 0>::operator>>(ap_axiu<24, 1, 1, 1>&)' into 'int xf::cv::AXIvideo2xfMat<24, 9, 1080, 1920, 1>(hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:127:17)
+INFO: [HLS 214-131] Inlining function 'void xf::cv::AXIGetBitFields<24, ap_uint<24> >(ap_axiu<24, 1, 1, 1>, int, int, ap_uint<24>&)' into 'int xf::cv::AXIvideo2xfMat<24, 9, 1080, 1920, 1>(hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:143:13)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<1, false>::to_int() const' into 'int xf::cv::AXIvideo2xfMat<24, 9, 1080, 1920, 1>(hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:130:32)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<1, false>::to_int() const' into 'int xf::cv::AXIvideo2xfMat<24, 9, 1080, 1920, 1>(hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:129:32)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base(int)' into 'bool operator<<13, false>(ap_int_base<13, false> const&, int)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1620:713)
+INFO: [HLS 214-131] Inlining function 'bool ap_int_base<13, false>::operator<<32, true>(ap_int_base<32, true> const&) const' into 'bool operator<<13, false>(ap_int_base<13, false> const&, int)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1620:711)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<24>, 0>::read(ap_uint<24>&)' into 'hls::stream<ap_uint<24>, 0>::read()' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:156:9)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<24>, 0>::read()' into 'xf::cv::Mat<9, 1080, 1920, 1, 2>::read(int)' (F:/Vitis_Libraries/vision/L1/include\common/xf_structs.hpp:657:17)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<1, false>::ap_int_base(int)' into 'ap_int_base<13, false>::operator++(int)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:734:16)
+INFO: [HLS 214-131] Inlining function 'ap_uint<13>::ap_uint<13, false>(ap_int_base<13, false> const&)' into 'ap_int_base<13, false>::operator++(int)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:735:12)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<13, false>& ap_int_base<13, false>::operator+=<1, false>(ap_int_base<1, false> const&)' into 'ap_int_base<13, false>::operator++(int)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:734:5)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<16, false>::ap_int_base(unsigned short)' into 'bool operator<<13, false>(ap_int_base<13, false> const&, unsigned short)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1619:766)
+INFO: [HLS 214-131] Inlining function 'bool ap_int_base<13, false>::operator<<16, false>(ap_int_base<16, false> const&) const' into 'bool operator<<13, false>(ap_int_base<13, false> const&, unsigned short)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1619:764)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base(int)' into 'bool operator<<5, false>(ap_int_base<5, false> const&, int)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1620:713)
+INFO: [HLS 214-131] Inlining function 'bool ap_int_base<5, false>::operator<<32, true>(ap_int_base<32, true> const&) const' into 'bool operator<<5, false>(ap_int_base<5, false> const&, int)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1620:711)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<33, true>::ap_int_base<24, false>(ap_int_base<24, false> const&)' into 'ap_int_base<24, false>::RType<32, true>::minus operator-<24, false, 32, true>(ap_int_base<24, false> const&, ap_int_base<32, true> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1351:341)
+INFO: [HLS 214-131] Inlining function 'ap_int<33>::ap_int<33, true>(ap_int_base<33, true> const&)' into 'ap_int_base<24, false>::RType<32, true>::minus operator-<24, false, 32, true>(ap_int_base<24, false> const&, ap_int_base<32, true> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1351:555)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<33, true>::ap_int_base<32, true>(ap_int_base<32, true> const&)' into 'ap_int_base<24, false>::RType<32, true>::minus operator-<24, false, 32, true>(ap_int_base<24, false> const&, ap_int_base<32, true> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1351:430)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base(int)' into 'ap_int_base<24, false>::RType<($_0)32, true>::minus operator-<24, false>(ap_int_base<24, false> const&, int)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1465:1531)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<24, false>::RType<32, true>::minus operator-<24, false, 32, true>(ap_int_base<24, false> const&, ap_int_base<32, true> const&)' into 'ap_int_base<24, false>::RType<($_0)32, true>::minus operator-<24, false>(ap_int_base<24, false> const&, int)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1465:1529)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<34, true>::ap_int_base<5, false>(ap_int_base<5, false> const&)' into 'ap_int_base<5, false>::RType<33, true>::plus operator+<5, false, 33, true>(ap_int_base<5, false> const&, ap_int_base<33, true> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1350:339)
+INFO: [HLS 214-131] Inlining function 'ap_int<34>::ap_int<34, true>(ap_int_base<34, true> const&)' into 'ap_int_base<5, false>::RType<33, true>::plus operator+<5, false, 33, true>(ap_int_base<5, false> const&, ap_int_base<33, true> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1350:551)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<34, true>::ap_int_base<33, true>(ap_int_base<33, true> const&)' into 'ap_int_base<5, false>::RType<33, true>::plus operator+<5, false, 33, true>(ap_int_base<5, false> const&, ap_int_base<33, true> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1350:427)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<34, true>::to_int() const' into 'ap_range_ref<24, false> ap_int_base<24, false>::range<34, true, 5, false>(ap_int_base<34, true> const&, ap_int_base<5, false> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:917:20)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<24, false>::range(int, int)' into 'ap_range_ref<24, false> ap_int_base<24, false>::range<34, true, 5, false>(ap_int_base<34, true> const&, ap_int_base<5, false> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:919:18)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<5, false>::to_int() const' into 'ap_range_ref<24, false> ap_int_base<24, false>::range<34, true, 5, false>(ap_int_base<34, true> const&, ap_int_base<5, false> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:918:20)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<24, false>::ap_int_base<24, false>(ap_range_ref<24, false> const&)' into 'bool operator><24, false, 24, true>(ap_range_ref<24, false> const&, ap_int_base<24, true> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1765:205)
+INFO: [HLS 214-131] Inlining function 'bool ap_int_base<24, false>::operator><24, true>(ap_int_base<24, true> const&) const' into 'bool operator><24, false, 24, true>(ap_range_ref<24, false> const&, ap_int_base<24, true> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1765:237)
+INFO: [HLS 214-131] Inlining function 'ap_range_ref<24, false>::get() const' into 'ap_int_base<24, true>::ap_int_base<24, false>(ap_range_ref<24, false> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:358:20)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<24, true>::ap_int_base<24, false>(ap_range_ref<24, false> const&)' into 'ap_int<24>::ap_int<24, false>(ap_range_ref<24, false> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int.h:98:91)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<24, false>::ap_int_base<24, true>(ap_int_base<24, true> const&)' into 'ap_range_ref<24, false>& ap_range_ref<24, false>::operator=<24, true>(ap_int_base<24, true> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_ref.h:413:31)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<1, false>::ap_int_base(int)' into 'ap_int_base<5, false>::operator++(int)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:734:16)
+INFO: [HLS 214-131] Inlining function 'ap_uint<5>::ap_uint<5, false>(ap_int_base<5, false> const&)' into 'ap_int_base<5, false>::operator++(int)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:735:12)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<5, false>& ap_int_base<5, false>::operator+=<1, false>(ap_int_base<1, false> const&)' into 'ap_int_base<5, false>::operator++(int)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:734:5)
+INFO: [HLS 214-131] Inlining function 'ap_concat_ref<5, ap_int_base<5, false>, 5, ap_int_base<5, false> >::ap_concat_ref(ap_int_base<5, false>&, ap_int_base<5, false>&)' into 'ap_concat_ref<5, ap_int_base<5, false>, 5, ap_int_base<5, false> > ap_int_base<5, false>::operator,<5, false>(ap_int_base<5, false>&) const' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1132:12)
+INFO: [HLS 214-131] Inlining function 'ap_uint<24>::ap_uint(int)' into 'void dilate_function_apply<3, 9, 3, 3>(PixelType<9>::uname*, PixelType<9>::uname (*) [3], unsigned char (*) [3])' (source/dilation.cpp:13:48)
+INFO: [HLS 214-131] Inlining function 'ap_uint<24>::operator=(ap_uint<24> const&)' into 'void dilate_function_apply<3, 9, 3, 3>(PixelType<9>::uname*, PixelType<9>::uname (*) [3], unsigned char (*) [3])' (source/dilation.cpp:42:18)
+INFO: [HLS 214-131] Inlining function 'ap_concat_ref<5, ap_int_base<5, false>, 5, ap_int_base<5, false> > ap_int_base<5, false>::operator,<5, false>(ap_int_base<5, false>&) const' into 'void dilate_function_apply<3, 9, 3, 3>(PixelType<9>::uname*, PixelType<9>::uname (*) [3], unsigned char (*) [3])' (source/dilation.cpp:16:50)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<5, false>& ap_int_base<5, false>::operator+=<24, false>(ap_int_base<24, false> const&)' into 'void dilate_function_apply<3, 9, 3, 3>(PixelType<9>::uname*, PixelType<9>::uname (*) [3], unsigned char (*) [3])' (source/dilation.cpp:16:54)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<5, false>::operator++(int)' into 'void dilate_function_apply<3, 9, 3, 3>(PixelType<9>::uname*, PixelType<9>::uname (*) [3], unsigned char (*) [3])' (source/dilation.cpp:16:47)
+INFO: [HLS 214-131] Inlining function 'ap_range_ref<24, false>& ap_range_ref<24, false>::operator=<24, true>(ap_int_base<24, true> const&)' into 'void dilate_function_apply<3, 9, 3, 3>(PixelType<9>::uname*, PixelType<9>::uname (*) [3], unsigned char (*) [3])' (source/dilation.cpp:39:46)
+INFO: [HLS 214-131] Inlining function 'ap_range_ref<24, false> ap_int_base<24, false>::range<34, true, 5, false>(ap_int_base<34, true> const&, ap_int_base<5, false> const&)' into 'void dilate_function_apply<3, 9, 3, 3>(PixelType<9>::uname*, PixelType<9>::uname (*) [3], unsigned char (*) [3])' (source/dilation.cpp:39:20)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<5, false>::RType<33, true>::plus operator+<5, false, 33, true>(ap_int_base<5, false> const&, ap_int_base<33, true> const&)' into 'void dilate_function_apply<3, 9, 3, 3>(PixelType<9>::uname*, PixelType<9>::uname (*) [3], unsigned char (*) [3])' (source/dilation.cpp:39:28)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<24, false>::RType<($_0)32, true>::minus operator-<24, false>(ap_int_base<24, false> const&, int)' into 'void dilate_function_apply<3, 9, 3, 3>(PixelType<9>::uname*, PixelType<9>::uname (*) [3], unsigned char (*) [3])' (source/dilation.cpp:39:37)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<13, false>::operator++(int)' into 'void dilate_function_apply<3, 9, 3, 3>(PixelType<9>::uname*, PixelType<9>::uname (*) [3], unsigned char (*) [3])' (source/dilation.cpp:22:72)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<13, false>::operator++(int)' into 'void dilate_function_apply<3, 9, 3, 3>(PixelType<9>::uname*, PixelType<9>::uname (*) [3], unsigned char (*) [3])' (source/dilation.cpp:27:65)
+INFO: [HLS 214-131] Inlining function 'ap_int<24>::operator=(ap_int<24> const&)' into 'void dilate_function_apply<3, 9, 3, 3>(PixelType<9>::uname*, PixelType<9>::uname (*) [3], unsigned char (*) [3])' (source/dilation.cpp:34:29)
+INFO: [HLS 214-131] Inlining function 'ap_int<24>::ap_int<24, false>(ap_range_ref<24, false> const&)' into 'void dilate_function_apply<3, 9, 3, 3>(PixelType<9>::uname*, PixelType<9>::uname (*) [3], unsigned char (*) [3])' (source/dilation.cpp:34:31)
+INFO: [HLS 214-131] Inlining function 'ap_range_ref<24, false> ap_int_base<24, false>::range<34, true, 5, false>(ap_int_base<34, true> const&, ap_int_base<5, false> const&)' into 'void dilate_function_apply<3, 9, 3, 3>(PixelType<9>::uname*, PixelType<9>::uname (*) [3], unsigned char (*) [3])' (source/dilation.cpp:34:55)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<5, false>::RType<33, true>::plus operator+<5, false, 33, true>(ap_int_base<5, false> const&, ap_int_base<33, true> const&)' into 'void dilate_function_apply<3, 9, 3, 3>(PixelType<9>::uname*, PixelType<9>::uname (*) [3], unsigned char (*) [3])' (source/dilation.cpp:34:63)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<24, false>::RType<($_0)32, true>::minus operator-<24, false>(ap_int_base<24, false> const&, int)' into 'void dilate_function_apply<3, 9, 3, 3>(PixelType<9>::uname*, PixelType<9>::uname (*) [3], unsigned char (*) [3])' (source/dilation.cpp:34:72)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<13, false>::operator unsigned long long() const' into 'void dilate_function_apply<3, 9, 3, 3>(PixelType<9>::uname*, PixelType<9>::uname (*) [3], unsigned char (*) [3])' (source/dilation.cpp:34:47)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<13, false>::operator unsigned long long() const' into 'void dilate_function_apply<3, 9, 3, 3>(PixelType<9>::uname*, PixelType<9>::uname (*) [3], unsigned char (*) [3])' (source/dilation.cpp:34:39)
+INFO: [HLS 214-131] Inlining function 'bool operator><24, false, 24, true>(ap_range_ref<24, false> const&, ap_int_base<24, true> const&)' into 'void dilate_function_apply<3, 9, 3, 3>(PixelType<9>::uname*, PixelType<9>::uname (*) [3], unsigned char (*) [3])' (source/dilation.cpp:33:75)
+INFO: [HLS 214-131] Inlining function 'ap_range_ref<24, false> ap_int_base<24, false>::range<34, true, 5, false>(ap_int_base<34, true> const&, ap_int_base<5, false> const&)' into 'void dilate_function_apply<3, 9, 3, 3>(PixelType<9>::uname*, PixelType<9>::uname (*) [3], unsigned char (*) [3])' (source/dilation.cpp:33:49)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<5, false>::RType<33, true>::plus operator+<5, false, 33, true>(ap_int_base<5, false> const&, ap_int_base<33, true> const&)' into 'void dilate_function_apply<3, 9, 3, 3>(PixelType<9>::uname*, PixelType<9>::uname (*) [3], unsigned char (*) [3])' (source/dilation.cpp:33:57)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<24, false>::RType<($_0)32, true>::minus operator-<24, false>(ap_int_base<24, false> const&, int)' into 'void dilate_function_apply<3, 9, 3, 3>(PixelType<9>::uname*, PixelType<9>::uname (*) [3], unsigned char (*) [3])' (source/dilation.cpp:33:66)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<13, false>::operator unsigned long long() const' into 'void dilate_function_apply<3, 9, 3, 3>(PixelType<9>::uname*, PixelType<9>::uname (*) [3], unsigned char (*) [3])' (source/dilation.cpp:33:41)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<13, false>::operator unsigned long long() const' into 'void dilate_function_apply<3, 9, 3, 3>(PixelType<9>::uname*, PixelType<9>::uname (*) [3], unsigned char (*) [3])' (source/dilation.cpp:33:33)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<13, false>::operator unsigned long long() const' into 'void dilate_function_apply<3, 9, 3, 3>(PixelType<9>::uname*, PixelType<9>::uname (*) [3], unsigned char (*) [3])' (source/dilation.cpp:32:21)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<13, false>::operator unsigned long long() const' into 'void dilate_function_apply<3, 9, 3, 3>(PixelType<9>::uname*, PixelType<9>::uname (*) [3], unsigned char (*) [3])' (source/dilation.cpp:32:13)
+INFO: [HLS 214-131] Inlining function 'bool operator<<13, false>(ap_int_base<13, false> const&, int)' into 'void dilate_function_apply<3, 9, 3, 3>(PixelType<9>::uname*, PixelType<9>::uname (*) [3], unsigned char (*) [3])' (source/dilation.cpp:27:55)
+INFO: [HLS 214-131] Inlining function 'ap_uint<13>::ap_uint(int)' into 'void dilate_function_apply<3, 9, 3, 3>(PixelType<9>::uname*, PixelType<9>::uname (*) [3], unsigned char (*) [3])' (source/dilation.cpp:27:45)
+INFO: [HLS 214-131] Inlining function 'bool operator<<13, false>(ap_int_base<13, false> const&, int)' into 'void dilate_function_apply<3, 9, 3, 3>(PixelType<9>::uname*, PixelType<9>::uname (*) [3], unsigned char (*) [3])' (source/dilation.cpp:22:62)
+INFO: [HLS 214-131] Inlining function 'ap_uint<13>::ap_uint(int)' into 'void dilate_function_apply<3, 9, 3, 3>(PixelType<9>::uname*, PixelType<9>::uname (*) [3], unsigned char (*) [3])' (source/dilation.cpp:22:52)
+INFO: [HLS 214-131] Inlining function 'ap_int<24>::ap_int(int)' into 'void dilate_function_apply<3, 9, 3, 3>(PixelType<9>::uname*, PixelType<9>::uname (*) [3], unsigned char (*) [3])' (source/dilation.cpp:21:40)
+INFO: [HLS 214-131] Inlining function 'bool operator<<5, false>(ap_int_base<5, false> const&, int)' into 'void dilate_function_apply<3, 9, 3, 3>(PixelType<9>::uname*, PixelType<9>::uname (*) [3], unsigned char (*) [3])' (source/dilation.cpp:16:37)
+INFO: [HLS 214-131] Inlining function 'ap_uint<5>::ap_uint(int)' into 'void dilate_function_apply<3, 9, 3, 3>(PixelType<9>::uname*, PixelType<9>::uname (*) [3], unsigned char (*) [3])' (source/dilation.cpp:16:32)
+INFO: [HLS 214-131] Inlining function 'ap_uint<5>::ap_uint(int)' into 'void dilate_function_apply<3, 9, 3, 3>(PixelType<9>::uname*, PixelType<9>::uname (*) [3], unsigned char (*) [3])' (source/dilation.cpp:16:25)
+INFO: [HLS 214-131] Inlining function 'ap_uint<24>::ap_uint(int)' into 'void dilate_function_apply<3, 9, 3, 3>(PixelType<9>::uname*, PixelType<9>::uname (*) [3], unsigned char (*) [3])' (source/dilation.cpp:13:59)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base(int)' into 'bool operator>=<13, false>(ap_int_base<13, false> const&, int)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1620:1093)
+INFO: [HLS 214-131] Inlining function 'bool ap_int_base<13, false>::operator>=<32, true>(ap_int_base<32, true> const&) const' into 'bool operator>=<13, false>(ap_int_base<13, false> const&, int)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1620:1090)
+INFO: [HLS 214-131] Inlining function 'ap_uint<24>::ap_uint(int)' into 'void Process_function_d<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned char (*) [3], xf::cv::Mat<9, 1080, 1920, 1, 2>&, DataType<9, 1>::name (*) [(1920) >> (xfNPixelsPerCycle<1>::datashift)], PixelType<9>::uname (*) [(xfNPixelsPerCycle<1>::nppc) + ((3) - (1))], DataType<9, 1>::name&, unsigned short, unsigned short, unsigned short&, ap_uint<13>*, ap_uint<13>, int&, int&)' (source/dilation.cpp:84:26)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<13, false>::operator++(int)' into 'void Process_function_d<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned char (*) [3], xf::cv::Mat<9, 1080, 1920, 1, 2>&, DataType<9, 1>::name (*) [(1920) >> (xfNPixelsPerCycle<1>::datashift)], PixelType<9>::uname (*) [(xfNPixelsPerCycle<1>::nppc) + ((3) - (1))], DataType<9, 1>::name&, unsigned short, unsigned short, unsigned short&, ap_uint<13>*, ap_uint<13>, int&, int&)' (source/dilation.cpp:90:10)
+INFO: [HLS 214-131] Inlining function 'ap_uint<24>::operator=(ap_uint<24> const&)' into 'void Process_function_d<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned char (*) [3], xf::cv::Mat<9, 1080, 1920, 1, 2>&, DataType<9, 1>::name (*) [(1920) >> (xfNPixelsPerCycle<1>::datashift)], PixelType<9>::uname (*) [(xfNPixelsPerCycle<1>::nppc) + ((3) - (1))], DataType<9, 1>::name&, unsigned short, unsigned short, unsigned short&, ap_uint<13>*, ap_uint<13>, int&, int&)' (source/dilation.cpp:84:24)
+INFO: [HLS 214-131] Inlining function 'bool operator>=<13, false>(ap_int_base<13, false> const&, int)' into 'void Process_function_d<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned char (*) [3], xf::cv::Mat<9, 1080, 1920, 1, 2>&, DataType<9, 1>::name (*) [(1920) >> (xfNPixelsPerCycle<1>::datashift)], PixelType<9>::uname (*) [(xfNPixelsPerCycle<1>::nppc) + ((3) - (1))], DataType<9, 1>::name&, unsigned short, unsigned short, unsigned short&, ap_uint<13>*, ap_uint<13>, int&, int&)' (source/dilation.cpp:150:21)
+INFO: [HLS 214-131] Inlining function 'void dilate_function_apply<3, 9, 3, 3>(PixelType<9>::uname*, PixelType<9>::uname (*) [3], unsigned char (*) [3])' into 'void Process_function_d<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned char (*) [3], xf::cv::Mat<9, 1080, 1920, 1, 2>&, DataType<9, 1>::name (*) [(1920) >> (xfNPixelsPerCycle<1>::datashift)], PixelType<9>::uname (*) [(xfNPixelsPerCycle<1>::nppc) + ((3) - (1))], DataType<9, 1>::name&, unsigned short, unsigned short, unsigned short&, ap_uint<13>*, ap_uint<13>, int&, int&)' (source/dilation.cpp:143:13)
+INFO: [HLS 214-131] Inlining function 'ap_uint<24>::operator=(ap_uint<24> const&)' into 'void Process_function_d<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned char (*) [3], xf::cv::Mat<9, 1080, 1920, 1, 2>&, DataType<9, 1>::name (*) [(1920) >> (xfNPixelsPerCycle<1>::datashift)], PixelType<9>::uname (*) [(xfNPixelsPerCycle<1>::nppc) + ((3) - (1))], DataType<9, 1>::name&, unsigned short, unsigned short, unsigned short&, ap_uint<13>*, ap_uint<13>, int&, int&)' (source/dilation.cpp:139:58)
+INFO: [HLS 214-131] Inlining function 'ap_uint<24>::operator=(ap_uint<24> const&)' into 'void Process_function_d<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned char (*) [3], xf::cv::Mat<9, 1080, 1920, 1, 2>&, DataType<9, 1>::name (*) [(1920) >> (xfNPixelsPerCycle<1>::datashift)], PixelType<9>::uname (*) [(xfNPixelsPerCycle<1>::nppc) + ((3) - (1))], DataType<9, 1>::name&, unsigned short, unsigned short, unsigned short&, ap_uint<13>*, ap_uint<13>, int&, int&)' (source/dilation.cpp:129:36)
+INFO: [HLS 214-131] Inlining function 'ap_uint<24>::operator=(ap_uint<24> const&)' into 'void Process_function_d<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned char (*) [3], xf::cv::Mat<9, 1080, 1920, 1, 2>&, DataType<9, 1>::name (*) [(1920) >> (xfNPixelsPerCycle<1>::datashift)], PixelType<9>::uname (*) [(xfNPixelsPerCycle<1>::nppc) + ((3) - (1))], DataType<9, 1>::name&, unsigned short, unsigned short, unsigned short&, ap_uint<13>*, ap_uint<13>, int&, int&)' (source/dilation.cpp:126:31)
+INFO: [HLS 214-131] Inlining function 'ap_uint<24>::operator=(ap_uint<24> const&)' into 'void Process_function_d<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned char (*) [3], xf::cv::Mat<9, 1080, 1920, 1, 2>&, DataType<9, 1>::name (*) [(1920) >> (xfNPixelsPerCycle<1>::datashift)], PixelType<9>::uname (*) [(xfNPixelsPerCycle<1>::nppc) + ((3) - (1))], DataType<9, 1>::name&, unsigned short, unsigned short, unsigned short&, ap_uint<13>*, ap_uint<13>, int&, int&)' (source/dilation.cpp:115:30)
+INFO: [HLS 214-131] Inlining function 'ap_uint<24>::ap_uint(int)' into 'void Process_function_d<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned char (*) [3], xf::cv::Mat<9, 1080, 1920, 1, 2>&, DataType<9, 1>::name (*) [(1920) >> (xfNPixelsPerCycle<1>::datashift)], PixelType<9>::uname (*) [(xfNPixelsPerCycle<1>::nppc) + ((3) - (1))], DataType<9, 1>::name&, unsigned short, unsigned short, unsigned short&, ap_uint<13>*, ap_uint<13>, int&, int&)' (source/dilation.cpp:115:32)
+INFO: [HLS 214-131] Inlining function 'ap_uint<24>::operator=(ap_uint<24> const&)' into 'void Process_function_d<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned char (*) [3], xf::cv::Mat<9, 1080, 1920, 1, 2>&, DataType<9, 1>::name (*) [(1920) >> (xfNPixelsPerCycle<1>::datashift)], PixelType<9>::uname (*) [(xfNPixelsPerCycle<1>::nppc) + ((3) - (1))], DataType<9, 1>::name&, unsigned short, unsigned short, unsigned short&, ap_uint<13>*, ap_uint<13>, int&, int&)' (source/dilation.cpp:113:30)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<13, false>::operator unsigned long long() const' into 'void Process_function_d<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned char (*) [3], xf::cv::Mat<9, 1080, 1920, 1, 2>&, DataType<9, 1>::name (*) [(1920) >> (xfNPixelsPerCycle<1>::datashift)], PixelType<9>::uname (*) [(xfNPixelsPerCycle<1>::nppc) + ((3) - (1))], DataType<9, 1>::name&, unsigned short, unsigned short, unsigned short&, ap_uint<13>*, ap_uint<13>, int&, int&)' (source/dilation.cpp:113:52)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<13, false>::operator unsigned long long() const' into 'void Process_function_d<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned char (*) [3], xf::cv::Mat<9, 1080, 1920, 1, 2>&, DataType<9, 1>::name (*) [(1920) >> (xfNPixelsPerCycle<1>::datashift)], PixelType<9>::uname (*) [(xfNPixelsPerCycle<1>::nppc) + ((3) - (1))], DataType<9, 1>::name&, unsigned short, unsigned short, unsigned short&, ap_uint<13>*, ap_uint<13>, int&, int&)' (source/dilation.cpp:113:36)
+INFO: [HLS 214-131] Inlining function 'bool operator<<13, false>(ap_int_base<13, false> const&, int)' into 'void Process_function_d<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned char (*) [3], xf::cv::Mat<9, 1080, 1920, 1, 2>&, DataType<9, 1>::name (*) [(1920) >> (xfNPixelsPerCycle<1>::datashift)], PixelType<9>::uname (*) [(xfNPixelsPerCycle<1>::nppc) + ((3) - (1))], DataType<9, 1>::name&, unsigned short, unsigned short, unsigned short&, ap_uint<13>*, ap_uint<13>, int&, int&)' (source/dilation.cpp:112:10)
+INFO: [HLS 214-131] Inlining function 'ap_uint<24>::operator=(ap_uint<24> const&)' into 'void Process_function_d<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned char (*) [3], xf::cv::Mat<9, 1080, 1920, 1, 2>&, DataType<9, 1>::name (*) [(1920) >> (xfNPixelsPerCycle<1>::datashift)], PixelType<9>::uname (*) [(xfNPixelsPerCycle<1>::nppc) + ((3) - (1))], DataType<9, 1>::name&, unsigned short, unsigned short, unsigned short&, ap_uint<13>*, ap_uint<13>, int&, int&)' (source/dilation.cpp:103:47)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<13, false>::operator unsigned long long() const' into 'void Process_function_d<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned char (*) [3], xf::cv::Mat<9, 1080, 1920, 1, 2>&, DataType<9, 1>::name (*) [(1920) >> (xfNPixelsPerCycle<1>::datashift)], PixelType<9>::uname (*) [(xfNPixelsPerCycle<1>::nppc) + ((3) - (1))], DataType<9, 1>::name&, unsigned short, unsigned short, unsigned short&, ap_uint<13>*, ap_uint<13>, int&, int&)' (source/dilation.cpp:103:42)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<13, false>::operator unsigned long long() const' into 'void Process_function_d<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned char (*) [3], xf::cv::Mat<9, 1080, 1920, 1, 2>&, DataType<9, 1>::name (*) [(1920) >> (xfNPixelsPerCycle<1>::datashift)], PixelType<9>::uname (*) [(xfNPixelsPerCycle<1>::nppc) + ((3) - (1))], DataType<9, 1>::name&, unsigned short, unsigned short, unsigned short&, ap_uint<13>*, ap_uint<13>, int&, int&)' (source/dilation.cpp:103:21)
+INFO: [HLS 214-131] Inlining function 'ap_uint<24>::ap_uint(int)' into 'void Process_function_d<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned char (*) [3], xf::cv::Mat<9, 1080, 1920, 1, 2>&, DataType<9, 1>::name (*) [(1920) >> (xfNPixelsPerCycle<1>::datashift)], PixelType<9>::uname (*) [(xfNPixelsPerCycle<1>::nppc) + ((3) - (1))], DataType<9, 1>::name&, unsigned short, unsigned short, unsigned short&, ap_uint<13>*, ap_uint<13>, int&, int&)' (source/dilation.cpp:103:49)
+INFO: [HLS 214-131] Inlining function 'ap_uint<24>::operator=(ap_uint<24> const&)' into 'void Process_function_d<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned char (*) [3], xf::cv::Mat<9, 1080, 1920, 1, 2>&, DataType<9, 1>::name (*) [(1920) >> (xfNPixelsPerCycle<1>::datashift)], PixelType<9>::uname (*) [(xfNPixelsPerCycle<1>::nppc) + ((3) - (1))], DataType<9, 1>::name&, unsigned short, unsigned short, unsigned short&, ap_uint<13>*, ap_uint<13>, int&, int&)' (source/dilation.cpp:100:47)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<13, false>::operator unsigned long long() const' into 'void Process_function_d<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned char (*) [3], xf::cv::Mat<9, 1080, 1920, 1, 2>&, DataType<9, 1>::name (*) [(1920) >> (xfNPixelsPerCycle<1>::datashift)], PixelType<9>::uname (*) [(xfNPixelsPerCycle<1>::nppc) + ((3) - (1))], DataType<9, 1>::name&, unsigned short, unsigned short, unsigned short&, ap_uint<13>*, ap_uint<13>, int&, int&)' (source/dilation.cpp:100:42)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<13, false>::operator unsigned long long() const' into 'void Process_function_d<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned char (*) [3], xf::cv::Mat<9, 1080, 1920, 1, 2>&, DataType<9, 1>::name (*) [(1920) >> (xfNPixelsPerCycle<1>::datashift)], PixelType<9>::uname (*) [(xfNPixelsPerCycle<1>::nppc) + ((3) - (1))], DataType<9, 1>::name&, unsigned short, unsigned short, unsigned short&, ap_uint<13>*, ap_uint<13>, int&, int&)' (source/dilation.cpp:100:21)
+INFO: [HLS 214-131] Inlining function 'ap_uint<13>::ap_uint(int)' into 'void Process_function_d<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned char (*) [3], xf::cv::Mat<9, 1080, 1920, 1, 2>&, DataType<9, 1>::name (*) [(1920) >> (xfNPixelsPerCycle<1>::datashift)], PixelType<9>::uname (*) [(xfNPixelsPerCycle<1>::nppc) + ((3) - (1))], DataType<9, 1>::name&, unsigned short, unsigned short, unsigned short&, ap_uint<13>*, ap_uint<13>, int&, int&)' (source/dilation.cpp:89:28)
+INFO: [HLS 214-131] Inlining function 'bool operator<<13, false>(ap_int_base<13, false> const&, unsigned short)' into 'void Process_function_d<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned char (*) [3], xf::cv::Mat<9, 1080, 1920, 1, 2>&, DataType<9, 1>::name (*) [(1920) >> (xfNPixelsPerCycle<1>::datashift)], PixelType<9>::uname (*) [(xfNPixelsPerCycle<1>::nppc) + ((3) - (1))], DataType<9, 1>::name&, unsigned short, unsigned short, unsigned short&, ap_uint<13>*, ap_uint<13>, int&, int&)' (source/dilation.cpp:99:21)
+INFO: [HLS 214-131] Inlining function 'bool operator<<13, false>(ap_int_base<13, false> const&, int)' into 'void Process_function_d<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned char (*) [3], xf::cv::Mat<9, 1080, 1920, 1, 2>&, DataType<9, 1>::name (*) [(1920) >> (xfNPixelsPerCycle<1>::datashift)], PixelType<9>::uname (*) [(xfNPixelsPerCycle<1>::nppc) + ((3) - (1))], DataType<9, 1>::name&, unsigned short, unsigned short, unsigned short&, ap_uint<13>*, ap_uint<13>, int&, int&)' (source/dilation.cpp:98:10)
+INFO: [HLS 214-131] Inlining function 'bool operator<<13, false>(ap_int_base<13, false> const&, int)' into 'void Process_function_d<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned char (*) [3], xf::cv::Mat<9, 1080, 1920, 1, 2>&, DataType<9, 1>::name (*) [(1920) >> (xfNPixelsPerCycle<1>::datashift)], PixelType<9>::uname (*) [(xfNPixelsPerCycle<1>::nppc) + ((3) - (1))], DataType<9, 1>::name&, unsigned short, unsigned short, unsigned short&, ap_uint<13>*, ap_uint<13>, int&, int&)' (source/dilation.cpp:89:35)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<33, true>::ap_int_base<13, false>(ap_int_base<13, false> const&)' into 'ap_int_base<13, false>::RType<32, true>::plus operator+<13, false, 32, true>(ap_int_base<13, false> const&, ap_int_base<32, true> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1350:339)
+INFO: [HLS 214-131] Inlining function 'ap_int<33>::ap_int<33, true>(ap_int_base<33, true> const&)' into 'ap_int_base<13, false>::RType<32, true>::plus operator+<13, false, 32, true>(ap_int_base<13, false> const&, ap_int_base<32, true> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1350:551)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<33, true>::ap_int_base<32, true>(ap_int_base<32, true> const&)' into 'ap_int_base<13, false>::RType<32, true>::plus operator+<13, false, 32, true>(ap_int_base<13, false> const&, ap_int_base<32, true> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1350:427)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base(int)' into 'ap_int_base<13, false>::RType<($_0)32, true>::plus operator+<13, false>(ap_int_base<13, false> const&, int)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1465:1006)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<13, false>::RType<32, true>::plus operator+<13, false, 32, true>(ap_int_base<13, false> const&, ap_int_base<32, true> const&)' into 'ap_int_base<13, false>::RType<($_0)32, true>::plus operator+<13, false>(ap_int_base<13, false> const&, int)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_base.h:1465:1004)
+INFO: [HLS 214-131] Inlining function 'ap_uint<13>::ap_uint(int)' into 'void xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned short, unsigned short, unsigned char (*) [3])' (source/dilation.cpp:191:26)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<13, false>::operator++(int)' into 'void xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned short, unsigned short, unsigned char (*) [3])' (source/dilation.cpp:230:65)
+INFO: [HLS 214-131] Inlining function 'ap_uint<13>::operator=(ap_uint<13> const&)' into 'void xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned short, unsigned short, unsigned char (*) [3])' (source/dilation.cpp:248:29)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<13, false>::operator++(int)' into 'void xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned short, unsigned short, unsigned char (*) [3])' (source/dilation.cpp:241:89)
+INFO: [HLS 214-131] Inlining function 'ap_uint<13>::operator=(ap_uint<13> const&)' into 'void xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned short, unsigned short, unsigned char (*) [3])' (source/dilation.cpp:246:24)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<13, false>::operator unsigned long long() const' into 'void xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned short, unsigned short, unsigned char (*) [3])' (source/dilation.cpp:246:10)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<33, true>::operator long long() const' into 'void xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned short, unsigned short, unsigned char (*) [3])' (source/dilation.cpp:246:34)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<13, false>::RType<($_0)32, true>::plus operator+<13, false>(ap_int_base<13, false> const&, int)' into 'void xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned short, unsigned short, unsigned char (*) [3])' (source/dilation.cpp:246:47)
+INFO: [HLS 214-131] Inlining function 'bool operator<<13, false>(ap_int_base<13, false> const&, int)' into 'void xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned short, unsigned short, unsigned char (*) [3])' (source/dilation.cpp:241:75)
+INFO: [HLS 214-131] Inlining function 'ap_uint<13>::ap_uint(int)' into 'void xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned short, unsigned short, unsigned char (*) [3])' (source/dilation.cpp:241:59)
+INFO: [HLS 214-131] Inlining function 'void Process_function_d<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned char (*) [3], xf::cv::Mat<9, 1080, 1920, 1, 2>&, DataType<9, 1>::name (*) [(1920) >> (xfNPixelsPerCycle<1>::datashift)], PixelType<9>::uname (*) [(xfNPixelsPerCycle<1>::nppc) + ((3) - (1))], DataType<9, 1>::name&, unsigned short, unsigned short, unsigned short&, ap_uint<13>*, ap_uint<13>, int&, int&)' into 'void xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned short, unsigned short, unsigned char (*) [3])' (source/dilation.cpp:236:9)
+INFO: [HLS 214-131] Inlining function 'ap_uint<13>::operator=(ap_uint<13> const&)' into 'void xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned short, unsigned short, unsigned char (*) [3])' (source/dilation.cpp:191:24)
+INFO: [HLS 214-131] Inlining function 'ap_uint<13>::ap_uint(int)' into 'void xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned short, unsigned short, unsigned char (*) [3])' (source/dilation.cpp:198:30)
+INFO: [HLS 214-131] Inlining function 'ap_uint<24>::operator=(ap_uint<24> const&)' into 'void xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned short, unsigned short, unsigned char (*) [3])' (source/dilation.cpp:235:5)
+INFO: [HLS 214-131] Inlining function 'ap_uint<24>::ap_uint(int)' into 'void xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned short, unsigned short, unsigned char (*) [3])' (source/dilation.cpp:235:7)
+INFO: [HLS 214-131] Inlining function 'bool operator<<13, false>(ap_int_base<13, false> const&, int)' into 'void xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned short, unsigned short, unsigned char (*) [3])' (source/dilation.cpp:230:35)
+INFO: [HLS 214-131] Inlining function 'ap_uint<13>::operator=(ap_uint<13> const&)' into 'void xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned short, unsigned short, unsigned char (*) [3])' (source/dilation.cpp:230:14)
+INFO: [HLS 214-131] Inlining function 'ap_uint<13>::ap_uint(int)' into 'void xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned short, unsigned short, unsigned char (*) [3])' (source/dilation.cpp:230:16)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<13, false>::operator++(int)' into 'void xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned short, unsigned short, unsigned char (*) [3])' (source/dilation.cpp:215:51)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<13, false>::operator++(int)' into 'void xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned short, unsigned short, unsigned char (*) [3])' (source/dilation.cpp:219:101)
+INFO: [HLS 214-131] Inlining function 'ap_uint<24>::operator=(ap_uint<24> const&)' into 'void xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned short, unsigned short, unsigned char (*) [3])' (source/dilation.cpp:224:20)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<13, false>::operator unsigned long long() const' into 'void xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned short, unsigned short, unsigned char (*) [3])' (source/dilation.cpp:224:13)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<13, false>::operator unsigned long long() const' into 'void xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned short, unsigned short, unsigned char (*) [3])' (source/dilation.cpp:224:6)
+INFO: [HLS 214-131] Inlining function 'ap_uint<24>::ap_uint(int)' into 'void xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned short, unsigned short, unsigned char (*) [3])' (source/dilation.cpp:224:22)
+INFO: [HLS 214-131] Inlining function 'bool operator<<13, false>(ap_int_base<13, false> const&, int)' into 'void xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned short, unsigned short, unsigned char (*) [3])' (source/dilation.cpp:219:53)
+INFO: [HLS 214-131] Inlining function 'ap_uint<13>::ap_uint(int)' into 'void xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned short, unsigned short, unsigned char (*) [3])' (source/dilation.cpp:219:45)
+INFO: [HLS 214-131] Inlining function 'bool operator<<13, false>(ap_int_base<13, false> const&, int)' into 'void xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned short, unsigned short, unsigned char (*) [3])' (source/dilation.cpp:215:38)
+INFO: [HLS 214-131] Inlining function 'ap_uint<13>::ap_uint(int)' into 'void xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned short, unsigned short, unsigned char (*) [3])' (source/dilation.cpp:215:30)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<13, false>::operator++(int)' into 'void xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned short, unsigned short, unsigned char (*) [3])' (source/dilation.cpp:198:67)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<13, false>::operator++(int)' into 'void xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned short, unsigned short, unsigned char (*) [3])' (source/dilation.cpp:202:101)
+INFO: [HLS 214-131] Inlining function 'ap_uint<24>::operator=(ap_uint<24> const&)' into 'void xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned short, unsigned short, unsigned char (*) [3])' (source/dilation.cpp:208:20)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<13, false>::operator unsigned long long() const' into 'void xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned short, unsigned short, unsigned char (*) [3])' (source/dilation.cpp:208:13)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<13, false>::operator unsigned long long() const' into 'void xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned short, unsigned short, unsigned char (*) [3])' (source/dilation.cpp:208:6)
+INFO: [HLS 214-131] Inlining function 'bool operator<<13, false>(ap_int_base<13, false> const&, int)' into 'void xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned short, unsigned short, unsigned char (*) [3])' (source/dilation.cpp:198:51)
+INFO: [HLS 214-131] Inlining function 'bool operator<<13, false>(ap_int_base<13, false> const&, int)' into 'void xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned short, unsigned short, unsigned char (*) [3])' (source/dilation.cpp:202:53)
+INFO: [HLS 214-131] Inlining function 'ap_uint<13>::ap_uint(int)' into 'void xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned short, unsigned short, unsigned char (*) [3])' (source/dilation.cpp:202:45)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Scalar<3, ap_uint<24> >::Scalar()' into 'xf::cv::Scalar<DataType<9, 1>::channel, DataType<9, 1>::name> xf::cv::read<9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, int)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:63:85)
+INFO: [HLS 214-131] Inlining function 'ap_uint<24>::operator=(ap_uint<24> const&)' into 'xf::cv::Scalar<DataType<9, 1>::channel, DataType<9, 1>::name> xf::cv::read<9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, int)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:64:16)
+INFO: [HLS 214-131] Inlining function 'ap_uint<24>::operator=(ap_uint<24> const&)' into 'xf::cv::Scalar<3, ap_uint<24> >::operator=(xf::cv::Scalar<3, ap_uint<24> >&&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_structs.hpp:228:7)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Scalar<DataType<9, 1>::channel, DataType<9, 1>::name> xf::cv::read<9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, int)' into 'void xf::cv::fillingdata<9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Scalar<DataType<9, 1>::channel, DataType<9, 1>::name>&, int)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:77:6)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<24, false>::operator()(int, int)' into 'void xf::cv::AXISetBitFields<24, ap_uint<24> >(ap_uint<24>&, int, int, ap_uint<24>)' (F:/Vitis_Libraries/vision/L1/include\common/xf_axi_io.hpp:68:5)
+INFO: [HLS 214-131] Inlining function 'ap_range_ref<24, false>& ap_range_ref<24, false>::operator=<24, false>(ap_int_base<24, false> const&)' into 'void xf::cv::AXISetBitFields<24, ap_uint<24> >(ap_uint<24>&, int, int, ap_uint<24>)' (F:/Vitis_Libraries/vision/L1/include\common/xf_axi_io.hpp:68:31)
+INFO: [HLS 214-131] Inlining function 'void xf::cv::AXISetBitFields<24, ap_uint<24> >(ap_uint<24>&, int, int, ap_uint<24>)' into 'void xf::cv::AXISetBitFields<24, ap_uint<24> >(ap_axiu<24, 1, 1, 1>&, int, int, ap_uint<24>)' (F:/Vitis_Libraries/vision/L1/include\common/xf_axi_io.hpp:96:2)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_axiu<24, 1, 1, 1>, 0>::write(ap_axiu<24, 1, 1, 1> const&)' into 'hls::stream<ap_axiu<24, 1, 1, 1>, 0>::operator<<(ap_axiu<24, 1, 1, 1> const&)' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_axi_sdata.h:389:5)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Scalar<3, ap_uint<24> >::Scalar()' into 'int xf::cv::xfMat2AXIvideo<24, 9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:173:80)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_axiu<24, 1, 1, 1>, 0>::operator<<(ap_axiu<24, 1, 1, 1> const&)' into 'int xf::cv::xfMat2AXIvideo<24, 9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:213:28)
+INFO: [HLS 214-131] Inlining function 'ap_uint<3>::operator=(ap_uint<3> const&)' into 'int xf::cv::xfMat2AXIvideo<24, 9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:212:22)
+INFO: [HLS 214-131] Inlining function 'ap_uint<3>::ap_uint(int)' into 'int xf::cv::xfMat2AXIvideo<24, 9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:212:24)
+INFO: [HLS 214-131] Inlining function 'void xf::cv::AXISetBitFields<24, ap_uint<24> >(ap_axiu<24, 1, 1, 1>&, int, int, ap_uint<24>)' into 'int xf::cv::xfMat2AXIvideo<24, 9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:211:13)
+INFO: [HLS 214-131] Inlining function 'ap_uint<24>::operator=(ap_uint<24> const&)' into 'int xf::cv::xfMat2AXIvideo<24, 9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:209:22)
+INFO: [HLS 214-131] Inlining function 'ap_uint<24>::ap_uint(int)' into 'int xf::cv::xfMat2AXIvideo<24, 9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:209:24)
+INFO: [HLS 214-131] Inlining function 'void xf::cv::fillingdata<9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Scalar<DataType<9, 1>::channel, DataType<9, 1>::name>&, int)' into 'int xf::cv::xfMat2AXIvideo<24, 9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:207:13)
+INFO: [HLS 214-131] Inlining function 'ap_uint<1>::ap_uint(int)' into 'int xf::cv::xfMat2AXIvideo<24, 9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:196:28)
+INFO: [HLS 214-131] Inlining function 'ap_uint<1>::operator=(ap_uint<1> const&)' into 'int xf::cv::xfMat2AXIvideo<24, 9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:196:26)
+INFO: [HLS 214-131] Inlining function 'ap_uint<1>::operator=(ap_uint<1> const&)' into 'int xf::cv::xfMat2AXIvideo<24, 9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:205:26)
+INFO: [HLS 214-131] Inlining function 'ap_uint<1>::ap_uint(int)' into 'int xf::cv::xfMat2AXIvideo<24, 9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:205:28)
+INFO: [HLS 214-131] Inlining function 'ap_uint<1>::operator=(ap_uint<1> const&)' into 'int xf::cv::xfMat2AXIvideo<24, 9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:203:26)
+INFO: [HLS 214-131] Inlining function 'ap_uint<1>::ap_uint(int)' into 'int xf::cv::xfMat2AXIvideo<24, 9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:203:28)
+INFO: [HLS 214-131] Inlining function 'ap_uint<1>::operator=(ap_uint<1> const&)' into 'int xf::cv::xfMat2AXIvideo<24, 9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:200:26)
+INFO: [HLS 214-131] Inlining function 'ap_uint<1>::ap_uint(int)' into 'int xf::cv::xfMat2AXIvideo<24, 9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:200:28)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Mat<9, 1080, 1920, 1, 2>::Mat()' into 'dilation(hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' (source/dilation.cpp:260:41)
+INFO: [HLS 214-131] Inlining function 'int xf::cv::xfMat2AXIvideo<24, 9, 1080, 1920, 1>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' into 'dilation(hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' (source/dilation.cpp:279:2)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Mat<9, 1080, 1920, 1, 2>::Mat()' into 'dilation(hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' (source/dilation.cpp:262:41)
+INFO: [HLS 214-131] Inlining function 'int xf::cv::AXIvideo2xfMat<24, 9, 1080, 1920, 1>(hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&)' into 'dilation(hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' (source/dilation.cpp:274:2)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_74_1' (source/dilation.cpp:74:22) in function 'xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>' completely with a factor of 3 (source/dilation.cpp:74:22)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_79_2' (source/dilation.cpp:79:19) in function 'xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>' completely with a factor of 3 (source/dilation.cpp:79:19)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_79_2' (source/dilation.cpp:79:19) in function 'xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>' completely with a factor of 3 (source/dilation.cpp:79:19)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_79_2' (source/dilation.cpp:79:19) in function 'xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>' completely with a factor of 3 (source/dilation.cpp:79:19)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_107_3' (source/dilation.cpp:107:27) in function 'xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>' completely with a factor of 3 (source/dilation.cpp:107:27)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_121_4' (source/dilation.cpp:121:27) in function 'xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>' completely with a factor of 3 (source/dilation.cpp:121:27)
+INFO: [HLS 214-186] Unrolling loop 'Apply_dilate_Loop' (source/dilation.cpp:16:5) in function 'xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>' completely with a factor of 3 (source/dilation.cpp:16:5)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_22_1' (source/dilation.cpp:22:26) in function 'xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>' completely with a factor of 3 (source/dilation.cpp:22:26)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_27_2' (source/dilation.cpp:27:19) in function 'xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>' completely with a factor of 3 (source/dilation.cpp:27:19)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_27_2' (source/dilation.cpp:27:19) in function 'xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>' completely with a factor of 3 (source/dilation.cpp:27:19)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_27_2' (source/dilation.cpp:27:19) in function 'xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>' completely with a factor of 3 (source/dilation.cpp:27:19)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_22_1' (source/dilation.cpp:22:26) in function 'xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>' completely with a factor of 3 (source/dilation.cpp:22:26)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_27_2' (source/dilation.cpp:27:19) in function 'xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>' completely with a factor of 3 (source/dilation.cpp:27:19)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_27_2' (source/dilation.cpp:27:19) in function 'xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>' completely with a factor of 3 (source/dilation.cpp:27:19)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_27_2' (source/dilation.cpp:27:19) in function 'xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>' completely with a factor of 3 (source/dilation.cpp:27:19)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_22_1' (source/dilation.cpp:22:26) in function 'xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>' completely with a factor of 3 (source/dilation.cpp:22:26)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_27_2' (source/dilation.cpp:27:19) in function 'xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>' completely with a factor of 3 (source/dilation.cpp:27:19)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_27_2' (source/dilation.cpp:27:19) in function 'xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>' completely with a factor of 3 (source/dilation.cpp:27:19)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_27_2' (source/dilation.cpp:27:19) in function 'xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>' completely with a factor of 3 (source/dilation.cpp:27:19)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_241_4' (source/dilation.cpp:241:27) in function 'xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>' completely with a factor of 2 (source/dilation.cpp:241:27)
+INFO: [HLS 214-178] Inlining function 'xf::cv::Mat<9, 1080, 1920, 1, 2>::read(int)' into 'void xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned short, unsigned short, unsigned char (*) [3])' (source/dilation.cpp:163:0)
+INFO: [HLS 214-178] Inlining function 'xf::cv::Mat<9, 1080, 1920, 1, 2>::read(int)' into 'void xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned short, unsigned short, unsigned char (*) [3])' (source/dilation.cpp:163:0)
+INFO: [HLS 214-178] Inlining function 'xf::cv::Mat<9, 1080, 1920, 1, 2>::write(int, ap_uint<24>)' into 'void xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<9, 1080, 1920, 1, 2>&, xf::cv::Mat<9, 1080, 1920, 1, 2>&, unsigned short, unsigned short, unsigned char (*) [3])' (source/dilation.cpp:163:0)
+INFO: [HLS 214-178] Inlining function 'xf::cv::Mat<9, 1080, 1920, 1, 2>::write(int, ap_uint<24>)' into 'dilation(hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' (source/dilation.cpp:253:0)
+INFO: [HLS 214-178] Inlining function 'xf::cv::Mat<9, 1080, 1920, 1, 2>::read(int)' into 'dilation(hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' (source/dilation.cpp:253:0)
+INFO: [HLS 214-178] Inlining function 'xf::cv::Scalar<3, ap_uint<24> >::operator=(xf::cv::Scalar<3, ap_uint<24> >&&)' into 'dilation(hls::stream<ap_axiu<24, 1, 1, 1>, 0>&, hls::stream<ap_axiu<24, 1, 1, 1>, 0>&)' (source/dilation.cpp:253:0)
+WARNING: [HLS 214-167] The program may have out of bound array access (source/dilation.cpp:271:16)
+INFO-FLOW: DBG:CMD: copy_raw_kernel_xml ap_link_39: kernel.xml not generated: F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/kernel.internal.xml
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:17 ; elapsed = 00:00:32 . Memory (MB): peak = 997.910 ; gain = 912.230
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:17 ; elapsed = 00:00:32 . Memory (MB): peak = 997.910 ; gain = 912.230
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top dilation -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/a.g.0.bc -o F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+INFO: [XFORM 203-501] Unrolling loop 'read_lines' in function 'void xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<FORWARD_REFERENCE, FORWARD_REFERENCE, FORWARD_REFERENCE, FORWARD_REFERENCE, 2>&, xf::cv::Mat<FORWARD_REFERENCE, FORWARD_REFERENCE, FORWARD_REFERENCE, FORWARD_REFERENCE, 2>&, unsigned short, unsigned short, unsigned char (*) [FORWARD_REFERENCE])': changing partial unrolling into complete unrolling since the unrolling factor (=1) is no less than the loop trip count (=1).
+INFO: [HLS 200-489] Unrolling loop 'read_lines' in function 'void xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>(xf::cv::Mat<FORWARD_REFERENCE, FORWARD_REFERENCE, FORWARD_REFERENCE, FORWARD_REFERENCE, 2>&, xf::cv::Mat<FORWARD_REFERENCE, FORWARD_REFERENCE, FORWARD_REFERENCE, FORWARD_REFERENCE, 2>&, unsigned short, unsigned short, unsigned char (*) [FORWARD_REFERENCE])' completely with a factor of 1.
+Command         transform done; 0.519 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:17 ; elapsed = 00:00:33 . Memory (MB): peak = 997.910 ; gain = 912.230
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -data-pack -instcombine -dce -inst-simplify -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/a.g.1.bc -o F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+Command         transform done; 0.236 sec.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/a.g.2.prechk.bc -o F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:17 ; elapsed = 00:00:33 . Memory (MB): peak = 997.910 ; gain = 912.230
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/a.g.1.bc to F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db -interface-port-rename -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -function-uniquify -directive-preproc -mem2reg -dse -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -function-inline -complex-op-raise -inst-simplify -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin2 -bitwidthmin2 -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -directive-preproc -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/a.o.1.bc -o F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_187_1' in function 'xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_219_3' in function 'xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_269_2' (source/dilation.cpp:266) in function 'dilation' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loop_width' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:186) in function 'dilation' for pipelining.
+INFO: [XFORM 203-502] Unrolling small iteration loop 'init_boarder' in function 'xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Col_Loop' in function 'xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>' for pipelining.
+WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 3 for loop 'VITIS_LOOP_187_1' in function 'xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 1921 to 1920 for loop 'VITIS_LOOP_202_2' (F:/Vitis_Libraries/vision/L1/include\common/xf_structs.hpp:453:46) in function 'xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 1920 for loop 'VITIS_LOOP_202_2' (F:/Vitis_Libraries/vision/L1/include\common/xf_structs.hpp:453:46) in function 'xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 1921 to 1920 for loop 'VITIS_LOOP_219_3' in function 'xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 1920 for loop 'VITIS_LOOP_219_3' in function 'xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 3 to 1 for loop 'init_boarder' in function 'xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 1921 for loop 'Col_Loop' in function 'xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 1080 for loop 'Row_Loop' (source/dilation.cpp:52:62) in function 'xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>'.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.1.1' (F:/Vitis_Libraries/vision/L1/include\common/xf_structs.hpp:228) in function 'dilation' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'init_boarder' in function 'xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_219_3' in function 'xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>' completely with a factor of 1920.
+WARNING: [HLS 200-939] Pipeline directive for loop 'VITIS_LOOP_219_3' in function 'xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>' has been removed because the loop is unrolled completely.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_127_5' (source/dilation.cpp:127) in function 'xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_137_6' (source/dilation.cpp:138) in function 'xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_138_7' (source/dilation.cpp:138) in function 'xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>' completely with a factor of 3.
+INFO: [XFORM 203-102] Partitioning array 'src_buf_temp_med_apply.V' (source/dilation.cpp:134) in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'src_buf_temp_med_apply.V.0' (source/dilation.cpp:134) automatically.
+INFO: [XFORM 203-102] Partitioning array 'src_buf_temp_med_apply.V.1' (source/dilation.cpp:134) automatically.
+INFO: [XFORM 203-102] Partitioning array 'src_buf_temp_med_apply.V.2' (source/dilation.cpp:134) automatically.
+INFO: [XFORM 203-101] Partitioning array 'kernel' (source/dilation.cpp:264) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'pix.val.V' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:173) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ref.tmp.i.i'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'row_ind.V' (source/dilation.cpp:164) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'src_buf.V' (source/dilation.cpp:172) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'buf.V' (source/dilation.cpp:179) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'src_buf.V' (source/dilation.cpp:172) in dimension 2 completely.
+WARNING: [HLS 200-915] Ignore complete array partition directive on 'buf.V.0' (source/dilation.cpp:179) in dimension 1: conflict with resource constraint assignment.
+WARNING: [HLS 200-915] Ignore complete array partition directive on 'buf.V.1' (source/dilation.cpp:179) in dimension 1: conflict with resource constraint assignment.
+WARNING: [HLS 200-915] Ignore complete array partition directive on 'buf.V.2' (source/dilation.cpp:179) in dimension 1: conflict with resource constraint assignment.
+INFO: [XFORM 203-721] Changing loop 'Loop_VITIS_LOOP_267_1_proc' (source/dilation.cpp:266) to a process function for dataflow in function 'dilation'.
+INFO: [XFORM 203-721] Changing loop 'Loop_loop_height_proc' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:120) to a process function for dataflow in function 'dilation'.
+INFO: [XFORM 203-721] Changing loop 'Loop_loop_height_proc' (F:/Vitis_Libraries/vision/L1/include\common/xf_infra.hpp:190) to a process function for dataflow in function 'dilation'.
+INFO: [XFORM 203-712] Applying dataflow to function 'dilation', detected/extracted 4 process function(s): 
+	 'Loop_VITIS_LOOP_267_1_proc'
+	 'Loop_loop_height_proc6'
+	 'xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>'
+	 'Loop_loop_height_proc57'.
+Command         transform done; 1.666 sec.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin2 -bitwidthmin2 -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -barrier -norm-name F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/a.o.1.tmp.bc -o F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (source/dilation.cpp:150:17) in function 'xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>'... converting 55 basic blocks.
+Command         transform done; 0.6 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:19 ; elapsed = 00:00:35 . Memory (MB): peak = 997.910 ; gain = 912.230
+Execute         get_config_compile -enable_loop_extract 
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -aggr-aa -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin2 -bitwidthmin2 -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/a.o.2.bc -o F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_267_1' (source/dilation.cpp:266:17) in function 'Loop_VITIS_LOOP_267_1_proc'.
+INFO: [HLS 200-472] Inferring partial write operation for 'buf[1].V' 
+INFO: [HLS 200-472] Inferring partial write operation for 'kernel[0]' (source/dilation.cpp:271:16)
+Command         transform done; 39.631 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:58 ; elapsed = 00:01:15 . Memory (MB): peak = 1149.070 ; gain = 1063.391
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 42.812 sec.
+Command     elaborate done; 73.063 sec.
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'dilation' ...
+Execute       ap_set_top_model dilation 
+WARNING: [SYN 201-103] Legalizing function name 'xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>' to 'xfdilate_1080_1920_3_9_1_0_1921_3_3_s'.
+Execute       get_model_list dilation -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model dilation 
+Execute       preproc_iomode -model Loop_loop_height_proc57 
+Execute       preproc_iomode -model xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3> 
+Execute       preproc_iomode -model Loop_loop_height_proc6 
+Execute       preproc_iomode -model Loop_VITIS_LOOP_267_1_proc 
+Execute       get_model_list dilation -filter all-wo-channel 
+INFO-FLOW: Model list for configure: Loop_VITIS_LOOP_267_1_proc Loop_loop_height_proc6 {xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>} Loop_loop_height_proc57 dilation
+INFO-FLOW: Configuring Module : Loop_VITIS_LOOP_267_1_proc ...
+Execute       set_default_model Loop_VITIS_LOOP_267_1_proc 
+Execute       apply_spec_resource_limit Loop_VITIS_LOOP_267_1_proc 
+INFO-FLOW: Configuring Module : Loop_loop_height_proc6 ...
+Execute       set_default_model Loop_loop_height_proc6 
+Execute       apply_spec_resource_limit Loop_loop_height_proc6 
+INFO-FLOW: Configuring Module : xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3> ...
+Execute       set_default_model xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3> 
+Execute       apply_spec_resource_limit xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3> 
+INFO-FLOW: Configuring Module : Loop_loop_height_proc57 ...
+Execute       set_default_model Loop_loop_height_proc57 
+Execute       apply_spec_resource_limit Loop_loop_height_proc57 
+INFO-FLOW: Configuring Module : dilation ...
+Execute       set_default_model dilation 
+Execute       apply_spec_resource_limit dilation 
+INFO-FLOW: Model list for preprocess: Loop_VITIS_LOOP_267_1_proc Loop_loop_height_proc6 {xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>} Loop_loop_height_proc57 dilation
+INFO-FLOW: Preprocessing Module: Loop_VITIS_LOOP_267_1_proc ...
+Execute       set_default_model Loop_VITIS_LOOP_267_1_proc 
+Execute       cdfg_preprocess -model Loop_VITIS_LOOP_267_1_proc 
+Execute       rtl_gen_preprocess Loop_VITIS_LOOP_267_1_proc 
+INFO-FLOW: Preprocessing Module: Loop_loop_height_proc6 ...
+Execute       set_default_model Loop_loop_height_proc6 
+Execute       cdfg_preprocess -model Loop_loop_height_proc6 
+Execute       rtl_gen_preprocess Loop_loop_height_proc6 
+INFO-FLOW: Preprocessing Module: xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3> ...
+Execute       set_default_model xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3> 
+Execute       cdfg_preprocess -model xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3> 
+Command       cdfg_preprocess done; 1.21 sec.
+Execute       rtl_gen_preprocess xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3> 
+INFO-FLOW: Preprocessing Module: Loop_loop_height_proc57 ...
+Execute       set_default_model Loop_loop_height_proc57 
+Execute       cdfg_preprocess -model Loop_loop_height_proc57 
+Execute       rtl_gen_preprocess Loop_loop_height_proc57 
+INFO-FLOW: Preprocessing Module: dilation ...
+Execute       set_default_model dilation 
+Execute       cdfg_preprocess -model dilation 
+Execute       rtl_gen_preprocess dilation 
+INFO-FLOW: Model list for synthesis: Loop_VITIS_LOOP_267_1_proc Loop_loop_height_proc6 {xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>} Loop_loop_height_proc57 dilation
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Loop_VITIS_LOOP_267_1_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model Loop_VITIS_LOOP_267_1_proc 
+Execute       schedule -model Loop_VITIS_LOOP_267_1_proc 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_267_1_VITIS_LOOP_269_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.142 sec.
+INFO: [HLS 200-111]  Elapsed time: 76.32 seconds; current allocated memory: 268.907 MB.
+Execute       syn_report -verbosereport -o F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/Loop_VITIS_LOOP_267_1_proc.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/Loop_VITIS_LOOP_267_1_proc.sched.adb -f 
+INFO-FLOW: Finish scheduling Loop_VITIS_LOOP_267_1_proc.
+Execute       set_default_model Loop_VITIS_LOOP_267_1_proc 
+Execute       bind -model Loop_VITIS_LOOP_267_1_proc 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.227 seconds; current allocated memory: 269.060 MB.
+Execute       syn_report -verbosereport -o F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/Loop_VITIS_LOOP_267_1_proc.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/Loop_VITIS_LOOP_267_1_proc.bind.adb -f 
+INFO-FLOW: Finish binding Loop_VITIS_LOOP_267_1_proc.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Loop_loop_height_proc6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model Loop_loop_height_proc6 
+Execute       schedule -model Loop_loop_height_proc6 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_width'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'loop_wait_for_eol'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.232 seconds; current allocated memory: 269.217 MB.
+Execute       syn_report -verbosereport -o F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/Loop_loop_height_proc6.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/Loop_loop_height_proc6.sched.adb -f 
+INFO-FLOW: Finish scheduling Loop_loop_height_proc6.
+Execute       set_default_model Loop_loop_height_proc6 
+Execute       bind -model Loop_loop_height_proc6 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.185 seconds; current allocated memory: 269.442 MB.
+Execute       syn_report -verbosereport -o F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/Loop_loop_height_proc6.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/Loop_loop_height_proc6.bind.adb -f 
+INFO-FLOW: Finish binding Loop_loop_height_proc6.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'xfdilate_1080_1920_3_9_1_0_1921_3_3_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3> 
+Execute       schedule -model xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3> 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_187_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_202_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'Col_Loop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 6.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 10.717 sec.
+INFO: [HLS 200-111]  Elapsed time: 10.881 seconds; current allocated memory: 280.436 MB.
+Execute       syn_report -verbosereport -o F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/xfdilate_1080_1920_3_9_1_0_1921_3_3_s.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Command       syn_report done; 1.648 sec.
+Execute       db_write -o F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/xfdilate_1080_1920_3_9_1_0_1921_3_3_s.sched.adb -f 
+Command       db_write done; 0.672 sec.
+INFO-FLOW: Finish scheduling xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>.
+Execute       set_default_model xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3> 
+Execute       bind -model xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3> 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf_1_V' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf_0_V' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf_2_V' will be ignored if a simpler one can be used.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 4.157 sec.
+INFO: [HLS 200-111]  Elapsed time: 6.58 seconds; current allocated memory: 310.672 MB.
+Execute       syn_report -verbosereport -o F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/xfdilate_1080_1920_3_9_1_0_1921_3_3_s.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Command       syn_report done; 0.824 sec.
+Execute       db_write -o F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/xfdilate_1080_1920_3_9_1_0_1921_3_3_s.bind.adb -f 
+Command       db_write done; 0.823 sec.
+INFO-FLOW: Finish binding xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Loop_loop_height_proc57' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model Loop_loop_height_proc57 
+Execute       schedule -model Loop_loop_height_proc57 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_width'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.843 seconds; current allocated memory: 310.758 MB.
+Execute       syn_report -verbosereport -o F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/Loop_loop_height_proc57.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/Loop_loop_height_proc57.sched.adb -f 
+INFO-FLOW: Finish scheduling Loop_loop_height_proc57.
+Execute       set_default_model Loop_loop_height_proc57 
+Execute       bind -model Loop_loop_height_proc57 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.198 seconds; current allocated memory: 310.927 MB.
+Execute       syn_report -verbosereport -o F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/Loop_loop_height_proc57.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/Loop_loop_height_proc57.bind.adb -f 
+INFO-FLOW: Finish binding Loop_loop_height_proc57.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dilation' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model dilation 
+Execute       schedule -model dilation 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.205 seconds; current allocated memory: 311.036 MB.
+Execute       syn_report -verbosereport -o F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.sched.adb -f 
+INFO-FLOW: Finish scheduling dilation.
+Execute       set_default_model dilation 
+Execute       bind -model dilation 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.143 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.278 seconds; current allocated memory: 311.187 MB.
+Execute       syn_report -verbosereport -o F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.bind.adb -f 
+INFO-FLOW: Finish binding dilation.
+Execute       get_model_list dilation -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess Loop_VITIS_LOOP_267_1_proc 
+Execute       rtl_gen_preprocess Loop_loop_height_proc6 
+Execute       rtl_gen_preprocess xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3> 
+Execute       rtl_gen_preprocess Loop_loop_height_proc57 
+Execute       rtl_gen_preprocess dilation 
+INFO-FLOW: Model list for RTL generation: Loop_VITIS_LOOP_267_1_proc Loop_loop_height_proc6 {xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>} Loop_loop_height_proc57 dilation
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Loop_VITIS_LOOP_267_1_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model Loop_VITIS_LOOP_267_1_proc -top_prefix dilation_ -sub_prefix dilation_ -mg_file F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/Loop_VITIS_LOOP_267_1_proc.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_VITIS_LOOP_267_1_proc'.
+INFO: [HLS 200-111]  Elapsed time: 0.278 seconds; current allocated memory: 311.416 MB.
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.rtl_wrap.cfg.tcl 
+Execute       gen_rtl Loop_VITIS_LOOP_267_1_proc -style xilinx -f -lang vhdl -o F:/course_s3_hls/hls/dilation/dilation/solution1/syn/vhdl/dilation_Loop_VITIS_LOOP_267_1_proc 
+Execute       gen_rtl Loop_VITIS_LOOP_267_1_proc -style xilinx -f -lang vlog -o F:/course_s3_hls/hls/dilation/dilation/solution1/syn/verilog/dilation_Loop_VITIS_LOOP_267_1_proc 
+Execute       syn_report -csynth -model Loop_VITIS_LOOP_267_1_proc -o F:/course_s3_hls/hls/dilation/dilation/solution1/syn/report/Loop_VITIS_LOOP_267_1_proc_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       syn_report -rtlxml -model Loop_VITIS_LOOP_267_1_proc -o F:/course_s3_hls/hls/dilation/dilation/solution1/syn/report/Loop_VITIS_LOOP_267_1_proc_csynth.xml 
+Execute         get_solution -flow_target
+Execute           get_solution -flow_target 
+Execute       syn_report -verbosereport -model Loop_VITIS_LOOP_267_1_proc -o F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/Loop_VITIS_LOOP_267_1_proc.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -model Loop_VITIS_LOOP_267_1_proc -f -o F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/Loop_VITIS_LOOP_267_1_proc.adb 
+Execute       gen_tb_info Loop_VITIS_LOOP_267_1_proc -p F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db -o F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/Loop_VITIS_LOOP_267_1_proc 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Loop_loop_height_proc6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model Loop_loop_height_proc6 -top_prefix dilation_ -sub_prefix dilation_ -mg_file F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/Loop_loop_height_proc6.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_loop_height_proc6'.
+INFO: [HLS 200-111]  Elapsed time: 0.297 seconds; current allocated memory: 312.369 MB.
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.rtl_wrap.cfg.tcl 
+Execute       gen_rtl Loop_loop_height_proc6 -style xilinx -f -lang vhdl -o F:/course_s3_hls/hls/dilation/dilation/solution1/syn/vhdl/dilation_Loop_loop_height_proc6 
+Execute       gen_rtl Loop_loop_height_proc6 -style xilinx -f -lang vlog -o F:/course_s3_hls/hls/dilation/dilation/solution1/syn/verilog/dilation_Loop_loop_height_proc6 
+Execute       syn_report -csynth -model Loop_loop_height_proc6 -o F:/course_s3_hls/hls/dilation/dilation/solution1/syn/report/Loop_loop_height_proc6_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       syn_report -rtlxml -model Loop_loop_height_proc6 -o F:/course_s3_hls/hls/dilation/dilation/solution1/syn/report/Loop_loop_height_proc6_csynth.xml 
+Execute         get_solution -flow_target
+Execute           get_solution -flow_target 
+Execute       syn_report -verbosereport -model Loop_loop_height_proc6 -o F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/Loop_loop_height_proc6.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -model Loop_loop_height_proc6 -f -o F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/Loop_loop_height_proc6.adb 
+Execute       gen_tb_info Loop_loop_height_proc6 -p F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db -o F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/Loop_loop_height_proc6 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'xfdilate_1080_1920_3_9_1_0_1921_3_3_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3> -top_prefix dilation_ -sub_prefix dilation_ -mg_file F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/xfdilate_1080_1920_3_9_1_0_1921_3_3_s.compgen.tcl 
+INFO: [RTGEN 206-100] Generating core module 'mux_32_24_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'xfdilate_1080_1920_3_9_1_0_1921_3_3_s'.
+Command       create_rtl_model done; 16.037 sec.
+INFO: [HLS 200-111]  Elapsed time: 16.374 seconds; current allocated memory: 426.703 MB.
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.rtl_wrap.cfg.tcl 
+Execute       gen_rtl xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3> -style xilinx -f -lang vhdl -o F:/course_s3_hls/hls/dilation/dilation/solution1/syn/vhdl/dilation_xfdilate_1080_1920_3_9_1_0_1921_3_3_s 
+Command       gen_rtl done; 0.455 sec.
+Execute       gen_rtl xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3> -style xilinx -f -lang vlog -o F:/course_s3_hls/hls/dilation/dilation/solution1/syn/verilog/dilation_xfdilate_1080_1920_3_9_1_0_1921_3_3_s 
+Command       gen_rtl done; 0.531 sec.
+Execute       syn_report -csynth -model xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3> -o F:/course_s3_hls/hls/dilation/dilation/solution1/syn/report/xfdilate_1080_1920_3_9_1_0_1921_3_3_s_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       syn_report -rtlxml -model xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3> -o F:/course_s3_hls/hls/dilation/dilation/solution1/syn/report/xfdilate_1080_1920_3_9_1_0_1921_3_3_s_csynth.xml 
+Execute         get_solution -flow_target
+Execute           get_solution -flow_target 
+Execute       syn_report -verbosereport -model xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3> -o F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/xfdilate_1080_1920_3_9_1_0_1921_3_3_s.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Command       syn_report done; 0.782 sec.
+Execute       db_write -model xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3> -f -o F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/xfdilate_1080_1920_3_9_1_0_1921_3_3_s.adb 
+Command       db_write done; 0.916 sec.
+Execute       gen_tb_info xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3> -p F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db -o F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/xfdilate_1080_1920_3_9_1_0_1921_3_3_s 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Loop_loop_height_proc57' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model Loop_loop_height_proc57 -top_prefix dilation_ -sub_prefix dilation_ -mg_file F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/Loop_loop_height_proc57.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_loop_height_proc57'.
+INFO: [HLS 200-111]  Elapsed time: 4.863 seconds; current allocated memory: 468.791 MB.
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.rtl_wrap.cfg.tcl 
+Execute       gen_rtl Loop_loop_height_proc57 -style xilinx -f -lang vhdl -o F:/course_s3_hls/hls/dilation/dilation/solution1/syn/vhdl/dilation_Loop_loop_height_proc57 
+Execute       gen_rtl Loop_loop_height_proc57 -style xilinx -f -lang vlog -o F:/course_s3_hls/hls/dilation/dilation/solution1/syn/verilog/dilation_Loop_loop_height_proc57 
+Execute       syn_report -csynth -model Loop_loop_height_proc57 -o F:/course_s3_hls/hls/dilation/dilation/solution1/syn/report/Loop_loop_height_proc57_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       syn_report -rtlxml -model Loop_loop_height_proc57 -o F:/course_s3_hls/hls/dilation/dilation/solution1/syn/report/Loop_loop_height_proc57_csynth.xml 
+Execute         get_solution -flow_target
+Execute           get_solution -flow_target 
+Execute       syn_report -verbosereport -model Loop_loop_height_proc57 -o F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/Loop_loop_height_proc57.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -model Loop_loop_height_proc57 -f -o F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/Loop_loop_height_proc57.adb 
+Execute       gen_tb_info Loop_loop_height_proc57 -p F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db -o F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/Loop_loop_height_proc57 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dilation' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model dilation -top_prefix  -sub_prefix dilation_ -mg_file F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.compgen.tcl 
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dilation/src_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'dilation/src_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'dilation/src_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'dilation/src_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'dilation/src_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'dilation/src_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'dilation/src_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'dilation/dst_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'dilation/dst_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'dilation/dst_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'dilation/dst_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'dilation/dst_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'dilation/dst_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'dilation/dst_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'dilation' to 'ap_ctrl_none'.
+WARNING: [HLS 200-656] Deadlocks can occur since process Loop_VITIS_LOOP_267_1_proc is instantiated in a dataflow region with ap_ctrl_none or without start propagation and contains a non-flushable pipeline.
+INFO: [HLS 200-633] Setting ap_ctrl_none interface for dilation
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dilation'.
+Command       create_rtl_model done; 0.264 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.647 seconds; current allocated memory: 469.876 MB.
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.rtl_wrap.cfg.tcl 
+Execute       gen_rtl dilation -istop -style xilinx -f -lang vhdl -o F:/course_s3_hls/hls/dilation/dilation/solution1/syn/vhdl/dilation 
+Execute       gen_rtl dilation -istop -style xilinx -f -lang vlog -o F:/course_s3_hls/hls/dilation/dilation/solution1/syn/verilog/dilation 
+Execute       syn_report -csynth -model dilation -o F:/course_s3_hls/hls/dilation/dilation/solution1/syn/report/dilation_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       syn_report -rtlxml -model dilation -o F:/course_s3_hls/hls/dilation/dilation/solution1/syn/report/dilation_csynth.xml 
+Execute         get_solution -flow_target
+Execute           get_solution -flow_target 
+Execute       syn_report -verbosereport -model dilation -o F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -model dilation -f -o F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.adb 
+Execute       gen_tb_info dilation -p F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db -o F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation 
+Execute       export_constraint_db -f -tool general -o F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.constraint.tcl 
+Execute       syn_report -designview -model dilation -o F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.design.xml 
+Command       syn_report done; 0.101 sec.
+Execute       get_config_rtl -disable_wave_debug 
+Execute       syn_report -wcfg -model dilation -o F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation_dataflow_ana.wcfg 
+Execute       syn_report -protoinst -model dilation -o F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.protoinst 
+Execute       get_config_debug -directory 
+Execute       sc_get_clocks dilation 
+Execute       get_config_export -vivado_clock 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       sc_get_portdomain dilation 
+INFO-FLOW: Model list for RTL component generation: Loop_VITIS_LOOP_267_1_proc Loop_loop_height_proc6 {xfdilate<1080, 1920, 3, 9, 1, 0, 1921, 3, 3>} Loop_loop_height_proc57 dilation
+INFO-FLOW: Handling components in module [Loop_VITIS_LOOP_267_1_proc] ... 
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/Loop_VITIS_LOOP_267_1_proc.compgen.tcl 
+INFO-FLOW: Handling components in module [Loop_loop_height_proc6] ... 
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/Loop_loop_height_proc6.compgen.tcl 
+INFO-FLOW: Found component regslice_core.
+INFO-FLOW: Append model regslice_core
+INFO-FLOW: Handling components in module [xfdilate_1080_1920_3_9_1_0_1921_3_3_s] ... 
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/xfdilate_1080_1920_3_9_1_0_1921_3_3_s.compgen.tcl 
+INFO-FLOW: Found component dilation_mux_32_24_1_1.
+INFO-FLOW: Append model dilation_mux_32_24_1_1
+INFO-FLOW: Found component dilation_xfdilate_1080_1920_3_9_1_0_1921_3_3_s_buf_0_V.
+INFO-FLOW: Append model dilation_xfdilate_1080_1920_3_9_1_0_1921_3_3_s_buf_0_V
+INFO-FLOW: Handling components in module [Loop_loop_height_proc57] ... 
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/Loop_loop_height_proc57.compgen.tcl 
+INFO-FLOW: Found component regslice_core.
+INFO-FLOW: Append model regslice_core
+INFO-FLOW: Handling components in module [dilation] ... 
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.compgen.tcl 
+INFO-FLOW: Found component dilation_fifo_w24_d1920_A.
+INFO-FLOW: Append model dilation_fifo_w24_d1920_A
+INFO-FLOW: Found component dilation_fifo_w24_d1920_A.
+INFO-FLOW: Append model dilation_fifo_w24_d1920_A
+INFO-FLOW: Found component dilation_start_for_Loop_loop_height_proc57_U0.
+INFO-FLOW: Append model dilation_start_for_Loop_loop_height_proc57_U0
+INFO-FLOW: Found component regslice_core.
+INFO-FLOW: Append model regslice_core
+INFO-FLOW: Append model Loop_VITIS_LOOP_267_1_proc
+INFO-FLOW: Append model Loop_loop_height_proc6
+INFO-FLOW: Append model xfdilate_1080_1920_3_9_1_0_1921_3_3_s
+INFO-FLOW: Append model Loop_loop_height_proc57
+INFO-FLOW: Append model dilation
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: regslice_core dilation_mux_32_24_1_1 dilation_xfdilate_1080_1920_3_9_1_0_1921_3_3_s_buf_0_V regslice_core dilation_fifo_w24_d1920_A dilation_fifo_w24_d1920_A dilation_start_for_Loop_loop_height_proc57_U0 regslice_core Loop_VITIS_LOOP_267_1_proc Loop_loop_height_proc6 xfdilate_1080_1920_3_9_1_0_1921_3_3_s Loop_loop_height_proc57 dilation
+INFO-FLOW: To file: write model regslice_core
+INFO-FLOW: To file: write model dilation_mux_32_24_1_1
+INFO-FLOW: To file: write model dilation_xfdilate_1080_1920_3_9_1_0_1921_3_3_s_buf_0_V
+INFO-FLOW: To file: write model regslice_core
+INFO-FLOW: To file: write model dilation_fifo_w24_d1920_A
+INFO-FLOW: To file: write model dilation_fifo_w24_d1920_A
+INFO-FLOW: To file: write model dilation_start_for_Loop_loop_height_proc57_U0
+INFO-FLOW: To file: write model regslice_core
+INFO-FLOW: To file: write model Loop_VITIS_LOOP_267_1_proc
+INFO-FLOW: To file: write model Loop_loop_height_proc6
+INFO-FLOW: To file: write model xfdilate_1080_1920_3_9_1_0_1921_3_3_s
+INFO-FLOW: To file: write model Loop_loop_height_proc57
+INFO-FLOW: To file: write model dilation
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+Execute       get_top 
+Execute       get_config_export -ipname 
+Execute       get_config_export -xo 
+Execute       get_config_export -format 
+Execute       get_config_rtl -module_auto_prefix 
+INFO-FLOW: DBG:CMD:   auto_impl: set ipname to top (module_auto_prefix): dilation
+INFO-FLOW: DBG:CMD: auto_generate_csynth_design
+INFO-FLOW: DBG:CMD:     auto_generate --sim-model -phase csynth_design -d F:/course_s3_hls/hls/dilation/dilation/solution1
+Execute       get_solution -flow_target 
+Execute       get_config_export -xo 
+Execute       get_config_export -format 
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/global.setting.tcl
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/common.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/op.gen 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/interface.gen 
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute             source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/util.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.113 sec.
+Command       ap_source done; 0.113 sec.
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=1 export=0 expOnly=0 dstVlogDir=syn/verilog
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/Loop_VITIS_LOOP_267_1_proc.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/Loop_loop_height_proc6.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/xfdilate_1080_1920_3_9_1_0_1921_3_3_s.compgen.tcl 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'dilation_xfdilate_1080_1920_3_9_1_0_1921_3_3_s_buf_0_V_ram (RAM_S2P_BRAM)' using block RAMs.
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/Loop_loop_height_proc57.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.compgen.tcl 
+Execute         send_msg_by_id INFO @200-740@%s dilation_kernel_0_memcore 
+INFO: [HLS 200-740] Implementing PIPO dilation_kernel_0_memcore using a separate memory for each block
+INFO: [RTMG 210-278] Implementing memory 'dilation_kernel_0_memcore_ram (RAM)' using distributed RAMs.
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'rgb_src_data_U(dilation_fifo_w24_d1920_A)' using Vivado Default RAMs.
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'rgb_dst_data_U(dilation_fifo_w24_d1920_A)' using Vivado Default RAMs.
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_Loop_loop_height_proc57_U0_U(dilation_start_for_Loop_loop_height_proc57_U0)' using Shift Registers.
+Command       ap_source done; 0.233 sec.
+INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d F:/course_s3_hls/hls/dilation/dilation/solution1
+Execute       get_solution -flow_target 
+Execute       get_config_export -xo 
+Execute       get_config_export -format 
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/global.setting.tcl
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/common.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/op.gen 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/interface.gen 
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute             source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/util.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.112 sec.
+Command       ap_source done; 0.113 sec.
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=dilation xml_exists=0
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.rtl_wrap.cfg.tcl 
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.rtl_wrap.cfg.tcl 
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.rtl_wrap.cfg.tcl 
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.tbgen.tcl 
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/Loop_VITIS_LOOP_267_1_proc.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/Loop_loop_height_proc6.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/xfdilate_1080_1920_3_9_1_0_1921_3_3_s.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/Loop_loop_height_proc57.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.compgen.tcl 
+Execute         send_msg_by_id INFO @200-740@%s dilation_kernel_0_memcore 
+INFO: [HLS 200-740] Implementing PIPO dilation_kernel_0_memcore using a separate memory for each block
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/Loop_VITIS_LOOP_267_1_proc.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/Loop_loop_height_proc6.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/xfdilate_1080_1920_3_9_1_0_1921_3_3_s.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/Loop_loop_height_proc57.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.compgen.tcl 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Command       ap_source done; 0.122 sec.
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/Loop_VITIS_LOOP_267_1_proc.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/Loop_loop_height_proc6.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/xfdilate_1080_1920_3_9_1_0_1921_3_3_s.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/Loop_loop_height_proc57.compgen.tcl 
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.compgen.tcl 
+Execute         send_msg_by_id INFO @200-740@%s dilation_kernel_0_memcore 
+INFO: [HLS 200-740] Implementing PIPO dilation_kernel_0_memcore using a separate memory for each block
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.constraint.tcl 
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=28
+INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=14
+INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=1 #modelList=13 #gSsdmPorts=28
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/tps/tcl/tcllib1.11.1/fileutil/fileutil.tcl 
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/top-io-be.tcl 
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.tbgen.tcl 
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.rtl_wrap.cfg.tcl 
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.compgen.dataonly.tcl 
+Execute       get_config_export -format 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/Loop_VITIS_LOOP_267_1_proc.tbgen.tcl 
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/Loop_loop_height_proc6.tbgen.tcl 
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/xfdilate_1080_1920_3_9_1_0_1921_3_3_s.tbgen.tcl 
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/Loop_loop_height_proc57.tbgen.tcl 
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.tbgen.tcl 
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute       get_solution -flow_target 
+Execute       get_config_rtl -kernel_profile 
+Execute       get_config_rtl -kernel_profile 
+Execute       get_config_rtl -stall_sig_gen 
+Execute       get_config_rtl -profile 
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.constraint.tcl 
+Execute       sc_get_clocks dilation 
+Execute       source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_debug -directory 
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:01:41 ; elapsed = 00:02:02 . Memory (MB): peak = 1149.070 ; gain = 1063.391
+INFO: [VHDL 208-304] Generating VHDL RTL for dilation.
+INFO: [VLOG 209-307] Generating Verilog RTL for dilation.
+Execute       syn_report -model dilation -printsummary 
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 143.88 MHz
+Command     autosyn done; 47.541 sec.
+Command   csynth_design done; 120.61 sec.
+Command ap_source done; 122.053 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace F:/course_s3_hls/hls/dilation/dilation/solution1 opened at Wed Oct 28 15:37:53 +0800 2020
+Execute     ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/zynquplus 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx.lib 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/dsp48.lib 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/dsp48e2.hlp 
+Execute     source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/util.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.126 sec.
+Command     ap_source done; 0.126 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/zynquplus_fpv7 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute             source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute     source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     set_part xczu3eg-sfvc784-1-i 
+INFO-FLOW: DBG:set_part: XILINX_VIVADO=F:/xilinx_2020.1/Vivado/2020.1
+INFO-FLOW: DBG:set_part: RDI_DATADIR=F:/xilinx_2020.1/Vivado/2020.1/data;F:/xilinx_2020.1/Vitis/2020.1/data
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data single -quiet 
+DBG:HLSDevice: Trying to load device library: F:/xilinx_2020.1/Vitis/2020.1\lib\win64.o\librdi_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: F:/xilinx_2020.1/Vivado/2020.1/data/parts/arch.xml
+Command       ap_part_info done; 0.999 sec.
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info 
+Execute       ap_family_info -name zynquplus -data info 
+Execute       add_library xilinx/zynquplus/zynquplus:xczu3eg:-sfvc784:-1-i 
+Execute         get_default_platform 
+Execute         ap_part_info -data single -name xczu3eg-sfvc784-1-i 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data resources 
+Execute         config_chip_info -resource {SLICE 8820} {LUT 70560} {FF 141120} {DSP 360} {BRAM 432} {URAM 0} 
+Execute         ap_part_info -name xczu3eg-sfvc784-1-i -data info 
+Execute         config_chip_info -speed slow 
+Execute       add_library xilinx/zynquplus/zynquplus_fpv7 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xczu3eg-sfvc784-1-i'
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info 
+Execute       get_default_platform 
+Command     set_part done; 1.117 sec.
+Execute     ap_part_info -data single -name xczu3eg-sfvc784-1-i 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data resources 
+Execute     config_chip_info -resource {SLICE 8820} {LUT 70560} {FF 141120} {DSP 360} {BRAM 432} {URAM 0} 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info 
+Execute     config_chip_info -speed slow 
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     get_config_interface -m_axi_latency 
+Execute     get_config_interface -m_axi_alignment_byte_size 
+Execute     get_config_interface -m_axi_max_widen_bitwidth 
+Execute     get_config_interface -default_interface 
+Execute     get_config_interface -default_slave_interface 
+Execute     get_config_rtl -register_reset_num 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -format=ip_catalog 
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+Execute     config_export -format=ip_catalog 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -rtl=verilog 
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+Execute     config_export -rtl=verilog 
+Command   open_solution done; 1.417 sec.
+Execute   set_part xczu3eg-sfvc784-1-i 
+INFO-FLOW: DBG:set_part: XILINX_VIVADO=F:/xilinx_2020.1/Vivado/2020.1
+INFO-FLOW: DBG:set_part: RDI_DATADIR=F:/xilinx_2020.1/Vivado/2020.1/data;F:/xilinx_2020.1/Vitis/2020.1/data
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data single -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info 
+Execute     ap_family_info -name zynquplus -data info 
+Execute     add_library xilinx/zynquplus/zynquplus:xczu3eg:-sfvc784:-1-i 
+Execute       get_default_platform 
+Execute       ap_part_info -data single -name xczu3eg-sfvc784-1-i 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data resources 
+Execute       config_chip_info -resource {SLICE 8820} {LUT 70560} {FF 141120} {DSP 360} {BRAM 432} {URAM 0} 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info 
+Execute       config_chip_info -speed slow 
+Execute     add_library xilinx/zynquplus/zynquplus_fpv7 
+Execute       get_default_platform 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info 
+Execute     get_default_platform 
+Command   set_part done; 0.122 sec.
+Execute   create_clock -period 10 -name default 
+Execute   config_export -format ip_catalog -rtl verilog 
+Execute   source ./dilation/solution1/directives.tcl 
+Execute     set_directive_top -name dilation dilation 
+INFO-FLOW: Setting directive 'TOP' name=dilation 
+Execute   export_design -rtl verilog -format ip_catalog 
+Execute     get_config_export -clock_margin 
+Execute     get_config_export -custom_script 
+Execute     get_config_export -description 
+Execute     get_config_export -display_name 
+Execute     get_config_export -driver_input_dir 
+Execute     get_config_export -ipname 
+Execute     get_config_export -library 
+Execute     get_config_export -output 
+Execute     get_config_export -qor_test 
+Execute     get_config_export -sim 
+Execute     get_config_export -taxonomy 
+Execute     get_config_export -use_ip 
+Execute     get_config_export -use_netlist 
+Execute     get_config_export -vendor 
+Execute     get_config_export -version 
+Execute     get_config_export -xo 
+Execute     config_export -format=ip_catalog -rtl=verilog 
+INFO-FLOW: DBG:CMD: export_design_wrap: -format ip_catalog -rtl verilog
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/global.setting.tcl 
+Execute     get_config_export -vivado_clock 
+Execute     get_top 
+Execute     get_config_export -ipname 
+Execute     get_config_export -xo 
+Execute     get_config_export -format 
+Execute     get_config_rtl -module_auto_prefix 
+INFO-FLOW: DBG:CMD:   auto_impl: set ipname to top (module_auto_prefix): dilation
+Execute     get_solution -flow_target 
+Execute     get_config_export -xo 
+Execute     get_config_export -format 
+INFO-FLOW: DBG:CMD:   auto_impl: pack: -export -rtl verilog
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/global.setting.tcl 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: automg_wrap -export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag
+INFO-FLOW: DBG:CMD:     auto_generate -export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag
+Execute     get_solution -flow_target 
+Execute     get_config_export -xo 
+Execute     get_config_export -format 
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/global.setting.tcl
+Execute     source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/common.gen 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/op.gen 
+Execute     source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/interface.gen 
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/global.setting.tcl 
+Execute     source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/util.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/xfft.gen 
+Command         ap_source done; 0.133 sec.
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.177 sec.
+Command     ap_source done; 0.177 sec.
+Execute     source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=dilation xml_exists=1
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.rtl_wrap.cfg.tcl 
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.rtl_wrap.cfg.tcl 
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.rtl_wrap.cfg.tcl 
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.tbgen.tcl 
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/global.setting.tcl 
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/Loop_VITIS_LOOP_267_1_proc.compgen.tcl 
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/Loop_loop_height_proc6.compgen.tcl 
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/xfdilate_1080_1920_3_9_1_0_1921_3_3_s.compgen.tcl 
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/Loop_loop_height_proc57.compgen.tcl 
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.compgen.tcl 
+Execute       send_msg_by_id INFO @200-740@%s dilation_kernel_0_memcore 
+INFO: [HLS 200-740] Implementing PIPO dilation_kernel_0_memcore using a separate memory for each block
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Command     ap_source done; 0.15 sec.
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/global.setting.tcl 
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/Loop_VITIS_LOOP_267_1_proc.compgen.tcl 
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/Loop_loop_height_proc6.compgen.tcl 
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/xfdilate_1080_1920_3_9_1_0_1921_3_3_s.compgen.tcl 
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/Loop_loop_height_proc57.compgen.tcl 
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.compgen.tcl 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Command     ap_source done; 0.16 sec.
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/global.setting.tcl 
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/Loop_VITIS_LOOP_267_1_proc.compgen.tcl 
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/Loop_loop_height_proc6.compgen.tcl 
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/xfdilate_1080_1920_3_9_1_0_1921_3_3_s.compgen.tcl 
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/Loop_loop_height_proc57.compgen.tcl 
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.compgen.tcl 
+Execute       send_msg_by_id INFO @200-740@%s dilation_kernel_0_memcore 
+INFO: [HLS 200-740] Implementing PIPO dilation_kernel_0_memcore using a separate memory for each block
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Command     ap_source done; 0.173 sec.
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/global.setting.tcl 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.constraint.tcl 
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=28
+INFO-FLOW: DBG:CMD:       copying IP vlog from F:/course_s3_hls/hls/dilation/dilation/solution1/impl/verilog
+INFO-FLOW: DBG:CMD:       copying IP vhdl from F:/course_s3_hls/hls/dilation/dilation/solution1/impl/vhdl
+Execute     get_config_export -format 
+INFO-FLOW: DBG:CMD:       generate_ip_script #gSsdmPorts=28 g_lang=vlog is_sdaccel=false is_sdsoc=true xo_file=
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.tbgen.tcl 
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.tbgen.tcl 
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.tbgen.tcl 
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.tbgen.tcl 
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.tbgen.tcl 
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.tbgen.tcl 
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.tbgen.tcl 
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/global.setting.tcl 
+Execute     get_config_debug -directory 
+INFO-FLOW: DBG:CMD:       generate_ip_auxiliary
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD:       prepArgInfo -> loadAnalyze_DB top_module=dilation
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.rtl_wrap.cfg.tcl 
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.rtl_wrap.cfg.tcl 
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.rtl_wrap.cfg.tcl 
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.tbgen.tcl 
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.tbgen.tcl 
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_top_info
+INFO-FLOW: DBG:CMD:       prepArgInfo -> loadAnalyze_DB top_module=dilation
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.rtl_wrap.cfg.tcl 
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.rtl_wrap.cfg.tcl 
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.rtl_wrap.cfg.tcl 
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.tbgen.tcl 
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.tbgen.tcl 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_ip_bd_script
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.tbgen.tcl 
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/global.setting.tcl 
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.constraint.tcl 
+INFO-FLOW: DBG:CMD:       generate_ipi_example_script
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_syn_sh
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD:       generate_imp_constraints
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.constraint.tcl 
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/dilation.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+INFO-FLOW: DBG:CMD: read_platform_lib F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/global.setting.tcl
+Execute     source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/common.gen 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/op.gen 
+Execute     source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source F:/xilinx_2020.1/Vitis/2020.1/common/technology/generic/autopilot/interface.gen 
+Execute     source F:/course_s3_hls/hls/dilation/dilation/solution1/.autopilot/db/global.setting.tcl 
+Execute     source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute           source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/util.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.113 sec.
+Command     ap_source done; 0.113 sec.
+Execute     source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute       source F:/xilinx_2020.1/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data names -quiet 
+Execute     ap_part_info -name xczu3eg-sfvc784-1-i -data info -quiet 
+INFO-FLOW: DBG:CMD:     exec F:/course_s3_hls/hls/dilation/dilation/solution1/impl/ip/pack.bat
+Execute     get_config_export -output 
+Execute     send_msg_by_id INFO @200-802@%s dilation/solution1/impl/export.zip 
+INFO: [HLS 200-802] Generated output file dilation/solution1/impl/export.zip
+Command   export_design done; 15.083 sec.
+Command ap_source done; 16.665 sec.
+Execute cleanup_all 

@@ -1,0 +1,7 @@
+set_property SRC_FILE_INFO {cfile:D:/zynqUltraScale_hls/course_s3_hls/vivado/01_led_control/led_control.srcs/constrs_1/new/pinset.xdc rfile:../../../led_control.srcs/constrs_1/new/pinset.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN AE5 [get_ports clk_p]
+set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN AF5  [get_ports clk_n]
+set_property src_info {type:XDC file:1 line:6 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN AE12 [get_ports led]

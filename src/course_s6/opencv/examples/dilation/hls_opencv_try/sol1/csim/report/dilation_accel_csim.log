@@ -1,0 +1,64 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../xf_dilation_tb.cpp in debug mode
+   Compiling ../../../../xf_dilation_accel.cpp in debug mode
+   Generating csim.exe
+Makefile.rules:379: recipe for target 'csim.exe' failed
+In file included from E:/xilinx_2020.1/Vitis/2020.1/include/floating_point_v7_0_bitacc_cmodel.h:144:0,
+                 from E:/xilinx_2020.1/Vitis/2020.1/include/hls_fpo.h:189,
+                 from E:/xilinx_2020.1/Vitis/2020.1/include/hls_half_fpo.h:64,
+                 from E:/xilinx_2020.1/Vitis/2020.1/include/hls_half.h:71,
+                 from E:/xilinx_2020.1/Vitis/2020.1/include/etc/ap_private.h:91,
+                 from E:/xilinx_2020.1/Vitis/2020.1/include/ap_common.h:646,
+                 from E:/xilinx_2020.1/Vitis/2020.1/include/ap_int.h:55,
+                 from D:/Vitis_Libraries/vision/L1/include/common/xf_types.hpp:24,
+                 from D:/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:30,
+                 from D:/Vitis_Libraries/vision/L1/include/common/xf_common.hpp:20,
+                 from D:/Vitis_Libraries/vision/L1/include/common/xf_sw_utils.hpp:20,
+                 from D:/Vitis_Libraries/vision/L1/include/common/xf_headers.hpp:28,
+                 from ../../../../xf_dilation_tb.cpp:17:
+E:/xilinx_2020.1/Vitis/2020.1/include/gmp.h:63:0: warning: "__GMP_LIBGMP_DLL" redefined
+ #define __GMP_LIBGMP_DLL  0
+ 
+In file included from E:/xilinx_2020.1/Vitis/2020.1/include/hls_fpo.h:189:0,
+                 from E:/xilinx_2020.1/Vitis/2020.1/include/hls_half_fpo.h:64,
+                 from E:/xilinx_2020.1/Vitis/2020.1/include/hls_half.h:71,
+                 from E:/xilinx_2020.1/Vitis/2020.1/include/etc/ap_private.h:91,
+                 from E:/xilinx_2020.1/Vitis/2020.1/include/ap_common.h:646,
+                 from E:/xilinx_2020.1/Vitis/2020.1/include/ap_int.h:55,
+                 from D:/Vitis_Libraries/vision/L1/include/common/xf_types.hpp:24,
+                 from D:/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:30,
+                 from D:/Vitis_Libraries/vision/L1/include/common/xf_common.hpp:20,
+                 from D:/Vitis_Libraries/vision/L1/include/common/xf_sw_utils.hpp:20,
+                 from D:/Vitis_Libraries/vision/L1/include/common/xf_headers.hpp:28,
+                 from ../../../../xf_dilation_tb.cpp:17:
+E:/xilinx_2020.1/Vitis/2020.1/include/floating_point_v7_0_bitacc_cmodel.h:136:0: note: this is the location of the previous definition
+ #define __GMP_LIBGMP_DLL 1
+ 
+In file included from E:/xilinx_2020.1/Vitis/2020.1/include/floating_point_v7_0_bitacc_cmodel.h:144:0,
+                 from E:/xilinx_2020.1/Vitis/2020.1/include/hls_fpo.h:189,
+                 from E:/xilinx_2020.1/Vitis/2020.1/include/hls_half_fpo.h:64,
+                 from E:/xilinx_2020.1/Vitis/2020.1/include/hls_half.h:71,
+                 from E:/xilinx_2020.1/Vitis/2020.1/include/etc/ap_private.h:91,
+                 from E:/xilinx_2020.1/Vitis/2020.1/include/ap_common.h:646,
+                 from E:/xilinx_2020.1/Vitis/2020.1/include/ap_int.h:55,
+                 from ../../../../xf_dilation_config.h:21,
+                 from ../../../../xf_dilation_accel.cpp:17:
+E:/xilinx_2020.1/Vitis/2020.1/include/gmp.h:63:0: warning: "__GMP_LIBGMP_DLL" redefined
+ #define __GMP_LIBGMP_DLL  0
+ 
+In file included from E:/xilinx_2020.1/Vitis/2020.1/include/hls_fpo.h:189:0,
+                 from E:/xilinx_2020.1/Vitis/2020.1/include/hls_half_fpo.h:64,
+                 from E:/xilinx_2020.1/Vitis/2020.1/include/hls_half.h:71,
+                 from E:/xilinx_2020.1/Vitis/2020.1/include/etc/ap_private.h:91,
+                 from E:/xilinx_2020.1/Vitis/2020.1/include/ap_common.h:646,
+                 from E:/xilinx_2020.1/Vitis/2020.1/include/ap_int.h:55,
+                 from ../../../../xf_dilation_config.h:21,
+                 from ../../../../xf_dilation_accel.cpp:17:
+E:/xilinx_2020.1/Vitis/2020.1/include/floating_point_v7_0_bitacc_cmodel.h:136:0: note: this is the location of the previous definition
+ #define __GMP_LIBGMP_DLL 1
+ 
+g++.exe: error: isionL1include: No such file or directory
+make: *** [csim.exe] Error 1
+ERR: [SIM 100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 3] *************** CSIM finish ***************

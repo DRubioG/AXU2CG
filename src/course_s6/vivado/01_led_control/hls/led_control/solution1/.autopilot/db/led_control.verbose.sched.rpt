@@ -1,0 +1,149 @@
+
+
+================================================================
+== Vitis HLS Report for 'led_control'
+================================================================
+* Date:           Mon Oct 19 18:36:54 2020
+
+* Version:        2020.1 (Build 2902540 on Wed May 27 20:16:15 MDT 2020)
+* Project:        led_control
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu3eg-sfvc784-1-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 1.350 ns |   2.70 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +----------+----------+-----------+-----------+----------+----------+---------+
+    |   Latency (cycles)  |   Latency (absolute)  |       Interval      | Pipeline|
+    |    min   |    max   |    min    |    max    |    min   |    max   |   Type  |
+    +----------+----------+-----------+-----------+----------+----------+---------+
+    |  50000002|  50000002| 0.500 sec | 0.500 sec |  50000003|  50000003|   none  |
+    +----------+----------+-----------+-----------+----------+----------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +------------------+----------+----------+----------+-----------+-----------+----------+----------+
+        |                  |   Latency (cycles)  | Iteration|  Initiation Interval  |   Trip   |          |
+        |     Loop Name    |    min   |    max   |  Latency |  achieved |   target  |   Count  | Pipelined|
+        +------------------+----------+----------+----------+-----------+-----------+----------+----------+
+        |- VITIS_LOOP_9_1  |  50000000|  50000000|         1|          1|          1|  50000000|    yes   |
+        +------------------+----------+----------+----------+-----------+-----------+----------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 1
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 1, States = { 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 2 
+3 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.75>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%spectopmodule_ln0 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_1"   --->   Operation 4 'spectopmodule' 'spectopmodule_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32, void @empty_2, i32, i32, void @empty_0, i32, i32, void @empty_0, void @empty_0, void @empty_0, i32, i32, i32, i32, void @empty_0, void @empty_0"   --->   Operation 5 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %led"   --->   Operation 6 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %led, void @empty, i32, i32, void @empty_0, i32, i32, void @empty_0, void @empty_0, void @empty_0, i32, i32, i32, i32, void @empty_0, void @empty_0"   --->   Operation 7 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.75ns)   --->   "%br_ln9 = br void" [source/led_control.cpp:9]   --->   Operation 8 'br' 'br_ln9' <Predicate = true> <Delay = 0.75>
+
+State 2 <SV = 1> <Delay = 1.35>
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "%storemerge = phi i1, void, i1 %select_ln12, void %.split" [source/led_control.cpp:12]   --->   Operation 9 'phi' 'storemerge' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "%i = phi i26, void, i26 %i_1, void %.split"   --->   Operation 10 'phi' 'i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "%write_ln324 = write void @_ssdm_op_Write.ap_none.i1P, i1 %led, i1 %storemerge"   --->   Operation 11 'write' 'write_ln324' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 12 [1/1] (1.01ns)   --->   "%icmp_ln9 = icmp_eq  i26 %i, i26" [source/led_control.cpp:9]   --->   Operation 12 'icmp' 'icmp_ln9' <Predicate = true> <Delay = 1.01> <CoreInst = "Cmp">   --->   Core 10 'Cmp' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64, i64, i64"   --->   Operation 13 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (1.13ns)   --->   "%i_1 = add i26 %i, i26" [source/led_control.cpp:9]   --->   Operation 14 'add' 'i_1' <Predicate = true> <Delay = 1.13> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%br_ln9 = br i1 %icmp_ln9, void %.split, void" [source/led_control.cpp:9]   --->   Operation 15 'br' 'br_ln9' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%specpipeline_ln7 = specpipeline void @_ssdm_op_SpecPipeline, i32, i32, i32, i32, void @empty_0" [source/led_control.cpp:7]   --->   Operation 16 'specpipeline' 'specpipeline_ln7' <Predicate = (!icmp_ln9)> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%specloopname_ln7 = specloopname void @_ssdm_op_SpecLoopName, void @empty_3" [source/led_control.cpp:7]   --->   Operation 17 'specloopname' 'specloopname_ln7' <Predicate = (!icmp_ln9)> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (1.01ns)   --->   "%icmp_ln12 = icmp_ult  i26 %i, i26" [source/led_control.cpp:12]   --->   Operation 18 'icmp' 'icmp_ln12' <Predicate = (!icmp_ln9)> <Delay = 1.01> <CoreInst = "Cmp">   --->   Core 10 'Cmp' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 19 [1/1] (0.00ns) (grouped into LUT with out node select_ln12)   --->   "%xor_ln764 = xor i1 %storemerge, i1"   --->   Operation 19 'xor' 'xor_ln764' <Predicate = (!icmp_ln9)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 12 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 20 [1/1] (0.33ns) (out node of the LUT)   --->   "%select_ln12 = select i1 %icmp_ln12, i1 %xor_ln764, i1 %storemerge" [source/led_control.cpp:12]   --->   Operation 20 'select' 'select_ln12' <Predicate = (!icmp_ln9)> <Delay = 0.33> <CoreInst = "Sel">   --->   Core 11 'Sel' <Latency = 0> <II = 1> <Delay = 0.26> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%br_ln0 = br void"   --->   Operation 21 'br' 'br_ln0' <Predicate = (!icmp_ln9)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 22 [1/1] (0.00ns)   --->   "%ret_ln14 = ret" [source/led_control.cpp:14]   --->   Operation 22 'ret' 'ret_ln14' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 0.755ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('storemerge', source/led_control.cpp:12) with incoming values : ('select_ln12', source/led_control.cpp:12) [8]  (0.755 ns)
+
+ <State 2>: 1.35ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', source/led_control.cpp:9) [9]  (0 ns)
+	'icmp' operation ('icmp_ln12', source/led_control.cpp:12) [18]  (1.02 ns)
+	'select' operation ('select_ln12', source/led_control.cpp:12) [20]  (0.331 ns)
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

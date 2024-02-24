@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1604298084486">
+  <ports id="1" name="threshold" type="PortType" coreName="FIFO_SRL" bitwidth="8" iftype="IfTypeRom">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="2" name="threshold_out" type="PortType" coreName="FIFO_SRL" bitwidth="8" direction="DirOut" iftype="IfTypeRom">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <edges id="12" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="15" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@ports.1"/>
+  <edges id="16" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.1"/>
+  <blocks id="9" name="edge_detector.entry16" type="BlockType">
+    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="threshold_read" bitwidth="8" opcode="read" m_display="0" m_delay="2.16" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataInputObjs>threshold</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="threshold_out_write_ln0" opcode="write" m_display="0" m_delay="2.16" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>threshold_out</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="_ln150" lineNumber="150" fileName="source/edge_detector.cpp" fileDirectory=".." contextFuncName="edge_detector" opcode="ret" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="source/edge_detector.cpp" linenumber="150" fileDirectory="F:\course_s3_hls\hls\edge_detector" functionName="edge_detector"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="source/edge_detector.cpp">
+      <validLinenumbers>150</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <ioNodes realName="threshold_read_read_fu_22">
+    <nodeIds>5</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln0_write_fu_28">
+    <nodeIds>7</nodeIds>
+  </ioNodes>
+  <ioPorts name="threshold">
+    <contents name="read">
+      <nodeIds>5</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="threshold_out">
+    <contents name="write">
+      <nodeIds>7</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="3" stage="1" latency="1"/>
+      <operations id="4" stage="1" latency="1"/>
+      <operations id="5" stage="1" latency="1"/>
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+    </states>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="edge_detector_entry16" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>9</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

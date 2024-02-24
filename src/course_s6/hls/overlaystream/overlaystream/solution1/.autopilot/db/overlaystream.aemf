@@ -1,0 +1,834 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1604047153643">
+  <ports id="1" name="video_in_V_data_V" type="PortType" originalName="video_in" bitwidth="24">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="2" name="video_in_V_keep_V" type="PortType" originalName="video_in" bitwidth="3">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="3" name="video_in_V_strb_V" type="PortType" originalName="video_in" bitwidth="3">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="4" name="video_in_V_user_V" type="PortType" originalName="video_in" bitwidth="1">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="5" name="video_in_V_last_V" type="PortType" originalName="video_in" bitwidth="1">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="6" name="video_in_V_id_V" type="PortType" originalName="video_in" bitwidth="1">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="7" name="video_in_V_dest_V" type="PortType" originalName="video_in" bitwidth="1">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="8" name="video_out_V_data_V" type="PortType" originalName="video_out" bitwidth="24" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="9" name="video_out_V_keep_V" type="PortType" originalName="video_out" bitwidth="3" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="10" name="video_out_V_strb_V" type="PortType" originalName="video_out" bitwidth="3" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="11" name="video_out_V_user_V" type="PortType" originalName="video_out" bitwidth="1" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="12" name="video_out_V_last_V" type="PortType" originalName="video_out" bitwidth="1" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="13" name="video_out_V_id_V" type="PortType" originalName="video_out" bitwidth="1" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="14" name="video_out_V_dest_V" type="PortType" originalName="video_out" bitwidth="1" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="15" name="overly_alpha" type="PortType" originalName="overly_alpha" bitwidth="8">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="16" name="overly_x" type="PortType" originalName="overly_x" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="17" name="overly_y" type="PortType" originalName="overly_y" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="18" name="overly_h" type="PortType" originalName="overly_h" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="19" name="overly_w" type="PortType" originalName="overly_w" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <edges id="89" source_obj="//@ports.18" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="91" source_obj="//@ports.17" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="93" source_obj="//@ports.16" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="95" source_obj="//@ports.15" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="98" source_obj="//@ports.14" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
+  <edges id="111" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="112" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="113" source_obj="//@ports.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="114" source_obj="//@ports.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="115" source_obj="//@ports.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="116" source_obj="//@ports.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="117" source_obj="//@ports.6" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="118" source_obj="//@regions.0/@basic_blocks.0/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="119" source_obj="//@regions.0/@basic_blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="120" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="121" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="122" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="123" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="124" source_obj="//@regions.0/@basic_blocks.0/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="125" source_obj="//@regions.0/@basic_blocks.0/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="126" source_obj="//@regions.0/@basic_blocks.0/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="127" source_obj="//@regions.0/@basic_blocks.0/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="128" source_obj="//@regions.0/@basic_blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="131" source_obj="//@regions.0/@basic_blocks.0/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="132" source_obj="//@regions.0/@basic_blocks.0/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="133" source_obj="//@regions.0/@basic_blocks.0/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="136" source_obj="//@regions.0/@basic_blocks.0/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.16"/>
+  <edges id="137" source_obj="//@regions.0/@basic_blocks.0/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.16"/>
+  <edges id="138" source_obj="//@regions.0/@basic_blocks.0/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.16"/>
+  <edges id="139" source_obj="//@regions.0/@basic_blocks.0/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.16"/>
+  <edges id="140" source_obj="//@regions.0/@basic_blocks.0/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.16"/>
+  <edges id="141" source_obj="//@regions.0/@basic_blocks.0/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.16"/>
+  <edges id="142" source_obj="//@regions.0/@basic_blocks.0/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.16"/>
+  <edges id="143" source_obj="//@regions.0/@basic_blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.16"/>
+  <edges id="146" source_obj="//@regions.0/@basic_blocks.0/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.17"/>
+  <edges id="147" source_obj="//@regions.0/@basic_blocks.0/@node_objs.17" sink_obj="//@ports.7"/>
+  <edges id="148" source_obj="//@regions.0/@basic_blocks.0/@node_objs.17" sink_obj="//@ports.8"/>
+  <edges id="149" source_obj="//@regions.0/@basic_blocks.0/@node_objs.17" sink_obj="//@ports.9"/>
+  <edges id="150" source_obj="//@regions.0/@basic_blocks.0/@node_objs.17" sink_obj="//@ports.10"/>
+  <edges id="151" source_obj="//@regions.0/@basic_blocks.0/@node_objs.17" sink_obj="//@ports.11"/>
+  <edges id="152" source_obj="//@regions.0/@basic_blocks.0/@node_objs.17" sink_obj="//@ports.12"/>
+  <edges id="153" source_obj="//@regions.0/@basic_blocks.0/@node_objs.17" sink_obj="//@ports.13"/>
+  <edges id="626" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.16" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.17"/>
+  <edges id="627" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.16"/>
+  <edges id="628" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.14" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="629" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.14" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="630" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.16"/>
+  <edges id="631" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.16" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.17"/>
+  <regions anchor_node="-1" region_type="16" typeName="Dataflow" id="331" RegionName="overlaystream">
+    <basic_blocks id="86" name="overlaystream" type="BlockType">
+      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="overly_w_read" lineNumber="111" originalName="overly_w" fileName="source/overlaystream.cpp" fileDirectory=".." contextFuncName="overlaystream" bitwidth="32" opcode="read" nodeLatency="1" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="source/overlaystream.cpp" linenumber="111" fileDirectory="F:\course_s3_hls\hls\overlaystream" functionName="overlaystream"/>
+        <dataInputObjs>overly_w</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="21" name="overly_h_read" lineNumber="111" originalName="overly_h" fileName="source/overlaystream.cpp" fileDirectory=".." contextFuncName="overlaystream" bitwidth="32" opcode="read" nodeLatency="1" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="source/overlaystream.cpp" linenumber="111" fileDirectory="F:\course_s3_hls\hls\overlaystream" functionName="overlaystream"/>
+        <dataInputObjs>overly_h</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="overly_y_read" lineNumber="111" originalName="overly_y" fileName="source/overlaystream.cpp" fileDirectory=".." contextFuncName="overlaystream" bitwidth="32" opcode="read" nodeLatency="1" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="source/overlaystream.cpp" linenumber="111" fileDirectory="F:\course_s3_hls\hls\overlaystream" functionName="overlaystream"/>
+        <dataInputObjs>overly_y</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="23" name="overly_x_read" lineNumber="111" originalName="overly_x" fileName="source/overlaystream.cpp" fileDirectory=".." contextFuncName="overlaystream" bitwidth="32" opcode="read" nodeLatency="1" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="source/overlaystream.cpp" linenumber="111" fileDirectory="F:\course_s3_hls\hls\overlaystream" functionName="overlaystream"/>
+        <dataInputObjs>overly_x</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="24" name="overly_alpha_read" lineNumber="111" originalName="overly_alpha" fileName="source/overlaystream.cpp" fileDirectory=".." contextFuncName="overlaystream" bitwidth="8" opcode="read" nodeLatency="1" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="source/overlaystream.cpp" linenumber="111" fileDirectory="F:\course_s3_hls\hls\overlaystream" functionName="overlaystream"/>
+        <dataInputObjs>overly_alpha</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="25" name="overly_w_c" lineNumber="111" fileName="source/overlaystream.cpp" fileDirectory=".." rtlName="overly_w_c_U" coreName="FIFO_SRL" contextFuncName="overlaystream" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="source/overlaystream.cpp" linenumber="111" fileDirectory="F:\course_s3_hls\hls\overlaystream" functionName="overlaystream"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="26" name="overly_h_c" lineNumber="111" fileName="source/overlaystream.cpp" fileDirectory=".." rtlName="overly_h_c_U" coreName="FIFO_SRL" contextFuncName="overlaystream" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="source/overlaystream.cpp" linenumber="111" fileDirectory="F:\course_s3_hls\hls\overlaystream" functionName="overlaystream"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="27" name="overly_y_c" lineNumber="111" fileName="source/overlaystream.cpp" fileDirectory=".." rtlName="overly_y_c_U" coreName="FIFO_SRL" contextFuncName="overlaystream" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="source/overlaystream.cpp" linenumber="111" fileDirectory="F:\course_s3_hls\hls\overlaystream" functionName="overlaystream"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="overly_x_c" lineNumber="111" fileName="source/overlaystream.cpp" fileDirectory=".." rtlName="overly_x_c_U" coreName="FIFO_SRL" contextFuncName="overlaystream" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="source/overlaystream.cpp" linenumber="111" fileDirectory="F:\course_s3_hls\hls\overlaystream" functionName="overlaystream"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="29" name="overly_alpha_c" lineNumber="111" fileName="source/overlaystream.cpp" fileDirectory=".." rtlName="overly_alpha_c_U" coreName="FIFO_SRL" contextFuncName="overlaystream" bitwidth="8" opcode="alloca" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="source/overlaystream.cpp" linenumber="111" fileDirectory="F:\course_s3_hls\hls\overlaystream" functionName="overlaystream"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="59" name="img_in_data" lineNumber="123" originalName="img_in.data" fileName="source/overlaystream.cpp" fileDirectory=".." rtlName="img_in_data_U" coreName="FIFO" contextFuncName="overlaystream" bitwidth="24" opcode="alloca" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="source/overlaystream.cpp" linenumber="123" fileDirectory="F:\course_s3_hls\hls\overlaystream" functionName="overlaystream"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="62" name="img_out_data" lineNumber="125" originalName="img_out.data" fileName="source/overlaystream.cpp" fileDirectory=".." rtlName="img_out_data_U" coreName="FIFO" contextFuncName="overlaystream" bitwidth="24" opcode="alloca" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="source/overlaystream.cpp" linenumber="125" fileDirectory="F:\course_s3_hls\hls\overlaystream" functionName="overlaystream"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="65" name="img_src1_data" lineNumber="127" originalName="img_src1.data" fileName="source/overlaystream.cpp" fileDirectory=".." rtlName="img_src1_data_U" coreName="FIFO" contextFuncName="overlaystream" bitwidth="8" opcode="alloca" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="source/overlaystream.cpp" linenumber="127" fileDirectory="F:\course_s3_hls\hls\overlaystream" functionName="overlaystream"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="68" name="img_src2_data" lineNumber="131" originalName="img_src2.data" fileName="source/overlaystream.cpp" fileDirectory=".." rtlName="img_src2_data_U" coreName="FIFO" contextFuncName="overlaystream" bitwidth="24" opcode="alloca" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="source/overlaystream.cpp" linenumber="131" fileDirectory="F:\course_s3_hls\hls\overlaystream" functionName="overlaystream"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="81" name="_ln111" lineNumber="111" fileName="source/overlaystream.cpp" fileDirectory=".." rtlName="Loop_loop_height_proc1719_U0" contextFuncName="overlaystream" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="2.16" m_topoIndex="15" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="source/overlaystream.cpp" linenumber="111" fileDirectory="F:\course_s3_hls\hls\overlaystream" functionName="overlaystream"/>
+        <dataInputObjs>video_in_V_data_V</dataInputObjs>
+        <dataInputObjs>video_in_V_keep_V</dataInputObjs>
+        <dataInputObjs>video_in_V_strb_V</dataInputObjs>
+        <dataInputObjs>video_in_V_user_V</dataInputObjs>
+        <dataInputObjs>video_in_V_last_V</dataInputObjs>
+        <dataInputObjs>video_in_V_id_V</dataInputObjs>
+        <dataInputObjs>video_in_V_dest_V</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <constName>Loop_loop_height_proc1719</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="82" name="_ln137" lineNumber="137" fileName="source/overlaystream.cpp" fileDirectory=".." rtlName="xfrgb2gray_1080_1920_U0" contextFuncName="overlaystream" opcode="call" nodeLabel="3.0" nodeLatency="1" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="source/overlaystream.cpp" linenumber="137" fileDirectory="F:\course_s3_hls\hls\overlaystream" functionName="overlaystream"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <constName>xfrgb2gray_1080_1920_s</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="83" name="_ln138" lineNumber="138" fileName="source/overlaystream.cpp" fileDirectory=".." rtlName="overlyOnMat_1080_1920_U0" contextFuncName="overlaystream" opcode="call" nodeLabel="5.0" nodeLatency="1" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="source/overlaystream.cpp" linenumber="138" fileDirectory="F:\course_s3_hls\hls\overlaystream" functionName="overlaystream"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <constName>overlyOnMat_1080_1920_s</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="84" name="_ln0" rtlName="Loop_loop_height_proc1618_U0" opcode="call" nodeLabel="7.0" nodeLatency="1" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>video_out_V_data_V</dataOutputObjs>
+        <dataOutputObjs>video_out_V_keep_V</dataOutputObjs>
+        <dataOutputObjs>video_out_V_strb_V</dataOutputObjs>
+        <dataOutputObjs>video_out_V_user_V</dataOutputObjs>
+        <dataOutputObjs>video_out_V_last_V</dataOutputObjs>
+        <dataOutputObjs>video_out_V_id_V</dataOutputObjs>
+        <dataOutputObjs>video_out_V_dest_V</dataOutputObjs>
+        <constName>Loop_loop_height_proc1618</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="85" name="_ln140" lineNumber="140" fileName="source/overlaystream.cpp" fileDirectory=".." contextFuncName="overlaystream" opcode="ret" nodeLabel="9.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="source/overlaystream.cpp" linenumber="140" fileDirectory="F:\course_s3_hls\hls\overlaystream" functionName="overlaystream"/>
+      </node_objs>
+      <fileValidLineNumbers fileName="source/overlaystream.cpp">
+        <validLinenumbers>111</validLinenumbers>
+        <validLinenumbers>123</validLinenumbers>
+        <validLinenumbers>125</validLinenumbers>
+        <validLinenumbers>127</validLinenumbers>
+        <validLinenumbers>131</validLinenumbers>
+        <validLinenumbers>137</validLinenumbers>
+        <validLinenumbers>138</validLinenumbers>
+        <validLinenumbers>140</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <ScheduleInfo time="7"/>
+  <ScheduleInfo time="8"/>
+  <ScheduleInfo time="9"/>
+  <regnodes realName="overly_alpha_read_reg_324">
+    <nodeIds>24</nodeIds>
+  </regnodes>
+  <regnodes realName="img_in_data_reg_280">
+    <nodeIds>59</nodeIds>
+  </regnodes>
+  <regnodes realName="overly_y_read_reg_314">
+    <nodeIds>22</nodeIds>
+  </regnodes>
+  <regnodes realName="overly_x_c_reg_268">
+    <nodeIds>28</nodeIds>
+  </regnodes>
+  <regnodes realName="img_out_data_reg_286">
+    <nodeIds>62</nodeIds>
+  </regnodes>
+  <regnodes realName="overly_w_c_reg_250">
+    <nodeIds>25</nodeIds>
+  </regnodes>
+  <regnodes realName="overly_x_read_reg_319">
+    <nodeIds>23</nodeIds>
+  </regnodes>
+  <regnodes realName="img_src2_data_reg_298">
+    <nodeIds>68</nodeIds>
+  </regnodes>
+  <regnodes realName="overly_alpha_c_reg_274">
+    <nodeIds>29</nodeIds>
+  </regnodes>
+  <regnodes realName="img_src1_data_reg_292">
+    <nodeIds>65</nodeIds>
+  </regnodes>
+  <regnodes realName="overly_w_read_reg_304">
+    <nodeIds>20</nodeIds>
+  </regnodes>
+  <regnodes realName="overly_y_c_reg_262">
+    <nodeIds>27</nodeIds>
+  </regnodes>
+  <regnodes realName="overly_h_c_reg_256">
+    <nodeIds>26</nodeIds>
+  </regnodes>
+  <regnodes realName="overly_h_read_reg_309">
+    <nodeIds>21</nodeIds>
+  </regnodes>
+  <expressionNodes realName="overly_y_c_fu_120">
+    <nodeIds>27</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="img_out_data_fu_136">
+    <nodeIds>62</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="overly_x_c_fu_124">
+    <nodeIds>28</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="img_src2_data_fu_144">
+    <nodeIds>68</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="img_in_data_fu_132">
+    <nodeIds>59</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="overly_w_c_fu_112">
+    <nodeIds>25</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="overly_alpha_c_fu_128">
+    <nodeIds>29</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="overly_h_c_fu_116">
+    <nodeIds>26</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="img_src1_data_fu_140">
+    <nodeIds>65</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_Loop_loop_height_proc1618_fu_231">
+    <nodeIds>84</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_Loop_loop_height_proc1719_fu_190">
+    <nodeIds>81</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_overlyOnMat_1080_1920_s_fu_178">
+    <nodeIds>83</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_xfrgb2gray_1080_1920_s_fu_224">
+    <nodeIds>82</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="grp_read_fu_160">
+    <nodeIds>22</nodeIds>
+  </ioNodes>
+  <ioNodes realName="grp_read_fu_172">
+    <nodeIds>24</nodeIds>
+  </ioNodes>
+  <ioNodes realName="grp_read_fu_154">
+    <nodeIds>21</nodeIds>
+  </ioNodes>
+  <ioNodes realName="grp_read_fu_166">
+    <nodeIds>23</nodeIds>
+  </ioNodes>
+  <ioNodes realName="grp_read_fu_148">
+    <nodeIds>20</nodeIds>
+  </ioNodes>
+  <ioPorts name="overly_alpha">
+    <contents name="read">
+      <nodeIds>24</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="overly_h">
+    <contents name="read">
+      <nodeIds>21</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="overly_w">
+    <contents name="read">
+      <nodeIds>20</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="overly_x">
+    <contents name="read">
+      <nodeIds>23</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="overly_y">
+    <contents name="read">
+      <nodeIds>22</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="video_in_V_data_V">
+    <contents name="call">
+      <nodeIds>81</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="video_in_V_dest_V">
+    <contents name="call">
+      <nodeIds>81</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="video_in_V_id_V">
+    <contents name="call">
+      <nodeIds>81</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="video_in_V_keep_V">
+    <contents name="call">
+      <nodeIds>81</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="video_in_V_last_V">
+    <contents name="call">
+      <nodeIds>81</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="video_in_V_strb_V">
+    <contents name="call">
+      <nodeIds>81</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="video_in_V_user_V">
+    <contents name="call">
+      <nodeIds>81</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="video_out_V_data_V">
+    <contents name="call">
+      <nodeIds>84</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="video_out_V_dest_V">
+    <contents name="call">
+      <nodeIds>84</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="video_out_V_id_V">
+    <contents name="call">
+      <nodeIds>84</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="video_out_V_keep_V">
+    <contents name="call">
+      <nodeIds>84</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="video_out_V_last_V">
+    <contents name="call">
+      <nodeIds>84</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="video_out_V_strb_V">
+    <contents name="call">
+      <nodeIds>84</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="video_out_V_user_V">
+    <contents name="call">
+      <nodeIds>84</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="20" stage="2" latency="2"/>
+      <operations id="21" stage="2" latency="2"/>
+      <operations id="22" stage="2" latency="2"/>
+      <operations id="23" stage="2" latency="2"/>
+      <operations id="24" stage="2" latency="2"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="59" stage="1" latency="1"/>
+      <operations id="62" stage="1" latency="1"/>
+      <operations id="65" stage="1" latency="1"/>
+      <operations id="68" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="20" stage="1" latency="2"/>
+      <operations id="21" stage="1" latency="2"/>
+      <operations id="22" stage="1" latency="2"/>
+      <operations id="23" stage="1" latency="2"/>
+      <operations id="24" stage="1" latency="2"/>
+      <operations id="81" stage="2" latency="2"/>
+    </states>
+    <states id="3">
+      <operations id="81" stage="1" latency="2"/>
+    </states>
+    <states id="4">
+      <operations id="82" stage="2" latency="2"/>
+    </states>
+    <states id="5">
+      <operations id="82" stage="1" latency="2"/>
+    </states>
+    <states id="6">
+      <operations id="83" stage="2" latency="2"/>
+    </states>
+    <states id="7">
+      <operations id="83" stage="1" latency="2"/>
+    </states>
+    <states id="8">
+      <operations id="84" stage="2" latency="2"/>
+    </states>
+    <states id="9">
+      <operations id="84" stage="1" latency="2"/>
+    </states>
+    <states id="10">
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="47" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="49" stage="1" latency="1"/>
+      <operations id="50" stage="1" latency="1"/>
+      <operations id="51" stage="1" latency="1"/>
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="55" stage="1" latency="1"/>
+      <operations id="56" stage="1" latency="1"/>
+      <operations id="57" stage="1" latency="1"/>
+      <operations id="58" stage="1" latency="1"/>
+      <operations id="60" stage="1" latency="1"/>
+      <operations id="61" stage="1" latency="1"/>
+      <operations id="63" stage="1" latency="1"/>
+      <operations id="64" stage="1" latency="1"/>
+      <operations id="66" stage="1" latency="1"/>
+      <operations id="67" stage="1" latency="1"/>
+      <operations id="69" stage="1" latency="1"/>
+      <operations id="70" stage="1" latency="1"/>
+      <operations id="71" stage="1" latency="1"/>
+      <operations id="72" stage="1" latency="1"/>
+      <operations id="73" stage="1" latency="1"/>
+      <operations id="74" stage="1" latency="1"/>
+      <operations id="75" stage="1" latency="1"/>
+      <operations id="76" stage="1" latency="1"/>
+      <operations id="77" stage="1" latency="1"/>
+      <operations id="78" stage="1" latency="1"/>
+      <operations id="79" stage="1" latency="1"/>
+      <operations id="80" stage="1" latency="1"/>
+      <operations id="85" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="7" outState="8">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="8" outState="9">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="9" outState="10">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="overlaystream" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="-1" mMaxLatency="-1" mIsDfPipe="true">
+      <basicBlocks>86</basicBlocks>
+      <mDfPipe allPipePinInst="//@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.0/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.1/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.2/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.3/@pins.0/@inst">
+        <processe_list name="Loop_loop_height_proc1719_U0" ssdmobj_id="81">
+          <pins>
+            <port name="video_in_V_data_V" dir="DirEnd"/>
+            <inst name="Loop_loop_height_proc1719_U0" ssdmobj_id="81" object_id="_111"/>
+          </pins>
+          <pins>
+            <port name="video_in_V_keep_V" dir="DirEnd"/>
+            <inst name="Loop_loop_height_proc1719_U0" ssdmobj_id="81" object_id="_111"/>
+          </pins>
+          <pins>
+            <port name="video_in_V_strb_V" dir="DirEnd"/>
+            <inst name="Loop_loop_height_proc1719_U0" ssdmobj_id="81" object_id="_111"/>
+          </pins>
+          <pins>
+            <port name="video_in_V_user_V" dir="DirEnd"/>
+            <inst name="Loop_loop_height_proc1719_U0" ssdmobj_id="81" object_id="_111"/>
+          </pins>
+          <pins>
+            <port name="video_in_V_last_V" dir="DirEnd"/>
+            <inst name="Loop_loop_height_proc1719_U0" ssdmobj_id="81" object_id="_111"/>
+          </pins>
+          <pins>
+            <port name="video_in_V_id_V" dir="DirEnd"/>
+            <inst name="Loop_loop_height_proc1719_U0" ssdmobj_id="81" object_id="_111"/>
+          </pins>
+          <pins>
+            <port name="video_in_V_dest_V" dir="DirEnd"/>
+            <inst name="Loop_loop_height_proc1719_U0" ssdmobj_id="81" object_id="_111"/>
+          </pins>
+          <pins>
+            <port name="img_in_data" type="BUSType"/>
+            <inst name="Loop_loop_height_proc1719_U0" ssdmobj_id="81" object_id="_111"/>
+          </pins>
+          <pins>
+            <port name="overly_alpha" dir="DirEnd"/>
+            <inst name="Loop_loop_height_proc1719_U0" ssdmobj_id="81" object_id="_111"/>
+          </pins>
+          <pins>
+            <port name="overly_x" dir="DirEnd"/>
+            <inst name="Loop_loop_height_proc1719_U0" ssdmobj_id="81" object_id="_111"/>
+          </pins>
+          <pins>
+            <port name="overly_y" dir="DirEnd"/>
+            <inst name="Loop_loop_height_proc1719_U0" ssdmobj_id="81" object_id="_111"/>
+          </pins>
+          <pins>
+            <port name="overly_h" dir="DirEnd"/>
+            <inst name="Loop_loop_height_proc1719_U0" ssdmobj_id="81" object_id="_111"/>
+          </pins>
+          <pins>
+            <port name="overly_w" dir="DirEnd"/>
+            <inst name="Loop_loop_height_proc1719_U0" ssdmobj_id="81" object_id="_111"/>
+          </pins>
+          <pins>
+            <port name="overly_alpha_out" type="BUSType"/>
+            <inst name="Loop_loop_height_proc1719_U0" ssdmobj_id="81" object_id="_111"/>
+          </pins>
+          <pins>
+            <port name="overly_x_out" type="BUSType"/>
+            <inst name="Loop_loop_height_proc1719_U0" ssdmobj_id="81" object_id="_111"/>
+          </pins>
+          <pins>
+            <port name="overly_y_out" type="BUSType"/>
+            <inst name="Loop_loop_height_proc1719_U0" ssdmobj_id="81" object_id="_111"/>
+          </pins>
+          <pins>
+            <port name="overly_h_out" type="BUSType"/>
+            <inst name="Loop_loop_height_proc1719_U0" ssdmobj_id="81" object_id="_111"/>
+          </pins>
+          <pins>
+            <port name="overly_w_out" type="BUSType"/>
+            <inst name="Loop_loop_height_proc1719_U0" ssdmobj_id="81" object_id="_111"/>
+          </pins>
+        </processe_list>
+        <processe_list name="xfrgb2gray_1080_1920_U0" ssdmobj_id="82">
+          <pins>
+            <port name="img_in_4240"/>
+            <inst name="xfrgb2gray_1080_1920_U0" ssdmobj_id="82" object_id="_149"/>
+          </pins>
+          <pins>
+            <port name="img_src1_4242" type="BUSType"/>
+            <inst name="xfrgb2gray_1080_1920_U0" ssdmobj_id="82" object_id="_149"/>
+          </pins>
+          <pins>
+            <port name="img_src2_4243" type="BUSType"/>
+            <inst name="xfrgb2gray_1080_1920_U0" ssdmobj_id="82" object_id="_149"/>
+          </pins>
+        </processe_list>
+        <processe_list name="overlyOnMat_1080_1920_U0" ssdmobj_id="83">
+          <pins>
+            <port name="img_src2_4243"/>
+            <inst name="overlyOnMat_1080_1920_U0" ssdmobj_id="83" object_id="_157"/>
+          </pins>
+          <pins>
+            <port name="img_src1_4242"/>
+            <inst name="overlyOnMat_1080_1920_U0" ssdmobj_id="83" object_id="_157"/>
+          </pins>
+          <pins>
+            <port name="img_out_4241" type="BUSType"/>
+            <inst name="overlyOnMat_1080_1920_U0" ssdmobj_id="83" object_id="_157"/>
+          </pins>
+          <pins>
+            <port name="overly_alpha"/>
+            <inst name="overlyOnMat_1080_1920_U0" ssdmobj_id="83" object_id="_157"/>
+          </pins>
+          <pins>
+            <port name="overly_x"/>
+            <inst name="overlyOnMat_1080_1920_U0" ssdmobj_id="83" object_id="_157"/>
+          </pins>
+          <pins>
+            <port name="overly_y"/>
+            <inst name="overlyOnMat_1080_1920_U0" ssdmobj_id="83" object_id="_157"/>
+          </pins>
+          <pins>
+            <port name="overly_h"/>
+            <inst name="overlyOnMat_1080_1920_U0" ssdmobj_id="83" object_id="_157"/>
+          </pins>
+          <pins>
+            <port name="overly_w"/>
+            <inst name="overlyOnMat_1080_1920_U0" ssdmobj_id="83" object_id="_157"/>
+          </pins>
+        </processe_list>
+        <processe_list name="Loop_loop_height_proc1618_U0" ssdmobj_id="84">
+          <pins>
+            <port name="img_out_data"/>
+            <inst name="Loop_loop_height_proc1618_U0" ssdmobj_id="84" object_id="_175"/>
+          </pins>
+          <pins>
+            <port name="video_out_V_data_V" dir="DirEnd" type="BUSType"/>
+            <inst name="Loop_loop_height_proc1618_U0" ssdmobj_id="84" object_id="_175"/>
+          </pins>
+          <pins>
+            <port name="video_out_V_keep_V" dir="DirEnd" type="BUSType"/>
+            <inst name="Loop_loop_height_proc1618_U0" ssdmobj_id="84" object_id="_175"/>
+          </pins>
+          <pins>
+            <port name="video_out_V_strb_V" dir="DirEnd" type="BUSType"/>
+            <inst name="Loop_loop_height_proc1618_U0" ssdmobj_id="84" object_id="_175"/>
+          </pins>
+          <pins>
+            <port name="video_out_V_user_V" dir="DirEnd" type="BUSType"/>
+            <inst name="Loop_loop_height_proc1618_U0" ssdmobj_id="84" object_id="_175"/>
+          </pins>
+          <pins>
+            <port name="video_out_V_last_V" dir="DirEnd" type="BUSType"/>
+            <inst name="Loop_loop_height_proc1618_U0" ssdmobj_id="84" object_id="_175"/>
+          </pins>
+          <pins>
+            <port name="video_out_V_id_V" dir="DirEnd" type="BUSType"/>
+            <inst name="Loop_loop_height_proc1618_U0" ssdmobj_id="84" object_id="_175"/>
+          </pins>
+          <pins>
+            <port name="video_out_V_dest_V" dir="DirEnd" type="BUSType"/>
+            <inst name="Loop_loop_height_proc1618_U0" ssdmobj_id="84" object_id="_175"/>
+          </pins>
+        </processe_list>
+        <channel_list depth="1920" bitwidth="24" suggested_type="0" suggested_depth="1920" name="img_in_data" ssdmobj_id="59">
+          <source>
+            <port name="in" dir="DirEnd"/>
+            <inst name="Loop_loop_height_proc1719_U0" ssdmobj_id="81" object_id="_111"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirEnd" type="BUSType"/>
+            <inst name="xfrgb2gray_1080_1920_U0" ssdmobj_id="82" object_id="_149"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="3" bitwidth="8" suggested_type="2" suggested_depth="3" name="overly_alpha_c" ssdmobj_id="29">
+          <source>
+            <port name="in" dir="DirEnd"/>
+            <inst name="Loop_loop_height_proc1719_U0" ssdmobj_id="81" object_id="_111"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirEnd" type="BUSType"/>
+            <inst name="overlyOnMat_1080_1920_U0" ssdmobj_id="83" object_id="_157"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="3" bitwidth="32" suggested_type="2" suggested_depth="3" name="overly_x_c" ssdmobj_id="28">
+          <source>
+            <port name="in" dir="DirEnd"/>
+            <inst name="Loop_loop_height_proc1719_U0" ssdmobj_id="81" object_id="_111"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirEnd" type="BUSType"/>
+            <inst name="overlyOnMat_1080_1920_U0" ssdmobj_id="83" object_id="_157"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="3" bitwidth="32" suggested_type="2" suggested_depth="3" name="overly_y_c" ssdmobj_id="27">
+          <source>
+            <port name="in" dir="DirEnd"/>
+            <inst name="Loop_loop_height_proc1719_U0" ssdmobj_id="81" object_id="_111"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirEnd" type="BUSType"/>
+            <inst name="overlyOnMat_1080_1920_U0" ssdmobj_id="83" object_id="_157"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="3" bitwidth="32" suggested_type="2" suggested_depth="3" name="overly_h_c" ssdmobj_id="26">
+          <source>
+            <port name="in" dir="DirEnd"/>
+            <inst name="Loop_loop_height_proc1719_U0" ssdmobj_id="81" object_id="_111"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirEnd" type="BUSType"/>
+            <inst name="overlyOnMat_1080_1920_U0" ssdmobj_id="83" object_id="_157"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="3" bitwidth="32" suggested_type="2" suggested_depth="3" name="overly_w_c" ssdmobj_id="25">
+          <source>
+            <port name="in" dir="DirEnd"/>
+            <inst name="Loop_loop_height_proc1719_U0" ssdmobj_id="81" object_id="_111"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirEnd" type="BUSType"/>
+            <inst name="overlyOnMat_1080_1920_U0" ssdmobj_id="83" object_id="_157"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="1920" bitwidth="8" suggested_type="0" suggested_depth="1920" name="img_src1_data" ssdmobj_id="65">
+          <source>
+            <port name="in" dir="DirEnd"/>
+            <inst name="xfrgb2gray_1080_1920_U0" ssdmobj_id="82" object_id="_149"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirEnd" type="BUSType"/>
+            <inst name="overlyOnMat_1080_1920_U0" ssdmobj_id="83" object_id="_157"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="1920" bitwidth="24" suggested_type="0" suggested_depth="1920" name="img_src2_data" ssdmobj_id="68">
+          <source>
+            <port name="in" dir="DirEnd"/>
+            <inst name="xfrgb2gray_1080_1920_U0" ssdmobj_id="82" object_id="_149"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirEnd" type="BUSType"/>
+            <inst name="overlyOnMat_1080_1920_U0" ssdmobj_id="83" object_id="_157"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="1920" bitwidth="24" suggested_type="0" suggested_depth="1920" name="img_out_data" ssdmobj_id="62">
+          <source>
+            <port name="in" dir="DirEnd"/>
+            <inst name="overlyOnMat_1080_1920_U0" ssdmobj_id="83" object_id="_157"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirEnd" type="BUSType"/>
+            <inst name="Loop_loop_height_proc1618_U0" ssdmobj_id="84" object_id="_175"/>
+          </sink>
+        </channel_list>
+      </mDfPipe>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

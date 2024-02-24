@@ -1,0 +1,164 @@
+
+
+================================================================
+== Vitis HLS Report for 'edge_detector'
+================================================================
+* Date:           Mon Nov  2 14:21:28 2020
+
+* Version:        2020.1 (Build 2902540 on Wed May 27 20:16:15 MDT 2020)
+* Project:        edge_detector
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu3eg-sfvc784-1-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 7.009 ns |   2.70 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |        ?|        ?|         ?|         ?|    ?|    ?| dataflow |
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------------------------------------------------+----------------------------------------------------------------+---------+---------+-----------+-----------+---------+---------+---------+
+        |                                                                   |                                                                |  Latency (cycles) |   Latency (absolute)  |      Interval     | Pipeline|
+        |                              Instance                             |                             Module                             |   min   |   max   |    min    |    max    |   min   |   max   |   Type  |
+        +-------------------------------------------------------------------+----------------------------------------------------------------+---------+---------+-----------+-----------+---------+---------+---------+
+        |xFSobelFilter3x3_0_0_1080_1920_1_0_0_1_1_1_1920_false_U0           |xFSobelFilter3x3_0_0_1080_1920_1_0_0_1_1_1_1920_false_s         |  2082003|  2082003| 20.820 ms | 20.820 ms |  2082003|  2082003|   none  |
+        |Loop_loop_height_proc14_U0                                         |Loop_loop_height_proc14                                         |        ?|        ?|          ?|          ?|        ?|        ?|   none  |
+        |xfrgb2gray_1080_1920_U0                                            |xfrgb2gray_1080_1920_s                                          |  2073607|  2073607| 20.736 ms | 20.736 ms |  2073607|  2073607|   none  |
+        |thresholding_1080_1920_U0                                          |thresholding_1080_1920_s                                        |  2073602|  2073602| 20.736 ms | 20.736 ms |  2073602|  2073602|   none  |
+        |Loop_loop_height_proc1315_U0                                       |Loop_loop_height_proc1315                                       |  2077921|  2077921| 20.779 ms | 20.779 ms |  2077921|  2077921|   none  |
+        |AddWeightedKernel_1080_1920_U0                                     |AddWeightedKernel_1080_1920_s                                   |  2073602|  2073602| 20.736 ms | 20.736 ms |  2073602|  2073602|   none  |
+        |xfgray2rgb_1080_1920_U0                                            |xfgray2rgb_1080_1920_s                                          |  2073602|  2073602| 20.736 ms | 20.736 ms |  2073602|  2073602|   none  |
+        |edge_detector_entry3_U0                                            |edge_detector_entry3                                            |        0|        0|    0 ns   |    0 ns   |        0|        0|   none  |
+        |edge_detector_entry16_U0                                           |edge_detector_entry16                                           |        0|        0|    0 ns   |    0 ns   |        0|        0|   none  |
+        |Block_ZN2xf2cv6ScalarILi3E7ap_uintILi24EEEC2Ev_exit_i5067_proc_U0  |Block_ZN2xf2cv6ScalarILi3E7ap_uintILi24EEEC2Ev_exit_i5067_proc  |        0|        0|    0 ns   |    0 ns   |        0|        0|   none  |
+        +-------------------------------------------------------------------+----------------------------------------------------------------+---------+---------+-----------+-----------+---------+---------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       -|      -|    -|
+|FIFO             |       11|    -|    1438|    644|    -|
+|Instance         |        3|    3|     664|   2515|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|      -|    -|
+|Register         |        -|    -|       -|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |       14|    3|    2102|   3159|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      432|  360|  141120|  70560|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        3|  ~0 |       1|      4|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------------------------------------------------------+----------------------------------------------------------------+---------+----+-----+------+-----+
+    |                              Instance                             |                             Module                             | BRAM_18K| DSP|  FF |  LUT | URAM|
+    +-------------------------------------------------------------------+----------------------------------------------------------------+---------+----+-----+------+-----+
+    |AddWeightedKernel_1080_1920_U0                                     |AddWeightedKernel_1080_1920_s                                   |        0|   0|   28|   154|    0|
+    |Block_ZN2xf2cv6ScalarILi3E7ap_uintILi24EEEC2Ev_exit_i5067_proc_U0  |Block_ZN2xf2cv6ScalarILi3E7ap_uintILi24EEEC2Ev_exit_i5067_proc  |        0|   0|    3|    38|    0|
+    |Loop_loop_height_proc1315_U0                                       |Loop_loop_height_proc1315                                       |        0|   0|   46|   203|    0|
+    |Loop_loop_height_proc14_U0                                         |Loop_loop_height_proc14                                         |        0|   0|  126|   350|    0|
+    |edge_detector_entry16_U0                                           |edge_detector_entry16                                           |        0|   0|    3|    38|    0|
+    |edge_detector_entry3_U0                                            |edge_detector_entry3                                            |        0|   0|    3|    38|    0|
+    |thresholding_1080_1920_U0                                          |thresholding_1080_1920_s                                        |        0|   0|   62|   275|    0|
+    |xFSobelFilter3x3_0_0_1080_1920_1_0_0_1_1_1_1920_false_U0           |xFSobelFilter3x3_0_0_1080_1920_1_0_0_1_1_1_1920_false_s         |        3|   0|  242|  1104|    0|
+    |xfgray2rgb_1080_1920_U0                                            |xfgray2rgb_1080_1920_s                                          |        0|   0|   29|   139|    0|
+    |xfrgb2gray_1080_1920_U0                                            |xfrgb2gray_1080_1920_s                                          |        0|   3|  122|   176|    0|
+    +-------------------------------------------------------------------+----------------------------------------------------------------+---------+----+-----+------+-----+
+    |Total                                                              |                                                                |        3|   3|  664|  2515|    0|
+    +-------------------------------------------------------------------+----------------------------------------------------------------+---------+----+-----+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    +---------------------+---------+-----+----+-----+------+-----+---------+
+    |         Name        | BRAM_18K|  FF | LUT| URAM| Depth| Bits| Size:D*B|
+    +---------------------+---------+-----+----+-----+------+-----+---------+
+    |grayImg_data_U       |        1|  163|   0|    -|  1920|    8|    15360|
+    |rgbSobel_data_U      |        3|  163|   0|    -|  1920|   24|    46080|
+    |sobelImg_data_U      |        1|  163|   0|    -|  1920|    8|    15360|
+    |sobelImg_x_data_U    |        1|  163|   0|    -|  1920|    8|    15360|
+    |sobelImg_y_data_U    |        1|  163|   0|    -|  1920|    8|    15360|
+    |srcImg_data_U        |        3|  163|   0|    -|  1920|   24|    46080|
+    |thresholdImg_data_U  |        1|  163|   0|    -|  1920|    8|    15360|
+    |threshold_V_c_U      |        0|   99|   0|    -|     5|    8|       40|
+    |threshold_c1_U       |        0|   99|   0|    -|     2|    8|       16|
+    |threshold_c_U        |        0|   99|   0|    -|     2|    8|       16|
+    +---------------------+---------+-----+----+-----+------+-----+---------+
+    |Total                |       11| 1438|   0|    0| 13449|  112|   169032|
+    +---------------------+---------+-----+----+-----+------+-----+---------+
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------+-----+-----+--------------+---------------+--------------+
+|     RTL Ports    | Dir | Bits|   Protocol   | Source Object |    C Type    |
++------------------+-----+-----+--------------+---------------+--------------+
+|src_TDATA         |  in |   24|     axis     |  src_V_data_V |    pointer   |
+|src_TKEEP         |  in |    3|     axis     |  src_V_keep_V |    pointer   |
+|src_TSTRB         |  in |    3|     axis     |  src_V_strb_V |    pointer   |
+|src_TUSER         |  in |    1|     axis     |  src_V_user_V |    pointer   |
+|src_TLAST         |  in |    1|     axis     |  src_V_last_V |    pointer   |
+|src_TID           |  in |    1|     axis     |   src_V_id_V  |    pointer   |
+|src_TDEST         |  in |    1|     axis     |  src_V_dest_V |    pointer   |
+|src_TVALID        |  in |    1|     axis     |  src_V_dest_V |    pointer   |
+|src_TREADY        | out |    1|     axis     |  src_V_dest_V |    pointer   |
+|dst_TDATA         | out |   24|     axis     |  dst_V_data_V |    pointer   |
+|dst_TKEEP         | out |    3|     axis     |  dst_V_keep_V |    pointer   |
+|dst_TSTRB         | out |    3|     axis     |  dst_V_strb_V |    pointer   |
+|dst_TUSER         | out |    1|     axis     |  dst_V_user_V |    pointer   |
+|dst_TLAST         | out |    1|     axis     |  dst_V_last_V |    pointer   |
+|dst_TID           | out |    1|     axis     |   dst_V_id_V  |    pointer   |
+|dst_TDEST         | out |    1|     axis     |  dst_V_dest_V |    pointer   |
+|dst_TVALID        | out |    1|     axis     |  dst_V_dest_V |    pointer   |
+|dst_TREADY        |  in |    1|     axis     |  dst_V_dest_V |    pointer   |
+|threshold         |  in |    8|    ap_vld    |   threshold   |    scalar    |
+|threshold_ap_vld  |  in |    1|    ap_vld    |   threshold   |    scalar    |
+|ap_clk            |  in |    1| ap_ctrl_none | edge_detector | return value |
+|ap_rst_n          |  in |    1| ap_ctrl_none | edge_detector | return value |
++------------------+-----+-----+--------------+---------------+--------------+
+

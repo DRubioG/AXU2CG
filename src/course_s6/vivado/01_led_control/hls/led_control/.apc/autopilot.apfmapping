@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="led_control.cpp" path="F:\zynqUltraScale_vitis\course_s3_hls\hls\led_control\source\led_control.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="testapp.cpp" path="F:\zynqUltraScale_vitis\course_s3_hls\hls\led_control\source\testapp.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

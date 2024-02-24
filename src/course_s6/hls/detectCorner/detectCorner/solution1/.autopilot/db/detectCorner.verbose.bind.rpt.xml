@@ -1,0 +1,50 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'detectCorner'" level="0">
+<item name = "Date">Tue Nov  3 14:37:12 2020
+</item>
+<item name = "Version">2020.1 (Build 2902540 on Wed May 27 20:16:15 MDT 2020)</item>
+<item name = "Project">detectCorner</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu3eg-sfvc784-1-i</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.281 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_fast_0_0_1080_1920_1_s_fu_134">fast_0_0_1080_1920_1_s, 2100875, 2100875, 21.009 ms, 21.009 ms, 2100875, 2100875, none</column>
+<column name="grp_Loop_loop_height_proc1013_fu_143">Loop_loop_height_proc1013, ?, ?, ?, ?, ?, ?, none</column>
+<column name="grp_xfrgb2gray_1080_1920_s_fu_165">xfrgb2gray_1080_1920_s, 2073607, 2073607, 20.736 ms, 20.736 ms, 2073607, 2073607, none</column>
+<column name="grp_Loop_loop_height_proc911_fu_172">Loop_loop_height_proc911, 2077921, 2077921, 20.779 ms, 20.779 ms, 2077921, 2077921, none</column>
+<column name="grp_xfgray2rgb_1080_1920_s_fu_191">xfgray2rgb_1080_1920_s, 2073602, 2073602, 20.736 ms, 20.736 ms, 2073602, 2073602, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

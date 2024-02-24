@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1604047152414">
+  <ports id="1" name="p_read" type="PortType" originalName="src.V[0]" bitwidth="8">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="2" name="p_read1" type="PortType" originalName="src.V[1]" bitwidth="8">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="3" name="p_read2" type="PortType" originalName="src.V[2]" bitwidth="8">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="13" name="ap_return" direction="DirOut">
+    <dataInputObjs>ret</dataInputObjs>
+  </ports>
+  <edges id="12" source_obj="//@ports.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="14" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="16" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="19" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="20" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="21" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="22" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
+  <edges source_obj="//@regions.0/@basic_blocks.0/@node_objs.4" sink_obj="//@ports.3"/>
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" id="26" pipe_depth="1" RegionName="PackPixel">
+    <basic_blocks id="9" name="PackPixel" type="BlockType">
+      <node_objs xsi:type="cdfg:CdfgNode" id="4" name="p_read_1" lineNumber="15" originalName="src.V[2]" fileName="source/overlaystream.cpp" fileDirectory=".." contextFuncName="PackPixel" bitwidth="8" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="source/overlaystream.cpp" linenumber="15" fileDirectory="F:\course_s3_hls\hls\overlaystream" functionName="PackPixel"/>
+        <dataInputObjs>p_read2</dataInputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="5" name="p_read_2" lineNumber="15" originalName="src.V[1]" fileName="source/overlaystream.cpp" fileDirectory=".." contextFuncName="PackPixel" bitwidth="8" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="source/overlaystream.cpp" linenumber="15" fileDirectory="F:\course_s3_hls\hls\overlaystream" functionName="PackPixel"/>
+        <dataInputObjs>p_read1</dataInputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="6" name="p_read_3" lineNumber="15" originalName="src.V[0]" fileName="source/overlaystream.cpp" fileDirectory=".." contextFuncName="PackPixel" bitwidth="8" opcode="read" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="source/overlaystream.cpp" linenumber="15" fileDirectory="F:\course_s3_hls\hls\overlaystream" functionName="PackPixel"/>
+        <dataInputObjs>p_read</dataInputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="7" name="p_Result_2" lineNumber="414" fileName="F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_ref.h" fileDirectory=".." rtlName="ap_return" contextFuncName="operator_assign_8_false" bitwidth="24" opcode="bitconcatenate" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_ref.h" linenumber="414" fileDirectory="F:\course_s3_hls\hls\overlaystream" functionName="operator=&amp;lt;8, false&amp;gt;"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>ret</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="8" name="_ln25" lineNumber="25" fileName="source/overlaystream.cpp" fileDirectory=".." contextFuncName="PackPixel" opcode="ret" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="source/overlaystream.cpp" linenumber="25" fileDirectory="F:\course_s3_hls\hls\overlaystream" functionName="PackPixel"/>
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <dataOutputObjs>ap_return</dataOutputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_ref.h">
+        <validLinenumbers>414</validLinenumbers>
+      </fileValidLineNumbers>
+      <fileValidLineNumbers fileName="source/overlaystream.cpp">
+        <validLinenumbers>15</validLinenumbers>
+        <validLinenumbers>25</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <expressionNodes realName="p_Result_2_fu_28">
+    <nodeIds>7</nodeIds>
+  </expressionNodes>
+  <ioNodes realName="p_read_3_read_fu_22">
+    <nodeIds>6</nodeIds>
+  </ioNodes>
+  <ioNodes realName="p_read_1_read_fu_10">
+    <nodeIds>4</nodeIds>
+  </ioNodes>
+  <ioNodes realName="p_read_2_read_fu_16">
+    <nodeIds>5</nodeIds>
+  </ioNodes>
+  <ioPorts name="p_read">
+    <contents name="read">
+      <nodeIds>6</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="p_read1">
+    <contents name="read">
+      <nodeIds>5</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="p_read2">
+    <contents name="read">
+      <nodeIds>4</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ap_return">
+    <contents name="ret">
+      <nodeIds>8</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="4" stage="1" latency="1"/>
+      <operations id="5" stage="1" latency="1"/>
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+    </states>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="PackPixel" mII="1" mDepth="1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>9</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

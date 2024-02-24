@@ -1,0 +1,278 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Mon Jul 12 12:36:46 2021
+| Host         : DESKTOP-AOVMD3L running 64-bit major release  (build 9200)
+| Command      : report_drc -file design_1_wrapper_drc_opted.rpt -pb design_1_wrapper_drc_opted.pb -rpx design_1_wrapper_drc_opted.rpx
+| Design       : design_1_wrapper
+| Device       : xczu2cg-sfvc784-1-i
+| Speed File   : -1
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 48
++--------+----------+------------------------+------------+
+| Rule   | Severity | Description            | Violations |
++--------+----------+------------------------+------------+
+| DPIP-2 | Warning  | Input pipelining       | 14         |
+| DPOP-3 | Warning  | PREG Output pipelining | 16         |
+| DPOP-4 | Warning  | MREG Output pipelining | 18         |
++--------+----------+------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+DPIP-2#1 Warning
+Input pipelining  
+DSP design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_scaleCompute_17_42_20_48_16_2_s_fu_581/mul_34ns_42s_74_1_1_U13/resizeTry_mul_34ns_42s_74_1_1_Multiplier_1_U/p input design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_scaleCompute_17_42_20_48_16_2_s_fu_581/mul_34ns_42s_74_1_1_U13/resizeTry_mul_34ns_42s_74_1_1_Multiplier_1_U/p/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#2 Warning
+Input pipelining  
+DSP design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_scaleCompute_17_42_20_48_16_2_s_fu_581/mul_34ns_42s_74_1_1_U13/resizeTry_mul_34ns_42s_74_1_1_Multiplier_1_U/p__0 input design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_scaleCompute_17_42_20_48_16_2_s_fu_581/mul_34ns_42s_74_1_1_U13/resizeTry_mul_34ns_42s_74_1_1_Multiplier_1_U/p__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#3 Warning
+Input pipelining  
+DSP design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_scaleCompute_17_42_20_48_16_2_s_fu_581/mul_34ns_42s_74_1_1_U13/resizeTry_mul_34ns_42s_74_1_1_Multiplier_1_U/p__0 input design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_scaleCompute_17_42_20_48_16_2_s_fu_581/mul_34ns_42s_74_1_1_U13/resizeTry_mul_34ns_42s_74_1_1_Multiplier_1_U/p__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#4 Warning
+Input pipelining  
+DSP design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_scaleCompute_17_42_20_48_16_2_s_fu_581/mul_34ns_42s_74_1_1_U13/resizeTry_mul_34ns_42s_74_1_1_Multiplier_1_U/p__1 input design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_scaleCompute_17_42_20_48_16_2_s_fu_581/mul_34ns_42s_74_1_1_U13/resizeTry_mul_34ns_42s_74_1_1_Multiplier_1_U/p__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#5 Warning
+Input pipelining  
+DSP design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_scaleCompute_17_42_20_48_16_2_s_fu_581/mul_34ns_42s_74_1_1_U13/resizeTry_mul_34ns_42s_74_1_1_Multiplier_1_U/p__2 input design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_scaleCompute_17_42_20_48_16_2_s_fu_581/mul_34ns_42s_74_1_1_U13/resizeTry_mul_34ns_42s_74_1_1_Multiplier_1_U/p__2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#6 Warning
+Input pipelining  
+DSP design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_scaleCompute_17_42_20_48_16_2_s_fu_581/mul_34ns_42s_74_1_1_U13/resizeTry_mul_34ns_42s_74_1_1_Multiplier_1_U/p__2 input design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_scaleCompute_17_42_20_48_16_2_s_fu_581/mul_34ns_42s_74_1_1_U13/resizeTry_mul_34ns_42s_74_1_1_Multiplier_1_U/p__2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#7 Warning
+Input pipelining  
+DSP design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_xfUDivResize_fu_560/mul_43ns_45ns_87_1_1_U10/resizeTry_mul_43ns_45ns_87_1_1_Multiplier_0_U/p input design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_xfUDivResize_fu_560/mul_43ns_45ns_87_1_1_U10/resizeTry_mul_43ns_45ns_87_1_1_Multiplier_0_U/p/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#8 Warning
+Input pipelining  
+DSP design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_xfUDivResize_fu_560/mul_43ns_45ns_87_1_1_U10/resizeTry_mul_43ns_45ns_87_1_1_Multiplier_0_U/p__0 input design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_xfUDivResize_fu_560/mul_43ns_45ns_87_1_1_U10/resizeTry_mul_43ns_45ns_87_1_1_Multiplier_0_U/p__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#9 Warning
+Input pipelining  
+DSP design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_xfUDivResize_fu_560/mul_43ns_45ns_87_1_1_U10/resizeTry_mul_43ns_45ns_87_1_1_Multiplier_0_U/p__1 input design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_xfUDivResize_fu_560/mul_43ns_45ns_87_1_1_U10/resizeTry_mul_43ns_45ns_87_1_1_Multiplier_0_U/p__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#10 Warning
+Input pipelining  
+DSP design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/mac_muladd_10s_12ns_22s_23_4_1_U24/resizeTry_mac_muladd_10s_12ns_22s_23_4_1_DSP48_3_U/p_reg_reg input design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/mac_muladd_10s_12ns_22s_23_4_1_U24/resizeTry_mac_muladd_10s_12ns_22s_23_4_1_DSP48_3_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#11 Warning
+Input pipelining  
+DSP design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/mac_muladd_10s_12ns_22s_23_4_1_U25/resizeTry_mac_muladd_10s_12ns_22s_23_4_1_DSP48_3_U/p_reg_reg input design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/mac_muladd_10s_12ns_22s_23_4_1_U25/resizeTry_mac_muladd_10s_12ns_22s_23_4_1_DSP48_3_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#12 Warning
+Input pipelining  
+DSP design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/mac_muladd_10s_12ns_22s_23_4_1_U26/resizeTry_mac_muladd_10s_12ns_22s_23_4_1_DSP48_3_U/p_reg_reg input design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/mac_muladd_10s_12ns_22s_23_4_1_U26/resizeTry_mac_muladd_10s_12ns_22s_23_4_1_DSP48_3_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#13 Warning
+Input pipelining  
+DSP design_1_i/v_demosaic_0/inst/Debayer_U0/DebayerG_U0/add_ln497_1_reg_4431_reg input design_1_i/v_demosaic_0/inst/Debayer_U0/DebayerG_U0/add_ln497_1_reg_4431_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#14 Warning
+Input pipelining  
+DSP design_1_i/v_demosaic_0/inst/Debayer_U0/DebayerG_U0/add_ln497_reg_4426_reg input design_1_i/v_demosaic_0/inst/Debayer_U0/DebayerG_U0/add_ln497_reg_4426_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPOP-3#1 Warning
+PREG Output pipelining  
+DSP design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_scaleCompute_17_42_20_48_16_2_s_fu_581/mul_34ns_42s_74_1_1_U13/resizeTry_mul_34ns_42s_74_1_1_Multiplier_1_U/p output design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_scaleCompute_17_42_20_48_16_2_s_fu_581/mul_34ns_42s_74_1_1_U13/resizeTry_mul_34ns_42s_74_1_1_Multiplier_1_U/p/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#2 Warning
+PREG Output pipelining  
+DSP design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_scaleCompute_17_42_20_48_16_2_s_fu_581/mul_34ns_42s_74_1_1_U13/resizeTry_mul_34ns_42s_74_1_1_Multiplier_1_U/p__0 output design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_scaleCompute_17_42_20_48_16_2_s_fu_581/mul_34ns_42s_74_1_1_U13/resizeTry_mul_34ns_42s_74_1_1_Multiplier_1_U/p__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#3 Warning
+PREG Output pipelining  
+DSP design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_scaleCompute_17_42_20_48_16_2_s_fu_581/mul_34ns_42s_74_1_1_U13/resizeTry_mul_34ns_42s_74_1_1_Multiplier_1_U/p__1 output design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_scaleCompute_17_42_20_48_16_2_s_fu_581/mul_34ns_42s_74_1_1_U13/resizeTry_mul_34ns_42s_74_1_1_Multiplier_1_U/p__1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#4 Warning
+PREG Output pipelining  
+DSP design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_scaleCompute_17_42_20_48_16_2_s_fu_581/mul_34ns_42s_74_1_1_U13/resizeTry_mul_34ns_42s_74_1_1_Multiplier_1_U/p__2 output design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_scaleCompute_17_42_20_48_16_2_s_fu_581/mul_34ns_42s_74_1_1_U13/resizeTry_mul_34ns_42s_74_1_1_Multiplier_1_U/p__2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#5 Warning
+PREG Output pipelining  
+DSP design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_xfUDivResize_fu_560/mul_43ns_45ns_87_1_1_U10/resizeTry_mul_43ns_45ns_87_1_1_Multiplier_0_U/p output design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_xfUDivResize_fu_560/mul_43ns_45ns_87_1_1_U10/resizeTry_mul_43ns_45ns_87_1_1_Multiplier_0_U/p/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#6 Warning
+PREG Output pipelining  
+DSP design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_xfUDivResize_fu_560/mul_43ns_45ns_87_1_1_U10/resizeTry_mul_43ns_45ns_87_1_1_Multiplier_0_U/p__0 output design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_xfUDivResize_fu_560/mul_43ns_45ns_87_1_1_U10/resizeTry_mul_43ns_45ns_87_1_1_Multiplier_0_U/p__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#7 Warning
+PREG Output pipelining  
+DSP design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_xfUDivResize_fu_560/mul_43ns_45ns_87_1_1_U10/resizeTry_mul_43ns_45ns_87_1_1_Multiplier_0_U/p__1 output design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_xfUDivResize_fu_560/mul_43ns_45ns_87_1_1_U10/resizeTry_mul_43ns_45ns_87_1_1_Multiplier_0_U/p__1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#8 Warning
+PREG Output pipelining  
+DSP design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_xfUDivResize_fu_560/mul_43ns_45ns_87_1_1_U10/resizeTry_mul_43ns_45ns_87_1_1_Multiplier_0_U/p__2 output design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_xfUDivResize_fu_560/mul_43ns_45ns_87_1_1_U10/resizeTry_mul_43ns_45ns_87_1_1_Multiplier_0_U/p__2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#9 Warning
+PREG Output pipelining  
+DSP design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_xfUDivResize_fu_560/mul_43ns_45ns_87_1_1_U10/resizeTry_mul_43ns_45ns_87_1_1_Multiplier_0_U/p__3 output design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_xfUDivResize_fu_560/mul_43ns_45ns_87_1_1_U10/resizeTry_mul_43ns_45ns_87_1_1_Multiplier_0_U/p__3/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#10 Warning
+PREG Output pipelining  
+DSP design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_xfUDivResize_fu_560/mul_43ns_45ns_87_1_1_U10/resizeTry_mul_43ns_45ns_87_1_1_Multiplier_0_U/p__4 output design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_xfUDivResize_fu_560/mul_43ns_45ns_87_1_1_U10/resizeTry_mul_43ns_45ns_87_1_1_Multiplier_0_U/p__4/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#11 Warning
+PREG Output pipelining  
+DSP design_1_i/v_demosaic_0/inst/Debayer_U0/DebayerG_U0/v_demosaic_mul_mug8j_U16/design_1_v_demosaic_0_0_v_demosaic_mul_mug8j_DSP48_0_U/p output design_1_i/v_demosaic_0/inst/Debayer_U0/DebayerG_U0/v_demosaic_mul_mug8j_U16/design_1_v_demosaic_0_0_v_demosaic_mul_mug8j_DSP48_0_U/p/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#12 Warning
+PREG Output pipelining  
+DSP design_1_i/v_demosaic_0/inst/Debayer_U0/DebayerG_U0/v_demosaic_mul_mug8j_U19/design_1_v_demosaic_0_0_v_demosaic_mul_mug8j_DSP48_0_U/p output design_1_i/v_demosaic_0/inst/Debayer_U0/DebayerG_U0/v_demosaic_mul_mug8j_U19/design_1_v_demosaic_0_0_v_demosaic_mul_mug8j_DSP48_0_U/p/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#13 Warning
+PREG Output pipelining  
+DSP design_1_i/v_demosaic_0/inst/Debayer_U0/DebayerG_U0/v_demosaic_mul_muhbi_U17/design_1_v_demosaic_0_0_v_demosaic_mul_muhbi_DSP48_1_U/p output design_1_i/v_demosaic_0/inst/Debayer_U0/DebayerG_U0/v_demosaic_mul_muhbi_U17/design_1_v_demosaic_0_0_v_demosaic_mul_muhbi_DSP48_1_U/p/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#14 Warning
+PREG Output pipelining  
+DSP design_1_i/v_demosaic_0/inst/Debayer_U0/DebayerG_U0/v_demosaic_mul_muhbi_U18/design_1_v_demosaic_0_0_v_demosaic_mul_muhbi_DSP48_1_U/p output design_1_i/v_demosaic_0/inst/Debayer_U0/DebayerG_U0/v_demosaic_mul_muhbi_U18/design_1_v_demosaic_0_0_v_demosaic_mul_muhbi_DSP48_1_U/p/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#15 Warning
+PREG Output pipelining  
+DSP design_1_i/v_demosaic_0/inst/Debayer_U0/DebayerG_U0/v_demosaic_mul_mujbC_U21/design_1_v_demosaic_0_0_v_demosaic_mul_mujbC_DSP48_3_U/p output design_1_i/v_demosaic_0/inst/Debayer_U0/DebayerG_U0/v_demosaic_mul_mujbC_U21/design_1_v_demosaic_0_0_v_demosaic_mul_mujbC_DSP48_3_U/p/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#16 Warning
+PREG Output pipelining  
+DSP design_1_i/v_demosaic_0/inst/Debayer_U0/DebayerG_U0/v_demosaic_mul_mujbC_U23/design_1_v_demosaic_0_0_v_demosaic_mul_mujbC_DSP48_3_U/p output design_1_i/v_demosaic_0/inst/Debayer_U0/DebayerG_U0/v_demosaic_mul_mujbC_U23/design_1_v_demosaic_0_0_v_demosaic_mul_mujbC_DSP48_3_U/p/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-4#1 Warning
+MREG Output pipelining  
+DSP design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_scaleCompute_17_42_20_48_16_2_s_fu_581/mul_34ns_42s_74_1_1_U13/resizeTry_mul_34ns_42s_74_1_1_Multiplier_1_U/p multiplier stage design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_scaleCompute_17_42_20_48_16_2_s_fu_581/mul_34ns_42s_74_1_1_U13/resizeTry_mul_34ns_42s_74_1_1_Multiplier_1_U/p/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#2 Warning
+MREG Output pipelining  
+DSP design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_scaleCompute_17_42_20_48_16_2_s_fu_581/mul_34ns_42s_74_1_1_U13/resizeTry_mul_34ns_42s_74_1_1_Multiplier_1_U/p__0 multiplier stage design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_scaleCompute_17_42_20_48_16_2_s_fu_581/mul_34ns_42s_74_1_1_U13/resizeTry_mul_34ns_42s_74_1_1_Multiplier_1_U/p__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#3 Warning
+MREG Output pipelining  
+DSP design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_scaleCompute_17_42_20_48_16_2_s_fu_581/mul_34ns_42s_74_1_1_U13/resizeTry_mul_34ns_42s_74_1_1_Multiplier_1_U/p__1 multiplier stage design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_scaleCompute_17_42_20_48_16_2_s_fu_581/mul_34ns_42s_74_1_1_U13/resizeTry_mul_34ns_42s_74_1_1_Multiplier_1_U/p__1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#4 Warning
+MREG Output pipelining  
+DSP design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_scaleCompute_17_42_20_48_16_2_s_fu_581/mul_34ns_42s_74_1_1_U13/resizeTry_mul_34ns_42s_74_1_1_Multiplier_1_U/p__2 multiplier stage design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_scaleCompute_17_42_20_48_16_2_s_fu_581/mul_34ns_42s_74_1_1_U13/resizeTry_mul_34ns_42s_74_1_1_Multiplier_1_U/p__2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#5 Warning
+MREG Output pipelining  
+DSP design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_xfUDivResize_fu_560/mul_43ns_45ns_87_1_1_U10/resizeTry_mul_43ns_45ns_87_1_1_Multiplier_0_U/p multiplier stage design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_xfUDivResize_fu_560/mul_43ns_45ns_87_1_1_U10/resizeTry_mul_43ns_45ns_87_1_1_Multiplier_0_U/p/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#6 Warning
+MREG Output pipelining  
+DSP design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_xfUDivResize_fu_560/mul_43ns_45ns_87_1_1_U10/resizeTry_mul_43ns_45ns_87_1_1_Multiplier_0_U/p__0 multiplier stage design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_xfUDivResize_fu_560/mul_43ns_45ns_87_1_1_U10/resizeTry_mul_43ns_45ns_87_1_1_Multiplier_0_U/p__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#7 Warning
+MREG Output pipelining  
+DSP design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_xfUDivResize_fu_560/mul_43ns_45ns_87_1_1_U10/resizeTry_mul_43ns_45ns_87_1_1_Multiplier_0_U/p__1 multiplier stage design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_xfUDivResize_fu_560/mul_43ns_45ns_87_1_1_U10/resizeTry_mul_43ns_45ns_87_1_1_Multiplier_0_U/p__1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#8 Warning
+MREG Output pipelining  
+DSP design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_xfUDivResize_fu_560/mul_43ns_45ns_87_1_1_U10/resizeTry_mul_43ns_45ns_87_1_1_Multiplier_0_U/p__2 multiplier stage design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_xfUDivResize_fu_560/mul_43ns_45ns_87_1_1_U10/resizeTry_mul_43ns_45ns_87_1_1_Multiplier_0_U/p__2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#9 Warning
+MREG Output pipelining  
+DSP design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_xfUDivResize_fu_560/mul_43ns_45ns_87_1_1_U10/resizeTry_mul_43ns_45ns_87_1_1_Multiplier_0_U/p__3 multiplier stage design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_xfUDivResize_fu_560/mul_43ns_45ns_87_1_1_U10/resizeTry_mul_43ns_45ns_87_1_1_Multiplier_0_U/p__3/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#10 Warning
+MREG Output pipelining  
+DSP design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_xfUDivResize_fu_560/mul_43ns_45ns_87_1_1_U10/resizeTry_mul_43ns_45ns_87_1_1_Multiplier_0_U/p__4 multiplier stage design_1_i/resizeTry_0/inst/resizeNNBilinear_9_1080_1920_1_640_640_2_2_U0/grp_xfUDivResize_fu_560/mul_43ns_45ns_87_1_1_U10/resizeTry_mul_43ns_45ns_87_1_1_Multiplier_0_U/p__4/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#11 Warning
+MREG Output pipelining  
+DSP design_1_i/v_demosaic_0/inst/Debayer_U0/DebayerG_U0/add_ln497_1_reg_4431_reg multiplier stage design_1_i/v_demosaic_0/inst/Debayer_U0/DebayerG_U0/add_ln497_1_reg_4431_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#12 Warning
+MREG Output pipelining  
+DSP design_1_i/v_demosaic_0/inst/Debayer_U0/DebayerG_U0/add_ln497_reg_4426_reg multiplier stage design_1_i/v_demosaic_0/inst/Debayer_U0/DebayerG_U0/add_ln497_reg_4426_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#13 Warning
+MREG Output pipelining  
+DSP design_1_i/v_demosaic_0/inst/Debayer_U0/DebayerG_U0/v_demosaic_mul_mug8j_U16/design_1_v_demosaic_0_0_v_demosaic_mul_mug8j_DSP48_0_U/p multiplier stage design_1_i/v_demosaic_0/inst/Debayer_U0/DebayerG_U0/v_demosaic_mul_mug8j_U16/design_1_v_demosaic_0_0_v_demosaic_mul_mug8j_DSP48_0_U/p/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#14 Warning
+MREG Output pipelining  
+DSP design_1_i/v_demosaic_0/inst/Debayer_U0/DebayerG_U0/v_demosaic_mul_mug8j_U19/design_1_v_demosaic_0_0_v_demosaic_mul_mug8j_DSP48_0_U/p multiplier stage design_1_i/v_demosaic_0/inst/Debayer_U0/DebayerG_U0/v_demosaic_mul_mug8j_U19/design_1_v_demosaic_0_0_v_demosaic_mul_mug8j_DSP48_0_U/p/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#15 Warning
+MREG Output pipelining  
+DSP design_1_i/v_demosaic_0/inst/Debayer_U0/DebayerG_U0/v_demosaic_mul_muhbi_U17/design_1_v_demosaic_0_0_v_demosaic_mul_muhbi_DSP48_1_U/p multiplier stage design_1_i/v_demosaic_0/inst/Debayer_U0/DebayerG_U0/v_demosaic_mul_muhbi_U17/design_1_v_demosaic_0_0_v_demosaic_mul_muhbi_DSP48_1_U/p/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#16 Warning
+MREG Output pipelining  
+DSP design_1_i/v_demosaic_0/inst/Debayer_U0/DebayerG_U0/v_demosaic_mul_muhbi_U18/design_1_v_demosaic_0_0_v_demosaic_mul_muhbi_DSP48_1_U/p multiplier stage design_1_i/v_demosaic_0/inst/Debayer_U0/DebayerG_U0/v_demosaic_mul_muhbi_U18/design_1_v_demosaic_0_0_v_demosaic_mul_muhbi_DSP48_1_U/p/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#17 Warning
+MREG Output pipelining  
+DSP design_1_i/v_demosaic_0/inst/Debayer_U0/DebayerG_U0/v_demosaic_mul_mujbC_U21/design_1_v_demosaic_0_0_v_demosaic_mul_mujbC_DSP48_3_U/p multiplier stage design_1_i/v_demosaic_0/inst/Debayer_U0/DebayerG_U0/v_demosaic_mul_mujbC_U21/design_1_v_demosaic_0_0_v_demosaic_mul_mujbC_DSP48_3_U/p/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#18 Warning
+MREG Output pipelining  
+DSP design_1_i/v_demosaic_0/inst/Debayer_U0/DebayerG_U0/v_demosaic_mul_mujbC_U23/design_1_v_demosaic_0_0_v_demosaic_mul_mujbC_DSP48_3_U/p multiplier stage design_1_i/v_demosaic_0/inst/Debayer_U0/DebayerG_U0/v_demosaic_mul_mujbC_U23/design_1_v_demosaic_0_0_v_demosaic_mul_mujbC_DSP48_3_U/p/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+

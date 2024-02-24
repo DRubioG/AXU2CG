@@ -1,0 +1,254 @@
+<profile>
+
+<ReportVersion>
+<Version>2020.1</Version>
+</ReportVersion>
+
+<UserAssignments>
+<unit>ns</unit>
+<ProductFamily>zynquplus</ProductFamily>
+<Part>xczu9eg-ffvb1156-1-i</Part>
+<TopModelName>resizeNNBilinear_9_1080_1920_1_640_640_2_2_s</TopModelName>
+<TargetClockPeriod>10.00</TargetClockPeriod>
+<ClockUncertainty>2.70</ClockUncertainty>
+<FlowTarget>vivado</FlowTarget>
+</UserAssignments>
+
+<PerformanceEstimates>
+<PipelineType>none</PipelineType>
+<SummaryOfTimingAnalysis>
+<unit>ns</unit>
+<EstimatedClockPeriod>7.817</EstimatedClockPeriod>
+</SummaryOfTimingAnalysis>
+<SummaryOfOverallLatency>
+<unit>clock cycles</unit>
+<Best-caseLatency>2090405</Best-caseLatency>
+<Average-caseLatency>2090405</Average-caseLatency>
+<Worst-caseLatency>2090405</Worst-caseLatency>
+<Best-caseRealTimeLatency>20.904 ms</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>20.904 ms</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>20.904 ms</Worst-caseRealTimeLatency>
+<Interval-min>2090405</Interval-min>
+<Interval-max>2090405</Interval-max>
+</SummaryOfOverallLatency>
+<SummaryOfLoopLatency>
+<VITIS_LOOP_331_1_VITIS_LOOP_336_2>
+<TripCount>3840</TripCount>
+<Latency>3840</Latency>
+<AbsoluteTimeLatency>38400</AbsoluteTimeLatency>
+<PipelineII>1</PipelineII>
+<PipelineDepth>2</PipelineDepth>
+</VITIS_LOOP_331_1_VITIS_LOOP_336_2>
+<VITIS_LOOP_381_4>
+<TripCount>1080</TripCount>
+<Latency>2086561</Latency>
+<AbsoluteTimeLatency>20865610</AbsoluteTimeLatency>
+<IterationLatency>1932</IterationLatency>
+<VITIS_LOOP_388_5>
+<TripCount>1920</TripCount>
+<Latency>1927</Latency>
+<AbsoluteTimeLatency>19270</AbsoluteTimeLatency>
+<PipelineII>1</PipelineII>
+<PipelineDepth>9</PipelineDepth>
+</VITIS_LOOP_388_5>
+</VITIS_LOOP_381_4>
+</SummaryOfLoopLatency>
+</PerformanceEstimates>
+
+<AreaEstimates>
+<Resources>
+<BRAM_18K>9</BRAM_18K>
+<DSP>20</DSP>
+<FF>1125</FF>
+<LUT>2611</LUT>
+<URAM>0</URAM>
+</Resources>
+<AvailableResources>
+<BRAM_18K>1824</BRAM_18K>
+<DSP>2520</DSP>
+<FF>548160</FF>
+<LUT>274080</LUT>
+<URAM>0</URAM>
+</AvailableResources>
+</AreaEstimates>
+
+<InterfaceSummary>
+<RtlPorts>
+<name>ap_clk</name>
+<Object>resizeNNBilinear&lt;9, 1080, 1920, 1, 640, 640, 2, 2&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_rst</name>
+<Object>resizeNNBilinear&lt;9, 1080, 1920, 1, 640, 640, 2, 2&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_start</name>
+<Object>resizeNNBilinear&lt;9, 1080, 1920, 1, 640, 640, 2, 2&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>start_full_n</name>
+<Object>resizeNNBilinear&lt;9, 1080, 1920, 1, 640, 640, 2, 2&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_done</name>
+<Object>resizeNNBilinear&lt;9, 1080, 1920, 1, 640, 640, 2, 2&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_continue</name>
+<Object>resizeNNBilinear&lt;9, 1080, 1920, 1, 640, 640, 2, 2&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_idle</name>
+<Object>resizeNNBilinear&lt;9, 1080, 1920, 1, 640, 640, 2, 2&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_ready</name>
+<Object>resizeNNBilinear&lt;9, 1080, 1920, 1, 640, 640, 2, 2&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>start_out</name>
+<Object>resizeNNBilinear&lt;9, 1080, 1920, 1, 640, 640, 2, 2&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>start_write</name>
+<Object>resizeNNBilinear&lt;9, 1080, 1920, 1, 640, 640, 2, 2&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>img_src_4180_dout</name>
+<Object>img_src_4180</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>ap_fifo</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>24</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>img_src_4180_empty_n</name>
+<Object>img_src_4180</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>ap_fifo</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>img_src_4180_read</name>
+<Object>img_src_4180</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>ap_fifo</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>img_dst_4181_din</name>
+<Object>img_dst_4181</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>ap_fifo</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>24</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>img_dst_4181_full_n</name>
+<Object>img_dst_4181</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>ap_fifo</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>img_dst_4181_write</name>
+<Object>img_dst_4181</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>ap_fifo</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+</InterfaceSummary>
+
+</profile>

@@ -1,0 +1,851 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Mon Nov 30 17:15:16 2020
+# Process ID: 2908
+# Current directory: F:/course_s3_hls_2cg_b/vivado/03_resizeTry
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9920 F:\course_s3_hls_2cg_b\vivado\03_resizeTry\resizeTry.xpr
+# Log file: F:/course_s3_hls_2cg_b/vivado/03_resizeTry/vivado.log
+# Journal file: F:/course_s3_hls_2cg_b/vivado/03_resizeTry\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/course_s3_hls_2cg_b/vivado/03_resizeTry/resizeTry.xpr
+INFO: [Project 1-313] Project file moved from 'F:/course_s3_hls_2cg/vivado/03_resizeTry' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/course_s3_hls_2cg_b/hls/resizeTry'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/xilinx_2020.1/Vivado/2020.1/data/ip'.
+open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:16 . Memory (MB): peak = 1080.660 ; gain = 0.000
+update_compile_order -fileset sources_1
+open_bd_design {F:/course_s3_hls_2cg_b/vivado/03_resizeTry/resizeTry.srcs/sources_1/bd/design_1/design_1.bd}
+Adding component instance block -- xilinx.com:ip:zynq_ultra_ps_e:3.3 - zynq_ultra_ps_e_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_interconnect_0
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding component instance block -- xilinx.com:ip:axi_vdma:6.3 - axi_vdma_0
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - axis_subset_converter_0
+Adding component instance block -- xilinx.com:ip:mipi_csi2_rx_subsystem:5.0 - mipi_csi2_rx_subsyst_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_150M
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps8_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:v_demosaic:1.0 - v_demosaic_0
+Adding component instance block -- xilinx.com:ip:v_gamma_lut:1.0 - v_gamma_lut_0
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
+Adding component instance block -- xilinx.com:hls:resizeTry:1.0 - resizeTry_0
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - axis_subset_converter_1
+Excluding slave segment /zynq_ultra_ps_e_0/SAXIGP2/HP0_LPS_OCM from address space /axi_vdma_0/Data_S2MM.
+Successfully read diagram <design_1> from BD file <F:/course_s3_hls_2cg_b/vivado/03_resizeTry/resizeTry.srcs/sources_1/bd/design_1/design_1.bd>
+WARNING: [BD 41-1731] Type mismatch between connected pins: /phy/system_rst_out(undef) and /system_rst_out(rst)
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+startgroup
+set_property -dict [list CONFIG.PSU__DDRC__BUS_WIDTH {64 Bit}] [get_bd_cells zynq_ultra_ps_e_0]
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+endgroup
+save_bd_design
+Wrote  : <F:\course_s3_hls_2cg_b\vivado\03_resizeTry\resizeTry.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <F:/course_s3_hls_2cg_b/vivado/03_resizeTry/resizeTry.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+startgroup
+set_property -dict [list CONFIG.PSU__SD1__SLOT_TYPE {eMMC}] [get_bd_cells zynq_ultra_ps_e_0]
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+endgroup
+save_bd_design
+Wrote  : <F:\course_s3_hls_2cg_b\vivado\03_resizeTry\resizeTry.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <F:/course_s3_hls_2cg_b/vivado/03_resizeTry/resizeTry.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+reset_run synth_1
+reset_run design_1_zynq_ultra_ps_e_0_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_pc/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_LPD(16)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_pc/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_LPD(16)
+CRITICAL WARNING: [BD 41-237] Bus Interface property TDATA_NUM_BYTES does not match between /resizeTry_0/src(3) and /axis_subset_converter_0/M_AXIS(4)
+CRITICAL WARNING: [BD 41-237] Bus Interface property TDATA_NUM_BYTES does not match between /axis_subset_converter_1/S_AXIS(4) and /resizeTry_0/dst(3)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP0_FPD(1) and /axi_interconnect_0/s00_couplers/auto_us/M_AXI(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP0_FPD(1) and /axi_interconnect_0/s00_couplers/auto_us/M_AXI(0)
+Wrote  : <F:\course_s3_hls_2cg_b\vivado\03_resizeTry\resizeTry.srcs\sources_1\bd\design_1\design_1.bd> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/v_demosaic_0/s_axis_video_TDEST'(1) to pin: '/mipi_csi2_rx_subsyst_0/video_out_tdest'(10) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/resizeTry_0/src_TDATA'(24) to pin: '/axis_subset_converter_0/m_axis_tdata'(32) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/resizeTry_0/src_TKEEP'(3) to pin: '/axis_subset_converter_0/m_axis_tkeep'(4) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/resizeTry_0/src_TSTRB'(3) to pin: '/axis_subset_converter_0/m_axis_tstrb'(4) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axis_subset_converter_1/s_axis_tdata'(32) to pin: '/resizeTry_0/dst_TDATA'(24) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axis_subset_converter_1/s_axis_tkeep'(4) to pin: '/resizeTry_0/dst_TKEEP'(3) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axis_subset_converter_1/s_axis_tstrb'(4) to pin: '/resizeTry_0/dst_TSTRB'(3) - Only lower order bits will be connected.
+VHDL Output written to : F:/course_s3_hls_2cg_b/vivado/03_resizeTry/resizeTry.srcs/sources_1/bd/design_1/synth/design_1.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/v_demosaic_0/s_axis_video_TDEST'(1) to pin: '/mipi_csi2_rx_subsyst_0/video_out_tdest'(10) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/resizeTry_0/src_TDATA'(24) to pin: '/axis_subset_converter_0/m_axis_tdata'(32) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/resizeTry_0/src_TKEEP'(3) to pin: '/axis_subset_converter_0/m_axis_tkeep'(4) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/resizeTry_0/src_TSTRB'(3) to pin: '/axis_subset_converter_0/m_axis_tstrb'(4) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axis_subset_converter_1/s_axis_tdata'(32) to pin: '/resizeTry_0/dst_TDATA'(24) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axis_subset_converter_1/s_axis_tkeep'(4) to pin: '/resizeTry_0/dst_TKEEP'(3) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axis_subset_converter_1/s_axis_tstrb'(4) to pin: '/resizeTry_0/dst_TSTRB'(3) - Only lower order bits will be connected.
+VHDL Output written to : F:/course_s3_hls_2cg_b/vivado/03_resizeTry/resizeTry.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : F:/course_s3_hls_2cg_b/vivado/03_resizeTry/resizeTry.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [xilinx.com:ip:zynq_ultra_ps_e:3.3-0] design_1_zynq_ultra_ps_e_0_0: 
+Changes in your design (including the PCW configuration settings) are not automatically exported from Vivado to Xilinx's SDK, Petalinux or Yocto.
+This is by design to avoid disrupting existing embedded development efforts. To have any changes of your design taking effect in the embedded software flow please export your
+design by going through Vivado's main menu, click on File, then Export finally select Export Hardware, please ensure you click on the Include BitStream option.
+The auto-generated HDF file is all you need to import in Xilinx's SDK, Petalinux or Yocto for your changes to be reflected in the Embedded Software Flow.
+For more information, please consult PG201, section: Exporting PCW Settings to Embedded Software Flows
+INFO: [PSU-0] Address Range of DDR (0x7ff00000 to 0x7fffffff) is reserved by PMU for internal purpose.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_HPM0_LPD'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI_HP0_FPD'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block zynq_ultra_ps_e_0 .
+Exporting to file f:/course_s3_hls_2cg_b/vivado/03_resizeTry/resizeTry.srcs/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/hw_handoff/design_1_mipi_csi2_rx_subsyst_0_0.hwh
+Generated Block Design Tcl file f:/course_s3_hls_2cg_b/vivado/03_resizeTry/resizeTry.srcs/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/hw_handoff/design_1_mipi_csi2_rx_subsyst_0_0_bd.tcl
+Generated Hardware Definition File f:/course_s3_hls_2cg_b/vivado/03_resizeTry/resizeTry.srcs/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/synth/design_1_mipi_csi2_rx_subsyst_0_0.hwdef
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'f:/course_s3_hls_2cg_b/vivado/03_resizeTry/resizeTry.srcs/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0_ooc.xdc'
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/s00_couplers/auto_us .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'f:/course_s3_hls_2cg_b/vivado/03_resizeTry/resizeTry.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file F:/course_s3_hls_2cg_b/vivado/03_resizeTry/resizeTry.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file F:/course_s3_hls_2cg_b/vivado/03_resizeTry/resizeTry.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File F:/course_s3_hls_2cg_b/vivado/03_resizeTry/resizeTry.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = d50487fefb2e04a1; cache size = 54.180 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_us_0, cache-ID = 153422a25f9c6cd9; cache size = 54.180 MB.
+[Mon Nov 30 18:06:26 2020] Launched design_1_zynq_ultra_ps_e_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_zynq_ultra_ps_e_0_0_synth_1: F:/course_s3_hls_2cg_b/vivado/03_resizeTry/resizeTry.runs/design_1_zynq_ultra_ps_e_0_0_synth_1/runme.log
+synth_1: F:/course_s3_hls_2cg_b/vivado/03_resizeTry/resizeTry.runs/synth_1/runme.log
+[Mon Nov 30 18:06:26 2020] Launched impl_1...
+Run output will be captured here: F:/course_s3_hls_2cg_b/vivado/03_resizeTry/resizeTry.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:01:15 ; elapsed = 00:01:16 . Memory (MB): peak = 1630.488 ; gain = 225.648
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ila_0
+INFO: [xilinx.com:ip:ila:6.2-6] /ila_0: Xilinx recommends using the System ILA IP in IP Integrator. The System ILA IP is functionally equivalent to an ILA and offers additional benefits in debugging interfaces both within IP Integrator and the Hardware Manager. Consult the Programming and Debug User Guide UG908 for further details.
+endgroup
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+set_property -dict [list CONFIG.C_NUM_OF_PROBES {1} CONFIG.C_ENABLE_ILA_AXI_MON {false} CONFIG.C_MONITOR_TYPE {Native}] [get_bd_cells ila_0]
+delete_bd_objs [get_bd_cells ila_0]
+close_project
+open_project F:/course_s3_hls_2cg_b/vivado/04_rgb2gray/rgb2gray.xpr
+INFO: [Project 1-313] Project file moved from 'F:/course_s3_hls_2cg/vivado/04_rgb2gray' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/course_s3_hls_2cg_b/hls/rgb2gray'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/xilinx_2020.1/Vivado/2020.1/data/ip'.
+open_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 1630.488 ; gain = 0.000
+update_compile_order -fileset sources_1
+open_bd_design {F:/course_s3_hls_2cg_b/vivado/04_rgb2gray/rgb2gray.srcs/sources_1/bd/design_1/design_1.bd}
+Adding component instance block -- xilinx.com:ip:zynq_ultra_ps_e:3.3 - zynq_ultra_ps_e_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_interconnect_0
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding component instance block -- xilinx.com:ip:axi_vdma:6.3 - axi_vdma_0
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - axis_subset_converter_0
+Adding component instance block -- xilinx.com:ip:mipi_csi2_rx_subsystem:5.0 - mipi_csi2_rx_subsyst_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_150M
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps8_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:v_demosaic:1.0 - v_demosaic_0
+Adding component instance block -- xilinx.com:ip:v_gamma_lut:1.0 - v_gamma_lut_0
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
+Adding component instance block -- xilinx.com:hls:rgb2gray:1.0 - rgb2gray_0
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - axis_subset_converter_1
+Excluding slave segment /zynq_ultra_ps_e_0/SAXIGP2/HP0_LPS_OCM from address space /axi_vdma_0/Data_S2MM.
+Successfully read diagram <design_1> from BD file <F:/course_s3_hls_2cg_b/vivado/04_rgb2gray/rgb2gray.srcs/sources_1/bd/design_1/design_1.bd>
+WARNING: [BD 41-1731] Type mismatch between connected pins: /phy/system_rst_out(undef) and /system_rst_out(rst)
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+startgroup
+set_property -dict [list CONFIG.PSU__SD1__SLOT_TYPE {eMMC} CONFIG.PSU__DDRC__BUS_WIDTH {64 Bit}] [get_bd_cells zynq_ultra_ps_e_0]
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+endgroup
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+startgroup
+endgroup
+save_bd_design
+Wrote  : <F:\course_s3_hls_2cg_b\vivado\04_rgb2gray\rgb2gray.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <F:/course_s3_hls_2cg_b/vivado/04_rgb2gray/rgb2gray.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+reset_run synth_1
+reset_run design_1_zynq_ultra_ps_e_0_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_pc/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_LPD(16)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_pc/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_LPD(16)
+CRITICAL WARNING: [BD 41-237] Bus Interface property TDATA_NUM_BYTES does not match between /rgb2gray_0/video_in(3) and /axis_subset_converter_0/M_AXIS(4)
+CRITICAL WARNING: [BD 41-237] Bus Interface property TDATA_NUM_BYTES does not match between /axis_subset_converter_1/S_AXIS(4) and /rgb2gray_0/video_out(3)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP0_FPD(1) and /axi_interconnect_0/s00_couplers/auto_us/M_AXI(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP0_FPD(1) and /axi_interconnect_0/s00_couplers/auto_us/M_AXI(0)
+Wrote  : <F:\course_s3_hls_2cg_b\vivado\04_rgb2gray\rgb2gray.srcs\sources_1\bd\design_1\design_1.bd> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/v_demosaic_0/s_axis_video_TDEST'(1) to pin: '/mipi_csi2_rx_subsyst_0/video_out_tdest'(10) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/rgb2gray_0/video_in_TDATA'(24) to pin: '/axis_subset_converter_0/m_axis_tdata'(32) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/rgb2gray_0/video_in_TKEEP'(3) to pin: '/axis_subset_converter_0/m_axis_tkeep'(4) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/rgb2gray_0/video_in_TSTRB'(3) to pin: '/axis_subset_converter_0/m_axis_tstrb'(4) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axis_subset_converter_1/s_axis_tdata'(32) to pin: '/rgb2gray_0/video_out_TDATA'(24) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axis_subset_converter_1/s_axis_tkeep'(4) to pin: '/rgb2gray_0/video_out_TKEEP'(3) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axis_subset_converter_1/s_axis_tstrb'(4) to pin: '/rgb2gray_0/video_out_TSTRB'(3) - Only lower order bits will be connected.
+VHDL Output written to : F:/course_s3_hls_2cg_b/vivado/04_rgb2gray/rgb2gray.srcs/sources_1/bd/design_1/synth/design_1.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/v_demosaic_0/s_axis_video_TDEST'(1) to pin: '/mipi_csi2_rx_subsyst_0/video_out_tdest'(10) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/rgb2gray_0/video_in_TDATA'(24) to pin: '/axis_subset_converter_0/m_axis_tdata'(32) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/rgb2gray_0/video_in_TKEEP'(3) to pin: '/axis_subset_converter_0/m_axis_tkeep'(4) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/rgb2gray_0/video_in_TSTRB'(3) to pin: '/axis_subset_converter_0/m_axis_tstrb'(4) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axis_subset_converter_1/s_axis_tdata'(32) to pin: '/rgb2gray_0/video_out_TDATA'(24) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axis_subset_converter_1/s_axis_tkeep'(4) to pin: '/rgb2gray_0/video_out_TKEEP'(3) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axis_subset_converter_1/s_axis_tstrb'(4) to pin: '/rgb2gray_0/video_out_TSTRB'(3) - Only lower order bits will be connected.
+VHDL Output written to : F:/course_s3_hls_2cg_b/vivado/04_rgb2gray/rgb2gray.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : F:/course_s3_hls_2cg_b/vivado/04_rgb2gray/rgb2gray.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [xilinx.com:ip:zynq_ultra_ps_e:3.3-0] design_1_zynq_ultra_ps_e_0_0: 
+Changes in your design (including the PCW configuration settings) are not automatically exported from Vivado to Xilinx's SDK, Petalinux or Yocto.
+This is by design to avoid disrupting existing embedded development efforts. To have any changes of your design taking effect in the embedded software flow please export your
+design by going through Vivado's main menu, click on File, then Export finally select Export Hardware, please ensure you click on the Include BitStream option.
+The auto-generated HDF file is all you need to import in Xilinx's SDK, Petalinux or Yocto for your changes to be reflected in the Embedded Software Flow.
+For more information, please consult PG201, section: Exporting PCW Settings to Embedded Software Flows
+INFO: [PSU-0] Address Range of DDR (0x7ff00000 to 0x7fffffff) is reserved by PMU for internal purpose.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_HPM0_LPD'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI_HP0_FPD'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block zynq_ultra_ps_e_0 .
+Exporting to file f:/course_s3_hls_2cg_b/vivado/04_rgb2gray/rgb2gray.srcs/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/hw_handoff/design_1_mipi_csi2_rx_subsyst_0_0.hwh
+Generated Block Design Tcl file f:/course_s3_hls_2cg_b/vivado/04_rgb2gray/rgb2gray.srcs/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/hw_handoff/design_1_mipi_csi2_rx_subsyst_0_0_bd.tcl
+Generated Hardware Definition File f:/course_s3_hls_2cg_b/vivado/04_rgb2gray/rgb2gray.srcs/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/synth/design_1_mipi_csi2_rx_subsyst_0_0.hwdef
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'f:/course_s3_hls_2cg_b/vivado/04_rgb2gray/rgb2gray.srcs/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0_ooc.xdc'
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/s00_couplers/auto_us .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'f:/course_s3_hls_2cg_b/vivado/04_rgb2gray/rgb2gray.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file F:/course_s3_hls_2cg_b/vivado/04_rgb2gray/rgb2gray.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file F:/course_s3_hls_2cg_b/vivado/04_rgb2gray/rgb2gray.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File F:/course_s3_hls_2cg_b/vivado/04_rgb2gray/rgb2gray.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = d50487fefb2e04a1; cache size = 51.910 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_us_0, cache-ID = 153422a25f9c6cd9; cache size = 51.910 MB.
+[Tue Dec  1 11:39:24 2020] Launched design_1_zynq_ultra_ps_e_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_zynq_ultra_ps_e_0_0_synth_1: F:/course_s3_hls_2cg_b/vivado/04_rgb2gray/rgb2gray.runs/design_1_zynq_ultra_ps_e_0_0_synth_1/runme.log
+synth_1: F:/course_s3_hls_2cg_b/vivado/04_rgb2gray/rgb2gray.runs/synth_1/runme.log
+[Tue Dec  1 11:39:24 2020] Launched impl_1...
+Run output will be captured here: F:/course_s3_hls_2cg_b/vivado/04_rgb2gray/rgb2gray.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:01:07 ; elapsed = 00:01:13 . Memory (MB): peak = 2200.652 ; gain = 0.000
+close_project
+open_project F:/course_s3_hls_2cg_b/vivado/05_rgb2ycrcb/rgb2ycrcb.xpr
+INFO: [Project 1-313] Project file moved from 'F:/course_s3_hls_2cg/vivado/05_rgb2ycrcb' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/course_s3_hls_2cg_b/hls/rgb2ycrcb'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/course_s3_hls_2cg_b/vivado/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/xilinx_2020.1/Vivado/2020.1/data/ip'.
+open_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 2200.652 ; gain = 0.000
+update_compile_order -fileset sources_1
+open_bd_design {F:/course_s3_hls_2cg_b/vivado/05_rgb2ycrcb/rgb2ycrcb.srcs/sources_1/bd/design_1/design_1.bd}
+Adding component instance block -- xilinx.com:ip:zynq_ultra_ps_e:3.3 - zynq_ultra_ps_e_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_interconnect_0
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding component instance block -- xilinx.com:ip:axi_vdma:6.3 - axi_vdma_0
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - axis_subset_converter_0
+Adding component instance block -- xilinx.com:ip:mipi_csi2_rx_subsystem:5.0 - mipi_csi2_rx_subsyst_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_150M
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps8_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:v_demosaic:1.0 - v_demosaic_0
+Adding component instance block -- xilinx.com:ip:v_gamma_lut:1.0 - v_gamma_lut_0
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
+Adding component instance block -- xilinx.com:hls:rgb2ycrcb:1.0 - rgb2ycrcb_0
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - axis_subset_converter_2
+Adding component instance block -- xilinx.com:user:cpu_reg_v1_0:1.0 - cpu_reg_v1_0_0
+Excluding slave segment /zynq_ultra_ps_e_0/SAXIGP2/HP0_LPS_OCM from address space /axi_vdma_0/Data_S2MM.
+Successfully read diagram <design_1> from BD file <F:/course_s3_hls_2cg_b/vivado/05_rgb2ycrcb/rgb2ycrcb.srcs/sources_1/bd/design_1/design_1.bd>
+WARNING: [BD 41-1731] Type mismatch between connected pins: /phy/system_rst_out(undef) and /system_rst_out(rst)
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+startgroup
+set_property -dict [list CONFIG.PSU__SD1__SLOT_TYPE {eMMC} CONFIG.PSU__DDRC__BUS_WIDTH {64 Bit}] [get_bd_cells zynq_ultra_ps_e_0]
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+endgroup
+save_bd_design
+Wrote  : <F:\course_s3_hls_2cg_b\vivado\05_rgb2ycrcb\rgb2ycrcb.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <F:/course_s3_hls_2cg_b/vivado/05_rgb2ycrcb/rgb2ycrcb.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_pc/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_LPD(16)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_pc/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_LPD(16)
+CRITICAL WARNING: [BD 41-237] Bus Interface property TDATA_NUM_BYTES does not match between /axis_subset_converter_2/S_AXIS(4) and /rgb2ycrcb_0/dst(3)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP0_FPD(1) and /axi_interconnect_0/s00_couplers/auto_us/M_AXI(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP0_FPD(1) and /axi_interconnect_0/s00_couplers/auto_us/M_AXI(0)
+Wrote  : <F:\course_s3_hls_2cg_b\vivado\05_rgb2ycrcb\rgb2ycrcb.srcs\sources_1\bd\design_1\design_1.bd> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axis_subset_converter_2/s_axis_tdata'(32) to pin: '/rgb2ycrcb_0/dst_TDATA'(24) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axis_subset_converter_2/s_axis_tkeep'(4) to pin: '/rgb2ycrcb_0/dst_TKEEP'(3) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axis_subset_converter_2/s_axis_tstrb'(4) to pin: '/rgb2ycrcb_0/dst_TSTRB'(3) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/v_demosaic_0/s_axis_video_TDEST'(1) to pin: '/mipi_csi2_rx_subsyst_0/video_out_tdest'(10) - Only lower order bits will be connected.
+CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/rgb2ycrcb_0/en'(1) to pin '/cpu_reg_v1_0_0/reg_out4'(32) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/rgb2ycrcb_0/src_TDATA'(24) to pin '/axis_subset_converter_0/m_axis_tdata'(32) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/rgb2ycrcb_0/src_TKEEP'(3) to pin '/axis_subset_converter_0/m_axis_tkeep'(4) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/rgb2ycrcb_0/src_TSTRB'(3) to pin '/axis_subset_converter_0/m_axis_tstrb'(4) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : F:/course_s3_hls_2cg_b/vivado/05_rgb2ycrcb/rgb2ycrcb.srcs/sources_1/bd/design_1/synth/design_1.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axis_subset_converter_2/s_axis_tdata'(32) to pin: '/rgb2ycrcb_0/dst_TDATA'(24) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axis_subset_converter_2/s_axis_tkeep'(4) to pin: '/rgb2ycrcb_0/dst_TKEEP'(3) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axis_subset_converter_2/s_axis_tstrb'(4) to pin: '/rgb2ycrcb_0/dst_TSTRB'(3) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/v_demosaic_0/s_axis_video_TDEST'(1) to pin: '/mipi_csi2_rx_subsyst_0/video_out_tdest'(10) - Only lower order bits will be connected.
+CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/rgb2ycrcb_0/en'(1) to pin '/cpu_reg_v1_0_0/reg_out4'(32) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/rgb2ycrcb_0/src_TDATA'(24) to pin '/axis_subset_converter_0/m_axis_tdata'(32) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/rgb2ycrcb_0/src_TKEEP'(3) to pin '/axis_subset_converter_0/m_axis_tkeep'(4) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/rgb2ycrcb_0/src_TSTRB'(3) to pin '/axis_subset_converter_0/m_axis_tstrb'(4) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : F:/course_s3_hls_2cg_b/vivado/05_rgb2ycrcb/rgb2ycrcb.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : F:/course_s3_hls_2cg_b/vivado/05_rgb2ycrcb/rgb2ycrcb.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [xilinx.com:ip:zynq_ultra_ps_e:3.3-0] design_1_zynq_ultra_ps_e_0_0: 
+Changes in your design (including the PCW configuration settings) are not automatically exported from Vivado to Xilinx's SDK, Petalinux or Yocto.
+This is by design to avoid disrupting existing embedded development efforts. To have any changes of your design taking effect in the embedded software flow please export your
+design by going through Vivado's main menu, click on File, then Export finally select Export Hardware, please ensure you click on the Include BitStream option.
+The auto-generated HDF file is all you need to import in Xilinx's SDK, Petalinux or Yocto for your changes to be reflected in the Embedded Software Flow.
+For more information, please consult PG201, section: Exporting PCW Settings to Embedded Software Flows
+INFO: [PSU-0] Address Range of DDR (0x7ff00000 to 0x7fffffff) is reserved by PMU for internal purpose.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_HPM0_LPD'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI_HP0_FPD'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block zynq_ultra_ps_e_0 .
+Exporting to file f:/course_s3_hls_2cg_b/vivado/05_rgb2ycrcb/rgb2ycrcb.srcs/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/hw_handoff/design_1_mipi_csi2_rx_subsyst_0_0.hwh
+Generated Block Design Tcl file f:/course_s3_hls_2cg_b/vivado/05_rgb2ycrcb/rgb2ycrcb.srcs/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/hw_handoff/design_1_mipi_csi2_rx_subsyst_0_0_bd.tcl
+Generated Hardware Definition File f:/course_s3_hls_2cg_b/vivado/05_rgb2ycrcb/rgb2ycrcb.srcs/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/synth/design_1_mipi_csi2_rx_subsyst_0_0.hwdef
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'f:/course_s3_hls_2cg_b/vivado/05_rgb2ycrcb/rgb2ycrcb.srcs/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0_ooc.xdc'
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/s00_couplers/auto_us .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'f:/course_s3_hls_2cg_b/vivado/05_rgb2ycrcb/rgb2ycrcb.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file F:/course_s3_hls_2cg_b/vivado/05_rgb2ycrcb/rgb2ycrcb.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file F:/course_s3_hls_2cg_b/vivado/05_rgb2ycrcb/rgb2ycrcb.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File F:/course_s3_hls_2cg_b/vivado/05_rgb2ycrcb/rgb2ycrcb.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = d50487fefb2e04a1; cache size = 53.586 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_us_0, cache-ID = 153422a25f9c6cd9; cache size = 53.586 MB.
+[Tue Dec  1 13:14:53 2020] Launched design_1_zynq_ultra_ps_e_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_zynq_ultra_ps_e_0_0_synth_1: F:/course_s3_hls_2cg_b/vivado/05_rgb2ycrcb/rgb2ycrcb.runs/design_1_zynq_ultra_ps_e_0_0_synth_1/runme.log
+synth_1: F:/course_s3_hls_2cg_b/vivado/05_rgb2ycrcb/rgb2ycrcb.runs/synth_1/runme.log
+[Tue Dec  1 13:14:53 2020] Launched impl_1...
+Run output will be captured here: F:/course_s3_hls_2cg_b/vivado/05_rgb2ycrcb/rgb2ycrcb.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:01:06 ; elapsed = 00:01:13 . Memory (MB): peak = 2581.891 ; gain = 37.461
+close_project
+open_project F:/course_s3_hls_2cg_b/vivado/06_dilation/dilation.xpr
+INFO: [Project 1-313] Project file moved from 'F:/course_s3_hls_2cg/vivado/06_dilation' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/course_s3_hls_2cg_b/hls/dilation'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/course_s3_hls_2cg_b/vivado/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/xilinx_2020.1/Vivado/2020.1/data/ip'.
+open_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 2581.891 ; gain = 0.000
+update_compile_order -fileset sources_1
+open_bd_design {F:/course_s3_hls_2cg_b/vivado/06_dilation/dilation.srcs/sources_1/bd/design_1/design_1.bd}
+Adding component instance block -- xilinx.com:ip:zynq_ultra_ps_e:3.3 - zynq_ultra_ps_e_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_interconnect_0
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding component instance block -- xilinx.com:ip:axi_vdma:6.3 - axi_vdma_0
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - axis_subset_converter_0
+Adding component instance block -- xilinx.com:ip:mipi_csi2_rx_subsystem:5.0 - mipi_csi2_rx_subsyst_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_150M
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps8_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:v_demosaic:1.0 - v_demosaic_0
+Adding component instance block -- xilinx.com:ip:v_gamma_lut:1.0 - v_gamma_lut_0
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
+Adding component instance block -- xilinx.com:hls:dilation:1.0 - dilation_0
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - axis_subset_converter_1
+Excluding slave segment /zynq_ultra_ps_e_0/SAXIGP2/HP0_LPS_OCM from address space /axi_vdma_0/Data_S2MM.
+Successfully read diagram <design_1> from BD file <F:/course_s3_hls_2cg_b/vivado/06_dilation/dilation.srcs/sources_1/bd/design_1/design_1.bd>
+WARNING: [BD 41-1731] Type mismatch between connected pins: /phy/system_rst_out(undef) and /system_rst_out(rst)
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+startgroup
+set_property -dict [list CONFIG.PSU__SD1__SLOT_TYPE {eMMC} CONFIG.PSU__DDRC__BUS_WIDTH {64 Bit}] [get_bd_cells zynq_ultra_ps_e_0]
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+endgroup
+save_bd_design
+Wrote  : <F:\course_s3_hls_2cg_b\vivado\06_dilation\dilation.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <F:/course_s3_hls_2cg_b/vivado/06_dilation/dilation.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+reset_run synth_1
+reset_run design_1_zynq_ultra_ps_e_0_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_pc/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_LPD(16)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_pc/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_LPD(16)
+CRITICAL WARNING: [BD 41-237] Bus Interface property TDATA_NUM_BYTES does not match between /dilation_0/src(3) and /axis_subset_converter_0/M_AXIS(4)
+CRITICAL WARNING: [BD 41-237] Bus Interface property TDATA_NUM_BYTES does not match between /axis_subset_converter_1/S_AXIS(4) and /dilation_0/dst(3)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP0_FPD(1) and /axi_interconnect_0/s00_couplers/auto_us/M_AXI(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP0_FPD(1) and /axi_interconnect_0/s00_couplers/auto_us/M_AXI(0)
+Wrote  : <F:\course_s3_hls_2cg_b\vivado\06_dilation\dilation.srcs\sources_1\bd\design_1\design_1.bd> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axis_subset_converter_1/s_axis_tdata'(32) to pin: '/dilation_0/dst_TDATA'(24) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axis_subset_converter_1/s_axis_tkeep'(4) to pin: '/dilation_0/dst_TKEEP'(3) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axis_subset_converter_1/s_axis_tstrb'(4) to pin: '/dilation_0/dst_TSTRB'(3) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/v_demosaic_0/s_axis_video_TDEST'(1) to pin: '/mipi_csi2_rx_subsyst_0/video_out_tdest'(10) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/dilation_0/src_TDATA'(24) to pin: '/axis_subset_converter_0/m_axis_tdata'(32) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/dilation_0/src_TKEEP'(3) to pin: '/axis_subset_converter_0/m_axis_tkeep'(4) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/dilation_0/src_TSTRB'(3) to pin: '/axis_subset_converter_0/m_axis_tstrb'(4) - Only lower order bits will be connected.
+VHDL Output written to : F:/course_s3_hls_2cg_b/vivado/06_dilation/dilation.srcs/sources_1/bd/design_1/synth/design_1.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axis_subset_converter_1/s_axis_tdata'(32) to pin: '/dilation_0/dst_TDATA'(24) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axis_subset_converter_1/s_axis_tkeep'(4) to pin: '/dilation_0/dst_TKEEP'(3) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axis_subset_converter_1/s_axis_tstrb'(4) to pin: '/dilation_0/dst_TSTRB'(3) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/v_demosaic_0/s_axis_video_TDEST'(1) to pin: '/mipi_csi2_rx_subsyst_0/video_out_tdest'(10) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/dilation_0/src_TDATA'(24) to pin: '/axis_subset_converter_0/m_axis_tdata'(32) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/dilation_0/src_TKEEP'(3) to pin: '/axis_subset_converter_0/m_axis_tkeep'(4) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/dilation_0/src_TSTRB'(3) to pin: '/axis_subset_converter_0/m_axis_tstrb'(4) - Only lower order bits will be connected.
+VHDL Output written to : F:/course_s3_hls_2cg_b/vivado/06_dilation/dilation.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : F:/course_s3_hls_2cg_b/vivado/06_dilation/dilation.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [xilinx.com:ip:zynq_ultra_ps_e:3.3-0] design_1_zynq_ultra_ps_e_0_0: 
+Changes in your design (including the PCW configuration settings) are not automatically exported from Vivado to Xilinx's SDK, Petalinux or Yocto.
+This is by design to avoid disrupting existing embedded development efforts. To have any changes of your design taking effect in the embedded software flow please export your
+design by going through Vivado's main menu, click on File, then Export finally select Export Hardware, please ensure you click on the Include BitStream option.
+The auto-generated HDF file is all you need to import in Xilinx's SDK, Petalinux or Yocto for your changes to be reflected in the Embedded Software Flow.
+For more information, please consult PG201, section: Exporting PCW Settings to Embedded Software Flows
+INFO: [PSU-0] Address Range of DDR (0x7ff00000 to 0x7fffffff) is reserved by PMU for internal purpose.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_HPM0_LPD'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI_HP0_FPD'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block zynq_ultra_ps_e_0 .
+Exporting to file f:/course_s3_hls_2cg_b/vivado/06_dilation/dilation.srcs/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/hw_handoff/design_1_mipi_csi2_rx_subsyst_0_0.hwh
+Generated Block Design Tcl file f:/course_s3_hls_2cg_b/vivado/06_dilation/dilation.srcs/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/hw_handoff/design_1_mipi_csi2_rx_subsyst_0_0_bd.tcl
+Generated Hardware Definition File f:/course_s3_hls_2cg_b/vivado/06_dilation/dilation.srcs/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/synth/design_1_mipi_csi2_rx_subsyst_0_0.hwdef
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'f:/course_s3_hls_2cg_b/vivado/06_dilation/dilation.srcs/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0_ooc.xdc'
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/s00_couplers/auto_us .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'f:/course_s3_hls_2cg_b/vivado/06_dilation/dilation.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file F:/course_s3_hls_2cg_b/vivado/06_dilation/dilation.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file F:/course_s3_hls_2cg_b/vivado/06_dilation/dilation.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File F:/course_s3_hls_2cg_b/vivado/06_dilation/dilation.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = d50487fefb2e04a1; cache size = 56.455 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_us_0, cache-ID = 153422a25f9c6cd9; cache size = 56.455 MB.
+[Tue Dec  1 15:05:53 2020] Launched design_1_zynq_ultra_ps_e_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_zynq_ultra_ps_e_0_0_synth_1: F:/course_s3_hls_2cg_b/vivado/06_dilation/dilation.runs/design_1_zynq_ultra_ps_e_0_0_synth_1/runme.log
+synth_1: F:/course_s3_hls_2cg_b/vivado/06_dilation/dilation.runs/synth_1/runme.log
+[Tue Dec  1 15:05:53 2020] Launched impl_1...
+Run output will be captured here: F:/course_s3_hls_2cg_b/vivado/06_dilation/dilation.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:01:00 ; elapsed = 00:01:08 . Memory (MB): peak = 2737.438 ; gain = 0.000
+close_project
+open_project F:/course_s3_hls_2cg_b/vivado/07_erosion/erosion.xpr
+INFO: [Project 1-313] Project file moved from 'F:/course_s3_hls_2cg/vivado/07_erosion' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/course_s3_hls_2cg_b/hls/erosion/erosion'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/course_s3_hls_2cg_b/vivado/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/xilinx_2020.1/Vivado/2020.1/data/ip'.
+open_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 2737.438 ; gain = 0.000
+update_compile_order -fileset sources_1
+open_bd_design {F:/course_s3_hls_2cg_b/vivado/07_erosion/erosion.srcs/sources_1/bd/design_1/design_1.bd}
+Adding component instance block -- xilinx.com:ip:zynq_ultra_ps_e:3.3 - zynq_ultra_ps_e_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_interconnect_0
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding component instance block -- xilinx.com:ip:axi_vdma:6.3 - axi_vdma_0
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - axis_subset_converter_0
+Adding component instance block -- xilinx.com:ip:mipi_csi2_rx_subsystem:5.0 - mipi_csi2_rx_subsyst_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_150M
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps8_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:v_demosaic:1.0 - v_demosaic_0
+Adding component instance block -- xilinx.com:ip:v_gamma_lut:1.0 - v_gamma_lut_0
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
+Adding component instance block -- xilinx.com:hls:erosion:1.0 - erosion_0
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - axis_subset_converter_1
+Excluding slave segment /zynq_ultra_ps_e_0/SAXIGP2/HP0_LPS_OCM from address space /axi_vdma_0/Data_S2MM.
+Successfully read diagram <design_1> from BD file <F:/course_s3_hls_2cg_b/vivado/07_erosion/erosion.srcs/sources_1/bd/design_1/design_1.bd>
+WARNING: [BD 41-1731] Type mismatch between connected pins: /phy/system_rst_out(undef) and /system_rst_out(rst)
+close_project
+open_project F:/course_s3_hls_2cg_b/vivado/08_video_on_video/video_on_video.xpr
+INFO: [Project 1-313] Project file moved from 'F:/course_s3_hls_2cg/vivado/08_video_on_video' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/course_s3_hls_2cg_b/hls/overlaystream'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/course_s3_hls_2cg_b/vivado/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/xilinx_2020.1/Vivado/2020.1/data/ip'.
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'design_1.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+design_1_edge_canny_detector_0_0
+
+WARNING: [Project 1-533] File 'F:/27_an5641_mipi_dp/vivado/mipi_dp.srcs/sources_1/bd/design_1/ip/design_1_edge_canny_detector_0_0/ip/design_1_overlaystream_0_0/design_1_overlaystream_0_0.xci' could not be found in the subdesign 'F:/27_an5641_mipi_dp/vivado/mipi_dp.srcs/sources_1/bd/design_1/design_1.bd', but fileset 'design_1_overlaystream_0_0' still exists. The fileset and corresponding run(s) will be deleted the next time top-level synthesis is run.
+open_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:21 . Memory (MB): peak = 2737.438 ; gain = 0.000
+update_compile_order -fileset sources_1
+open_bd_design {F:/27_an5641_mipi_dp/vivado/mipi_dp.srcs/sources_1/bd/design_1/design_1.bd}
+Adding component instance block -- xilinx.com:ip:zynq_ultra_ps_e:3.3 - zynq_ultra_ps_e_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_interconnect_0
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding component instance block -- xilinx.com:ip:axi_vdma:6.3 - axi_vdma_0
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - axis_subset_converter_0
+Adding component instance block -- xilinx.com:ip:mipi_csi2_rx_subsystem:5.0 - mipi_csi2_rx_subsyst_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_150M
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps8_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:v_demosaic:1.0 - v_demosaic_0
+Adding component instance block -- xilinx.com:ip:v_gamma_lut:1.0 - v_gamma_lut_0
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - axis_subset_converter_1
+Adding component instance block -- xilinx.com:user:cpu_reg_v1_0:1.0 - cpu_reg_v1_0_0
+Adding component instance block -- xilinx.com:hls:edge_canny_detector:1.0 - edge_canny_detector_0
+Excluding slave segment /zynq_ultra_ps_e_0/SAXIGP2/HP0_LPS_OCM from address space /axi_vdma_0/Data_S2MM.
+Successfully read diagram <design_1> from BD file <F:/27_an5641_mipi_dp/vivado/mipi_dp.srcs/sources_1/bd/design_1/design_1.bd>
+WARNING: [BD 41-1731] Type mismatch between connected pins: /phy/system_rst_out(undef) and /system_rst_out(rst)
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+startgroup
+set_property -dict [list CONFIG.PSU__SD1__SLOT_TYPE {eMMC} CONFIG.PSU__DDRC__BUS_WIDTH {64 Bit}] [get_bd_cells zynq_ultra_ps_e_0]
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+endgroup
+save_bd_design
+Wrote  : <F:\27_an5641_mipi_dp\vivado\mipi_dp.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <F:/27_an5641_mipi_dp/vivado/mipi_dp.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+reset_run synth_1
+reset_run design_1_zynq_ultra_ps_e_0_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+WARNING: [Vivado 12-4801] The synthesis checkpoint for IP 'F:/27_an5641_mipi_dp/vivado/mipi_dp.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0.xci' is available but stale and the IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [Runs 36-337] The following IPs are either missing output products or output products are not up-to-date for Synthesis target. Since these IPs are locked, no update to the output products can be done. 
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+F:/27_an5641_mipi_dp/vivado/mipi_dp.srcs/sources_1/bd/design_1/design_1.bd
+
+WARNING: [Runs 36-337] The following IPs are either missing output products or output products are not up-to-date for Implementation target. Since these IPs are locked, no update to the output products can be done. 
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+F:/27_an5641_mipi_dp/vivado/mipi_dp.srcs/sources_1/bd/design_1/design_1.bd
+
+[Wed Dec  2 11:59:46 2020] Launched design_1_zynq_ultra_ps_e_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_zynq_ultra_ps_e_0_0_synth_1: F:/course_s3_hls_2cg_b/vivado/08_video_on_video/video_on_video.runs/design_1_zynq_ultra_ps_e_0_0_synth_1/runme.log
+synth_1: F:/course_s3_hls_2cg_b/vivado/08_video_on_video/video_on_video.runs/synth_1/runme.log
+[Wed Dec  2 11:59:46 2020] Launched impl_1...
+Run output will be captured here: F:/course_s3_hls_2cg_b/vivado/08_video_on_video/video_on_video.runs/impl_1/runme.log
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+startgroup
+endgroup
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP design_1_zynq_ultra_ps_e_0_0, cache-ID = 79be11a70fbcc629.
+WARNING: [Vivado 12-4801] The synthesis checkpoint for IP 'F:/27_an5641_mipi_dp/vivado/mipi_dp.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0.xci' is available but stale and the IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+[Wed Dec  2 12:56:25 2020] Launched impl_1...
+Run output will be captured here: F:/course_s3_hls_2cg_b/vivado/08_video_on_video/video_on_video.runs/impl_1/runme.log
+update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/course_s3_hls_2cg_b/hls/overlaystream'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/course_s3_hls_2cg_b/vivado/ip_repo'.
+delete_bd_objs [get_bd_intf_nets edge_canny_detector_0_dst] [get_bd_nets edge_canny_detector_0_src_TREADY] [get_bd_nets axis_subset_converter_0_m_axis_tdata] [get_bd_nets axis_subset_converter_0_m_axis_tkeep] [get_bd_nets axis_subset_converter_0_m_axis_tid] [get_bd_nets axis_subset_converter_0_m_axis_tdest] [get_bd_nets cpu_reg_v1_0_0_reg_out6] [get_bd_nets axis_subset_converter_0_m_axis_tuser] [get_bd_nets axis_subset_converter_0_m_axis_tvalid] [get_bd_nets axis_subset_converter_0_m_axis_tstrb] [get_bd_nets axis_subset_converter_0_m_axis_tlast] [get_bd_nets cpu_reg_v1_0_0_reg_out5] [get_bd_cells edge_canny_detector_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:hls:overlaystream:1.0 overlaystream_0
+endgroup
+set_property location {5.5 1934 933} [get_bd_cells overlaystream_0]
+connect_bd_net [get_bd_pins axis_subset_converter_0/m_axis_tdata] [get_bd_pins overlaystream_0/video_in_TDATA]
+WARNING: [BD 41-1306] The connection to interface pin /axis_subset_converter_0/m_axis_tdata is being overridden by the user. This pin will not be connected as a part of interface connection M_AXIS
+WARNING: [BD 41-1306] The connection to interface pin /overlaystream_0/video_in_TDATA is being overridden by the user. This pin will not be connected as a part of interface connection video_in
+startgroup
+connect_bd_net [get_bd_pins axis_subset_converter_0/m_axis_tdest] [get_bd_pins overlaystream_0/video_in_TDEST]
+WARNING: [BD 41-1306] The connection to interface pin /axis_subset_converter_0/m_axis_tdest is being overridden by the user. This pin will not be connected as a part of interface connection M_AXIS
+WARNING: [BD 41-1306] The connection to interface pin /overlaystream_0/video_in_TDEST is being overridden by the user. This pin will not be connected as a part of interface connection video_in
+endgroup
+connect_bd_net [get_bd_pins axis_subset_converter_0/m_axis_tid] [get_bd_pins overlaystream_0/video_in_TID]
+WARNING: [BD 41-1306] The connection to interface pin /axis_subset_converter_0/m_axis_tid is being overridden by the user. This pin will not be connected as a part of interface connection M_AXIS
+WARNING: [BD 41-1306] The connection to interface pin /overlaystream_0/video_in_TID is being overridden by the user. This pin will not be connected as a part of interface connection video_in
+connect_bd_net [get_bd_pins axis_subset_converter_0/m_axis_tkeep] [get_bd_pins overlaystream_0/video_in_TKEEP]
+WARNING: [BD 41-1306] The connection to interface pin /axis_subset_converter_0/m_axis_tkeep is being overridden by the user. This pin will not be connected as a part of interface connection M_AXIS
+WARNING: [BD 41-1306] The connection to interface pin /overlaystream_0/video_in_TKEEP is being overridden by the user. This pin will not be connected as a part of interface connection video_in
+connect_bd_net [get_bd_pins axis_subset_converter_0/m_axis_tlast] [get_bd_pins overlaystream_0/video_in_TLAST]
+WARNING: [BD 41-1306] The connection to interface pin /axis_subset_converter_0/m_axis_tlast is being overridden by the user. This pin will not be connected as a part of interface connection M_AXIS
+WARNING: [BD 41-1306] The connection to interface pin /overlaystream_0/video_in_TLAST is being overridden by the user. This pin will not be connected as a part of interface connection video_in
+connect_bd_net [get_bd_pins axis_subset_converter_0/m_axis_tready] [get_bd_pins overlaystream_0/video_in_TREADY]
+WARNING: [BD 41-1306] The connection to interface pin /axis_subset_converter_0/m_axis_tready is being overridden by the user. This pin will not be connected as a part of interface connection M_AXIS
+WARNING: [BD 41-1306] The connection to interface pin /overlaystream_0/video_in_TREADY is being overridden by the user. This pin will not be connected as a part of interface connection video_in
+connect_bd_net [get_bd_pins axis_subset_converter_0/m_axis_tstrb] [get_bd_pins overlaystream_0/video_in_TSTRB]
+WARNING: [BD 41-1306] The connection to interface pin /axis_subset_converter_0/m_axis_tstrb is being overridden by the user. This pin will not be connected as a part of interface connection M_AXIS
+WARNING: [BD 41-1306] The connection to interface pin /overlaystream_0/video_in_TSTRB is being overridden by the user. This pin will not be connected as a part of interface connection video_in
+connect_bd_net [get_bd_pins axis_subset_converter_0/m_axis_tuser] [get_bd_pins overlaystream_0/video_in_TUSER]
+WARNING: [BD 41-1306] The connection to interface pin /axis_subset_converter_0/m_axis_tuser is being overridden by the user. This pin will not be connected as a part of interface connection M_AXIS
+WARNING: [BD 41-1306] The connection to interface pin /overlaystream_0/video_in_TUSER is being overridden by the user. This pin will not be connected as a part of interface connection video_in
+connect_bd_net [get_bd_pins axis_subset_converter_0/m_axis_tvalid] [get_bd_pins overlaystream_0/video_in_TVALID]
+WARNING: [BD 41-1306] The connection to interface pin /axis_subset_converter_0/m_axis_tvalid is being overridden by the user. This pin will not be connected as a part of interface connection M_AXIS
+WARNING: [BD 41-1306] The connection to interface pin /overlaystream_0/video_in_TVALID is being overridden by the user. This pin will not be connected as a part of interface connection video_in
+connect_bd_net [get_bd_pins overlaystream_0/overly_alpha_ap_vld] [get_bd_pins axis_subset_converter_0/m_axis_tvalid]
+connect_bd_net [get_bd_pins overlaystream_0/overly_x_ap_vld] [get_bd_pins axis_subset_converter_0/m_axis_tvalid]
+connect_bd_net [get_bd_pins overlaystream_0/overly_y_ap_vld] [get_bd_pins axis_subset_converter_0/m_axis_tvalid]
+connect_bd_net [get_bd_pins overlaystream_0/overly_h_ap_vld] [get_bd_pins axis_subset_converter_0/m_axis_tvalid]
+connect_bd_net [get_bd_pins overlaystream_0/overly_w_ap_vld] [get_bd_pins axis_subset_converter_0/m_axis_tvalid]
+connect_bd_net [get_bd_pins overlaystream_0/overly_alpha] [get_bd_pins cpu_reg_v1_0_0/reg_out5]
+connect_bd_net [get_bd_pins overlaystream_0/overly_x] [get_bd_pins cpu_reg_v1_0_0/reg_out5]
+delete_bd_objs [get_bd_nets cpu_reg_v1_0_0_reg_out5]
+connect_bd_net [get_bd_pins overlaystream_0/overly_alpha] [get_bd_pins cpu_reg_v1_0_0/reg_out4]
+connect_bd_net [get_bd_pins overlaystream_0/overly_x] [get_bd_pins cpu_reg_v1_0_0/reg_out5]
+connect_bd_net [get_bd_pins overlaystream_0/overly_y] [get_bd_pins cpu_reg_v1_0_0/reg_out6]
+connect_bd_net [get_bd_pins overlaystream_0/overly_h] [get_bd_pins cpu_reg_v1_0_0/reg_out7]
+connect_bd_net [get_bd_pins overlaystream_0/overly_w] [get_bd_pins cpu_reg_v1_0_0/reg_out8]
+connect_bd_net [get_bd_pins overlaystream_0/ap_clk] [get_bd_pins zynq_ultra_ps_e_0/pl_clk0]
+connect_bd_net [get_bd_pins overlaystream_0/ap_rst_n] [get_bd_pins proc_sys_reset_150M/peripheral_aresetn]
+validate_bd_design
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_pc/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_LPD(16)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_pc/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_LPD(16)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP0_FPD(1) and /axi_interconnect_0/s00_couplers/auto_us/M_AXI(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP0_FPD(1) and /axi_interconnect_0/s00_couplers/auto_us/M_AXI(0)
+validate_bd_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 2737.438 ; gain = 0.000
+save_bd_design
+Wrote  : <F:\27_an5641_mipi_dp\vivado\mipi_dp.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <F:/27_an5641_mipi_dp/vivado/mipi_dp.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+reset_run synth_1
+reset_run design_1_zynq_ultra_ps_e_0_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/v_demosaic_0/s_axis_video_TDEST'(1) to pin: '/mipi_csi2_rx_subsyst_0/video_out_tdest'(10) - Only lower order bits will be connected.
+CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/overlaystream_0/video_in_TDATA'(24) to pin '/axis_subset_converter_0/m_axis_tdata'(32) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/overlaystream_0/video_in_TKEEP'(3) to pin '/axis_subset_converter_0/m_axis_tkeep'(4) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/overlaystream_0/video_in_TSTRB'(3) to pin '/axis_subset_converter_0/m_axis_tstrb'(4) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/overlaystream_0/overly_alpha'(8) to pin '/cpu_reg_v1_0_0/reg_out4'(32) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : F:/27_an5641_mipi_dp/vivado/mipi_dp.srcs/sources_1/bd/design_1/synth/design_1.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/v_demosaic_0/s_axis_video_TDEST'(1) to pin: '/mipi_csi2_rx_subsyst_0/video_out_tdest'(10) - Only lower order bits will be connected.
+CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/overlaystream_0/video_in_TDATA'(24) to pin '/axis_subset_converter_0/m_axis_tdata'(32) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/overlaystream_0/video_in_TKEEP'(3) to pin '/axis_subset_converter_0/m_axis_tkeep'(4) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/overlaystream_0/video_in_TSTRB'(3) to pin '/axis_subset_converter_0/m_axis_tstrb'(4) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/overlaystream_0/overly_alpha'(8) to pin '/cpu_reg_v1_0_0/reg_out4'(32) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : F:/27_an5641_mipi_dp/vivado/mipi_dp.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : F:/27_an5641_mipi_dp/vivado/mipi_dp.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [xilinx.com:ip:zynq_ultra_ps_e:3.3-0] design_1_zynq_ultra_ps_e_0_0: 
+Changes in your design (including the PCW configuration settings) are not automatically exported from Vivado to Xilinx's SDK, Petalinux or Yocto.
+This is by design to avoid disrupting existing embedded development efforts. To have any changes of your design taking effect in the embedded software flow please export your
+design by going through Vivado's main menu, click on File, then Export finally select Export Hardware, please ensure you click on the Include BitStream option.
+The auto-generated HDF file is all you need to import in Xilinx's SDK, Petalinux or Yocto for your changes to be reflected in the Embedded Software Flow.
+For more information, please consult PG201, section: Exporting PCW Settings to Embedded Software Flows
+INFO: [PSU-0] Address Range of DDR (0x7ff00000 to 0x7fffffff) is reserved by PMU for internal purpose.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_HPM0_LPD'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI_HP0_FPD'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block zynq_ultra_ps_e_0 .
+Exporting to file f:/27_an5641_mipi_dp/vivado/mipi_dp.srcs/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/hw_handoff/design_1_mipi_csi2_rx_subsyst_0_0.hwh
+Generated Block Design Tcl file f:/27_an5641_mipi_dp/vivado/mipi_dp.srcs/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/hw_handoff/design_1_mipi_csi2_rx_subsyst_0_0_bd.tcl
+Generated Hardware Definition File f:/27_an5641_mipi_dp/vivado/mipi_dp.srcs/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/synth/design_1_mipi_csi2_rx_subsyst_0_0.hwdef
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'f:/27_an5641_mipi_dp/vivado/mipi_dp.srcs/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0_ooc.xdc'
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/s00_couplers/auto_us .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'f:/27_an5641_mipi_dp/vivado/mipi_dp.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s00_couplers/auto_pc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block overlaystream_0 .
+Exporting to file F:/27_an5641_mipi_dp/vivado/mipi_dp.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file F:/27_an5641_mipi_dp/vivado/mipi_dp.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File F:/27_an5641_mipi_dp/vivado/mipi_dp.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = d50487fefb2e04a1.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP design_1_auto_us_0, cache-ID = 153422a25f9c6cd9.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP design_1_overlaystream_0_0, cache-ID = 7aca37a10901e71b.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP design_1_zynq_ultra_ps_e_0_0, cache-ID = 79be11a70fbcc629.
+[Wed Dec  2 13:11:35 2020] Launched synth_1...
+Run output will be captured here: F:/course_s3_hls_2cg_b/vivado/08_video_on_video/video_on_video.runs/synth_1/runme.log
+[Wed Dec  2 13:11:35 2020] Launched impl_1...
+Run output will be captured here: F:/course_s3_hls_2cg_b/vivado/08_video_on_video/video_on_video.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:48 ; elapsed = 00:00:56 . Memory (MB): peak = 2737.438 ; gain = 0.000
+close_project
+open_project F:/course_s3_hls_2cg_b/vivado/09_contrast_adj/contrast_adj.xpr
+INFO: [Project 1-313] Project file moved from 'F:/course_s3_hls_2cg/vivado/09_contrast_adj' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/course_s3_hls_2cg_b/hls'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/course_s3_hls_2cg_b/vivado/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/xilinx_2020.1/Vivado/2020.1/data/ip'.
+open_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:20 . Memory (MB): peak = 2737.438 ; gain = 0.000
+update_compile_order -fileset sources_1
+open_bd_design {F:/course_s3_hls_2cg_b/vivado/09_contrast_adj/contrast_adj.srcs/sources_1/bd/design_1/design_1.bd}
+Adding component instance block -- xilinx.com:ip:zynq_ultra_ps_e:3.3 - zynq_ultra_ps_e_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_interconnect_0
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding component instance block -- xilinx.com:ip:axi_vdma:6.3 - axi_vdma_0
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - axis_subset_converter_0
+Adding component instance block -- xilinx.com:ip:mipi_csi2_rx_subsystem:5.0 - mipi_csi2_rx_subsyst_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_150M
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps8_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:v_demosaic:1.0 - v_demosaic_0
+Adding component instance block -- xilinx.com:ip:v_gamma_lut:1.0 - v_gamma_lut_0
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
+Adding component instance block -- xilinx.com:hls:contrastadj:1.0 - contrastadj_0
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - axis_subset_converter_1
+Adding component instance block -- xilinx.com:user:cpu_reg_v1_0:1.0 - cpu_reg_v1_0_0
+Excluding slave segment /zynq_ultra_ps_e_0/SAXIGP2/HP0_LPS_OCM from address space /axi_vdma_0/Data_S2MM.
+Successfully read diagram <design_1> from BD file <F:/course_s3_hls_2cg_b/vivado/09_contrast_adj/contrast_adj.srcs/sources_1/bd/design_1/design_1.bd>
+WARNING: [BD 41-1731] Type mismatch between connected pins: /phy/system_rst_out(undef) and /system_rst_out(rst)
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+startgroup
+set_property -dict [list CONFIG.PSU__SD1__SLOT_TYPE {eMMC} CONFIG.PSU__DDRC__BUS_WIDTH {64 Bit}] [get_bd_cells zynq_ultra_ps_e_0]
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+endgroup
+save_bd_design
+Wrote  : <F:\course_s3_hls_2cg_b\vivado\09_contrast_adj\contrast_adj.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <F:/course_s3_hls_2cg_b/vivado/09_contrast_adj/contrast_adj.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+reset_run synth_1
+reset_run design_1_zynq_ultra_ps_e_0_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_pc/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_LPD(16)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_pc/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_LPD(16)
+CRITICAL WARNING: [BD 41-237] Bus Interface property TDATA_NUM_BYTES does not match between /axis_subset_converter_1/S_AXIS(4) and /contrastadj_0/dst_axi(3)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP0_FPD(1) and /axi_interconnect_0/s00_couplers/auto_us/M_AXI(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP0_FPD(1) and /axi_interconnect_0/s00_couplers/auto_us/M_AXI(0)
+Wrote  : <F:\course_s3_hls_2cg_b\vivado\09_contrast_adj\contrast_adj.srcs\sources_1\bd\design_1\design_1.bd> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/v_demosaic_0/s_axis_video_TDEST'(1) to pin: '/mipi_csi2_rx_subsyst_0/video_out_tdest'(10) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axis_subset_converter_1/s_axis_tdata'(32) to pin: '/contrastadj_0/dst_axi_TDATA'(24) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axis_subset_converter_1/s_axis_tkeep'(4) to pin: '/contrastadj_0/dst_axi_TKEEP'(3) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axis_subset_converter_1/s_axis_tstrb'(4) to pin: '/contrastadj_0/dst_axi_TSTRB'(3) - Only lower order bits will be connected.
+CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/contrastadj_0/src_axi_TDATA'(24) to pin '/axis_subset_converter_0/m_axis_tdata'(32) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/contrastadj_0/src_axi_TKEEP'(3) to pin '/axis_subset_converter_0/m_axis_tkeep'(4) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/contrastadj_0/src_axi_TSTRB'(3) to pin '/axis_subset_converter_0/m_axis_tstrb'(4) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : F:/course_s3_hls_2cg_b/vivado/09_contrast_adj/contrast_adj.srcs/sources_1/bd/design_1/synth/design_1.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/v_demosaic_0/s_axis_video_TDEST'(1) to pin: '/mipi_csi2_rx_subsyst_0/video_out_tdest'(10) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axis_subset_converter_1/s_axis_tdata'(32) to pin: '/contrastadj_0/dst_axi_TDATA'(24) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axis_subset_converter_1/s_axis_tkeep'(4) to pin: '/contrastadj_0/dst_axi_TKEEP'(3) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axis_subset_converter_1/s_axis_tstrb'(4) to pin: '/contrastadj_0/dst_axi_TSTRB'(3) - Only lower order bits will be connected.
+CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/contrastadj_0/src_axi_TDATA'(24) to pin '/axis_subset_converter_0/m_axis_tdata'(32) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/contrastadj_0/src_axi_TKEEP'(3) to pin '/axis_subset_converter_0/m_axis_tkeep'(4) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/contrastadj_0/src_axi_TSTRB'(3) to pin '/axis_subset_converter_0/m_axis_tstrb'(4) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : F:/course_s3_hls_2cg_b/vivado/09_contrast_adj/contrast_adj.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : F:/course_s3_hls_2cg_b/vivado/09_contrast_adj/contrast_adj.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [xilinx.com:ip:zynq_ultra_ps_e:3.3-0] design_1_zynq_ultra_ps_e_0_0: 
+Changes in your design (including the PCW configuration settings) are not automatically exported from Vivado to Xilinx's SDK, Petalinux or Yocto.
+This is by design to avoid disrupting existing embedded development efforts. To have any changes of your design taking effect in the embedded software flow please export your
+design by going through Vivado's main menu, click on File, then Export finally select Export Hardware, please ensure you click on the Include BitStream option.
+The auto-generated HDF file is all you need to import in Xilinx's SDK, Petalinux or Yocto for your changes to be reflected in the Embedded Software Flow.
+For more information, please consult PG201, section: Exporting PCW Settings to Embedded Software Flows
+INFO: [PSU-0] Address Range of DDR (0x7ff00000 to 0x7fffffff) is reserved by PMU for internal purpose.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_HPM0_LPD'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI_HP0_FPD'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block zynq_ultra_ps_e_0 .
+Exporting to file f:/course_s3_hls_2cg_b/vivado/09_contrast_adj/contrast_adj.srcs/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/hw_handoff/design_1_mipi_csi2_rx_subsyst_0_0.hwh
+Generated Block Design Tcl file f:/course_s3_hls_2cg_b/vivado/09_contrast_adj/contrast_adj.srcs/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/hw_handoff/design_1_mipi_csi2_rx_subsyst_0_0_bd.tcl
+Generated Hardware Definition File f:/course_s3_hls_2cg_b/vivado/09_contrast_adj/contrast_adj.srcs/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/synth/design_1_mipi_csi2_rx_subsyst_0_0.hwdef
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'f:/course_s3_hls_2cg_b/vivado/09_contrast_adj/contrast_adj.srcs/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0_ooc.xdc'
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/s00_couplers/auto_us .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'f:/course_s3_hls_2cg_b/vivado/09_contrast_adj/contrast_adj.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file F:/course_s3_hls_2cg_b/vivado/09_contrast_adj/contrast_adj.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file F:/course_s3_hls_2cg_b/vivado/09_contrast_adj/contrast_adj.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File F:/course_s3_hls_2cg_b/vivado/09_contrast_adj/contrast_adj.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = d50487fefb2e04a1; cache size = 93.806 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_us_0, cache-ID = 153422a25f9c6cd9; cache size = 93.806 MB.
+[Wed Dec  2 14:07:34 2020] Launched design_1_zynq_ultra_ps_e_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_zynq_ultra_ps_e_0_0_synth_1: F:/course_s3_hls_2cg_b/vivado/09_contrast_adj/contrast_adj.runs/design_1_zynq_ultra_ps_e_0_0_synth_1/runme.log
+synth_1: F:/course_s3_hls_2cg_b/vivado/09_contrast_adj/contrast_adj.runs/synth_1/runme.log
+[Wed Dec  2 14:07:34 2020] Launched impl_1...
+Run output will be captured here: F:/course_s3_hls_2cg_b/vivado/09_contrast_adj/contrast_adj.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:01:13 ; elapsed = 00:01:18 . Memory (MB): peak = 2762.684 ; gain = 25.246
+close_project
+open_project F:/course_s3_hls_2cg_b/vivado/10_detectCorner/detectCorner.xpr
+INFO: [Project 1-313] Project file moved from 'F:/course_s3_hls_2cg/vivado/10_detectCorner' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/course_s3_hls_2cg_b/hls/detectCorner'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/course_s3_hls_2cg_b/vivado/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/xilinx_2020.1/Vivado/2020.1/data/ip'.
+open_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 2762.684 ; gain = 0.000
+update_compile_order -fileset sources_1
+open_bd_design {F:/course_s3_hls_2cg_b/vivado/10_detectCorner/detectCorner.srcs/sources_1/bd/design_1/design_1.bd}
+Adding component instance block -- xilinx.com:ip:zynq_ultra_ps_e:3.3 - zynq_ultra_ps_e_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_interconnect_0
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding component instance block -- xilinx.com:ip:axi_vdma:6.3 - axi_vdma_0
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - axis_subset_converter_0
+Adding component instance block -- xilinx.com:ip:mipi_csi2_rx_subsystem:5.0 - mipi_csi2_rx_subsyst_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_150M
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps8_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:v_demosaic:1.0 - v_demosaic_0
+Adding component instance block -- xilinx.com:ip:v_gamma_lut:1.0 - v_gamma_lut_0
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
+Adding component instance block -- xilinx.com:hls:detectCorner:1.0 - detectCorner_0
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - axis_subset_converter_1
+Adding component instance block -- xilinx.com:user:cpu_reg_v1_0:1.0 - cpu_reg_v1_0_0
+Excluding slave segment /zynq_ultra_ps_e_0/SAXIGP2/HP0_LPS_OCM from address space /axi_vdma_0/Data_S2MM.
+Successfully read diagram <design_1> from BD file <F:/course_s3_hls_2cg_b/vivado/10_detectCorner/detectCorner.srcs/sources_1/bd/design_1/design_1.bd>
+WARNING: [BD 41-1731] Type mismatch between connected pins: /phy/system_rst_out(undef) and /system_rst_out(rst)
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+startgroup
+set_property -dict [list CONFIG.PSU__SD1__SLOT_TYPE {eMMC} CONFIG.PSU__DDRC__BUS_WIDTH {64 Bit}] [get_bd_cells zynq_ultra_ps_e_0]
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+endgroup
+save_bd_design
+Wrote  : <F:\course_s3_hls_2cg_b\vivado\10_detectCorner\detectCorner.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <F:/course_s3_hls_2cg_b/vivado/10_detectCorner/detectCorner.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+reset_run synth_1
+reset_run design_1_zynq_ultra_ps_e_0_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_pc/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_LPD(16)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_pc/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_LPD(16)
+CRITICAL WARNING: [BD 41-237] Bus Interface property TDATA_NUM_BYTES does not match between /axis_subset_converter_1/S_AXIS(4) and /detectCorner_0/video_out(3)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP0_FPD(1) and /axi_interconnect_0/s00_couplers/auto_us/M_AXI(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP0_FPD(1) and /axi_interconnect_0/s00_couplers/auto_us/M_AXI(0)
+Wrote  : <F:\course_s3_hls_2cg_b\vivado\10_detectCorner\detectCorner.srcs\sources_1\bd\design_1\design_1.bd> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axis_subset_converter_1/s_axis_tdata'(32) to pin: '/detectCorner_0/video_out_TDATA'(24) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axis_subset_converter_1/s_axis_tkeep'(4) to pin: '/detectCorner_0/video_out_TKEEP'(3) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axis_subset_converter_1/s_axis_tstrb'(4) to pin: '/detectCorner_0/video_out_TSTRB'(3) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/v_demosaic_0/s_axis_video_TDEST'(1) to pin: '/mipi_csi2_rx_subsyst_0/video_out_tdest'(10) - Only lower order bits will be connected.
+CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/detectCorner_0/video_in_TDATA'(24) to pin '/axis_subset_converter_0/m_axis_tdata'(32) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/detectCorner_0/video_in_TKEEP'(3) to pin '/axis_subset_converter_0/m_axis_tkeep'(4) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/detectCorner_0/video_in_TSTRB'(3) to pin '/axis_subset_converter_0/m_axis_tstrb'(4) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : F:/course_s3_hls_2cg_b/vivado/10_detectCorner/detectCorner.srcs/sources_1/bd/design_1/synth/design_1.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axis_subset_converter_1/s_axis_tdata'(32) to pin: '/detectCorner_0/video_out_TDATA'(24) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axis_subset_converter_1/s_axis_tkeep'(4) to pin: '/detectCorner_0/video_out_TKEEP'(3) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axis_subset_converter_1/s_axis_tstrb'(4) to pin: '/detectCorner_0/video_out_TSTRB'(3) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/v_demosaic_0/s_axis_video_TDEST'(1) to pin: '/mipi_csi2_rx_subsyst_0/video_out_tdest'(10) - Only lower order bits will be connected.
+CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/detectCorner_0/video_in_TDATA'(24) to pin '/axis_subset_converter_0/m_axis_tdata'(32) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/detectCorner_0/video_in_TKEEP'(3) to pin '/axis_subset_converter_0/m_axis_tkeep'(4) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/detectCorner_0/video_in_TSTRB'(3) to pin '/axis_subset_converter_0/m_axis_tstrb'(4) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : F:/course_s3_hls_2cg_b/vivado/10_detectCorner/detectCorner.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : F:/course_s3_hls_2cg_b/vivado/10_detectCorner/detectCorner.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [xilinx.com:ip:zynq_ultra_ps_e:3.3-0] design_1_zynq_ultra_ps_e_0_0: 
+Changes in your design (including the PCW configuration settings) are not automatically exported from Vivado to Xilinx's SDK, Petalinux or Yocto.
+This is by design to avoid disrupting existing embedded development efforts. To have any changes of your design taking effect in the embedded software flow please export your
+design by going through Vivado's main menu, click on File, then Export finally select Export Hardware, please ensure you click on the Include BitStream option.
+The auto-generated HDF file is all you need to import in Xilinx's SDK, Petalinux or Yocto for your changes to be reflected in the Embedded Software Flow.
+For more information, please consult PG201, section: Exporting PCW Settings to Embedded Software Flows
+INFO: [PSU-0] Address Range of DDR (0x7ff00000 to 0x7fffffff) is reserved by PMU for internal purpose.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_HPM0_LPD'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI_HP0_FPD'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block zynq_ultra_ps_e_0 .
+Exporting to file f:/course_s3_hls_2cg_b/vivado/10_detectCorner/detectCorner.srcs/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/hw_handoff/design_1_mipi_csi2_rx_subsyst_0_0.hwh
+Generated Block Design Tcl file f:/course_s3_hls_2cg_b/vivado/10_detectCorner/detectCorner.srcs/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/hw_handoff/design_1_mipi_csi2_rx_subsyst_0_0_bd.tcl
+Generated Hardware Definition File f:/course_s3_hls_2cg_b/vivado/10_detectCorner/detectCorner.srcs/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/synth/design_1_mipi_csi2_rx_subsyst_0_0.hwdef
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'f:/course_s3_hls_2cg_b/vivado/10_detectCorner/detectCorner.srcs/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0_ooc.xdc'
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/s00_couplers/auto_us .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'f:/course_s3_hls_2cg_b/vivado/10_detectCorner/detectCorner.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file F:/course_s3_hls_2cg_b/vivado/10_detectCorner/detectCorner.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file F:/course_s3_hls_2cg_b/vivado/10_detectCorner/detectCorner.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File F:/course_s3_hls_2cg_b/vivado/10_detectCorner/detectCorner.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = d50487fefb2e04a1; cache size = 56.256 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_us_0, cache-ID = 153422a25f9c6cd9; cache size = 56.256 MB.
+[Wed Dec  2 16:16:54 2020] Launched design_1_zynq_ultra_ps_e_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_zynq_ultra_ps_e_0_0_synth_1: F:/course_s3_hls_2cg_b/vivado/10_detectCorner/detectCorner.runs/design_1_zynq_ultra_ps_e_0_0_synth_1/runme.log
+synth_1: F:/course_s3_hls_2cg_b/vivado/10_detectCorner/detectCorner.runs/synth_1/runme.log
+[Wed Dec  2 16:16:54 2020] Launched impl_1...
+Run output will be captured here: F:/course_s3_hls_2cg_b/vivado/10_detectCorner/detectCorner.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:01:05 ; elapsed = 00:01:12 . Memory (MB): peak = 2800.914 ; gain = 38.230
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Dec  2 16:29:50 2020...

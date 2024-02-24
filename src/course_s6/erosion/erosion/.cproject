@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+    	
+    <storageModule moduleId="org.eclipse.cdt.core.settings">
+        		
+        <cconfiguration id="cdt.managedbuild.config.gnu.exe.debug.1951339136">
+            			
+            <storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.exe.debug.1951339136" moduleId="org.eclipse.cdt.core.settings" name="Debug">
+                				
+                <externalSettings/>
+                				
+                <extensions>
+                    					
+                    <extension id="org.eclipse.cdt.core.GNU_ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+                    					
+                    <extension id="org.eclipse.cdt.core.PE" point="org.eclipse.cdt.core.BinaryParser"/>
+                    					
+                    <extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+                    					
+                    <extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+                    					
+                    <extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+                    					
+                    <extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+                    					
+                    <extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+                    				
+                </extensions>
+                			
+            </storageModule>
+            			
+            <storageModule moduleId="cdtBuildSystem" version="4.0.0">
+                				
+                <configuration artifactName="a.exe" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug" cleanCommand="rm -rf" description="" id="cdt.managedbuild.config.gnu.exe.debug.1951339136" name="Debug" parent="cdt.managedbuild.config.gnu.exe.debug">
+                    					
+                    <folderInfo id="cdt.managedbuild.config.gnu.exe.debug.1951339136." name="/" resourcePath="">
+                        						
+                        <toolChain id="cdt.managedbuild.toolchain.gnu.exe.debug.1112665621" name="Linux GCC" superClass="cdt.managedbuild.toolchain.gnu.exe.debug">
+                            							
+                            <targetPlatform binaryParser="org.eclipse.cdt.core.PE;org.eclipse.cdt.core.GNU_ELF" id="cdt.managedbuild.target.gnu.platform.exe.debug.871174830" name="Debug Platform" superClass="cdt.managedbuild.target.gnu.platform.exe.debug"/>
+                            							
+                            <builder buildPath="${workspace_loc:/erosion}/Debug" id="cdt.managedbuild.target.gnu.builder.exe.debug.1128546512" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Gnu Make Builder" superClass="cdt.managedbuild.target.gnu.builder.exe.debug"/>
+                            							
+                            <tool id="cdt.managedbuild.tool.gnu.archiver.base.1716379683" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.base"/>
+                            							
+                            <tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1869769122" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug">
+                                								
+                                <option id="gnu.cpp.compiler.exe.debug.option.optimization.level.1287732254" name="Optimization Level" superClass="gnu.cpp.compiler.exe.debug.option.optimization.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.optimization.level.none" valueType="enumerated"/>
+                                								
+                                <option id="gnu.cpp.compiler.exe.debug.option.debugging.level.234323317" name="Debug Level" superClass="gnu.cpp.compiler.exe.debug.option.debugging.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.debugging.level.max" valueType="enumerated"/>
+                                								
+                                <option id="gnu.cpp.compiler.option.include.paths.1847568281" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
+                                    									
+                                    <listOptionValue builtIn="false" value="F:/xilinx_2020.1/Vitis/2020.1/include/etc"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="F:/xilinx_2020.1/Vitis/2020.1/win64/tools/auto_cc/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="F:/xilinx_2020.1/Vitis/2020.1/win64/tools/systemc/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="F:/xilinx_2020.1/Vitis/2020.1/include/ap_sysc"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="F:/erosion/source"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="F:/xilinx_2020.1/Vitis/2020.1/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="F:/erosion/source/build"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="F:/erosion/F/opencv/build/install/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="F:/erosion/F/Vitis_Libraries/vision/L1/include"/>
+                                    								
+                                </option>
+                                								
+                                <option id="gnu.cpp.compiler.option.preprocessor.def.1174608107" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" useByScannerDiscovery="false" valueType="definedSymbols">
+                                    									
+                                    <listOptionValue builtIn="false" value="AESL_TB"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="__llvm__"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="__llvm__"/>
+                                    								
+                                </option>
+                                								
+                                <inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.2045765669" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+                                							
+                            </tool>
+                            							
+                            <tool id="cdt.managedbuild.tool.gnu.c.compiler.exe.debug.1076041246" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.exe.debug">
+                                								
+                                <option defaultValue="gnu.c.optimization.level.none" id="gnu.c.compiler.exe.debug.option.optimization.level.1716949343" name="Optimization Level" superClass="gnu.c.compiler.exe.debug.option.optimization.level" useByScannerDiscovery="false" valueType="enumerated"/>
+                                								
+                                <option id="gnu.c.compiler.exe.debug.option.debugging.level.180266150" name="Debug Level" superClass="gnu.c.compiler.exe.debug.option.debugging.level" useByScannerDiscovery="false" value="gnu.c.debugging.level.max" valueType="enumerated"/>
+                                								
+                                <option id="gnu.c.compiler.option.include.paths.745437210" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
+                                    									
+                                    <listOptionValue builtIn="false" value="F:/xilinx_2020.1/Vitis/2020.1/include/etc"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="F:/xilinx_2020.1/Vitis/2020.1/win64/tools/auto_cc/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="F:/xilinx_2020.1/Vitis/2020.1/win64/tools/systemc/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="F:/xilinx_2020.1/Vitis/2020.1/include/ap_sysc"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="F:/erosion/source"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="F:/xilinx_2020.1/Vitis/2020.1/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="F:/erosion/source/build"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="F:/erosion/F/opencv/build/install/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="F:/erosion/F/Vitis_Libraries/vision/L1/include"/>
+                                    								
+                                </option>
+                                								
+                                <option id="gnu.c.compiler.option.preprocessor.def.symbols.1003695126" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" useByScannerDiscovery="false" valueType="definedSymbols">
+                                    									
+                                    <listOptionValue builtIn="false" value="AESL_TB"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="__llvm__"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="__llvm__"/>
+                                    								
+                                </option>
+                                								
+                                <inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1420180816" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
+                                							
+                            </tool>
+                            							
+                            <tool id="cdt.managedbuild.tool.gnu.c.linker.exe.debug.1204598584" name="GCC C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.exe.debug">
+                                								
+                                <option id="gnu.c.link.option.paths.120187915" name="Library search path (-L)" superClass="gnu.c.link.option.paths" valueType="libPaths">
+                                    									
+                                    <listOptionValue builtIn="false" value="F:/opencv/build/install/x64/mingw/lib"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="F:/xilinx_2020.1/Vitis/2020.1/win64/tools/systemc/lib"/>
+                                    								
+                                </option>
+                                								
+                                <option id="gnu.c.link.option.libs.920206931" name="Libraries (-l)" superClass="gnu.c.link.option.libs" valueType="libs">
+                                    									
+                                    <listOptionValue builtIn="false" value="opencv_imgcodecs3411"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="opencv_imgproc3411"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="opencv_core3411"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="opencv_highgui3411"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="opencv_flann3411"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="opencv_features2d3411"/>
+                                    								
+                                </option>
+                                								
+                                <option id="gnu.c.link.option.ldflags.1515237770" name="Linker flags" superClass="gnu.c.link.option.ldflags" value="      " valueType="string"/>
+                                							
+                            </tool>
+                            							
+                            <tool id="cdt.managedbuild.tool.gnu.cpp.linker.exe.debug.836633591" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.exe.debug">
+                                								
+                                <option id="gnu.cpp.link.option.paths.531806336" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths">
+                                    									
+                                    <listOptionValue builtIn="false" value="F:/opencv/build/install/x64/mingw/lib"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="F:/xilinx_2020.1/Vitis/2020.1/win64/tools/systemc/lib"/>
+                                    								
+                                </option>
+                                								
+                                <option id="gnu.cpp.link.option.libs.1854309358" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" valueType="libs">
+                                    									
+                                    <listOptionValue builtIn="false" value="opencv_imgcodecs3411"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="opencv_imgproc3411"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="opencv_core3411"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="opencv_highgui3411"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="opencv_flann3411"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="opencv_features2d3411"/>
+                                    								
+                                </option>
+                                								
+                                <option id="gnu.cpp.link.option.flags.271575296" name="Linker flags" superClass="gnu.cpp.link.option.flags" value="      " valueType="string"/>
+                                								
+                                <inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.1400967597" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
+                                    									
+                                    <additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+                                    									
+                                    <additionalInput kind="additionalinput" paths="$(LIBS)"/>
+                                    								
+                                </inputType>
+                                							
+                            </tool>
+                            							
+                            <tool id="cdt.managedbuild.tool.gnu.assembler.exe.debug.1948927262" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.exe.debug">
+                                								
+                                <inputType id="cdt.managedbuild.tool.gnu.assembler.input.2130307799" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
+                                							
+                            </tool>
+                            						
+                        </toolChain>
+                        					
+                    </folderInfo>
+                    					
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.debug.1951339136.972882282" name="xf_erosion_tb.cpp" rcbsApplicability="disable" resourcePath="testbench/xf_erosion_tb.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1869769122.2006286686">
+                        						
+                        <tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1869769122.2006286686" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1869769122">
+                            							
+                            <option id="gnu.cpp.compiler.option.preprocessor.def.1783901237" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def"/>
+                            							
+                            <option id="gnu.cpp.compiler.option.include.paths.1336482085" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
+                                								
+                                <listOptionValue builtIn="false" value="../../F/opencv/build/install/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="../../F/Vitis_Libraries/vision/L1/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="F:/xilinx_2020.1/Vitis/2020.1/include/etc"/>
+                                								
+                                <listOptionValue builtIn="false" value="F:/xilinx_2020.1/Vitis/2020.1/win64/tools/auto_cc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="F:/xilinx_2020.1/Vitis/2020.1/win64/tools/systemc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="F:/erosion"/>
+                                								
+                                <listOptionValue builtIn="false" value="F:/xilinx_2020.1/Vitis/2020.1/include/ap_sysc"/>
+                                								
+                                <listOptionValue builtIn="false" value="F:/xilinx_2020.1/Vitis/2020.1/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="F:/erosion/F/opencv/build/install/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="F:/erosion/F/Vitis_Libraries/vision/L1/include"/>
+                                							
+                            </option>
+                            							
+                            <option id="gnu.cpp.compiler.option.other.other.1714422786" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-std=c++0x -Wno-unknown-pragmas -c -fmessage-length=0" valueType="string"/>
+                            							
+                            <inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.511640445" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+                            						
+                        </tool>
+                        					
+                    </fileInfo>
+                    					
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.debug.1951339136.1943497075" name="xf_erosion_accel.cpp" rcbsApplicability="disable" resourcePath="source/xf_erosion_accel.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1869769122.1730011871">
+                        						
+                        <tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1869769122.1730011871" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1869769122">
+                            							
+                            <option id="gnu.cpp.compiler.option.preprocessor.def.15069096" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def"/>
+                            							
+                            <option id="gnu.cpp.compiler.option.include.paths.234730439" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
+                                								
+                                <listOptionValue builtIn="false" value="F:/Vitis_Libraries/vision/L1/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="F:/erosion/source/build"/>
+                                								
+                                <listOptionValue builtIn="false" value="F:/xilinx_2020.1/Vitis/2020.1/include/etc"/>
+                                								
+                                <listOptionValue builtIn="false" value="F:/xilinx_2020.1/Vitis/2020.1/win64/tools/auto_cc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="F:/xilinx_2020.1/Vitis/2020.1/win64/tools/systemc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="F:/erosion"/>
+                                								
+                                <listOptionValue builtIn="false" value="F:/xilinx_2020.1/Vitis/2020.1/include/ap_sysc"/>
+                                								
+                                <listOptionValue builtIn="false" value="F:/xilinx_2020.1/Vitis/2020.1/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="F:/erosion/F/opencv/build/install/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="F:/erosion/F/Vitis_Libraries/vision/L1/include"/>
+                                							
+                            </option>
+                            							
+                            <option id="gnu.cpp.compiler.option.other.other.523228783" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-std=c++0x -c -fmessage-length=0" valueType="string"/>
+                            							
+                            <inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.253524758" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+                            						
+                        </tool>
+                        					
+                    </fileInfo>
+                    					
+                    <sourceEntries>
+                        						
+                        <entry excluding=".apc|.settings|solution1|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+                        					
+                    </sourceEntries>
+                    				
+                </configuration>
+                			
+            </storageModule>
+            			
+            <storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+            		
+        </cconfiguration>
+        		
+        <cconfiguration id="cdt.managedbuild.config.gnu.exe.release.1892159752">
+            			
+            <storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.exe.release.1892159752" moduleId="org.eclipse.cdt.core.settings" name="Release">
+                				
+                <externalSettings/>
+                				
+                <extensions>
+                    					
+                    <extension id="org.eclipse.cdt.core.GNU_ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+                    					
+                    <extension id="org.eclipse.cdt.core.PE" point="org.eclipse.cdt.core.BinaryParser"/>
+                    					
+                    <extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+                    					
+                    <extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+                    					
+                    <extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+                    					
+                    <extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+                    					
+                    <extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+                    				
+                </extensions>
+                			
+            </storageModule>
+            			
+            <storageModule moduleId="cdtBuildSystem" version="4.0.0">
+                				
+                <configuration artifactName="a.exe" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release" cleanCommand="rm -rf" description="" id="cdt.managedbuild.config.gnu.exe.release.1892159752" name="Release" parent="cdt.managedbuild.config.gnu.exe.release">
+                    					
+                    <folderInfo id="cdt.managedbuild.config.gnu.exe.release.1892159752." name="/" resourcePath="">
+                        						
+                        <toolChain id="cdt.managedbuild.toolchain.gnu.exe.release.935989628" name="Linux GCC" superClass="cdt.managedbuild.toolchain.gnu.exe.release">
+                            							
+                            <targetPlatform binaryParser="org.eclipse.cdt.core.PE;org.eclipse.cdt.core.GNU_ELF" id="cdt.managedbuild.target.gnu.platform.exe.release.2127835611" name="Debug Platform" superClass="cdt.managedbuild.target.gnu.platform.exe.release"/>
+                            							
+                            <builder buildPath="${workspace_loc:/erosion}/Release" id="cdt.managedbuild.target.gnu.builder.exe.release.1015293851" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Gnu Make Builder" superClass="cdt.managedbuild.target.gnu.builder.exe.release"/>
+                            							
+                            <tool id="cdt.managedbuild.tool.gnu.archiver.base.239876706" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.base"/>
+                            							
+                            <tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.971829863" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release">
+                                								
+                                <option id="gnu.cpp.compiler.exe.release.option.optimization.level.1391256688" name="Optimization Level" superClass="gnu.cpp.compiler.exe.release.option.optimization.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.optimization.level.most" valueType="enumerated"/>
+                                								
+                                <option id="gnu.cpp.compiler.exe.release.option.debugging.level.49581176" name="Debug Level" superClass="gnu.cpp.compiler.exe.release.option.debugging.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.debugging.level.none" valueType="enumerated"/>
+                                								
+                                <option id="gnu.cpp.compiler.option.include.paths.2022945398" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
+                                    									
+                                    <listOptionValue builtIn="false" value="F:/xilinx_2020.1/Vitis/2020.1/include/etc"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="F:/xilinx_2020.1/Vitis/2020.1/win64/tools/auto_cc/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="F:/xilinx_2020.1/Vitis/2020.1/win64/tools/systemc/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="F:/xilinx_2020.1/Vitis/2020.1/include/ap_sysc"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="F:/erosion/source"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="F:/xilinx_2020.1/Vitis/2020.1/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="F:/erosion/source/build"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="F:/erosion/F/opencv/build/install/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="F:/erosion/F/Vitis_Libraries/vision/L1/include"/>
+                                    								
+                                </option>
+                                								
+                                <inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.526607365" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+                                							
+                            </tool>
+                            							
+                            <tool id="cdt.managedbuild.tool.gnu.c.compiler.exe.release.1908417235" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.exe.release">
+                                								
+                                <option defaultValue="gnu.c.optimization.level.most" id="gnu.c.compiler.exe.release.option.optimization.level.470398223" name="Optimization Level" superClass="gnu.c.compiler.exe.release.option.optimization.level" useByScannerDiscovery="false" valueType="enumerated"/>
+                                								
+                                <option id="gnu.c.compiler.exe.release.option.debugging.level.695243698" name="Debug Level" superClass="gnu.c.compiler.exe.release.option.debugging.level" useByScannerDiscovery="false" value="gnu.c.debugging.level.none" valueType="enumerated"/>
+                                								
+                                <option id="gnu.c.compiler.option.include.paths.825316360" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
+                                    									
+                                    <listOptionValue builtIn="false" value="F:/xilinx_2020.1/Vitis/2020.1/include/etc"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="F:/xilinx_2020.1/Vitis/2020.1/win64/tools/auto_cc/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="F:/xilinx_2020.1/Vitis/2020.1/win64/tools/systemc/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="F:/xilinx_2020.1/Vitis/2020.1/include/ap_sysc"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="F:/erosion/source"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="F:/xilinx_2020.1/Vitis/2020.1/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="F:/erosion/source/build"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="F:/erosion/F/opencv/build/install/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="F:/erosion/F/Vitis_Libraries/vision/L1/include"/>
+                                    								
+                                </option>
+                                								
+                                <inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1843389108" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
+                                							
+                            </tool>
+                            							
+                            <tool id="cdt.managedbuild.tool.gnu.c.linker.exe.release.336790201" name="GCC C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.exe.release">
+                                								
+                                <option id="gnu.c.link.option.paths.497920931" name="Library search path (-L)" superClass="gnu.c.link.option.paths" valueType="libPaths">
+                                    									
+                                    <listOptionValue builtIn="false" value="F:/opencv/build/install/x64/mingw/lib"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="F:/xilinx_2020.1/Vitis/2020.1/win64/tools/systemc/lib"/>
+                                    								
+                                </option>
+                                								
+                                <option id="gnu.c.link.option.libs.526929574" name="Libraries (-l)" superClass="gnu.c.link.option.libs" valueType="libs">
+                                    									
+                                    <listOptionValue builtIn="false" value="opencv_imgcodecs3411"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="opencv_imgproc3411"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="opencv_core3411"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="opencv_highgui3411"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="opencv_flann3411"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="opencv_features2d3411"/>
+                                    								
+                                </option>
+                                								
+                                <option id="gnu.c.link.option.ldflags.875058382" name="Linker flags" superClass="gnu.c.link.option.ldflags" value="      " valueType="string"/>
+                                							
+                            </tool>
+                            							
+                            <tool id="cdt.managedbuild.tool.gnu.cpp.linker.exe.release.1010879278" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.exe.release">
+                                								
+                                <option id="gnu.cpp.link.option.paths.2082060604" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths">
+                                    									
+                                    <listOptionValue builtIn="false" value="F:/opencv/build/install/x64/mingw/lib"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="F:/xilinx_2020.1/Vitis/2020.1/win64/tools/systemc/lib"/>
+                                    								
+                                </option>
+                                								
+                                <option id="gnu.cpp.link.option.libs.2091052539" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" valueType="libs">
+                                    									
+                                    <listOptionValue builtIn="false" value="opencv_imgcodecs3411"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="opencv_imgproc3411"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="opencv_core3411"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="opencv_highgui3411"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="opencv_flann3411"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="opencv_features2d3411"/>
+                                    								
+                                </option>
+                                								
+                                <option id="gnu.cpp.link.option.flags.1962799892" name="Linker flags" superClass="gnu.cpp.link.option.flags" value="      " valueType="string"/>
+                                								
+                                <inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.2127226393" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
+                                    									
+                                    <additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+                                    									
+                                    <additionalInput kind="additionalinput" paths="$(LIBS)"/>
+                                    								
+                                </inputType>
+                                							
+                            </tool>
+                            							
+                            <tool id="cdt.managedbuild.tool.gnu.assembler.exe.release.48112505" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.exe.release">
+                                								
+                                <inputType id="cdt.managedbuild.tool.gnu.assembler.input.102273631" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
+                                							
+                            </tool>
+                            						
+                        </toolChain>
+                        					
+                    </folderInfo>
+                    					
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.release.1892159752.1997292031" name="xf_erosion_tb.cpp" rcbsApplicability="disable" resourcePath="testbench/xf_erosion_tb.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.971829863.1463306620">
+                        						
+                        <tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.971829863.1463306620" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.971829863">
+                            							
+                            <option id="gnu.cpp.compiler.option.preprocessor.def.799802645" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def"/>
+                            							
+                            <option id="gnu.cpp.compiler.option.include.paths.364033755" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
+                                								
+                                <listOptionValue builtIn="false" value="../../F/opencv/build/install/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="../../F/Vitis_Libraries/vision/L1/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="F:/xilinx_2020.1/Vitis/2020.1/include/etc"/>
+                                								
+                                <listOptionValue builtIn="false" value="F:/xilinx_2020.1/Vitis/2020.1/win64/tools/auto_cc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="F:/xilinx_2020.1/Vitis/2020.1/win64/tools/systemc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="F:/erosion"/>
+                                								
+                                <listOptionValue builtIn="false" value="F:/xilinx_2020.1/Vitis/2020.1/include/ap_sysc"/>
+                                								
+                                <listOptionValue builtIn="false" value="F:/xilinx_2020.1/Vitis/2020.1/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="F:/erosion/F/opencv/build/install/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="F:/erosion/F/Vitis_Libraries/vision/L1/include"/>
+                                							
+                            </option>
+                            							
+                            <option id="gnu.cpp.compiler.option.other.other.67215171" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-std=c++0x -Wno-unknown-pragmas -c -fmessage-length=0" valueType="string"/>
+                            							
+                            <inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1623197961" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+                            						
+                        </tool>
+                        					
+                    </fileInfo>
+                    					
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.release.1892159752.1427218307" name="xf_erosion_accel.cpp" rcbsApplicability="disable" resourcePath="source/xf_erosion_accel.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.971829863.1832402859">
+                        						
+                        <tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.971829863.1832402859" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.971829863">
+                            							
+                            <option id="gnu.cpp.compiler.option.preprocessor.def.1380295200" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def"/>
+                            							
+                            <option id="gnu.cpp.compiler.option.include.paths.1391032738" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
+                                								
+                                <listOptionValue builtIn="false" value="F:/Vitis_Libraries/vision/L1/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="F:/erosion/source/build"/>
+                                								
+                                <listOptionValue builtIn="false" value="F:/xilinx_2020.1/Vitis/2020.1/include/etc"/>
+                                								
+                                <listOptionValue builtIn="false" value="F:/xilinx_2020.1/Vitis/2020.1/win64/tools/auto_cc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="F:/xilinx_2020.1/Vitis/2020.1/win64/tools/systemc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="F:/erosion"/>
+                                								
+                                <listOptionValue builtIn="false" value="F:/xilinx_2020.1/Vitis/2020.1/include/ap_sysc"/>
+                                								
+                                <listOptionValue builtIn="false" value="F:/xilinx_2020.1/Vitis/2020.1/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="F:/erosion/F/opencv/build/install/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="F:/erosion/F/Vitis_Libraries/vision/L1/include"/>
+                                							
+                            </option>
+                            							
+                            <option id="gnu.cpp.compiler.option.other.other.31211533" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-std=c++0x -c -fmessage-length=0" valueType="string"/>
+                            							
+                            <inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.652127004" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+                            						
+                        </tool>
+                        					
+                    </fileInfo>
+                    					
+                    <sourceEntries>
+                        						
+                        <entry excluding=".apc|.settings|solution1|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+                        					
+                    </sourceEntries>
+                    				
+                </configuration>
+                			
+            </storageModule>
+            			
+            <storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+            		
+        </cconfiguration>
+        	
+    </storageModule>
+    	
+    <storageModule moduleId="cdtBuildSystem" version="4.0.0">
+        		
+        <project id="erosion.cdt.managedbuild.target.gnu.exe.1984134299" name="Executable" projectType="cdt.managedbuild.target.gnu.exe"/>
+        	
+    </storageModule>
+    	
+    <storageModule moduleId="scannerConfiguration">
+        		
+        <autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+        		
+        <scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.release.1892159752;cdt.managedbuild.config.gnu.exe.release.1892159752.;cdt.managedbuild.tool.gnu.c.compiler.exe.release.1908417235;cdt.managedbuild.tool.gnu.c.compiler.input.1843389108">
+            			
+            <autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+            		
+        </scannerConfigBuildInfo>
+        		
+        <scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.debug.1951339136;cdt.managedbuild.config.gnu.exe.debug.1951339136.;cdt.managedbuild.tool.gnu.c.compiler.exe.debug.1076041246;cdt.managedbuild.tool.gnu.c.compiler.input.1420180816">
+            			
+            <autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+            		
+        </scannerConfigBuildInfo>
+        		
+        <scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.release.1892159752;cdt.managedbuild.config.gnu.exe.release.1892159752.;cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.971829863;cdt.managedbuild.tool.gnu.cpp.compiler.input.526607365">
+            			
+            <autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+            		
+        </scannerConfigBuildInfo>
+        		
+        <scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.debug.1951339136;cdt.managedbuild.config.gnu.exe.debug.1951339136.;cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1869769122;cdt.managedbuild.tool.gnu.cpp.compiler.input.2045765669">
+            			
+            <autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+            		
+        </scannerConfigBuildInfo>
+        	
+    </storageModule>
+    	
+    <storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+    
+</cproject>

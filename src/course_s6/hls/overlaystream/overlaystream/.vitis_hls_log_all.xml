@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="overlaystream" solutionName="solution1" date="2020-10-30T16:39:13.095+0800" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'overlyOnMat&lt;1080, 1920>' to 'overlyOnMat_1080_1920_s'." projectName="overlaystream" solutionName="solution1" date="2020-10-30T16:39:08.523+0800" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'ExtractPixel.1' to 'ExtractPixel_1'." projectName="overlaystream" solutionName="solution1" date="2020-10-30T16:39:08.497+0800" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'xfrgb2gray&lt;1080, 1920>' to 'xfrgb2gray_1080_1920_s'." projectName="overlaystream" solutionName="solution1" date="2020-10-30T16:39:08.488+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-631] Ignoring ap_ctrl_none interface for overlaystream due to Loop_loop_height_proc1719 with non-FIFO I/O" projectName="overlaystream" solutionName="solution1" date="2020-10-30T16:39:08.452+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-463] Ignoring allocation pragma because function 'resize' is missing or was optimized away " projectName="overlaystream" solutionName="solution1" date="2020-10-30T16:39:08.438+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 12 to 1080 for loop 'VITIS_LOOP_59_1' (source/overlaystream.cpp:59:27) in function 'overlyOnMat&lt;1080, 1920>'." projectName="overlaystream" solutionName="solution1" date="2020-10-30T16:39:05.278+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 3 to 1920 for loop 'VITIS_LOOP_62_2' (source/overlaystream.cpp:62:27) in function 'overlyOnMat&lt;1080, 1920>'." projectName="overlaystream" solutionName="solution1" date="2020-10-30T16:39:05.259+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'VITIS_LOOP_7_1' (source/overlaystream.cpp:6) because its parent loop or function is pipelined." projectName="overlaystream" solutionName="solution1" date="2020-10-30T16:39:05.251+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'VITIS_LOOP_7_1' (source/overlaystream.cpp:6) because its parent loop or function is pipelined." projectName="overlaystream" solutionName="solution1" date="2020-10-30T16:39:05.238+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'VITIS_LOOP_19_1' (source/overlaystream.cpp:18) because its parent loop or function is pipelined." projectName="overlaystream" solutionName="solution1" date="2020-10-30T16:39:05.224+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'VITIS_LOOP_19_1' (source/overlaystream.cpp:18) because its parent loop or function is pipelined." projectName="overlaystream" solutionName="solution1" date="2020-10-30T16:39:05.213+0800" type="Warning"/>
+        <logs message="WARNING: [SYNCHK 200-23] F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot\ap_int_ref.h:414: variable-indexed range selection may cause suboptimal QoR." projectName="overlaystream" solutionName="solution1" date="2020-10-30T16:39:04.911+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-3891] the 'dim' option to 'Stream' pragma is not supported and will be ignored: source/overlaystream.cpp:132:59" projectName="overlaystream" solutionName="solution1" date="2020-10-30T16:38:56.764+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-3891] the 'dim' option to 'Stream' pragma is not supported and will be ignored: source/overlaystream.cpp:130:59" projectName="overlaystream" solutionName="solution1" date="2020-10-30T16:38:53.334+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-3891] the 'dim' option to 'Stream' pragma is not supported and will be ignored: source/overlaystream.cpp:128:59" projectName="overlaystream" solutionName="solution1" date="2020-10-30T16:38:53.327+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-3891] the 'dim' option to 'Stream' pragma is not supported and will be ignored: source/overlaystream.cpp:126:58" projectName="overlaystream" solutionName="solution1" date="2020-10-30T16:38:53.321+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-3891] the 'dim' option to 'Stream' pragma is not supported and will be ignored: source/overlaystream.cpp:124:57" projectName="overlaystream" solutionName="solution1" date="2020-10-30T16:38:53.314+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-1536] 'false' in '#pragma HLS dependence' is deprecated, and it will be removed in future release: F:/Vitis_Libraries/vision/L1/include\imgproc/xf_resize_down_area.hpp:696:52" projectName="overlaystream" solutionName="solution1" date="2020-10-30T16:38:53.308+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5324] unused parameter 'out_width': F:/Vitis_Libraries/vision/L1/include\imgproc/xf_resize_down_area.hpp:419:49" projectName="overlaystream" solutionName="solution1" date="2020-10-30T16:38:53.302+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5324] unused parameter 'write_index': F:/Vitis_Libraries/vision/L1/include\imgproc/xf_resize_down_area.hpp:417:46" projectName="overlaystream" solutionName="solution1" date="2020-10-30T16:38:53.296+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5324] unused parameter 'in_width': F:/Vitis_Libraries/vision/L1/include\imgproc/xf_resize_down_area.hpp:54:49" projectName="overlaystream" solutionName="solution1" date="2020-10-30T16:38:53.288+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5324] unused parameter 'skip_count': F:/Vitis_Libraries/vision/L1/include\imgproc/xf_resize_down_area.hpp:43:47" projectName="overlaystream" solutionName="solution1" date="2020-10-30T16:38:53.283+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5324] unused parameter 'scalex': F:/Vitis_Libraries/vision/L1/include\imgproc/xf_resize_nn_bilinear.hpp:211:65" projectName="overlaystream" solutionName="solution1" date="2020-10-30T16:38:53.277+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5324] unused parameter 'output_rows_count': F:/Vitis_Libraries/vision/L1/include\imgproc/xf_resize_nn_bilinear.hpp:210:31" projectName="overlaystream" solutionName="solution1" date="2020-10-30T16:38:53.271+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5324] unused parameter 'j': F:/Vitis_Libraries/vision/L1/include\imgproc/xf_resize_nn_bilinear.hpp:209:31" projectName="overlaystream" solutionName="solution1" date="2020-10-30T16:38:53.265+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-1593] Ignore interface attribute or pragma which is not used in top function: F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot/39\utils/x_hls_utils.h:247:9" projectName="overlaystream" solutionName="solution1" date="2020-10-30T16:38:53.259+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5324] unused parameter 'index': F:/Vitis_Libraries/vision/L1/include\common/xf_structs.hpp:1386:34" projectName="overlaystream" solutionName="solution1" date="2020-10-30T16:38:53.253+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5324] unused parameter 'index': F:/Vitis_Libraries/vision/L1/include\common/xf_structs.hpp:1183:102" projectName="overlaystream" solutionName="solution1" date="2020-10-30T16:38:53.247+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5324] unused parameter 'index': F:/Vitis_Libraries/vision/L1/include\common/xf_structs.hpp:675:60" projectName="overlaystream" solutionName="solution1" date="2020-10-30T16:38:53.241+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5324] unused parameter 'index': F:/Vitis_Libraries/vision/L1/include\common/xf_structs.hpp:655:87" projectName="overlaystream" solutionName="solution1" date="2020-10-30T16:38:53.236+0800" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

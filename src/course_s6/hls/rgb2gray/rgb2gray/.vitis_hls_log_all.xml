@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [HLS 200-656] Deadlocks can occur since process Loop_loop_height_proc4 is instantiated in a dataflow region with ap_ctrl_none or without start propagation and contains a non-flushable pipeline." projectName="rgb2gray" solutionName="solution1" date="2020-11-02T17:01:14.363+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="rgb2gray" solutionName="solution1" date="2020-11-02T17:01:14.227+0800" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'xfgray2rgb&lt;1080, 1920>' to 'xfgray2rgb_1080_1920_s'." projectName="rgb2gray" solutionName="solution1" date="2020-11-02T17:01:11.713+0800" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'xfrgb2gray&lt;1080, 1920>' to 'xfrgb2gray_1080_1920_s'." projectName="rgb2gray" solutionName="solution1" date="2020-11-02T17:01:11.698+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-3891] the 'dim' option to 'Stream' pragma is not supported and will be ignored: source/rgb2gray.cpp:69:63" projectName="rgb2gray" solutionName="solution1" date="2020-11-02T17:01:05.614+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-3891] the 'dim' option to 'Stream' pragma is not supported and will be ignored: source/rgb2gray.cpp:67:63" projectName="rgb2gray" solutionName="solution1" date="2020-11-02T17:01:02.205+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-3891] the 'dim' option to 'Stream' pragma is not supported and will be ignored: source/rgb2gray.cpp:65:62" projectName="rgb2gray" solutionName="solution1" date="2020-11-02T17:01:02.197+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-920] unknown escape sequence '\i': F:/Vitis_Libraries/vision/L1/include\imgproc/xf_cvt_color.hpp:4687:45" projectName="rgb2gray" solutionName="solution1" date="2020-11-02T17:01:02.191+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-1593] Ignore interface attribute or pragma which is not used in top function: F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot/39\utils/x_hls_utils.h:247:9" projectName="rgb2gray" solutionName="solution1" date="2020-11-02T17:01:02.183+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5324] unused parameter 'index': F:/Vitis_Libraries/vision/L1/include\common/xf_structs.hpp:1386:34" projectName="rgb2gray" solutionName="solution1" date="2020-11-02T17:01:02.177+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5324] unused parameter 'index': F:/Vitis_Libraries/vision/L1/include\common/xf_structs.hpp:1183:102" projectName="rgb2gray" solutionName="solution1" date="2020-11-02T17:01:02.170+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5324] unused parameter 'index': F:/Vitis_Libraries/vision/L1/include\common/xf_structs.hpp:675:60" projectName="rgb2gray" solutionName="solution1" date="2020-11-02T17:01:02.163+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5324] unused parameter 'index': F:/Vitis_Libraries/vision/L1/include\common/xf_structs.hpp:655:87" projectName="rgb2gray" solutionName="solution1" date="2020-11-02T17:01:02.157+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 207-989] '_XF_rgb_HPP_' is used as a header guard here, followed by #define of a different macro: F:/Vitis_Libraries/vision/L1/include\imgproc/xf_cvt_color.hpp:17:9" projectName="rgb2gray" solutionName="solution1" date="2020-11-02T17:00:49.675+0800" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

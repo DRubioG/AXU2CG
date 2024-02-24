@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message severity="INFO" prefix="[IMPL 213-8]" key="IMPL_8_1776" tag="" content="Exporting RTL as a Vivado IP." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-740]" key="HLS 200-740" tag="" content="Implementing PIPO dilation_kernel_0_memcore using a separate memory for each block" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-740]" key="HLS 200-740" tag="" content="Implementing PIPO dilation_kernel_0_memcore using a separate memory for each block" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-802]" key="HLS 200-802" tag="" content="Generated output file dilation/solution1/impl/export.zip" resolution=""/>
+</Messages>

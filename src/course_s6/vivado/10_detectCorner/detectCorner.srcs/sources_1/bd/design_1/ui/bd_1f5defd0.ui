@@ -1,0 +1,64 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.276173",
+   "Default View_TopLeft":"-250,-243",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port cam_gpio -pg 1 -lvl 11 -x 4070 -y 390 -defaultsOSRD
+preplace port cam_i2c -pg 1 -lvl 11 -x 4070 -y 410 -defaultsOSRD
+preplace port mipi_phy_if -pg 1 -lvl 0 -x -130 -y 370 -defaultsOSRD
+preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 10 -x 3730 -y 420 -defaultsOSRD
+preplace inst axi_interconnect_0 -pg 1 -lvl 9 -x 3250 -y 190 -defaultsOSRD
+preplace inst axi_vdma_0 -pg 1 -lvl 7 -x 2460 -y 150 -defaultsOSRD
+preplace inst axis_subset_converter_0 -pg 1 -lvl 6 -x 1980 -y 490 -defaultsOSRD
+preplace inst mipi_csi2_rx_subsyst_0 -pg 1 -lvl 3 -x 820 -y 220 -defaultsOSRD
+preplace inst proc_sys_reset_150M -pg 1 -lvl 1 -x 70 -y 480 -defaultsOSRD
+preplace inst ps8_0_axi_periph -pg 1 -lvl 2 -x 440 -y 190 -defaultsOSRD
+preplace inst v_demosaic_0 -pg 1 -lvl 4 -x 1150 -y 410 -defaultsOSRD
+preplace inst v_gamma_lut_0 -pg 1 -lvl 5 -x 1510 -y 410 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 9 -x 3250 -y 630 -defaultsOSRD
+preplace inst detectCorner_0 -pg 1 -lvl 6 -x 1980 -y 820 -defaultsOSRD
+preplace inst axis_subset_converter_1 -pg 1 -lvl 8 -x 2840 -y 820 -defaultsOSRD -resize 340 256
+preplace inst cpu_reg_v1_0_0 -pg 1 -lvl 10 -x 3730 -y 1110 -defaultsOSRD
+preplace netloc axi_vdma_0_s2mm_introut 1 7 2 N 170 3080
+preplace netloc mipi_csi2_rx_subsyst_0_csirxss_csi_irq 1 3 6 950J 210 NJ 210 NJ 210 2270J 260 N 260 3060
+preplace netloc proc_sys_reset_150M_interconnect_aresetn 1 1 8 250 430 620J 10 NJ 10 NJ 10 NJ 10 NJ 10 N 10 3100
+preplace netloc proc_sys_reset_150M_peripheral_aresetn 1 1 9 280 440 670 440 950 500 1340 500 1700 230 2280 320 2650 320 3100 400 3400
+preplace netloc v_demosaic_0_interrupt 1 4 5 1320 240 NJ 240 2250J 290 NJ 290 3040
+preplace netloc v_gamma_lut_0_interrupt 1 5 4 1710 270 NJ 270 NJ 270 3050
+preplace netloc xlconcat_0_dout 1 9 1 3410 450n
+preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 11 -110 360 260 420 660 420 970 510 1330 510 1690 220 2260 330 2640 330 3090 410 3430 530 4030
+preplace netloc zynq_ultra_ps_e_0_pl_clk2 1 2 9 680 30 NJ 30 NJ 30 NJ 30 NJ 30 NJ 30 N 30 NJ 30 4050
+preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 0 11 -100 380 240J 410 NJ 410 970J 280 NJ 280 NJ 280 NJ 280 NJ 280 3070 310 NJ 310 4030
+preplace netloc axis_subset_converter_0_m_axis_tdata 1 5 2 1770 310 2170
+preplace netloc axis_subset_converter_0_m_axis_tkeep 1 5 2 1780 320 2200
+preplace netloc axis_subset_converter_0_m_axis_tstrb 1 5 2 1730 250 2240
+preplace netloc axis_subset_converter_0_m_axis_tuser 1 5 2 1750 1010 2170
+preplace netloc axis_subset_converter_0_m_axis_tlast 1 5 2 1760 330 2190
+preplace netloc axis_subset_converter_0_m_axis_tid 1 5 2 1740 300 2210
+preplace netloc axis_subset_converter_0_m_axis_tdest 1 5 2 1720 290 2220
+preplace netloc detectCorner_0_video_in_TREADY 1 5 2 1790 340 2180
+preplace netloc axis_subset_converter_0_m_axis_tvalid 1 5 2 1750 260 2230
+preplace netloc cpu_reg_v1_0_0_reg_out5 1 5 6 1790 1020 NJ 1020 NJ 1020 3070J 900 NJ 900 4030
+preplace netloc zynq_ultra_ps_e_0_IIC_0 1 10 1 NJ 410
+preplace netloc ps8_0_axi_periph_M04_AXI 1 2 8 590J 40 NJ 40 NJ 40 NJ 40 NJ 40 NJ 40 NJ 40 3420
+preplace netloc ps8_0_axi_periph_M03_AXI 1 2 3 600 90 NJ 90 1330J
+preplace netloc detectCorner_0_video_out 1 6 2 NJ 820 2630
+preplace netloc mipi_phy_if_0_1 1 0 3 NJ 370 270J 390 650J
+preplace netloc v_gamma_lut_0_m_axis_video 1 5 1 1680 400n
+preplace netloc ps8_0_axi_periph_M01_AXI 1 2 1 640 170n
+preplace netloc axis_subset_converter_1_M_AXIS 1 6 3 2280 0 NJ 0 3030
+preplace netloc S00_AXI_1 1 7 2 N 130 N
+preplace netloc zynq_ultra_ps_e_0_GPIO_0 1 10 1 NJ 390
+preplace netloc ps8_0_axi_periph_M00_AXI 1 2 5 610 100 NJ 100 NJ 100 NJ 100 NJ
+preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_FPD 1 1 10 290 400 630J 20 NJ 20 NJ 20 NJ 20 NJ 20 NJ 20 N 20 NJ 20 4040
+preplace netloc mipi_csi2_rx_subsyst_0_video_out 1 3 1 960 170n
+preplace netloc axi_interconnect_0_M00_AXI 1 9 1 3400 190n
+preplace netloc ps8_0_axi_periph_M02_AXI 1 2 2 640 380 NJ
+preplace netloc v_demosaic_0_m_axis_video 1 4 1 N 400
+levelinfo -pg 1 -130 70 440 820 1150 1510 1980 2460 2840 3250 3730 4070
+pagesize -pg 1 -db -bbox -sgen -260 -10 4190 1440
+"
+}
+0

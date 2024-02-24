@@ -1,0 +1,26 @@
+INFO: [HLS 200-10] Running 'F:/xilinx_2020.1/Vitis/2020.1/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user 'Administrator' on host 'desktop-aovmd3l' (Windows NT_amd64 version 6.2) on Mon Oct 19 18:37:09 +0800 2020
+INFO: [HLS 200-10] In directory 'F:/zynqUltraScale_vitis/course_s3_hls/hls/led_control'
+Sourcing Tcl script 'F:/zynqUltraScale_vitis/course_s3_hls/hls/led_control/led_control/solution1/export.tcl'
+INFO: [HLS 200-10] Opening project 'F:/zynqUltraScale_vitis/course_s3_hls/hls/led_control/led_control'.
+INFO: [HLS 200-10] Adding design file 'source/led_control.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'source/testapp.cpp' to the project
+INFO: [HLS 200-10] Opening solution 'F:/zynqUltraScale_vitis/course_s3_hls/hls/led_control/led_control/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu3eg-sfvc784-1-i'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/html_docs/xilinx2020_1/hls-guidance/200-1505.html
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/xilinx_2020.1/Vivado/2020.1/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 19 18:37:17 2020...
+INFO: [HLS 200-802] Generated output file led_control/solution1/impl/export.zip

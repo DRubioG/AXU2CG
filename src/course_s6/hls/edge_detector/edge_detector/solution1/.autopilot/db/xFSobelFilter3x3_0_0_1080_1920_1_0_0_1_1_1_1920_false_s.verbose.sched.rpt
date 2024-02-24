@@ -1,0 +1,326 @@
+
+
+================================================================
+== Vitis HLS Report for 'xFSobelFilter3x3_0_0_1080_1920_1_0_0_1_1_1_1920_false_s'
+================================================================
+* Date:           Mon Nov  2 14:21:20 2020
+
+* Version:        2020.1 (Build 2902540 on Wed May 27 20:16:15 MDT 2020)
+* Project:        edge_detector
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu3eg-sfvc784-1-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 7.009 ns |   2.70 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+---------+---------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |      Interval     | Pipeline|
+    |   min   |   max   |    min    |    max    |   min   |   max   |   Type  |
+    +---------+---------+-----------+-----------+---------+---------+---------+
+    |  2082003|  2082003| 20.820 ms | 20.820 ms |  2082003|  2082003|   none  |
+    +---------+---------+-----------+-----------+---------+---------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                  |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name    |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Clear_Row_Loop  |     1920|     1920|         2|          1|          1|  1920|    yes   |
+        |- Row_Loop        |  2080080|  2080080|      1926|          -|          -|  1080|    no    |
+        | + Col_Loop       |     1923|     1923|         4|          1|          1|  1920|    yes   |
+        +------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+  * Pipeline-1: initiation interval (II) = 1, depth = 4
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 10
+* Pipeline : 2
+  Pipeline-0 : II = 1, D = 2, States = { 2 3 }
+  Pipeline-1 : II = 1, D = 4, States = { 6 7 8 9 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 4 3 
+3 --> 2 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 6 
+10 --> 5 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.75>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %sobelImg_y_4232, void @empty_9, i32, i32, void @empty_7, i32, i32, void @empty_7, void @empty_7, void @empty_7, i32, i32, i32, i32, void @empty_7, void @empty_7"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %sobelImg_x_4231, void @empty_9, i32, i32, void @empty_7, i32, i32, void @empty_7, void @empty_7, void @empty_7, i32, i32, i32, i32, void @empty_7, void @empty_7"   --->   Operation 12 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %grayImg_4230, void @empty_9, i32, i32, void @empty_7, i32, i32, void @empty_7, void @empty_7, void @empty_7, i32, i32, i32, i32, void @empty_7, void @empty_7"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%buf_0_V = alloca i64" [F:/Vitis_Libraries/vision/L1/include\imgproc/xf_sobel.hpp:325]   --->   Operation 14 'alloca' 'buf_0_V' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_S2P_BRAM">   --->   Core 37 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 1920> <RAM>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%buf_1_V = alloca i64" [F:/Vitis_Libraries/vision/L1/include\imgproc/xf_sobel.hpp:325]   --->   Operation 15 'alloca' 'buf_1_V' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_S2P_BRAM">   --->   Core 37 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 1920> <RAM>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%buf_2_V = alloca i64" [F:/Vitis_Libraries/vision/L1/include\imgproc/xf_sobel.hpp:325]   --->   Operation 16 'alloca' 'buf_2_V' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_S2P_BRAM">   --->   Core 37 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 1920> <RAM>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%specmemcore_ln331 = specmemcore void @_ssdm_op_SpecMemCore, i8 %buf_0_V, i8 %buf_1_V, i8 %buf_2_V, i64, i64, i64" [F:/Vitis_Libraries/vision/L1/include\imgproc/xf_sobel.hpp:331]   --->   Operation 17 'specmemcore' 'specmemcore_ln331' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.75ns)   --->   "%br_ln340 = br void %bb2479" [F:/Vitis_Libraries/vision/L1/include\imgproc/xf_sobel.hpp:340]   --->   Operation 18 'br' 'br_ln340' <Predicate = true> <Delay = 0.75>
+
+State 2 <SV = 1> <Delay = 2.54>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%empty = phi i11, void %.lr.ph2276, i11 %add_ln695, void %bb2479.split"   --->   Operation 19 'phi' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (0.85ns)   --->   "%icmp_ln882 = icmp_eq  i11 %empty, i11"   --->   Operation 20 'icmp' 'icmp_ln882' <Predicate = true> <Delay = 0.85> <CoreInst = "Cmp">   --->   Core 10 'Cmp' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 21 [1/1] (0.94ns)   --->   "%add_ln695 = add i11 %empty, i11"   --->   Operation 21 'add' 'add_ln695' <Predicate = true> <Delay = 0.94> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%br_ln340 = br i1 %icmp_ln882, void %bb2479.split, void %.lr.ph1868.preheader" [F:/Vitis_Libraries/vision/L1/include\imgproc/xf_sobel.hpp:340]   --->   Operation 22 'br' 'br_ln340' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%zext_ln538 = zext i11 %empty"   --->   Operation 23 'zext' 'zext_ln538' <Predicate = (!icmp_ln882)> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%buf_0_V_addr = getelementptr i8 %buf_0_V, i64, i64 %zext_ln538"   --->   Operation 24 'getelementptr' 'buf_0_V_addr' <Predicate = (!icmp_ln882)> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (1.35ns)   --->   "%store_ln324 = store i8, i11 %buf_0_V_addr"   --->   Operation 25 'store' 'store_ln324' <Predicate = (!icmp_ln882)> <Delay = 1.35> <CoreInst = "RAM_S2P_BRAM">   --->   Core 37 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 1920> <RAM>
+
+State 3 <SV = 2> <Delay = 3.29>
+ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%specpipeline_ln304 = specpipeline void @_ssdm_op_SpecPipeline, i32, i32, i32, i32, void @empty_7"   --->   Operation 26 'specpipeline' 'specpipeline_ln304' <Predicate = (!icmp_ln882)> <Delay = 0.00>
+ST_3 : Operation 27 [1/1] (0.00ns)   --->   "%speclooptripcount_ln304 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64, i64, i64"   --->   Operation 27 'speclooptripcount' 'speclooptripcount_ln304' <Predicate = (!icmp_ln882)> <Delay = 0.00>
+ST_3 : Operation 28 [1/1] (0.00ns)   --->   "%specloopname_ln304 = specloopname void @_ssdm_op_SpecLoopName, void @empty_5"   --->   Operation 28 'specloopname' 'specloopname_ln304' <Predicate = (!icmp_ln882)> <Delay = 0.00>
+ST_3 : Operation 29 [1/1] (1.94ns)   --->   "%tmp_V = read i8 @_ssdm_op_Read.ap_fifo.volatile.i8P, i8 %grayImg_4230" [F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 29 'read' 'tmp_V' <Predicate = (!icmp_ln882)> <Delay = 1.94> <CoreInst = "FIFO">   --->   Core 18 'FIFO' <Latency = 0> <II = 1> <Delay = 1.94> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1920> <FIFO>
+ST_3 : Operation 30 [1/1] (0.00ns)   --->   "%buf_1_V_addr = getelementptr i8 %buf_1_V, i64, i64 %zext_ln538"   --->   Operation 30 'getelementptr' 'buf_1_V_addr' <Predicate = (!icmp_ln882)> <Delay = 0.00>
+ST_3 : Operation 31 [1/1] (1.35ns)   --->   "%store_ln324 = store i8 %tmp_V, i11 %buf_1_V_addr"   --->   Operation 31 'store' 'store_ln324' <Predicate = (!icmp_ln882)> <Delay = 1.35> <CoreInst = "RAM_S2P_BRAM">   --->   Core 37 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 1920> <RAM>
+ST_3 : Operation 32 [1/1] (0.00ns)   --->   "%br_ln0 = br void %bb2479"   --->   Operation 32 'br' 'br_ln0' <Predicate = (!icmp_ln882)> <Delay = 0.00>
+
+State 4 <SV = 2> <Delay = 0.75>
+ST_4 : Operation 33 [1/1] (0.00ns)   --->   "%empty_30 = alloca i32"   --->   Operation 33 'alloca' 'empty_30' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 34 [1/1] (0.00ns)   --->   "%empty_31 = alloca i32"   --->   Operation 34 'alloca' 'empty_31' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 35 [1/1] (0.00ns)   --->   "%empty_32 = alloca i32"   --->   Operation 35 'alloca' 'empty_32' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 36 [1/1] (0.75ns)   --->   "%br_ln352 = br void %.lr.ph1868" [F:/Vitis_Libraries/vision/L1/include\imgproc/xf_sobel.hpp:352]   --->   Operation 36 'br' 'br_ln352' <Predicate = true> <Delay = 0.75>
+
+State 5 <SV = 3> <Delay = 3.03>
+ST_5 : Operation 37 [1/1] (0.00ns)   --->   "%empty_33 = phi i11 %add_ln695_2, void %_ZN2xf2cv12xfPackPixelsILi1ELi1ELi0EEEvPN9PixelTypeIXT1_EE4nameERN10StreamTypeIXT0_EE4nameEtsRt.exit2291, i11, void %.lr.ph1868.preheader"   --->   Operation 37 'phi' 'empty_33' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 38 [1/1] (0.00ns)   --->   "%empty_34 = phi i13 %select_ln425, void %_ZN2xf2cv12xfPackPixelsILi1ELi1ELi0EEEvPN9PixelTypeIXT1_EE4nameERN10StreamTypeIXT0_EE4nameEtsRt.exit2291, i13, void %.lr.ph1868.preheader" [F:/Vitis_Libraries/vision/L1/include\imgproc/xf_sobel.hpp:425]   --->   Operation 38 'phi' 'empty_34' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 39 [1/1] (0.85ns)   --->   "%icmp_ln352 = icmp_eq  i11 %empty_33, i11" [F:/Vitis_Libraries/vision/L1/include\imgproc/xf_sobel.hpp:352]   --->   Operation 39 'icmp' 'icmp_ln352' <Predicate = true> <Delay = 0.85> <CoreInst = "Cmp">   --->   Core 10 'Cmp' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 40 [1/1] (0.00ns)   --->   "%br_ln352 = br i1 %icmp_ln352, void %.split11, void %._crit_edge" [F:/Vitis_Libraries/vision/L1/include\imgproc/xf_sobel.hpp:352]   --->   Operation 40 'br' 'br_ln352' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 41 [1/1] (0.00ns)   --->   "%speclooptripcount_ln1620 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64, i64, i64"   --->   Operation 41 'speclooptripcount' 'speclooptripcount_ln1620' <Predicate = (!icmp_ln352)> <Delay = 0.00>
+ST_5 : Operation 42 [1/1] (0.00ns)   --->   "%specloopname_ln1620 = specloopname void @_ssdm_op_SpecLoopName, void @empty_6"   --->   Operation 42 'specloopname' 'specloopname_ln1620' <Predicate = (!icmp_ln352)> <Delay = 0.00>
+ST_5 : Operation 43 [1/1] (0.69ns)   --->   "%switch_ln356 = switch i13 %empty_34, void, i13, void %.split11..lr.ph1547_crit_edge, i13, void %.fold.split" [F:/Vitis_Libraries/vision/L1/include\imgproc/xf_sobel.hpp:356]   --->   Operation 43 'switch' 'switch_ln356' <Predicate = (!icmp_ln352)> <Delay = 0.69>
+ST_5 : Operation 44 [1/1] (1.18ns)   --->   "%store_ln324 = store i2, i2 %empty_32"   --->   Operation 44 'store' 'store_ln324' <Predicate = (!icmp_ln352 & empty_34 == 0)> <Delay = 1.18>
+ST_5 : Operation 45 [1/1] (1.18ns)   --->   "%store_ln324 = store i2, i2 %empty_31"   --->   Operation 45 'store' 'store_ln324' <Predicate = (!icmp_ln352 & empty_34 == 0)> <Delay = 1.18>
+ST_5 : Operation 46 [1/1] (1.18ns)   --->   "%store_ln324 = store i2, i2 %empty_30"   --->   Operation 46 'store' 'store_ln324' <Predicate = (!icmp_ln352 & empty_34 == 0)> <Delay = 1.18>
+ST_5 : Operation 47 [1/1] (0.00ns)   --->   "%br_ln324 = br void %.lr.ph1547"   --->   Operation 47 'br' 'br_ln324' <Predicate = (!icmp_ln352 & empty_34 == 0)> <Delay = 0.00>
+ST_5 : Operation 48 [1/1] (1.18ns)   --->   "%store_ln356 = store i2, i2 %empty_32" [F:/Vitis_Libraries/vision/L1/include\imgproc/xf_sobel.hpp:356]   --->   Operation 48 'store' 'store_ln356' <Predicate = (!icmp_ln352 & empty_34 == 2)> <Delay = 1.18>
+ST_5 : Operation 49 [1/1] (1.18ns)   --->   "%store_ln356 = store i2, i2 %empty_31" [F:/Vitis_Libraries/vision/L1/include\imgproc/xf_sobel.hpp:356]   --->   Operation 49 'store' 'store_ln356' <Predicate = (!icmp_ln352 & empty_34 == 2)> <Delay = 1.18>
+ST_5 : Operation 50 [1/1] (1.18ns)   --->   "%store_ln356 = store i2, i2 %empty_30" [F:/Vitis_Libraries/vision/L1/include\imgproc/xf_sobel.hpp:356]   --->   Operation 50 'store' 'store_ln356' <Predicate = (!icmp_ln352 & empty_34 == 2)> <Delay = 1.18>
+ST_5 : Operation 51 [1/1] (0.00ns)   --->   "%br_ln356 = br void %.lr.ph1547" [F:/Vitis_Libraries/vision/L1/include\imgproc/xf_sobel.hpp:356]   --->   Operation 51 'br' 'br_ln356' <Predicate = (!icmp_ln352 & empty_34 == 2)> <Delay = 0.00>
+ST_5 : Operation 52 [1/1] (0.00ns)   --->   "%p_load34 = load i2 %empty_30" [F:/Vitis_Libraries/vision/L1/include\imgproc/xf_sobel.hpp:365]   --->   Operation 52 'load' 'p_load34' <Predicate = (!icmp_ln352 & empty_34 != 2 & empty_34 != 0)> <Delay = 0.00>
+ST_5 : Operation 53 [1/1] (0.00ns)   --->   "%p_load32 = load i2 %empty_31" [F:/Vitis_Libraries/vision/L1/include\imgproc/xf_sobel.hpp:365]   --->   Operation 53 'load' 'p_load32' <Predicate = (!icmp_ln352 & empty_34 != 2 & empty_34 != 0)> <Delay = 0.00>
+ST_5 : Operation 54 [1/1] (0.00ns)   --->   "%p_load = load i2 %empty_32" [F:/Vitis_Libraries/vision/L1/include\imgproc/xf_sobel.hpp:365]   --->   Operation 54 'load' 'p_load' <Predicate = (!icmp_ln352 & empty_34 != 2 & empty_34 != 0)> <Delay = 0.00>
+ST_5 : Operation 55 [1/1] (0.86ns)   --->   "%icmp_ln874 = icmp_eq  i13 %empty_34, i13"   --->   Operation 55 'icmp' 'icmp_ln874' <Predicate = (!icmp_ln352 & empty_34 != 2 & empty_34 != 0)> <Delay = 0.86> <CoreInst = "Cmp">   --->   Core 10 'Cmp' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 56 [1/1] (0.26ns)   --->   "%select_ln365 = select i1 %icmp_ln874, i2, i2 %p_load34" [F:/Vitis_Libraries/vision/L1/include\imgproc/xf_sobel.hpp:365]   --->   Operation 56 'select' 'select_ln365' <Predicate = (!icmp_ln352 & empty_34 != 2 & empty_34 != 0)> <Delay = 0.26> <CoreInst = "Sel">   --->   Core 11 'Sel' <Latency = 0> <II = 1> <Delay = 0.48> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 57 [1/1] (0.26ns)   --->   "%select_ln365_1 = select i1 %icmp_ln874, i2, i2 %p_load32" [F:/Vitis_Libraries/vision/L1/include\imgproc/xf_sobel.hpp:365]   --->   Operation 57 'select' 'select_ln365_1' <Predicate = (!icmp_ln352 & empty_34 != 2 & empty_34 != 0)> <Delay = 0.26> <CoreInst = "Sel">   --->   Core 11 'Sel' <Latency = 0> <II = 1> <Delay = 0.48> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 58 [1/1] (0.26ns)   --->   "%select_ln365_2 = select i1 %icmp_ln874, i2, i2 %p_load" [F:/Vitis_Libraries/vision/L1/include\imgproc/xf_sobel.hpp:365]   --->   Operation 58 'select' 'select_ln365_2' <Predicate = (!icmp_ln352 & empty_34 != 2 & empty_34 != 0)> <Delay = 0.26> <CoreInst = "Sel">   --->   Core 11 'Sel' <Latency = 0> <II = 1> <Delay = 0.48> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 59 [1/1] (1.18ns)   --->   "%store_ln365 = store i2 %select_ln365_2, i2 %empty_32, i2 %p_load" [F:/Vitis_Libraries/vision/L1/include\imgproc/xf_sobel.hpp:365]   --->   Operation 59 'store' 'store_ln365' <Predicate = (!icmp_ln352 & empty_34 != 2 & empty_34 != 0)> <Delay = 1.18>
+ST_5 : Operation 60 [1/1] (1.18ns)   --->   "%store_ln365 = store i2 %select_ln365_1, i2 %empty_31, i2 %p_load32" [F:/Vitis_Libraries/vision/L1/include\imgproc/xf_sobel.hpp:365]   --->   Operation 60 'store' 'store_ln365' <Predicate = (!icmp_ln352 & empty_34 != 2 & empty_34 != 0)> <Delay = 1.18>
+ST_5 : Operation 61 [1/1] (1.18ns)   --->   "%store_ln365 = store i2 %select_ln365, i2 %empty_30, i2 %p_load34" [F:/Vitis_Libraries/vision/L1/include\imgproc/xf_sobel.hpp:365]   --->   Operation 61 'store' 'store_ln365' <Predicate = (!icmp_ln352 & empty_34 != 2 & empty_34 != 0)> <Delay = 1.18>
+ST_5 : Operation 62 [1/1] (0.00ns)   --->   "%br_ln0 = br void %.lr.ph1547"   --->   Operation 62 'br' 'br_ln0' <Predicate = (!icmp_ln352 & empty_34 != 2 & empty_34 != 0)> <Delay = 0.00>
+ST_5 : Operation 63 [1/1] (0.85ns)   --->   "%cmp_i_i533_i = icmp_ult  i11 %empty_33, i11"   --->   Operation 63 'icmp' 'cmp_i_i533_i' <Predicate = (!icmp_ln352)> <Delay = 0.85> <CoreInst = "Cmp">   --->   Core 10 'Cmp' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 64 [1/1] (0.00ns)   --->   "%trunc_ln324 = trunc i13 %empty_34"   --->   Operation 64 'trunc' 'trunc_ln324' <Predicate = (!icmp_ln352)> <Delay = 0.00>
+ST_5 : Operation 65 [1/1] (0.75ns)   --->   "%br_ln215 = br void" [F:/Vitis_Libraries/vision/L1/include\imgproc/xf_sobel.hpp:215]   --->   Operation 65 'br' 'br_ln215' <Predicate = (!icmp_ln352)> <Delay = 0.75>
+ST_5 : Operation 66 [1/1] (0.00ns)   --->   "%ret_ln429 = ret" [F:/Vitis_Libraries/vision/L1/include\imgproc/xf_sobel.hpp:429]   --->   Operation 66 'ret' 'ret_ln429' <Predicate = (icmp_ln352)> <Delay = 0.00>
+
+State 6 <SV = 4> <Delay = 1.19>
+ST_6 : Operation 67 [1/1] (0.00ns)   --->   "%empty_35 = phi i11, void %.lr.ph1547, i11 %add_ln695_3, void %_ZN2xf2cv12xfPackPixelsILi1ELi1ELi0EEEvPN9PixelTypeIXT1_EE4nameERN10StreamTypeIXT0_EE4nameEtsRt.exit439.i"   --->   Operation 67 'phi' 'empty_35' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 68 [1/1] (0.85ns)   --->   "%icmp_ln882_1 = icmp_eq  i11 %empty_35, i11"   --->   Operation 68 'icmp' 'icmp_ln882_1' <Predicate = true> <Delay = 0.85> <CoreInst = "Cmp">   --->   Core 10 'Cmp' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 69 [1/1] (0.94ns)   --->   "%add_ln695_3 = add i11 %empty_35, i11"   --->   Operation 69 'add' 'add_ln695_3' <Predicate = true> <Delay = 0.94> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 70 [1/1] (0.00ns)   --->   "%br_ln215 = br i1 %icmp_ln882_1, void %.split, void %_ZN2xf2cv12xfPackPixelsILi1ELi1ELi0EEEvPN9PixelTypeIXT1_EE4nameERN10StreamTypeIXT0_EE4nameEtsRt.exit2291" [F:/Vitis_Libraries/vision/L1/include\imgproc/xf_sobel.hpp:215]   --->   Operation 70 'br' 'br_ln215' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 71 [1/1] (0.00ns)   --->   "%br_ln220 = br i1 %cmp_i_i533_i, void %bb2477, void %bb2476" [F:/Vitis_Libraries/vision/L1/include\imgproc/xf_sobel.hpp:220]   --->   Operation 71 'br' 'br_ln220' <Predicate = (!icmp_ln882_1)> <Delay = 0.00>
+ST_6 : Operation 72 [1/1] (0.00ns)   --->   "%p_load36 = load i2 %empty_30, void %store_ln324, void %store_ln356, void %store_ln365"   --->   Operation 72 'load' 'p_load36' <Predicate = (!icmp_ln882_1 & !cmp_i_i533_i)> <Delay = 0.00>
+ST_6 : Operation 73 [1/1] (0.69ns)   --->   "%switch_ln324 = switch i2 %p_load36, void %branch2, i2, void %branch0, i2, void %branch1"   --->   Operation 73 'switch' 'switch_ln324' <Predicate = (!icmp_ln882_1 & !cmp_i_i533_i)> <Delay = 0.69>
+ST_6 : Operation 74 [1/1] (0.00ns)   --->   "%br_ln0 = br void %bb2475"   --->   Operation 74 'br' 'br_ln0' <Predicate = (!icmp_ln882_1 & !cmp_i_i533_i)> <Delay = 0.00>
+ST_6 : Operation 75 [1/1] (0.69ns)   --->   "%switch_ln324 = switch i2 %trunc_ln324, void %branch5, i2, void %branch3, i2, void %branch4"   --->   Operation 75 'switch' 'switch_ln324' <Predicate = (!icmp_ln882_1 & cmp_i_i533_i)> <Delay = 0.69>
+ST_6 : Operation 76 [1/1] (0.00ns)   --->   "%br_ln221 = br void %bb2475" [F:/Vitis_Libraries/vision/L1/include\imgproc/xf_sobel.hpp:221]   --->   Operation 76 'br' 'br_ln221' <Predicate = (!icmp_ln882_1 & cmp_i_i533_i)> <Delay = 0.00>
+ST_6 : Operation 77 [1/1] (0.00ns)   --->   "%br_ln0 = br void"   --->   Operation 77 'br' 'br_ln0' <Predicate = (!icmp_ln882_1)> <Delay = 0.00>
+
+State 7 <SV = 5> <Delay = 3.29>
+ST_7 : Operation 78 [1/1] (0.00ns)   --->   "%specpipeline_ln301 = specpipeline void @_ssdm_op_SpecPipeline, i32, i32, i32, i32, void @empty_7" [F:/Vitis_Libraries/vision/L1/include\imgproc/xf_sobel.hpp:301]   --->   Operation 78 'specpipeline' 'specpipeline_ln301' <Predicate = (!icmp_ln882_1)> <Delay = 0.00>
+ST_7 : Operation 79 [1/1] (0.00ns)   --->   "%speclooptripcount_ln301 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64, i64, i64" [F:/Vitis_Libraries/vision/L1/include\imgproc/xf_sobel.hpp:301]   --->   Operation 79 'speclooptripcount' 'speclooptripcount_ln301' <Predicate = (!icmp_ln882_1)> <Delay = 0.00>
+ST_7 : Operation 80 [1/1] (0.00ns)   --->   "%specloopname_ln301 = specloopname void @_ssdm_op_SpecLoopName, void @empty_16" [F:/Vitis_Libraries/vision/L1/include\imgproc/xf_sobel.hpp:301]   --->   Operation 80 'specloopname' 'specloopname_ln301' <Predicate = (!icmp_ln882_1)> <Delay = 0.00>
+ST_7 : Operation 81 [1/1] (0.00ns)   --->   "%zext_ln538_1 = zext i11 %empty_35"   --->   Operation 81 'zext' 'zext_ln538_1' <Predicate = (!icmp_ln882_1)> <Delay = 0.00>
+ST_7 : Operation 82 [1/1] (0.00ns)   --->   "%buf_0_V_addr_1 = getelementptr i8 %buf_0_V, i64, i64 %zext_ln538_1"   --->   Operation 82 'getelementptr' 'buf_0_V_addr_1' <Predicate = (!icmp_ln882_1)> <Delay = 0.00>
+ST_7 : Operation 83 [1/1] (0.00ns)   --->   "%buf_1_V_addr_1 = getelementptr i8 %buf_1_V, i64, i64 %zext_ln538_1"   --->   Operation 83 'getelementptr' 'buf_1_V_addr_1' <Predicate = (!icmp_ln882_1)> <Delay = 0.00>
+ST_7 : Operation 84 [1/1] (0.00ns)   --->   "%buf_2_V_addr = getelementptr i8 %buf_2_V, i64, i64 %zext_ln538_1"   --->   Operation 84 'getelementptr' 'buf_2_V_addr' <Predicate = (!icmp_ln882_1)> <Delay = 0.00>
+ST_7 : Operation 85 [1/1] (1.35ns)   --->   "%store_ln324 = store i8, i11 %buf_1_V_addr_1"   --->   Operation 85 'store' 'store_ln324' <Predicate = (!icmp_ln882_1 & !cmp_i_i533_i & p_load36 == 1)> <Delay = 1.35> <CoreInst = "RAM_S2P_BRAM">   --->   Core 37 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 1920> <RAM>
+ST_7 : Operation 86 [1/1] (0.00ns)   --->   "%br_ln324 = br void %bb247794"   --->   Operation 86 'br' 'br_ln324' <Predicate = (!icmp_ln882_1 & !cmp_i_i533_i & p_load36 == 1)> <Delay = 0.00>
+ST_7 : Operation 87 [1/1] (1.35ns)   --->   "%store_ln324 = store i8, i11 %buf_0_V_addr_1"   --->   Operation 87 'store' 'store_ln324' <Predicate = (!icmp_ln882_1 & !cmp_i_i533_i & p_load36 == 0)> <Delay = 1.35> <CoreInst = "RAM_S2P_BRAM">   --->   Core 37 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 1920> <RAM>
+ST_7 : Operation 88 [1/1] (0.00ns)   --->   "%br_ln324 = br void %bb247794"   --->   Operation 88 'br' 'br_ln324' <Predicate = (!icmp_ln882_1 & !cmp_i_i533_i & p_load36 == 0)> <Delay = 0.00>
+ST_7 : Operation 89 [1/1] (1.35ns)   --->   "%store_ln324 = store i8, i11 %buf_2_V_addr"   --->   Operation 89 'store' 'store_ln324' <Predicate = (!icmp_ln882_1 & !cmp_i_i533_i & p_load36 != 0 & p_load36 != 1)> <Delay = 1.35> <CoreInst = "RAM_S2P_BRAM">   --->   Core 37 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 1920> <RAM>
+ST_7 : Operation 90 [1/1] (0.00ns)   --->   "%br_ln324 = br void %bb247794"   --->   Operation 90 'br' 'br_ln324' <Predicate = (!icmp_ln882_1 & !cmp_i_i533_i & p_load36 != 0 & p_load36 != 1)> <Delay = 0.00>
+ST_7 : Operation 91 [1/1] (1.94ns)   --->   "%tmp_V_1 = read i8 @_ssdm_op_Read.ap_fifo.volatile.i8P, i8 %grayImg_4230" [F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 91 'read' 'tmp_V_1' <Predicate = (!icmp_ln882_1 & cmp_i_i533_i)> <Delay = 1.94> <CoreInst = "FIFO">   --->   Core 18 'FIFO' <Latency = 0> <II = 1> <Delay = 1.94> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1920> <FIFO>
+ST_7 : Operation 92 [1/1] (1.35ns)   --->   "%store_ln324 = store i8 %tmp_V_1, i11 %buf_1_V_addr_1"   --->   Operation 92 'store' 'store_ln324' <Predicate = (!icmp_ln882_1 & cmp_i_i533_i & trunc_ln324 == 1)> <Delay = 1.35> <CoreInst = "RAM_S2P_BRAM">   --->   Core 37 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 1920> <RAM>
+ST_7 : Operation 93 [1/1] (0.00ns)   --->   "%br_ln324 = br void %bb247698"   --->   Operation 93 'br' 'br_ln324' <Predicate = (!icmp_ln882_1 & cmp_i_i533_i & trunc_ln324 == 1)> <Delay = 0.00>
+ST_7 : Operation 94 [1/1] (1.35ns)   --->   "%store_ln324 = store i8 %tmp_V_1, i11 %buf_0_V_addr_1"   --->   Operation 94 'store' 'store_ln324' <Predicate = (!icmp_ln882_1 & cmp_i_i533_i & trunc_ln324 == 0)> <Delay = 1.35> <CoreInst = "RAM_S2P_BRAM">   --->   Core 37 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 1920> <RAM>
+ST_7 : Operation 95 [1/1] (0.00ns)   --->   "%br_ln324 = br void %bb247698"   --->   Operation 95 'br' 'br_ln324' <Predicate = (!icmp_ln882_1 & cmp_i_i533_i & trunc_ln324 == 0)> <Delay = 0.00>
+ST_7 : Operation 96 [1/1] (1.35ns)   --->   "%store_ln324 = store i8 %tmp_V_1, i11 %buf_2_V_addr"   --->   Operation 96 'store' 'store_ln324' <Predicate = (!icmp_ln882_1 & cmp_i_i533_i & trunc_ln324 != 0 & trunc_ln324 != 1)> <Delay = 1.35> <CoreInst = "RAM_S2P_BRAM">   --->   Core 37 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 1920> <RAM>
+ST_7 : Operation 97 [1/1] (0.00ns)   --->   "%br_ln324 = br void %bb247698"   --->   Operation 97 'br' 'br_ln324' <Predicate = (!icmp_ln882_1 & cmp_i_i533_i & trunc_ln324 != 0 & trunc_ln324 != 1)> <Delay = 0.00>
+ST_7 : Operation 98 [1/1] (0.85ns)   --->   "%icmp_ln874_2 = icmp_eq  i11 %empty_35, i11"   --->   Operation 98 'icmp' 'icmp_ln874_2' <Predicate = (!icmp_ln882_1)> <Delay = 0.85> <CoreInst = "Cmp">   --->   Core 10 'Cmp' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 99 [1/1] (0.00ns)   --->   "%br_ln240 = br i1 %icmp_ln874_2, void %_ZN2xf2cv12xfPackPixelsILi1ELi1ELi0EEEvPN9PixelTypeIXT1_EE4nameERN10StreamTypeIXT0_EE4nameEtsRt.exit289.i2285, void %_ZN2xf2cv12xfPackPixelsILi1ELi1ELi0EEEvPN9PixelTypeIXT1_EE4nameERN10StreamTypeIXT0_EE4nameEtsRt.exit439.i" [F:/Vitis_Libraries/vision/L1/include\imgproc/xf_sobel.hpp:240]   --->   Operation 99 'br' 'br_ln240' <Predicate = (!icmp_ln882_1)> <Delay = 0.00>
+
+State 8 <SV = 6> <Delay = 1.35>
+ST_8 : Operation 100 [2/2] (1.35ns)   --->   "%buf_0_V_load = load i11 %buf_0_V_addr_1, void %store_ln324, void %store_ln324"   --->   Operation 100 'load' 'buf_0_V_load' <Predicate = (!icmp_ln882_1)> <Delay = 1.35> <CoreInst = "RAM_S2P_BRAM">   --->   Core 37 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 1920> <RAM>
+ST_8 : Operation 101 [2/2] (1.35ns)   --->   "%buf_1_V_load = load i11 %buf_1_V_addr_1, void %store_ln324, void %store_ln324"   --->   Operation 101 'load' 'buf_1_V_load' <Predicate = (!icmp_ln882_1)> <Delay = 1.35> <CoreInst = "RAM_S2P_BRAM">   --->   Core 37 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 1920> <RAM>
+ST_8 : Operation 102 [2/2] (1.35ns)   --->   "%buf_2_V_load = load i11 %buf_2_V_addr, void %store_ln324, void %store_ln324"   --->   Operation 102 'load' 'buf_2_V_load' <Predicate = (!icmp_ln882_1)> <Delay = 1.35> <CoreInst = "RAM_S2P_BRAM">   --->   Core 37 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 1920> <RAM>
+
+State 9 <SV = 7> <Delay = 7.00>
+ST_9 : Operation 103 [1/1] (0.00ns)   --->   "%p_Result_3 = phi i8, void %.lr.ph1547, i8 %src_buf3_0_V, void %_ZN2xf2cv12xfPackPixelsILi1ELi1ELi0EEEvPN9PixelTypeIXT1_EE4nameERN10StreamTypeIXT0_EE4nameEtsRt.exit439.i"   --->   Operation 103 'phi' 'p_Result_3' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 104 [1/1] (0.00ns)   --->   "%src_buf2_0_V = phi i8, void %.lr.ph1547, i8 %src_buf2_2_V, void %_ZN2xf2cv12xfPackPixelsILi1ELi1ELi0EEEvPN9PixelTypeIXT1_EE4nameERN10StreamTypeIXT0_EE4nameEtsRt.exit439.i"   --->   Operation 104 'phi' 'src_buf2_0_V' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 105 [1/1] (0.00ns)   --->   "%p_Result_2 = phi i8, void %.lr.ph1547, i8 %src_buf2_0_V, void %_ZN2xf2cv12xfPackPixelsILi1ELi1ELi0EEEvPN9PixelTypeIXT1_EE4nameERN10StreamTypeIXT0_EE4nameEtsRt.exit439.i"   --->   Operation 105 'phi' 'p_Result_2' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 106 [1/1] (0.00ns)   --->   "%src_buf3_0_V = phi i8, void %.lr.ph1547, i8 %src_buf3_2_V, void %_ZN2xf2cv12xfPackPixelsILi1ELi1ELi0EEEvPN9PixelTypeIXT1_EE4nameERN10StreamTypeIXT0_EE4nameEtsRt.exit439.i"   --->   Operation 106 'phi' 'src_buf3_0_V' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 107 [1/1] (0.00ns)   --->   "%src_buf1_0_V = phi i8, void %.lr.ph1547, i8 %src_buf1_2_V, void %_ZN2xf2cv12xfPackPixelsILi1ELi1ELi0EEEvPN9PixelTypeIXT1_EE4nameERN10StreamTypeIXT0_EE4nameEtsRt.exit439.i"   --->   Operation 107 'phi' 'src_buf1_0_V' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 108 [1/1] (0.00ns)   --->   "%p_Result_s = phi i8, void %.lr.ph1547, i8 %src_buf1_0_V, void %_ZN2xf2cv12xfPackPixelsILi1ELi1ELi0EEEvPN9PixelTypeIXT1_EE4nameERN10StreamTypeIXT0_EE4nameEtsRt.exit439.i"   --->   Operation 108 'phi' 'p_Result_s' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 109 [1/1] (0.00ns)   --->   "%p_load35 = load i2 %empty_30, void %store_ln324, void %store_ln356, void %store_ln365"   --->   Operation 109 'load' 'p_load35' <Predicate = (!icmp_ln882_1)> <Delay = 0.00>
+ST_9 : Operation 110 [1/1] (0.00ns)   --->   "%p_load33 = load i2 %empty_31, void %store_ln324, void %store_ln356, void %store_ln365"   --->   Operation 110 'load' 'p_load33' <Predicate = (!icmp_ln882_1)> <Delay = 0.00>
+ST_9 : Operation 111 [1/1] (0.00ns)   --->   "%p_load31 = load i2 %empty_32, void %store_ln324, void %store_ln356, void %store_ln365"   --->   Operation 111 'load' 'p_load31' <Predicate = (!icmp_ln882_1)> <Delay = 0.00>
+ST_9 : Operation 112 [1/2] (1.35ns)   --->   "%buf_0_V_load = load i11 %buf_0_V_addr_1, void %store_ln324, void %store_ln324"   --->   Operation 112 'load' 'buf_0_V_load' <Predicate = (!icmp_ln882_1)> <Delay = 1.35> <CoreInst = "RAM_S2P_BRAM">   --->   Core 37 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 1920> <RAM>
+ST_9 : Operation 113 [1/2] (1.35ns)   --->   "%buf_1_V_load = load i11 %buf_1_V_addr_1, void %store_ln324, void %store_ln324"   --->   Operation 113 'load' 'buf_1_V_load' <Predicate = (!icmp_ln882_1)> <Delay = 1.35> <CoreInst = "RAM_S2P_BRAM">   --->   Core 37 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 1920> <RAM>
+ST_9 : Operation 114 [1/2] (1.35ns)   --->   "%buf_2_V_load = load i11 %buf_2_V_addr, void %store_ln324, void %store_ln324"   --->   Operation 114 'load' 'buf_2_V_load' <Predicate = (!icmp_ln882_1)> <Delay = 1.35> <CoreInst = "RAM_S2P_BRAM">   --->   Core 37 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 1920> <RAM>
+ST_9 : Operation 115 [1/1] (0.57ns)   --->   "%src_buf1_2_V = mux i8 @_ssdm_op_Mux.ap_auto.3i8.i2, i8 %buf_0_V_load, i8 %buf_1_V_load, i8 %buf_2_V_load, i2 %p_load31"   --->   Operation 115 'mux' 'src_buf1_2_V' <Predicate = (!icmp_ln882_1)> <Delay = 0.57> <CoreInst = "MuxnS">   --->   Core 16 'MuxnS' <Latency = 0> <II = 1> <Delay = 0.57> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 116 [1/1] (0.57ns)   --->   "%src_buf2_2_V = mux i8 @_ssdm_op_Mux.ap_auto.3i8.i2, i8 %buf_0_V_load, i8 %buf_1_V_load, i8 %buf_2_V_load, i2 %p_load33"   --->   Operation 116 'mux' 'src_buf2_2_V' <Predicate = (!icmp_ln882_1)> <Delay = 0.57> <CoreInst = "MuxnS">   --->   Core 16 'MuxnS' <Latency = 0> <II = 1> <Delay = 0.57> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 117 [1/1] (0.57ns)   --->   "%src_buf3_2_V = mux i8 @_ssdm_op_Mux.ap_auto.3i8.i2, i8 %buf_0_V_load, i8 %buf_1_V_load, i8 %buf_2_V_load, i2 %p_load35"   --->   Operation 117 'mux' 'src_buf3_2_V' <Predicate = (!icmp_ln882_1)> <Delay = 0.57> <CoreInst = "MuxnS">   --->   Core 16 'MuxnS' <Latency = 0> <II = 1> <Delay = 0.57> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 118 [1/1] (3.13ns)   --->   "%call_ret = call i16 @xFSobel3x3<1, 1, 0, 0>, i8 %p_Result_s, i8 %src_buf1_0_V, i8 %src_buf1_2_V, i8 %p_Result_2, i8 %src_buf2_2_V, i8 %p_Result_3, i8 %src_buf3_0_V, i8 %src_buf3_2_V" [F:/Vitis_Libraries/vision/L1/include\imgproc/xf_sobel.hpp:238]   --->   Operation 118 'call' 'call_ret' <Predicate = (!icmp_ln882_1)> <Delay = 3.13> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_9 : Operation 119 [1/1] (0.00ns)   --->   "%GradientValuesX_0_V_1 = extractvalue i16 %call_ret" [F:/Vitis_Libraries/vision/L1/include\imgproc/xf_sobel.hpp:238]   --->   Operation 119 'extractvalue' 'GradientValuesX_0_V_1' <Predicate = (!icmp_ln882_1)> <Delay = 0.00>
+ST_9 : Operation 120 [1/1] (0.00ns)   --->   "%GradientValuesY_0_V_1 = extractvalue i16 %call_ret" [F:/Vitis_Libraries/vision/L1/include\imgproc/xf_sobel.hpp:238]   --->   Operation 120 'extractvalue' 'GradientValuesY_0_V_1' <Predicate = (!icmp_ln882_1)> <Delay = 0.00>
+ST_9 : Operation 121 [1/1] (1.94ns)   --->   "%write_ln167 = write void @_ssdm_op_Write.ap_fifo.volatile.i8P, i8 %sobelImg_x_4231, i8 %GradientValuesX_0_V_1" [F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:167]   --->   Operation 121 'write' 'write_ln167' <Predicate = (!icmp_ln882_1 & !icmp_ln874_2)> <Delay = 1.94> <CoreInst = "FIFO">   --->   Core 18 'FIFO' <Latency = 0> <II = 1> <Delay = 1.94> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1920> <FIFO>
+ST_9 : Operation 122 [1/1] (1.94ns)   --->   "%write_ln167 = write void @_ssdm_op_Write.ap_fifo.volatile.i8P, i8 %sobelImg_y_4232, i8 %GradientValuesY_0_V_1" [F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:167]   --->   Operation 122 'write' 'write_ln167' <Predicate = (!icmp_ln882_1 & !icmp_ln874_2)> <Delay = 1.94> <CoreInst = "FIFO">   --->   Core 18 'FIFO' <Latency = 0> <II = 1> <Delay = 1.94> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1920> <FIFO>
+ST_9 : Operation 123 [1/1] (0.00ns)   --->   "%br_ln0 = br void %_ZN2xf2cv12xfPackPixelsILi1ELi1ELi0EEEvPN9PixelTypeIXT1_EE4nameERN10StreamTypeIXT0_EE4nameEtsRt.exit439.i"   --->   Operation 123 'br' 'br_ln0' <Predicate = (!icmp_ln882_1 & !icmp_ln874_2)> <Delay = 0.00>
+
+State 10 <SV = 8> <Delay = 5.08>
+ST_10 : Operation 124 [1/1] (3.13ns)   --->   "%p_Repl2_s = call i8 @xFGradientX3x3<0, 0>, i8 %p_Result_s, i8, i8 %p_Result_2, i8, i8 %p_Result_3, i8" [F:/Vitis_Libraries/vision/L1/include\imgproc/xf_sobel.hpp:400]   --->   Operation 124 'call' 'p_Repl2_s' <Predicate = true> <Delay = 3.13> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_10 : Operation 125 [1/1] (3.13ns)   --->   "%p_Repl2_2 = call i8 @xFGradientY3x3<0, 0>, i8 %p_Result_s, i8 %src_buf1_0_V, i8, i8 %p_Result_3, i8 %src_buf3_0_V, i8" [F:/Vitis_Libraries/vision/L1/include\imgproc/xf_sobel.hpp:405]   --->   Operation 125 'call' 'p_Repl2_2' <Predicate = true> <Delay = 3.13> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_10 : Operation 126 [1/1] (1.94ns)   --->   "%write_ln167 = write void @_ssdm_op_Write.ap_fifo.volatile.i8P, i8 %sobelImg_x_4231, i8 %p_Repl2_s" [F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:167]   --->   Operation 126 'write' 'write_ln167' <Predicate = true> <Delay = 1.94> <CoreInst = "FIFO">   --->   Core 18 'FIFO' <Latency = 0> <II = 1> <Delay = 1.94> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1920> <FIFO>
+ST_10 : Operation 127 [1/1] (1.94ns)   --->   "%write_ln167 = write void @_ssdm_op_Write.ap_fifo.volatile.i8P, i8 %sobelImg_y_4232, i8 %p_Repl2_2" [F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:167]   --->   Operation 127 'write' 'write_ln167' <Predicate = true> <Delay = 1.94> <CoreInst = "FIFO">   --->   Core 18 'FIFO' <Latency = 0> <II = 1> <Delay = 1.94> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1920> <FIFO>
+ST_10 : Operation 128 [1/1] (0.97ns)   --->   "%add_ln695_1 = add i13 %empty_34, i13"   --->   Operation 128 'add' 'add_ln695_1' <Predicate = true> <Delay = 0.97> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 129 [1/1] (0.86ns)   --->   "%icmp_ln874_1 = icmp_eq  i13 %add_ln695_1, i13"   --->   Operation 129 'icmp' 'icmp_ln874_1' <Predicate = true> <Delay = 0.86> <CoreInst = "Cmp">   --->   Core 10 'Cmp' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 130 [1/1] (0.48ns)   --->   "%select_ln425 = select i1 %icmp_ln874_1, i13, i13 %add_ln695_1" [F:/Vitis_Libraries/vision/L1/include\imgproc/xf_sobel.hpp:425]   --->   Operation 130 'select' 'select_ln425' <Predicate = true> <Delay = 0.48> <CoreInst = "Sel">   --->   Core 11 'Sel' <Latency = 0> <II = 1> <Delay = 0.48> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_10 : Operation 131 [1/1] (0.94ns)   --->   "%add_ln695_2 = add i11 %empty_33, i11"   --->   Operation 131 'add' 'add_ln695_2' <Predicate = true> <Delay = 0.94> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 132 [1/1] (0.00ns)   --->   "%br_ln0 = br void %.lr.ph1868"   --->   Operation 132 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 0.755ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('empty') with incoming values : ('add_ln695') [13]  (0.755 ns)
+
+ <State 2>: 2.54ns
+The critical path consists of the following:
+	'phi' operation ('empty') with incoming values : ('add_ln695') [13]  (0 ns)
+	'getelementptr' operation ('buf_0_V_addr') [22]  (0 ns)
+	'store' operation ('store_ln324') of constant 0 on array 'buf[0].V', F:/Vitis_Libraries/vision/L1/include\imgproc/xf_sobel.hpp:325 [23]  (1.35 ns)
+	blocking operation 1.19 ns on control path)
+
+ <State 3>: 3.3ns
+The critical path consists of the following:
+	fifo read on port 'grayImg_4230' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:145) [24]  (1.95 ns)
+	'store' operation ('store_ln324') of variable 'tmp.V', F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:145 on array 'buf[1].V', F:/Vitis_Libraries/vision/L1/include\imgproc/xf_sobel.hpp:325 [26]  (1.35 ns)
+
+ <State 4>: 0.755ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('empty_33') with incoming values : ('add_ln695_2') [34]  (0.755 ns)
+
+ <State 5>: 3.04ns
+The critical path consists of the following:
+	'phi' operation ('empty_34', F:/Vitis_Libraries/vision/L1/include\imgproc/xf_sobel.hpp:425) with incoming values : ('select_ln425', F:/Vitis_Libraries/vision/L1/include\imgproc/xf_sobel.hpp:425) [35]  (0 ns)
+	'icmp' operation ('icmp_ln874') [56]  (0.862 ns)
+	'select' operation ('select_ln365_2', F:/Vitis_Libraries/vision/L1/include\imgproc/xf_sobel.hpp:365) [59]  (0.264 ns)
+	'store' operation ('store_ln365', F:/Vitis_Libraries/vision/L1/include\imgproc/xf_sobel.hpp:365) of variable 'select_ln365_2', F:/Vitis_Libraries/vision/L1/include\imgproc/xf_sobel.hpp:365 on local variable 'empty_32' [60]  (1.18 ns)
+	blocking operation 0.727 ns on control path)
+
+ <State 6>: 1.19ns
+The critical path consists of the following:
+	'phi' operation ('empty_35') with incoming values : ('add_ln695_3') [75]  (0 ns)
+	'add' operation ('add_ln695_3') [77]  (0.948 ns)
+	blocking operation 0.243 ns on control path)
+
+ <State 7>: 3.3ns
+The critical path consists of the following:
+	fifo read on port 'grayImg_4230' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:145) [103]  (1.95 ns)
+	'store' operation ('store_ln324') of variable 'tmp.V', F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:145 on array 'buf[0].V', F:/Vitis_Libraries/vision/L1/include\imgproc/xf_sobel.hpp:325 [109]  (1.35 ns)
+
+ <State 8>: 1.35ns
+The critical path consists of the following:
+	'load' operation ('buf_0_V_load') on array 'buf[0].V', F:/Vitis_Libraries/vision/L1/include\imgproc/xf_sobel.hpp:325 [120]  (1.35 ns)
+
+ <State 9>: 7.01ns
+The critical path consists of the following:
+	'load' operation ('buf_0_V_load') on array 'buf[0].V', F:/Vitis_Libraries/vision/L1/include\imgproc/xf_sobel.hpp:325 [120]  (1.35 ns)
+	'mux' operation ('src_buf3[2].V') [125]  (0.573 ns)
+	'call' operation ('call_ret', F:/Vitis_Libraries/vision/L1/include\imgproc/xf_sobel.hpp:238) to 'xFSobel3x3<1, 1, 0, 0>' [126]  (3.14 ns)
+	fifo write on port 'sobelImg_x_4231' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:167) [132]  (1.95 ns)
+
+ <State 10>: 5.08ns
+The critical path consists of the following:
+	'call' operation ('__Repl2__', F:/Vitis_Libraries/vision/L1/include\imgproc/xf_sobel.hpp:400) to 'xFGradientX3x3<0, 0>' [138]  (3.14 ns)
+	fifo write on port 'sobelImg_x_4231' (F:/xilinx_2020.1/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:167) [140]  (1.95 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1604301776741">
+  <ports id="1" name="src_axi_V_data_V" type="PortType" originalName="src_axi" bitwidth="24">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="2" name="src_axi_V_keep_V" type="PortType" originalName="src_axi" bitwidth="3">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="3" name="src_axi_V_strb_V" type="PortType" originalName="src_axi" bitwidth="3">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="4" name="src_axi_V_user_V" type="PortType" originalName="src_axi" bitwidth="1">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="5" name="src_axi_V_last_V" type="PortType" originalName="src_axi" bitwidth="1">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="6" name="src_axi_V_id_V" type="PortType" originalName="src_axi" bitwidth="1">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="7" name="src_axi_V_dest_V" type="PortType" originalName="src_axi" bitwidth="1">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="8" name="dst_axi_V_data_V" type="PortType" originalName="dst_axi" bitwidth="24" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="9" name="dst_axi_V_keep_V" type="PortType" originalName="dst_axi" bitwidth="3" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="10" name="dst_axi_V_strb_V" type="PortType" originalName="dst_axi" bitwidth="3" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="11" name="dst_axi_V_user_V" type="PortType" originalName="dst_axi" bitwidth="1" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="12" name="dst_axi_V_last_V" type="PortType" originalName="dst_axi" bitwidth="1" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="13" name="dst_axi_V_id_V" type="PortType" originalName="dst_axi" bitwidth="1" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="14" name="dst_axi_V_dest_V" type="PortType" originalName="dst_axi" bitwidth="1" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="15" name="adj" type="PortType" originalName="adj" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <edges id="64" source_obj="//@ports.14" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="73" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.6"/>
+  <edges id="74" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.6"/>
+  <edges id="75" source_obj="//@ports.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.6"/>
+  <edges id="76" source_obj="//@ports.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.6"/>
+  <edges id="77" source_obj="//@ports.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.6"/>
+  <edges id="78" source_obj="//@ports.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.6"/>
+  <edges id="79" source_obj="//@ports.6" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.6"/>
+  <edges id="80" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.6"/>
+  <edges id="81" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.6"/>
+  <edges id="82" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.6"/>
+  <edges id="85" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.7"/>
+  <edges id="86" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.7"/>
+  <edges id="89" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8"/>
+  <edges id="90" source_obj="//@regions.0/@basic_blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8"/>
+  <edges id="91" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8"/>
+  <edges id="94" source_obj="//@regions.0/@basic_blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9"/>
+  <edges id="95" source_obj="//@regions.0/@basic_blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9"/>
+  <edges id="98" source_obj="//@regions.0/@basic_blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.10"/>
+  <edges id="99" source_obj="//@regions.0/@basic_blocks.0/@node_objs.10" sink_obj="//@ports.7"/>
+  <edges id="100" source_obj="//@regions.0/@basic_blocks.0/@node_objs.10" sink_obj="//@ports.8"/>
+  <edges id="101" source_obj="//@regions.0/@basic_blocks.0/@node_objs.10" sink_obj="//@ports.9"/>
+  <edges id="102" source_obj="//@regions.0/@basic_blocks.0/@node_objs.10" sink_obj="//@ports.10"/>
+  <edges id="103" source_obj="//@regions.0/@basic_blocks.0/@node_objs.10" sink_obj="//@ports.11"/>
+  <edges id="104" source_obj="//@regions.0/@basic_blocks.0/@node_objs.10" sink_obj="//@ports.12"/>
+  <edges id="105" source_obj="//@regions.0/@basic_blocks.0/@node_objs.10" sink_obj="//@ports.13"/>
+  <edges id="106" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8"/>
+  <edges id="390" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.10"/>
+  <edges id="391" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9"/>
+  <edges id="392" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8"/>
+  <edges id="393" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.7"/>
+  <edges id="394" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.7"/>
+  <edges id="395" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8"/>
+  <edges id="396" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9"/>
+  <edges id="397" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.10"/>
+  <regions anchor_node="-1" region_type="16" typeName="Dataflow" id="243" RegionName="contrastadj">
+    <basic_blocks id="61" name="contrastadj" type="BlockType">
+      <node_objs xsi:type="cdfg:CdfgNode" id="18" name="adj_read" lineNumber="140" originalName="adj" fileName="source/contrastadj.cpp" fileDirectory=".." contextFuncName="contrastadj" bitwidth="32" opcode="read" nodeLatency="1" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="source/contrastadj.cpp" linenumber="140" fileDirectory="F:\course_s3_hls\hls\contrastadj" functionName="contrastadj"/>
+        <dataInputObjs>adj</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="19" name="adj_c" lineNumber="140" fileName="source/contrastadj.cpp" fileDirectory=".." rtlName="adj_c_U" coreName="FIFO_SRL" contextFuncName="contrastadj" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="source/contrastadj.cpp" linenumber="140" fileDirectory="F:\course_s3_hls\hls\contrastadj" functionName="contrastadj"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="41" name="img1_data" lineNumber="149" originalName="img1.data" fileName="source/contrastadj.cpp" fileDirectory=".." rtlName="img1_data_U" coreName="FIFO_SRL" contextFuncName="contrastadj" bitwidth="24" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="source/contrastadj.cpp" linenumber="149" fileDirectory="F:\course_s3_hls\hls\contrastadj" functionName="contrastadj"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="44" name="img2_data" lineNumber="151" originalName="img2.data" fileName="source/contrastadj.cpp" fileDirectory=".." rtlName="img2_data_U" coreName="FIFO_SRL" contextFuncName="contrastadj" bitwidth="24" opcode="alloca" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="source/contrastadj.cpp" linenumber="151" fileDirectory="F:\course_s3_hls\hls\contrastadj" functionName="contrastadj"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="47" name="img3_data" lineNumber="153" originalName="img3.data" fileName="source/contrastadj.cpp" fileDirectory=".." rtlName="img3_data_U" coreName="FIFO_SRL" contextFuncName="contrastadj" bitwidth="24" opcode="alloca" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="source/contrastadj.cpp" linenumber="153" fileDirectory="F:\course_s3_hls\hls\contrastadj" functionName="contrastadj"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="50" name="img4_data" lineNumber="155" originalName="img4.data" fileName="source/contrastadj.cpp" fileDirectory=".." rtlName="img4_data_U" coreName="FIFO_SRL" contextFuncName="contrastadj" bitwidth="24" opcode="alloca" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="source/contrastadj.cpp" linenumber="155" fileDirectory="F:\course_s3_hls\hls\contrastadj" functionName="contrastadj"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="55" name="_ln140" lineNumber="140" fileName="source/contrastadj.cpp" fileDirectory=".." rtlName="Loop_loop_height_proc79_U0" contextFuncName="contrastadj" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="2.16" m_topoIndex="7" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="source/contrastadj.cpp" linenumber="140" fileDirectory="F:\course_s3_hls\hls\contrastadj" functionName="contrastadj"/>
+        <dataInputObjs>src_axi_V_data_V</dataInputObjs>
+        <dataInputObjs>src_axi_V_keep_V</dataInputObjs>
+        <dataInputObjs>src_axi_V_strb_V</dataInputObjs>
+        <dataInputObjs>src_axi_V_user_V</dataInputObjs>
+        <dataInputObjs>src_axi_V_last_V</dataInputObjs>
+        <dataInputObjs>src_axi_V_id_V</dataInputObjs>
+        <dataInputObjs>src_axi_V_dest_V</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <constName>Loop_loop_height_proc79</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="56" name="_ln162" lineNumber="162" fileName="source/contrastadj.cpp" fileDirectory=".." rtlName="xfrgb2ycrcb_1080_1920_U0" contextFuncName="contrastadj" opcode="call" nodeLabel="3.0" nodeLatency="1" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="source/contrastadj.cpp" linenumber="162" fileDirectory="F:\course_s3_hls\hls\contrastadj" functionName="contrastadj"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <constName>xfrgb2ycrcb_1080_1920_s</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="57" name="_ln163" lineNumber="163" fileName="source/contrastadj.cpp" fileDirectory=".." rtlName="dualAryEqualize_1080_1920_256_U0" contextFuncName="contrastadj" opcode="call" nodeLabel="5.0" nodeLatency="1" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="source/contrastadj.cpp" linenumber="163" fileDirectory="F:\course_s3_hls\hls\contrastadj" functionName="contrastadj"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <constName>dualAryEqualize_1080_1920_256_s</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="58" name="_ln164" lineNumber="164" fileName="source/contrastadj.cpp" fileDirectory=".." rtlName="xfycrcb2rgb_1080_1920_U0" contextFuncName="contrastadj" opcode="call" nodeLabel="7.0" nodeLatency="1" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="source/contrastadj.cpp" linenumber="164" fileDirectory="F:\course_s3_hls\hls\contrastadj" functionName="contrastadj"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <constName>xfycrcb2rgb_1080_1920_s</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="59" name="_ln0" rtlName="Loop_loop_height_proc68_U0" opcode="call" nodeLabel="9.0" nodeLatency="1" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>dst_axi_V_data_V</dataOutputObjs>
+        <dataOutputObjs>dst_axi_V_keep_V</dataOutputObjs>
+        <dataOutputObjs>dst_axi_V_strb_V</dataOutputObjs>
+        <dataOutputObjs>dst_axi_V_user_V</dataOutputObjs>
+        <dataOutputObjs>dst_axi_V_last_V</dataOutputObjs>
+        <dataOutputObjs>dst_axi_V_id_V</dataOutputObjs>
+        <dataOutputObjs>dst_axi_V_dest_V</dataOutputObjs>
+        <constName>Loop_loop_height_proc68</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="60" name="_ln166" lineNumber="166" fileName="source/contrastadj.cpp" fileDirectory=".." contextFuncName="contrastadj" opcode="ret" nodeLabel="11.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="source/contrastadj.cpp" linenumber="166" fileDirectory="F:\course_s3_hls\hls\contrastadj" functionName="contrastadj"/>
+      </node_objs>
+      <fileValidLineNumbers fileName="source/contrastadj.cpp">
+        <validLinenumbers>140</validLinenumbers>
+        <validLinenumbers>149</validLinenumbers>
+        <validLinenumbers>151</validLinenumbers>
+        <validLinenumbers>153</validLinenumbers>
+        <validLinenumbers>155</validLinenumbers>
+        <validLinenumbers>162</validLinenumbers>
+        <validLinenumbers>163</validLinenumbers>
+        <validLinenumbers>164</validLinenumbers>
+        <validLinenumbers>166</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <ScheduleInfo time="7"/>
+  <ScheduleInfo time="8"/>
+  <ScheduleInfo time="9"/>
+  <ScheduleInfo time="10"/>
+  <ScheduleInfo time="11"/>
+  <regnodes realName="adj_read_reg_214">
+    <nodeIds>18</nodeIds>
+  </regnodes>
+  <regnodes realName="img1_data_reg_190">
+    <nodeIds>41</nodeIds>
+  </regnodes>
+  <regnodes realName="adj_c_reg_184">
+    <nodeIds>19</nodeIds>
+  </regnodes>
+  <regnodes realName="img3_data_reg_202">
+    <nodeIds>47</nodeIds>
+  </regnodes>
+  <regnodes realName="img2_data_reg_196">
+    <nodeIds>44</nodeIds>
+  </regnodes>
+  <regnodes realName="img4_data_reg_208">
+    <nodeIds>50</nodeIds>
+  </regnodes>
+  <expressionNodes realName="img1_data_fu_100">
+    <nodeIds>41</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="img2_data_fu_104">
+    <nodeIds>44</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="img3_data_fu_108">
+    <nodeIds>47</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="img4_data_fu_112">
+    <nodeIds>50</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="adj_c_fu_96">
+    <nodeIds>19</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_Loop_loop_height_proc68_fu_165">
+    <nodeIds>59</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_xfycrcb2rgb_1080_1920_s_fu_137">
+    <nodeIds>58</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_xfrgb2ycrcb_1080_1920_s_fu_131">
+    <nodeIds>56</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_dualAryEqualize_1080_1920_256_s_fu_122">
+    <nodeIds>57</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_Loop_loop_height_proc79_fu_143">
+    <nodeIds>55</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="grp_read_fu_116">
+    <nodeIds>18</nodeIds>
+  </ioNodes>
+  <memoryPorts dataString="map_V" portID="100">
+    <nodeIds>57</nodeIds>
+  </memoryPorts>
+  <ioPorts name="adj">
+    <contents name="read">
+      <nodeIds>18</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="dst_axi_V_data_V">
+    <contents name="call">
+      <nodeIds>59</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="dst_axi_V_dest_V">
+    <contents name="call">
+      <nodeIds>59</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="dst_axi_V_id_V">
+    <contents name="call">
+      <nodeIds>59</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="dst_axi_V_keep_V">
+    <contents name="call">
+      <nodeIds>59</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="dst_axi_V_last_V">
+    <contents name="call">
+      <nodeIds>59</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="dst_axi_V_strb_V">
+    <contents name="call">
+      <nodeIds>59</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="dst_axi_V_user_V">
+    <contents name="call">
+      <nodeIds>59</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="src_axi_V_data_V">
+    <contents name="call">
+      <nodeIds>55</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="src_axi_V_dest_V">
+    <contents name="call">
+      <nodeIds>55</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="src_axi_V_id_V">
+    <contents name="call">
+      <nodeIds>55</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="src_axi_V_keep_V">
+    <contents name="call">
+      <nodeIds>55</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="src_axi_V_last_V">
+    <contents name="call">
+      <nodeIds>55</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="src_axi_V_strb_V">
+    <contents name="call">
+      <nodeIds>55</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="src_axi_V_user_V">
+    <contents name="call">
+      <nodeIds>55</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="18" stage="2" latency="2"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="47" stage="1" latency="1"/>
+      <operations id="50" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="18" stage="1" latency="2"/>
+      <operations id="55" stage="2" latency="2"/>
+    </states>
+    <states id="3">
+      <operations id="55" stage="1" latency="2"/>
+    </states>
+    <states id="4">
+      <operations id="56" stage="2" latency="2"/>
+    </states>
+    <states id="5">
+      <operations id="56" stage="1" latency="2"/>
+    </states>
+    <states id="6">
+      <operations id="57" stage="2" latency="2"/>
+    </states>
+    <states id="7">
+      <operations id="57" stage="1" latency="2"/>
+    </states>
+    <states id="8">
+      <operations id="58" stage="2" latency="2"/>
+    </states>
+    <states id="9">
+      <operations id="58" stage="1" latency="2"/>
+    </states>
+    <states id="10">
+      <operations id="59" stage="2" latency="2"/>
+    </states>
+    <states id="11">
+      <operations id="59" stage="1" latency="2"/>
+    </states>
+    <states id="12">
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="49" stage="1" latency="1"/>
+      <operations id="51" stage="1" latency="1"/>
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="60" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="7" outState="8">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="8" outState="9">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="9" outState="10">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="10" outState="11">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="11" outState="12">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="contrastadj" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="-1" mMaxLatency="-1" mIsDfPipe="true">
+      <basicBlocks>61</basicBlocks>
+      <mDfPipe allPipePinInst="//@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.0/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.1/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.2/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.3/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.4/@pins.0/@inst">
+        <processe_list name="Loop_loop_height_proc79_U0" ssdmobj_id="55">
+          <pins>
+            <port name="src_axi_V_data_V" dir="DirEnd"/>
+            <inst name="Loop_loop_height_proc79_U0" ssdmobj_id="55" object_id="_85"/>
+          </pins>
+          <pins>
+            <port name="src_axi_V_keep_V" dir="DirEnd"/>
+            <inst name="Loop_loop_height_proc79_U0" ssdmobj_id="55" object_id="_85"/>
+          </pins>
+          <pins>
+            <port name="src_axi_V_strb_V" dir="DirEnd"/>
+            <inst name="Loop_loop_height_proc79_U0" ssdmobj_id="55" object_id="_85"/>
+          </pins>
+          <pins>
+            <port name="src_axi_V_user_V" dir="DirEnd"/>
+            <inst name="Loop_loop_height_proc79_U0" ssdmobj_id="55" object_id="_85"/>
+          </pins>
+          <pins>
+            <port name="src_axi_V_last_V" dir="DirEnd"/>
+            <inst name="Loop_loop_height_proc79_U0" ssdmobj_id="55" object_id="_85"/>
+          </pins>
+          <pins>
+            <port name="src_axi_V_id_V" dir="DirEnd"/>
+            <inst name="Loop_loop_height_proc79_U0" ssdmobj_id="55" object_id="_85"/>
+          </pins>
+          <pins>
+            <port name="src_axi_V_dest_V" dir="DirEnd"/>
+            <inst name="Loop_loop_height_proc79_U0" ssdmobj_id="55" object_id="_85"/>
+          </pins>
+          <pins>
+            <port name="img1_data" type="BUSType"/>
+            <inst name="Loop_loop_height_proc79_U0" ssdmobj_id="55" object_id="_85"/>
+          </pins>
+          <pins>
+            <port name="adj" dir="DirEnd"/>
+            <inst name="Loop_loop_height_proc79_U0" ssdmobj_id="55" object_id="_85"/>
+          </pins>
+          <pins>
+            <port name="adj_out" type="BUSType"/>
+            <inst name="Loop_loop_height_proc79_U0" ssdmobj_id="55" object_id="_85"/>
+          </pins>
+        </processe_list>
+        <processe_list name="xfrgb2ycrcb_1080_1920_U0" ssdmobj_id="56">
+          <pins>
+            <port name="img1_4198"/>
+            <inst name="xfrgb2ycrcb_1080_1920_U0" ssdmobj_id="56" object_id="_107"/>
+          </pins>
+          <pins>
+            <port name="img2_4199" type="BUSType"/>
+            <inst name="xfrgb2ycrcb_1080_1920_U0" ssdmobj_id="56" object_id="_107"/>
+          </pins>
+        </processe_list>
+        <processe_list name="dualAryEqualize_1080_1920_256_U0" ssdmobj_id="57">
+          <pins>
+            <port name="img2_4199"/>
+            <inst name="dualAryEqualize_1080_1920_256_U0" ssdmobj_id="57" object_id="_113"/>
+          </pins>
+          <pins>
+            <port name="img3_4200" type="BUSType"/>
+            <inst name="dualAryEqualize_1080_1920_256_U0" ssdmobj_id="57" object_id="_113"/>
+          </pins>
+          <pins>
+            <port name="filter"/>
+            <inst name="dualAryEqualize_1080_1920_256_U0" ssdmobj_id="57" object_id="_113"/>
+          </pins>
+          <pins>
+            <port name="map_V" dir="DirInOut" type="MEMType"/>
+            <inst name="dualAryEqualize_1080_1920_256_U0" ssdmobj_id="57" object_id="_113"/>
+          </pins>
+        </processe_list>
+        <processe_list name="xfycrcb2rgb_1080_1920_U0" ssdmobj_id="58">
+          <pins>
+            <port name="img3_4200"/>
+            <inst name="xfycrcb2rgb_1080_1920_U0" ssdmobj_id="58" object_id="_123"/>
+          </pins>
+          <pins>
+            <port name="img4_4201" type="BUSType"/>
+            <inst name="xfycrcb2rgb_1080_1920_U0" ssdmobj_id="58" object_id="_123"/>
+          </pins>
+        </processe_list>
+        <processe_list name="Loop_loop_height_proc68_U0" ssdmobj_id="59">
+          <pins>
+            <port name="img4_data"/>
+            <inst name="Loop_loop_height_proc68_U0" ssdmobj_id="59" object_id="_129"/>
+          </pins>
+          <pins>
+            <port name="dst_axi_V_data_V" dir="DirEnd" type="BUSType"/>
+            <inst name="Loop_loop_height_proc68_U0" ssdmobj_id="59" object_id="_129"/>
+          </pins>
+          <pins>
+            <port name="dst_axi_V_keep_V" dir="DirEnd" type="BUSType"/>
+            <inst name="Loop_loop_height_proc68_U0" ssdmobj_id="59" object_id="_129"/>
+          </pins>
+          <pins>
+            <port name="dst_axi_V_strb_V" dir="DirEnd" type="BUSType"/>
+            <inst name="Loop_loop_height_proc68_U0" ssdmobj_id="59" object_id="_129"/>
+          </pins>
+          <pins>
+            <port name="dst_axi_V_user_V" dir="DirEnd" type="BUSType"/>
+            <inst name="Loop_loop_height_proc68_U0" ssdmobj_id="59" object_id="_129"/>
+          </pins>
+          <pins>
+            <port name="dst_axi_V_last_V" dir="DirEnd" type="BUSType"/>
+            <inst name="Loop_loop_height_proc68_U0" ssdmobj_id="59" object_id="_129"/>
+          </pins>
+          <pins>
+            <port name="dst_axi_V_id_V" dir="DirEnd" type="BUSType"/>
+            <inst name="Loop_loop_height_proc68_U0" ssdmobj_id="59" object_id="_129"/>
+          </pins>
+          <pins>
+            <port name="dst_axi_V_dest_V" dir="DirEnd" type="BUSType"/>
+            <inst name="Loop_loop_height_proc68_U0" ssdmobj_id="59" object_id="_129"/>
+          </pins>
+        </processe_list>
+        <channel_list depth="2" bitwidth="24" suggested_type="0" suggested_depth="2" name="img1_data" ssdmobj_id="41">
+          <source>
+            <port name="in" dir="DirEnd"/>
+            <inst name="Loop_loop_height_proc79_U0" ssdmobj_id="55" object_id="_85"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirEnd" type="BUSType"/>
+            <inst name="xfrgb2ycrcb_1080_1920_U0" ssdmobj_id="56" object_id="_107"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="3" bitwidth="32" suggested_type="2" suggested_depth="3" name="adj_c" ssdmobj_id="19">
+          <source>
+            <port name="in" dir="DirEnd"/>
+            <inst name="Loop_loop_height_proc79_U0" ssdmobj_id="55" object_id="_85"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirEnd" type="BUSType"/>
+            <inst name="dualAryEqualize_1080_1920_256_U0" ssdmobj_id="57" object_id="_113"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="24" suggested_type="0" suggested_depth="2" name="img2_data" ssdmobj_id="44">
+          <source>
+            <port name="in" dir="DirEnd"/>
+            <inst name="xfrgb2ycrcb_1080_1920_U0" ssdmobj_id="56" object_id="_107"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirEnd" type="BUSType"/>
+            <inst name="dualAryEqualize_1080_1920_256_U0" ssdmobj_id="57" object_id="_113"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="24" suggested_type="0" suggested_depth="2" name="img3_data" ssdmobj_id="47">
+          <source>
+            <port name="in" dir="DirEnd"/>
+            <inst name="dualAryEqualize_1080_1920_256_U0" ssdmobj_id="57" object_id="_113"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirEnd" type="BUSType"/>
+            <inst name="xfycrcb2rgb_1080_1920_U0" ssdmobj_id="58" object_id="_123"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="2" bitwidth="24" suggested_type="0" suggested_depth="2" name="img4_data" ssdmobj_id="50">
+          <source>
+            <port name="in" dir="DirEnd"/>
+            <inst name="xfycrcb2rgb_1080_1920_U0" ssdmobj_id="58" object_id="_123"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirEnd" type="BUSType"/>
+            <inst name="Loop_loop_height_proc68_U0" ssdmobj_id="59" object_id="_129"/>
+          </sink>
+        </channel_list>
+      </mDfPipe>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>
